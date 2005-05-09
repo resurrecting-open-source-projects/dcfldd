@@ -1,0 +1,9 @@
+dcfldd is a modified version of GNU dd.  The major features added
+are hashing, fast disk wiping (through patterns) and status output.
+
+dcfldd was originally created by Nicholas Harbour from the
+DoD Computer Forensics Laboratory (DCFL).  Nick Harbour still maintains
+the package, although he is no longer affiliated with the DCFL.
+
+Send any feature requests or ideas to the author at
+<nicholasharbour@yahoo.com>.
