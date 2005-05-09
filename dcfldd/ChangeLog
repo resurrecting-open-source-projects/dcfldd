@@ -1,0 +1,16 @@
+Changes from version 1.2.2:
+	- Added ability to write to multiple output files.
+	- Added split capability with the "split=" and "splitformat=" switches.
+	- Converts "if=/dev/zero" to "pattern=00" to force efficiency.
+	- Fixed a few bugs with verify.
+	
+Changes from version 1.2.1:
+	- Fixed large file support bug
+	- added verify capability
+	
+Changes from version 1.0:
+	- Added SHA-1, SHA-256, SHA-384 and SHA-512 support
+	- Fixed compile errors.
+	- Fixed Megabyte constant.
+	- Fixed problem with not displaying the final hash remainder.
+	- Created an entirely new (and trim) build environment.
