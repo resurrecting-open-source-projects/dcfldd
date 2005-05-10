@@ -173,8 +173,8 @@ Copy a file, converting and formatting according to the options.\n\
   pattern=HEX          use the specified binary pattern as input\n\
   textpattern=TEXT     use repeating TEXT as input\n\
   hashwindow=BYTES     perform a hash on every BYTES amount of data\n\
-  hash=NAME            either MD5, SHA1, SHA256, SHA384 or SHA512\n\
-                        default algorithm is MD5. To select multiple\n\
+  hash=NAME            either md5, sha1, sha256, sha384 or sha512\n\
+                        default algorithm is md5. To select multiple\n\
                         algorithms to run simultaneously enter the names\n\
                         in a comma separated list\n\
   hashlog=FILE         send MD5 hash output to FILE instead of stderr\n\

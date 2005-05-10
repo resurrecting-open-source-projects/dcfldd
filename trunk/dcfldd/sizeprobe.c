@@ -55,6 +55,9 @@ static off_t midpoint(off_t a, off_t b, long blksize)
 
 #if defined (__linux__)
 
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+
 /* I stole this from Jesse Kornblum's md5deep */
 static off_t get_dev_size(int fd, long blksize) 
 {
@@ -71,6 +74,7 @@ static off_t get_dev_size(int fd, long blksize)
 #include <stdint.h>
 #include <sys/ioctl.h>
 #include <sys/disk.h>
+#include <machine/endian.h>
 
 /* I also stole this from Jesse Kornblum's md5deep */
 static static off_t get_dev_size(int fd, long blksize)
