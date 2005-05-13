@@ -47,6 +47,8 @@ extern "C" {
  */
 #include <sys/types.h>
 
+#include <sys/param.h>
+
 #ifdef SHA2_USE_INTTYPES_H
 
 #include <inttypes.h>

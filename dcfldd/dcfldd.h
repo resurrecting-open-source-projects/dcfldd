@@ -42,7 +42,7 @@
 
 /* The official name of this program (e.g., no `g' prefix).  */
 #define PROGRAM_NAME "dcfldd"
-#define PROGRAM_VERSION "1.2.3"
+#define PROGRAM_VERSION "1.2.3-2"
 
 #define AUTHORS "dcfldd by Nicholas Harbour, GNU dd by Paul Rubin, David MacKenzie and Stuart Kemp"
 
@@ -139,7 +139,6 @@ extern void cleanup(void);
 extern inline void quit(int);
 
 extern void parse_conversion(char *);
-extern uintmax_t parse_integer(const char *, int *);
 extern int hex2char(char *);
 
 #endif /* DCFLDD_H */
