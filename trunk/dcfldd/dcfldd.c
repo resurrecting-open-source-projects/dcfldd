@@ -3,7 +3,6 @@
  * By Nicholas Harbour
  */
 /* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
-
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -381,14 +380,26 @@ void parse_hash(char *str)
  * Assign nonzero to *INVALID if STR does not represent a number in
  * this format.
  */
-uintmax_t parse_integer(const char *str, int *invalid)
+
+#if HAVE_DECL_STRTOUMAX
+#  define __strtol_t uintmax_t
+#  define __strtol xstrtoumax
+#elif HAVE_DECL_STRTOUL
+#  define __strtol_t unsigned long int
+#  define __strtol xstrtoul
+#else
+#  define __strtol_t long int
+#  define __strtol xstrtol
+#endif
+
+__strtol_t parse_integer(const char *str, int *invalid)
 {
-    uintmax_t n;
+    __strtol_t n;
     char *suffix;
-    enum strtol_error e = xstrtoumax(str, &suffix, 10, &n, "bcEGkMPTwYZ0");
+    enum strtol_error e = __strtol(str, &suffix, 10, &n, "bcEGkMPTwYZ0");
     
     if (e == LONGINT_INVALID_SUFFIX_CHAR && *suffix == 'x') {
-        uintmax_t multiplier = parse_integer(suffix + 1, invalid);
+        __strtol_t multiplier = parse_integer(suffix + 1, invalid);
         
         if (multiplier != 0 && n * multiplier / multiplier != n) {
             *invalid = 1;
