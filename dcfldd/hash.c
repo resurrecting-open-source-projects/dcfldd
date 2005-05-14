@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: hash.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -333,11 +333,9 @@ void display_windowhash(hashlist_t *hashlist, off_t windowlen)
 {
     hashlist_t *hptr;
 
-    /* FIXME: Update this later to send to differnt hash logs */
-    for (hptr = hashlist; hptr != NULL; hptr = hptr->next) {
+    for (hptr = hashlist; hptr != NULL; hptr = hptr->next) 
         log_hashwindow(hptr->hash, window_beginning, (window_beginning + windowlen),
-                       hptr->hash->hashstr_buf);
-    }
+                       input_blocksize, hptr->hash->hashstr_buf);
 }
 
 void display_totalhash(hashlist_t *hashlist, int ttlctx)
@@ -347,15 +345,8 @@ void display_totalhash(hashlist_t *hashlist, int ttlctx)
     hashl_final(hashlist, ttlctx);
     
     for (hptr = hashlist; hptr != NULL; hptr = hptr->next)
-        log_hashtotal(hptr->hash, (char *) hptr->hash->hashstr_buf);
-}
-
-void display_hashalgorithm(hashlist_t *hashlist)
-{
-    hashlist_t *hptr;
-
-    for (hptr = hashlist; hptr != NULL; hptr = hptr->next)
-        log_hashalgorithm(hptr->hash, hptr->hash->name);
+        log_hashtotal(hptr->hash, 0, 0,
+                       input_blocksize, hptr->hash->hashstr_buf);
 }
 
 void hash_remainder(hashlist_t *hashlist, int winctx)

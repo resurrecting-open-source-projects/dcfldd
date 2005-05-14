@@ -1,4 +1,4 @@
-/* $Id: util.h,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id$
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -21,22 +21,43 @@
 
 /* GNU dd originally written by Paul Rubin, David MacKenzie, and Stuart Kemp. */
 
-#ifndef UTIL_H
-#define UTIL_H
+#ifndef HASH_FORMAT_H
+#define HASH_FORMAT_H
 
 #include "dcfldd.h"
-#if HAVE_INTTYPES_H
-# include <inttypes.h>
-#endif
+#include "hash.h"
+#include <stdio.h>
 #include <sys/types.h>
-#include <ctype.h>
 
-extern int buggy_lseek_support(int);
-extern void skip(int, char *, uintmax_t, size_t, unsigned char *);
-extern unsigned char *swab_buffer(unsigned char *, size_t *);
-extern void time_left(char *, size_t, int);
-extern int bit_count(register unsigned int);
-extern void replace_escapes(char *);
-extern char *strndup(char *, size_t);
+typedef enum {
+    FMT_STRING,
+    FMT_WINDOW_START,
+    FMT_WINDOW_END,
+    FMT_WINBLK_START,  /* window offsets / blocksize */
+    FMT_WINBLK_END,
+    FMT_HASH,
+    FMT_ALGORITHM
+} fmtatom_t;
 
-#endif /* UTIL_H */
+#define FMTATOMOP_ARGS FILE *stream, off_t wina, off_t winb, size_t blksize, char *alg, void *data
+
+typedef void (fmtatom_op_t)(FMTATOMOP_ARGS);
+
+#ifndef VARIABLE_HOOK
+#define VARIABLE_HOOK '#'
+#endif
+        
+typedef struct format_s {
+    struct format_s *next;
+    fmtatom_t type;
+    fmtatom_op_t *op;
+    void *data;  /* optional */
+} format_t;
+
+extern format_t *hashformat;
+extern format_t *totalhashformat;
+
+extern void print_fmt(format_t *, FMTATOMOP_ARGS);
+extern format_t *parse_hashformat(char *);
+
+#endif /* HASH_FORMAT_H */

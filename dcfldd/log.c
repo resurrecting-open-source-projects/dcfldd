@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: log.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -30,6 +30,8 @@
 #include "log.h"
 #include "hash.h"
 #include "verify.h"
+#include <stdarg.h>
+#include "hashformat.h"
 
 void syscall_error(char *str)
 {
@@ -44,9 +46,15 @@ void syscall_error_noexit(char *str)
     fprintf(stderr, "\n");
 }
 
-void user_error(char *str)
+void user_error(char *str, ...)
 {
-    fprintf(stderr, "%s\n", program_name, str);
+    va_list ap;
+
+    va_start(ap, str);
+    fprintf(stderr, "%s: ", program_name);
+    vfprintf(stderr, str, ap);
+    fprintf(stderr, "\n");
+    va_end(ap);
 }
 
 void internal_error(char *str)
@@ -55,22 +63,14 @@ void internal_error(char *str)
     exit(1);
 }
 
-void log_hashwindow(hashtype_t *htype, off_t wina, off_t winb, char *hash)
+void log_hashwindow(hashtype_t *htype, off_t wina, off_t winb, size_t bs, char *hash)
 {
-    fprintf(htype->log, "%llu - %llu: %s\n",
-            (unsigned long long int) wina,
-            (unsigned long long int) winb,
-            hash);
+    print_fmt(hashformat, htype->log, wina, winb, bs, htype->name, hash);
 }
 
-void log_hashtotal(hashtype_t *htype, char *hash)
+void log_hashtotal(hashtype_t *htype, off_t wina, off_t winb, size_t bs, char *hash)
 {
-    fprintf(htype->log, "Total: %s\n", hash);
-}
-
-void log_hashalgorithm(hashtype_t *htype, char *hashname)
-{
-    fprintf(htype->log, "Hash Algorithm: %s\n", hashname);
+    print_fmt(totalhashformat, htype->log, wina, winb, bs, htype->name, hash);
 }
 
 void log_verifywindow(hashtype_t *htype, off_t wina, off_t winb, int mismatch)

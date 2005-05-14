@@ -6,7 +6,7 @@ xstrtol.h version-etc.c version-etc.h \
 system.h sys2.h pathmax.h xalloc.h argmatch.c argmatch.h xstrtoul.c \
 full-write.c xstrtoumax.c copy.c copy.h dcfldd.h hash.h hash.c verify.c verify.h \
 translate.c translate.h sizeprobe.c sizeprobe.h pattern.c pattern.h util.c util.h \
-log.c log.h full-write.h output.c output.h split.c split.h
+log.c log.h full-write.h output.c output.h split.c split.h hashformat.c hashformat.h
 
 man_MANS = dcfldd.1
 
