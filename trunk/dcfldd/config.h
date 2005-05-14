@@ -237,7 +237,7 @@ else
 
 /* Define to 1 if you have the declaration of `strtoul', and to 0 if you
    don't. */
-/* #undef HAVE_DECL_STRTOUL */
+#define HAVE_DECL_STRTOUL 1
 
 /* Define to 1 if you have the declaration of `strtoull', and to 0 if you
    don't. */
@@ -1038,7 +1038,7 @@ else
 /* #undef UMAX4_3 */
 
 /* Version number of package */
-#define VERSION "1.2.3"
+#define VERSION "1.2.4"
 
 /* Define if your system defines `struct winsize' in sys/ptem.h. */
 /* #undef WINSIZE_IN_PTEM */

@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: dcfldd.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -59,6 +59,8 @@
 #include "pattern.h"
 #include "output.h"
 #include "split.h"
+#include "hashformat.h"
+#include "util.h"
 
 /* The name this program was run with. */
 char *program_name;
@@ -124,11 +126,20 @@ int do_split = 0;
 #define DEFAULT_SPLIT_FORMAT "nnn"
 #endif /* DEFAULT_SPLIT_FORMAT */
 
+#ifndef DEFAULT_HASHWINDOW_FORMAT
+#define DEFAULT_HASHWINDOW_FORMAT "#window_start# - #window_end#: #hash#"
+#endif /* DEFAULT_HASHWINDOW_FORMAT */
+
+#ifndef DEFAULT_TOTALHASH_FORMAT
+#define DEFAULT_TOTALHASH_FORMAT "Total (#algorithm#): #hash#"
+#endif /* DEFAULT_TOTALHASH_FORMAT */
+
 static char *splitformat = DEFAULT_SPLIT_FORMAT;
 static off_t splitsize;
 
 /* How many blocks in between screen writes for status output. */
-const ssize_t update_thresh = 256;
+ssize_t update_thresh = 256;
+
 time_t start_time;
 
 static struct conversion conversions[] =
@@ -157,56 +168,85 @@ void usage(int status)
         printf("\
 Copy a file, converting and formatting according to the options.\n\
 \n\
-  bs=BYTES             force ibs=BYTES and obs=BYTES\n\
-  cbs=BYTES            convert BYTES bytes at a time\n\
-  conv=KEYWORDS        convert the file as per the comma separated keyword list\n\
-  count=BLOCKS         copy only BLOCKS input blocks\n\
-  ibs=BYTES            read BYTES bytes at a time\n\
-  if=FILE              read from FILE instead of stdin\n\
-  obs=BYTES            write BYTES bytes at a time\n\
-  of=FILE              write to FILE instead of stdout\n\
-                        NOTE: of=FILE may be used several times to write\n\
-                              output to multiple files simultaneously\n\
-  seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n\
-  skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n\
-  pattern=HEX          use the specified binary pattern as input\n\
-  textpattern=TEXT     use repeating TEXT as input\n\
-  hashwindow=BYTES     perform a hash on every BYTES amount of data\n\
-  hash=NAME            either md5, sha1, sha256, sha384 or sha512\n\
-                        default algorithm is md5. To select multiple\n\
-                        algorithms to run simultaneously enter the names\n\
-                        in a comma separated list\n\
-  hashlog=FILE         send MD5 hash output to FILE instead of stderr\n\
-                        if you are using multiple hash algorithms you\n\
-                        can send each to a seperate file using the\n\
-                        convention ALGORITHMlog=FILE, for example\n\
-                        md5log=FILE1, sha1log=FILE2, etc.\n\
-  status=[on|off]      display a continual status message on stderr\n\
-                        default state is \"on\"\n\
-  sizeprobe=[if|of]    determine the size of the input or output file\n\
-                        for use with status messages. (this option\n\
-                        gives you a percentage indicator)\n\
-                        WARNING: do not use this option against a\n\
-                                 tape device.\n\
-  split=BYTES          write every BYTES amount of data to a new file\n\
-                        This operation applies to any of=FILE that follows\n\
-  splitformat=TEXT     the file extension format for split operation.\n\
-                        you may use any number of 'a' or 'n' in any combo\n\
-                        the default format is \"nnn\"\n\
-                        NOTE: The split and splitformat options take effect\n\
-                              only for output files specified AFTER these\n\
-                              options appear in the command line.  Likewise,\n\
-                              you may specify these several times for\n\
-                              for different output files within the same\n\
-                              command line. you may use as many digits in\n\
-                              any combination you would like.\n\
-                              (e.g. \"anaannnaana\" would be valid, but\n\
-                               quite insane)\n\
-  vf=FILE              verify that FILE matches the specified input\n\
-  verifylog=FILE       send verify results to FILE instead of stderr\n\
+  bs=BYTES               force ibs=BYTES and obs=BYTES\n\
+  cbs=BYTES              convert BYTES bytes at a time\n\
+  conv=KEYWORDS          convert the file as per the comma separated keyword list\n\
+  count=BLOCKS           copy only BLOCKS input blocks\n\
+  ibs=BYTES              read BYTES bytes at a time\n\
+  if=FILE                read from FILE instead of stdin\n\
+  obs=BYTES              write BYTES bytes at a time\n\
+  of=FILE                write to FILE instead of stdout\n\
+                          NOTE: of=FILE may be used several times to write\n\
+                                output to multiple files simultaneously\n\
+  seek=BLOCKS            skip BLOCKS obs-sized blocks at start of output\n\
+  skip=BLOCKS            skip BLOCKS ibs-sized blocks at start of input\n\
+  pattern=HEX            use the specified binary pattern as input\n\
+  textpattern=TEXT       use repeating TEXT as input\n\
+  hashwindow=BYTES       perform a hash on every BYTES amount of data\n\
+  hash=NAME              either md5, sha1, sha256, sha384 or sha512\n\
+                           default algorithm is md5. To select multiple\n\
+                           algorithms to run simultaneously enter the names\n\
+                           in a comma separated list\n\
+  hashlog=FILE           send MD5 hash output to FILE instead of stderr\n\
+                           if you are using multiple hash algorithms you\n\
+                           can send each to a seperate file using the\n\
+                           convention ALGORITHMlog=FILE, for example\n\
+                           md5log=FILE1, sha1log=FILE2, etc.\n\
+  hashformat=FORMAT      display each hashwindow according to FORMAT\n\
+                           the hash format mini-language is described below\n\
+  totalhashformat=FORMAT display the total hash value according to FORMAT\n\
+  status=[on|off]        display a continual status message on stderr\n\
+                           default state is \"on\"\n\
+  statusinterval=N       update the status message every N blocks\n\
+                           default value is 256\n\
+  sizeprobe=[if|of]      determine the size of the input or output file\n\
+                           for use with status messages. (this option\n\
+                           gives you a percentage indicator)\n\
+                           WARNING: do not use this option against a\n\
+                                    tape device.\n\
+  split=BYTES            write every BYTES amount of data to a new file\n\
+                           This operation applies to any of=FILE that follows\n\
+  splitformat=TEXT       the file extension format for split operation.\n\
+                           you may use any number of 'a' or 'n' in any combo\n\
+                           the default format is \"nnn\"\n\
+                           NOTE: The split and splitformat options take effect\n\
+                                only for output files specified AFTER these\n\
+                                options appear in the command line.  Likewise,\n\
+                                you may specify these several times for\n\
+                                for different output files within the same\n\
+                                command line. you may use as many digits in\n\
+                                any combination you would like.\n\
+                                (e.g. \"anaannnaana\" would be valid, but\n\
+                                quite insane)\n\
+  vf=FILE                verify that FILE matches the specified input\n\
+  verifylog=FILE         send verify results to FILE instead of stderr\n\
 \n\
     --help           display this help and exit\n\
     --version        output version information and exit\n\
+\n\
+The structure of of FORMAT may contain any valid text and special variables.\n\
+The built-in variables are used the following format: #variable_name#\n\
+To pass FORMAT strings to the program from a command line, it may be\n\
+necessary to surround your FORMAT strings with \"quotes.\"\n\
+The built-in variables are listed below:\n\
+\n\
+  window_start    The beginning byte offset of the hashwindow\n\
+  window_end      The ending byte offset of the hashwindow\n\
+  block_start     The beginning block (by input blocksize) of the window\n\
+  block_end       The ending block (by input blocksize) of the hash window\n\
+  hash            The hash value\n\
+  algorithm       The name of the hash algorithm\n\
+\n\
+For example, the default FORMAT for hashformat and totalhashformat are:\n\
+   hashformat=\"#window_start# - #window_end#: #hash#\"\n\
+   totalhashformat=\"Total (#algorithm#): #hash#\"\n\
+\n\
+The FORMAT structure accepts the following escape codes:\n\
+  \\n   Newline\n\
+  \\t   Tab\n\
+  \\r   Carriage return\n\
+  \\\\   Insert the '\\' character\n\
+  ##   Insert the '#' character as text, not a variable\n\
 \n\
 BLOCKS and BYTES may be followed by the following multiplicative suffixes:\n\
 xM M, c 1, w 2, b 512, kD 1000, k 1024, MD 1,000,000, M 1,048,576,\n\
@@ -529,7 +569,11 @@ static void scanargs(int argc, char **argv)
             if (hash_log == NULL)
                 syscall_error(val);
             do_hash++;
-        } else if (STREQ(name, "md5log")) {
+        } else if (STREQ(name, "hashformat"))
+            hashformat = parse_hashformat(val);
+        else if (STREQ(name, "totalhashformat"))
+            totalhashformat = parse_hashformat(val);
+        else if (STREQ(name, "md5log")) {
             hashops[MD5].log = fopen(val, "w");
             if (hashops[MD5].log == NULL)
                 syscall_error(val);
@@ -609,6 +653,8 @@ static void scanargs(int argc, char **argv)
             } else if (STREQ(name, "hashwindow")) {
                 hash_windowlen = n;
                 do_hash++;
+            } else if (STREQ(name, "statusinterval")) {
+                update_thresh = n;
             } else {
                 fprintf(stderr, "%s: unrecognized option %s=%s",
                         program_name, name, val);
@@ -655,6 +701,13 @@ int main(int argc, char **argv)
 {
     int i;
     int exit_status;
+    char *def_hashwin_fmt;
+    char *def_totalhash_fmt;
+
+    def_hashwin_fmt = strndup(DEFAULT_HASHWINDOW_FORMAT,
+                              strlen(DEFAULT_HASHWINDOW_FORMAT));
+    def_totalhash_fmt = strndup(DEFAULT_TOTALHASH_FORMAT,
+                                strlen(DEFAULT_TOTALHASH_FORMAT));
     
     /* disable buffering on stderr */
     setbuf(stderr, NULL);
@@ -663,6 +716,9 @@ int main(int argc, char **argv)
     verify_log = stderr;
     
     program_name = argv[0];
+
+    hashformat = parse_hashformat(def_hashwin_fmt);
+    totalhashformat = parse_hashformat(def_totalhash_fmt);
     
     /* Arrange to close stdout if parse_long_options exits.  */
     //atexit (close_stdout_wrapper);
@@ -708,7 +764,7 @@ int main(int argc, char **argv)
     else if (probe == PROBE_OUTPUT)
         sizeprobe(STDOUT_FILENO);
     start_time = time(NULL);
-
+    
     if (do_verify)
         exit_status = dd_verify();
     else

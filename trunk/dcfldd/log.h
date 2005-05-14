@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: log.h,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -26,17 +26,18 @@
 
 #include "dcfldd.h"
 #include "hash.h"
+#include <stdarg.h>
+#include <sys/types.h>
 
 extern void syscall_error(char *);
 extern void syscall_error_noexit(char *);
-extern void user_error(char *);
+extern void user_error(char *, ...);
 extern void internal_error(char *);
 
-extern void log_hashwindow(hashtype_t *, off_t, off_t, char *);
-extern void log_hashtotal(hashtype_t *, char *);
-extern void log_hashalgorithm(hashtype_t *, char *);
+extern void log_hashwindow(hashtype_t *, off_t, off_t, size_t, char *);
+extern void log_hashtotal(hashtype_t *, off_t, off_t, size_t, char *);
 
 extern void log_verifywindow(hashtype_t *, off_t, off_t, int);
-extern void log_hashtotal(hashtype_t *, char *);
+extern void log_verifytotal(hashtype_t *, int);
 
 #endif /* LOG_H */
