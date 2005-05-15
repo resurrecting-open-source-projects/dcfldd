@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: sizeprobe.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -30,6 +30,7 @@
 #include "config.h"
 #include "system.h"
 #include "sizeprobe.h"
+#include "log.h"
 
 static off_t midpoint(off_t a, off_t b, long blksize);
 static off_t get_dev_size(int, long);
@@ -64,7 +65,7 @@ static off_t get_dev_size(int fd, long blksize)
     off_t num_sectors = 0;
   
     if (ioctl(fd, BLKGETSIZE, &num_sectors))
-        fprintf(stderr,"%s: ioctl call to BLKGETSIZE failed.\n", program_name);
+        log_info("%s: ioctl call to BLKGETSIZE failed.\n", program_name);
     else 
         return (num_sectors * 512);
 }
@@ -188,7 +189,7 @@ void sizeprobe(int fd)
     struct stat statbuf;
 
     if (fstat(fd, &statbuf) == -1) {
-        fprintf(stderr, "%s: stating file", strerror(errno));
+        log_info("%s: stating file", strerror(errno));
         return;
     }
 

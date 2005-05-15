@@ -1,4 +1,4 @@
-/* $Id: log.c,v 1.4 2005/05/14 23:20:30 harbourn Exp $
+/* $Id: log.c,v 1.5 2005/05/15 13:18:27 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -26,12 +26,15 @@
 #include <stdio.h>
 #include <errno.h>
 #include <sys/types.h>
+#include <string.h>
 
 #include "log.h"
 #include "hash.h"
 #include "verify.h"
 #include <stdarg.h>
 #include "hashformat.h"
+
+FILE *errlog = NULL;
 
 void syscall_error(char *str)
 {
@@ -41,9 +44,11 @@ void syscall_error(char *str)
 
 void syscall_error_noexit(char *str)
 {
-    fprintf(stderr, "%s: ", program_name);
-    perror(str);
-    fprintf(stderr, "\n");
+    char *errstr = strerror(errno);
+    
+    fprintf(stderr, "%s:%s: %s\n", program_name, str == NULL ? "" : str, errstr);
+    if (errlog != NULL)
+        fprintf(errlog, "%s:%s: %s\n", program_name, str == NULL ? "" : str, errstr);
 }
 
 void user_error(char *str, ...)
@@ -54,13 +59,32 @@ void user_error(char *str, ...)
     fprintf(stderr, "%s: ", program_name);
     vfprintf(stderr, str, ap);
     fprintf(stderr, "\n");
+    if (errlog != NULL) {
+        fprintf(errlog, "%s: ", program_name);
+        vfprintf(errlog, str, ap);
+        fprintf(errlog, "\n");
+    }
     va_end(ap);
     exit(1);
+}
+
+void log_info(char *str, ...)
+{
+    va_list ap;
+
+    va_start(ap, str);
+    vfprintf(stderr, str, ap);
+    if (errlog != NULL) {
+        vfprintf(errlog, str, ap);
+    }
+    va_end(ap);
 }
 
 void internal_error(char *str)
 {
     fprintf(stderr, "%s: internal error: %s\n", program_name, str);
+    if (errlog != NULL)
+        fprintf(errlog, "%s: internal error: %s\n", program_name, str);
     exit(1);
 }
 

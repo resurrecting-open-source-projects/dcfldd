@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: translate.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -22,6 +22,7 @@
 /* GNU dd originally written by Paul Rubin, David MacKenzie, and Stuart Kemp. */
 
 #include "dcfldd.h"
+#include "log.h"
 
 /* Output representation of newline and space characters.
    They change if we're converting to EBCDIC.  */
@@ -161,7 +162,7 @@ void apply_translations(void)
         || (MX (C_LCASE | C_UCASE) > 1)
         || (MX (C_UNBLOCK | C_SYNC) > 1))
     {
-        fprintf(stderr, "\
+        log_info("\
 only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, {unblock,sync}");
     }
 #undef MX
