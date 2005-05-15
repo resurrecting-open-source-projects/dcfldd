@@ -1,4 +1,4 @@
-/* $Id: util.c,v 1.4 2005/05/14 23:20:30 harbourn Exp $
+/* $Id: util.c,v 1.5 2005/05/15 13:18:27 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -82,7 +82,7 @@ void skip(int fdesc, char *file, uintmax_t records, size_t blocksize,
         while (records--) {
             ssize_t nread = safe_read(fdesc, buf, blocksize);
             if (nread < 0) {
-                fprintf(stderr, "%s: reading %s", strerror(errno), file);
+                log_info("%s: reading %s", strerror(errno), file);
                 quit(1);
             }
             /* POSIX doesn't say what to do when dd detects it has been

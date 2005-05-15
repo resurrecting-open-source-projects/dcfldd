@@ -1,4 +1,4 @@
-/* $Id: dcfldd.c,v 1.4 2005/05/14 23:20:30 harbourn Exp $
+/* $Id: dcfldd.c,v 1.5 2005/05/15 13:18:27 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -61,6 +61,7 @@
 #include "split.h"
 #include "hashformat.h"
 #include "util.h"
+#include "log.h"
 
 /* The name this program was run with. */
 char *program_name;
@@ -151,8 +152,7 @@ static struct conversion conversions[] =
 void usage(int status)
 {
     if (status != 0)
-        fprintf(stderr, "Try `%s --help' for more information.\n",
-                 program_name);
+        log_info("Try `%s --help' for more information.\n", program_name);
     else {
         printf("Usage: %s [OPTION]...\n", program_name);
         printf("\
@@ -168,10 +168,12 @@ Copy a file, converting and formatting according to the options.\n\
   of=FILE                write to FILE instead of stdout\n\
                           NOTE: of=FILE may be used several times to write\n\
                                 output to multiple files simultaneously\n\
+  of:=COMMAND            exec and write output to process COMMAND\n\
   seek=BLOCKS            skip BLOCKS obs-sized blocks at start of output\n\
   skip=BLOCKS            skip BLOCKS ibs-sized blocks at start of input\n\
   pattern=HEX            use the specified binary pattern as input\n\
   textpattern=TEXT       use repeating TEXT as input\n\
+  errlog=FILE            send error messages to FILE as well as stderr\n\
   hashwindow=BYTES       perform a hash on every BYTES amount of data\n\
   hash=NAME              either md5, sha1, sha256, sha384 or sha512\n\
                            default algorithm is md5. To select multiple\n\
@@ -182,6 +184,8 @@ Copy a file, converting and formatting according to the options.\n\
                            can send each to a seperate file using the\n\
                            convention ALGORITHMlog=FILE, for example\n\
                            md5log=FILE1, sha1log=FILE2, etc.\n\
+  hashlog:=COMMAND       exec and write hashlog to process COMMAND\n\
+                           ALGORITHMlog:=COMMAND also works in the same fashion\n\
   hashconv=[before|after] perform the hashing before or after the conversions\n\
   hashformat=FORMAT      display each hashwindow according to FORMAT\n\
                            the hash format mini-language is described below\n\
@@ -211,6 +215,7 @@ Copy a file, converting and formatting according to the options.\n\
                                 quite insane)\n\
   vf=FILE                verify that FILE matches the specified input\n\
   verifylog=FILE         send verify results to FILE instead of stderr\n\
+  verifylog:=COMMAND     exec and write verify results to process COMMAND\n\
 \n\
     --help           display this help and exit\n\
     --version        output version information and exit\n\
@@ -265,14 +270,14 @@ Each KEYWORD may be:\n\
 void print_stats(void)
 {
     char buf[2][LONGEST_HUMAN_READABLE + 1];
-    fprintf(stderr, "%s+%s records in\n",
+    log_info("%s+%s records in\n",
             human_readable (r_full, buf[0], 1, 1),
             human_readable (r_partial, buf[1], 1, 1));
-    fprintf(stderr, "%s+%s records out\n",
+    log_info("%s+%s records out\n",
             human_readable (w_full, buf[0], 1, 1),
             human_readable (w_partial, buf[1], 1, 1));
     if (r_truncate > 0) {
-        fprintf(stderr, "%s %s\n",
+        log_info("%s %s\n",
                 human_readable (r_truncate, buf[0], 1, 1),
                 (r_truncate == 1
                  ? "truncated record"
@@ -377,7 +382,7 @@ void parse_conversion(char *str)
                 break;
             }
         if (conversions[i].convname == NULL) {
-            fprintf(stderr, "invalid conversion: %s\n", str);
+            log_info("invalid conversion: %s\n", str);
             usage(1);
         }
         str = new;
@@ -399,7 +404,7 @@ void parse_hash(char *str)
                 break;
             }
         if (hashops[i].name == NULL) {
-            fprintf(stderr, "invalid hash: %s\n", str);
+            log_info("invalid hash: %s\n", str);
             usage(1);
         }
         str = new;
@@ -458,57 +463,6 @@ int hex2char(char *hstr)
     return retval;
 }
 
-static void open_output(char *filename)
-{
-    mode_t perms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;
-    int fd;
-    int opts
-        = (O_CREAT
-           | (seek_records || (conversions_mask & C_NOTRUNC) ? 0 : O_TRUNC));
-    
-    /* Open the output file with *read* access only if we might
-       need to read to satisfy a `seek=' request.  If we can't read
-       the file, go ahead with write-only access; it might work.  */
-    if ((! seek_records
-         || (fd = open(filename, O_RDWR | opts, perms)) < 0)
-        && (fd = open(filename, O_WRONLY | opts, perms)) < 0)
-    {
-        syscall_error(filename);
-    }
-#if HAVE_FTRUNCATE
-    if (seek_records != 0 && !(conversions_mask & C_NOTRUNC)) {
-        struct stat statbuf;
-        off_t o = seek_records * output_blocksize;
-        if (o / output_blocksize != seek_records)
-            syscall_error(filename);
-        
-        if (fstat(fd, &statbuf) != 0)
-            syscall_error(filename);
-        
-        /* Complain only when ftruncate fails on a regular file, a
-           directory, or a shared memory object, as the 2000-08
-           POSIX draft specifies ftruncate's behavior only for these
-           file types.  For example, do not complain when Linux 2.4
-           ftruncate fails on /dev/fd0.  */
-        if (ftruncate(fd, o) != 0
-            && (S_ISREG(statbuf.st_mode)
-                || S_ISDIR(statbuf.st_mode)
-                || S_TYPEISSHM(&statbuf)))
-        {
-            char buf[LONGEST_HUMAN_READABLE + 1];
-            fprintf(stderr,"%s: %s: advancing past %s bytes in output file %s",
-                    program_name,
-                    strerror(errno),
-                    human_readable(o, buf, 1, 1),
-                    filename);
-        }
-    }
-#endif /* HAVE_FTRUNCATE */
-    
-    outputlist_add(SINGLE_FILE, fd);
-}
-
-
 static void scanargs(int argc, char **argv)
 {
     int i;
@@ -522,7 +476,7 @@ static void scanargs(int argc, char **argv)
         name = argv[i];
         val = strchr(name, '=');
         if (val == NULL) {
-            fprintf(stderr, "%s: unrecognized option %s\n", program_name, name);
+            log_info("%s: unrecognized option %s\n", program_name, name);
             usage(1);
         }
         *val++ = '\0';
@@ -539,6 +493,8 @@ static void scanargs(int argc, char **argv)
                 outputlist_add(SPLIT_FILE, val, splitformat, splitsize);
             else
                 open_output(val);
+        else if (STREQ(name, "of:"))
+            open_output_pipe(val);
         else if (STREQ(name, "vf")) {
             verify_file = val;
             do_verify++;
@@ -547,7 +503,7 @@ static void scanargs(int argc, char **argv)
         else if (STREQ(name, "pattern")) {
             pattern = make_pattern(val);
             if (pattern == NULL) {
-                fprintf(stderr, "%s: invalid hex pattern: %s", program_name, val);
+                log_info("%s: invalid hex pattern: %s", program_name, val);
                 quit(1);
             }
             input_from_pattern = 1;
@@ -560,6 +516,11 @@ static void scanargs(int argc, char **argv)
             if (hash_log == NULL)
                 syscall_error(val);
             do_hash++;
+        } else if (STREQ(name, "hashlog:")) {
+            hash_log = popen(val, "w");
+            if (hash_log == NULL)
+                syscall_error(val);
+            do_hash++;
         } else if (STREQ(name, "hashformat"))
             hashformat = parse_hashformat(val);
         else if (STREQ(name, "totalhashformat"))
@@ -569,8 +530,18 @@ static void scanargs(int argc, char **argv)
             if (hashops[MD5].log == NULL)
                 syscall_error(val);
             do_hash++;
+        } else if (STREQ(name, "md5log:")) {
+            hashops[MD5].log = popen(val, "w");
+            if (hashops[MD5].log == NULL)
+                syscall_error(val);
+            do_hash++;
         } else if (STREQ(name, "sha1log")) {
             hashops[SHA1].log = fopen(val, "w");
+            if (hashops[SHA1].log == NULL)
+                syscall_error(val);
+            do_hash++;
+        } else if (STREQ(name, "sha1log:")) {
+            hashops[SHA1].log = popen(val, "w");
             if (hashops[SHA1].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -579,8 +550,18 @@ static void scanargs(int argc, char **argv)
             if (hashops[SHA256].log == NULL)
                 syscall_error(val);
             do_hash++;
+        } else if (STREQ(name, "sha256log:")) {
+            hashops[SHA256].log = popen(val, "w");
+            if (hashops[SHA256].log == NULL)
+                syscall_error(val);
+            do_hash++;
         } else if (STREQ(name, "sha384log")) {
             hashops[SHA384].log = fopen(val, "w");
+            if (hashops[SHA384].log == NULL)
+                syscall_error(val);
+            do_hash++;
+        } else if (STREQ(name, "sha384log:")) {
+            hashops[SHA384].log = popen(val, "w");
             if (hashops[SHA384].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -589,9 +570,26 @@ static void scanargs(int argc, char **argv)
             if (hashops[SHA512].log == NULL)
                 syscall_error(val);
             do_hash++;
+        } else if (STREQ(name, "sha512log:")) {
+            hashops[SHA512].log = popen(val, "w");
+            if (hashops[SHA512].log == NULL)
+                syscall_error(val);
+            do_hash++;
         } else if (STREQ(name, "verifylog")) {
             verify_log = fopen(val, "w");
             if (verify_log == NULL)
+                syscall_error(val);
+        } else if (STREQ(name, "verifylog:")) {
+            verify_log = popen(val, "w");
+            if (verify_log == NULL)
+                syscall_error(val);
+        } else if (STREQ(name, "errlog")) {
+            errlog = fopen(val, "w");
+            if (errlog == NULL)
+                syscall_error(val);
+        } else if (STREQ(name, "errlog:")) {
+            errlog = popen(val, "w");
+            if (errlog == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "splitformat"))
             splitformat = val;
@@ -654,13 +652,13 @@ static void scanargs(int argc, char **argv)
             } else if (STREQ(name, "statusinterval")) {
                 update_thresh = n;
             } else {
-                fprintf(stderr, "%s: unrecognized option %s=%s",
+                log_info("%s: unrecognized option %s=%s",
                         program_name, name, val);
                 usage(1);
             }
             
             if (invalid)
-                fprintf(stderr, "%s: invalid number %s", program_name, val);
+                log_info("%s: invalid number %s", program_name, val);
         }
     }
     

@@ -1038,7 +1038,7 @@ else
 /* #undef UMAX4_3 */
 
 /* Version number of package */
-#define VERSION "1.2.4"
+#define VERSION "1.3-RC1"
 
 /* Define if your system defines `struct winsize' in sys/ptem.h. */
 /* #undef WINSIZE_IN_PTEM */
