@@ -1,4 +1,4 @@
-/* $Id: copy.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id: copy.c,v 1.4 2005/05/14 23:20:30 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -278,7 +278,7 @@ int dd_copy(void)
         }
         n_bytes_read = nread;
     
-        if (do_hash)
+        if (do_hash && hashconv == HASHCONV_BEFORE)
             hash_update(ihashlist, ibuf, n_bytes_read);
         
         if (n_bytes_read < input_blocksize) {
@@ -326,7 +326,11 @@ int dd_copy(void)
             copy_simple(bufstart, n_bytes_read);
     
     }
+
     
+    if (do_hash && hashconv == HASHCONV_AFTER)
+        hash_update(ihashlist, ibuf, n_bytes_read);
+        
     /* If we have a char left as a result of conv=swab, output it.  */
     if (char_is_saved) {
         if (conversions_mask & C_BLOCK)

@@ -1,4 +1,4 @@
-/* $Id: dcfldd.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id: dcfldd.c,v 1.4 2005/05/14 23:20:30 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -122,17 +122,7 @@ int do_hash = 0;
 int do_verify = 0;
 int do_split = 0;
 
-#ifndef DEFAULT_SPLIT_FORMAT
-#define DEFAULT_SPLIT_FORMAT "nnn"
-#endif /* DEFAULT_SPLIT_FORMAT */
-
-#ifndef DEFAULT_HASHWINDOW_FORMAT
-#define DEFAULT_HASHWINDOW_FORMAT "#window_start# - #window_end#: #hash#"
-#endif /* DEFAULT_HASHWINDOW_FORMAT */
-
-#ifndef DEFAULT_TOTALHASH_FORMAT
-#define DEFAULT_TOTALHASH_FORMAT "Total (#algorithm#): #hash#"
-#endif /* DEFAULT_TOTALHASH_FORMAT */
+hashconv_t hashconv = DEFAULT_HASHCONV;
 
 static char *splitformat = DEFAULT_SPLIT_FORMAT;
 static off_t splitsize;
@@ -192,6 +182,7 @@ Copy a file, converting and formatting according to the options.\n\
                            can send each to a seperate file using the\n\
                            convention ALGORITHMlog=FILE, for example\n\
                            md5log=FILE1, sha1log=FILE2, etc.\n\
+  hashconv=[before|after] perform the hashing before or after the conversions\n\
   hashformat=FORMAT      display each hashwindow according to FORMAT\n\
                            the hash format mini-language is described below\n\
   totalhashformat=FORMAT display the total hash value according to FORMAT\n\
@@ -612,7 +603,14 @@ static void scanargs(int argc, char **argv)
         } else if (STREQ(name, "hashalgorithm") || STREQ(name, "hash")) {
             parse_hash(val);
             do_hash++;
-        } else if (STREQ(name, "sizeprobe")) {
+        } else if (STREQ(name, "hashconv"))
+            if (STREQ(val, "before"))
+                hashconv = HASHCONV_BEFORE;
+            else if (STREQ(val, "after"))
+                hashconv = HASHCONV_AFTER;
+            else
+                user_error("invalid hashconv value \"%s\"", val);
+        else if (STREQ(name, "sizeprobe")) {
             if (STREQ(val, "if"))
                 probe = PROBE_INPUT;
             else if (STREQ(val, "of"))
@@ -690,10 +688,8 @@ static void scanargs(int argc, char **argv)
         init_hashlist(&ihashlist, hashflags);
 
     /* make sure selected options make sense */
-    if (output_file != NULL && verify_file != NULL) {
+    if (output_file != NULL && verify_file != NULL)
         user_error("Please select either an output file or a verify file, not both.");
-        usage(1);
-    }
 }
 
 

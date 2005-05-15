@@ -225,7 +225,7 @@ else
 
 /* Define to 1 if you have the declaration of `strndup', and to 0 if you
    don't. */
-/* #undef HAVE_DECL_STRNDUP */
+#define HAVE_DECL_STRNDUP 0
 
 /* Define to 1 if you have the declaration of `strnlen', and to 0 if you
    don't. */
