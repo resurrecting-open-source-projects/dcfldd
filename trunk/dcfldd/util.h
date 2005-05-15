@@ -1,4 +1,4 @@
-/* $Id: util.h,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id: util.h,v 1.4 2005/05/14 23:20:30 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -25,6 +25,8 @@
 #define UTIL_H
 
 #include "dcfldd.h"
+#include "config.h"
+
 #if HAVE_INTTYPES_H
 # include <inttypes.h>
 #endif
@@ -37,6 +39,9 @@ extern unsigned char *swab_buffer(unsigned char *, size_t *);
 extern void time_left(char *, size_t, int);
 extern int bit_count(register unsigned int);
 extern void replace_escapes(char *);
-extern char *strndup(char *, size_t);
+
+#if (!HAVE_DECL_STRNDUP)
+extern char *strndup(const char *, size_t);
+#endif
 
 #endif /* UTIL_H */

@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: hashformat.c,v 1.1 2005/05/14 23:20:30 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -89,10 +89,9 @@ format_t *parse_hashformat(char *str)
     if (*str == VARIABLE_HOOK) {
         for (i = 1; str[i] != '\0' && str[i] != VARIABLE_HOOK; i++)
             ;
-        if (str[i] == '\0') {
+        if (str[i] == '\0')
             user_error("invalid variable specifier \"%s\", variables should be terminated with another \'%c\'", str, VARIABLE_HOOK);
-            exit(1);
-        } else if (i == 1) {
+        else if (i == 1) {
             /* if there is two HOOKs with nothing between, remove the second and
              * push up all the following chars one position */
             for (i = 0; str[i] != '\0'; i++)
@@ -112,11 +111,9 @@ format_t *parse_hashformat(char *str)
                 add_fmtatom(&fmt, FMT_HASH, NULL);
             else if (STREQ(str, "algorithm"))
                 add_fmtatom(&fmt, FMT_ALGORITHM, NULL);
-            else {
+            else
                 user_error("invalid variable specifier \"%c%s%c\"",
                            VARIABLE_HOOK, str, VARIABLE_HOOK);
-                exit(1);
-            }
             fmt->next = parse_hashformat(&str[i]);
             return fmt;
         }

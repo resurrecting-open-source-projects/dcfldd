@@ -1,4 +1,4 @@
-/* $Id: log.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id: log.c,v 1.4 2005/05/14 23:20:30 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -55,6 +55,7 @@ void user_error(char *str, ...)
     vfprintf(stderr, str, ap);
     fprintf(stderr, "\n");
     va_end(ap);
+    exit(1);
 }
 
 void internal_error(char *str)

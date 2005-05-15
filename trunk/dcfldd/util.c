@@ -1,4 +1,4 @@
-/* $Id: util.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id: util.c,v 1.4 2005/05/14 23:20:30 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -36,6 +36,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "log.h"
+#include <string.h>
+#include "config.h"
 
 int buggy_lseek_support(int fdesc)
 {
@@ -174,7 +176,6 @@ void replace_escapes(char *str)
                 break;
             default:
                 user_error("invalid escape code \"\\%c\"", *str);
-                exit(1);
             }
             
             /* move all remaining chars in the string up one position */
@@ -186,7 +187,9 @@ void replace_escapes(char *str)
         } 
 }   
 
-char *strndup(char *str, size_t n)
+#if (!HAVE_DECL_STRNDUP)
+
+char *strndup(const char *str, size_t n)
 {
     char *retval;
     int i;
@@ -202,3 +205,5 @@ char *strndup(char *str, size_t n)
     
     return retval;
 }
+
+#endif /* !HAVE_DECL_STRNDUP */
