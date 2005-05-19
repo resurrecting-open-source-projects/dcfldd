@@ -1,4 +1,4 @@
-/* $Id: copy.c,v 1.4 2005/05/14 23:20:30 harbourn Exp $
+/* $Id: copy.c,v 1.5 2005/05/15 13:18:27 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -20,10 +20,10 @@
    Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.  */
 
 /* GNU dd originally written by Paul Rubin, David MacKenzie, and Stuart Kemp. */
-
+#include "dcfldd.h"
+#include <sys/types.h>
 #include <stdlib.h>
 #include <time.h>
-#include "dcfldd.h"
 #include "hash.h"
 #include "getpagesize.h"
 #include "safe-read.h"
