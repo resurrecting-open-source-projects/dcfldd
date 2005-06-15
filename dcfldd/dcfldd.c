@@ -1,4 +1,4 @@
-/* $Id: dcfldd.c,v 1.5 2005/05/15 13:18:27 harbourn Exp $
+/* $Id: dcfldd.c,v 1.6 2005/05/15 20:15:28 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -517,7 +517,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "hashlog:")) {
-            hash_log = popen(val, "w");
+            hash_log = popen2(val, "w");
             if (hash_log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -531,7 +531,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "md5log:")) {
-            hashops[MD5].log = popen(val, "w");
+            hashops[MD5].log = popen2(val, "w");
             if (hashops[MD5].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -541,7 +541,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "sha1log:")) {
-            hashops[SHA1].log = popen(val, "w");
+            hashops[SHA1].log = popen2(val, "w");
             if (hashops[SHA1].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -551,7 +551,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "sha256log:")) {
-            hashops[SHA256].log = popen(val, "w");
+            hashops[SHA256].log = popen2(val, "w");
             if (hashops[SHA256].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -561,7 +561,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "sha384log:")) {
-            hashops[SHA384].log = popen(val, "w");
+            hashops[SHA384].log = popen2(val, "w");
             if (hashops[SHA384].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -571,7 +571,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "sha512log:")) {
-            hashops[SHA512].log = popen(val, "w");
+            hashops[SHA512].log = popen2(val, "w");
             if (hashops[SHA512].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -580,7 +580,7 @@ static void scanargs(int argc, char **argv)
             if (verify_log == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "verifylog:")) {
-            verify_log = popen(val, "w");
+            verify_log = popen2(val, "w");
             if (verify_log == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "errlog")) {
@@ -588,7 +588,7 @@ static void scanargs(int argc, char **argv)
             if (errlog == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "errlog:")) {
-            errlog = popen(val, "w");
+            errlog = popen2(val, "w");
             if (errlog == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "splitformat"))
