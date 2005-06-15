@@ -1,4 +1,4 @@
-/* $Id: util.c,v 1.5 2005/05/15 13:18:27 harbourn Exp $
+/* $Id: util.c,v 1.6 2005/05/15 20:15:28 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -38,6 +38,8 @@
 #include "log.h"
 #include <string.h>
 #include "config.h"
+#include <unistd.h>
+#include <errno.h>
 
 int buggy_lseek_support(int fdesc)
 {
@@ -207,3 +209,117 @@ char *strndup(const char *str, size_t n)
 }
 
 #endif /* !HAVE_DECL_STRNDUP */
+
+////////////////////////////////////////////////////////
+// private popen2() - in-fact this is exact copy of
+// newlib/libc/posix.c/popen.c with fork() instead of vfork()
+
+static struct pid {
+    struct pid *next;
+	FILE *fp;
+	pid_t pid;
+} *pidlist; 
+	
+FILE * popen2(const char *program, const char *type)
+{
+	struct pid *cur;
+	FILE *iop;
+	int pdes[2], pid;
+
+       if ((*type != 'r' && *type != 'w')
+	   || (type[1]
+	       && (type[2] || (type[1] != 'b' && type[1] != 't'))
+			       )) {
+		errno = EINVAL;
+		return (NULL);
+	}
+
+	if ((cur = malloc(sizeof(struct pid))) == NULL)
+		return (NULL);
+
+	if (pipe(pdes) < 0) {
+		free(cur);
+		return (NULL);
+	}
+
+	switch (pid = fork()) {
+	case -1:			/* Error. */
+		(void)close(pdes[0]);
+		(void)close(pdes[1]);
+		free(cur);
+		return (NULL);
+		/* NOTREACHED */
+	case 0:				/* Child. */
+		if (*type == 'r') {
+			if (pdes[1] != STDOUT_FILENO) {
+				(void)dup2(pdes[1], STDOUT_FILENO);
+				(void)close(pdes[1]);
+			}
+			(void) close(pdes[0]);
+		} else {
+			if (pdes[0] != STDIN_FILENO) {
+				(void)dup2(pdes[0], STDIN_FILENO);
+				(void)close(pdes[0]);
+			}
+			(void)close(pdes[1]);
+		}
+		execl("/bin/sh", "sh", "-c", program, NULL);
+		/* On cygwin32, we may not have /bin/sh.  In that
+                   case, try to find sh on PATH.  */
+		execlp("sh", "sh", "-c", program, NULL);
+		_exit(127);
+		/* NOTREACHED */
+	}
+
+	/* Parent; assume fdopen can't fail. */
+	if (*type == 'r') {
+		iop = fdopen(pdes[0], type);
+		(void)close(pdes[1]);
+	} else {
+		iop = fdopen(pdes[1], type);
+		(void)close(pdes[0]);
+	}
+
+	/* Link into list of file descriptors. */
+	cur->fp = iop;
+	cur->pid =  pid;
+	cur->next = pidlist;
+	pidlist = cur;
+
+	return (iop);
+}
+
+/*
+ * pclose --
+ *	Pclose returns -1 if stream is not associated with a `popened' command,
+ *	if already `pclosed', or waitpid returns an error.
+ */
+
+int pclose2(FILE *iop)
+{
+	register struct pid *cur, *last;
+	int pstat;
+	pid_t pid;
+
+	(void)fclose(iop);
+
+	/* Find the appropriate file pointer. */
+	for (last = NULL, cur = pidlist; cur; last = cur, cur = cur->next)
+		if (cur->fp == iop)
+			break;
+	if (cur == NULL)
+		return (-1);
+
+	do {
+		pid = waitpid(cur->pid, &pstat, 0);
+	} while (pid == -1 && errno == EINTR);
+
+	/* Remove the entry from the linked list. */
+	if (last == NULL)
+		pidlist = cur->next;
+	else
+		last->next = cur->next;
+	free(cur);
+		
+	return (pid == -1 ? -1 : pstat);
+}
