@@ -1,4 +1,4 @@
-/* $Id: dcfldd.c,v 1.6 2005/05/15 20:15:28 harbourn Exp $
+/* $Id: dcfldd.c,v 1.7 2005/06/15 14:33:04 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -158,64 +158,64 @@ void usage(int status)
         printf("\
 Copy a file, converting and formatting according to the options.\n\
 \n\
-  bs=BYTES               force ibs=BYTES and obs=BYTES\n\
-  cbs=BYTES              convert BYTES bytes at a time\n\
-  conv=KEYWORDS          convert the file as per the comma separated keyword list\n\
-  count=BLOCKS           copy only BLOCKS input blocks\n\
-  ibs=BYTES              read BYTES bytes at a time\n\
-  if=FILE                read from FILE instead of stdin\n\
-  obs=BYTES              write BYTES bytes at a time\n\
-  of=FILE                write to FILE instead of stdout\n\
-                          NOTE: of=FILE may be used several times to write\n\
-                                output to multiple files simultaneously\n\
-  of:=COMMAND            exec and write output to process COMMAND\n\
-  seek=BLOCKS            skip BLOCKS obs-sized blocks at start of output\n\
-  skip=BLOCKS            skip BLOCKS ibs-sized blocks at start of input\n\
-  pattern=HEX            use the specified binary pattern as input\n\
-  textpattern=TEXT       use repeating TEXT as input\n\
-  errlog=FILE            send error messages to FILE as well as stderr\n\
-  hashwindow=BYTES       perform a hash on every BYTES amount of data\n\
-  hash=NAME              either md5, sha1, sha256, sha384 or sha512\n\
-                           default algorithm is md5. To select multiple\n\
-                           algorithms to run simultaneously enter the names\n\
-                           in a comma separated list\n\
-  hashlog=FILE           send MD5 hash output to FILE instead of stderr\n\
-                           if you are using multiple hash algorithms you\n\
-                           can send each to a seperate file using the\n\
-                           convention ALGORITHMlog=FILE, for example\n\
-                           md5log=FILE1, sha1log=FILE2, etc.\n\
-  hashlog:=COMMAND       exec and write hashlog to process COMMAND\n\
-                           ALGORITHMlog:=COMMAND also works in the same fashion\n\
-  hashconv=[before|after] perform the hashing before or after the conversions\n\
-  hashformat=FORMAT      display each hashwindow according to FORMAT\n\
-                           the hash format mini-language is described below\n\
-  totalhashformat=FORMAT display the total hash value according to FORMAT\n\
-  status=[on|off]        display a continual status message on stderr\n\
-                           default state is \"on\"\n\
-  statusinterval=N       update the status message every N blocks\n\
-                           default value is 256\n\
-  sizeprobe=[if|of]      determine the size of the input or output file\n\
-                           for use with status messages. (this option\n\
-                           gives you a percentage indicator)\n\
-                           WARNING: do not use this option against a\n\
-                                    tape device.\n\
-  split=BYTES            write every BYTES amount of data to a new file\n\
-                           This operation applies to any of=FILE that follows\n\
-  splitformat=TEXT       the file extension format for split operation.\n\
-                           you may use any number of 'a' or 'n' in any combo\n\
-                           the default format is \"nnn\"\n\
-                           NOTE: The split and splitformat options take effect\n\
-                                only for output files specified AFTER these\n\
-                                options appear in the command line.  Likewise,\n\
-                                you may specify these several times for\n\
-                                for different output files within the same\n\
-                                command line. you may use as many digits in\n\
-                                any combination you would like.\n\
-                                (e.g. \"anaannnaana\" would be valid, but\n\
-                                quite insane)\n\
-  vf=FILE                verify that FILE matches the specified input\n\
-  verifylog=FILE         send verify results to FILE instead of stderr\n\
-  verifylog:=COMMAND     exec and write verify results to process COMMAND\n\
+  bs=BYTES                 force ibs=BYTES and obs=BYTES\n\
+  cbs=BYTES                convert BYTES bytes at a time\n\
+  conv=KEYWORDS            convert the file as per the comma separated keyword list\n\
+  count=BLOCKS             copy only BLOCKS input blocks\n\
+  ibs=BYTES                read BYTES bytes at a time\n\
+  if=FILE                  read from FILE instead of stdin\n\
+  obs=BYTES                write BYTES bytes at a time\n\
+  of=FILE                  write to FILE instead of stdout\n\
+                            NOTE: of=FILE may be used several times to write\n\
+                                  output to multiple files simultaneously\n\
+  of:=COMMAND              exec and write output to process COMMAND\n\
+  seek=BLOCKS              skip BLOCKS obs-sized blocks at start of output\n\
+  skip=BLOCKS              skip BLOCKS ibs-sized blocks at start of input\n\
+  pattern=HEX              use the specified binary pattern as input\n\
+  textpattern=TEXT         use repeating TEXT as input\n\
+  errlog=FILE              send error messages to FILE as well as stderr\n\
+  hashwindow=BYTES         perform a hash on every BYTES amount of data\n\
+  hash=NAME                either md5, sha1, sha256, sha384 or sha512\n\
+                             default algorithm is md5. To select multiple\n\
+                             algorithms to run simultaneously enter the names\n\
+                             in a comma separated list\n\
+  hashlog=FILE             send MD5 hash output to FILE instead of stderr\n\
+                             if you are using multiple hash algorithms you\n\
+                             can send each to a seperate file using the\n\
+                             convention ALGORITHMlog=FILE, for example\n\
+                             md5log=FILE1, sha1log=FILE2, etc.\n\
+  hashlog:=COMMAND         exec and write hashlog to process COMMAND\n\
+                             ALGORITHMlog:=COMMAND also works in the same fashion\n\
+  hashconv=[before|after]  perform the hashing before or after the conversions\n\
+  hashformat=FORMAT        display each hashwindow according to FORMAT\n\
+                             the hash format mini-language is described below\n\
+  totalhashformat=FORMAT   display the total hash value according to FORMAT\n\
+  status=[on|off]          display a continual status message on stderr\n\
+                             default state is \"on\"\n\
+  statusinterval=N         update the status message every N blocks\n\
+                             default value is 256\n\
+  sizeprobe=[if|of]        determine the size of the input or output file\n\
+                             for use with status messages. (this option\n\
+                             gives you a percentage indicator)\n\
+                             WARNING: do not use this option against a\n\
+                                      tape device.\n\
+  split=BYTES              write every BYTES amount of data to a new file\n\
+                             This operation applies to any of=FILE that follows\n\
+  splitformat=TEXT         the file extension format for split operation.\n\
+                             you may use any number of 'a' or 'n' in any combo\n\
+                             the default format is \"nnn\"\n\
+                             NOTE: The split and splitformat options take effect\n\
+                                  only for output files specified AFTER these\n\
+                                  options appear in the command line.  Likewise,\n\
+                                  you may specify these several times for\n\
+                                  for different output files within the same\n\
+                                  command line. you may use as many digits in\n\
+                                  any combination you would like.\n\
+                                  (e.g. \"anaannnaana\" would be valid, but\n\
+                                  quite insane)\n\
+  vf=FILE                  verify that FILE matches the specified input\n\
+  verifylog=FILE           send verify results to FILE instead of stderr\n\
+  verifylog:=COMMAND       exec and write verify results to process COMMAND\n\
 \n\
     --help           display this help and exit\n\
     --version        output version information and exit\n\
@@ -678,6 +678,9 @@ static void scanargs(int argc, char **argv)
     for (i = 0; hashops[i].name != NULL; i++)
         if (hashops[i].log == NULL)
             hashops[i].log = hash_log;
+
+    if (do_hash && hashflags == 0)
+        hashflags = hashops[DEFAULT_HASH].flag;
     
     if (do_verify) {
         do_hash = 0;

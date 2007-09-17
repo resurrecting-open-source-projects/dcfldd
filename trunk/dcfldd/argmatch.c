@@ -154,7 +154,7 @@ argcasematch (const char *arg, const char *const *arglist,
 void
 argmatch_invalid (const char *context, const char *value, int problem)
 {
-  char const *format = (problem == -1
+  char *format = (problem == -1
 			? "invalid argument %s for `%s'"
 			: "ambiguous argument %s for `%s'");
 
