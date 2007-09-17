@@ -1,4 +1,4 @@
-/* $Id: dcfldd.h,v 1.6 2005/05/15 20:15:28 harbourn Exp $
+/* $Id: dcfldd.h,v 1.7 2005/05/19 21:00:07 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -42,7 +42,6 @@
 
 /* The official name of this program (e.g., no `g' prefix).  */
 #define PROGRAM_NAME "dcfldd"
-#define PROGRAM_VERSION "1.3-RC2"
 
 #define AUTHORS "dcfldd by Nicholas Harbour, GNU dd by Paul Rubin, David MacKenzie and Stuart Kemp"
 

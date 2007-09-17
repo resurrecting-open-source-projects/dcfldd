@@ -1,4 +1,4 @@
-/* $Id: hash.h,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id: hash.h,v 1.4 2005/05/14 23:20:30 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -82,6 +82,10 @@ enum {WINDOW_CTX, TOTAL_CTX, VWINDOW_CTX, VTOTAL_CTX};
 
 #ifndef VERIFY_HASH
 #define VERIFY_HASH MD5
+#endif
+
+#ifndef DEFAULT_HASH
+#define DEFAULT_HASH MD5
 #endif
 
 extern off_t bytes_in_window;

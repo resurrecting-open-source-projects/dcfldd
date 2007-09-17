@@ -1,4 +1,4 @@
-/* $Id: util.c,v 1.6 2005/05/15 20:15:28 harbourn Exp $
+/* $Id: util.c,v 1.7 2005/06/15 14:33:04 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -67,7 +67,7 @@ int buggy_lseek_support(int fdesc)
    bytes of the data at a time in BUF, if necessary.  RECORDS must be
    nonzero.  */
 
-void skip(int fdesc, char *file, uintmax_t records, size_t blocksize,
+void skip2(int fdesc, char *file, uintmax_t records, size_t blocksize,
                  unsigned char *buf)
 {
     off_t offset = records * blocksize;
@@ -95,6 +95,116 @@ void skip(int fdesc, char *file, uintmax_t records, size_t blocksize,
         }
     }
 }
+
+/* This is a wrapper for lseek.  It detects and warns about a kernel
+   bug that makes lseek a no-op for tape devices, even though the kernel
+   lseek return value suggests that the function succeeded.
+
+   The parameters are the same as those of the lseek function, but
+   with the addition of FILENAME, the name of the file associated with
+   descriptor FDESC.  The file name is used solely in the warning that's
+   printed when the bug is detected.  Return the same value that lseek
+   would have returned, but when the lseek bug is detected, return -1
+   to indicate that lseek failed.
+
+   The offending behavior has been confirmed with an Exabyte SCSI tape
+   drive accessed via /dev/nst0 on both Linux-2.2.17 and Linux-2.4.16.  */
+
+#ifdef __linux__
+
+# include <sys/mtio.h>
+
+# define MT_SAME_POSITION(P, Q) \
+   ((P).mt_resid == (Q).mt_resid \
+    && (P).mt_fileno == (Q).mt_fileno \
+    && (P).mt_blkno == (Q).mt_blkno)
+
+static off_t skip_via_lseek(char const *filename, int fdesc, off_t offset,
+                            int whence)
+{
+    struct mtget s1;
+    struct mtget s2;
+    int got_original_tape_position = (ioctl (fdesc, MTIOCGET, &s1) == 0);
+    /* known bad device type */
+    /* && s.mt_type == MT_ISSCSI2 */
+    
+    off_t new_position = lseek (fdesc, offset, whence);
+
+    if (0 <= new_position
+        && got_original_tape_position
+        && ioctl (fdesc, MTIOCGET, &s2) == 0
+        && MT_SAME_POSITION (s1, s2))
+    {
+        error (0, 0, _("warning: working around lseek kernel bug for file (%s)\n\
+  of mt_type=0x%0lx -- see <sys/mtio.h> for the list of types"),
+               filename, s2.mt_type);
+        errno = 0;
+        new_position = -1;
+    }
+    
+    return new_position;
+}
+#else
+# define skip_via_lseek(Filename, Fd, Offset, Whence) lseek(Fd, Offset, Whence)
+#endif
+
+/* Throw away RECORDS blocks of BLOCKSIZE bytes on file descriptor FDESC,
+   which is open with read permission for FILE.  Store up to BLOCKSIZE
+   bytes of the data at a time in BUF, if necessary.  RECORDS must be
+   nonzero.  If fdesc is STDIN_FILENO, advance the input offset.
+   Return the number of records remaining, i.e., that were not skipped
+   because EOF was reached.  */
+
+uintmax_t skip(int fdesc, char const *file, uintmax_t records,
+               size_t blocksize, char *buf)
+{
+    uintmax_t offset = records * blocksize;
+    off_t lseekretval;
+    /* Try lseek and if an error indicates it was an inappropriate operation --
+       or if the the file offset is not representable as an off_t --
+       fall back on using read.  */
+    
+    errno = 0;
+    lseekretval = skip_via_lseek(file, fdesc, offset, SEEK_CUR);
+
+    if (records <= OFF_T_MAX / blocksize
+        && 0 <= lseekretval)
+    {
+        return 0;
+    }
+    else
+    {
+        int lseek_errno = errno;
+        
+        do
+        {
+            ssize_t nread = read(fdesc, buf, blocksize);
+
+            if (nread < 0)
+            {
+                if (fdesc == STDIN_FILENO)
+                {
+                    log_info("%s: reading %s", strerror(errno), file);
+                    if (conversions_mask & C_NOERROR)
+                    {
+                        print_stats();
+                        continue;
+                    }
+                }
+                else
+                    log_info("%s: cannot seek %s", strerror(lseek_errno), file);
+                quit(1);
+            }
+            
+            if (nread == 0)
+                break;
+        }
+        while (--records != 0);
+        
+        return records;
+    }
+}
+
 
 void time_left(char *secstr, size_t bufsize, int seconds)
 {

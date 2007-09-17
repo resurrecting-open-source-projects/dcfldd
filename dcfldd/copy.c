@@ -1,4 +1,4 @@
-/* $Id: copy.c,v 1.5 2005/05/15 13:18:27 harbourn Exp $
+/* $Id: copy.c,v 1.6 2005/05/19 20:59:12 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -155,7 +155,7 @@ int dd_copy(void)
     int input_from_stream = !!input_file;
     int input_from_pattern = !input_from_stream;
     size_t page_size = getpagesize();
-    size_t n_bytes_read;
+    size_t n_bytes_read;    
     
     /* Leave at least one extra byte at the beginning and end of `ibuf'
        for conv=swab, but keep the buffer address even.  But some peculiar
@@ -181,6 +181,10 @@ int dd_copy(void)
     ibuf += SWAB_ALIGN_OFFSET;	/* allow space for swab */
     
     ibuf = PTR_ALIGN(ibuf, page_size);
+
+    /* Init */
+    if (do_hash) 
+        hash_update(ihashlist, NULL, 0);
     
     if (conversions_mask & C_TWOBUFS) {
         /* Page-align the output buffer, too.  */
@@ -196,13 +200,11 @@ int dd_copy(void)
             skip(STDIN_FILENO, input_file, skip_records, input_blocksize, ibuf);
     
     if (seek_records != 0) {
-        /* FIXME: this loses for
-           % ./dd if=dd seek=1 |:
-           ./dd: standard output: Bad file descriptor
-           0+0 records in
-           0+0 records out
-        */
-        skip(STDOUT_FILENO, output_file, seek_records, output_blocksize, obuf);
+        outputlist_t *listptr;
+
+        for (listptr = outputlist; listptr != NULL; listptr = listptr->next) {
+            skip(listptr->data.fd, "", seek_records, output_blocksize, obuf);
+        }
     }
     
     if (max_records == 0)
@@ -264,11 +266,15 @@ int dd_copy(void)
                 print_stats();
                 /* Seek past the bad block if possible. */
                 lseek(STDIN_FILENO, (off_t) input_blocksize, SEEK_CUR);
-                if (conversions_mask & C_SYNC)
+                if (conversions_mask & C_SYNC) {
                     /* Replace the missing input with null bytes and
                        proceed normally.  */
+                    // EXPERIMENTAL: let's try re-zeroing this buffer
+                    memset((char *) ibuf,
+                           (conversions_mask & (C_BLOCK | C_UNBLOCK)) ? ' ' : '\0',
+                           input_blocksize);
                     nread = 0;
-                else
+                } else
                     continue;
             } else {
                 /* Write any partial block. */
@@ -289,7 +295,11 @@ int dd_copy(void)
                     memset((char *) (ibuf + n_bytes_read),
                            (conversions_mask & (C_BLOCK | C_UNBLOCK)) ? ' ' : '\0',
                            input_blocksize - n_bytes_read);
-                n_bytes_read = input_blocksize;
+		/* nread is only zero when an error has occured
+		   In that case we need to pad this block with zeros.
+		   Otherwise, we'll just write out whatever we have */
+		if (0 == nread)
+		  n_bytes_read = input_blocksize;
             }
         }
         else
@@ -305,32 +315,30 @@ int dd_copy(void)
                 w_full++;
             else
                 w_partial++;
-            continue;
+        } else {  /* If C_TWOBUFS */
+            /* Do any translations on the whole buffer at once.  */
+    
+            if (translation_needed)
+                translate_buffer(ibuf, n_bytes_read);
+    
+            if (conversions_mask & C_SWAB)
+                bufstart = swab_buffer(ibuf, &n_bytes_read);
+            else
+                bufstart = ibuf;
+            
+            if (conversions_mask & C_BLOCK)
+                copy_with_block(bufstart, n_bytes_read);
+            else if (conversions_mask & C_UNBLOCK)
+                copy_with_unblock(bufstart, n_bytes_read);
+            else
+                copy_simple(bufstart, n_bytes_read);
         }
-    
-        /* Do any translations on the whole buffer at once.  */
-    
-        if (translation_needed)
-            translate_buffer(ibuf, n_bytes_read);
-    
-        if (conversions_mask & C_SWAB)
-            bufstart = swab_buffer(ibuf, &n_bytes_read);
-        else
-            bufstart = ibuf;
-    
-        if (conversions_mask & C_BLOCK)
-            copy_with_block(bufstart, n_bytes_read);
-        else if (conversions_mask & C_UNBLOCK)
-            copy_with_unblock(bufstart, n_bytes_read);
-        else
-            copy_simple(bufstart, n_bytes_read);
-    
+        
+        if (do_hash && hashconv == HASHCONV_AFTER)
+            hash_update(ihashlist, ibuf, n_bytes_read);
     }
 
     
-    if (do_hash && hashconv == HASHCONV_AFTER)
-        hash_update(ihashlist, ibuf, n_bytes_read);
-        
     /* If we have a char left as a result of conv=swab, output it.  */
     if (char_is_saved) {
         if (conversions_mask & C_BLOCK)
