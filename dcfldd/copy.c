@@ -295,11 +295,7 @@ int dd_copy(void)
                     memset((char *) (ibuf + n_bytes_read),
                            (conversions_mask & (C_BLOCK | C_UNBLOCK)) ? ' ' : '\0',
                            input_blocksize - n_bytes_read);
-		/* nread is only zero when an error has occured
-		   In that case we need to pad this block with zeros.
-		   Otherwise, we'll just write out whatever we have */
-		if (0 == nread)
-		  n_bytes_read = input_blocksize;
+                n_bytes_read = input_blocksize;
             }
         }
         else
