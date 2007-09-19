@@ -54,22 +54,27 @@ static char *getext(char *fmt, int num)
 
     retval = malloc(fmtlen);
 
-    /* Fill the retval in reverse while constantly dividing num apropriately */
-    for (i = fmtlen - 1; i >= 0; i--) {
+    // RBF - Update manpage and help message with 'd' for splitformat
+    if ('d' == fmt[0])
+      snprintf(retval,fmtlen+1,"%0*d",fmtlen,num+1);
+    else
+    {
+      /* Fill the retval in reverse while constantly dividing num apropriately */
+      for (i = fmtlen - 1; i >= 0; i--) {
         int x;
-
+	
         if (fmt[i] == 'a') {
-            x = num % NUM_LETTERS;
-            retval[i] = letters[x];
-            num = num / NUM_LETTERS;
+	  x = num % NUM_LETTERS;
+	  retval[i] = letters[x];
+	  num = num / NUM_LETTERS;
         } else {
-            x = num % NUM_NUMBERS;
-            retval[i] = numbers[x];
-            num = num / NUM_NUMBERS;
+	  x = num % NUM_NUMBERS;
+	  retval[i] = numbers[x];
+	  num = num / NUM_NUMBERS;
         }
+      }
+      retval[fmtlen] = '\0';
     }
-
-    retval[fmtlen] = '\0';
     
     return retval;
 }

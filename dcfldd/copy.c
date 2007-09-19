@@ -54,6 +54,8 @@ static void write_output(void)
 {
     /*int nwritten = full_write(STDOUT_FILENO, obuf, output_blocksize); */
     int nwritten = outputlist_write(obuf, output_blocksize);
+
+    w_bytes += nwritten;
     
     if (nwritten != output_blocksize) {
         if (nwritten > 0)
@@ -150,7 +152,7 @@ int dd_copy(void)
     unsigned char *ibuf, *bufstart; /* Input buffer. */
     unsigned char *real_buf;	  /* real buffer address before alignment */
     unsigned char *real_obuf;
-    ssize_t nread;		/* Bytes read in the current block. */
+    ssize_t nread = 0;		/* Bytes read in the current block. */
     int exit_status = 0;
     int input_from_stream = !!input_file;
     int input_from_pattern = !input_from_stream;
@@ -283,6 +285,7 @@ int dd_copy(void)
             }
         }
         n_bytes_read = nread;
+	r_bytes += nread;
     
         if (do_hash && hashconv == HASHCONV_BEFORE)
             hash_update(ihashlist, ibuf, n_bytes_read);
@@ -304,6 +307,7 @@ int dd_copy(void)
         if (ibuf == obuf) {		/* If not C_TWOBUFS. */
             /* int nwritten = full_write(STDOUT_FILENO, obuf, n_bytes_read); */
             int nwritten = outputlist_write(obuf, n_bytes_read);
+	    w_bytes += nwritten;
             
             if (nwritten < 0) 
                 syscall_error(output_file);
@@ -362,7 +366,8 @@ int dd_copy(void)
     if (oc != 0) {
         /* int nwritten = full_write(STDOUT_FILENO, obuf, oc); */
         int nwritten = outputlist_write(obuf, oc);
-        
+        w_bytes += nwritten;
+
         if (nwritten > 0)
             w_partial++;
         if (nwritten < 0) {
