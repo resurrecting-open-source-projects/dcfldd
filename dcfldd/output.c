@@ -135,6 +135,9 @@ void outputlist_add(outputtype_t type, ...)
         split->currfd = -1;
         ptr->data.split = split;
         break;
+
+    case NONE:
+      break;
     }
 
     va_end(ap);
@@ -143,6 +146,7 @@ void outputlist_add(outputtype_t type, ...)
 int outputlist_write(const char *buf, size_t len)
 {
     outputlist_t *ptr;
+    // RBF - Should nwritten be a size_t? 
     int nwritten = 0;
     
     for (ptr = outputlist; ptr != NULL; ptr = ptr->next) {
@@ -154,6 +158,8 @@ int outputlist_write(const char *buf, size_t len)
         case SPLIT_FILE:
             nwritten = split_write(ptr->data.split, buf, len);
             break;
+	case NONE:
+	  break;
         }
         if (nwritten < len)
             break;
