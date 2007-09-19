@@ -1,6 +1,6 @@
 Changes from version 1.3.4-1:
 	- Added 'd' option to splitformat to create suffixes starting
-	  at .001 instead of .000
+	  with .001 instead of .000
 	- Added "log" mode to combine hashlog and errlog files.
 	  This mode will append existing files, not overwrite them.
 	- Created option to reset the default block size to 512 bytes 
