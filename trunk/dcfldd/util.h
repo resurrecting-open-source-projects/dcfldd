@@ -41,7 +41,7 @@ extern void time_left(char *, size_t, int);
 extern int bit_count(register unsigned int);
 extern void replace_escapes(char *);
 extern FILE *popen2(const char *, const char *);
-extern pclose2(FILE *);
+extern int pclose2(FILE *);
 
 #if (!HAVE_DECL_STRNDUP)
 extern char *strndup(const char *, size_t);

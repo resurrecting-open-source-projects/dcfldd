@@ -40,6 +40,7 @@
 #include "config.h"
 #include <unistd.h>
 #include <errno.h>
+#include "safe-read.h"
 
 int buggy_lseek_support(int fdesc)
 {
@@ -304,7 +305,7 @@ void replace_escapes(char *str)
 char *strndup(const char *str, size_t n)
 {
     char *retval;
-    int i;
+    size_t i;
     
     if (str == NULL || n == 0)
         return NULL;
