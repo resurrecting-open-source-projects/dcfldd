@@ -93,6 +93,10 @@ while (0)
 #define DEFAULT_HASHCONV HASHCONV_BEFORE
 #endif /* DEFAULT_HASHCONV */
 
+#ifndef O_DIRECT
+# define O_DIRECT 0
+#endif
+
 /* Conversions bit masks. */
 #define C_ASCII 01
 #define C_EBCDIC 02
@@ -105,6 +109,7 @@ while (0)
 #define C_NOERROR 0400
 #define C_NOTRUNC 01000
 #define C_SYNC 02000
+#define C_DIRECT 04000
 /* Use separate input and output buffers, and combine partial input blocks. */
 #define C_TWOBUFS 04000
 
@@ -137,6 +142,9 @@ extern uintmax_t r_partial;
 extern uintmax_t r_full;
 extern uintmax_t r_partial;
 extern uintmax_t r_truncate;
+
+extern uintmax_t r_bytes;
+extern uintmax_t w_bytes;
 
 extern int do_hash;
 extern int do_verify;

@@ -159,7 +159,9 @@ extern int errno;
 #if O_BINARY
 # ifndef __DJGPP__
 #  define setmode _setmode
+#ifndef fileno
 #  define fileno(_fp) _fileno (_fp)
+#endif
 # endif /* not DJGPP */
 # define SET_BINARY(_f) do {if (!isatty(_f)) setmode (_f, O_BINARY);} while (0)
 # define SET_BINARY2(_f1, _f2)		\

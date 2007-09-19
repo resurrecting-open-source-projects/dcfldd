@@ -105,6 +105,12 @@ uintmax_t r_partial = 0;
 /* Number of full blocks read. */
 uintmax_t r_full = 0;
 
+/* Number of bytes read */
+uintmax_t r_bytes = 0;
+
+/* Number of bytes written */
+uintmax_t w_bytes = 0;
+
 /* If nonzero, filter characters through the translation table.  */
 int translation_needed = 0;
 
@@ -146,6 +152,8 @@ static struct conversion conversions[] =
     {"noerror", C_NOERROR},	/* Ignore i/o errors. */
     {"notrunc", C_NOTRUNC},	/* Do not truncate output file. */
     {"sync", C_SYNC},		/* Pad input records to ibs with NULs. */
+    // RBF - Support systems that don't have O_DIRECT defined
+    {"direct", C_DIRECT},       /* Use O_DIRECT to open input files */
     {NULL, 0}
 };
 
@@ -283,6 +291,13 @@ void print_stats(void)
                  ? "truncated record"
                  : "truncated records"));
     }
+
+    log_info("%s bytes in\n", 
+	     human_readable(r_bytes,buf[0],1,1));
+    log_info("%s bytes out\n",
+	     human_readable(w_bytes,buf[0],1,1));
+
+
 }
 
 void cleanup(void)
@@ -291,6 +306,7 @@ void cleanup(void)
         fprintf(stderr, "\n");
     if (!do_verify)
         print_stats();
+    // RBF - Improve error handling in cleanup()
     if (close(STDIN_FILENO) < 0)
         ;
     if (close(STDOUT_FILENO) < 0)
@@ -521,6 +537,13 @@ static void scanargs(int argc, char **argv)
             if (hash_log == NULL)
                 syscall_error(val);
             do_hash++;
+	} else if (STREQ(name,"log")) {
+	  // RBF - Document "log" command line option
+	    hash_log = fopen(val,"a");
+	    if (hash_log == NULL)
+	       syscall_error(val);
+	    do_hash++;
+	    errlog = hash_log;
         } else if (STREQ(name, "hashformat"))
             hashformat = parse_hashformat(val);
         else if (STREQ(name, "totalhashformat"))
@@ -592,7 +615,8 @@ static void scanargs(int argc, char **argv)
             if (errlog == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "splitformat"))
-            splitformat = val;
+	  // RBF - Added strdup here:
+            splitformat = strdup(val);
         else if (STREQ(name, "status")) {
             if (STREQ(val, "off"))
                 do_status = 0;
@@ -618,7 +642,11 @@ static void scanargs(int argc, char **argv)
         } else {
             int invalid = 0;
             uintmax_t n = parse_integer(val, &invalid);
-            
+         
+	    // RBF - Double check this error handling
+	    if (1 == invalid)
+	      user_error("Illegal command line option");
+
             if (STREQ(name, "ibs")) {
                 input_blocksize = n;
                 invalid |= input_blocksize != n || input_blocksize == 0;
@@ -735,14 +763,21 @@ int main(int argc, char **argv)
     
     apply_translations();
     
+    int open_flags;
+
+    if (conversions_mask & C_DIRECT)
+      open_flags = O_RDONLY | O_DIRECT;
+    else
+      open_flags = O_RDONLY;
+
     if (input_file != NULL) {
-        if (open_fd(STDIN_FILENO, input_file, O_RDONLY, 0) < 0)
+        if (open_fd(STDIN_FILENO, input_file, open_flags, 0) < 0)
             syscall_error(input_file);
     } else if (pattern == NULL)
         input_file = "standard input";
 
     if (verify_file != NULL)
-        if ((verify_fd = open(verify_file, O_RDONLY)) < 0)
+        if ((verify_fd = open(verify_file, open_flags)) < 0)
             syscall_error(verify_file);
     
     if (outputlist == NULL)
@@ -769,4 +804,7 @@ int main(int argc, char **argv)
 
     close(1);
     quit(exit_status);
+
+    // We should never reach here, but this makes the compiler happy
+    return EXIT_SUCCESS;
 }

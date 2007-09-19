@@ -1,1 +1,5 @@
-dcfldd by Nicholas Harbour, GNU dd by Paul Rubin, David MacKenzie and Stuart Kemp
+dcfldd was written by Nicholas Harbour. The program is now maintained
+by Nick and Jesse Kornblum.
+
+The orignial GNU dd was written by Paul Rubin, David MacKenzie and Stuart Kemp.
+

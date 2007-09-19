@@ -11,3 +11,6 @@ log.c log.h full-write.h output.c output.h split.c split.h hashformat.c hashform
 man_MANS = dcfldd.1
 
 EXTRA_DIST = $(man_MANS)
+
+preflight:
+	grep RBF $(DISTFILES)
