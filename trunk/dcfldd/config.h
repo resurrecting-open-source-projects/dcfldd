@@ -68,6 +68,10 @@
 /* Version number of package */
 #define VERSION "1.4"
 
+/* Define to 1 if your processor stores words with the most significant byte
+   first (like Motorola and SPARC, unlike Intel and VAX). */
+#define WORDS_BIGENDIAN 1
+
 /* Define to empty if `const' does not conform to ANSI C. */
 /* #undef const */
 
