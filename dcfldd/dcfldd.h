@@ -24,6 +24,7 @@
 #ifndef DCFLDD_H
 #define DCFLDD_H
 
+// RBF - Can these be wrapped in the configuration script? 
 #define _FILE_OFFSET_BITS 64
 #define LARGEFILE_SOURCE
 
@@ -40,6 +41,7 @@
 
 #include "hash.h"
 
+// RBF - Can these be wrapped in the configuration script? 
 /* The official name of this program (e.g., no `g' prefix).  */
 #define PROGRAM_NAME "dcfldd"
 
