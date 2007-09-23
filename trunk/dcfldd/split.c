@@ -56,7 +56,6 @@ static char *getext(char *fmt, int num)
 
     retval = malloc(fmtlen);
 
-    // RBF - Update manpage and help message with 'd' for splitformat
     if ('d' == fmt[0])
       snprintf(retval,fmtlen+1,"%0*d",fmtlen,num+1);
     else

@@ -212,17 +212,21 @@ Copy a file, converting and formatting according to the options.\n\
   split=BYTES              write every BYTES amount of data to a new file\n\
                              This operation applies to any of=FILE that follows\n\
   splitformat=TEXT         the file extension format for split operation.\n\
-                             you may use any number of 'a' or 'n' in any combo\n\
-                             the default format is \"nnn\"\n\
-                             NOTE: The split and splitformat options take effect\n\
-                                  only for output files specified AFTER these\n\
-                                  options appear in the command line.  Likewise,\n\
-                                  you may specify these several times for\n\
-                                  for different output files within the same\n\
-                                  command line. you may use as many digits in\n\
-                                  any combination you would like.\n\
-                                  (e.g. \"anaannnaana\" would be valid, but\n\
-                                  quite insane)\n\
+                           TEXT should be a combination of 'a' (alpha), 'n'\n\
+                           (numeric), and 'd' (digit) characters. The length\n\
+                            of this string indicates how many digits to \n\
+                           include in the suffix. The default format \n\
+                           is \"nnn\". Although you cannot use 'd' with \n\
+                           any other characters, you may use any number of \n\
+                           'a' or 'n' characters.\n\n\
+                           Note that the split and splitformat options \n\
+                           take effect only for output files specified \n\
+                           AFTER these options appear in the command line.\n\
+                           Likewise, you may specify these several times \n\
+                           for for different output files within the same\n\
+                           command line. you may use as many digits in\n\
+                           any combination you would like. (e.g. \n\
+                           \"anaannnaana\" would be valid, but quite insane)\n\
   vf=FILE                  verify that FILE matches the specified input\n\
   verifylog=FILE           send verify results to FILE instead of stderr\n\
   verifylog:=COMMAND       exec and write verify results to process COMMAND\n\
@@ -397,19 +401,24 @@ void parse_conversion(char *str)
     unsigned int i;
     
     do {
-        new = strchr(str, ',');
-        if (new != NULL)
-            *new++ = '\0';
-        for (i = 0; conversions[i].convname != NULL; i++)
-            if (STREQ(conversions[i].convname, str)) {
-                conversions_mask |= conversions[i].conversion;
-                break;
-            }
-        if (conversions[i].convname == NULL) {
-            log_info("invalid conversion: %s\n", str);
-            usage(1);
-        }
-        str = new;
+      new = strchr(str, ',');
+      if (new != NULL)
+	*new++ = '\0';
+      for (i = 0; conversions[i].convname != NULL; i++)
+	if (STREQ(conversions[i].convname, str)) {
+	  conversions_mask |= conversions[i].conversion;
+
+	  if (C_DIRECT == conversions[i].conversion &&
+	      0 == O_DIRECT)
+	    log_info("Direct conversion not available, ignored\n");
+
+	  break;
+	}
+      if (conversions[i].convname == NULL) {
+	log_info("invalid conversion: %s\n", str);
+	usage(1);
+      }
+      str = new;
     } while (new != NULL);
 }
 
