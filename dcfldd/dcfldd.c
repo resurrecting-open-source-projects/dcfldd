@@ -264,7 +264,13 @@ Each KEYWORD may be:\n\
   unblock   replace trailing spaces in cbs-size records with newline\n\
   lcase     change upper case to lower case\n\
   notrunc   do not truncate the output file\n\
-  ucase     change lower case to upper case\n\
+  ucase     change lower case to upper case\n");
+
+	if (O_DIRECT)
+	  printf ("\
+  direct    bypass opertaing system caching. Good for disks with errors");
+	
+	printf ("\
   swab      swap every pair of input bytes\n\
   noerror   continue after read errors\n\
   sync      pad every input block with NULs to ibs-size; when used\n\
