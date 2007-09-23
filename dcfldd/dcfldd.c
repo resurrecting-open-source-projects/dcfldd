@@ -268,7 +268,7 @@ Each KEYWORD may be:\n\
 
 	if (O_DIRECT)
 	  printf ("\
-  direct    bypass opertaing system caching. Good for disks with errors");
+  direct    bypass opertaing system caching. Good for disks with errors\n");
 	
 	printf ("\
   swab      swap every pair of input bytes\n\
