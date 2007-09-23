@@ -1,0 +1,45 @@
+
+** Changes in version 1.4 (RBF DATE)
+
+* New Features:
+
+	Added 'd' option to splitformat parameter to create file 
+	suffixes starting with .001 instead of .000
+
+	Added "log" mode to combine hashlog and errlog files.
+	This mode will append existing files, not overwrite them.
+
+	Documented option to set the default block size to 512 bytes
+	at compilation time. Although this existed in previous
+	versions, it was not widely known.
+	RBF - Document block size in configure
+
+	Added display oftotal bytes in/out at the end of operation
+
+	Added conv=direct to allow for direct input mode (on systems 
+	that support such a mode).
+
+* Bug Fixes:
+
+	Fixed bug in split mode that could crash the program
+	due to too many open file handles.
+
+
+
+	
+Changes from version 1.2.2:
+	- Added ability to write to multiple output files.
+	- Added split capability with the "split=" and "splitformat=" switches.
+	- Converts "if=/dev/zero" to "pattern=00" to force efficiency.
+	- Fixed a few bugs with verify.
+	
+Changes from version 1.2.1:
+	- Fixed large file support bug
+	- added verify capability
+	
+Changes from version 1.0:
+	- Added SHA-1, SHA-256, SHA-384 and SHA-512 support
+	- Fixed compile errors.
+	- Fixed Megabyte constant.
+	- Fixed problem with not displaying the final hash remainder.
+	- Created an entirely new (and trim) build environment.

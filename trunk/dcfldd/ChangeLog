@@ -1,28 +1,4 @@
-Changes from version 1.3.4-1:
-	- Added 'd' option to splitformat to create suffixes starting
-	  with .001 instead of .000
-	- Added "log" mode to combine hashlog and errlog files.
-	  This mode will append existing files, not overwrite them.
-	- Created option to reset the default block size to 512 bytes 
-	  at compile time. (./configure CFLAGS="-DDEFAULT_BLOCKSIZE=512")
-	- In the final output, added the number of bytes in/out in 
-	  addition to the number of records.
-	- Added conv=direct to allow for direct input mode (on systems 
-	  that support such a mode).
+2007-09-23 Jesse Kornblum <research@jessekornblum.com>
+
+	* Moved history of changes to NEWS file.
 	
-Changes from version 1.2.2:
-	- Added ability to write to multiple output files.
-	- Added split capability with the "split=" and "splitformat=" switches.
-	- Converts "if=/dev/zero" to "pattern=00" to force efficiency.
-	- Fixed a few bugs with verify.
-	
-Changes from version 1.2.1:
-	- Fixed large file support bug
-	- added verify capability
-	
-Changes from version 1.0:
-	- Added SHA-1, SHA-256, SHA-384 and SHA-512 support
-	- Fixed compile errors.
-	- Fixed Megabyte constant.
-	- Fixed problem with not displaying the final hash remainder.
-	- Created an entirely new (and trim) build environment.

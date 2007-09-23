@@ -13,4 +13,4 @@ man_MANS = dcfldd.1
 EXTRA_DIST = $(man_MANS)
 
 preflight:
-	grep RBF $(DISTFILES)
+	@grep RBF $(DISTFILES)
