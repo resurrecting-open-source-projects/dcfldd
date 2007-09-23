@@ -39,7 +39,9 @@ static char *letters = "abcdefghijklmnopqrstuvwxyz";
 #define NUM_LETTERS 26
 
 static char *getext(char *, int);
-static int maxsplits(char *);
+
+// RBF - This function is not used
+//static int maxsplits(char *);
 
 /* Generate a split file extension string based on
  * the specified format string and a given number
@@ -81,6 +83,8 @@ static char *getext(char *fmt, int num)
 
 /* Given a format string, determine the maximum number of splits
  * that can be used. */
+/* This function is currently not being used and thus commented out */
+/*
 static int maxsplits(char *fmt)
 {
     int fmtlen = strlen(fmt);
@@ -94,6 +98,8 @@ static int maxsplits(char *fmt)
 
     return retval;
 }
+*/
+
 
 /* Open the next extension in a split sequence */
 static void open_split(split_t *split)
@@ -106,6 +112,11 @@ static void open_split(split_t *split)
     ext = getext(split->format, splitnum);
     asprintf(&fname, "%s.%s", split->name, ext);
     free(ext);
+
+    /* We have to close the current file handle before opening a new one */
+    // RBF - Error check close?
+    if (fd >= 0)
+      close(fd);
 
     fd = open(fname, O_WRONLY | O_CREAT, perms);
 
