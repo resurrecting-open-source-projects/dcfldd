@@ -1,3 +1,13 @@
+2007-09-26 Jesse Kornblum <research@jessekornblum.com>
+
+	* Updated the include process in dcfldd.h to allow for
+	  the proper use of the detected environment. Also added
+	  AC_GNU_SOURCE, AC_SYS_LARGEFILE, and checks for time.h 
+	  to the configure script. These eliminate some redundant
+	  includes in dcfldd.h and make sure we've defined O_DIRECT
+	  if it's available.
+	
+
 2007-09-23 Jesse Kornblum <research@jessekornblum.com>
 
 	* Moved history of changes to NEWS file.
