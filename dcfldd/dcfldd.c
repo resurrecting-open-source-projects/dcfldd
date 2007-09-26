@@ -27,24 +27,30 @@
  *
  */
 
-#include "config.h"
+// Now included by dcfldd.h
+//#include "config.h"
+
 #include <string.h>
 #include <stdio.h>
 #include <errno.h>
 #include <stdlib.h>
 #include <string.h>
 
+/* Moved to dcfldd.h
 #if HAVE_INTTYPES_H
 # include <inttypes.h>
 #endif
-#include <sys/types.h>
-#include <sys/stat.h>
+*/
+
 #include <dirent.h>
 #include <ctype.h>
 #include <signal.h>
 #include <getopt.h>
 #include <time.h>
-#include <fcntl.h>
+
+// Moved to dcfldd.h
+//#include <fcntl.h>
+
 #include "system.h"
 #include "human.h"
 #include "long-options.h"

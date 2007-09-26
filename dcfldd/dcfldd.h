@@ -24,21 +24,52 @@
 #ifndef DCFLDD_H
 #define DCFLDD_H
 
-// RBF - Can these be wrapped in the configuration script? 
-#define _FILE_OFFSET_BITS 64
-#define LARGEFILE_SOURCE
+#ifdef HAVE_CONFIG_H
+# include "config.h"
+#endif
+
+#include <stdio.h>
+#include <ctype.h>
+
+// These values are now set automatically in the configure script
+//#define _FILE_OFFSET_BITS 64
+//#define LARGEFILE_SOURCE
+
+#ifdef TIME_WITH_SYS_TIME
+# include <sys/time.h>
+# include <time.h>
+#else
+# ifdef HAVE_SYS_TIME_H
+#  include <sys/time.h>
+# else
+#  include <time.h>
+# endif
+#endif
 
 #if HAVE_INTTYPES_H
 # include <inttypes.h>
 #endif
-#include <sys/types.h>
-#include <ctype.h>
-#include <time.h>
 
-#include <stdio.h>
-#include "config.h"
+#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif 
+
+#ifdef HAVE_SYS_STAT_H
+# include <sys/stat.h>
+#endif 
+
+#ifdef HAVE_FCNTL_H
+# include <fcntl.h>
+#endif
+/* We have to define O_DIRECT just in case it's not supported on
+   this operating system. Later function check the value to determine
+   whether or not it can be used. */
+#ifndef O_DIRECT
+# define O_DIRECT 0
+#endif
+
+
 #include "system.h"
-
 #include "hash.h"
 
 // RBF - Can these be wrapped in the configuration script? 
@@ -94,10 +125,6 @@ while (0)
 #ifndef DEFAULT_HASHCONV
 #define DEFAULT_HASHCONV HASHCONV_BEFORE
 #endif /* DEFAULT_HASHCONV */
-
-#ifndef O_DIRECT
-# define O_DIRECT 0
-#endif
 
 /* Conversions bit masks. */
 #define C_ASCII 01
