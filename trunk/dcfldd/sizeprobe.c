@@ -64,6 +64,8 @@ static off_t get_dev_size(int fd, long blksize)
 {
     off_t num_sectors = 0;
   
+    // RBF - Update get_dev_size with md5deep 2.0 code for 2nd ioctl call
+
     if (ioctl(fd, BLKGETSIZE, &num_sectors))
         log_info("%s: ioctl call to BLKGETSIZE failed.\n", program_name);
     else 
