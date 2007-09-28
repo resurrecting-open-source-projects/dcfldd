@@ -1,3 +1,8 @@
+2007-09-28 Jesse Kornblum <research@jessekornblum.com>
+
+	* Clarified help message and man page about 'd' suffixies. 
+
+	
 2007-09-26 Jesse Kornblum <research@jessekornblum.com>
 
 	* Updated the include process in dcfldd.h to allow for

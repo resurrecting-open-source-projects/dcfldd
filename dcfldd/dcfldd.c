@@ -219,7 +219,9 @@ Copy a file, converting and formatting according to the options.\n\
                              This operation applies to any of=FILE that follows\n\
   splitformat=TEXT         the file extension format for split operation.\n\
                            TEXT should be a combination of 'a' (alpha), 'n'\n\
-                           (numeric), and 'd' (digit) characters. The length\n\
+                           (numeric), and 'd' (digit) characters. Numeric\n\
+                            suffixes start at .000, digit suffixes start\n\
+                            with .001. The length\n\
                             of this string indicates how many digits to \n\
                            include in the suffix. The default format \n\
                            is \"nnn\". Although you cannot use 'd' with \n\

@@ -3,7 +3,7 @@ AC_INIT(dcfldd.c)
 AM_CONFIG_HEADER(config.h)
 AC_CANONICAL_HOST
 
-AM_INIT_AUTOMAKE([dcfldd], [1.4-patch1])
+AM_INIT_AUTOMAKE([dcfldd], [1.4])
 
 AC_GNU_SOURCE
 
