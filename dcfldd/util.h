@@ -42,6 +42,7 @@ extern int bit_count(register unsigned int);
 extern void replace_escapes(char *);
 extern FILE *popen2(const char *, const char *);
 extern int pclose2(FILE *);
+extern char *commaprint(uintmax_t n, char *buf, size_t buflen);
 
 #if (!HAVE_DECL_STRNDUP)
 extern char *strndup(const char *, size_t);

@@ -30,6 +30,7 @@
 extern char *pattern;
 extern size_t pattern_len;
 extern int input_from_pattern;
+extern int random_pattern;
 
 extern char *make_pattern(char *);
 extern void replicate_pattern(char *, char *, size_t);

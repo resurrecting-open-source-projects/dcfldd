@@ -34,6 +34,7 @@
 #include "util.h"
 #include "log.h"
 #include "output.h"
+#include "random.h"
 
 static void write_output(void);
 static void copy_simple(unsigned char const *, int);
@@ -154,8 +155,6 @@ int dd_copy(void)
     unsigned char *real_obuf;
     ssize_t nread = 0;		/* Bytes read in the current block. */
     int exit_status = 0;
-    int input_from_stream = !!input_file;
-    int input_from_pattern = !input_from_stream;
     size_t page_size = getpagesize();
     size_t n_bytes_read;    
     
@@ -213,22 +212,31 @@ int dd_copy(void)
         quit(exit_status);
     
     if (input_from_pattern) {
-        replicate_pattern(pattern, ibuf, input_blocksize);
+        if (random_pattern)
+            init_genrand(rand());
+        else
+            replicate_pattern(pattern, ibuf, input_blocksize);
         nread = n_bytes_read = input_blocksize;
     }
-    
+
     while (1) {
         /* Display an update message */
         if (do_status && w_full % update_thresh == 0 && w_full != 0) {
+            time_t curr_time = time(NULL);
             off_t total_bytes = w_full * input_blocksize;
             off_t total_mb = total_bytes / 1048576;
-    
+            int seconds = (int)difftime(curr_time, start_time);
+            int secs = seconds ? seconds : 1;
+            int transfer_rate;
+            char commabuf1[30];
+            char commabuf2[30];
+            char commabuf3[30];
+            
             if (probe == PROBE_NONE || probed_size == 0)
-                fprintf(stderr, "\r%llu blocks (%lluMb) written.", 
-                        w_full, total_mb);
+                fprintf(stderr, "\r%s blocks (%sMb) written.", 
+                        commaprint(w_full, commabuf1, sizeof commabuf1),
+                        commaprint(total_mb, commabuf2, sizeof commabuf2));
             else {
-                time_t curr_time = time(NULL);
-                int seconds = (int)difftime(curr_time, start_time);
                 off_t probed_mb = probed_size / 1048576;
                 float fprcnt = total_bytes / (float)probed_size;
                 float fprcnt_remaining = 1.0 - fprcnt;
@@ -238,14 +246,39 @@ int dd_copy(void)
                 char secstr[100];
     
                 time_left(secstr, sizeof secstr, seconds_remaining);
-                fprintf(stderr, "\r[%d%% of %lluMb] %llu blocks (%lluMb) written. %s",
-                        prcnt, probed_mb, w_full, total_mb, secstr);
-            }	
+                fprintf(stderr, "\r[%d%% of %sMb] %s blocks (%sMb) written. %s.",
+                        prcnt,
+                        commaprint(probed_mb, commabuf1, sizeof commabuf1),
+                        commaprint(w_full, commabuf2, sizeof commabuf2),
+                        commaprint(total_mb, commabuf3, sizeof commabuf3),
+                        secstr);
+            }
+
+            switch (rate_type) {
+            case TRANSFER_RATE_MB:
+                transfer_rate = (int)(total_mb / secs);
+                fprintf(stderr, " %s MB/sec",
+                        commaprint(transfer_rate, commabuf1, sizeof commabuf1));
+                break;
+            case TRANSFER_RATE_BLOCK:
+                transfer_rate = (int)(w_full / secs);
+                fprintf(stderr, " %s blocks/sec",
+                        commaprint(transfer_rate, commabuf1, sizeof commabuf1));
+                break;
+            case TRANSFER_RATE_BYTE:
+                transfer_rate = (int)(total_bytes / secs);
+                fprintf(stderr, " %s bytes/sec",
+                        commaprint(transfer_rate, commabuf1, sizeof commabuf1));
+                break;
+            }
         }
     
         if (r_partial + r_full >= max_records)
             break;
-    
+        
+        if (input_from_pattern && random_pattern)
+            genrand_buf((char *) ibuf, input_blocksize);
+        
         /* Zero the buffer before reading, so that if we get a read error,
            whatever data we are able to read is followed by zeros.
            This minimizes data loss. */
@@ -269,9 +302,6 @@ int dd_copy(void)
                 /* Seek past the bad block if possible. */
                 lseek(STDIN_FILENO, (off_t) input_blocksize, SEEK_CUR);
                 if (conversions_mask & C_SYNC) {
-                    /* Replace the missing input with null bytes and
-                       proceed normally.  */
-                    // EXPERIMENTAL: let's try re-zeroing this buffer
                     memset((char *) ibuf,
                            (conversions_mask & (C_BLOCK | C_UNBLOCK)) ? ' ' : '\0',
                            input_blocksize);
@@ -286,7 +316,7 @@ int dd_copy(void)
         }
         n_bytes_read = nread;
 	r_bytes += nread;
-    
+        
         if (do_hash && hashconv == HASHCONV_BEFORE)
             hash_update(ihashlist, ibuf, n_bytes_read);
         
@@ -338,7 +368,6 @@ int dd_copy(void)
             hash_update(ihashlist, ibuf, n_bytes_read);
     }
 
-    
     /* If we have a char left as a result of conv=swab, output it.  */
     if (char_is_saved) {
         if (conversions_mask & C_BLOCK)
@@ -348,7 +377,7 @@ int dd_copy(void)
         else
             output_char(saved_char);
     }
-    
+
     if ((conversions_mask & C_BLOCK) && col > 0) {
         /* If the final input line didn't end with a '\n', pad
            the output block to `conversion_blocksize' chars.  */
@@ -378,11 +407,11 @@ int dd_copy(void)
     free(real_buf);
     if (real_obuf)
         free(real_obuf);
-    
+
     if (do_hash) {
         hash_remainder(ihashlist, WINDOW_CTX);
         display_totalhash(ihashlist, TOTAL_CTX);
     }
-        
+
     return exit_status;
 }
