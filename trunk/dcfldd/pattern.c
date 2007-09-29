@@ -27,8 +27,8 @@
 /* Pattern to be written out */
 char *pattern;
 size_t pattern_len;
-int input_from_pattern;
-
+int input_from_pattern = 0;
+int random_pattern = 0;
 
 char *make_pattern(char *pattern)
 {

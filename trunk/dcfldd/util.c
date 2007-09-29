@@ -434,3 +434,20 @@ int pclose2(FILE *iop)
 		
 	return (pid == -1 ? -1 : pstat);
 }
+
+char *commaprint(uintmax_t n, char *buf, size_t buflen)
+{
+    char *p = &buf[buflen - 1];
+    int i = 0;
+
+    *p = '\0';
+    do {
+        if (i % 3 == 0 && i != 0)
+            *--p = ',';
+        *--p = '0' + n % 10;
+        n /= 10;
+        i++;
+    } while (n != 0);
+
+    return p;
+}

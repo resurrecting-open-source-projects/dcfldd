@@ -145,6 +145,8 @@ ssize_t update_thresh = 256;
 
 time_t start_time;
 
+int rate_type = DEFAULT_RATE_TYPE;
+
 static struct conversion conversions[] =
 {
     {"ascii", C_ASCII | C_TWOBUFS},	/* EBCDIC to ASCII. */
@@ -168,7 +170,7 @@ void usage(int status)
         log_info("Try `%s --help' for more information.\n", program_name);
     else {
         printf("Usage: %s [OPTION]...\n", program_name);
-        printf("\
+        printf("\n\
 Copy a file, converting and formatting according to the options.\n\
 \n\
   bs=BYTES                 force ibs=BYTES and obs=BYTES\n\
@@ -184,7 +186,9 @@ Copy a file, converting and formatting according to the options.\n\
   of:=COMMAND              exec and write output to process COMMAND\n\
   seek=BLOCKS              skip BLOCKS obs-sized blocks at start of output\n\
   skip=BLOCKS              skip BLOCKS ibs-sized blocks at start of input\n\
-  pattern=HEX              use the specified binary pattern as input\n\
+  pattern=HEX              use the specified binary pattern HEX as input\n\
+                             or use pseudo-random data as input if \"random\"\n\
+                             is specified.\n\
   textpattern=TEXT         use repeating TEXT as input\n\
   errlog=FILE              send error messages to FILE as well as stderr\n\
   hashwindow=BYTES         perform a hash on every BYTES amount of data\n\
@@ -215,6 +219,8 @@ Copy a file, converting and formatting according to the options.\n\
                              gives you a percentage indicator)\n\
                              WARNING: do not use this option against a\n\
                                       tape device.\n\
+  rate=[mb|block|byte]     display the transfer rate as Megabytes per second (mb),\n\
+                             Blocks per second (block), or Bytes per second (byte)\n\
   split=BYTES              write every BYTES amount of data to a new file\n\
                              This operation applies to any of=FILE that follows\n\
   splitformat=TEXT         the file extension format for split operation.\n\
@@ -542,10 +548,14 @@ static void scanargs(int argc, char **argv)
         } else if (STREQ(name, "conv"))
             parse_conversion(val);
         else if (STREQ(name, "pattern")) {
-            pattern = make_pattern(val);
-            if (pattern == NULL) {
-                log_info("%s: invalid hex pattern: %s", program_name, val);
-                quit(1);
+            if (STREQ(val, "random"))
+                random_pattern = 1;
+            else {
+                pattern = make_pattern(val);
+                if (pattern == NULL) {
+                    log_info("%s: invalid hex pattern: %s", program_name, val);
+                    quit(1);
+                }
             }
             input_from_pattern = 1;
         } else if (STREQ(name, "textpattern")) {
@@ -639,13 +649,21 @@ static void scanargs(int argc, char **argv)
             if (errlog == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "splitformat"))
-	  // Added strdup here, (jk)
             splitformat = strdup(val);
         else if (STREQ(name, "status")) {
             if (STREQ(val, "off"))
                 do_status = 0;
             else if (STREQ(val, "on")) 
                 do_status = 1;
+        } else if (STREQ(name, "rate")) {
+            if (STREQ(val, "mb"))
+                rate_type = TRANSFER_RATE_MB;
+            else if (STREQ(val, "block"))
+                rate_type = TRANSFER_RATE_BLOCK;
+            else if (STREQ(val, "byte"))
+                rate_type = TRANSFER_RATE_BYTE;
+            else
+                user_error("invalid rate type \"%s\"", val);
         } else if (STREQ(name, "hashalgorithm") || STREQ(name, "hash")) {
             parse_hash(val);
             do_hash++;
