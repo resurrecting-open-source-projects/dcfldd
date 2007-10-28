@@ -138,9 +138,9 @@ while (0)
 #define C_NOERROR 0400
 #define C_NOTRUNC 01000
 #define C_SYNC 02000
-#define C_DIRECT 04000
 /* Use separate input and output buffers, and combine partial input blocks. */
 #define C_TWOBUFS 04000
+#define C_DIRECT  010000
 
 enum {
     TRANSFER_RATE_MB,
