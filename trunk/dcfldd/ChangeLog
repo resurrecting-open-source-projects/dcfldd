@@ -1,3 +1,10 @@
+2007-10-28 Jesse Kornblum <research@jessekornblum.com>
+
+	* Fixed definition of C_DIRECT in dcfldd.h from a duplicate
+	  of C_TWOBUFS to its own unique value. This could cause a 
+	  crash on some 64-bit platforms.
+	
+
 2007-09-28 Jesse Kornblum <research@jessekornblum.com>
 
 	* Clarified help message and man page about 'd' suffixies. 
