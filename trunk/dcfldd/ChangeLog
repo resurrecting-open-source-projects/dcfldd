@@ -1,3 +1,12 @@
+2007-12-04 Jesse Kornblum <research@jessekornblum.com>
+
+	* Updated documentation to include note on 64-bit Linux
+	  and compiler optimization flags.
+	* Modified "close" call in open_split function. We need to
+	  close the file handle used by each split file before 
+	  opening the next.
+
+	
 2007-10-28 Jesse Kornblum <research@jessekornblum.com>
 
 	* Fixed definition of C_DIRECT in dcfldd.h from a duplicate

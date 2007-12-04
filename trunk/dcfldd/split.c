@@ -112,10 +112,9 @@ static void open_split(split_t *split)
     asprintf(&fname, "%s.%s", split->name, ext);
     free(ext);
 
-    /* We have to close the current file handle before opening a new one */
-    // RBF - Error check close?
-    if (fd >= 0)
-      close(fd);
+    /* RBF - Experimental method for closing the existing file handle */
+    if (split->currfd != -1)
+      close(split->currfd);
 
     fd = open(fname, O_WRONLY | O_CREAT, perms);
 

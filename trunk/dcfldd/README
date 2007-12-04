@@ -30,6 +30,14 @@ For example, to the use traditional default block size of 512 bytes:
 
 $ ./configure CFLAGS="-DDEFAULT_BLOCKSIZE=512" 
 
+Please note that changing the CFLAGS variable clobbers the default
+value. This is normally not a problem execpt on 64 bit Linux platforms,
+where compiler optimizations appear to be required. On these systems,
+please make sure to include compiler optimizations, like this:
+
+$ ./configure CFLAGS="-DDEFAULT_BLOCKSIZE=512 -O3"
+
+
 
 
 
