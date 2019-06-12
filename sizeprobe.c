@@ -3,8 +3,9 @@
  * By Nicholas Harbour
  */
 
-/* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
-   
+/* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+ * Copyright 2014                        Vangelis Koukis <vkoukis@gmail.com>
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -63,9 +64,13 @@ static off_t midpoint(off_t a, off_t b, long blksize)
 static off_t get_dev_size(int fd, long blksize) 
 {
     off_t num_sectors = 0;
-  
-    if (ioctl(fd, BLKGETSIZE, &num_sectors))
-        log_info("%s: ioctl call to BLKGETSIZE failed.\n", program_name);
+
+    /*
+     * Use BLKGETSIZE64 unconditionally, since dcfldd.h #defines _FILE_OFFSET_BITS 64
+     * and off_t is guaranteed to be large enough to hold the result.
+     */
+    if (ioctl(fd, BLKGETSIZE64, &num_sectors))
+        log_info("%s: ioctl call to BLKGETSIZE64 failed.\n", program_name);
     else 
         return (num_sectors * 512);
 }
