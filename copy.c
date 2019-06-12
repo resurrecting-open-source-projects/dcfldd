@@ -266,11 +266,15 @@ int dd_copy(void)
                 print_stats();
                 /* Seek past the bad block if possible. */
                 lseek(STDIN_FILENO, (off_t) input_blocksize, SEEK_CUR);
-                if (conversions_mask & C_SYNC)
+                if (conversions_mask & C_SYNC) {
                     /* Replace the missing input with null bytes and
                        proceed normally.  */
+                    // EXPERIMENTAL: let's try re-zeroing this buffer
+                    memset((char *) ibuf,
+                           (conversions_mask & (C_BLOCK | C_UNBLOCK)) ? ' ' : '\0',
+                           input_blocksize);
                     nread = 0;
-                else
+                } else
                     continue;
             } else {
                 /* Write any partial block. */
