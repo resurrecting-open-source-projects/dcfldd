@@ -3,6 +3,7 @@
  * By Nicholas Harbour
  */
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2005                        Martin Scharrer
    Copyright 2012                        Miah Gregory <mace@debian.org>
    Copyright 2014                        Vangelis Koukis <vkoukis@gmail.com>
 
@@ -653,7 +654,10 @@ static void scanargs(int argc, char **argv)
                 hash_windowlen = n;
                 do_hash++;
             } else if (STREQ(name, "statusinterval")) {
-                update_thresh = n;
+                if (n == 0)
+                 { invalid = 1; }
+                else
+                 { update_thresh = n; }
             } else {
                 log_info("%s: unrecognized option %s=%s",
                         program_name, name, val);
