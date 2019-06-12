@@ -3,7 +3,6 @@
  * By Nicholas Harbour
  */
 /* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
-
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -173,8 +172,8 @@ Copy a file, converting and formatting according to the options.\n\
   pattern=HEX          use the specified binary pattern as input\n\
   textpattern=TEXT     use repeating TEXT as input\n\
   hashwindow=BYTES     perform a hash on every BYTES amount of data\n\
-  hash=NAME            either MD5, SHA1, SHA256, SHA384 or SHA512\n\
-                        default algorithm is MD5. To select multiple\n\
+  hash=NAME            either md5, sha1, sha256, sha384 or sha512\n\
+                        default algorithm is md5. To select multiple\n\
                         algorithms to run simultaneously enter the names\n\
                         in a comma separated list\n\
   hashlog=FILE         send MD5 hash output to FILE instead of stderr\n\
@@ -187,18 +186,22 @@ Copy a file, converting and formatting according to the options.\n\
   sizeprobe=[if|of]    determine the size of the input or output file\n\
                         for use with status messages. (this option\n\
                         gives you a percentage indicator)\n\
-                        WARNING: Read the manual before using this\n\
-                                option.\n\
+                        WARNING: do not use this option against a\n\
+                                 tape device.\n\
   split=BYTES          write every BYTES amount of data to a new file\n\
                         This operation applies to any of=FILE that follows\n\
   splitformat=TEXT     the file extension format for split operation.\n\
                         you may use any number of 'a' or 'n' in any combo\n\
+                        the default format is \"nnn\"\n\
                         NOTE: The split and splitformat options take effect\n\
                               only for output files specified AFTER these\n\
                               options appear in the command line.  Likewise,\n\
                               you may specify these several times for\n\
                               for different output files within the same\n\
-                              command line.\n\
+                              command line. you may use as many digits in\n\
+                              any combination you would like.\n\
+                              (e.g. \"anaannnaana\" would be valid, but\n\
+                               quite insane)\n\
   vf=FILE              verify that FILE matches the specified input\n\
   verifylog=FILE       send verify results to FILE instead of stderr\n\
 \n\
@@ -377,14 +380,26 @@ void parse_hash(char *str)
  * Assign nonzero to *INVALID if STR does not represent a number in
  * this format.
  */
-uintmax_t parse_integer(const char *str, int *invalid)
+
+#if HAVE_DECL_STRTOUMAX
+#  define __strtol_t uintmax_t
+#  define __strtol xstrtoumax
+#elif HAVE_DECL_STRTOUL
+#  define __strtol_t unsigned long int
+#  define __strtol xstrtoul
+#else
+#  define __strtol_t long int
+#  define __strtol xstrtol
+#endif
+
+__strtol_t parse_integer(const char *str, int *invalid)
 {
-    uintmax_t n;
+    __strtol_t n;
     char *suffix;
-    enum strtol_error e = xstrtoumax(str, &suffix, 10, &n, "bcEGkMPTwYZ0");
+    enum strtol_error e = __strtol(str, &suffix, 10, &n, "bcEGkMPTwYZ0");
     
     if (e == LONGINT_INVALID_SUFFIX_CHAR && *suffix == 'x') {
-        uintmax_t multiplier = parse_integer(suffix + 1, invalid);
+        __strtol_t multiplier = parse_integer(suffix + 1, invalid);
         
         if (multiplier != 0 && n * multiplier / multiplier != n) {
             *invalid = 1;
@@ -676,9 +691,6 @@ int main(int argc, char **argv)
     if (verify_file != NULL)
         if ((verify_fd = open(verify_file, O_RDONLY)) < 0)
             syscall_error(verify_file);
-
-//    if (output_file != NULL)  /* FIXME: Move this to scanargs area */
-//        open_output(output_file);
     
     if (outputlist == NULL)
         outputlist_add(SINGLE_FILE, STDOUT_FILENO);
@@ -689,7 +701,10 @@ int main(int argc, char **argv)
     install_handler(SIGINFO, siginfo_handler);
     
     if (probe == PROBE_INPUT)
-        sizeprobe(STDIN_FILENO);
+        if (input_from_pattern)
+            probe = PROBE_NONE;
+        else
+            sizeprobe(STDIN_FILENO);
     else if (probe == PROBE_OUTPUT)
         sizeprobe(STDOUT_FILENO);
     start_time = time(NULL);

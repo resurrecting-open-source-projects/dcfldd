@@ -52,9 +52,9 @@ hashwindow=BYTES
 perform a hash on every BYTES amount of data
 .TP
 hash=NAME
-either MD5, SHA1, SHA256, SHA384 or SHA512
+either md5, sha1, sha256, sha384 or sha512
 .IP
-default algorithm is MD5. To select multiple
+default algorithm is md5. To select multiple
 algorithms to run simultaneously enter the names
 in a comma separated list
 .TP
@@ -76,9 +76,9 @@ determine the size of the input or output file
 .IP
 for use with status messages. (this option
 gives you a percentage indicator)
-WARNING: Read the manual before using this
+WARNING: do not use this option against a
 .IP
-option.
+tape device.
 .TP
 split=BYTES
 write every BYTES amount of data to a new file
@@ -89,13 +89,18 @@ splitformat=TEXT
 the file extension format for split operation.
 .IP
 you may use any number of 'a' or 'n' in any combo
+the default format is "nnn"
 NOTE: The split and splitformat options take effect
 .IP
 only for output files specified AFTER these
 options appear in the command line.  Likewise,
 you may specify these several times for
 for different output files within the same
-command line.
+command line. you may use as many digits in
+any combination you would like.
+(e.g. "anaannnaana" would be valid, but
+.IP
+quite insane)
 .TP
 vf=FILE
 verify that FILE matches the specified input

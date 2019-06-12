@@ -25,7 +25,9 @@
 # include <inttypes.h>
 #endif
 
+#if HAVE_DECL_STRTOUMAX
 #define __strtol strtoumax
 #define __strtol_t uintmax_t
 #define __xstrtol xstrtoumax
 #include "xstrtol.c"
+#endif
