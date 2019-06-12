@@ -92,11 +92,11 @@ void open_output_pipe(char *command)
 {
     FILE *stream;
 
-    stream = popen2(command, "w");
+    stream = popen(command, "w");
     if (stream == NULL)
         syscall_error(command);
 
-    outputlist_add(SINGLE_FILE, fileno(stream));
+    outputlist_add(STREAM, stream);
 }
 
 void outputlist_add(outputtype_t type, ...)
@@ -124,6 +124,11 @@ void outputlist_add(outputtype_t type, ...)
     switch (type) {
     case SINGLE_FILE:
         ptr->data.fd = va_arg(ap, int);
+        break;
+    case STREAM:
+        ptr->type = SINGLE_FILE;
+        ptr->stream = va_arg(ap, FILE *);
+        ptr->data.fd = fileno(ptr->stream);
         break;
     case SPLIT_FILE:
         split = malloc(sizeof *split);

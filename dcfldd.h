@@ -128,6 +128,7 @@ extern size_t conversion_blocksize;
 extern uintmax_t skip_records;
 extern uintmax_t seek_records;
 extern uintmax_t max_records;
+extern uintmax_t max_records_extrabytes;
 
 extern int conversions_mask;
 extern int translation_needed;

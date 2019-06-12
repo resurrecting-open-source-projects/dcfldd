@@ -32,13 +32,15 @@ typedef enum
 {
     NONE,
     SINGLE_FILE,
-    SPLIT_FILE
+    SPLIT_FILE,
+    STREAM
 } outputtype_t;
 
 typedef struct outputlist_s
 {
     struct outputlist_s *next;
     outputtype_t type;
+    FILE *stream;
     union {
         int fd;
         split_t *split;

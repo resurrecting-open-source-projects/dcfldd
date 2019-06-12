@@ -94,6 +94,12 @@ uintmax_t seek_records = 0;
 /* Copy only this many records.  The default is effectively infinity.  */
 uintmax_t max_records = (uintmax_t) -1;
 
+/* Copy only this many bytes from the input.  The default is infinity.  */
+uintmax_t limit = 0;
+
+/* Copy only this many bytes from the max_record(s). The default is effectively infinity.  */
+uintmax_t max_records_extrabytes = (uintmax_t) -1;
+
 /* Bit vector of conversions to apply. */
 int conversions_mask = 0;
 
@@ -152,6 +158,8 @@ static struct conversion conversions[] =
     {"sync", C_SYNC},		/* Pad input records to ibs with NULs. */
     {NULL, 0}
 };
+
+FILE *popened[8] = {NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
 
 void usage(int status)
 {
@@ -299,6 +307,17 @@ void cleanup(void)
         ;
     if (close(STDOUT_FILENO) < 0)
         ;
+
+    int i;
+    for (i = 0; i<8; i++)
+      if (popened[i] != NULL)
+	pclose(popened[i]);
+
+    outputlist_t *listptr;
+    for (listptr = outputlist; listptr != NULL; listptr = listptr->next)
+      if (listptr->stream != NULL)
+	pclose(listptr->stream);
+
 }
 
 inline void quit(int code)
@@ -521,7 +540,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "hashlog:")) {
-            hash_log = popen2(val, "w");
+            popened[0] = hash_log = popen(val, "w");
             if (hash_log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -535,7 +554,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "md5log:")) {
-            hashops[MD5].log = popen2(val, "w");
+            popened[1] = hashops[MD5].log = popen(val, "w");
             if (hashops[MD5].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -545,7 +564,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "sha1log:")) {
-            hashops[SHA1].log = popen2(val, "w");
+            popened[2] = hashops[SHA1].log = popen(val, "w");
             if (hashops[SHA1].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -555,7 +574,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "sha256log:")) {
-            hashops[SHA256].log = popen2(val, "w");
+            popened[3] = hashops[SHA256].log = popen(val, "w");
             if (hashops[SHA256].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -565,7 +584,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "sha384log:")) {
-            hashops[SHA384].log = popen2(val, "w");
+            popened[4] = hashops[SHA384].log = popen(val, "w");
             if (hashops[SHA384].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -575,7 +594,7 @@ static void scanargs(int argc, char **argv)
                 syscall_error(val);
             do_hash++;
         } else if (STREQ(name, "sha512log:")) {
-            hashops[SHA512].log = popen2(val, "w");
+            popened[5] = hashops[SHA512].log = popen(val, "w");
             if (hashops[SHA512].log == NULL)
                 syscall_error(val);
             do_hash++;
@@ -584,7 +603,7 @@ static void scanargs(int argc, char **argv)
             if (verify_log == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "verifylog:")) {
-            verify_log = popen2(val, "w");
+            popened[6] = verify_log = popen(val, "w");
             if (verify_log == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "errlog")) {
@@ -592,7 +611,7 @@ static void scanargs(int argc, char **argv)
             if (errlog == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "errlog:")) {
-            errlog = popen2(val, "w");
+            popened[7] = errlog = popen(val, "w");
             if (errlog == NULL)
                 syscall_error(val);
         } else if (STREQ(name, "splitformat"))
@@ -617,8 +636,14 @@ static void scanargs(int argc, char **argv)
                 probe = PROBE_INPUT;
             else if (STREQ(val, "of"))
                 probe = PROBE_OUTPUT;
-            else 
-                probe = PROBE_NONE;
+	    else {
+	      int invalid = 0;
+	      uintmax_t n = parse_integer(val, &invalid);
+	      probe = PROBE_INPUT_PROVIDED;
+	      probed_size = n;
+	      if (invalid)
+		probe = PROBE_NONE;
+	    }
         } else {
             int invalid = 0;
             uintmax_t n = parse_integer(val, &invalid);
@@ -645,8 +670,12 @@ static void scanargs(int argc, char **argv)
                 vskip_records = n;
             else if (STREQ(name, "seek"))
                 seek_records = n;
-            else if (STREQ(name, "count"))
+            else if (STREQ(name, "count")) {
                 max_records = n;
+		limit = 0;
+	    }
+            else if (STREQ(name, "limit"))
+	        limit = n;
             else if (STREQ(name, "split")) {
                 splitsize = n;
                 do_split++;
@@ -680,6 +709,11 @@ static void scanargs(int argc, char **argv)
         output_blocksize = DEFAULT_BLOCKSIZE;
     if (conversion_blocksize == 0)
         conversions_mask &= ~(C_BLOCK | C_UNBLOCK);
+
+    if (limit != 0) {
+      max_records = (limit / input_blocksize) + 1;
+      max_records_extrabytes = limit % input_blocksize;
+    }
 
     /* set all unset hashlogs to go to the overall hashlog */
     for (i = 0; hashops[i].name != NULL; i++)

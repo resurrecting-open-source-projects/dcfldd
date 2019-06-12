@@ -27,7 +27,7 @@
 #include "dcfldd.h"
 #include <sys/types.h>
 
-enum {PROBE_NONE = 0, PROBE_INPUT, PROBE_OUTPUT};
+enum {PROBE_NONE = 0, PROBE_INPUT, PROBE_OUTPUT, PROBE_INPUT_PROVIDED};
 
 extern int probe;
 extern off_t probed_size;

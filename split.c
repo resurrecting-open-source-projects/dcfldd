@@ -57,6 +57,20 @@ static char *getext(char *fmt, int num)
     
     assert(fmtlen > 0);
 
+    if (strcmp(fmt, "MAC") == 0) {
+      if (num == 0) {
+	asprintf(&retval, "dmg");
+      } else {
+	asprintf(&retval, "%03d.dmgpart", num+1);
+      }
+      return retval;
+    }
+
+    if (strcmp(fmt, "WIN") == 0) {
+      asprintf(&retval, "%03d", num+1);
+      return retval;
+    }
+
     retval = malloc(fmtlen);
 
     /* Fill the retval in reverse while constantly dividing num apropriately */
@@ -115,6 +129,7 @@ static void open_split(split_t *split)
     if (fd < 0)
         syscall_error(fname);
 
+    close(split->currfd);
     split->currfd = fd;
     split->curr_bytes = 0;
     
