@@ -4,6 +4,7 @@
  */
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
    Copyright 2005                        Martin Scharrer
+   Copyright 2008                        Dave <dloveall@users.sf.net>
    Copyright 2012                        Miah Gregory <mace@debian.org>
    Copyright 2014                        Vangelis Koukis <vkoukis@gmail.com>
 

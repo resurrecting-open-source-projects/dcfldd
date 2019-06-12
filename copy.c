@@ -4,8 +4,9 @@
  */
 
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2008                        Dave <dloveall@users.sf.net>
    Copyright 2015                        Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
-   
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
