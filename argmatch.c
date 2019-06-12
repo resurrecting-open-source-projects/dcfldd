@@ -18,7 +18,9 @@
 /* Written by David MacKenzie <djm@ai.mit.edu>
    Modified by Akim Demaille <demaille@inf.enst.fr> */
 
+#include "dcfldd.h"
 #include "argmatch.h"
+#include "log.h"
 
 #include <stdio.h>
 #ifdef STDC_HEADERS
@@ -156,7 +158,7 @@ argmatch_invalid (const char *context, const char *value, int problem)
 			? "invalid argument %s for `%s'"
 			: "ambiguous argument %s for `%s'");
 
-  fprintf(stderr, format, value, context);
+  log_info(format, value, context);
 }
 
 /* List the valid arguments for argmatch.
@@ -177,12 +179,12 @@ argmatch_valid (const char *const *arglist,
     if ((i == 0)
 	|| memcmp (last_val, vallist + valsize * i, valsize))
       {
-	fprintf (stderr, "\n  - `%s'", arglist[i]);
+	log_info("\n  - `%s'", arglist[i]);
 	last_val = vallist + valsize * i;
       }
     else
       {
-	fprintf (stderr, ", `%s'", arglist[i]);
+	log_info(", `%s'", arglist[i]);
       }
   putc ('\n', stderr);
 }
@@ -283,7 +285,7 @@ main (int argc, const char *const *argv)
 
   if (argc > 2)
     {
-      fprintf (stderr, "Usage: %s [VERSION_CONTROL]\n", program_name);
+      fprintf(stderr, "Usage: %s [VERSION_CONTROL]\n", program_name);
       exit (1);
     }
 

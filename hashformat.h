@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: hashformat.h,v 1.1 2005/05/14 23:20:30 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */

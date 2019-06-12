@@ -1,4 +1,4 @@
-/* $Id: output.h,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id: output.h,v 1.4 2005/05/15 20:15:28 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -47,6 +47,8 @@ typedef struct outputlist_s
 
 extern outputlist_t *outputlist;
 
+extern void open_output(char *);
+extern void open_output_pipe(char *);
 extern void outputlist_add(outputtype_t, ...);
 extern int outputlist_write(const char *, size_t);
 

@@ -1,4 +1,4 @@
-/* $Id: copy.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id: copy.c,v 1.6 2005/05/19 20:59:12 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -20,10 +20,10 @@
    Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.  */
 
 /* GNU dd originally written by Paul Rubin, David MacKenzie, and Stuart Kemp. */
-
+#include "dcfldd.h"
+#include <sys/types.h>
 #include <stdlib.h>
 #include <time.h>
-#include "dcfldd.h"
 #include "hash.h"
 #include "getpagesize.h"
 #include "safe-read.h"
@@ -278,7 +278,7 @@ int dd_copy(void)
         }
         n_bytes_read = nread;
     
-        if (do_hash)
+        if (do_hash && hashconv == HASHCONV_BEFORE)
             hash_update(ihashlist, ibuf, n_bytes_read);
         
         if (n_bytes_read < input_blocksize) {
@@ -326,7 +326,11 @@ int dd_copy(void)
             copy_simple(bufstart, n_bytes_read);
     
     }
+
     
+    if (do_hash && hashconv == HASHCONV_AFTER)
+        hash_update(ihashlist, ibuf, n_bytes_read);
+        
     /* If we have a char left as a result of conv=swab, output it.  */
     if (char_is_saved) {
         if (conversions_mask & C_BLOCK)

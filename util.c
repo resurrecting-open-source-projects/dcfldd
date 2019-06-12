@@ -1,4 +1,4 @@
-/* $Id: util.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id: util.c,v 1.6 2005/05/15 20:15:28 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -36,6 +36,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "log.h"
+#include <string.h>
+#include "config.h"
 
 int buggy_lseek_support(int fdesc)
 {
@@ -80,7 +82,7 @@ void skip(int fdesc, char *file, uintmax_t records, size_t blocksize,
         while (records--) {
             ssize_t nread = safe_read(fdesc, buf, blocksize);
             if (nread < 0) {
-                fprintf(stderr, "%s: reading %s", strerror(errno), file);
+                log_info("%s: reading %s", strerror(errno), file);
                 quit(1);
             }
             /* POSIX doesn't say what to do when dd detects it has been
@@ -174,7 +176,6 @@ void replace_escapes(char *str)
                 break;
             default:
                 user_error("invalid escape code \"\\%c\"", *str);
-                exit(1);
             }
             
             /* move all remaining chars in the string up one position */
@@ -186,7 +187,9 @@ void replace_escapes(char *str)
         } 
 }   
 
-char *strndup(char *str, size_t n)
+#if (!HAVE_DECL_STRNDUP)
+
+char *strndup(const char *str, size_t n)
 {
     char *retval;
     int i;
@@ -202,3 +205,5 @@ char *strndup(char *str, size_t n)
     
     return retval;
 }
+
+#endif /* !HAVE_DECL_STRNDUP */

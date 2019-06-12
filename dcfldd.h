@@ -1,4 +1,4 @@
-/* $Id: dcfldd.h,v 1.3 2005/05/13 18:52:06 harbourn Exp $
+/* $Id: dcfldd.h,v 1.7 2005/05/19 21:00:07 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -42,7 +42,7 @@
 
 /* The official name of this program (e.g., no `g' prefix).  */
 #define PROGRAM_NAME "dcfldd"
-#define PROGRAM_VERSION "1.2.4"
+#define PROGRAM_VERSION "1.3-RC2"
 
 #define AUTHORS "dcfldd by Nicholas Harbour, GNU dd by Paul Rubin, David MacKenzie and Stuart Kemp"
 
@@ -73,9 +73,26 @@ while (0)
 
 /* Default input and output blocksize. */
 /* #define DEFAULT_BLOCKSIZE 512 */
-
+#ifndef DEFAULT_BLOCKSIZE
 #define DEFAULT_BLOCKSIZE 32768   /* 32k blocksize is HUGELY more efficient
                                    * for large device IO than 512 */
+#endif /* DEFAULT_BLOCKSIZE */
+
+#ifndef DEFAULT_SPLIT_FORMAT
+#define DEFAULT_SPLIT_FORMAT "nnn"
+#endif /* DEFAULT_SPLIT_FORMAT */
+
+#ifndef DEFAULT_HASHWINDOW_FORMAT
+#define DEFAULT_HASHWINDOW_FORMAT "#window_start# - #window_end#: #hash#"
+#endif /* DEFAULT_HASHWINDOW_FORMAT */
+
+#ifndef DEFAULT_TOTALHASH_FORMAT
+#define DEFAULT_TOTALHASH_FORMAT "Total (#algorithm#): #hash#"
+#endif /* DEFAULT_TOTALHASH_FORMAT */
+
+#ifndef DEFAULT_HASHCONV
+#define DEFAULT_HASHCONV HASHCONV_BEFORE
+#endif /* DEFAULT_HASHCONV */
 
 /* Conversions bit masks. */
 #define C_ASCII 01
@@ -91,6 +108,13 @@ while (0)
 #define C_SYNC 02000
 /* Use separate input and output buffers, and combine partial input blocks. */
 #define C_TWOBUFS 04000
+
+typedef enum {
+    HASHCONV_BEFORE,
+    HASHCONV_AFTER
+} hashconv_t;
+
+extern hashconv_t hashconv;
 
 extern char *program_name;
 
