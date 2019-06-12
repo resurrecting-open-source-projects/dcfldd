@@ -1,3 +1,7 @@
+Changes from version 1.2.1:
+	- Fixed large file support bug
+	- added verify capability
+	
 Changes from version 1.0:
 	- Added SHA-1, SHA-256, SHA-384 and SHA-512 support
 	- Fixed compile errors.
