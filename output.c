@@ -1,4 +1,4 @@
-/* $Id: output.c,v 1.4 2005/05/15 20:15:28 harbourn Exp $
+/* $Id: output.c,v 1.5 2005/06/15 14:33:04 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -34,6 +34,7 @@
 #include <stdio.h>
 #include "split.h"
 #include "log.h"
+#include "util.h"
 
 outputlist_t *outputlist = NULL;
 
@@ -91,7 +92,7 @@ void open_output_pipe(char *command)
 {
     FILE *stream;
 
-    stream = popen(command, "w");
+    stream = popen2(command, "w");
     if (stream == NULL)
         syscall_error(command);
 

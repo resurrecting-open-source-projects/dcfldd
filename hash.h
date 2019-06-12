@@ -84,6 +84,10 @@ enum {WINDOW_CTX, TOTAL_CTX, VWINDOW_CTX, VTOTAL_CTX};
 #define VERIFY_HASH MD5
 #endif
 
+#ifndef DEFAULT_HASH
+#define DEFAULT_HASH MD5
+#endif
+
 extern off_t bytes_in_window;
 extern off_t bytes_in_total;
 extern off_t hash_windowlen;

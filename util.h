@@ -1,4 +1,4 @@
-/* $Id: util.h,v 1.5 2005/05/15 13:18:27 harbourn Exp $
+/* $Id: util.h,v 1.6 2005/06/15 14:33:04 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -32,13 +32,16 @@
 #endif
 #include <sys/types.h>
 #include <ctype.h>
+#include <stdio.h>
 
 extern int buggy_lseek_support(int);
-extern void skip(int, char *, uintmax_t, size_t, unsigned char *);
+extern uintmax_t skip(int, char *, uintmax_t, size_t, unsigned char *);
 extern unsigned char *swab_buffer(unsigned char *, size_t *);
 extern void time_left(char *, size_t, int);
 extern int bit_count(register unsigned int);
 extern void replace_escapes(char *);
+extern FILE *popen2(const char *, const char *);
+extern pclose2(FILE *);
 
 #if (!HAVE_DECL_STRNDUP)
 extern char *strndup(const char *, size_t);

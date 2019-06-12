@@ -1,4 +1,4 @@
-/* $Id: util.c,v 1.6 2005/05/15 20:15:28 harbourn Exp $
+/* $Id: util.c,v 1.7 2005/06/15 14:33:04 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -38,6 +38,8 @@
 #include "log.h"
 #include <string.h>
 #include "config.h"
+#include <unistd.h>
+#include <errno.h>
 
 int buggy_lseek_support(int fdesc)
 {
@@ -65,7 +67,7 @@ int buggy_lseek_support(int fdesc)
    bytes of the data at a time in BUF, if necessary.  RECORDS must be
    nonzero.  */
 
-void skip(int fdesc, char *file, uintmax_t records, size_t blocksize,
+void skip2(int fdesc, char *file, uintmax_t records, size_t blocksize,
                  unsigned char *buf)
 {
     off_t offset = records * blocksize;
@@ -93,6 +95,116 @@ void skip(int fdesc, char *file, uintmax_t records, size_t blocksize,
         }
     }
 }
+
+/* This is a wrapper for lseek.  It detects and warns about a kernel
+   bug that makes lseek a no-op for tape devices, even though the kernel
+   lseek return value suggests that the function succeeded.
+
+   The parameters are the same as those of the lseek function, but
+   with the addition of FILENAME, the name of the file associated with
+   descriptor FDESC.  The file name is used solely in the warning that's
+   printed when the bug is detected.  Return the same value that lseek
+   would have returned, but when the lseek bug is detected, return -1
+   to indicate that lseek failed.
+
+   The offending behavior has been confirmed with an Exabyte SCSI tape
+   drive accessed via /dev/nst0 on both Linux-2.2.17 and Linux-2.4.16.  */
+
+#ifdef __linux__
+
+# include <sys/mtio.h>
+
+# define MT_SAME_POSITION(P, Q) \
+   ((P).mt_resid == (Q).mt_resid \
+    && (P).mt_fileno == (Q).mt_fileno \
+    && (P).mt_blkno == (Q).mt_blkno)
+
+static off_t skip_via_lseek(char const *filename, int fdesc, off_t offset,
+                            int whence)
+{
+    struct mtget s1;
+    struct mtget s2;
+    int got_original_tape_position = (ioctl (fdesc, MTIOCGET, &s1) == 0);
+    /* known bad device type */
+    /* && s.mt_type == MT_ISSCSI2 */
+    
+    off_t new_position = lseek (fdesc, offset, whence);
+
+    if (0 <= new_position
+        && got_original_tape_position
+        && ioctl (fdesc, MTIOCGET, &s2) == 0
+        && MT_SAME_POSITION (s1, s2))
+    {
+        error (0, 0, _("warning: working around lseek kernel bug for file (%s)\n\
+  of mt_type=0x%0lx -- see <sys/mtio.h> for the list of types"),
+               filename, s2.mt_type);
+        errno = 0;
+        new_position = -1;
+    }
+    
+    return new_position;
+}
+#else
+# define skip_via_lseek(Filename, Fd, Offset, Whence) lseek(Fd, Offset, Whence)
+#endif
+
+/* Throw away RECORDS blocks of BLOCKSIZE bytes on file descriptor FDESC,
+   which is open with read permission for FILE.  Store up to BLOCKSIZE
+   bytes of the data at a time in BUF, if necessary.  RECORDS must be
+   nonzero.  If fdesc is STDIN_FILENO, advance the input offset.
+   Return the number of records remaining, i.e., that were not skipped
+   because EOF was reached.  */
+
+uintmax_t skip(int fdesc, char const *file, uintmax_t records,
+               size_t blocksize, char *buf)
+{
+    uintmax_t offset = records * blocksize;
+    off_t lseekretval;
+    /* Try lseek and if an error indicates it was an inappropriate operation --
+       or if the the file offset is not representable as an off_t --
+       fall back on using read.  */
+    
+    errno = 0;
+    lseekretval = skip_via_lseek(file, fdesc, offset, SEEK_CUR);
+
+    if (records <= OFF_T_MAX / blocksize
+        && 0 <= lseekretval)
+    {
+        return 0;
+    }
+    else
+    {
+        int lseek_errno = errno;
+        
+        do
+        {
+            ssize_t nread = read(fdesc, buf, blocksize);
+
+            if (nread < 0)
+            {
+                if (fdesc == STDIN_FILENO)
+                {
+                    error (0, errno, _("reading %s"), file);
+                    if (conversions_mask & C_NOERROR)
+                    {
+                        print_stats ();
+                        continue;
+                    }
+                }
+                else
+                    error (0, lseek_errno, _("%s: cannot seek"), file);
+                quit(EXIT_FAILURE);
+            }
+            
+            if (nread == 0)
+                break;
+        }
+        while (--records != 0);
+        
+        return records;
+    }
+}
+
 
 void time_left(char *secstr, size_t bufsize, int seconds)
 {
@@ -207,3 +319,117 @@ char *strndup(const char *str, size_t n)
 }
 
 #endif /* !HAVE_DECL_STRNDUP */
+
+////////////////////////////////////////////////////////
+// private popen2() - in-fact this is exact copy of
+// newlib/libc/posix.c/popen.c with fork() instead of vfork()
+
+static struct pid {
+    struct pid *next;
+	FILE *fp;
+	pid_t pid;
+} *pidlist; 
+	
+FILE * popen2(const char *program, const char *type)
+{
+	struct pid *cur;
+	FILE *iop;
+	int pdes[2], pid;
+
+       if ((*type != 'r' && *type != 'w')
+	   || (type[1]
+	       && (type[2] || (type[1] != 'b' && type[1] != 't'))
+			       )) {
+		errno = EINVAL;
+		return (NULL);
+	}
+
+	if ((cur = malloc(sizeof(struct pid))) == NULL)
+		return (NULL);
+
+	if (pipe(pdes) < 0) {
+		free(cur);
+		return (NULL);
+	}
+
+	switch (pid = fork()) {
+	case -1:			/* Error. */
+		(void)close(pdes[0]);
+		(void)close(pdes[1]);
+		free(cur);
+		return (NULL);
+		/* NOTREACHED */
+	case 0:				/* Child. */
+		if (*type == 'r') {
+			if (pdes[1] != STDOUT_FILENO) {
+				(void)dup2(pdes[1], STDOUT_FILENO);
+				(void)close(pdes[1]);
+			}
+			(void) close(pdes[0]);
+		} else {
+			if (pdes[0] != STDIN_FILENO) {
+				(void)dup2(pdes[0], STDIN_FILENO);
+				(void)close(pdes[0]);
+			}
+			(void)close(pdes[1]);
+		}
+		execl("/bin/sh", "sh", "-c", program, NULL);
+		/* On cygwin32, we may not have /bin/sh.  In that
+                   case, try to find sh on PATH.  */
+		execlp("sh", "sh", "-c", program, NULL);
+		_exit(127);
+		/* NOTREACHED */
+	}
+
+	/* Parent; assume fdopen can't fail. */
+	if (*type == 'r') {
+		iop = fdopen(pdes[0], type);
+		(void)close(pdes[1]);
+	} else {
+		iop = fdopen(pdes[1], type);
+		(void)close(pdes[0]);
+	}
+
+	/* Link into list of file descriptors. */
+	cur->fp = iop;
+	cur->pid =  pid;
+	cur->next = pidlist;
+	pidlist = cur;
+
+	return (iop);
+}
+
+/*
+ * pclose --
+ *	Pclose returns -1 if stream is not associated with a `popened' command,
+ *	if already `pclosed', or waitpid returns an error.
+ */
+
+int pclose2(FILE *iop)
+{
+	register struct pid *cur, *last;
+	int pstat;
+	pid_t pid;
+
+	(void)fclose(iop);
+
+	/* Find the appropriate file pointer. */
+	for (last = NULL, cur = pidlist; cur; last = cur, cur = cur->next)
+		if (cur->fp == iop)
+			break;
+	if (cur == NULL)
+		return (-1);
+
+	do {
+		pid = waitpid(cur->pid, &pstat, 0);
+	} while (pid == -1 && errno == EINTR);
+
+	/* Remove the entry from the linked list. */
+	if (last == NULL)
+		pidlist = cur->next;
+	else
+		last->next = cur->next;
+	free(cur);
+		
+	return (pid == -1 ? -1 : pstat);
+}

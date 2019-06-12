@@ -42,7 +42,7 @@
 
 /* The official name of this program (e.g., no `g' prefix).  */
 #define PROGRAM_NAME "dcfldd"
-#define PROGRAM_VERSION "1.3-RC2"
+#define PROGRAM_VERSION "1.3-RC3"
 
 #define AUTHORS "dcfldd by Nicholas Harbour, GNU dd by Paul Rubin, David MacKenzie and Stuart Kemp"
 
