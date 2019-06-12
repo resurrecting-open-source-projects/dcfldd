@@ -2,7 +2,9 @@
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
-/* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+/* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2014                        Vangelis Koukis <vkoukis@gmail.com>
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -759,7 +761,7 @@ int main(int argc, char **argv)
         else
             sizeprobe(STDIN_FILENO);
     else if (probe == PROBE_OUTPUT)
-        sizeprobe(STDOUT_FILENO);
+        sizeprobe(outputlist->data.fd);
     start_time = time(NULL);
     
     if (do_verify)
