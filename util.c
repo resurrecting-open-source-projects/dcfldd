@@ -184,16 +184,16 @@ uintmax_t skip(int fdesc, char const *file, uintmax_t records,
             {
                 if (fdesc == STDIN_FILENO)
                 {
-                    error (0, errno, _("reading %s"), file);
+                    log_info("%s: reading %s", strerror(errno), file);
                     if (conversions_mask & C_NOERROR)
                     {
-                        print_stats ();
+                        print_stats();
                         continue;
                     }
                 }
                 else
-                    error (0, lseek_errno, _("%s: cannot seek"), file);
-                quit(EXIT_FAILURE);
+                    log_info("%s: cannot seek %s", strerror(lseek_errno), file);
+                quit(1);
             }
             
             if (nread == 0)

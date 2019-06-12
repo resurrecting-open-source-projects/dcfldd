@@ -38,9 +38,18 @@
  */
 #ifndef MD5_H
 #define MD5_H
+#if HAVE_INTTYPES_H
+# include <inttypes.h>
+#else
+# if HAVE_STDINT_H
+#  include <stdint.h>
+# endif
+#endif
+
+#include "hash.h"
 
 /* typedef a 32 bit type */
-typedef unsigned long int UINT4;
+typedef uint32_t UINT4;
 
 #define MD5_DIGEST_STRING_LENGTH 32
 

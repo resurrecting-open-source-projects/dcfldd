@@ -27,7 +27,7 @@
 /* Default copyright goes to the FSF. */
 
 char* version_etc_copyright =
-  "Copyright (C) 1985-2005 Free Software Foundation, Inc.";
+  "Copyright (C) 1985-2006 Free Software Foundation, Inc.";
 
 
 /* Display the --version information the standard way.
