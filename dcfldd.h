@@ -3,8 +3,9 @@
  * By Nicholas Harbour
  */
 
-/* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
-   
+/* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2017                        Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -86,7 +87,7 @@ while (0)
 #endif /* DEFAULT_HASHWINDOW_FORMAT */
 
 #ifndef DEFAULT_TOTALHASH_FORMAT
-#define DEFAULT_TOTALHASH_FORMAT "Total (#algorithm#): #hash#"
+#define DEFAULT_TOTALHASH_FORMAT "\nTotal (#algorithm#): #hash#"
 #endif /* DEFAULT_TOTALHASH_FORMAT */
 
 #ifndef DEFAULT_HASHCONV
