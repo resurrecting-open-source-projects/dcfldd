@@ -2,7 +2,8 @@
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
-/* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+/* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2012                        Miah Gregory <mace@debian.org>
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -19,6 +20,9 @@
    Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.  */
 
 /* GNU dd originally written by Paul Rubin, David MacKenzie, and Stuart Kemp. */
+
+#define _GNU_SOURCE 1
+#include <stdio.h>
 
 #include "dcfldd.h"
 #include "split.h"

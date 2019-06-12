@@ -3,7 +3,8 @@
  * By Nicholas Harbour
  */
 
-/* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+/* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2012                        Miah Gregory <mace@debian.org>
    
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -98,6 +99,8 @@ extern void display_totalhash(hashlist_t *, int);
 extern void hash_update(hashlist_t *, void *, size_t);
 extern void hash_update_buf(hashlist_t *, int, int, void *, size_t);
 extern void hash_remainder(hashlist_t *, int);
+
+extern void init_hashlist(hashlist_t **hashlist, hashflag_t flags);
 
 /* inner hashl_* funcitons are for iterating over hashlists */
 extern void hashl_init(hashlist_t *, int);

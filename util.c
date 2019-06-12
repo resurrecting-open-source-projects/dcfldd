@@ -3,7 +3,8 @@
  * By Nicholas Harbour
  */
 
-/* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+/* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2012                        Miah Gregory <mace@debian.org>
    
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -32,6 +33,7 @@
 
 #include "dcfldd.h"
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,6 +42,8 @@
 #include "config.h"
 #include <unistd.h>
 #include <errno.h>
+#include <error.h>
+#include "safe-read.h"
 
 int buggy_lseek_support(int fdesc)
 {
