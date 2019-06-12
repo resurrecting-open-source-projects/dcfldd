@@ -89,16 +89,6 @@
 # include <utime.h>
 #endif
 
-/* Some systems (even some that do have <utime.h>) don't declare this
-   structure anywhere.  */
-#ifndef HAVE_STRUCT_UTIMBUF
-struct utimbuf
-{
-  long actime;
-  long modtime;
-};
-#endif
-
 /* Don't use bcopy!  Use memmove if source and destination may overlap,
    memcpy otherwise.  */
 

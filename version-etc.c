@@ -24,18 +24,10 @@
 #include <stdio.h>
 #include "version-etc.h"
 
-#if ENABLE_NLS
-# include <libintl.h>
-# define _(Text) gettext (Text)
-#else
-# define _(Text) Text
-#endif
-#define N_(Text) Text
-
 /* Default copyright goes to the FSF. */
 
 char* version_etc_copyright =
-  N_("Copyright (C) 2001 Free Software Foundation, Inc.");
+  "Copyright (C) 1985-2005 Free Software Foundation, Inc.";
 
 
 /* Display the --version information the standard way.
@@ -57,14 +49,14 @@ version_etc (FILE *stream,
     fprintf (stream, "%s (%s) %s\n", command_name, package, version);
   else
     fprintf (stream, "%s %s\n", package, version);
-  fprintf (stream, _("Written by %s.\n"), authors);
+  fprintf (stream, "Written by: %s.\n", authors);
   putc ('\n', stream);
 
-  fputs (_(version_etc_copyright), stream);
+  fputs (version_etc_copyright, stream);
   putc ('\n', stream);
 
-  fputs (_("\
+  fputs ("\
 This is free software; see the source for copying conditions.  There is NO\n\
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"),
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n",
 	 stream);
 }

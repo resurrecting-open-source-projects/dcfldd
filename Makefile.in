@@ -60,7 +60,9 @@ am_dcfldd_OBJECTS = dcfldd.$(OBJEXT) md5.$(OBJEXT) sha1.$(OBJEXT) \
 	sha2.$(OBJEXT) human.$(OBJEXT) long-options.$(OBJEXT) \
 	safe-read.$(OBJEXT) xstrtol.$(OBJEXT) version-etc.$(OBJEXT) \
 	argmatch.$(OBJEXT) xstrtoul.$(OBJEXT) full-write.$(OBJEXT) \
-	xstrtoumax.$(OBJEXT)
+	xstrtoumax.$(OBJEXT) copy.$(OBJEXT) hash.$(OBJEXT) \
+	verify.$(OBJEXT) translate.$(OBJEXT) sizeprobe.$(OBJEXT) \
+	pattern.$(OBJEXT) util.$(OBJEXT) log.$(OBJEXT)
 dcfldd_OBJECTS = $(am_dcfldd_OBJECTS)
 dcfldd_LDADD = $(LDADD)
 DEFAULT_INCLUDES = -I. -I$(srcdir) -I.
@@ -174,7 +176,9 @@ dcfldd_SOURCES = dcfldd.c md5.c md5.h sha1.c sha1.h sha2.c sha2.h human.c human.
 getpagesize.h long-options.c long-options.h safe-read.c safe-read.h xstrtol.c \
 xstrtol.h version-etc.c version-etc.h \
 system.h sys2.h pathmax.h xalloc.h argmatch.c argmatch.h xstrtoul.c \
-full-write.c xstrtoumax.c
+full-write.c xstrtoumax.c copy.c copy.h dcfldd.h hash.h hash.c verify.c verify.h \
+translate.c translate.h sizeprobe.c sizeprobe.h pattern.c pattern.h util.c util.h \
+log.c log.h full-write.h
 
 man_MANS = dcfldd.1
 EXTRA_DIST = $(man_MANS)
@@ -267,14 +271,22 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/argmatch.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/copy.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dcfldd.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/full-write.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hash.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/human.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/log.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/long-options.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/md5.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pattern.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/safe-read.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sha1.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sha2.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sizeprobe.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/translate.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/util.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/verify.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/version-etc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xstrtol.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/xstrtoul.Po@am__quote@

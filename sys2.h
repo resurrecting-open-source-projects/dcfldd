@@ -1,7 +1,5 @@
-/* WARNING -- this file is temporary.  It is shared between the
-   sh-utils, fileutils, and textutils packages.  Once I find a little
-   more time, I'll merge the remaining things in system.h and everything
-   in this file will go back there. */
+#ifndef SYS2_H
+#define SYS2_H
 
 #if STAT_MACROS_BROKEN
 # undef S_ISBLK
@@ -565,3 +563,5 @@ enum
     }						\
   while (0)
 #endif
+
+#endif /* SYS2_H */
