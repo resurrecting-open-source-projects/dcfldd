@@ -23,7 +23,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: sha1.h 347 2003-02-23 22:11:49Z asaddi $
+ * $Id: sha1.h,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  */
 
 #ifndef _SHA1_H

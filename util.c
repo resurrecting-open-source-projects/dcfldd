@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: util.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -34,6 +34,8 @@
 #include <sys/types.h>
 #include <fcntl.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "log.h"
 
 int buggy_lseek_support(int fdesc)
 {
@@ -144,3 +146,59 @@ int bit_count(register unsigned int i)
     return set_bits;
 }
 
+/*
+ * convert escape codes (i.e. "\n") in a string
+ * WARNING: this modifies the data pointed to by str
+ */
+void replace_escapes(char *str)
+{
+    if (str == NULL)
+        return;
+    
+    for (; *str != '\0'; str++)
+        if (*str == '\\') {
+            char *sptr;
+            
+            switch (*(str + 1)) {
+            case 'n':
+                *str++ = '\n';
+                break;
+            case '\\':
+                *str++ = '\\';
+                break;
+            case 't':
+                *str++ = '\t';
+                break;
+            case 'r':
+                *str++ = '\r';
+                break;
+            default:
+                user_error("invalid escape code \"\\%c\"", *str);
+                exit(1);
+            }
+            
+            /* move all remaining chars in the string up one position */
+            for (sptr = str; *sptr != '\0'; sptr++)
+                *sptr = *(sptr + 1);
+
+            replace_escapes(str + 1);
+            return;
+        } 
+}   
+
+char *strndup(char *str, size_t n)
+{
+    char *retval;
+    int i;
+    
+    if (str == NULL || n == 0)
+        return NULL;
+
+    retval = malloc(n + 1);
+    for (i = 0; i < n; i++)
+        retval[i] = str[i];
+
+    retval[i] = '\0';
+    
+    return retval;
+}

@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $Id: sha2.h,v 1.1 2001/11/08 00:02:01 adg Exp adg $
+ * $Id: sha2.h,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  */
 
 #ifndef __SHA2_H__

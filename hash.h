@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: hash.h,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -91,7 +91,6 @@ extern off_t window_beginning;
 
 extern void display_windowhash(hashlist_t *, off_t);
 extern void display_totalhash(hashlist_t *, int);
-extern void display_hashalgorithm(hashlist_t *);
 extern void hash_update(hashlist_t *, void *, size_t);
 extern void hash_update_buf(hashlist_t *, int, int, void *, size_t);
 extern void hash_remainder(hashlist_t *, int);

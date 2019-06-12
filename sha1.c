@@ -23,7 +23,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $Id: sha1.c 680 2003-07-25 21:57:38Z asaddi $
+ * $Id: sha1.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  */
 
 /*
@@ -55,7 +55,7 @@
 
 #ifndef lint
 static const char rcsid[] =
-	"$Id: sha1.c 680 2003-07-25 21:57:38Z asaddi $";
+	"$Id: sha1.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $";
 #endif /* !lint */
 
 #define ROTL(x, n) (((x) << (n)) | ((x) >> (32 - (n))))

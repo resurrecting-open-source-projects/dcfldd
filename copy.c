@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: copy.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -369,7 +369,6 @@ int dd_copy(void)
     if (do_hash) {
         hash_remainder(ihashlist, WINDOW_CTX);
         display_totalhash(ihashlist, TOTAL_CTX);
-        display_hashalgorithm(ihashlist);
     }
         
     return exit_status;

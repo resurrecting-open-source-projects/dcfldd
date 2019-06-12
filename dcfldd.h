@@ -1,4 +1,4 @@
-/* $Id$
+/* $Id: dcfldd.h,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
@@ -42,7 +42,7 @@
 
 /* The official name of this program (e.g., no `g' prefix).  */
 #define PROGRAM_NAME "dcfldd"
-#define PROGRAM_VERSION "1.2.3-2"
+#define PROGRAM_VERSION "1.2.4"
 
 #define AUTHORS "dcfldd by Nicholas Harbour, GNU dd by Paul Rubin, David MacKenzie and Stuart Kemp"
 
@@ -124,7 +124,7 @@ extern unsigned char saved_char;
 
 extern time_t start_time;
 
-extern const ssize_t update_thresh;
+extern ssize_t update_thresh;
 
 struct conversion
 {
