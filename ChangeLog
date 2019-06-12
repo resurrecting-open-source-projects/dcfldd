@@ -1,0 +1,6 @@
+Changes from version 1.0:
+	- Added SHA-1, SHA-256, SHA-384 and SHA-512 support
+	- Fixed compile errors.
+	- Fixed Megabyte constant.
+	- Fixed problem with not displaying the final hash remainder.
+	- Created an entirely new (and trim) build environment.
