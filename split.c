@@ -4,6 +4,7 @@
  */
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
    Copyright 2012                        Miah Gregory <mace@debian.org>
+   Copyright 2015                        Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -103,7 +104,10 @@ static void open_split(split_t *split)
     char *ext, *fname;
     
     ext = getext(split->format, splitnum);
-    asprintf(&fname, "%s.%s", split->name, ext);
+    /* [FIX] split.c:105:5: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result] */
+    if( asprintf(&fname, "%s.%s", split->name, ext) == -1) {
+            return;
+    }
     free(ext);
 
     fd = open(fname, O_WRONLY | O_CREAT, perms);
