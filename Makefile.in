@@ -62,7 +62,8 @@ am_dcfldd_OBJECTS = dcfldd.$(OBJEXT) md5.$(OBJEXT) sha1.$(OBJEXT) \
 	argmatch.$(OBJEXT) xstrtoul.$(OBJEXT) full-write.$(OBJEXT) \
 	xstrtoumax.$(OBJEXT) copy.$(OBJEXT) hash.$(OBJEXT) \
 	verify.$(OBJEXT) translate.$(OBJEXT) sizeprobe.$(OBJEXT) \
-	pattern.$(OBJEXT) util.$(OBJEXT) log.$(OBJEXT)
+	pattern.$(OBJEXT) util.$(OBJEXT) log.$(OBJEXT) \
+	output.$(OBJEXT) split.$(OBJEXT)
 dcfldd_OBJECTS = $(am_dcfldd_OBJECTS)
 dcfldd_LDADD = $(LDADD)
 DEFAULT_INCLUDES = -I. -I$(srcdir) -I.
@@ -178,7 +179,7 @@ xstrtol.h version-etc.c version-etc.h \
 system.h sys2.h pathmax.h xalloc.h argmatch.c argmatch.h xstrtoul.c \
 full-write.c xstrtoumax.c copy.c copy.h dcfldd.h hash.h hash.c verify.c verify.h \
 translate.c translate.h sizeprobe.c sizeprobe.h pattern.c pattern.h util.c util.h \
-log.c log.h full-write.h
+log.c log.h full-write.h output.c output.h split.c split.h
 
 man_MANS = dcfldd.1
 EXTRA_DIST = $(man_MANS)
@@ -279,11 +280,13 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/log.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/long-options.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/md5.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/output.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pattern.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/safe-read.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sha1.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sha2.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/sizeprobe.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/split.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/translate.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/util.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/verify.Po@am__quote@

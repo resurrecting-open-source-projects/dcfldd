@@ -33,6 +33,7 @@
 #include "pattern.h"
 #include "util.h"
 #include "log.h"
+#include "output.h"
 
 static void write_output(void);
 static void copy_simple(unsigned char const *, int);
@@ -51,7 +52,9 @@ static size_t col;
 /* Write, then empty, the output buffer `obuf'. */
 static void write_output(void)
 {
-    int nwritten = full_write(STDOUT_FILENO, obuf, output_blocksize);
+    /*int nwritten = full_write(STDOUT_FILENO, obuf, output_blocksize); */
+    int nwritten = outputlist_write(obuf, output_blocksize);
+    
     if (nwritten != output_blocksize) {
         if (nwritten > 0)
             w_partial++;
@@ -293,7 +296,9 @@ int dd_copy(void)
             r_full++;
         
         if (ibuf == obuf) {		/* If not C_TWOBUFS. */
-            int nwritten = full_write(STDOUT_FILENO, obuf, n_bytes_read);
+            /* int nwritten = full_write(STDOUT_FILENO, obuf, n_bytes_read); */
+            int nwritten = outputlist_write(obuf, n_bytes_read);
+            
             if (nwritten < 0) 
                 syscall_error(output_file);
             else if (n_bytes_read == input_blocksize)
@@ -347,7 +352,9 @@ int dd_copy(void)
     
     /* Write out the last block. */
     if (oc != 0) {
-        int nwritten = full_write(STDOUT_FILENO, obuf, oc);
+        /* int nwritten = full_write(STDOUT_FILENO, obuf, oc); */
+        int nwritten = outputlist_write(obuf, oc);
+        
         if (nwritten > 0)
             w_partial++;
         if (nwritten < 0) {

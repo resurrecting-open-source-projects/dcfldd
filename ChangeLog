@@ -1,3 +1,9 @@
+Changes from version 1.2.2:
+	- Added ability to write to multiple output files.
+	- Added split capability with the "split=" and "splitformat=" switches.
+	- Converts "if=/dev/zero" to "pattern=00" to force efficiency.
+	- Fixed a few bugs with verify.
+	
 Changes from version 1.2.1:
 	- Fixed large file support bug
 	- added verify capability

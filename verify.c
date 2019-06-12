@@ -270,9 +270,9 @@ int dd_verify(void)
             log_verifywindow(ihashlist->hash, window_beginning,
                              (window_beginning + bytes_in_window), cmp);
 
-        log_verifytotal(cmp);
+        log_verifytotal(ihashlist->hash, cmp);
     } else
-        log_verifytotal(0);
+        log_verifytotal(ihashlist->hash, 1);
     
     return exit_status;
 }

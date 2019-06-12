@@ -58,6 +58,8 @@
 #include "translate.h"
 #include "sizeprobe.h"
 #include "pattern.h"
+#include "output.h"
+#include "split.h"
 
 /* The name this program was run with. */
 char *program_name;
@@ -114,7 +116,17 @@ int char_is_saved = 0;
 /* Odd char from previous call.  */
 unsigned char saved_char;
 
-int do_hash, do_verify, do_status = 1;
+int do_status = 1;
+int do_hash = 0;
+int do_verify = 0;
+int do_split = 0;
+
+#ifndef DEFAULT_SPLIT_FORMAT
+#define DEFAULT_SPLIT_FORMAT "nnn"
+#endif /* DEFAULT_SPLIT_FORMAT */
+
+static char *splitformat = DEFAULT_SPLIT_FORMAT;
+static off_t splitsize;
 
 /* How many blocks in between screen writes for status output. */
 const ssize_t update_thresh = 256;
@@ -154,9 +166,11 @@ Copy a file, converting and formatting according to the options.\n\
   if=FILE              read from FILE instead of stdin\n\
   obs=BYTES            write BYTES bytes at a time\n\
   of=FILE              write to FILE instead of stdout\n\
+                        NOTE: of=FILE may be used several times to write\n\
+                              output to multiple files simultaneously\n\
   seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n\
   skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n\
-  pattern=BYTES        use the specified binary pattern as input\n\
+  pattern=HEX          use the specified binary pattern as input\n\
   textpattern=TEXT     use repeating TEXT as input\n\
   hashwindow=BYTES     perform a hash on every BYTES amount of data\n\
   hash=NAME            either MD5, SHA1, SHA256, SHA384 or SHA512\n\
@@ -175,6 +189,16 @@ Copy a file, converting and formatting according to the options.\n\
                         gives you a percentage indicator)\n\
                         WARNING: Read the manual before using this\n\
                                 option.\n\
+  split=BYTES          write every BYTES amount of data to a new file\n\
+                        This operation applies to any of=FILE that follows\n\
+  splitformat=TEXT     the file extension format for split operation.\n\
+                        you may use any number of 'a' or 'n' in any combo\n\
+                        NOTE: The split and splitformat options take effect\n\
+                              only for output files specified AFTER these\n\
+                              options appear in the command line.  Likewise,\n\
+                              you may specify these several times for\n\
+                              for different output files within the same\n\
+                              command line.\n\
   vf=FILE              verify that FILE matches the specified input\n\
   verifylog=FILE       send verify results to FILE instead of stderr\n\
 \n\
@@ -224,6 +248,8 @@ void print_stats(void)
 
 void cleanup(void)
 {
+    if (do_status)
+        fprintf(stderr, "\n");
     if (!do_verify)
         print_stats();
     if (close(STDIN_FILENO) < 0)
@@ -386,6 +412,57 @@ int hex2char(char *hstr)
     return retval;
 }
 
+static void open_output(char *filename)
+{
+    mode_t perms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;
+    int fd;
+    int opts
+        = (O_CREAT
+           | (seek_records || (conversions_mask & C_NOTRUNC) ? 0 : O_TRUNC));
+    
+    /* Open the output file with *read* access only if we might
+       need to read to satisfy a `seek=' request.  If we can't read
+       the file, go ahead with write-only access; it might work.  */
+    if ((! seek_records
+         || (fd = open(filename, O_RDWR | opts, perms)) < 0)
+        && (fd = open(filename, O_WRONLY | opts, perms)) < 0)
+    {
+        syscall_error(filename);
+    }
+#if HAVE_FTRUNCATE
+    if (seek_records != 0 && !(conversions_mask & C_NOTRUNC)) {
+        struct stat statbuf;
+        off_t o = seek_records * output_blocksize;
+        if (o / output_blocksize != seek_records)
+            syscall_error(filename);
+        
+        if (fstat(fd, &statbuf) != 0)
+            syscall_error(filename);
+        
+        /* Complain only when ftruncate fails on a regular file, a
+           directory, or a shared memory object, as the 2000-08
+           POSIX draft specifies ftruncate's behavior only for these
+           file types.  For example, do not complain when Linux 2.4
+           ftruncate fails on /dev/fd0.  */
+        if (ftruncate(fd, o) != 0
+            && (S_ISREG(statbuf.st_mode)
+                || S_ISDIR(statbuf.st_mode)
+                || S_TYPEISSHM(&statbuf)))
+        {
+            char buf[LONGEST_HUMAN_READABLE + 1];
+            fprintf(stderr,"%s: %s: advancing past %s bytes in output file %s",
+                    program_name,
+                    strerror(errno),
+                    human_readable(o, buf, 1, 1),
+                    filename);
+        }
+    }
+#endif /* HAVE_FTRUNCATE */
+    
+    outputlist_add(SINGLE_FILE, fd);
+}
+
+
 static void scanargs(int argc, char **argv)
 {
     int i;
@@ -404,10 +481,18 @@ static void scanargs(int argc, char **argv)
         }
         *val++ = '\0';
         
-        if (STREQ(name, "if"))
-            input_file = val;
+        if (STREQ(name, "if")) 
+            if (STREQ(val, "/dev/zero")) { /* replace if=/dev/zero with pattern=00 */
+                pattern = make_pattern("00");
+                pattern_len = 1;
+                input_from_pattern = 1;
+            } else
+                input_file = val;
         else if (STREQ(name, "of"))
-            output_file = val;
+            if (do_split)
+                outputlist_add(SPLIT_FILE, val, splitformat, splitsize);
+            else
+                open_output(val);
         else if (STREQ(name, "vf")) {
             verify_file = val;
             do_verify++;
@@ -454,11 +539,13 @@ static void scanargs(int argc, char **argv)
             if (hashops[SHA512].log == NULL)
                 syscall_error(val);
             do_hash++;
-        } else if (STREQ (name, "verifylog")) {
+        } else if (STREQ(name, "verifylog")) {
             verify_log = fopen(val, "w");
             if (verify_log == NULL)
                 syscall_error(val);
-        } else if (STREQ(name, "status")) {
+        } else if (STREQ(name, "splitformat"))
+            splitformat = val;
+        else if (STREQ(name, "status")) {
             if (STREQ(val, "off"))
                 do_status = 0;
             else if (STREQ(val, "on")) 
@@ -501,7 +588,10 @@ static void scanargs(int argc, char **argv)
                 seek_records = n;
             else if (STREQ(name, "count"))
                 max_records = n;
-            else if (STREQ(name, "hashwindow")) {
+            else if (STREQ(name, "split")) {
+                splitsize = n;
+                do_split++;
+            } else if (STREQ(name, "hashwindow")) {
                 hash_windowlen = n;
                 do_hash++;
             } else {
@@ -586,53 +676,12 @@ int main(int argc, char **argv)
     if (verify_file != NULL)
         if ((verify_fd = open(verify_file, O_RDONLY)) < 0)
             syscall_error(verify_file);
-            
-    if (output_file != NULL) {
-        mode_t perms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;
-        int opts
-            = (O_CREAT
-               | (seek_records || (conversions_mask & C_NOTRUNC) ? 0 : O_TRUNC));
+
+//    if (output_file != NULL)  /* FIXME: Move this to scanargs area */
+//        open_output(output_file);
     
-        /* Open the output file with *read* access only if we might
-           need to read to satisfy a `seek=' request.  If we can't read
-           the file, go ahead with write-only access; it might work.  */
-        if ((! seek_records
-             || open_fd(STDOUT_FILENO, output_file, O_RDWR | opts, perms) < 0)
-            && open_fd(STDOUT_FILENO, output_file, O_WRONLY | opts, perms) < 0)
-        {
-            syscall_error(output_file);
-        }
-#if HAVE_FTRUNCATE
-        if (seek_records != 0 && !(conversions_mask & C_NOTRUNC)) {
-            struct stat stdout_stat;
-            off_t o = seek_records * output_blocksize;
-            if (o / output_blocksize != seek_records)
-                syscall_error(output_file);
-    
-            if (fstat(STDOUT_FILENO, &stdout_stat) != 0)
-                syscall_error(output_file);
-    
-            /* Complain only when ftruncate fails on a regular file, a
-               directory, or a shared memory object, as the 2000-08
-               POSIX draft specifies ftruncate's behavior only for these
-               file types.  For example, do not complain when Linux 2.4
-               ftruncate fails on /dev/fd0.  */
-            if (ftruncate(STDOUT_FILENO, o) != 0
-                && (S_ISREG(stdout_stat.st_mode)
-                    || S_ISDIR(stdout_stat.st_mode)
-                    || S_TYPEISSHM(&stdout_stat)))
-            {
-                char buf[LONGEST_HUMAN_READABLE + 1];
-                fprintf(stderr,"%s: %s: advancing past %s bytes in output file %s",
-                        program_name,
-                        strerror(errno),
-                        human_readable(o, buf, 1, 1),
-                        output_file);
-            }
-        }
-#endif
-    } else
-        output_file = "standard output";
+    if (outputlist == NULL)
+        outputlist_add(SINGLE_FILE, STDOUT_FILENO);
     
     install_handler(SIGINT, interrupt_handler);
     install_handler(SIGQUIT, interrupt_handler);
