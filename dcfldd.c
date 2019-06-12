@@ -3,6 +3,7 @@
  * By Nicholas Harbour
  */
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2012                        Miah Gregory <mace@debian.org>
    Copyright 2014                        Vangelis Koukis <vkoukis@gmail.com>
 
    This program is free software; you can redistribute it and/or modify
@@ -183,7 +184,7 @@ Copy a file, converting and formatting according to the options.\n\
                              in a comma separated list\n\
   hashlog=FILE             send MD5 hash output to FILE instead of stderr\n\
                              if you are using multiple hash algorithms you\n\
-                             can send each to a seperate file using the\n\
+                             can send each to a separate file using the\n\
                              convention ALGORITHMlog=FILE, for example\n\
                              md5log=FILE1, sha1log=FILE2, etc.\n\
   hashlog:=COMMAND         exec and write hashlog to process COMMAND\n\
