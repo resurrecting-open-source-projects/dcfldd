@@ -3,6 +3,7 @@
  * By Nicholas Harbour
  */
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2008                        Dave <dloveall@users.sf.net>
    Copyright 2012                        Miah Gregory <mace@debian.org>
    Copyright 2015                        Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 
@@ -56,6 +57,20 @@ static char *getext(char *fmt, int num)
     char *retval;
     
     assert(fmtlen > 0);
+
+    if (strcmp(fmt, "MAC") == 0) {
+      if (num == 0) {
+	asprintf(&retval, "dmg");
+      } else {
+	asprintf(&retval, "%03d.dmgpart", num+1);
+      }
+      return retval;
+    }
+
+    if (strcmp(fmt, "WIN") == 0) {
+      asprintf(&retval, "%03d", num+1);
+      return retval;
+    }
 
     retval = malloc(fmtlen);
 
@@ -115,6 +130,7 @@ static void open_split(split_t *split)
     if (fd < 0)
         syscall_error(fname);
 
+    close(split->currfd);
     split->currfd = fd;
     split->curr_bytes = 0;
     

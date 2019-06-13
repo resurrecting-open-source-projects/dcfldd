@@ -3,8 +3,9 @@
  * By Nicholas Harbour
  */
 
-/* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
-   
+/* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2008                        Dave <dloveall@users.sf.net>
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -27,7 +28,7 @@
 #include "dcfldd.h"
 #include <sys/types.h>
 
-enum {PROBE_NONE = 0, PROBE_INPUT, PROBE_OUTPUT};
+enum {PROBE_NONE = 0, PROBE_INPUT, PROBE_OUTPUT, PROBE_INPUT_PROVIDED};
 
 extern int probe;
 extern off_t probed_size;

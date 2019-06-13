@@ -3,8 +3,9 @@
  * By Nicholas Harbour
  */
 
-/* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
-   
+/* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2008                        Dave <dloveall@users.sf.net>
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -92,11 +93,11 @@ void open_output_pipe(char *command)
 {
     FILE *stream;
 
-    stream = popen2(command, "w");
+    stream = popen(command, "w");
     if (stream == NULL)
         syscall_error(command);
 
-    outputlist_add(SINGLE_FILE, fileno(stream));
+    outputlist_add(STREAM, stream);
 }
 
 void outputlist_add(outputtype_t type, ...)
@@ -124,6 +125,11 @@ void outputlist_add(outputtype_t type, ...)
     switch (type) {
     case SINGLE_FILE:
         ptr->data.fd = va_arg(ap, int);
+        break;
+    case STREAM:
+        ptr->type = SINGLE_FILE;
+        ptr->stream = va_arg(ap, FILE *);
+        ptr->data.fd = fileno(ptr->stream);
         break;
     case SPLIT_FILE:
         split = malloc(sizeof *split);

@@ -4,8 +4,9 @@
  */
 
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2008                        Dave <dloveall@users.sf.net>
    Copyright 2015                        Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
-   
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -286,7 +287,10 @@ int dd_copy(void)
             }
         }
         n_bytes_read = nread;
-    
+
+        if (r_partial + r_full + 1 == max_records)
+          n_bytes_read = MIN(n_bytes_read, max_records_extrabytes);
+
         if (do_hash && hashconv == HASHCONV_BEFORE)
             hash_update(ihashlist, ibuf, n_bytes_read);
         
@@ -298,7 +302,16 @@ int dd_copy(void)
                     memset((char *) (ibuf + n_bytes_read),
                            (conversions_mask & (C_BLOCK | C_UNBLOCK)) ? ' ' : '\0',
                            input_blocksize - n_bytes_read);
-                n_bytes_read = input_blocksize;
+                /* If this is the final read for the drive and there wasn't
+                   a whole block read, trunc the end */
+                if ((probe == PROBE_INPUT) && 
+                    (probed_size != 0) && 
+                    ((probed_size - ((w_full + w_partial) * input_blocksize)) < input_blocksize)) {
+                  n_bytes_read = MAX((probed_size - ((w_full + w_partial) * input_blocksize)), n_bytes_read);
+                }
+                else {
+                  n_bytes_read = input_blocksize;
+                }
             }
         }
         else

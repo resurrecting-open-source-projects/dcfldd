@@ -4,6 +4,7 @@
  */
 
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2008                        Dave <dloveall@users.sf.net>
    Copyright 2017                        Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 
    This program is free software; you can redistribute it and/or modify
@@ -128,6 +129,7 @@ extern size_t conversion_blocksize;
 extern uintmax_t skip_records;
 extern uintmax_t seek_records;
 extern uintmax_t max_records;
+extern uintmax_t max_records_extrabytes;
 
 extern int conversions_mask;
 extern int translation_needed;
