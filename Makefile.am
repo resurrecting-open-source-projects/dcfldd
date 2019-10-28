@@ -1,13 +1,8 @@
-bin_PROGRAMS = dcfldd
+AUTOMAKE_OPTIONS = foreign no-dependencies
 
-dcfldd_SOURCES = dcfldd.c md5.c md5.h sha1.c sha1.h sha2.c sha2.h human.c human.h \
-getpagesize.h long-options.c long-options.h safe-read.c safe-read.h xstrtol.c \
-xstrtol.h version-etc.c version-etc.h \
-system.h sys2.h pathmax.h xalloc.h argmatch.c argmatch.h xstrtoul.c \
-full-write.c xstrtoumax.c copy.c copy.h dcfldd.h hash.h hash.c verify.c verify.h \
-translate.c translate.h sizeprobe.c sizeprobe.h pattern.c pattern.h util.c util.h \
-log.c log.h full-write.h output.c output.h split.c split.h hashformat.c hashformat.h
+SUBDIRS = src man
 
-man_MANS = dcfldd.1
-
-EXTRA_DIST = $(man_MANS)
+distclean-local:
+	rm -rf autom4te.cache
+	rm -f aclocal.m4 compile config.* configure depcomp install-sh \
+	      Makefile.in missing man/Makefile.in src/Makefile.in
