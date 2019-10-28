@@ -6,6 +6,7 @@
    Copyright 2008                        Dave <dloveall@users.sf.net>
    Copyright 2012                        Miah Gregory <mace@debian.org>
    Copyright 2015                        Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+   Copyright 2019                        Bernhard Übelacker <bernhardu@mailbox.org>
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -23,10 +24,11 @@
 
 /* GNU dd originally written by Paul Rubin, David MacKenzie, and Stuart Kemp. */
 
+#include "dcfldd.h"
+
 #define _GNU_SOURCE 1
 #include <stdio.h>
 
-#include "dcfldd.h"
 #include "split.h"
 #include <stdlib.h>
 #include <string.h>
