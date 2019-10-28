@@ -66,7 +66,7 @@ void SHA1Init (SHA1Context *sc);
 void SHA1Update (SHA1Context *sc, const void *data, uint32_t len);
 void SHA1Final (SHA1Context *sc, uint8_t hash[SHA1_HASH_SIZE]);
 void SHA1End (SHA1Context *sc, char *hashstrbuf);
-    
+
 #ifdef __cplusplus
 }
 #endif

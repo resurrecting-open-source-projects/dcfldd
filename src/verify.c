@@ -49,13 +49,13 @@ FILE *verify_log;
 /* Skip this many records of `input_blocksize' bytes before reading */
 uintmax_t vskip_records = 0;
 
-static int verify_update(hashlist_t *hashl, 
+static int verify_update(hashlist_t *hashl,
                          void *ibuf, void *vbuf,
-                         size_t ilen, size_t vlen) 
+                         size_t ilen, size_t vlen)
 {
     size_t left_in_window = hash_windowlen - (bytes_in_window);
     int cmp = 0;
-    
+
     if (bytes_in_total == 0) {
         hashl_init(hashl, TOTAL_CTX);
         hashl_init(hashl, VTOTAL_CTX);
@@ -72,7 +72,7 @@ static int verify_update(hashlist_t *hashl,
 
         if (ilen >= left_in_window || vlen >= left_in_window) {
             char *ihash, *vhash;
-            
+
             hash_update_buf(hashl, WINDOW_CTX, TOTAL_CTX,
                             ibuf, min(ilen, left_in_window));
             hash_update_buf(hashl, VWINDOW_CTX, VTOTAL_CTX,
@@ -86,7 +86,7 @@ static int verify_update(hashlist_t *hashl,
 
             cmp = memcmp(ihash, vhash, hashl->hash->hashstr_buf_size);
             free(ihash);
-            
+
             if (cmp != 0)
             {
                 log_verifywindow(hashl->hash, window_beginning,
@@ -112,18 +112,18 @@ static int verify_update(hashlist_t *hashl,
 static void verify_remainder(hashlist_t *hashl)
 {
     int cmp = 0;
-    
+
     if (hash_windowlen > 0 && bytes_in_window > 0) {
         char *ihash, *vhash;
-        
+
         hashl_final(hashl, WINDOW_CTX);
         ihash = strdup(hashl->hash->hashstr_buf);
         hashl_final(hashl, VWINDOW_CTX);
         vhash = hashl->hash->hashstr_buf;
-        
+
         cmp = memcmp(ihash, vhash, hashl->hash->hashstr_buf_size);
         free(ihash);
-        
+
         if (cmp != 0)
             log_verifywindow(hashl->hash, window_beginning,
                              (window_beginning + hash_windowlen), cmp);
@@ -149,13 +149,13 @@ int dd_verify(void)
     size_t left_in_window;
     int mismatch = 0;
     int cmp = 0;
-    
+
     real_ibuf = (unsigned char *) malloc(input_blocksize
                                          + 2 * SWAB_ALIGN_OFFSET
                                          + 2 * page_size - 1);
     ibuf = real_ibuf;
     ibuf += SWAB_ALIGN_OFFSET;	/* allow space for swab */
-    
+
     ibuf = PTR_ALIGN(ibuf, page_size);
 
     real_vbuf = (unsigned char *) malloc(input_blocksize
@@ -163,27 +163,27 @@ int dd_verify(void)
                                          + 2 * page_size - 1);
     vbuf = real_vbuf;
     vbuf += SWAB_ALIGN_OFFSET;	/* allow space for swab */
-    
+
     vbuf = PTR_ALIGN(vbuf, page_size);
 
     i_hashstr_buf = malloc(hashstr_buf_size);
     v_hashstr_buf = malloc(hashstr_buf_size);
-    
+
     if (!input_from_pattern)
         if (skip_records != 0)
             skip(STDIN_FILENO, input_file, skip_records, input_blocksize, ibuf);
 
     if (vskip_records != 0)
         skip(verify_fd, verify_file, vskip_records, input_blocksize, vbuf);
-        
+
     if (max_records == 0)
         quit(exit_status);
-    
+
     if (input_from_pattern) {
         replicate_pattern(pattern, ibuf, input_blocksize);
         i_nread = input_blocksize;
     }
-    
+
     while (1)
     {
         /* Display an update message */
@@ -191,10 +191,10 @@ int dd_verify(void)
         {
             off_t total_bytes = w_full * input_blocksize;
             off_t total_mb = total_bytes / 1048576;
-    
+
             if (probe == PROBE_NONE || probed_size == 0)
-                fprintf(stderr, "\r%llu blocks (%lluMb) written.", 
-			/* [FIX] verify.c:195:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument {3,4} has type ‘uintmax_t’ [-Wformat=] */
+                fprintf(stderr, "\r%llu blocks (%lluMb) written.",
+                        /* [FIX] verify.c:195:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument {3,4} has type ‘uintmax_t’ [-Wformat=] */
                         (long long unsigned int) w_full, (long long unsigned int) total_mb);
             else {
                 time_t curr_time = time(NULL);
@@ -210,9 +210,9 @@ int dd_verify(void)
                 time_left(secstr, sizeof secstr, seconds_remaining);
                 fprintf(stderr,
                         "\r[%d%% of %lluMb] %llu blocks (%lluMb) written. %s",
-			/* [FIX] verify.c:210:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument {4,5,6} has type ‘off_t’ [-Wformat=] */
+                        /* [FIX] verify.c:210:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument {4,5,6} has type ‘off_t’ [-Wformat=] */
                         prcnt, (long long unsigned int) probed_mb, (long long unsigned int) w_full, (long long unsigned int) total_mb, secstr);
-            }	
+            }
         }
 
         if (r_partial + r_full >= max_records)
@@ -230,11 +230,11 @@ int dd_verify(void)
             replicate_pattern(pattern, ibuf, v_nread);
             i_nread = v_nread;
         } else
-            i_nread = safe_read(STDIN_FILENO, ibuf, input_blocksize);    
-                    
+            i_nread = safe_read(STDIN_FILENO, ibuf, input_blocksize);
+
         if (i_nread < 0 && !input_from_pattern)
             syscall_error(input_file);
-    
+
         if (i_nread == 0 && v_nread == 0)
             break;
 
@@ -250,7 +250,7 @@ int dd_verify(void)
         if (mismatch)
             break;
     }
-    
+
     free(real_ibuf);
     free(real_vbuf);
 
@@ -259,25 +259,24 @@ int dd_verify(void)
      */
     if (!mismatch) {
         char *ihash, *vhash;
-        
+
         verify_remainder(ihashlist);
 
         hashl_final(ihashlist, TOTAL_CTX);
         ihash = strdup(ihashlist->hash->hashstr_buf);
         hashl_final(ihashlist, VTOTAL_CTX);
         vhash = ihashlist->hash->hashstr_buf;
-        
+
         cmp = memcmp(ihash, vhash, ihashlist->hash->hashstr_buf_size);
         free(ihash);
 
-        if (cmp != 0) 
+        if (cmp != 0)
             log_verifywindow(ihashlist->hash, window_beginning,
                              (window_beginning + bytes_in_window), cmp);
 
         log_verifytotal(ihashlist->hash, cmp);
     } else
         log_verifytotal(ihashlist->hash, 1);
-    
+
     return exit_status;
 }
-

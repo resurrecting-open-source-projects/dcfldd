@@ -583,7 +583,7 @@ SHA1End (SHA1Context *sc, char *hashstrbuf)
         return;
 
     SHA1Final(sc, digest);
-    
+
     for (i = 0; i < SHA1_HASH_SIZE; i++) {
         *hashstrbuf++ = sha1_hex_digits[(*d & 0xf0) >> 4];
         *hashstrbuf++ = sha1_hex_digits[(*d & 0x0f)];
@@ -591,7 +591,7 @@ SHA1End (SHA1Context *sc, char *hashstrbuf)
     }
     *hashstrbuf = '\0';
 }
-    
+
 #ifdef SHA1_TEST
 
 #include <stdio.h>

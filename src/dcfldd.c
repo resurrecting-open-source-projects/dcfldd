@@ -377,14 +377,14 @@ static int open_fd(int desired_fd, char const *filename,
     fd = open(filename, options, mode);
     if (fd < 0)
         return -1;
-    
+
     if (fd != desired_fd) {
         if (dup2(fd, desired_fd) != desired_fd)
             desired_fd = -1;
         if (close(fd) != 0)
             return -1;
     }
-    
+
     return desired_fd;
 }
 
@@ -395,7 +395,7 @@ void parse_conversion(char *str)
 {
     char *new;
     unsigned int i;
-    
+
     do {
         new = strchr(str, ',');
         if (new != NULL)
@@ -457,29 +457,29 @@ __strtol_t parse_integer(const char *str, int *invalid)
     __strtol_t n;
     char *suffix;
     enum strtol_error e = __strtol(str, &suffix, 10, &n, "bcEGkMPTwYZ0");
-    
+
     if (e == LONGINT_INVALID_SUFFIX_CHAR && *suffix == 'x') {
         __strtol_t multiplier = parse_integer(suffix + 1, invalid);
-        
+
         if (multiplier != 0 && n * multiplier / multiplier != n) {
             *invalid = 1;
             return 0;
         }
-        
+
         n *= multiplier;
     }
     else if (e != LONGINT_OK) {
         *invalid = 1;
         return 0;
     }
-    
+
     return n;
 }
 
 int hex2char(char *hstr)
 {
     int retval;
-    
+
     if (strlen(hstr) != 2)
         return -1;
     if (EOF == sscanf(hstr, "%x", &retval))
@@ -490,10 +490,10 @@ int hex2char(char *hstr)
 static void scanargs(int argc, char **argv)
 {
     int i;
-    
+
     --argc;
     ++argv;
-    
+
     for (i = optind; i < argc; i++) {
         char *name, *val;
 
@@ -504,8 +504,8 @@ static void scanargs(int argc, char **argv)
             usage(1);
         }
         *val++ = '\0';
-        
-        if (STREQ(name, "if")) 
+
+        if (STREQ(name, "if"))
             if (STREQ(val, "/dev/zero")) { /* replace if=/dev/zero with pattern=00 */
                 pattern = make_pattern("00");
                 pattern_len = 1;
@@ -620,7 +620,7 @@ static void scanargs(int argc, char **argv)
         else if (STREQ(name, "status")) {
             if (STREQ(val, "off"))
                 do_status = 0;
-            else if (STREQ(val, "on")) 
+            else if (STREQ(val, "on"))
                 do_status = 1;
         } else if (STREQ(name, "hashalgorithm") || STREQ(name, "hash")) {
             parse_hash(val);
@@ -648,7 +648,7 @@ static void scanargs(int argc, char **argv)
         } else {
             int invalid = 0;
             uintmax_t n = parse_integer(val, &invalid);
-            
+
             if (STREQ(name, "ibs")) {
                 input_blocksize = n;
                 invalid |= input_blocksize != n || input_blocksize == 0;
@@ -693,12 +693,12 @@ static void scanargs(int argc, char **argv)
                         program_name, name, val);
                 usage(1);
             }
-            
+
             if (invalid)
                 log_info("%s: invalid number %s", program_name, val);
         }
     }
-    
+
 /* If bs= was given, both `input_blocksize' and `output_blocksize' will
    have been set to positive values.  If either has not been set,
    bs= was not given, so make sure two buffers are used. */
@@ -723,11 +723,11 @@ static void scanargs(int argc, char **argv)
 
     if (do_hash && hashflags == 0)
         hashflags = hashops[DEFAULT_HASH].flag;
-    
+
     if (do_verify) {
         do_hash = 0;
         init_hashlist(&ihashlist, hashops[VERIFY_HASH].flag);
-    } else if (do_hash) 
+    } else if (do_hash)
         init_hashlist(&ihashlist, hashflags);
 
     /* make sure selected options make sense */
@@ -747,36 +747,36 @@ int main(int argc, char **argv)
                               strlen(DEFAULT_HASHWINDOW_FORMAT));
     def_totalhash_fmt = strndup(DEFAULT_TOTALHASH_FORMAT,
                                 strlen(DEFAULT_TOTALHASH_FORMAT));
-    
+
     /* disable buffering on stderr */
     setbuf(stderr, NULL);
-    
+
     hash_log = stderr;
     verify_log = stderr;
-    
+
     program_name = argv[0];
 
     hashformat = parse_hashformat(def_hashwin_fmt);
     totalhashformat = parse_hashformat(def_totalhash_fmt);
-    
+
     /* Arrange to close stdout if parse_long_options exits.  */
     //atexit (close_stdout_wrapper);
-    
+
     parse_long_options(argc, argv, PROGRAM_NAME, PACKAGE, VERSION,
                         AUTHORS, usage);
-    
+
     /* Don't close stdout on exit from here on.  */
     //closeout_func = NULL;
-    
+
     /* Initialize translation table to identity translation. */
     for (i = 0; i < 256; i++)
         trans_table[i] = i;
-    
+
     /* Decode arguments. */
     scanargs(argc, argv);
-    
+
     apply_translations();
-    
+
     if (input_file != NULL) {
         if (open_fd(STDIN_FILENO, input_file, O_RDONLY, 0) < 0)
             syscall_error(input_file);
@@ -786,15 +786,15 @@ int main(int argc, char **argv)
     if (verify_file != NULL)
         if ((verify_fd = open(verify_file, O_RDONLY)) < 0)
             syscall_error(verify_file);
-    
+
     if (outputlist == NULL)
         outputlist_add(SINGLE_FILE, STDOUT_FILENO);
-    
+
     install_handler(SIGINT, interrupt_handler);
     install_handler(SIGQUIT, interrupt_handler);
     install_handler(SIGPIPE, interrupt_handler);
     install_handler(SIGINFO, siginfo_handler);
-    
+
     if (probe == PROBE_INPUT)
         if (input_from_pattern)
             probe = PROBE_NONE;
@@ -803,7 +803,7 @@ int main(int argc, char **argv)
     else if (probe == PROBE_OUTPUT)
         sizeprobe(outputlist->data.fd);
     start_time = time(NULL);
-    
+
     if (do_verify)
         exit_status = dd_verify();
     else

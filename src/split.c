@@ -93,7 +93,7 @@ static char *getext(char *fmt, int num)
     }
 
     retval[fmtlen] = '\0';
-    
+
     return retval;
 }
 
@@ -106,7 +106,7 @@ static int maxsplits(char *fmt)
     int retval = 1;
 
     assert(fmtlen > 0);
-    
+
     for (i = fmtlen - 1; i >= 0; i--)
         retval *= fmt[i] == 'a' ? NUM_LETTERS : NUM_NUMBERS;
 
@@ -120,7 +120,7 @@ static void open_split(split_t *split)
     int splitnum = split->total_bytes / split->max_bytes;
     mode_t perms = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH;
     char *ext, *fname;
-    
+
     ext = getext(split->format, splitnum);
     /* [FIX] split.c:105:5: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result] */
     if( asprintf(&fname, "%s.%s", split->name, ext) == -1) {
@@ -136,7 +136,7 @@ static void open_split(split_t *split)
     close(split->currfd);
     split->currfd = fd;
     split->curr_bytes = 0;
-    
+
     free(fname);
 }
 

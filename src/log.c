@@ -4,7 +4,7 @@
  */
 
 /* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
-   
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -45,7 +45,7 @@ void syscall_error(char *str)
 void syscall_error_noexit(char *str)
 {
     char *errstr = strerror(errno);
-    
+
     fprintf(stderr, "%s:%s: %s\n", program_name, str == NULL ? "" : str, errstr);
     if (errlog != NULL)
         fprintf(errlog, "%s:%s: %s\n", program_name, str == NULL ? "" : str, errstr);

@@ -37,7 +37,7 @@ static off_t midpoint(off_t a, off_t b, long blksize);
 static off_t get_dev_size(int, long);
 
 /* Which file (if any) to probe the size of */
-int probe = PROBE_NONE; 
+int probe = PROBE_NONE;
 off_t probed_size;
 
 /*
@@ -61,7 +61,7 @@ static off_t midpoint(off_t a, off_t b, long blksize)
 #include <sys/mount.h>
 
 /* I stole this from Jesse Kornblum's md5deep */
-static off_t get_dev_size(int fd, long blksize) 
+static off_t get_dev_size(int fd, long blksize)
 {
     off_t num_sectors = 0;
 
@@ -71,7 +71,7 @@ static off_t get_dev_size(int fd, long blksize)
      */
     if (ioctl(fd, BLKGETSIZE64, &num_sectors))
         log_info("%s: ioctl call to BLKGETSIZE64 failed.\n", program_name);
-    else 
+    else
         return (num_sectors * 512);
 }
 
@@ -101,8 +101,8 @@ static static off_t get_dev_size(int fd, long blksize)
 #if defined(__DEBUG)
             perror("DKIOCGETBLOCKSIZE failed");
 #endif
-        } 
-  
+        }
+
         /* Get the number of blocks */
         if (ok) {
             if (ioctl(fd, DKIOCGETBLOCKCOUNT, blockcount) < 0) {
@@ -111,21 +111,21 @@ static static off_t get_dev_size(int fd, long blksize)
 #endif
             }
         }
-        
+
         total = blocksize * blockcount;
-        
+
     } else {
-        
+
         /* I don't know why, but if you don't initialize this value you'll
            get wildly innacurate results when you try to run this function */
-        
+
         if ((fseeko(f,0,SEEK_END)))
             return 0;
         total = ftello(f);
         if ((fseeko(f,original,SEEK_SET)))
             return 0;
     }
-    
+
     return (total - original);
 }
 
@@ -139,7 +139,7 @@ static static off_t get_dev_size(int fd, long blksize)
  * This algorithm works by reading a block starting
  * at offset 0 then 1, 2, 4, 8, 16, etc and doubles
  * until it reaches a point where it fails, then it
- * iteratively backtracks by half the distance to 
+ * iteratively backtracks by half the distance to
  * the last known good read. It goes back and forth
  * until it knows the last readable block on the
  * device. Theoretically, this should give EXACTLY
@@ -150,7 +150,7 @@ static static off_t get_dev_size(int fd, long blksize)
  */
 static off_t get_dev_size(int fd, long blksize)
 {   /* this function is awesome */
-    off_t curr = 0, amount = 0; 
+    off_t curr = 0, amount = 0;
     void *buf;
     off_t told;
 

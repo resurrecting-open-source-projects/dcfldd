@@ -5,7 +5,7 @@
 
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
    Copyright 2012                        Miah Gregory <mace@debian.org>
-   
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -52,16 +52,16 @@ int buggy_lseek_support(int fdesc)
    In particular, the Linux tape drivers are a problem.
    For example, when I did the following using dd-4.0y or earlier on a
    Linux-2.2.17 system with an Exabyte SCSI tape drive:
-   
+
    dev=/dev/nst0
    reset='mt -f $dev rewind; mt -f $dev fsf 1'
    eval $reset; dd if=$dev bs=32k of=out1
    eval $reset; dd if=$dev bs=32k of=out2 skip=1
-   
+
    the resulting files, out1 and out2, would compare equal.  */
-    
+
     struct stat stats;
-    
+
     return (fstat(fdesc, &stats) == 0
             && (S_ISCHR(stats.st_mode)));
 }
@@ -75,12 +75,12 @@ void skip2(int fdesc, char *file, uintmax_t records, size_t blocksize,
                  unsigned char *buf)
 {
     off_t offset = records * blocksize;
-    
+
 /* Try lseek and if an error indicates it was an inappropriate
    operation, fall back on using read.  Some broken versions of
    lseek may return zero, so count that as an error too as a valid
    zero return is not possible here.  */
-    
+
     if (offset / blocksize != records
         || buggy_lseek_support(fdesc)
         || lseek(fdesc, offset, SEEK_CUR) <= 0)
@@ -131,7 +131,7 @@ static off_t skip_via_lseek(char const *filename, int fdesc, off_t offset,
     int got_original_tape_position = (ioctl (fdesc, MTIOCGET, &s1) == 0);
     /* known bad device type */
     /* && s.mt_type == MT_ISSCSI2 */
-    
+
     off_t new_position = lseek (fdesc, offset, whence);
 
     if (0 <= new_position
@@ -145,7 +145,7 @@ static off_t skip_via_lseek(char const *filename, int fdesc, off_t offset,
         errno = 0;
         new_position = -1;
     }
-    
+
     return new_position;
 }
 #else
@@ -167,7 +167,7 @@ uintmax_t skip(int fdesc, char const *file, uintmax_t records,
     /* Try lseek and if an error indicates it was an inappropriate operation --
        or if the the file offset is not representable as an off_t --
        fall back on using read.  */
-    
+
     errno = 0;
     lseekretval = skip_via_lseek(file, fdesc, offset, SEEK_CUR);
 
@@ -179,7 +179,7 @@ uintmax_t skip(int fdesc, char const *file, uintmax_t records,
     else
     {
         int lseek_errno = errno;
-        
+
         do
         {
             ssize_t nread = read(fdesc, buf, blocksize);
@@ -199,12 +199,12 @@ uintmax_t skip(int fdesc, char const *file, uintmax_t records,
                     log_info("%s: cannot seek %s", strerror(lseek_errno), file);
                 quit(1);
             }
-            
+
             if (nread == 0)
                 break;
         }
         while (--records != 0);
-        
+
         return records;
     }
 }
@@ -228,28 +228,28 @@ unsigned char *swab_buffer(unsigned char *buf, size_t *nread)
     unsigned char *bufstart = buf;
     register unsigned char *cp;
     register int i;
-    
+
 /* Is a char left from last time?  */
     if (char_is_saved) {
         *--bufstart = saved_char;
         (*nread)++;
         char_is_saved = 0;
     }
-    
+
     if (*nread & 1) {
         /* An odd number of chars are in the buffer.  */
         saved_char = bufstart[--*nread];
         char_is_saved = 1;
     }
-    
+
 /* Do the byte-swapping by moving every second character two
    positions toward the end, working from the end of the buffer
    toward the beginning.  This way we only move half of the data.  */
-    
+
     cp = bufstart + *nread;	/* Start one char past the last.  */
     for (i = *nread / 2; i; i--, cp -= 2)
         *cp = *(cp - 2);
-    
+
     return ++bufstart;
 }
 
@@ -272,11 +272,11 @@ void replace_escapes(char *str)
 {
     if (str == NULL)
         return;
-    
+
     for (; *str != '\0'; str++)
         if (*str == '\\') {
             char *sptr;
-            
+
             switch (*(str + 1)) {
             case 'n':
                 *str++ = '\n';
@@ -293,15 +293,15 @@ void replace_escapes(char *str)
             default:
                 user_error("invalid escape code \"\\%c\"", *str);
             }
-            
+
             /* move all remaining chars in the string up one position */
             for (sptr = str; *sptr != '\0'; sptr++)
                 *sptr = *(sptr + 1);
 
             replace_escapes(str + 1);
             return;
-        } 
-}   
+        }
+}
 
 #if (!HAVE_DECL_STRNDUP)
 
@@ -309,7 +309,7 @@ char *strndup(const char *str, size_t n)
 {
     char *retval;
     int i;
-    
+
     if (str == NULL || n == 0)
         return NULL;
 
@@ -318,7 +318,7 @@ char *strndup(const char *str, size_t n)
         retval[i] = str[i];
 
     retval[i] = '\0';
-    
+
     return retval;
 }
 
@@ -330,20 +330,20 @@ char *strndup(const char *str, size_t n)
 
 static struct pid {
     struct pid *next;
-	FILE *fp;
-	pid_t pid;
-} *pidlist; 
-	
+        FILE *fp;
+        pid_t pid;
+} *pidlist;
+
 FILE * popen2(const char *program, const char *type)
 {
-	struct pid *cur;
-	FILE *iop;
-	int pdes[2], pid;
+        struct pid *cur;
+        FILE *iop;
+        int pdes[2], pid;
 
        if ((*type != 'r' && *type != 'w')
-	   || (type[1]
-	       && (type[2] || (type[1] != 'b' && type[1] != 't'))
-			       )) {
+           || (type[1]
+               && (type[2] || (type[1] != 'b' && type[1] != 't'))
+                               )) {
 		errno = EINVAL;
 		return (NULL);
 	}

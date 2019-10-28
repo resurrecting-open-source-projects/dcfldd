@@ -56,7 +56,7 @@ static void write_output(void)
 {
     /*int nwritten = full_write(STDOUT_FILENO, obuf, output_blocksize); */
     int nwritten = outputlist_write(obuf, output_blocksize);
-    
+
     if (nwritten != output_blocksize) {
         if (nwritten > 0)
             w_partial++;
@@ -73,14 +73,14 @@ static void copy_simple(unsigned char const *buf, int nread)
 {
     int nfree;			/* Number of unused bytes in `obuf'.  */
     const unsigned char *start = buf; /* First uncopied char in BUF.  */
-    
+
     do {
         nfree = output_blocksize - oc;
         if (nfree > nread)
             nfree = nread;
-        
+
         memcpy((char *) (obuf + oc), (char *) start, nfree);
-        
+
         nread -= nfree;		/* Update the number of bytes left to copy. */
         start += nfree;
         oc += nfree;
@@ -96,7 +96,7 @@ static void copy_simple(unsigned char const *buf, int nread)
 static void copy_with_block(unsigned char const *buf, size_t nread)
 {
     size_t i;
-    
+
     for (i = nread; i; i--, buf++) {
         if (*buf == newline_character) {
             if (col < conversion_blocksize) {
@@ -123,10 +123,10 @@ static void copy_with_unblock(unsigned char const *buf, size_t nread)
     size_t i;
     unsigned char c;
     static int pending_spaces = 0;
-    
+
     for (i = 0; i < nread; i++) {
         c = buf[i];
-        
+
         if (col++ >= conversion_blocksize) {
             col = pending_spaces = 0; /* Wipe out any pending spaces.  */
             i--;			/* Push the char back; get it later. */
@@ -157,37 +157,37 @@ int dd_copy(void)
     int input_from_stream = !!input_file;
     int input_from_pattern = !input_from_stream;
     size_t page_size = getpagesize();
-    size_t n_bytes_read;    
-    
+    size_t n_bytes_read;
+
     /* Leave at least one extra byte at the beginning and end of `ibuf'
        for conv=swab, but keep the buffer address even.  But some peculiar
        device drivers work only with word-aligned buffers, so leave an
        extra two bytes.  */
-    
+
     /* Some devices require alignment on a sector or page boundary
        (e.g. character disk devices).  Align the input buffer to a
        page boundary to cover all bases.  Note that due to the swab
        algorithm, we must have at least one byte in the page before
        the input buffer;  thus we allocate 2 pages of slop in the
        real buffer.  8k above the blocksize shouldn't bother anyone.
-    
+
        The page alignment is necessary on any linux system that supports
        either the SGI raw I/O patch or Steven Tweedies raw I/O patch.
        It is necessary when accessing raw (i.e. character special) disk
        devices on Unixware or other SVR4-derived system.  */
-    
+
     real_buf = (unsigned char *) malloc(input_blocksize
                                         + 2 * SWAB_ALIGN_OFFSET
                                         + 2 * page_size - 1);
     ibuf = real_buf;
     ibuf += SWAB_ALIGN_OFFSET;	/* allow space for swab */
-    
+
     ibuf = PTR_ALIGN(ibuf, page_size);
 
     /* Init */
-    if (do_hash) 
+    if (do_hash)
         hash_update(ihashlist, NULL, 0);
-    
+
     if (conversions_mask & C_TWOBUFS) {
         /* Page-align the output buffer, too.  */
         real_obuf = (unsigned char *) malloc(output_blocksize + page_size - 1);
@@ -196,11 +196,11 @@ int dd_copy(void)
         real_obuf = NULL;
         obuf = ibuf;
     }
-    
+
     if (!input_from_pattern)
         if (skip_records != 0)
             skip(STDIN_FILENO, input_file, skip_records, input_blocksize, ibuf);
-    
+
     if (seek_records != 0) {
         outputlist_t *listptr;
 
@@ -208,23 +208,23 @@ int dd_copy(void)
             skip(listptr->data.fd, "", seek_records, output_blocksize, obuf);
         }
     }
-    
+
     if (max_records == 0)
         quit(exit_status);
-    
+
     if (input_from_pattern) {
         replicate_pattern(pattern, ibuf, input_blocksize);
         nread = n_bytes_read = input_blocksize;
     }
-    
+
     while (1) {
         /* Display an update message */
         if (do_status && w_full % update_thresh == 0 && w_full != 0) {
             off_t total_bytes = w_full * input_blocksize;
             off_t total_mb = total_bytes / 1048576;
-    
+
             if (probe == PROBE_NONE || probed_size == 0)
-                fprintf(stderr, "\r%llu blocks (%lluMb) written.", 
+                fprintf(stderr, "\r%llu blocks (%lluMb) written.",
 			/* [FIX] copy.c:226:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument {3,4} has type ‘uintmax_t’ [-Wformat=] */
                         (long long unsigned int) w_full, (long long unsigned int) total_mb);
             else {
@@ -237,17 +237,17 @@ int dd_copy(void)
                 int seconds_remaining = (int)(seconds *
                                               (fprcnt_remaining / fprcnt));
                 char secstr[100];
-    
+
                 time_left(secstr, sizeof secstr, seconds_remaining);
                 fprintf(stderr, "\r[%d%% of %lluMb] %llu blocks (%lluMb) written. %s",
 			/* [FIX] copy.c:240:25: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument {4,5,6} has type ‘off_t’ [-Wformat=] */
                         prcnt, (long long unsigned int) probed_mb, (long long unsigned int) w_full, (long long unsigned int) total_mb, secstr);
             }	
         }
-    
+
         if (r_partial + r_full >= max_records)
             break;
-    
+
         /* Zero the buffer before reading, so that if we get a read error,
            whatever data we are able to read is followed by zeros.
            This minimizes data loss. */
@@ -256,13 +256,13 @@ int dd_copy(void)
                 memset((char *) ibuf,
                        (conversions_mask & (C_BLOCK | C_UNBLOCK)) ? ' ' : '\0',
                        input_blocksize);
-    
+
             nread = safe_read(STDIN_FILENO, ibuf, input_blocksize);
         }
-        
+
         if (nread == 0)
             break;			/* EOF.  */
-    
+
         if (nread < 0 && !input_from_pattern) {
             syscall_error_noexit(input_file);
             if (conversions_mask & C_NOERROR)
@@ -293,7 +293,7 @@ int dd_copy(void)
 
         if (do_hash && hashconv == HASHCONV_BEFORE)
             hash_update(ihashlist, ibuf, n_bytes_read);
-        
+
         if (n_bytes_read < input_blocksize) {
             r_partial++;
             if (conversions_mask & C_SYNC) {
@@ -304,8 +304,8 @@ int dd_copy(void)
                            input_blocksize - n_bytes_read);
                 /* If this is the final read for the drive and there wasn't
                    a whole block read, trunc the end */
-                if ((probe == PROBE_INPUT) && 
-                    (probed_size != 0) && 
+                if ((probe == PROBE_INPUT) &&
+                    (probed_size != 0) &&
                     ((probed_size - ((w_full + w_partial) * input_blocksize)) < input_blocksize)) {
                   n_bytes_read = MAX((probed_size - ((w_full + w_partial) * input_blocksize)), n_bytes_read);
                 }
@@ -316,12 +316,12 @@ int dd_copy(void)
         }
         else
             r_full++;
-        
+
         if (ibuf == obuf) {		/* If not C_TWOBUFS. */
             /* int nwritten = full_write(STDOUT_FILENO, obuf, n_bytes_read); */
             int nwritten = outputlist_write(obuf, n_bytes_read);
-            
-            if (nwritten < 0) 
+
+            if (nwritten < 0)
                 syscall_error(output_file);
             else if (n_bytes_read == input_blocksize)
                 w_full++;
@@ -329,15 +329,15 @@ int dd_copy(void)
                 w_partial++;
         } else {  /* If C_TWOBUFS */
             /* Do any translations on the whole buffer at once.  */
-    
+
             if (translation_needed)
                 translate_buffer(ibuf, n_bytes_read);
-    
+
             if (conversions_mask & C_SWAB)
                 bufstart = swab_buffer(ibuf, &n_bytes_read);
             else
                 bufstart = ibuf;
-            
+
             if (conversions_mask & C_BLOCK)
                 copy_with_block(bufstart, n_bytes_read);
             else if (conversions_mask & C_UNBLOCK)
@@ -345,12 +345,12 @@ int dd_copy(void)
             else
                 copy_simple(bufstart, n_bytes_read);
         }
-        
+
         if (do_hash && hashconv == HASHCONV_AFTER)
             hash_update(ihashlist, ibuf, n_bytes_read);
     }
 
-    
+
     /* If we have a char left as a result of conv=swab, output it.  */
     if (char_is_saved) {
         if (conversions_mask & C_BLOCK)
@@ -360,7 +360,7 @@ int dd_copy(void)
         else
             output_char(saved_char);
     }
-    
+
     if ((conversions_mask & C_BLOCK) && col > 0) {
         /* If the final input line didn't end with a '\n', pad
            the output block to `conversion_blocksize' chars.  */
@@ -368,32 +368,32 @@ int dd_copy(void)
         for (i = col; i < conversion_blocksize; i++)
             output_char(space_character);
     }
-    
+
     if ((conversions_mask & C_UNBLOCK) && col == conversion_blocksize)
         /* Add a final '\n' if there are exactly `conversion_blocksize'
            characters in the final record. */
         output_char(newline_character);
-    
+
     /* Write out the last block. */
     if (oc != 0) {
         /* int nwritten = full_write(STDOUT_FILENO, obuf, oc); */
         int nwritten = outputlist_write(obuf, oc);
-        
+
         if (nwritten > 0)
             w_partial++;
         if (nwritten < 0) {
             syscall_error(output_file);
         }
     }
-    
+
     free(real_buf);
     if (real_obuf)
         free(real_obuf);
-    
+
     if (do_hash) {
         hash_remainder(ihashlist, WINDOW_CTX);
         display_totalhash(ihashlist, TOTAL_CTX);
     }
-        
+
     return exit_status;
 }

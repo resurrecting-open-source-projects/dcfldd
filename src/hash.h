@@ -5,7 +5,7 @@
 
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
    Copyright 2012                        Miah Gregory <mace@debian.org>
-   
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -34,7 +34,7 @@
 #include <stdio.h>
 
 /* bytes_in_window and bytes_in_total are only used for dd_copy() */
-extern off_t bytes_in_window;  
+extern off_t bytes_in_window;
 extern off_t bytes_in_total;
 
 extern void (*hashinit)(void *);

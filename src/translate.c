@@ -157,7 +157,7 @@ static void translate_charset(const unsigned char *new_trans)
 void apply_translations(void)
 {
     unsigned int i;
-    
+
 #define MX(a) (bit_count (conversions_mask & (a)))
     if ((MX (C_ASCII | C_EBCDIC | C_IBM) > 1)
         || (MX (C_BLOCK | C_UNBLOCK) > 1)
@@ -168,10 +168,10 @@ void apply_translations(void)
 only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, {unblock,sync}");
     }
 #undef MX
-    
+
     if (conversions_mask & C_ASCII)
         translate_charset(ebcdic_to_ascii);
-    
+
     if (conversions_mask & C_UCASE) {
         for (i = 0; i < 256; i++)
             if (ISLOWER(trans_table[i]))
@@ -183,7 +183,7 @@ only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, {unblock,sy
                 trans_table[i] = TOLOWER(trans_table[i]);
         translation_needed = 1;
     }
-    
+
     if (conversions_mask & C_EBCDIC) {
         translate_charset (ascii_to_ebcdic);
         newline_character = ascii_to_ebcdic['\n'];
@@ -202,8 +202,7 @@ void translate_buffer(unsigned char *buf, size_t nread)
 {
     unsigned char *cp;
     size_t i;
-    
+
     for (i = nread, cp = buf; i; i--, cp++)
         *cp = trans_table[*cp];
 }
-

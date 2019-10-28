@@ -4,7 +4,7 @@
  */
 
 /* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
-   
+
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2, or (at your option)
@@ -94,7 +94,7 @@ hashtype_t hashops[] =
      &MD5_total_context,
      &MD5_vwindow_context,
      &MD5_vtotal_context,
-     (void (*)(void *)) MD5Init, 
+     (void (*)(void *)) MD5Init,
      (void (*)(void *, const void *, size_t)) MD5Update,
      (void (*)(void *, void *)) MD5Final,
      &MD5_hashstr[0],
@@ -171,7 +171,7 @@ static void add_hash(hashlist_t **hashlist, int hash)
 {
     hashlist_t *hlptr = *hashlist;
     int i;
-    
+
     if (hlptr == NULL) {
         hlptr = malloc(sizeof (hashlist_t));
         *hashlist = hlptr;
@@ -205,7 +205,7 @@ void hashl_init(hashlist_t *hashlist, int context)
 
     for (hptr = hashlist; hptr != NULL; hptr = hptr->next) {
         void *ctx;
-        
+
         switch (context) {
         case WINDOW_CTX:
             ctx = hptr->hash->window_context;
@@ -316,7 +316,7 @@ void hash_update(hashlist_t *hashlist, void *buf, size_t len)
     else {
         if (bytes_in_window == 0)
             hashl_init(hashlist, WINDOW_CTX);
-        
+
         if (len >= left_in_window) {
             hash_update_buf(hashlist, WINDOW_CTX, TOTAL_CTX, buf, left_in_window);
             hashl_final(hashlist, WINDOW_CTX);
@@ -324,7 +324,7 @@ void hash_update(hashlist_t *hashlist, void *buf, size_t len)
             window_beginning += hash_windowlen;
             bytes_in_window = 0;
             hash_update(hashlist, buf + left_in_window, len - left_in_window);
-        } else 
+        } else
             hash_update_buf(hashlist, WINDOW_CTX, TOTAL_CTX, buf, len);
     }
 }
@@ -333,7 +333,7 @@ void display_windowhash(hashlist_t *hashlist, off_t windowlen)
 {
     hashlist_t *hptr;
 
-    for (hptr = hashlist; hptr != NULL; hptr = hptr->next) 
+    for (hptr = hashlist; hptr != NULL; hptr = hptr->next)
         log_hashwindow(hptr->hash, window_beginning, (window_beginning + windowlen),
                        input_blocksize, hptr->hash->hashstr_buf);
 }
@@ -343,7 +343,7 @@ void display_totalhash(hashlist_t *hashlist, int ttlctx)
     hashlist_t *hptr;
 
     hashl_final(hashlist, ttlctx);
-    
+
     for (hptr = hashlist; hptr != NULL; hptr = hptr->next)
         log_hashtotal(hptr->hash, 0, 0,
                        input_blocksize, hptr->hash->hashstr_buf);

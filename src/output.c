@@ -46,7 +46,7 @@ void open_output(char *filename)
     int opts
         = (O_CREAT
            | (seek_records || (conversions_mask & C_NOTRUNC) ? 0 : O_TRUNC));
-    
+
     /* Open the output file with *read* access only if we might
        need to read to satisfy a `seek=' request.  If we can't read
        the file, go ahead with write-only access; it might work.  */
@@ -62,10 +62,10 @@ void open_output(char *filename)
         off_t o = seek_records * output_blocksize;
         if (o / output_blocksize != seek_records)
             syscall_error(filename);
-        
+
         if (fstat(fd, &statbuf) != 0)
             syscall_error(filename);
-        
+
         /* Complain only when ftruncate fails on a regular file, a
            directory, or a shared memory object, as the 2000-08
            POSIX draft specifies ftruncate's behavior only for these
@@ -85,7 +85,7 @@ void open_output(char *filename)
         }
     }
 #endif /* HAVE_FTRUNCATE */
-    
+
     outputlist_add(SINGLE_FILE, fd);
 }
 
@@ -105,7 +105,7 @@ void outputlist_add(outputtype_t type, ...)
     va_list ap;
     outputlist_t *ptr;
     split_t *split;
-    
+
     va_start(ap, type);
 
     /* forward to the last struct in outputlist */
@@ -121,7 +121,7 @@ void outputlist_add(outputtype_t type, ...)
 
     ptr->next = NULL;
     ptr->type = type;
-    
+
     switch (type) {
     case SINGLE_FILE:
         ptr->data.fd = va_arg(ap, int);
@@ -145,12 +145,12 @@ void outputlist_add(outputtype_t type, ...)
 
     va_end(ap);
 }
-    
+
 int outputlist_write(const char *buf, size_t len)
 {
     outputlist_t *ptr;
     int nwritten = 0;
-    
+
     for (ptr = outputlist; ptr != NULL; ptr = ptr->next) {
         nwritten = 0;
         switch (ptr->type) {
