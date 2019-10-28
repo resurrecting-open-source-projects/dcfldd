@@ -1,0 +1,55 @@
+# bash completion for dcfldd                                   -*- shell-script -*-
+# Copyright 2017 Joao Eriberto Mota Filho <eriberto@debian.org>
+# Version: 20170320
+# Based in dd completion script.
+
+_dcfldd()
+{
+    local cur prev words cword
+    _init_completion -n = || return
+
+    case $cur in
+        conv=*)
+            cur=${cur#*=}
+            COMPREPLY=( $( compgen -W 'ascii ebcdic ibm block unblock lcase
+                notrunc ucase swab noerror sync' -- "$cur" ) )
+            return 0
+            ;;
+        errlog=*|if=*|of=*|verifylog=*|vf=*)
+            cur=${cur#*=}
+            _filedir
+            return 0
+            ;;
+        hash=*)
+            cur=${cur#*=}
+            realcur=${cur##*,}
+            COMPREPLY=( $( compgen -W 'md5 sha1 sha256 sha384 sha512' -- "$realcur" ) )
+            return 0
+            ;;
+        hashconv=*)
+            cur=${cur#*=}
+            COMPREPLY=( $( compgen -W 'before after' -- "$cur" ) )
+            return 0
+            ;;
+        status=*)
+            cur=${cur#*=}
+            COMPREPLY=( $( compgen -W 'on off' -- "$cur" ) )
+            return 0
+            ;;
+        sizeprobe=*)
+            cur=${cur#*=}
+            COMPREPLY=( $( compgen -W 'if of' -- "$cur" ) )
+            return 0
+            ;;
+    esac
+
+    _expand || return 0
+
+    COMPREPLY=( $( compgen -W '$( _parse_help "$1" )' -- "$cur" ) \
+                $( compgen -W 'bs cbs conv count ibs if obs of seek skip pattern
+                               textpattern errlog hashwindow hash hashlog
+                               hashconv hashformat totalhashformat status
+                               statusinterval sizeprobe split splitformat vf
+                               verifylog' -S '=' -- "$cur" ) )
+} &&
+complete -F _dcfldd -o nospace dcfldd
