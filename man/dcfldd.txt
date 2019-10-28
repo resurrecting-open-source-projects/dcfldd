@@ -24,7 +24,7 @@ DESCRIPTION
     natively.
 
 OPTIONS
-  bs=BYTES          Force ibs=BYTES and obs=BYTES
+  bs=BYTES          Force ibs=BYTES and obs=BYTES.
   cbs=BYTES         Convert BYTES bytes at a time.
   conv=KEYWORDS     Convert the file as per the comma separated keyword list.
   count=BLOCKS      Copy only BLOCKS input blocks.
@@ -63,7 +63,7 @@ OPTIONS
                            may specify these several times for for different output files within the same command line.
                            You may use as many digits in any combination you would like. E.g. "anaannnaana" would be
                            valid, but quite insane.
-  vf=FILE                  Verify that FILE matches the specified input
+  vf=FILE                  Verify that FILE matches the specified input.
   verifylog=FILE           Send verify results to FILE instead of stderr.
   verifylog:=COMMAND       Exec and write verify results to process COMMAND.
   --help                   Display a help page and exit.
@@ -114,7 +114,7 @@ FORMAT
   ##   Insert the '#' character as text, not a variable.
 
 REPORTING BUGS
-       Report bugs at https://github.com/resurrecting-open-source-projects/dcfldd/issues
+  Report bugs at https://github.com/resurrecting-open-source-projects/dcfldd/issues
 
 AUTHORS
   dcfldd was originally written by Nicholas Harbour. Currently is maintained by some voluntairs.
