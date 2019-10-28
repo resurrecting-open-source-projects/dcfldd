@@ -1,5 +1,7 @@
 bin_PROGRAMS = dcfldd
 
+AM_CFLAGS = -fgnu89-inline
+
 dcfldd_SOURCES = dcfldd.c \
                  md5.c md5.h \
                  sha1.c sha1.h \
