@@ -5,7 +5,7 @@
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
    Copyright 2008                        Dave <dloveall@users.sf.net>
    Copyright 2012                        Miah Gregory <mace@debian.org>
-   Copyright 2015                        Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+   Copyright 2015-2019                   Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
    Copyright 2019                        Bernhard Übelacker <bernhardu@mailbox.org>
 
    This program is free software; you can redistribute it and/or modify
@@ -58,20 +58,20 @@ static char *getext(char *fmt, int num)
     int fmtlen = strlen(fmt);
     int i;
     char *retval;
-    
+
     assert(fmtlen > 0);
 
     if (strcmp(fmt, "MAC") == 0) {
       if (num == 0) {
-	asprintf(&retval, "dmg");
+	if(asprintf(&retval, "dmg")) {};
       } else {
-	asprintf(&retval, "%03d.dmgpart", num+1);
+	if(asprintf(&retval, "%03d.dmgpart", num+1)) {};
       }
       return retval;
     }
 
     if (strcmp(fmt, "WIN") == 0) {
-      asprintf(&retval, "%03d", num+1);
+      if(asprintf(&retval, "%03d", num+1)) {};
       return retval;
     }
 
