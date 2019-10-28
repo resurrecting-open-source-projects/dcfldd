@@ -45,7 +45,7 @@
 /* The official name of this program (e.g., no `g' prefix).  */
 #define PROGRAM_NAME "dcfldd"
 
-#define AUTHORS "dcfldd by Nicholas Harbour, GNU dd by Paul Rubin, David MacKenzie and Stuart Kemp"
+#define AUTHORS "dcfldd by Nicholas Harbour and others.\nGNU dd by Paul Rubin, David MacKenzie and Stuart Kemp.\nCurrently, the source code is at\nhttps://github.com/resurrecting-open-source-projects/dcfldd"
 
 #define SWAB_ALIGN_OFFSET 2
 
