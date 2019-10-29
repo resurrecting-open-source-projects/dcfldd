@@ -36,15 +36,19 @@ command.
 .IP \(bu 3
 Piped output and logs: \fBdcfldd\fP can send all its log data and output to commands as well as files
 natively.
+.PP
+\fBdcfldd\fP supports the following letters to specify amount of data: k for kilo, M for Mega, G for Giga,
+T for Tera, P for Peta, E for Exa, Z for Zetta and Y for Yotta. E.g. 10M is equal to 10 MiB. See
+the BLOCKS AND BYTES section to get other possibilities.
 .SH OPTIONS
 .TP
 .B
 bs=BYTES
-Force ibs=BYTES and obs=BYTES.
+Force ibs=BYTES and obs=BYTES. (see BLOCKS AND BYTES section)
 .TP
 .B
 cbs=BYTES
-Convert BYTES bytes at a time.
+Convert BYTES bytes at a time. (see BLOCKS AND BYTES section)
 .TP
 .B
 conv=KEYWORDS
@@ -52,24 +56,24 @@ Convert the file as per the comma separated keyword list.
 .TP
 .B
 count=BLOCKS
-Copy only BLOCKS input blocks.
+Copy only BLOCKS input blocks. (see BLOCKS AND BYTES section)
 .TP
 .B
 ibs=BYTES
-Read BYTES bytes at a time.
+Read BYTES bytes at a time. (see BLOCKS AND BYTES section)
 .TP
 .B
 if=FILE
-Read from FILE instead of stdin.
+Read from FILE instead of stdin. (see BLOCKS AND BYTES section)
 .TP
 .B
 obs=BYTES
-Write BYTES bytes at a time.
+Write BYTES bytes at a time. (see BLOCKS AND BYTES section)
 .TP
 .B
 of=FILE
-Write to FILE instead of stdout. NOTE: of=FILE may be used several times to write output to
-multiple files simultaneously.
+Write to FILE instead of stdout. NOTE: of=FILE may be used several times to write
+output to multiple files simultaneously.
 .TP
 .B
 of:=COMMAND
@@ -77,11 +81,11 @@ Exec and write output to process COMMAND.
 .TP
 .B
 seek=BLOCKS
-Skip BLOCKS obs-sized blocks at start of output.
+Skip BLOCKS obs-sized blocks at start of output. (see BLOCKS AND BYTES section)
 .TP
 .B
 skip=BLOCKS
-Skip BLOCKS ibs-sized blocks at start of input.
+Skip BLOCKS ibs-sized blocks at start of input. (see BLOCKS AND BYTES section)
 .TP
 .B
 pattern=HEX
@@ -147,16 +151,24 @@ tape device.
 .B
 split=BYTES
 Write every BYTES amount of data to a new file. This operation applies to any of=FILE
+.RS
+.TP
+.B
 that follows.
+(see BLOCKS AND BYTES section)
+.RE
 .TP
 .B
 splitformat=TEXT
-The file extension format for split operation. You may use any number of "a" or "n" in any
-combo the default format is "nnn". NOTE: the split and splitformat options take effect only
-for output files specified AFTER these options appear in the command line. Likewise, you
-may specify these several times for different output files within the same command line.
-You may use as many digits in any combination you would like. E.g. "anaannnaana" would be
-valid, but quite insane.
+The file extension format for split operation. You may use "a" for letters and "n" for numbers.
+If you use annn, an extension started as a000 will be appended; the last possible extension for
+this format will be z999. splitformat=an will provide a0, a1, a2, a3, a4, a5, a6, a7, a8, a9,
+b0, b1, b2\.\.\. If nothing is specified the default format is "nnn". NOTE: the split and splitformat
+options take effect only for output files (option of=) specified AFTER these options appear in the
+command line (e.g. split=50M splitformat=annn of=/tmp/test.iso). Likewise, you may specify these
+several times for different output files within the same command line. You may use as many digits
+in any combination you would like. E.g. "anaannnaana" would be valid, but quite insane. (see
+BLOCKS AND BYTES section)
 .TP
 .B
 vf=FILE

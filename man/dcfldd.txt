@@ -23,19 +23,23 @@ DESCRIPTION
   - Piped output and logs: dcfldd can send all its log data and output to commands as well as files
     natively.
 
+  dcfldd supports the following letters to specify amount of data: k for kilo, M for Mega, G for Giga,
+  T for Tera, P for Peta, E for Exa, Z for Zetta and Y for Yotta. E.g. 10M is equal to 10 MiB. See
+  the BLOCKS AND BYTES section to get other possibilities.
+
 OPTIONS
-  bs=BYTES          Force ibs=BYTES and obs=BYTES.
-  cbs=BYTES         Convert BYTES bytes at a time.
+  bs=BYTES          Force ibs=BYTES and obs=BYTES. (see BLOCKS AND BYTES section)
+  cbs=BYTES         Convert BYTES bytes at a time. (see BLOCKS AND BYTES section)
   conv=KEYWORDS     Convert the file as per the comma separated keyword list.
-  count=BLOCKS      Copy only BLOCKS input blocks.
-  ibs=BYTES         Read BYTES bytes at a time.
-  if=FILE           Read from FILE instead of stdin.
-  obs=BYTES         Write BYTES bytes at a time.
-  of=FILE           Write to FILE instead of stdout. NOTE: of=FILE may be used several times to write output to
-                    multiple files simultaneously.
+  count=BLOCKS      Copy only BLOCKS input blocks. (see BLOCKS AND BYTES section)
+  ibs=BYTES         Read BYTES bytes at a time. (see BLOCKS AND BYTES section)
+  if=FILE           Read from FILE instead of stdin. (see BLOCKS AND BYTES section)
+  obs=BYTES         Write BYTES bytes at a time. (see BLOCKS AND BYTES section)
+  of=FILE           Write to FILE instead of stdout. NOTE: of=FILE may be used several times to write
+                    output to multiple files simultaneously.
   of:=COMMAND       Exec and write output to process COMMAND.
-  seek=BLOCKS       Skip BLOCKS obs-sized blocks at start of output.
-  skip=BLOCKS       Skip BLOCKS ibs-sized blocks at start of input.
+  seek=BLOCKS       Skip BLOCKS obs-sized blocks at start of output. (see BLOCKS AND BYTES section)
+  skip=BLOCKS       Skip BLOCKS ibs-sized blocks at start of input. (see BLOCKS AND BYTES section)
   pattern=HEX       Use the specified binary pattern as input.
   textpattern=TEXT  Use repeating TEXT as input.
   errlog=FILE       Send error messages to FILE as well as stderr.
@@ -56,13 +60,16 @@ OPTIONS
                            option gives you a percentage indicator. WARNING: do not use this option against a
                            tape device.
   split=BYTES              Write every BYTES amount of data to a new file. This operation applies to any of=FILE
-                           that follows.
-  splitformat=TEXT         The file extension format for split operation. You may use any number of "a" or "n" in any
-                           combo the default format is "nnn". NOTE: the split and splitformat options take effect only
-                           for output files specified AFTER these options appear in the command line. Likewise, you
-                           may specify these several times for different output files within the same command line.
-                           You may use as many digits in any combination you would like. E.g. "anaannnaana" would be
-                           valid, but quite insane.
+                           that follows.  (see BLOCKS AND BYTES section)
+  splitformat=TEXT         The file extension format for split operation. You may use "a" for letters and "n" for numbers.
+                           If you use annn, an extension started as a000 will be appended; the last possible extension for
+                           this format will be z999. splitformat=an will provide a0, a1, a2, a3, a4, a5, a6, a7, a8, a9,
+                           b0, b1, b2... If nothing is specified the default format is "nnn". NOTE: the split and splitformat
+                           options take effect only for output files (option of=) specified AFTER these options appear in the
+                           command line (e.g. split=50M splitformat=annn of=/tmp/test.iso). Likewise, you may specify these
+                           several times for different output files within the same command line. You may use as many digits
+                           in any combination you would like. E.g. "anaannnaana" would be valid, but quite insane. (see
+                           BLOCKS AND BYTES section)
   vf=FILE                  Verify that FILE matches the specified input.
   verifylog=FILE           Send verify results to FILE instead of stderr.
   verifylog:=COMMAND       Exec and write verify results to process COMMAND.
