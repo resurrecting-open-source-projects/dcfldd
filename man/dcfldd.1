@@ -44,7 +44,8 @@ the BLOCKS AND BYTES section to get other possibilities.
 .TP
 .B
 bs=BYTES
-Force ibs=BYTES and obs=BYTES. (see BLOCKS AND BYTES section)
+Force ibs=BYTES and obs=BYTES. Default value is 32768 (32KiB). (see BLOCKS AND BYTES
+section)
 .TP
 .B
 cbs=BYTES
@@ -57,6 +58,10 @@ Convert the file as per the comma separated keyword list.
 .B
 count=BLOCKS
 Copy only BLOCKS input blocks. (see BLOCKS AND BYTES section)
+.TP
+.B
+limit=BYTES
+Similar to count but using BYTES instead of BLOCKS. (see BLOCKS AND BYTES section)
 .TP
 .B
 ibs=BYTES
@@ -128,11 +133,13 @@ Perform the hashing before or after the conversions.
 .TP
 .B
 hashformat=FORMAT
-Display each hashwindow according to FORMAT the hash format mini-language is described below.
+Display each hashwindow according to FORMAT the hash format mini-language is
+described below.
 .TP
 .B
 totalhashformat=FORMAT
-Display the total hash value according to FORMAT.
+Display the total hash value according to FORMAT the hash format mini-language is
+described below.
 .TP
 .B
 status=[on|off]
@@ -143,32 +150,36 @@ statusinterval=N
 Update the status message every N blocks. Default value is 256.
 .TP
 .B
-sizeprobe=[if|of]
-Determine the size of the input or output file for use with status messages. This
-option gives you a percentage indicator. WARNING: do not use this option against a
-tape device.
+sizeprobe=[if|of|BYTES]
+Determine the size of the input or output file or an amount of BYTES for use with
+status messages. This option gives you a percentage indicator around the sizeprobe
+value. WARNING: do not use this option against a tape device. (see BLOCKS AND
+BYTES section)
 .TP
 .B
 split=BYTES
-Write every BYTES amount of data to a new file. This operation applies to any of=FILE
-.RS
+Write every BYTES amount of data to a new file. This operation applies to any
+of=FILE that follows. (see BLOCKS AND BYTES section)
 .TP
 .B
-that follows.
-(see BLOCKS AND BYTES section)
-.RE
-.TP
-.B
-splitformat=TEXT
-The file extension format for split operation. You may use "a" for letters and "n" for numbers.
-If you use annn, an extension started as a000 will be appended; the last possible extension for
-this format will be z999. splitformat=an will provide a0, a1, a2, a3, a4, a5, a6, a7, a8, a9,
-b0, b1, b2\.\.\. If nothing is specified the default format is "nnn". NOTE: the split and splitformat
-options take effect only for output files (option of=) specified AFTER these options appear in the
-command line (e.g. split=50M splitformat=annn of=/tmp/test.iso). Likewise, you may specify these
-several times for different output files within the same command line. You may use as many digits
-in any combination you would like. E.g. "anaannnaana" would be valid, but quite insane. (see
-BLOCKS AND BYTES section)
+splitformat=[TEXT|MAC|WIN]
+The file extension format for split operation. You may use "a" for letters and "n"
+for numbers. If you use annn, an extension started as a000 will be appended; the
+last possible extension for this format will be z999. splitformat=an will provide
+a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, b0, b1, b2\.\.\. If nothing is specified the
+default format is "nnn". NOTE: the split and splitformat options take effect only
+for output files (option of=) specified AFTER these options appear in the command
+line (e.g. split=50M splitformat=annn of=/tmp/test.iso). Likewise, you may specify
+these several times for different output files within the same command line. You
+may use as many digits in any combination you would like. E.g. "anaannnaana"
+would be valid, but quite insane (see BLOCKS AND BYTES section). Other possible
+approach is MAC. If "MAC" is used, a suffix dmg and several dmgpart will be
+appended. In other words, it will generate a partial disk image file, used by
+the Mac OS X operating system. dmgpart files are usually provided with a
+corresponding dmg file, which is the master file for the split archive. If dmg
+is opened in Mac OS X, all dmgpart will be read too. The last option is WIN,
+which will automatically output file naming of foo.001, foo.002, \.\.\., foo.999,
+foo.1000, \.\.\..
 .TP
 .B
 vf=FILE
@@ -300,6 +311,8 @@ Insert the '\\' character.
 .B
 ##
 Insert the '#' character as text, not a variable.
+.SH SEE ALSO
+\fBdd\fP(1)
 .SH REPORTING BUGS
 Report bugs at https://github.com/resurrecting-open-source-projects/\fBdcfldd\fP/issues
 .SH AUTHORS
