@@ -3,7 +3,7 @@
  * By Nicholas Harbour
  */
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
-   Copyright 2008                        Dave <dloveall@users.sf.net>
+   Copyright 2008                        David Loveall <dave@loveall.org>
    Copyright 2012                        Miah Gregory <mace@debian.org>
    Copyright 2015-2019                   Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
    Copyright 2019                        Bernhard Übelacker <bernhardu@mailbox.org>
