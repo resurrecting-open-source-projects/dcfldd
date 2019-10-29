@@ -60,7 +60,7 @@ OPTIONS
   splitformat=TEXT         The file extension format for split operation. You may use any number of "a" or "n" in any
                            combo the default format is "nnn". NOTE: the split and splitformat options take effect only
                            for output files specified AFTER these options appear in the command line. Likewise, you
-                           may specify these several times for for different output files within the same command line.
+                           may specify these several times for different output files within the same command line.
                            You may use as many digits in any combination you would like. E.g. "anaannnaana" would be
                            valid, but quite insane.
   vf=FILE                  Verify that FILE matches the specified input.
@@ -117,6 +117,6 @@ REPORTING BUGS
   Report bugs at https://github.com/resurrecting-open-source-projects/dcfldd/issues
 
 AUTHORS
-  dcfldd was originally written by Nicholas Harbour. Currently is maintained by some voluntairs.
+  dcfldd was originally written by Nicholas Harbour. Currently is maintained by some volunteers.
 
   GNU dd was written by Paul Rubin, David MacKenzie and Stuart Kemp.
