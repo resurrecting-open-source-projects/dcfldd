@@ -1,7 +1,7 @@
 # configure.ac, was previously configure.in (before 2019)
 #
-# Copyright ?-2002    Jim Meyering <jim@meyering.net>
-# Copyright 2002-2006 Nicholas Harbour <nicholasharbour@yahoo.com>
+# Copyright ?-2001    Jim Meyering <jim@meyering.net>
+# Copyright 2001-2006 Nicholas Harbour <nicholasharbour@yahoo.com>
 # Copyright 2019      Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 #
 # This program is free software; you can redistribute it and/or modify
