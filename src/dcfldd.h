@@ -5,7 +5,7 @@
 
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
    Copyright 2008                        David Loveall <dave@loveall.org>
-   Copyright 2017                        Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+   Copyright 2017-2019                   Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
