@@ -1,0 +1,3239 @@
+# Mensajes en español para GNU fileutils.
+# Copyright (C) 1996, 1997, 1998, 1999, 2000 Free Software Foundation, Inc.
+# Santiago Vila Doncel <sanvila@unex.es>, 1996, 1997, 1998, 1999, 2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNU fileutils 4.0t\n"
+"POT-Creation-Date: 2001-10-26 15:00-0400\n"
+"PO-Revision-Date: 2000-07-21 17:03+0200\n"
+"Last-Translator: Santiago Vila Doncel <sanvila@unex.es>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: lib/argmatch.c:159
+#, c-format
+msgid "invalid argument %s for `%s'"
+msgstr "argumento %s inválido para `%s'"
+
+#: lib/argmatch.c:160
+#, c-format
+msgid "ambiguous argument %s for `%s'"
+msgstr "argumento %s ambiguo para `%s'"
+
+#. We try to put synonyms on the same line.  The assumption is that
+#. synonyms follow each other
+#: lib/argmatch.c:178
+msgid "Valid arguments are:"
+msgstr "Los argumentos válidos son:"
+
+#: lib/closeout.c:104
+msgid "write error"
+msgstr "error de escritura"
+
+#: lib/error.c:117
+msgid "Unknown system error"
+msgstr "Error del sistema desconocido"
+
+#: lib/getopt.c:686
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: la opción `%s' es ambigua\n"
+
+#: lib/getopt.c:711
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: la opción `--%s' no admite ningún argumento\n"
+
+#: lib/getopt.c:716
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: la opción `%c%s' no admite ningún argumento\n"
+
+#: lib/getopt.c:734 lib/getopt.c:907
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: la opción `%s' requiere un argumento\n"
+
+#. --option
+#: lib/getopt.c:763
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: opción no reconocida `--%s'\n"
+
+#. +option or -option
+#: lib/getopt.c:767
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: opción no reconocida `%c%s'\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:793
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: opción ilegal -- %c\n"
+
+#: lib/getopt.c:796
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: opción inválida -- %c\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:826 lib/getopt.c:956
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: la opción requiere un argumento -- %c\n"
+
+#: lib/getopt.c:873
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: la opción `-W %s' es ambigua\n"
+
+#: lib/getopt.c:891
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr "%s: la opción `-W %s' no admite ningún argumento\n"
+
+#: lib/human.c:341
+msgid "block size"
+msgstr "tamaño del bloque"
+
+#: lib/makepath.c:177
+#, fuzzy, c-format
+msgid "cannot create directory %s"
+msgstr "no se puede crear el directorio `%s'"
+
+#: lib/makepath.c:183 lib/makepath.c:425
+#, fuzzy, c-format
+msgid "%s exists but is not a directory"
+msgstr "`%s' existe pero no es un directorio"
+
+# Nota: se refiere al grupo número 0.
+# La convención nulo=cero también existe en español, al menos en el
+# lenguaje matemático. Por eso he preferido respetar el matiz.
+#: lib/makepath.c:321 lib/makepath.c:383 lib/makepath.c:444
+#, fuzzy, c-format
+msgid "cannot change owner and/or group of %s"
+msgstr "no se puede cambiar al grupo nulo"
+
+# FIXME: ¿Por qué la coma?
+#: lib/makepath.c:343
+#, c-format
+msgid "cannot chdir to directory, %s"
+msgstr "no se puede cambiar al directorio %s"
+
+#: lib/makepath.c:397 lib/makepath.c:450
+#, fuzzy, c-format
+msgid "cannot change permissions of %s"
+msgstr "no se pueden establecer los permisos del directorio `%s'"
+
+#. If XALLOC_FAIL_FUNC is NULL, or does return, display this message
+#. before exiting when memory is exhausted.  Goes through gettext.
+#: lib/obstack.c:477 lib/xmalloc.c:66
+msgid "memory exhausted"
+msgstr "memoria agotada"
+
+#. Get translations for open and closing quotation marks.
+#.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  If the catalog has no translation,
+#. locale_quoting_style quotes `like this', and
+#. clocale_quoting_style quotes "like this".
+#.
+#. For example, an American English Unicode locale should
+#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
+#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
+#. MARK).  A British English Unicode locale should instead
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#: lib/quotearg.c:259
+msgid "`"
+msgstr "`"
+
+#: lib/quotearg.c:260
+msgid "'"
+msgstr "'"
+
+# Esto es para responder "sí" cuando nos pregunte.
+#: lib/rpmatch.c:78
+msgid "^[yY]"
+msgstr "^[sS]"
+
+# Y esto es para responder "no" cuando nos pregunte.
+#: lib/rpmatch.c:81
+msgid "^[nN]"
+msgstr "^[nN]"
+
+#: lib/unicodeio.c:138
+#, c-format
+msgid "cannot output U+%04X: iconv function not usable"
+msgstr "no se puede mostrar U+%04X: no se puede usar la función iconv"
+
+#: lib/unicodeio.c:149
+#, c-format
+msgid "U+%04X: character out of range"
+msgstr "U+%04X: carácter fuera de rango"
+
+#: lib/unicodeio.c:181 lib/unicodeio.c:190
+#, c-format
+msgid "cannot convert U+%04X to local character set"
+msgstr "no se puede convertir U+%04X al juego de caracteres local"
+
+#: lib/unicodeio.c:196
+#, c-format
+msgid "cannot output U+%04X: iconv function not available"
+msgstr "no se puede mostrar U+%04X: la función iconv no está disponible"
+
+# Me niego a considerar "inválido" como palabra "políticamente incorrecta".
+# Si algún "impedido físico" lee este mensaje y se molesta por ello, entonces
+# es que además de impedido físico es tonto, pues todo el mundo sabe que,
+# *en el contexto informático*, inválido e ilegal significan
+# "no permitido por la causa que sea".
+# Luego, que unas veces sea inválido y otras ilegal, son matices que el
+# original tiene y creo necesario respetar en la traducción.
+#
+# [ Tomás Bautista sugiere "inexistente", y también para grupo ]
+#
+# FIXME:
+# Eso sí, un día tendré que preguntar a los de GNU en qué se diferencia
+# "invalid" de "not allowed" de "not recognized" y todo eso... sv
+#
+#: lib/userspec.c:179
+msgid "invalid user"
+msgstr "usuario inválido"
+
+#: lib/userspec.c:180
+msgid "invalid group"
+msgstr "grupo inválido"
+
+#: lib/userspec.c:182
+msgid "cannot get the login group of a numeric UID"
+msgstr "no se puede obtener el grupo de login de un UID numérico"
+
+#: lib/userspec.c:184
+msgid "cannot omit both user and group"
+msgstr "no se puede omitir tanto el usuario como el grupo"
+
+#: lib/version-etc.c:38
+#, fuzzy
+msgid "Copyright (C) 2001 Free Software Foundation, Inc."
+msgstr "Copyright (C) 2000 Free Software Foundation, Inc."
+
+#: lib/version-etc.c:60
+#, c-format
+msgid "Written by %s.\n"
+msgstr "Escrito por %s.\n"
+
+#: lib/version-etc.c:66
+msgid ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Esto es software libre; vea el código fuente para las condiciones de copia.\n"
+"No hay NINGUNA garantía; ni siquiera de COMERCIABILIDAD o IDONEIDAD PARA UN\n"
+"FIN DETERMINADO.\n"
+
+#: src/dcfldd.c:321
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Pruebe `%s --help' para más información.\n"
+
+#: src/dcfldd.c:325
+#, c-format
+msgid "Usage: %s [OPTION]...\n"
+msgstr "Modo de empleo: %s [OPCIÓN]...\n"
+
+#: src/dcfldd.c:326
+#, fuzzy
+msgid ""
+"Copy a file, converting and formatting according to the options.\n"
+"\n"
+"  bs=BYTES             force ibs=BYTES and obs=BYTES\n"
+"  cbs=BYTES            convert BYTES bytes at a time\n"
+"  conv=KEYWORDS        convert the file as per the comma separated keyword "
+"list\n"
+"  count=BLOCKS         copy only BLOCKS input blocks\n"
+"  ibs=BYTES            read BYTES bytes at a time\n"
+"  if=FILE              read from FILE instead of stdin\n"
+"  obs=BYTES            write BYTES bytes at a time\n"
+"  of=FILE              write to FILE instead of stdout\n"
+"  seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n"
+"  skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n"
+"  pattern=BYTES        use the specified binary pattern as input\n"
+"  textpattern=TEXT     use repeating TEXT as input\n"
+"  hashwindow=BYTES     perform an MD5 hash on every BYTES amount of data\n"
+"  hashlog=FILE         send MD5 hash output to FILE instead of stderr\n"
+"  status=[on|off]      display a continual status message on stderr\n"
+"                         default state is \"on\"\n"
+"  sizeprobe=[if|of]    determine the size of the input or output file"
+msgstr ""
+"Copia un fichero, convirtiendo y dándole formato de acuerdo con las "
+"opciones.\n"
+"\n"
+"  bs=BYTES        establece ibs=BYTES y obs=BYTES\n"
+"  cbs=BYTES       convierte BYTES bytes cada vez\n"
+"  conv=PALABRAS   convierte el fichero según la lista de palabras clave\n"
+"                  separadas por comas\n"
+"  count=BLOQUES   copia solamente BLOQUES bloques de entrada\n"
+"  ibs=BYTES       lee BYTES bytes cada vez\n"
+"  if=FICHERO      lee del FICHERO en lugar de la entrada estándar (stdin)\n"
+"  obs=BYTES       escribe BYTES bytes cada vez\n"
+"  of=FICHERO      escribe en FICHERO en lugar de la salida estándar\n"
+"  seek=BLOQUES    se salta BLOQUES bloques de tamaño obs al comienzo del\n"
+"                  resultado\n"
+"  skip=BLOQUES    se salta BLOQUES bloques de tamaño ibs al comienzo de la\n"
+"                  entrada\n"
+"      --help      muestra esta ayuda y finaliza\n"
+"      --version   informa de la versión y finaliza\n"
+"\n"
+"BYTES puede estar seguido por los siguientes sufijos multiplicativos:\n"
+"xM M, c 1, w 2, b 512, kD 1.000, k 1.024, MD 1.000.000, M 1.048.576\n"
+"GD 1.000.000.000, G 1.073.741.824, y así sucesivamente para T, P, E, Z, Y.\n"
+"Cada PALABRA puede ser:\n"
+"\n"
+"  ascii     de EBCDIC a ASCII\n"
+"  ebcdic    de ASCII a EBCDIC\n"
+"  ibm       de ASCII a EBCDIC alternado\n"
+"  block     rellena los registros terminados en nueva línea con espacios "
+"hasta\n"
+"            el tamaño de cbs\n"
+"  unblock   sustituye los espacios que sobran en los registros de tamaño "
+"cbs\n"
+"            con un carácter de nueva línea\n"
+"  lcase     cambia las mayúsculas a minúsculas\n"
+"  notrunc   no trunca el fichero de salida\n"
+"  ucase     cambia las minúsculas a mayúsculas\n"
+"  swab      intercambia cada pareja de bytes de entrada\n"
+"  noerror   continúa después de los errores de lectura\n"
+"  sync      rellena cada bloque de entrada con NULs hasta el tamaño de ibs\n"
+
+#: src/dcfldd.c:371
+msgid ""
+"\n"
+"Report bugs to <bug-fileutils@gnu.org>."
+msgstr ""
+"\n"
+"Comunicar `bugs' a <bug-fileutils@gnu.org>."
+
+#: src/dcfldd.c:402
+#, c-format
+msgid "%s+%s records in\n"
+msgstr "%s+%s registros leídos\n"
+
+#: src/dcfldd.c:405
+#, c-format
+msgid "%s+%s records out\n"
+msgstr "%s+%s registros escritos\n"
+
+#: src/dcfldd.c:413
+msgid "truncated record"
+msgstr "registro truncado"
+
+#: src/dcfldd.c:414
+msgid "truncated records"
+msgstr "registros truncados"
+
+#: src/dcfldd.c:423
+#, c-format
+msgid "closing input file %s"
+msgstr ""
+
+#: src/dcfldd.c:425
+#, c-format
+msgid "closing output file %s"
+msgstr ""
+
+#: src/dcfldd.c:509
+#, fuzzy, c-format
+msgid "writing to %s"
+msgstr "creando el directorio `%s'"
+
+#: src/dcfldd.c:541
+#, fuzzy, c-format
+msgid "invalid conversion: %s"
+msgstr "%s: conversión inválida"
+
+#: src/dcfldd.c:645
+#, fuzzy, c-format
+msgid "unrecognized option %s"
+msgstr "opción no reconocida `%s'"
+
+#: src/dcfldd.c:659
+#, fuzzy, c-format
+msgid "invalid hex pattern: %s"
+msgstr "modo inválido `%s'"
+
+#: src/dcfldd.c:672 src/dcfldd.c:1455 src/dcfldd.c:1473
+#, fuzzy, c-format
+msgid "opening %s"
+msgstr "borrando %s\n"
+
+#: src/dcfldd.c:729
+#, fuzzy, c-format
+msgid "unrecognized option %s=%s"
+msgstr "opción no reconocida `%s=%s'"
+
+#: src/dcfldd.c:735
+#, fuzzy, c-format
+msgid "invalid number %s"
+msgstr "número inválido `%s'"
+
+# Nota: El `conv' es el mismo que aparece más adelante como
+# "conv=KEYWORD", por lo tanto *no* se debe traducir.
+#: src/dcfldd.c:765
+msgid ""
+"only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+msgstr ""
+"sólo una `conv' en {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock},\n"
+"{unblock,sync}"
+
+#: src/dcfldd.c:915 src/dcfldd.c:1206
+#, fuzzy, c-format
+msgid "reading %s"
+msgstr "borrando %s\n"
+
+#: src/dcfldd.c:1252 src/dcfldd.c:1315
+#, fuzzy, c-format
+msgid "writing %s"
+msgstr "borrando %s\n"
+
+#: src/dcfldd.c:1408
+#, fuzzy
+msgid "stating file"
+msgstr "strip falló"
+
+#: src/dcfldd.c:1458
+msgid "standard input"
+msgstr "entrada estándar"
+
+# No me acaba de sonar bien lo de fuera de rango.
+# Se admiten sugerencias. sv
+#: src/dcfldd.c:1481
+msgid "file offset out of range"
+msgstr "desplazamiento de fichero fuera de rango"
+
+#: src/dcfldd.c:1484
+#, fuzzy, c-format
+msgid "cannot fstat %s"
+msgstr "no se puede efectuar `stat' sobre `%s'"
+
+#: src/dcfldd.c:1497
+#, c-format
+msgid "advancing past %s bytes in output file %s"
+msgstr ""
+
+#: src/dcfldd.c:1506
+msgid "standard output"
+msgstr "salida estándar"
+
+# Nota: se refiere al grupo número 0.
+# La convención nulo=cero también existe en español, al menos en el
+# lenguaje matemático. Por eso he preferido respetar el matiz.
+#, fuzzy
+#~ msgid "cannot change to null group"
+#~ msgstr "no se puede cambiar al grupo nulo"
+
+#, fuzzy
+#~ msgid "invalid group name %s"
+#~ msgstr "nombre de grupo inválido `%s'"
+
+#~ msgid "group number"
+#~ msgstr "número de grupo"
+
+#, fuzzy
+#~ msgid "invalid group number %s"
+#~ msgstr "número de grupo inválido `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Modo de empleo: %s [OPCIÓN]... GRUPO FICHERO...\n"
+#~ "       o bien:  %s [OPCIÓN]... --reference=FICHERO-R FICHERO...\n"
+
+# ¿? ¿Existe el verbo "referenciar"? ¿Habría que poner referir?
+#
+# Sí, que yo sepa ... :) (yo me referencio, tu te referencias ... :). ipg
+#
+# Muy bueno :-) Ahora sí que lo veo claro. Ya lo he cambiado en todas
+# partes, excepto en algunos sitios donde busco una alternativa mejor. sv
+#
+# Yo creo que referido != referenciado, y este último es el que debería de
+# ponerse según lo que pienso... uac
+#
+# Pues Iñaky me convenció de que referenciado era un "palabro" (palabra
+# que no existe, inventada). ¿Estás seguro de que existe?
+# (Esto me recuerda el palabro "influenciar", a mucha gente se le olvida
+# que se dice *influir*). sv
+#
+# He traducido "diagnostic" por "mensaje". ¿Alguna idea mejor?
+# `diagnóstico' ... ¿no? ipg
+#
+# Rotundamente no. En español esa palabra solamente se usa en el
+# ámbito médico. "a nivel de hospitales" :-) sv
+#
+# pero en este caso, queda mejor (a mi parecer) `mensaje' ipg
+#
+# Menos mal :-) sv
+#
+# Y a mí que no me gusta `mensaje'... pero no encuentro alternativa. Quizá
+# `muestra lo realizado para/con/sobre cada fichero' tb
+#
+# Aunque prefiero mensaje, dejaré aquí tu sugerencia.
+# (Creo que es la mejor que me han hecho al respecto). sv
+#
+# sugiero que se especificara qué tipo de mensaje se muestra ya que un
+# "diagnostic" no es un mensaje cualquiera... uac
+#
+# Bueno, en este caso, por el contexto creo que no hace falta ser más
+# explícito, si dice "muestra un mensaje" y la opción se llama "verbose",
+# está claro que no es un mensaje de correo electrónico. sv
+#
+#~ msgid ""
+#~ "Change the group membership of each FILE to GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's group rather than the specified\n"
+#~ "                         GROUP value\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ msgstr ""
+#~ "Cambia la pertenencia de grupo de cada FICHERO a GRUPO.\n"
+#~ "\n"
+#~ "  -c, --changes          como `verbose' pero informa sólo de los cambios\n"
+#~ "      --dereference      afecta al referente de cada enlace simbólico, en "
+#~ "lugar\n"
+#~ "                         de al propio enlace simbólico\n"
+#~ "  -h, --no-dereference   afecta a los enlaces simbólicos en lugar de a los\n"
+#~ "                         ficheros referidos (disponible solamente en "
+#~ "sistemas\n"
+#~ "                         que pueden cambiar el propietario de un enlace\n"
+#~ "                         simbólico)\n"
+#~ "  -f, --silent, --quiet  suprime la mayoría de los mensajes de error\n"
+#~ "      --reference=FICH_R utiliza el grupo de FICH_R en lugar del GRUPO\n"
+#~ "                         especificado\n"
+#~ "  -R, --recursive        opera sobre ficheros y directorios recursivamente\n"
+#~ "  -v, --verbose          muestra un mensaje por cada fichero procesado\n"
+#~ "      --help             muestra esta ayuda y finaliza\n"
+#~ "      --version          informa de la versión y finaliza\n"
+
+#~ msgid "too few arguments"
+#~ msgstr "número de argumentos insuficiente"
+
+#, fuzzy
+#~ msgid "getting attributes of %s"
+#~ msgstr "se conserva la fecha de %s"
+
+#, fuzzy
+#~ msgid "getting new attributes of %s"
+#~ msgstr "se conserva la fecha de %s"
+
+# ¿Y "el modo de... se cambió a..."? tb
+# Eso me da la impresión de que no es chmod quien los ha cambiado.
+# quiero decir, que así parece que "se cambió solo".
+# (aunque sea meramente un matiz). sv
+#
+# A mí también me parece más adecuado "se cambió a", aunque me gusta más
+# "se ha cambiado a" o "ha cambiado a"... uac
+#
+# Pensaré esto sincronizadamente con los otros. sv
+#
+#~ msgid "mode of %s changed to %04lo (%s)\n"
+#~ msgstr "el modo de %s cambia a %04lo (%s)\n"
+
+# ¿Y "el modo de... se cambió a..."? tb
+# Eso me da la impresión de que no es chmod quien los ha cambiado.
+# quiero decir, que así parece que "se cambió solo".
+# (aunque sea meramente un matiz). sv
+#
+# A mí también me parece más adecuado "se cambió a", aunque me gusta más
+# "se ha cambiado a" o "ha cambiado a"... uac
+#
+# Pensaré esto sincronizadamente con los otros. sv
+#
+#~ msgid "failed to change mode of %s to %04lo (%s)\n"
+#~ msgstr "fallo al cambiar el modo de %s a %04lo (%s)\n"
+
+# al igual que con chgrp y por coherencia me parece más adecuado:
+# "ha permanecido"... uac
+#
+#~ msgid "mode of %s retained as %04lo (%s)\n"
+#~ msgstr "el modo de %s permanece como %04lo (%s)\n"
+
+#, fuzzy
+#~ msgid "changing permissions of %s"
+#~ msgstr "no se pueden establecer los permisos del directorio `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... MODE[,MODE]... FILE...\n"
+#~ "  or:  %s [OPTION]... OCTAL-MODE FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Modo de empleo: %s [OPCIÓN]... MODO[,MODO]... FICHERO...\n"
+#~ "       o bien:  %s [OPCIÓN]... MODO-OCTAL FICHERO...\n"
+#~ "       o bien:  %s [OPCIÓN]... --reference=FICHERO-R FICHERO...\n"
+
+# ¿Qué tal poner --help y --version como los puse yo en diff y find?
+# --help  Muestra esta ayuda.,
+# -v  --version  Da información sobre la versión del programa.
+# Lo digo por aquello que hablamos que el `y finaliza' sobra, ya
+# que es el comportamiento que se define. ipg
+#
+# Vale, si convences a Enrique... sv
+#
+# Apúntame a la propuesta. tb
+#
+# Pues entonces ya somos tres. Habría que hablarlo seriamente... sv
+#
+# Aunque ya lo hemos puesto así en todos sitios ... casi podríamos
+# dejarlo (daño no hace, eso sí es verdad) ipg
+#
+# Lo dejaremos para otra ocasión. Ya os avisaré. sv
+#~ msgid ""
+#~ "Change the mode of each FILE to MODE.\n"
+#~ "\n"
+#~ "  -c, --changes           like verbose but report only when a change is "
+#~ "made\n"
+#~ "  -f, --silent, --quiet   suppress most error messages\n"
+#~ "  -v, --verbose           output a diagnostic for every file processed\n"
+#~ "      --reference=RFILE   use RFILE's mode instead of MODE values\n"
+#~ "  -R, --recursive         change files and directories recursively\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "\n"
+#~ "Each MODE is one or more of the letters ugoa, one of the symbols +-= and\n"
+#~ "one or more of the letters rwxXstugo.\n"
+#~ msgstr ""
+#~ "Cambia el modo de cada FICHERO a MODO.\n"
+#~ "\n"
+#~ "  -c, --changes           como `verbose' pero sólo informa de los cambios\n"
+#~ "  -f, --silent, --quiet   suprime la mayoría de los mensajes de error\n"
+#~ "  -v, --verbose           muestra un mensaje por cada fichero procesado\n"
+#~ "      --reference=FICH_R  utiliza el modo de FICH_R en lugar del valor MODO\n"
+#~ "  -R, --recursive         cambia ficheros y directorios recursivamente\n"
+#~ "      --help              muestra esta ayuda y finaliza\n"
+#~ "      --version           informa de la versión y finaliza\n"
+#~ "\n"
+#~ "Cada MODO es una o más de las letras ugoa, uno de los símbolos +-= y\n"
+#~ "una o más de las letras rwxXstugo.\n"
+
+#, fuzzy
+#~ msgid "invalid character %s in mode string %s"
+#~ msgstr "argumento %s inválido para `%s'"
+
+#, fuzzy
+#~ msgid "invalid mode string: %s"
+#~ msgstr "modo inválido `%s'"
+
+#~ msgid "neither symbolic link %s nor referent has been changed\n"
+#~ msgstr "ni el enlace simbólico %s ni su referente ha cambiado\n"
+
+#, fuzzy
+#~ msgid "changed ownership of %s to %s\n"
+#~ msgstr "fallo al cambiar el propietario de %s a "
+
+#, fuzzy
+#~ msgid "changed group of %s to %s\n"
+#~ msgstr "fallo al cambiar el grupo de %s a %s\n"
+
+#, fuzzy
+#~ msgid "failed to change ownership of %s to %s\n"
+#~ msgstr "fallo al cambiar el propietario de %s a "
+
+#~ msgid "failed to change group of %s to %s\n"
+#~ msgstr "fallo al cambiar el grupo de %s a %s\n"
+
+# No sé si sería mejor "se mantiene como propietario de %s a " tb
+# No está mal. Lo pensaré. sv
+#
+# al igual que con el msgid anterior esta propuesta me parece mejor... uac
+# ¿Alguien más? :-) sv
+#, fuzzy
+#~ msgid "ownership of %s retained as %s\n"
+#~ msgstr "el propietario de %s permanece como "
+
+# por la misma razón que en el msgid anterior, creo que debería ser algo así
+# como "ha permanecido" o algo similar... uac
+# Siguiendo con lo anterior, en este caso me parece que queda mucho más feo
+# en pasado que en presente (razón para dejarlos los dos en presente).
+# De todas formas, tendré que pensarlo un poco más despacio. sv
+#~ msgid "group of %s retained as %s\n"
+#~ msgstr "el grupo de %s permanece como %s\n"
+
+#, fuzzy
+#~ msgid "changing ownership of %s"
+#~ msgstr "se conserva el propietario de %s"
+
+#, fuzzy
+#~ msgid "changing group of %s"
+#~ msgstr "se conserva el propietario de %s"
+
+#, fuzzy
+#~ msgid "unable to restore permissions of %s"
+#~ msgstr "se restablecen los permisos de %s"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... OWNER[:[GROUP]] FILE...\n"
+#~ "  or:  %s [OPTION]... :GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Modo de empleo: %s [OPCIÓN]... PROPIETARIO[:[GRUPO]] FICHERO...\n"
+#~ "       o bien:  %s [OPCIÓN]... :[GRUPO] FICHERO...\n"
+#~ "       o bien:  %s [OPCIÓN]... --reference=FICHERO-R FICHERO...\n"
+
+# La línea del "verbose", "da detalles de lo que va haciendo" es
+# realmente sosa, ¿alguna sugerencia que la mejore?
+# (¿o quizá no hay mucho que mejorar?)
+#
+# Opera verbosamente (ya sé que es pero ... pero es lo que se
+# me ocurrió a mí) :) ipg
+#
+# Con sinceridad, "verbosamente" me parece un "palabro". sv
+#
+# ¿Y "muestra en detalle los cambios" ? em
+#
+# Eso tiene el problema siguiente: "Lo que va haciendo" puede ser
+# cambiar unas cosas sí y otras no. No son sólo los cambios. sv
+#
+# ¿más sugerencias? sv+
+# "muestra mensajes sólo cuando hay algún cambio" tb
+# Vale. Aceptado. Es casi igual pero un poquito mejor. sv
+#
+#, fuzzy
+#~ msgid ""
+#~ "Change the owner and/or group of each FILE to OWNER and/or GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                         change the owner and/or group of each file only if\n"
+#~ "                         its current owner and/or group match those "
+#~ "specified\n"
+#~ "                         here.  Either may be omitted, in which case a "
+#~ "match\n"
+#~ "                         is not required for the omitted attribute.\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's owner and group rather than\n"
+#~ "                         the specified OWNER:GROUP values\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Cambia el propietario y/o grupo de cada FICHERO a PROPIETARIO y/o GRUPO.\n"
+#~ "\n"
+#~ "  -c, --changes          como verbose pero informa solamente cuando se "
+#~ "efectúa\n"
+#~ "                         un cambio\n"
+#~ "      --dereference      afecta al referente al que apunta cada enlace\n"
+#~ "                         simbólico, en vez de al propio enlace simbólico\n"
+#~ "  -h, --no-dereference   afecta a los enlaces simbólicos en lugar de a los\n"
+#~ "                         ficheros referidos (disponible solamente en "
+#~ "sistemas\n"
+#~ "                         que pueden cambiar el propietario de un enlace\n"
+#~ "                         simbólico)\n"
+#~ "      --from=PROPIETARIO_ACTUAL:GRUPO_ACTUAL\n"
+#~ "                         cambia el propietario y/o el grupo de cada fichero\n"
+#~ "                         solamente si su propietario y/o grupo actual "
+#~ "coinciden\n"
+#~ "                         con los especificados aquí. Se puede omitir "
+#~ "cualquiera\n"
+#~ "                         de los dos, en cuyo caso no se requiere "
+#~ "coincidencia\n"
+#~ "                         para el atributo omitido.\n"
+#~ "  -f, --silent, --quiet  suprime la mayoría de los mensajes de error\n"
+#~ "      --reference=FICH_R utiliza el propietario y el grupo de FICH_R en "
+#~ "lugar\n"
+#~ "                         de los valores PROPIETARIO:GRUPO especificados\n"
+#~ "  -R, --recursive        opera sobre ficheros y directorios recursivamente\n"
+#~ "  -v, --verbose          muestra un mensaje por cada fichero procesado\n"
+#~ "      --help             muestra esta ayuda y finaliza\n"
+#~ "      --version          informa de la versión y finaliza\n"
+#~ "\n"
+#~ "El propietario no cambia si se omite. El grupo no cambia si se omite, pero\n"
+#~ "cambia al grupo de login implícitamente con `:'. PROPIETARIO y GRUPO pueden "
+#~ "ser\n"
+#~ "numéricos o simbólicos.\n"
+
+#, fuzzy
+#~ msgid "cannot access %s"
+#~ msgstr "no se puede cambiar el propietario de %s"
+
+#, fuzzy
+#~ msgid "%s and %s are the same file"
+#~ msgstr "`%s' y `%s' son el mismo fichero"
+
+#, fuzzy
+#~ msgid "cannot open %s for reading"
+#~ msgstr "no se puede mover `%s' a `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove %s"
+#~ msgstr "no se puede borrar `%s'"
+
+#, fuzzy
+#~ msgid "cannot create regular file %s"
+#~ msgstr "no se puede crear el fichero regular `%s'"
+
+#, fuzzy
+#~ msgid "cannot lseek %s"
+#~ msgstr "no se puede borrar `%s'"
+
+#, fuzzy
+#~ msgid "closing %s"
+#~ msgstr "borrando %s\n"
+
+#, fuzzy
+#~ msgid "cannot stat %s"
+#~ msgstr "no se puede efectuar `stat' sobre `%s'"
+
+#, fuzzy
+#~ msgid "omitting directory %s"
+#~ msgstr "%s: se omite el directorio"
+
+#, fuzzy
+#~ msgid "cannot overwrite non-directory %s with directory %s"
+#~ msgstr "%s: no se puede sobreescribir un directorio con un no-directorio"
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s with non-directory"
+#~ msgstr "%s: no se puede sobreescribir un directorio con un no-directorio"
+
+# SIoNO
+#, fuzzy
+#~ msgid "%s: overwrite %s, overriding mode %04lo? "
+#~ msgstr "%s: ¿sobreescribir `%s', sustituyendo el modo %04lo? (s/n) "
+
+# SIoNO
+#, fuzzy
+#~ msgid "%s: overwrite %s? "
+#~ msgstr "%s: ¿sobreescribir `%s'? (s/n) "
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s"
+#~ msgstr "%s: no se puede sobreescribir un directorio"
+
+#~ msgid "cannot move directory onto non-directory: %s -> %s"
+#~ msgstr ""
+#~ "no se puede sobreescribir un directorio con un no directorio %s -> %s"
+
+# Nota: Este backing up *no* es un gerundio.
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not moved"
+#~ msgstr "respaldar `%s' destruiría el original; `%s' no se mueve"
+
+# Nota: Este backing up *no* es un gerundio.
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not copied"
+#~ msgstr "respaldar `%s' destruiría el original; `%s' no se copia"
+
+#, fuzzy
+#~ msgid "cannot backup %s"
+#~ msgstr "no se puede respaldar `%s'"
+
+#~ msgid " (backup: %s)"
+#~ msgstr " (respaldo: %s)"
+
+#, fuzzy
+#~ msgid "cannot copy a directory, %s, into itself, %s"
+#~ msgstr "no se puede mover `%s' a un directorio de sí mismo, `%s'"
+
+#, fuzzy
+#~ msgid "will not create hard link %s to directory %s"
+#~ msgstr "no se crea el enlace duro `%s' al directorio `%s'"
+
+#, fuzzy
+#~ msgid "cannot create hard link %s to %s"
+#~ msgstr "crea el enlace duro `%s' a `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to a subdirectory of itself, %s"
+#~ msgstr "no se puede mover `%s' a un directorio de sí mismo, `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to %s"
+#~ msgstr "no se puede mover `%s' a `%s'"
+
+# Nota: Pongo "el" y no "un" porque no todos los enlaces simbólicos
+# cíclicos son imposibles de copiar, por ejemplo:
+# ln -s bb bb
+# mkdir aa
+# cp -d bb aa
+# ls -l aa
+#, fuzzy
+#~ msgid "cannot copy cyclic symbolic link %s"
+#~ msgstr "%s: no se puede copiar el enlace simbólico cíclico"
+
+#~ msgid "%s: can make relative symbolic links only in current directory"
+#~ msgstr ""
+#~ "%s: solamente se pueden crear enlaces simbólicos relativos\n"
+#~ "en el directorio actual"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s to %s"
+#~ msgstr "no se puede crear el enlace simbólico `%s'"
+
+#, fuzzy
+#~ msgid "cannot create link %s"
+#~ msgstr "no se puede crear el enlace `%s'"
+
+# Dudo mucho que exista traducción de `fifo', pero si a alguien se le ocurre
+# alguna, por favor, que me diga en qué libro aparece y cuánta gente lo usa
+# (el término, no el libro).
+#
+# FIFO es un acrónimo (First-In, First-Out) ... Primero-que-Entra,
+# Primero-que-Sale (PEPS) ... no queda muy bien ¿no? :) ipg
+#
+# Lo sé, lo sé, pero no está el horno para bollos de inventarse
+# acrónimos en español que nadie usaría (*ni siquiera nosotros*). sv
+#
+# Lo que sí te digo es que es 'la' fifo. Y ya puestos, yo usaría, en todo
+# caso, 'pila fifo' em
+#
+# Es que no es "el fifo" ni "la fifo" sino "el [fichero] fifo"
+# Es un tipo especial de fichero.
+# Para que te quedes tranquilo, añado la palabra "fichero". sv+
+#
+# Ya... y `fifo' no es un fichero, sino una `cola'. tb
+#
+# Creo que se refiere a un "named pipe", de los que se crean con mkfifo.
+# Y es un fichero sólo en tanto que está en un determinado directorio,
+# como los dispositivos en /dev.
+# ¿Debo entender que propones eliminar fichero?
+# (¿y poner además "la cola"?). sv
+#
+# No exactamente. Quiero decir que `fifo' es una cola ---lo decía por toda
+# la discusión anterior---, pero como esta cola está construida sobre un
+# fichero, pues... Y me temo que "fichero para `fifo'" sería ya demasiado.
+# Más vale que lo dejes como está. tb
+#
+# Por una vez, y sin que sirva de precedente, Santiago, me pongo de
+# tu lado :) Déjalo como está :D ipg
+#
+# Gracias a los dos. sv
+#, fuzzy
+#~ msgid "cannot create fifo %s"
+#~ msgstr "no se puede crear el fichero `fifo' `%s'"
+
+#, fuzzy
+#~ msgid "cannot create special file %s"
+#~ msgstr "no se puede crear el fichero especial `%s'"
+
+#, fuzzy
+#~ msgid "cannot read symbolic link %s"
+#~ msgstr "no se puede leer el enlace simbólico `%s'"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s"
+#~ msgstr "no se puede crear el enlace simbólico `%s'"
+
+#~ msgid "preserving ownership for %s"
+#~ msgstr "se conserva el propietario de %s"
+
+#, fuzzy
+#~ msgid "%s has unknown file type"
+#~ msgstr "%s: tipo de fichero desconocido"
+
+#~ msgid "preserving times for %s"
+#~ msgstr "se conserva la fecha de %s"
+
+#~ msgid "setting permissions for %s"
+#~ msgstr "estableciendo los permisos de %s"
+
+# Nota: Asegurarse de que significa eso.
+# Probablemente quiera decir que "no se puede recuperar `%s'" de la copia
+# de seguridad. tb
+#, fuzzy
+#~ msgid "cannot un-backup %s"
+#~ msgstr "no se puede restaurar `%s'"
+
+#~ msgid "%s -> %s (unbackup)\n"
+#~ msgstr "%s -> %s (restauración)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY SOURCE...\n"
+#~ msgstr ""
+#~ "Modo de empleo: %s [OPCIÓN]... ORIGEN DESTINO\n"
+#~ "       o bien:  %s [OPCIÓN]... ORIGEN... DIRECTORIO\n"
+#~ "       o bien:  %s [OPCIÓN]... --target-directory=DIRECTORIO ORIGEN...\n"
+
+# ¿"crude" es simple o sencillo?
+#
+# `a lo bruto' o `simple'.
+# Yo prefiero `simple'. ipg
+# - - - - - - - - - - - - - - - - -
+# Nota sobre la traducción de "backup":
+# "backup" es sustantivo y verbo, y tiene dos posibles traducciones.
+#
+# La "verborreica":
+# "backup"    -> copia de seguridad
+# "to backup" -> crear una copia de seguridad
+#
+# La "corta":
+# "backup"    -> respaldo
+# "to backup" -> respaldar
+# (esta traducción aparece en algún programa de Hewlett Packard).
+#
+# Dado que la "verborreica" queda muy larga (sobre todo cuando es un verbo),
+# he decidido usar unas veces una y otras veces la otra, según el caso.
+#
+# Nota: Los ficheros `sparse' son una especie de
+# ficheros con "huecos" (trozos con muchos ceros seguidos).
+# Parece ser que hay un sistema que se encarga de acordarse
+# en dónde están los huecos para no tener que almacenar tantos bytes. sv+
+#
+# "same as" -> "igual que". "Lo mismo que" no termina de convencerme. tb
+# es que en inglés también hay "equal to". sv
+# Ya. Pero la cuestión no es cómo se dice en inglés, sino cómo se expresa
+# la misma idea en español normalmente. tb
+# Bueno, yo le digo "lo mismo que"... sv
+#
+# -x: tampoco me gusta cómo se explica, aunque en el manual sí que lo deja
+# bien claro... yo lo pondría algo parecido a:
+#
+# "no lee [sobre] más de un sistema de ficheros" o
+# más parecido al manual: "evita subdirectorios en otros sistemas de ficheros"
+# uac
+#
+# La traducción me parece correcta y fiel.
+# Si de verdad te parece que está mal explicado, se lo digo al autor. sv
+#
+#, fuzzy
+#~ msgid ""
+#~ "Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                same as -dpR\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -d, --no-dereference         never follow symbolic links\n"
+#~ "  -f, --force                  if an existing destination file cannot be\n"
+#~ "                                   opened, remove it and try again\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "  -H                           follow command-line symbolic links\n"
+#~ "  -l, --link                   link files instead of copying\n"
+#~ "  -L, --dereference            always follow symbolic links\n"
+#~ "  -p, --preserve               preserve file attributes if possible\n"
+#~ "      --parents                append source path to DIRECTORY\n"
+#~ "  -P                           same as `--parents' for now; soon to change "
+#~ "to\n"
+#~ "                                 `--no-dereference' to conform to POSIX\n"
+#~ "  -r                           copy recursively, non-directories as files\n"
+#~ "                                 WARNING: use -R instead when you might "
+#~ "copy\n"
+#~ "                                 special files like FIFOs or /dev/zero\n"
+#~ "      --remove-destination     remove each existing destination file before\n"
+#~ "                                 attempting to open it (contrast with "
+#~ "--force)\n"
+#~ msgstr ""
+#~ "Copia ORIGEN a DESTINO, o varios ORIGEN(es) a DIRECTORIO.\n"
+#~ "\n"
+#~ "  -a, --archive                 lo mismo que -dpR\n"
+#~ "      --backup[=CONTROL]        crea una copia de seguridad de cada fichero "
+#~ "de\n"
+#~ "                                destino que exista\n"
+#~ "  -b                            como --backup pero no acepta ningún "
+#~ "argumento\n"
+#~ "  -d, --no-dereference          mantiene los enlaces\n"
+#~ "  -f, --force                   borra los destinos que ya existan, sin "
+#~ "preguntar\n"
+#~ "  -i, --interactive             pide confirmación antes de sobreescribir\n"
+#~ "  -l, --link                    enlaza ficheros en lugar de copiarlos\n"
+#~ "  -p, --preserve                conserva si es posible los atributos del "
+#~ "fichero\n"
+#~ "  -P, --parents                 añade el directorio de origen a DIRECTORIO\n"
+#~ "  -r                            copia recursivamente, los no directorios "
+#~ "como\n"
+#~ "                                ficheros\n"
+#~ "                                  ATENCIÓN: utilice -R en su lugar cuando "
+#~ "vaya\n"
+#~ "                                  a copiar ficheros especiales tales como\n"
+#~ "                                  FIFOs o /dev/zero\n"
+#~ "      --sparse=CUÁNDO           controla la creación de ficheros `sparse'\n"
+#~ "  -R, --recursive               copia directorios recursivamente\n"
+#~ "      --strip-trailing-slashes  elimina todas las barras finales de cada\n"
+#~ "                                argumento ORIGEN\n"
+#~ "  -s, --symbolic-link           crea enlaces simbólicos en lugar de "
+#~ "copiarlos\n"
+#~ "  -S, --suffix=SUFIJO           reemplaza el sufijo de respaldo habitual\n"
+#~ "      --target-directory=DIRECTORIO  mueve todos los argumentos ORIGEN al\n"
+#~ "                                     directorio DIRECTORIO\n"
+#~ "  -u, --update                  copia solamente cuando el fichero ORIGEN es\n"
+#~ "                                  más moderno que el fichero de destino,\n"
+#~ "                                  o cuando falta el fichero de destino\n"
+#~ "  -v, --verbose                 da detalles sobre lo que se va haciendo\n"
+#~ "  -x, --one-file-system         permanece en este sistema de ficheros\n"
+#~ "      --help                    muestra esta ayuda y finaliza\n"
+#~ "      --version                 informa de la versión y finaliza\n"
+#~ "\n"
+#~ "Por omisión, los ficheros ORIGEN `sparse' se detectan mediante una simple\n"
+#~ "heurística y los correspondientes ficheros DESTINO se crean también "
+#~ "`sparse'.\n"
+#~ "Este es el comportamiento con --sparse=auto. Al especificar --sparse=always "
+#~ "se\n"
+#~ "crea un fichero DESTINO `sparse' cuando el fichero ORIGEN contiene una "
+#~ "sucesión\n"
+#~ "de bytes cero suficientemente larga.\n"
+#~ "Utilice --sparse=never para inhibir la creación de ficheros `sparse'.\n"
+#~ "\n"
+
+# ¿"crude" es simple o sencillo?
+#
+# `a lo bruto' o `simple'.
+# Yo prefiero `simple'. ipg
+# - - - - - - - - - - - - - - - - -
+# Nota sobre la traducción de "backup":
+# "backup" es sustantivo y verbo, y tiene dos posibles traducciones.
+#
+# La "verborreica":
+# "backup"    -> copia de seguridad
+# "to backup" -> crear una copia de seguridad
+#
+# La "corta":
+# "backup"    -> respaldo
+# "to backup" -> respaldar
+# (esta traducción aparece en algún programa de Hewlett Packard).
+#
+# Dado que la "verborreica" queda muy larga (sobre todo cuando es un verbo),
+# he decidido usar unas veces una y otras veces la otra, según el caso.
+#
+# Nota: Los ficheros `sparse' son una especie de
+# ficheros con "huecos" (trozos con muchos ceros seguidos).
+# Parece ser que hay un sistema que se encarga de acordarse
+# en dónde están los huecos para no tener que almacenar tantos bytes. sv+
+#
+# "same as" -> "igual que". "Lo mismo que" no termina de convencerme. tb
+# es que en inglés también hay "equal to". sv
+# Ya. Pero la cuestión no es cómo se dice en inglés, sino cómo se expresa
+# la misma idea en español normalmente. tb
+# Bueno, yo le digo "lo mismo que"... sv
+#
+# -x: tampoco me gusta cómo se explica, aunque en el manual sí que lo deja
+# bien claro... yo lo pondría algo parecido a:
+#
+# "no lee [sobre] más de un sistema de ficheros" o
+# más parecido al manual: "evita subdirectorios en otros sistemas de ficheros"
+# uac
+#
+# La traducción me parece correcta y fiel.
+# Si de verdad te parece que está mal explicado, se lo digo al autor. sv
+#
+#, fuzzy
+#~ msgid ""
+#~ "      --sparse=WHEN            control creation of sparse files\n"
+#~ "  -R, --recursive              copy directories recursively\n"
+#~ "      --strip-trailing-slashes remove any trailing slashes from each SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -s, --symbolic-link          make symbolic links instead of copying\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 copy only when the SOURCE file is newer\n"
+#~ "                                 than the destination file or when the\n"
+#~ "                                 destination file is missing\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "  -x, --one-file-system        stay on this file system\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ "By default, sparse SOURCE files are detected by a crude heuristic and the\n"
+#~ "corresponding DEST file is made sparse as well.  That is the behavior\n"
+#~ "selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST\n"
+#~ "file whenever the SOURCE file contains a long enough sequence of zero "
+#~ "bytes.\n"
+#~ "Use --sparse=never to inhibit creation of sparse files.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Copia ORIGEN a DESTINO, o varios ORIGEN(es) a DIRECTORIO.\n"
+#~ "\n"
+#~ "  -a, --archive                 lo mismo que -dpR\n"
+#~ "      --backup[=CONTROL]        crea una copia de seguridad de cada fichero "
+#~ "de\n"
+#~ "                                destino que exista\n"
+#~ "  -b                            como --backup pero no acepta ningún "
+#~ "argumento\n"
+#~ "  -d, --no-dereference          mantiene los enlaces\n"
+#~ "  -f, --force                   borra los destinos que ya existan, sin "
+#~ "preguntar\n"
+#~ "  -i, --interactive             pide confirmación antes de sobreescribir\n"
+#~ "  -l, --link                    enlaza ficheros en lugar de copiarlos\n"
+#~ "  -p, --preserve                conserva si es posible los atributos del "
+#~ "fichero\n"
+#~ "  -P, --parents                 añade el directorio de origen a DIRECTORIO\n"
+#~ "  -r                            copia recursivamente, los no directorios "
+#~ "como\n"
+#~ "                                ficheros\n"
+#~ "                                  ATENCIÓN: utilice -R en su lugar cuando "
+#~ "vaya\n"
+#~ "                                  a copiar ficheros especiales tales como\n"
+#~ "                                  FIFOs o /dev/zero\n"
+#~ "      --sparse=CUÁNDO           controla la creación de ficheros `sparse'\n"
+#~ "  -R, --recursive               copia directorios recursivamente\n"
+#~ "      --strip-trailing-slashes  elimina todas las barras finales de cada\n"
+#~ "                                argumento ORIGEN\n"
+#~ "  -s, --symbolic-link           crea enlaces simbólicos en lugar de "
+#~ "copiarlos\n"
+#~ "  -S, --suffix=SUFIJO           reemplaza el sufijo de respaldo habitual\n"
+#~ "      --target-directory=DIRECTORIO  mueve todos los argumentos ORIGEN al\n"
+#~ "                                     directorio DIRECTORIO\n"
+#~ "  -u, --update                  copia solamente cuando el fichero ORIGEN es\n"
+#~ "                                  más moderno que el fichero de destino,\n"
+#~ "                                  o cuando falta el fichero de destino\n"
+#~ "  -v, --verbose                 da detalles sobre lo que se va haciendo\n"
+#~ "  -x, --one-file-system         permanece en este sistema de ficheros\n"
+#~ "      --help                    muestra esta ayuda y finaliza\n"
+#~ "      --version                 informa de la versión y finaliza\n"
+#~ "\n"
+#~ "Por omisión, los ficheros ORIGEN `sparse' se detectan mediante una simple\n"
+#~ "heurística y los correspondientes ficheros DESTINO se crean también "
+#~ "`sparse'.\n"
+#~ "Este es el comportamiento con --sparse=auto. Al especificar --sparse=always "
+#~ "se\n"
+#~ "crea un fichero DESTINO `sparse' cuando el fichero ORIGEN contiene una "
+#~ "sucesión\n"
+#~ "de bytes cero suficientemente larga.\n"
+#~ "Utilice --sparse=never para inhibir la creación de ficheros `sparse'.\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "The backup suffix is `~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\n"
+#~ "The version control method may be selected via the --backup option or "
+#~ "through\n"
+#~ "the VERSION_CONTROL environment variable.  Here are the values:\n"
+#~ "\n"
+#~ "  none, off       never make backups (even if --backup is given)\n"
+#~ "  numbered, t     make numbered backups\n"
+#~ "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
+#~ "  simple, never   always make simple backups\n"
+#~ msgstr ""
+#~ "El sufijo de respaldo es `~', a menos que se establezca con --suffix o con\n"
+#~ "SIMPLE_BACKUP_SUFFIX. El método de control de versión se puede seleccionar\n"
+#~ "con la opción --backup o a través de la variable de entorno "
+#~ "VERSION_CONTROL.\n"
+#~ "Estos son los valores:\n"
+#~ "\n"
+#~ "  none, off       nunca realiza copias de seguridad (incluso si se da la\n"
+#~ "                  opción --backup)\n"
+#~ "  numbered, t     crea copias de seguridad numeradas\n"
+#~ "  existing, nil   numeradas si existen copias de seguridad numeradas,\n"
+#~ "                  simples en caso contrario\n"
+#~ "  simple, never   siempre crea copias de seguridad simples\n"
+
+# Revisar esto un poco. Especialmente la última línea.
+#~ msgid ""
+#~ "\n"
+#~ "As a special case, cp makes a backup of SOURCE when the force and backup\n"
+#~ "options are given and SOURCE and DEST are the same name for an existing,\n"
+#~ "regular file.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Como caso especial, cp crea una copia se seguridad de ORIGEN cuando se "
+#~ "utilizan\n"
+#~ "las opciones `force' y `backup', y ORIGEN y DESTINO tienen el mismo nombre "
+#~ "para\n"
+#~ "un nombre de fichero regular existente.\n"
+
+#~ msgid "preserving permissions for %s"
+#~ msgstr "se conservan los permisos de %s"
+
+#, fuzzy
+#~ msgid "cannot make directory %s"
+#~ msgstr "no se puede crear el directorio `%s'"
+
+#~ msgid "missing file arguments"
+#~ msgstr "faltan argumentos (ficheros)"
+
+#~ msgid "missing destination file"
+#~ msgstr "falta el fichero de destino"
+
+# FIXME: Falta una coma en el original. sv
+#, fuzzy
+#~ msgid "specified target, %s is not a directory"
+#~ msgstr "el objetivo especificado, `%s', no es un directorio"
+
+#, fuzzy
+#~ msgid "copying multiple files, but last argument %s is not a directory"
+#~ msgstr ""
+#~ "se copian varios ficheros, pero el último argumento (%s)\n"
+#~ "no es un directorio"
+
+# Nota: Mejor no traducir "path" y "directory" de la misma forma dentro
+# de la misma frase.
+#~ msgid "when preserving paths, the destination must be a directory"
+#~ msgstr ""
+#~ "cuando se conservan rutas de acceso, el destino debe ser un directorio"
+
+#~ msgid ""
+#~ "warning: --version-control (-V) is obsolete;  support for it\n"
+#~ "will be removed in some future release.  Use --backup=%s instead."
+#~ msgstr ""
+#~ "atención: --version-control (-V) está obsoleta;  su soporte será eliminado\n"
+#~ "en alguna versión posterior.  Utilice --backup=%s en su lugar."
+
+#~ msgid "symbolic links are not supported on this system"
+#~ msgstr "este sistema no admite enlaces simbólicos"
+
+# ¿? HARD ¿duro o fuerte?
+#
+# Yo lo dejaría en duro ... (queda más heavy :) ipg
+#
+# Me inclino por fuerte. em
+#
+# ¿bibliografía?
+# (¿en qué libros os basáis?) sv+
+#~ msgid "cannot make both hard and symbolic links"
+#~ msgstr ""
+#~ "no se puede crear un enlace que sea duro y simbólico al mismo tiempo"
+
+#~ msgid "backup type"
+#~ msgstr "tipo de respaldo"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]\n"
+#~ msgstr "Modo de empleo: %s [OPCIÓN]... [FICHERO]\n"
+
+# "Comandos"... ¡órdenes! O instrucciones. tb.
+# Toda mi vida he usado esa palabra para "command".
+# no me parece tan incorrecta.
+# Pero si te hago caso, habría que abrir el debate seriamente
+# (pues no soy el único que utiliza la palabreja).
+# No me opongo, siempre que lleguemos a un consenso. sv
+#~ msgid ""
+#~ "Output commands to set the LS_COLORS environment variable.\n"
+#~ "\n"
+#~ "Determine format of output:\n"
+#~ "  -b, --sh, --bourne-shell    output Bourne shell code to set LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        output C shell code to set LS_COLORS\n"
+#~ "  -p, --print-database        output defaults\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If FILE is specified, read it to determine which colors to use for which\n"
+#~ "file types and extensions.  Otherwise, a precompiled database is used.\n"
+#~ "For details on the format of these files, run `dircolors --print-database'.\n"
+#~ msgstr ""
+#~ "Produce comandos para establecer la variable de entorno LS_COLORS.\n"
+#~ "\n"
+#~ "Para determinar el formato del resultado:\n"
+#~ "  -b, --sh, --bourne-shell    produce código en Bourne shell para\n"
+#~ "                              establecer LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        produce código en C-shell para\n"
+#~ "                              establecer LS_COLORS\n"
+#~ "  -p, --print-database        muestra los valores por defecto\n"
+#~ "      --help                  muestra esta ayuda y finaliza\n"
+#~ "      --version               informa de la versión y finaliza\n"
+#~ "\n"
+#~ "Si se especifica FICHERO, se lee para determinar qué colores usar para "
+#~ "cuáles\n"
+#~ "tipos de ficheros y extensiones. En caso contrario, se utiliza una base de\n"
+#~ "datos precompilada. Para más información acerca del formato de estos "
+#~ "ficheros,\n"
+#~ "ejecute `dircolors --print-database'.\n"
+
+#~ msgid "%s:%lu: invalid line;  missing second token"
+#~ msgstr "%s:%lu: línea inválida;  falta el segundo elemento"
+
+#, fuzzy
+#~ msgid "%s:%lu: unrecognized keyword %s"
+#~ msgstr "%s:%lu: palabra clave no reconocida `%s'"
+
+#~ msgid "<internal>"
+#~ msgstr "<interno>"
+
+#~ msgid ""
+#~ "the options to output dircolors' internal database and\n"
+#~ "to select a shell syntax are mutually exclusive"
+#~ msgstr ""
+#~ "las opciones para mostrar la base de datos interna de dircolors y\n"
+#~ "para seleccionar una sintaxis para el shell son mutuamente excluyentes"
+
+#~ msgid ""
+#~ "no FILE arguments may be used with the option to output\n"
+#~ "dircolors' internal database"
+#~ msgstr ""
+#~ "no se pueden usar argumentos de tipo FICHERO con la opción para mostrar\n"
+#~ "la base de datos interna de dircolors"
+
+#~ msgid "too many arguments"
+#~ msgstr "demasiados argumentos"
+
+#~ msgid "no SHELL environment variable, and no shell type option given"
+#~ msgstr ""
+#~ "no hay variable de entorno SHELL, y no se ha especificado la opción\n"
+#~ "del tipo de shell"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "Modo de empleo: %s [OPCIÓN]... [FICHERO]...\n"
+
+# La frase del "despite" es fea con ganas, pero como la frase original
+# también lo es, prefiero dejarla como está, no sea que la empeore más
+# todavía. Además, en pt.po también aparece "apesar de".
+# No sé si sería mejor "a pesar de ser" o bien "aun siendo". tb
+# Eso es lo que me da miedo, intentar mejorarla y estropearlo.
+# ¿Quién me dice que es "siendo..." y no "estando definida la variable..."?
+# Por eso prefiero dejarlo "igual de mal" que el original. sv
+#
+# Sugerencia de Ulisses:
+# "a pesar de estar definida la variable [de entorno] POSIXLY_CORRECT" uac
+#
+# Comentaré algo de esto al autor, a ver qué dice. sv
+#
+#~ msgid ""
+#~ "Show information about the filesystem on which each FILE resides,\n"
+#~ "or all filesystems by default.\n"
+#~ "\n"
+#~ "  -a, --all             include filesystems having 0 blocks\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -i, --inodes          list inode information instead of block usage\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --local           limit listing to local filesystems\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "      --no-sync         do not invoke sync before getting usage info "
+#~ "(default)\n"
+#~ "  -P, --portability     use the POSIX output format\n"
+#~ "      --sync            invoke sync before getting usage info\n"
+#~ "  -t, --type=TYPE       limit listing to filesystems of type TYPE\n"
+#~ "  -T, --print-type      print filesystem type\n"
+#~ "  -x, --exclude-type=TYPE   limit listing to filesystems not of type TYPE\n"
+#~ "  -v                    (ignored)\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "Muestra información sobre el sistema de ficheros en el que reside cada "
+#~ "FICHERO,\n"
+#~ "o por omisión sobre todos los sistemas de ficheros.\n"
+#~ "\n"
+#~ "  -a, --all            incluye los sistemas de ficheros con 0 bloques\n"
+#~ "      --block-size=TAM utiliza bloques de TAM bytes\n"
+#~ "  -h, --human-readable imprime los tamaños en formato legible (p.e. 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si             análogo, pero utiliza potencias de 1000 y no de 1024\n"
+#~ "  -i, --inodes         muestra la información de nodos-i en lugar del uso\n"
+#~ "                       de bloques\n"
+#~ "  -k, --kilobytes      como --block-size=1024\n"
+#~ "  -l, --local          limita el listado a los sistemas de ficheros locales\n"
+#~ "  -m, --megabytes      como --block-size=1048576\n"
+#~ "      --no-sync        no llama a sync antes de obtener el modo de empleo\n"
+#~ "                       (por defecto)\n"
+#~ "  -P, --portability    utiliza el formato POSIX para el resultado\n"
+#~ "      --sync           llama a sync antes de obtener el modo de empleo\n"
+#~ "  -t, --type=TIPO      restringe el listado a sistemas de ficheros de tipo "
+#~ "TIPO\n"
+#~ "  -T, --print-type     muestra el tipo del sistema de ficheros\n"
+#~ "  -x, --exclude-type=TIPO  restringe el listado a los sistemas de ficheros "
+#~ "que\n"
+#~ "                       no son del tipo TIPO\n"
+#~ "  -v                   (no tiene efecto)\n"
+#~ "      --help           muestra esta ayuda y finaliza\n"
+#~ "      --version        informa de la versión y finaliza\n"
+
+#, fuzzy
+#~ msgid "file system type %s both selected and excluded"
+#~ msgstr ""
+#~ "el sistema de ficheros `%s' está simultánemente seleccionado y excluido"
+
+#~ msgid "Warning: "
+#~ msgstr "Atención: "
+
+#~ msgid "%scannot read table of mounted filesystems"
+#~ msgstr "%sno se puede leer la tabla de sistemas de ficheros montados"
+
+# prefiero enlaces duros a fuertes em
+#
+# En esto no os ponéis de acuerdo.
+# Creo que lo acabaremos preguntando en "spanglish". sv+
+#
+# La palabra "desreferencia" es horrenda. Dudo incluso de que exista.
+# ¿Sugerencias?
+# "Deja de referenciar", "Elimina referencia/s a" (Sólo es sugerencia) tb
+# La consevaremos, a ver si junto varias. sv
+#
+# ¿Por qué no algo tan simple y comprensible como "no hace referencia a"? uac
+#
+# Lo pensaré despacito. sv
+#~ msgid ""
+#~ "Summarize disk usage of each FILE, recursively for directories.\n"
+#~ "\n"
+#~ "  -a, --all             write counts for all files, not just directories\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -b, --bytes           print size in bytes\n"
+#~ "  -c, --total           produce a grand total\n"
+#~ "  -D, --dereference-args  dereference PATHs when symbolic link\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --count-links     count sizes many times if hard linked\n"
+#~ "  -L, --dereference     dereference all symbolic links\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "  -S, --separate-dirs   do not include size of subdirectories\n"
+#~ "  -s, --summarize       display only a total for each argument\n"
+#~ "  -x, --one-file-system  skip directories on different filesystems\n"
+#~ "  -X FILE, --exclude-from=FILE  Exclude files that match any pattern in "
+#~ "FILE.\n"
+#~ "      --exclude=PAT     Exclude files that match PAT.\n"
+#~ "      --max-depth=N     print the total for a directory (or file, with "
+#~ "--all)\n"
+#~ "                          only if it is N or fewer levels below the command\n"
+#~ "                          line argument;  --max-depth=0 is the same as\n"
+#~ "                          --summarize\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "Muestra un resumen del uso de disco para cada FICHERO, recursivamente para\n"
+#~ "directorios.\n"
+#~ "\n"
+#~ "  -a, --all             muestra resultados para todos los ficheros, no sólo\n"
+#~ "                        para los directorios\n"
+#~ "      --block-size=TAM  utiliza bloques de TAM bytes\n"
+#~ "  -b, --bytes           muestra el tamaño en bytes\n"
+#~ "  -c, --total           produce un \"total\"\n"
+#~ "  -D, --dereference-args  desreferencia RUTAs cuando hay enlaces simbólicos\n"
+#~ "  -h, --human-readable  muestra los tamaños de forma legible\n"
+#~ "                        (p.ej., 1K 234M 2G)\n"
+#~ "  -H, --si              análogo, pero utiliza potencias de 1000 y no de "
+#~ "1024\n"
+#~ "  -k, --kilobytes       como --block-size=1024\n"
+#~ "  -l, --count-links     cuenta los tamaños varias veces si hay enlaces "
+#~ "fuertes\n"
+#~ "  -L, --dereference     desreferencia todos los enlaces simbólicos\n"
+#~ "  -m, --megabytes       como --block-size=1048576\n"
+#~ "  -S, --separate-dirs   no incluye el tamaño de los subdirectorios\n"
+#~ "  -s, --summarize       muestra solamente un total para cada argumento\n"
+#~ "  -x, --one-file-system  se salta los directorios de otros sistemas de "
+#~ "ficheros\n"
+#~ "  -X FICH, --exclude-from=FICH  Excluye los ficheros que coinciden con\n"
+#~ "                                cualquier patrón en FICH.\n"
+#~ "      --exclude=PAT     Excluye los ficheros que coinciden con PAT.\n"
+#~ "      --max-depth=N     muestra el total para un directorio (o fichero,\n"
+#~ "                        con --all) solamente si está N o menos niveles por\n"
+#~ "                        debajo del argumento de la línea de órdenes;\n"
+#~ "                        --max-depth=0 es lo mismo que --summarize\n"
+#~ "      --help            muestra esta ayuda y finaliza\n"
+#~ "      --version         informa de la versión y finaliza\n"
+
+#~ msgid "cannot change to `..' from directory %s"
+#~ msgstr "no se puede cambiar a `..' desde el directorio %s"
+
+#~ msgid "cannot change to directory %s"
+#~ msgstr "no se puede cambiar al directorio %s"
+
+#~ msgid "total"
+#~ msgstr "total"
+
+#, fuzzy
+#~ msgid "invalid maximum depth %s"
+#~ msgstr "profundidad máxima inválida `%s'"
+
+#~ msgid "cannot both summarize and show all entries"
+#~ msgstr "no se puede al mismo tiempo resumir y mostrar todas las entradas"
+
+#~ msgid "warning: summarizing is the same as using --max-depth=0"
+#~ msgstr "atención: resumir es lo mismo que usar --max-depth=0"
+
+#~ msgid "warning: summarizing conflicts with --max-depth=%d"
+#~ msgstr "atención: resumir entra en conflicto con --max-depth=%d"
+
+#~ msgid "the strip option may not be used when installing a directory"
+#~ msgstr "la opción strip no se puede usar cuando se instala un directorio"
+
+#, fuzzy
+#~ msgid "invalid mode %s"
+#~ msgstr "modo inválido `%s'"
+
+#, fuzzy
+#~ msgid "creating directory %s"
+#~ msgstr "creando el directorio `%s'"
+
+#, fuzzy
+#~ msgid "installing multiple files, but last argument, %s is not a directory"
+#~ msgstr ""
+#~ "se instalan varios ficheros, pero el último argumento (%s)\n"
+#~ "no es un directorio"
+
+#, fuzzy
+#~ msgid "%s is a directory"
+#~ msgstr "%s: es un directorio"
+
+# [ Antes decía "...el punto de montaje para %s" ]
+# No me gusta punto "de montaje". ¿Sugerencias?
+#
+# Como se monta en un directorio, se podría decir `directorio de montaje'
+# De todas maneras, punto de montaje no queda tan mal ... :) ipg
+#
+# Esta es dura, nunca se me ocurrió pensar que habría que traducirlo
+# un día. ... ¿Qué tal ... "lugar para montar" o "directorio en
+# el que montar"? em
+#
+# Algo mejor. Pero no estoy seguro. Tengo que pensarlo. sv
+#
+# "No se puede encontrar el sitio para montar %s" Sólo es una
+# sugerencia más. tb
+#
+# La conservaremos.
+# ¿Más candidatos? sv
+#
+# ¿`punto de montaje de %s'? ipg
+#
+# Bien, este es uno de esos casos en los que uno decide salirse
+# por la tangente. Espero que os guste así.
+# Razones: El "punto" de montaje es siempre un directorio (¿o no?).
+# Llamarle "punto" es emplear un lenguaje algo oscuro.
+# Si alguien sabe de algún caso en el que el punto de montaje no sea
+# un directorio, por favor que lo diga. sv
+#, fuzzy
+#~ msgid "cannot obtain time stamps for %s"
+#~ msgstr "no se puede encontrar el directorio para montar %s"
+
+#, fuzzy
+#~ msgid "cannot set time stamps for %s"
+#~ msgstr "no se puede crear el directorio `%s'"
+
+# FIXME: ¿Por qué no "fork system call failed", como antes?
+#~ msgid "cannot fork"
+#~ msgstr "falló la llamada al sistema `fork'"
+
+#~ msgid "cannot run strip"
+#~ msgstr "no se puede ejecutar strip"
+
+# Me niego a considerar "inválido" como palabra "políticamente incorrecta".
+# Si algún "impedido físico" lee este mensaje y se molesta por ello, entonces
+# es que además de impedido físico es tonto, pues todo el mundo sabe que,
+# *en el contexto informático*, inválido e ilegal significan
+# "no permitido por la causa que sea".
+# Luego, que unas veces sea inválido y otras ilegal, son matices que el
+# original tiene y creo necesario respetar en la traducción.
+#
+# [ Tomás Bautista sugiere "inexistente", y también para grupo ]
+#
+# FIXME:
+# Eso sí, un día tendré que preguntar a los de GNU en qué se diferencia
+# "invalid" de "not allowed" de "not recognized" y todo eso... sv
+#
+#, fuzzy
+#~ msgid "invalid user %s"
+#~ msgstr "usuario inválido `%s'"
+
+#, fuzzy
+#~ msgid "invalid group %s"
+#~ msgstr "grupo inválido `%s'"
+
+# Aprovecho que en iso-8859-1 existen 1º y 1ª ...
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST           (1st format)\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY   (2nd format)\n"
+#~ "  or:  %s -d [OPTION]... DIRECTORY...       (3rd format)\n"
+#~ msgstr ""
+#~ "Modo de empleo: %s [OPCIÓN]... ORIGEN DESTINO         (1ª forma)\n"
+#~ "       o bien:  %s [OPCIÓN]... ORIGEN... DIRECTORIO   (2ª forma)\n"
+#~ "       o bien:  %s -d [OPCIÓN]... DIRECTORIO...       (3ª forma)\n"
+
+# FIXME: El "create all" está un poco descolocado.
+#
+# "given DIRECTORY" -> "DIRECTORIO que se indica" o "indicado" tb
+# Bueno, dejaré la sugerencia. Me gusta más "dado" porque es más corto
+# y si no tendría que usar otra línea más. sv
+#
+# Estoy con tb, creo que "indicado" explica mejor... uac
+# Lo pensaré. ¿Alguien más? sv
+#
+#~ msgid ""
+#~ "In the first two formats, copy SOURCE to DEST or multiple SOURCE(s) to\n"
+#~ "the existing DIRECTORY, while setting permission modes and owner/group.\n"
+#~ "In the third format, create all components of the given DIRECTORY(ies).\n"
+#~ "\n"
+#~ "      --backup[=CONTROL] make a backup of each existing destination file\n"
+#~ "  -b                  like --backup but does not accept an argument\n"
+#~ "  -c                  (ignored)\n"
+#~ "  -d, --directory     treat all arguments as directory names; create all\n"
+#~ "                        components of the specified directories\n"
+#~ "  -D                  create all leading components of DEST except the "
+#~ "last,\n"
+#~ "                        then copy SOURCE to DEST;  useful in the 1st format\n"
+#~ "  -g, --group=GROUP   set group ownership, instead of process' current "
+#~ "group\n"
+#~ "  -m, --mode=MODE     set permission mode (as in chmod), instead of "
+#~ "rwxr-xr-x\n"
+#~ "  -o, --owner=OWNER   set ownership (super-user only)\n"
+#~ "  -p, --preserve-timestamps   apply access/modification times of SOURCE "
+#~ "files\n"
+#~ "                        to corresponding destination files\n"
+#~ "  -s, --strip         strip symbol tables, only for 1st and 2nd formats\n"
+#~ "  -S, --suffix=SUFFIX override the usual backup suffix\n"
+#~ "  -v, --verbose       print the name of each directory as it is created\n"
+#~ "      --help          display this help and exit\n"
+#~ "      --version       output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "En las dos primeras formas, copia ORIGEN a DESTINO o varios ORIGEN(es) al\n"
+#~ "DIRECTORIO existente, mientras se establecen los permisos y el\n"
+#~ "propietario/grupo. En la tercera forma, crea todos los componentes\n"
+#~ "del/de los DIRECTORIO(s) dado(s).\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]  crea una copia de seguridad de cada fichero de\n"
+#~ "                          destino que exista\n"
+#~ "  -b                      como --backup pero no acepta ningún argumento\n"
+#~ "  -c                      (sin efecto)\n"
+#~ "  -d, --directory         trata todos los argumentos como nombres de "
+#~ "directorios\n"
+#~ "                          crea todos los componentes de los directorios\n"
+#~ "                          especificados\n"
+#~ "  -D                      crea todos los componentes iniciales de DESTINO\n"
+#~ "                          excepto el último, y entonces copia ORIGEN a "
+#~ "DESTINO\n"
+#~ "                          útil en la 1ª forma\n"
+#~ "  -g, --group=GRUPO       establece la propiedad de grupo, en lugar del "
+#~ "grupo\n"
+#~ "                          actual del proceso\n"
+#~ "  -m, --mode=MODO         establece los permisos (como en chmod), en lugar\n"
+#~ "                          de rwxr-xr-x\n"
+#~ "  -o, --owner=PROPIETARIO establece la propiedad (sólo super-usuario)\n"
+#~ "  -p, --preserve-timestamps aplica las fechas de acceso/modificación de los\n"
+#~ "                            ficheros ORIGEN a los ficheros de destino\n"
+#~ "                            correspondientes\n"
+#~ "  -s, --strip             elimina las tablas de símbolos, sólo para las\n"
+#~ "                          formas 1ª y 2ª\n"
+#~ "  -v, --verbose           muestra el nombre de cada directorio conforme se\n"
+#~ "                          van creando\n"
+#~ "  -S, --suffix=SUFIJO     reemplaza el sufijo de respaldo habitual\n"
+#~ "      --help              muestra esta ayuda y finaliza\n"
+#~ "      --version           informa de la versión y finaliza\n"
+#~ "\n"
+
+#~ msgid "%s: warning: making a hard link to a symbolic link is not portable"
+#~ msgstr ""
+#~ "%s: atención: crear un enlace duro a un enlace simbólico\n"
+#~ "no es transportable"
+
+#~ msgid "%s: hard link not allowed for directory"
+#~ msgstr "%s: no se permiten enlaces fuertes para directorios"
+
+#~ msgid "%s: cannot overwrite directory"
+#~ msgstr "%s: no se puede sobreescribir un directorio"
+
+# SIoNO
+#, fuzzy
+#~ msgid "%s: replace %s? "
+#~ msgstr "%s: ¿reemplazar `%s'? (s/n) "
+
+#~ msgid "%s: File exists"
+#~ msgstr "%s: El fichero existe"
+
+#, fuzzy
+#~ msgid "create symbolic link %s to %s"
+#~ msgstr "crea el enlace simbólico `%s' a `%s'"
+
+#, fuzzy
+#~ msgid "create hard link %s to %s"
+#~ msgstr "crea el enlace duro `%s' a `%s'"
+
+#, fuzzy
+#~ msgid "creating symbolic link %s to %s"
+#~ msgstr "crea el enlace simbólico `%s' a `%s'"
+
+#, fuzzy
+#~ msgid "creating hard link %s to %s"
+#~ msgstr "crea el enlace duro `%s' a `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY TARGET...\n"
+#~ msgstr ""
+#~ "Modo de empleo: %s [OPCIÓN]... OBJETIVO [NOMBRE_DEL_ENLACE]\n"
+#~ "       o bien:  %s [OPCIÓN]... OBJETIVO... DIRECTORIO\n"
+#~ "       o bien:  %s [OPCIÓN]... --target-directory=DIRECTORIO OBJETIVO...\n"
+
+# ... y de lo de poner la coletilla "y finaliza" en
+# las opciones --version y --help :) ipg
+# Si convences a Enrique de que la coletilla se puede quitar, te apoyo. sv
+#~ msgid ""
+#~ "Create a link to the specified TARGET with optional LINK_NAME.\n"
+#~ "If LINK_NAME is omitted, a link with the same basename as the TARGET is\n"
+#~ "created in the current directory.  When using the second form with more\n"
+#~ "than one TARGET, the last argument must be a directory;  create links\n"
+#~ "in DIRECTORY to each TARGET.  Create hard links by default, symbolic\n"
+#~ "links with --symbolic.  When creating hard links, each TARGET must exist.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]      make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                          like --backup but does not accept an argument\n"
+#~ "  -d, -F, --directory         hard link directories (super-user only)\n"
+#~ "  -f, --force                 remove existing destination files\n"
+#~ "  -n, --no-dereference        treat destination that is a symlink to a\n"
+#~ "                                directory as if it were a normal file\n"
+#~ "  -i, --interactive           prompt whether to remove destinations\n"
+#~ "  -s, --symbolic              make symbolic links instead of hard links\n"
+#~ "  -S, --suffix=SUFFIX         override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  specify the DIRECTORY in which to "
+#~ "create\n"
+#~ "                                the links\n"
+#~ "  -v, --verbose               print name of each file before linking\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Crea un enlace al OBJETIVO especificado con el NOMBRE_DEL_ENLACE opcional.\n"
+#~ "Si se omite NOMBRE_DEL_ENLACE, se crea un enlace en el directorio actual\n"
+#~ "con el mismo nombre base que el OBJETIVO. Cuando se utiliza la segunda "
+#~ "forma\n"
+#~ "con más de un OBJETIVO, el último argumento debe ser un directorio; crea\n"
+#~ "enlaces en DIRECTORIO para cada OBJETIVO. Por omisión, se crean enlaces "
+#~ "duros.\n"
+#~ "Con --symbolic se crean enlaces simbólicos. Cuando se crean enlaces duros,\n"
+#~ "todos los OBJETIVOs deben existir.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       crea una copia de seguridad de cada fichero "
+#~ "de\n"
+#~ "                               destino que ya exista\n"
+#~ "  -b                           como --backup pero no acepta ningún "
+#~ "argumento\n"
+#~ "  -d, -F, --directory          enlaza directorios con un enlace duro\n"
+#~ "                               (solamente super-usuario)\n"
+#~ "  -f, --force                  borra los ficheros destino que ya existan\n"
+#~ "  -n, --no-dereference         trata un destino que sea un enlace simbólico "
+#~ "a\n"
+#~ "                               un directorio como si fuera un fichero "
+#~ "normal\n"
+#~ "  -i, --interactive            pregunta si se borran los destinos\n"
+#~ "  -s, --symbolic               crea enlaces simbólicos en vez de enlaces "
+#~ "duros\n"
+#~ "  -S, --suffix=SUFIJO          reemplaza el sufijo de respaldo habitual\n"
+#~ "      --target-directory=DIRECTORIO  especifica el DIRECTORIO en el que se\n"
+#~ "                                     crearán los enlaces\n"
+#~ "  -v, --verbose                imprime el nombre de cada fichero antes\n"
+#~ "                               de crear el enlace\n"
+#~ "      --help                   muestra esta ayuda y finaliza\n"
+#~ "      --version                informa de la versión y finaliza\n"
+#~ "\n"
+
+#~ msgid "missing file argument"
+#~ msgstr "falta un fichero como argumento"
+
+# FIXME: Este mensaje es sospechosamente parecido a otro.
+#, fuzzy
+#~ msgid "specified target directory, %s is not a directory"
+#~ msgstr "el directorio objetivo especificado, `%s', no es un directorio"
+
+#~ msgid "when making multiple links, last argument must be a directory"
+#~ msgstr ""
+#~ "cuando se crean varios enlaces, el último argumento debe ser un directorio"
+
+#~ msgid "ignoring invalid width in environment variable COLUMNS: %s"
+#~ msgstr "se descarta el ancho inválido de la variable de entorno COLUMNS: %s"
+
+#~ msgid "ignoring invalid tab size in environment variable TABSIZE: %s"
+#~ msgstr ""
+#~ "se descarta el tamaño de `tab' inválido de la variable de entorno TABSIZE: %s"
+
+#~ msgid "invalid line width: %s"
+#~ msgstr "ancho de línea inválido: %s"
+
+#~ msgid "invalid tab size: %s"
+#~ msgstr "tamaño del `tab' inválido: %s"
+
+#~ msgid "unrecognized prefix: %s"
+#~ msgstr "prefijo no reconocido: %s"
+
+# Según el Collins, to parse = analizar (en un contexto gramático, como es el
+# caso).
+#     "valor para la variable de entorno LS_COLORS no analizable"
+#     --> y dos letras menos...
+#
+# sinceramente, no creo que después de LS_COLORS, /bin/ls se vaya a leer el
+# Quijote...
+#
+# Es que sí es perfectamente analizable. Lo que pasa es que el resultado
+# del análisis es que no entiende lo que quiere decir, por eso
+# es ininteligible... (Si de verdad no fuera analizable, no daría
+# error, sino que produciría un "core dump" o algo así). sv
+#
+#~ msgid "unparsable value for LS_COLORS environment variable"
+#~ msgstr "valor ininteligible para la variable de entorno LS_COLORS"
+
+# FIXME: Decirle al autor que no use \t\t\t.
+# Yo dejaría verbose en verbosamente. ipg
+#
+# Eso es un "palabro". sv
+#
+# He cambiado la última línea ( muestra la fecha completa y la hora completa )
+# además ahora cabe en 80 cols em
+#
+# Vale, pues ahora me entra una duda (que antes no salió a relucir)
+# ¿"la fecha y la hora completa" o "la fecha y la hora completas"?
+# De momento he puesto lo segundo. sv+
+#
+# Si dices la primera puede llegar a entender que la hora es la única
+# completa... mientras que la segunda no. uac
+#
+#  (Efectivamente. sv)
+#
+# Creo que correctas son las dos
+# pero para lo que aquí se quiere decir le toca la segunda... ¿no? uac
+#
+# Eso es lo que me parece. Gracias. sv
+#
+#, fuzzy
+#~ msgid ""
+#~ "List information about the FILEs (the current directory by default).\n"
+#~ "Sort entries alphabetically if none of -cftuSUX nor --sort.\n"
+#~ "\n"
+#~ "  -a, --all                  do not hide entries starting with .\n"
+#~ "  -A, --almost-all           do not list implied . and ..\n"
+#~ "  -b, --escape               print octal escapes for nongraphic characters\n"
+#~ "      --block-size=SIZE      use SIZE-byte blocks\n"
+#~ "  -B, --ignore-backups       do not list implied entries ending with ~\n"
+#~ "  -c                         with -lt: sort by, and show, ctime (time of "
+#~ "last\n"
+#~ "                               modification of file status information)\n"
+#~ "                               with -l: show ctime and sort by name\n"
+#~ "                               otherwise: sort by ctime\n"
+#~ "  -C                         list entries by columns\n"
+#~ "      --color[=WHEN]         control whether color is used to distinguish "
+#~ "file\n"
+#~ "                               types.  WHEN may be `never', `always', or "
+#~ "`auto'\n"
+#~ "  -d, --directory            list directory entries instead of contents\n"
+#~ "  -D, --dired                generate output designed for Emacs' dired mode\n"
+#~ "  -f                         do not sort, enable -aU, disable -lst\n"
+#~ "  -F, --classify             append indicator (one of */=@|) to entries\n"
+#~ "      --format=WORD          across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            list both full date and full time\n"
+#~ msgstr ""
+#~ "Muestra información acerca de los FICHEROs (del directorio actual por "
+#~ "defecto).\n"
+#~ "Ordena las entradas alfabéticamente si no se especifica ninguna de las\n"
+#~ "opciones -cftuSUX ni --sort.\n"
+#~ "\n"
+#~ "  -a, --all                  no oculta las entradas que comienzan con .\n"
+#~ "  -A, --almost-all           no muestra las entradas . y .. implícitas\n"
+#~ "  -b, --escape               imprime escapes octales para los caracteres no\n"
+#~ "                             gráficos\n"
+#~ "      --block-size=TAMAÑO    utiliza bloques de TAMAÑO bytes\n"
+#~ "  -B, --ignore-backups       no muestra la entradas que terminan con ~\n"
+#~ "  -c                         con -lt: ordena por ctime y muestra ctime "
+#~ "(fecha\n"
+#~ "                             de última modificación del fichero)\n"
+#~ "                               con -l: muestra ctime y ordena por nombre\n"
+#~ "                               en cualquier otro caso: ordena por ctime\n"
+#~ "  -C                         muestra las entradas por columnas\n"
+#~ "      --color[=CUÁNDO]       especifica si se usará color para distinguir\n"
+#~ "                             los tipos de ficheros. CUÁNDO puede ser\n"
+#~ "                             `never', `always' o `auto'\n"
+#~ "  -d, --directory            muestra las entradas de los directorios en "
+#~ "lugar\n"
+#~ "                             de sus contenidos\n"
+#~ "  -D, --dired                genera el resultado para el modo `dired' de "
+#~ "Emacs\n"
+#~ "  -f                         no ordena, utiliza -aU, no utiliza -lst\n"
+#~ "  -F, --classify             añade un indicador (uno de */=@|) a las "
+#~ "entradas\n"
+#~ "      --format=PALABRA       across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            muestra tanto la fecha como la hora completas\n"
+
+# La opción "-r, --reverse" literalmente hubiera sido
+# "invierte el orden al ordenar", pero eso sería muy "reflunflante".
+#
+# "utiliza el formato de listado largo sin el grupo"-->
+# "...sin el campo grupo", no sé por qué te sabe mal ser más explícito
+# cuando no se alarga mucho el mensaje. Como tú mismo dices... uac
+#
+# Lo dejo así por estética. Una palabra más me obligaría a usar
+# una línea más, y quedaría más feo. Si digo "sin el grupo", queda
+# claro que el grupo no sale. sv
+#
+#, fuzzy
+#~ msgid ""
+#~ "  -g                         (ignored)\n"
+#~ "  -G, --no-group             inhibit display of group information\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "      --si                   likewise, but use powers of 1000 not 1024\n"
+#~ "  -H                         same as `--si' for now; soon to change\n"
+#~ "                               to conform to POSIX\n"
+#~ "      --indicator-style=WORD append indicator with style WORD to entry "
+#~ "names:\n"
+#~ "                               none (default), classify (-F), file-type "
+#~ "(-p)\n"
+#~ "  -i, --inode                print index number of each file\n"
+#~ "  -I, --ignore=PATTERN       do not list implied entries matching shell "
+#~ "PATTERN\n"
+#~ "  -k, --kilobytes            like --block-size=1024\n"
+#~ "  -l                         use a long listing format\n"
+#~ "  -L, --dereference          list entries pointed to by symbolic links\n"
+#~ "  -m                         fill width with a comma separated list of "
+#~ "entries\n"
+#~ "  -n, --numeric-uid-gid      list numeric UIDs and GIDs instead of names\n"
+#~ "  -N, --literal              print raw entry names (don't treat e.g. "
+#~ "control\n"
+#~ "                               characters specially)\n"
+#~ "  -o                         use long listing format without group info\n"
+#~ "  -p, --file-type            append indicator (one of /=@|) to entries\n"
+#~ "  -q, --hide-control-chars   print ? instead of non graphic characters\n"
+#~ "      --show-control-chars   show non graphic characters as-is (default\n"
+#~ "                             unless program is `ls' and output is a "
+#~ "terminal)\n"
+#~ "  -Q, --quote-name           enclose entry names in double quotes\n"
+#~ "      --quoting-style=WORD   use quoting style WORD for entry names:\n"
+#~ "                               literal, locale, shell, shell-always, c, "
+#~ "escape\n"
+#~ "  -r, --reverse              reverse order while sorting\n"
+#~ "  -R, --recursive            list subdirectories recursively\n"
+#~ "  -s, --size                 print size of each file, in blocks\n"
+#~ msgstr ""
+#~ "  -g                         (sin efecto)\n"
+#~ "  -G, --no-group             no muestra la información del grupo\n"
+#~ "  -h, --human-readable       muestra los tamaños de forma legible\n"
+#~ "                             (p.e. 1K 234M 2G)\n"
+#~ "  -H, --si                   análogo, pero utilizando potencias de 1000,\n"
+#~ "                             no de 1024\n"
+#~ "      --indicator-style=PALABRA  añade un indicador con estilo PALABRA a "
+#~ "los\n"
+#~ "                                 nombres de las entradas: none "
+#~ "(predeterminado),\n"
+#~ "                                 classify (-F), file-type (-p)\n"
+#~ "  -i, --inode                muestra el número de nodo-i de cada fichero\n"
+#~ "  -I, --ignore=PATRÓN        no lista las entradas que coincidan (encajen)\n"
+#~ "                             con PATRÓN de shell\n"
+#~ "  -k, --kilobytes            como --block-size=1024\n"
+#~ "  -l                         utiliza un formato de listado largo\n"
+#~ "  -L, --dereference          muestra las entradas a las que apuntan los\n"
+#~ "                             enlaces simbólicos\n"
+#~ "  -m                         rellena el ancho con una lista de entradas\n"
+#~ "                             separadas por comas\n"
+#~ "  -n, --numeric-uid-gid      muestra los UIDs y los GIDs numéricos en lugar\n"
+#~ "                             de los nombres\n"
+#~ "  -N, --literal              muestra los nombres literalmente (no trata "
+#~ "p.ej.\n"
+#~ "                             los caracteres de control de forma especial)\n"
+#~ "  -o                         utiliza el formato de listado largo sin el "
+#~ "grupo\n"
+#~ "  -p  --file-type            añade un indicador (uno de /=@|) a las "
+#~ "entradas\n"
+#~ "  -q, --hide-control-chars   imprime ? en lugar de los caracteres no "
+#~ "gráficos\n"
+#~ "      --show-control-chars   muestra los caracteres no gráficos tal y como\n"
+#~ "                             son (predeterminado a menos que el programa "
+#~ "sea\n"
+#~ "                             `ls' y la salida sea un terminal)\n"
+#~ "  -Q, --quote-name           encierra los nombres de las entradas entre\n"
+#~ "                             comillas\n"
+#~ "      --quoting-style=PALABRA  utiliza el estilo de cita PALABRA para los\n"
+#~ "                               nombres de las entradas:\n"
+#~ "                               literal, locale, shell, shell-always, c, "
+#~ "escape\n"
+#~ "  -r, --reverse              invierte el orden, en su caso\n"
+#~ "  -R, --recursive            muestra los subdirectorios recursivamente\n"
+#~ "  -s, --size                 muestra el tamaño de cada fichero, en bloques\n"
+
+# Nota: ctime, extension, none, etc. son posibles "WORD"s,
+# por lo tanto, *no* deben traducirse, o de lo contrario el programa
+# no las reconocería.
+#
+#, fuzzy
+#~ msgid ""
+#~ "  -S                         sort by file size\n"
+#~ "      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+#~ "                               version -v\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=WORD            show time as WORD instead of modification "
+#~ "time:\n"
+#~ "                               atime, access, use, ctime or status; use\n"
+#~ "                               specified time as sort key if --sort=time\n"
+#~ "  -t                         sort by modification time\n"
+#~ "  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8\n"
+#~ "  -u                         with -lt: sort by, and show, access time\n"
+#~ "                               with -l: show access time and sort by name\n"
+#~ "                               otherwise: sort by access time\n"
+#~ "  -U                         do not sort; list entries in directory order\n"
+#~ "  -v                         sort by version\n"
+#~ "  -w, --width=COLS           assume screen width instead of current value\n"
+#~ "  -x                         list entries by lines instead of by columns\n"
+#~ "  -X                         sort alphabetically by entry extension\n"
+#~ "  -1                         list one file per line\n"
+#~ "      --help                 display this help and exit\n"
+#~ "      --version              output version information and exit\n"
+#~ "\n"
+#~ "By default, color is not used to distinguish types of files.  That is\n"
+#~ "equivalent to using --color=none.  Using the --color option without the\n"
+#~ "optional WHEN argument is equivalent to using --color=always.  With\n"
+#~ "--color=auto, color codes are output only if standard output is connected\n"
+#~ "to a terminal (tty).\n"
+#~ msgstr ""
+#~ "  -S                         ordena los ficheros por tamaño\n"
+#~ "      --sort=PALABRA         extension -X, none -U, size -S, time -t, "
+#~ "version -v\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=PALABRA         muestra la fecha según PALABRA, en lugar de la\n"
+#~ "                             fecha de modificación:\n"
+#~ "                               atime, access, use, ctime ó status; utiliza\n"
+#~ "                               la fecha especificada como clave de "
+#~ "ordenación\n"
+#~ "                               si --sort=time\n"
+#~ "  -t                         ordena por la fecha de modificación\n"
+#~ "  -T, --tabsize=COLS         establece los topes de tabulación a cada COLS\n"
+#~ "                             en lugar de 8\n"
+#~ "  -u                         con -lt: ordena por atime y muestra atime "
+#~ "(fecha\n"
+#~ "                               de último acceso al fichero)\n"
+#~ "                               con -l: muestra atime y ordena por nombre\n"
+#~ "                               en cualquier otro caso: ordena por atime\n"
+#~ "  -U                         no ordena; muestra las entradas en el orden "
+#~ "del\n"
+#~ "                             directorio\n"
+#~ "  -v                         ordena por versión\n"
+#~ "  -w, --width=COLS           establece el ancho de la pantalla en lugar del\n"
+#~ "                             valor actual\n"
+#~ "  -x                         muestra las entradas por líneas en vez de por\n"
+#~ "                             columnas\n"
+#~ "  -X                         ordena alfabéticamente por la extensión de la\n"
+#~ "                             entrada\n"
+#~ "  -1                         muestra un fichero por cada línea\n"
+#~ "      --help                 muestra esta ayuda y finaliza\n"
+#~ "      --version              informa de la versión y finaliza\n"
+#~ "\n"
+#~ "Por defecto, no se emplea color para distinguir los tipos de ficheros. Esto\n"
+#~ "equivale a usar --color=none. Usar la opción --color sin el argumento "
+#~ "opcional\n"
+#~ "CUÁNDO equivale a usar --color=always. Con --color=auto, sólo se muestran\n"
+#~ "los códigos de color si la salida estándar está conectada a un terminal "
+#~ "(tty).\n"
+
+#~ msgid "Usage: %s [OPTION] DIRECTORY...\n"
+#~ msgstr "Modo de empleo: %s [OPCIÓN] DIRECTORIO...\n"
+
+#~ msgid ""
+#~ "Create the DIRECTORY(ies), if they do not already exist.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not rwxrwxrwx - "
+#~ "umask\n"
+#~ "  -p, --parents     no error if existing, make parent directories as needed\n"
+#~ "  -v, --verbose     print a message for each created directory\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Crea el/los DIRECTORIO(s), si no existen ya.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   establece los permisos (como en chmod), en lugar\n"
+#~ "                    de  rwxrwxrwx - umask\n"
+#~ "  -p, --parents     no hay error si existen, crea los directorios padres en\n"
+#~ "                    caso necesario\n"
+#~ "  -v, --verbose     muestra un mensaje por cada directorio creado\n"
+#~ "      --help        muestra esta ayuda y finaliza\n"
+#~ "      --version     informa de la versión y finaliza\n"
+
+#, fuzzy
+#~ msgid "created directory %s"
+#~ msgstr "se ha creado el directorio `%s'"
+
+#, fuzzy
+#~ msgid "cannot set permissions of directory %s"
+#~ msgstr "no se pueden establecer los permisos del directorio `%s'"
+
+#~ msgid "Usage: %s [OPTION] NAME...\n"
+#~ msgstr "Modo de empleo: %s [OPCIÓN] NOMBRE...\n"
+
+# ¿"pipe" es lo mismo que "named pipe"?.
+# ¿Algún experto en Unix que me lo sepa decir?
+#
+# Yo mismo me lo contesto después de hacer el siguiente experimento:
+#
+# mkfifo furufú
+# ls > furufú
+# (se queda esperando).
+# Si ahora hacemos (en otra sesión) cat < furufú, ¡sorpresa!
+# Sale el resultado del ls, y se "desbloquea" la otra sesión.
+#
+# Esto es una "named pipe". Aparece un fichero cuyo primer atributo
+# es la letra p. Además, con DIRCOLORS sale de color rojito, y con la opción
+# -F de ls sale una barrita vertical al final |.
+#
+# ¿Cómo se llama en español? Y si nadie le ha puesto nombre, ¿cómo
+# debería llamarse? ¿tubería nombrada? ¿tubería con nombre?
+# Me inclino por lo segundo, de momento.
+#
+# Tiiiiio ... ¡¡es como querer traducir socket!! ipg
+#
+#  [ ¿y qué hay de malo en ello? ] sv
+#
+# Me horroriza. Espero que uses el convenio de poner el original entre
+# comillas. Tubería nombrada tampoco me gusta, pero no se me ocurre
+# nada em
+# *Ya* está FIFO entre paréntesis. No hay posibilidad de confusión. sv+
+#
+# Sólo para que lo tengáis en cuenta:
+# DNS= Domain Named Service --> Servicio de Dominios Nombrado.
+#                           --> Servicio Nombrado de Dominios.
+# Tanto monta, monta tanto...
+# Nunca lo he visto como lo ponéis aquí. uac
+#
+# Supongo que te refieres al "named" del "named pipe".
+# Habrá que pensarlo bastante, me temo. sv
+#
+#~ msgid ""
+#~ "Create named pipes (FIFOs) with the given NAMEs.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Crea tuberías con nombre (FIFOs) con los NOMBREs dados.\n"
+#~ "\n"
+#~ "  -m, --mode=MODO   establece los permisos (como en chmod), en lugar\n"
+#~ "                    de  a=rw - umask\n"
+#~ "      --help        muestra esta ayuda y finaliza\n"
+#~ "      --version     informa de la versión y finaliza\n"
+
+# Pues fifo file es precisamente lo mismo que un named pipe, mira
+# por donde :) , así que ya sabes, a tomar una determinación em
+#
+# Por regla general suelo respetar el original todo lo que puedo.
+# Si en inglés existe "fifo file" y "named pipe" y son sinónimos, no veo nada
+# malo en que en español exista "fichero `fifo'" y
+# "tubería con nombre (named pipe)", como sinónimos. sv
+#
+#~ msgid "fifo files not supported"
+#~ msgstr "los ficheros `fifo' no están soportados"
+
+# Utilizo "inválido" en lugar de "no válido", porque la palabra existe,
+# y no usarla es empobrecer el idioma.
+#
+# Si a alguien le parece más natural "no válido", deberíamos discutir
+# esto al mismo tiempo que la "retroreferencia" de Iñaky.
+#
+#~ msgid "invalid mode"
+#~ msgstr "modo inválido"
+
+# Dudo mucho que exista traducción de `fifo', pero si a alguien se le ocurre
+# alguna, por favor, que me diga en qué libro aparece y cuánta gente lo usa
+# (el término, no el libro).
+#
+# FIFO es un acrónimo (First-In, First-Out) ... Primero-que-Entra,
+# Primero-que-Sale (PEPS) ... no queda muy bien ¿no? :) ipg
+#
+# Lo sé, lo sé, pero no está el horno para bollos de inventarse
+# acrónimos en español que nadie usaría (*ni siquiera nosotros*). sv
+#
+# Lo que sí te digo es que es 'la' fifo. Y ya puestos, yo usaría, en todo
+# caso, 'pila fifo' em
+#
+# Es que no es "el fifo" ni "la fifo" sino "el [fichero] fifo"
+# Es un tipo especial de fichero.
+# Para que te quedes tranquilo, añado la palabra "fichero". sv+
+#
+# Ya... y `fifo' no es un fichero, sino una `cola'. tb
+#
+# Creo que se refiere a un "named pipe", de los que se crean con mkfifo.
+# Y es un fichero sólo en tanto que está en un determinado directorio,
+# como los dispositivos en /dev.
+# ¿Debo entender que propones eliminar fichero?
+# (¿y poner además "la cola"?). sv
+#
+# No exactamente. Quiero decir que `fifo' es una cola ---lo decía por toda
+# la discusión anterior---, pero como esta cola está construida sobre un
+# fichero, pues... Y me temo que "fichero para `fifo'" sería ya demasiado.
+# Más vale que lo dejes como está. tb
+#
+# Por una vez, y sin que sirva de precedente, Santiago, me pongo de
+# tu lado :) Déjalo como está :D ipg
+#
+# Gracias a los dos. sv
+#, fuzzy
+#~ msgid "cannot create fifo `%s'"
+#~ msgstr "no se puede crear el fichero `fifo' `%s'"
+
+#, fuzzy
+#~ msgid "cannot set permissions of fifo `%s'"
+#~ msgstr "no se pueden establecer los permisos del directorio `%s'"
+
+# Nota: El que no sepa que major y minor es principal y secundario
+# es que no sabe inglés. Esto viene hasta en el Collins de bolsillo.
+#~ msgid "Usage: %s [OPTION]... NAME TYPE [MAJOR MINOR]\n"
+#~ msgstr "Modo de empleo: %s [OPCIÓN]... NOMBRE TIPO [PRINCIPAL SECUNDARIO]\n"
+
+#~ msgid ""
+#~ "Create the special file NAME of the given TYPE.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ "\n"
+#~ "MAJOR MINOR are forbidden for TYPE p, mandatory otherwise.  TYPE may be:\n"
+#~ "\n"
+#~ "  b      create a block (buffered) special file\n"
+#~ "  c, u   create a character (unbuffered) special file\n"
+#~ "  p      create a FIFO\n"
+#~ msgstr ""
+#~ "Crea el fichero especial NOMBRE del TIPO dado.\n"
+#~ "\n"
+#~ "  -m, --mode=MODO   establece los permisos (como en chmod), en lugar\n"
+#~ "                    de  a=rw - umask\n"
+#~ "      --help        muestra esta ayuda y finaliza\n"
+#~ "      --version     informa de la versión y finaliza\n"
+#~ "\n"
+#~ "PRINCIPAL y SECUNDARIO están prohibidos para el TIPO p, y son obligatorios\n"
+#~ "para los demás tipos. TIPO puede ser:\n"
+#~ "\n"
+#~ "  b      crea un fichero especial de bloques (buffered)\n"
+#~ "  c, u   crea un fichero especial de caracteres (unbuffered)\n"
+#~ "  p      crea un `FIFO'\n"
+
+#~ msgid "wrong number of arguments"
+#~ msgstr "número incorrecto de argumentos"
+
+#~ msgid "block special files not supported"
+#~ msgstr "los ficheros especiales de bloques no están soportados"
+
+#~ msgid ""
+#~ "when creating block special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "cuando se crean ficheros especiales de bloques, se deben especificar los\n"
+#~ "números de dispositivo principal y secundario"
+
+#, fuzzy
+#~ msgid "invalid major device number %s"
+#~ msgstr "número principal de dispositivo inválido `%s'"
+
+#, fuzzy
+#~ msgid "invalid minor device number %s"
+#~ msgstr "número secundario de dispositivo inválido `%s'"
+
+#~ msgid "character special files not supported"
+#~ msgstr "los ficheros especiales de caracteres no están soportados"
+
+#~ msgid ""
+#~ "when creating character special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "cuando se crean ficheros especiales de caracteres, se deben especificar\n"
+#~ "los números de dispositivo principal y secundario"
+
+#~ msgid "major and minor device numbers may not be specified for fifo files"
+#~ msgstr ""
+#~ "los números de dispositivo principal y secundario no se pueden especificar\n"
+#~ "para ficheros `fifo'"
+
+#, fuzzy
+#~ msgid "cannot set permissions of `%s'"
+#~ msgstr "no se pueden establecer los permisos del directorio `%s'"
+
+# Me vuelvo a quejar de la opción -u que ya se utilizó mas arriba...
+# no queda nada claro... uac
+#
+# Oído. Es cierto que no queda muy claro. Habrá que pensarlo. sv
+#
+#, fuzzy
+#~ msgid ""
+#~ "Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -f, --force                  never prompt before overwriting\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "      --strip-trailing-slashes  remove any trailing slashes from each "
+#~ "SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 move only older or brand new non-directories\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Renombra ORIGEN a DESTINO, o mueve ORIGEN(es) a DIRECTORIO.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]        crea una copia de seguridad antes de borrar\n"
+#~ "  -b                            como --backup pero no acepta ningún "
+#~ "argumento\n"
+#~ "  -f, --force                   borra los destinos que existan, sin "
+#~ "preguntar\n"
+#~ "  -i, --interactive             pide confirmación antes de sobreescribir\n"
+#~ "      --strip-trailing-slashes  elimina cualquier barra final de cada\n"
+#~ "                                argumento ORIGEN\n"
+#~ "  -S, --suffix=SUFIJO           reemplaza el sufijo de respaldo habitual\n"
+#~ "      --target-directory=DIRECTORIO  mueve todos los argumentos ORIGEN al\n"
+#~ "                                     directorio DIRECTORIO\n"
+#~ "  -u, --update                  mueve solamente los no directorios antiguos\n"
+#~ "                                o los completamente nuevos\n"
+#~ "  -v, --verbose                 da detalles de lo que va haciendo\n"
+#~ "      --help                    muestra esta ayuda y finaliza\n"
+#~ "      --version                 informa de la versión y finaliza\n"
+#~ "\n"
+
+#~ msgid "when moving multiple files, last argument must be a directory"
+#~ msgstr ""
+#~ "al mover varios ficheros, el último argumento debe ser un directorio"
+
+#, fuzzy
+#~ msgid "cannot open directory %s"
+#~ msgstr "no se puede borrar el directorio `%s'"
+
+#, fuzzy
+#~ msgid "closing directory %s"
+#~ msgstr "borrando el directorio, %s"
+
+# SIoNO
+#, fuzzy
+#~ msgid "%s: remove write-protected directory %s? "
+#~ msgstr "%s: ¿borrar el directorio protegido contra escritura `%s'? (s/n) "
+
+# SIoNO
+#, fuzzy
+#~ msgid "%s: remove write-protected file %s? "
+#~ msgstr "%s: ¿borrar el fichero protegido contra escritura `%s'? (s/n) "
+
+# SIoNO
+#, fuzzy
+#~ msgid "%s: remove directory %s? "
+#~ msgstr "%s: ¿borrar el directorio `%s'? (s/n) "
+
+# Convendría saber qué son los `%s'. Ver el código fuente.
+# El segundo es el nombre del fichero que se va a borrar, pero
+# ¿y el primero?
+#
+# SIoNO
+#, fuzzy
+#~ msgid "%s: remove %s? "
+#~ msgstr "%s: ¿borrar `%s'? (s/n) "
+
+#~ msgid "removing %s\n"
+#~ msgstr "borrando %s\n"
+
+# Otra posibilidad sería "no se puede borrar el enlace `%s'".
+# Mirarlo con calma. sv
+#
+# recordatorio: un fichero es _siempre_ un nodo-i que es enlazado por
+# entrada/s en directorios, cuando se desenlaza el último enlace que une una
+# entrada de directorio con el fichero, entonces y sólo entonces se borra
+# físicamente.... uac
+#
+# Lo sé, lo sé.
+# En este caso habría que investigar las causas por las que no se puede
+# deshacer el tal enlace. Habrá que buscar al menos un ejemplo en el que
+# aparezca este mensaje. sv
+#
+#, fuzzy
+#~ msgid "cannot unlink %s"
+#~ msgstr "no se puede deshacer el enlace `%s'"
+
+# SIoNO
+#, fuzzy
+#~ msgid "%s: directory %s is write protected; descend into it anyway? "
+#~ msgstr ""
+#~ "%s: el directorio `%s' está protegido contra escritura;\n"
+#~ "¿descender en él, a pesar de todo? (s/n) "
+
+# SIoNO
+#, fuzzy
+#~ msgid "%s: descend into directory %s? "
+#~ msgstr "%s: ¿descender al directorio `%s'? (s/n) "
+
+# FIXME: ¿No quedaría mejor "removed %s directory"?
+# SIoNO
+#~ msgid "removing all entries of directory %s\n"
+#~ msgstr "borrando todas las entradas del directorio %s\n"
+
+#, fuzzy
+#~ msgid "cannot lstat `.' in %s"
+#~ msgstr "no se puede efectuar lstat sobre `.' en `%s'"
+
+#, fuzzy
+#~ msgid ""
+#~ "ERROR: the directory %s initially had device/inode\n"
+#~ "numbers %lu/%lu, but now (after a chdir into it), the numbers for `.'\n"
+#~ "are %lu/%lu.  That means that while rm was running, the directory\n"
+#~ "was replaced with either another directory or a link to another directory."
+#~ msgstr ""
+#~ "ERROR: el directorio `%s' inicialmente tenía números de dispositivo/nodo-i\n"
+#~ "%lu/%lu, pero ahora (después de un chdir dentro de él), los números para "
+#~ "`.'\n"
+#~ "son %lu/%lu. Esto quiere decir que mientras rm estaba funcionando,\n"
+#~ "el directorio ha sido reemplazado por otro directorio o por un enlace a "
+#~ "otro\n"
+#~ "directorio."
+
+#~ msgid "cannot change back to directory %s via `..'"
+#~ msgstr "no se puede volver al directorio %s a través de `..'"
+
+# SIoNO
+#, fuzzy
+#~ msgid "%s: remove directory %s%s? "
+#~ msgstr "%s: ¿borrar el directorio `%s'%s? (s/n) "
+
+#~ msgid " (might be nonempty)"
+#~ msgstr " (podría no estar vacío)"
+
+# FIXME: ¿No quedaría mejor "removed %s directory"?
+# SIoNO
+#~ msgid "removing the directory itself: %s\n"
+#~ msgstr "se borró el propio directorio: %s\n"
+
+#, fuzzy
+#~ msgid "cannot remove current directory %s"
+#~ msgstr "no se puede borrar el directorio actual `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove directory %s"
+#~ msgstr "no se puede borrar el directorio `%s'"
+
+#~ msgid "cannot remove `.' or `..'"
+#~ msgstr "no se puede borrar `.' o `..'"
+
+# "Esto quiere decir que seguramente el sistema..." tb
+# Eso sería "This means that almost certainly you have..." sv
+# Me gusta más tal y como está ahora. sv
+# Creo que tienes razón. Esta es un poco difícil. Es que parece que quiere
+# indicar que "esto muy probablemente indique que" o "con casi total
+# seguridad esto se debe a que tiene un sistema de ficheros corrupto".
+# Pero... tb
+# Lo pensaré. sv
+#~ msgid ""
+#~ "WARNING: Circular directory structure.\n"
+#~ "This almost certainly means that you have a corrupted file system.\n"
+#~ "NOTIFY YOUR SYSTEM MANAGER.\n"
+#~ "The following two directories have the same inode number:\n"
+#~ msgstr ""
+#~ "ATENCIÓN: Estructura de directorios circular.\n"
+#~ "Esto quiere decir seguramente que el sistema de ficheros está corrupto.\n"
+#~ "COMUNÍQUELO AL ADMINISTRADOR DEL SISTEMA.\n"
+#~ "Los siguientes dos directorios tienen el mismo número de nodo-i:\n"
+
+# SIoNO
+#~ msgid "continue? "
+#~ msgstr "¿seguir? (s/n) "
+
+#~ msgid "Usage: %s [OPTION]... FILE...\n"
+#~ msgstr "Modo de empleo: %s [OPCIÓN]... FICHERO...\n"
+
+# prompt es "preguntar" o "pedir confirmación".
+# No me gusta nada cómo me ha quedado el verbose. Se admiten sugerencias.
+#
+# ¿Por qué no utilizar la forma que has utilizado anteriormente en este caso?
+# "da detalles...", creo que explicar no pega ni con cola...
+#
+# ¿Y en inglés sí te pega? sv
+#
+#, fuzzy
+#~ msgid ""
+#~ "Remove (unlink) the FILE(s).\n"
+#~ "\n"
+#~ "  -d, --directory       unlink directory, even if non-empty (super-user "
+#~ "only)\n"
+#~ "  -f, --force           ignore nonexistent files, never prompt\n"
+#~ "  -i, --interactive     prompt before any removal\n"
+#~ "  -r, -R, --recursive   remove the contents of directories recursively\n"
+#~ "  -v, --verbose         explain what is being done\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ "\n"
+#~ "To remove a file whose name starts with a `-', for example `-foo',\n"
+#~ "use one of these commands:\n"
+#~ "  %s -- -foo\n"
+#~ "\n"
+#~ "  %s ./-foo\n"
+#~ "\n"
+#~ "Note that if you use rm to remove a file, it is usually possible to recover\n"
+#~ "the contents of that file.  If you want more assurance that the contents "
+#~ "are\n"
+#~ "truly unrecoverable, consider using shred.\n"
+#~ msgstr ""
+#~ "Borra (desenlaza) el/los FICHERO(s).\n"
+#~ "\n"
+#~ "  -d, --directory       desenlaza un directorio, incluso si no está vacío\n"
+#~ "                        (solamente super-usuario)\n"
+#~ "  -f, --force           descarta los ficheros que no existan, sin preguntar\n"
+#~ "  -i, --interactive     pide confirmación antes de borrar\n"
+#~ "  -r, -R, --recursive   borra los contenidos de los directorios "
+#~ "recursivamente\n"
+#~ "  -v, --verbose         explica lo que va haciendo\n"
+#~ "      --help            muestra esta ayuda y finaliza\n"
+#~ "      --version         informa de la versión y finaliza\n"
+#~ "\n"
+#~ "Para borrar un fichero cuyo nombre comience con un `-', por ejemplo `-fu',\n"
+#~ "utilice una de las siguientes órdenes:\n"
+#~ "  %s -- -fu\n"
+#~ "  %s ./-fu\n"
+
+#~ msgid "removing directory, %s"
+#~ msgstr "borrando el directorio, %s"
+
+#~ msgid "Usage: %s [OPTION]... DIRECTORY...\n"
+#~ msgstr "Modo de empleo: %s [OPCIÓN]... DIRECTORIO...\n"
+
+#~ msgid ""
+#~ "Remove the DIRECTORY(ies), if they are empty.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ignore each failure that is solely because a directory\n"
+#~ "                  is non-empty\n"
+#~ "  -p, --parents   remove DIRECTORY, then try to remove each directory\n"
+#~ "                  component of that path name.  E.g., `rmdir -p a/b/c' is\n"
+#~ "                  similar to `rmdir a/b/c a/b a'.\n"
+#~ "  -v, --verbose   output a diagnostic for every directory processed\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Borra el/los DIRECTORIO(s), si están vacíos.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  no tiene en cuenta los fallos que se producen únicamente\n"
+#~ "                  porque un directorio no está vacío\n"
+#~ "  -p, --parents   borra DIRECTORIO, y luego intenta borrar cada componente\n"
+#~ "                  de directorio de ese camino. P. ej. `rmdir -p a/b/c' es\n"
+#~ "                  similar a `rmdir a/b/c a/b a'.\n"
+#~ "  -v, --verbose   muestra un mensaje por cada directorio procesado\n"
+#~ "      --help      muestra esta ayuda y finaliza\n"
+#~ "      --version   informa de la versión y finaliza\n"
+
+#~ msgid "Usage: %s [OPTIONS] FILE [...]\n"
+#~ msgstr "Modo de empleo: %s [OPCIONES] FICHERO [...]\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Overwrite the specified FILE(s) repeatedly, in order to make it harder\n"
+#~ "for even very expensive hardware probing to recover the data.\n"
+#~ "\n"
+#~ "  -f, --force    change permissions to allow writing if necessary\n"
+#~ "  -n, --iterations=N  Overwrite N times instead of the default (%d)\n"
+#~ "  -s, --size=N   shred this many bytes (suffixes like k, M, G accepted)\n"
+#~ "  -u, --remove   truncate and remove file after overwriting\n"
+#~ "  -v, --verbose  show progress\n"
+#~ "  -x, --exact    do not round file sizes up to the next full block\n"
+#~ "  -z, --zero     add a final overwrite with zeros to hide shredding\n"
+#~ "  -              shred standard output\n"
+#~ "      --help     display this help and exit\n"
+#~ "      --version  print version information and exit\n"
+#~ "\n"
+#~ "Delete FILE(s) if --remove (-u) is specified.  The default is not to remove\n"
+#~ "the files because it is common to operate on device files like /dev/hda,\n"
+#~ "and those files usually should not be removed.  When operating on regular\n"
+#~ "files, most people use the --remove option.\n"
+#~ "\n"
+#~ "CAUTION: Note that shred relies on a very important assumption:\n"
+#~ "that the filesystem overwrites data in place.  This is the traditional\n"
+#~ "way to do things, but many modern filesystem designs do not satisfy this\n"
+#~ "assumption.  The following are examples of filesystems on which shred is\n"
+#~ "not effective:\n"
+#~ "\n"
+#~ "* log-structured or journaled filesystems, such as those supplied with\n"
+#~ "  AIX and Solaris (and JFS, ReiserFS, XFS, etc.)\n"
+#~ "\n"
+#~ "* filesystems that write redundant data and carry on even if some writes\n"
+#~ "  fail, such as RAID-based filesystems\n"
+#~ "\n"
+#~ "* filesystems that make snapshots, such as Network Appliance's NFS server\n"
+#~ "\n"
+#~ "* filesystems that cache in temporary locations, such as NFS\n"
+#~ "  version 3 clients\n"
+#~ "\n"
+#~ "* compressed filesystems\n"
+#~ msgstr ""
+#~ "Borra un fichero de forma segura, sobreescribiéndolo primero para ocultar\n"
+#~ "su contenido.\n"
+#~ "\n"
+#~ "  -f, --force    cambia los permisos para permitir la escritura si es "
+#~ "necesario\n"
+#~ "  -n, --iterations=N  sobreescribe N veces en vez de lo predeterminado (%d)\n"
+#~ "  -s, --size=N   efectúa el `shred' sobre este número de bytes\n"
+#~ "                 (se permiten los sufijos k, M y G)\n"
+#~ "  -u, --remove   trunca y borra el fichero después de sobreescribirlo\n"
+#~ "  -v, --verbose  muestra el progreso\n"
+#~ "  -x, --exact    no redondea hacia arriba los tamaños de los ficheros hasta "
+#~ "el\n"
+#~ "                 siguiente bloque completo\n"
+#~ "  -z, --zero     añade una sobreescritura final con ceros para ocultar la\n"
+#~ "                 acción de esta orden\n"
+#~ "  -              efectúa shred en la salida estándar\n"
+#~ "      --help     muestra esta ayuda\n"
+#~ "      --version  muestra la versión\n"
+#~ "\n"
+#~ "CORREGIR: explicarlo un poco más aquí, quizás"
+
+#~ msgid "%s: cannot rewind"
+#~ msgstr "%s: no se puede rebobinar"
+
+#~ msgid "%s: pass %lu/%lu (%s)..."
+#~ msgstr "%s: paso %lu/%lu (%s)..."
+
+#~ msgid "%s: error writing at offset %s"
+#~ msgstr "%s: error al escribir en el desplazamiento %s"
+
+#~ msgid "%s: file too large"
+#~ msgstr "%s: fichero demasiado grande"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%s/%s"
+#~ msgstr "%s: paso %lu/%lu (%s)...%s/%s"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%s"
+#~ msgstr "%s: paso %lu/%lu (%s)...%s"
+
+#~ msgid "%s: invalid file type"
+#~ msgstr "%s: tipo de fichero inválido"
+
+#~ msgid "%s: file has negative size"
+#~ msgstr "%s: el fichero tiene un tamaño negativo"
+
+#~ msgid "%s: error truncating"
+#~ msgstr "%s: error al truncar"
+
+#~ msgid "%s: cannot shred append-only file descriptor"
+#~ msgstr ""
+#~ "%s: no se puede efectuar shred un descriptor de fichero de sólo añadir"
+
+#~ msgid "%s: removing"
+#~ msgstr "%s: borrando"
+
+#, fuzzy
+#~ msgid "%s: renamed to %s"
+#~ msgstr "%s: renombrado a `%s'"
+
+#~ msgid "%s: removed"
+#~ msgstr "%s: borrado"
+
+#~ msgid "%s: cannot remove"
+#~ msgstr "%s: no se puede borrar"
+
+#~ msgid "%s: invalid number of passes"
+#~ msgstr "%s: número inválido de pasos"
+
+#~ msgid "%s: invalid file size"
+#~ msgstr "%s: tamaño de fichero inválido"
+
+#~ msgid "Usage: %s [OPTION]\n"
+#~ msgstr "Modo de empleo: %s [OPCIÓN]\n"
+
+#~ msgid ""
+#~ "Force changed blocks to disk, update the super block.\n"
+#~ "\n"
+#~ "  --help      display this help and exit\n"
+#~ "  --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Guarda los bloques cambiados en el disco, actualiza el superbloque.\n"
+#~ "\n"
+#~ "  --help      muestra esta ayuda y finaliza\n"
+#~ "  --version   informa de la versión y finaliza\n"
+
+#~ msgid "ignoring all arguments"
+#~ msgstr "todos los argumentos han sido descartados"
+
+#, fuzzy
+#~ msgid "creating %s"
+#~ msgstr "borrando %s\n"
+
+#, fuzzy
+#~ msgid "setting times of %s"
+#~ msgstr "se conserva la fecha de %s"
+
+#, fuzzy
+#~ msgid "  or:  %s [-acm] MMDDhhmm[YY] FILE... (obsolescent)\n"
+#~ msgstr " o bien: %s [-acm] MMDDhhmm[AA] FICHERO... (obsoleto)\n"
+
+# En este texto de ayuda, para no estar repitiendo siempre "fecha/hora", he
+# decidido llamar simplemente "fecha" a la "combinación de la fecha y la hora".
+# (o sea, "time stamp" -> fecha)
+# Por el contexto, no creo que haya confusión.
+#~ msgid ""
+#~ "Update the access and modification times of each FILE to the current time.\n"
+#~ "\n"
+#~ "  -a                     change only the access time\n"
+#~ "  -c, --no-create        do not create any files\n"
+#~ "  -d, --date=STRING      parse STRING and use it instead of current time\n"
+#~ "  -f                     (ignored)\n"
+#~ "  -m                     change only the modification time\n"
+#~ "  -r, --reference=FILE   use this file's times instead of current time\n"
+#~ "  -t STAMP               use [[CC]YY]MMDDhhmm[.ss] instead of current time\n"
+#~ "  --time=WORD            set time given by WORD: access atime use (same as "
+#~ "-a)\n"
+#~ "                           modify mtime (same as -m)\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ "Note that the three time-date formats recognized for the -d and -t options\n"
+#~ "and for the obsolescent argument are all different.\n"
+#~ msgstr ""
+#~ "Actualiza la fecha de acceso y modificación de cada FICHERO a la\n"
+#~ "fecha actual.\n"
+#~ "\n"
+#~ "  -a                      cambia solamente la fecha de acceso\n"
+#~ "  -c, --no-create         no crea ningún fichero\n"
+#~ "  -d, --date=CADENA       examina y utiliza CADENA en lugar de la fecha "
+#~ "actual\n"
+#~ "  -f                      (no tiene efecto)\n"
+#~ "  -m                      cambia solamente la fecha de modificación\n"
+#~ "  -r, --reference=FICHERO utiliza la fecha de este FICHERO en lugar de la "
+#~ "fecha\n"
+#~ "                          actual\n"
+#~ "  -t FECHA                utiliza [[SS]AA]MMDDhhmm[.ss] en lugar de la "
+#~ "fecha\n"
+#~ "                          actual\n"
+#~ "  --time=PALABRA          establece la fecha dada por PALABRA:\n"
+#~ "                            access atime use (lo mismo que -a)\n"
+#~ "                            modify mtime (lo mismo que -m)\n"
+#~ "      --help              muestra esta ayuda y finaliza\n"
+#~ "      --version           informa de la versión y finaliza\n"
+#~ "\n"
+#~ "Téngase en cuenta que los tres formatos de fecha reconocidos por las "
+#~ "opciones\n"
+#~ "-d y -t y por el argumento obsoleto son todos diferentes.\n"
+
+#, fuzzy
+#~ msgid "invalid date format %s"
+#~ msgstr "formato de fecha inválido `%s'"
+
+# (em) Nota: Este mensaje sale, por ejemplo, al escribir
+# "touch logo -r . -t 10101010".
+#~ msgid "cannot specify times from more than one source"
+#~ msgstr "no se puede especificar la fecha de dos formas distintas"
+
+# Esto salió parecido en wdiff y hubo que pensarlo bastante...
+#
+# A mí me parece más que correcto, otra opción, aunque a mí no me gustan más:
+# "faltan ficheros como argumentos" -> no claro
+# "faltan argumentos de tipo fichero/FICHERO" uac
+#
+# Creo que exactamente esas dos posibilidades aparecen
+# en wdiff como "finalistas" :-) sv
+#
+#~ msgid "file arguments missing"
+#~ msgstr "faltan argumentos (ficheros)"
+
+# Esta traducción me ha sorprendido verla, creo que "changed" debería
+# traducirse como "ha cambiado". Además cuando estos mensajes "de
+# diagnóstico" aparecen, la operación ya se ha realizado... uac
+#
+# Si solamente fuera por el modo verbal empleado en el original,
+# estaría de acuerdo contigo.
+# Sin duda esto es un mensaje de "diagnóstico" o "verbose", y como tal
+# debe tratarse.
+# La cosa está en si esos mensajes deben decirnos "lo que va ocurriendo"
+# o "lo que ha ocurrido". En este mensaje concreto (no en general), me
+# parece más apropiado que el programa nos diga "lo que va ocurriendo"
+# y por eso utilizo el modo presente.
+# Tal vez tengo la impresión de que al original le falta un "is":
+# "group of %s is changed to %s". sv
+#~ msgid "group of %s changed to %s\n"
+#~ msgstr "el grupo de %s cambia a %s\n"
+
+# Ya sé que no te gustará: "%s se cedió a "
+# o "el propietario de %s es ahora " tb
+# El segundo me gusta mucho más que el primero, pero a pesar de todo, prefiero
+# usar el verbo cambiar, decir "es ahora" no da a entender tan claramente
+# que se produce un cambio. sv
+#
+# A mí me gusta también "el propietario de %s es ahora", ¿por qué traducciones
+# tan literales, si se pueden poner de una forma corta y más clara? uac
+#
+# En este caso, "es ahora" es menos claro que "cambia a"
+# De la primera forma, te dice cómo queda pero te quedas con la duda
+# de si antes estaba también así o no.
+# Con "cambia a" te dice cómo queda y además sabes que antes estaba de otra
+# forma distinta. sv
+#, fuzzy
+#~ msgid "ownership of %s changed to "
+#~ msgstr "el propietario de %s cambia a "
+
+# Normas de la casa:
+# "El programa hablará al usuario de usted y no de tú". sv
+#, fuzzy
+#~ msgid "you are not a member of group %s"
+#~ msgstr "usted no es miembro del grupo `%s'"
+
+#~ msgid "%s: invalid group number"
+#~ msgstr "%s: número de grupo inválido"
+
+#, fuzzy
+#~ msgid "%s: cannot determine size"
+#~ msgstr "%s: no se puede rebobinar"
+
+#, fuzzy
+#~ msgid "cannot make fifo %s"
+#~ msgstr "No se puede crear el `fifo' `%s'"
+
+#, fuzzy
+#~ msgid "cannot change permissions for %s"
+#~ msgstr "estableciendo los permisos de %s"
+
+# Otra posibilidad era:
+# "el anterior enlace a". uac
+#, fuzzy
+#~ msgid "cannot remove old link to %s"
+#~ msgstr "no se puede borrar el enlace antiguo a `%s'"
+
+# Sinceramente, creo que añadir "virtual" sería redundante.
+#~ msgid "virtual memory exhausted"
+#~ msgstr "memoria agotada"
+
+#~ msgid "Memory exhausted"
+#~ msgstr "Memoria agotada"
+
+#~ msgid "invalid mode `%s'"
+#~ msgstr "modo inválido `%s'"
+
+#~ msgid "cannot create directory `%s'"
+#~ msgstr "no se puede crear el directorio `%s'"
+
+#~ msgid "cannot remove `%s'"
+#~ msgstr "no se puede borrar `%s'"
+
+# FIXME: Falta una coma en el original. sv
+#~ msgid "specified target, `%s' is not a directory"
+#~ msgstr "el objetivo especificado, `%s', no es un directorio"
+
+#~ msgid "cannot chmod %s"
+#~ msgstr "no se pueden cambiar los permisos de %s"
+
+#~ msgid "`%s' is a directory"
+#~ msgstr "`%s' es un directorio"
+
+# El primer %s es "hardlink" o "symlink".
+# Mantengo el "de" y toco madera.
+#~ msgid "create %s %s to %s"
+#~ msgstr "crea %s de %s a %s"
+
+# Lo mismo de antes.
+#~ msgid "cannot create %s `%s' to `%s'"
+#~ msgstr "no se puede crear %s de `%s' a `%s'"
+
+#~ msgid "symbolic link"
+#~ msgstr "enlace simbólico"
+
+# ¿? Duro o fuerte, según se mire.
+# FIXME (pendiente).
+#~ msgid "hard link"
+#~ msgstr "enlace duro"
+
+#~ msgid "link"
+#~ msgstr "enlace"
+
+#~ msgid "current directory"
+#~ msgstr "directorio actual"
+
+#~ msgid "starting directory"
+#~ msgstr "directorio de comienzo"
+
+#~ msgid "%s -> %s (backup)\n"
+#~ msgstr "%s -> %s (copia de seguridad)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ msgstr ""
+#~ "Modo de empleo: %s [OPCIÓN]... OBJETIVO [NOMBRE_DEL_ENLACE]\n"
+#~ "       o bien:  %s [OPCIÓN]... OBJETIVO... DIRECTORIO\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ msgstr ""
+#~ "Modo de empleo: %s [OPCIÓN]... ORIGEN DESTINO\n"
+#~ "       o bien:  %s [OPCIÓN]... ORIGEN... DIRECTORIO\n"
+
+#~ msgid "--no-dereference (-h) is not supported on this system"
+#~ msgstr "--no-dereference (-h) no está disponible en este sistema"
+
+#~ msgid "Usage: %s [OPTION]... EXISTING_DIR NEW_DIR\n"
+#~ msgstr "Modo de empleo: %s [OPCIÓN]... DIR_EXISTENTE NUEVO_DIR\n"
+
+#~ msgid ""
+#~ "Rename EXISTING_DIR to NEW_DIR.\n"
+#~ "\n"
+#~ "   --help      display this help and exit\n"
+#~ "   --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Renombra DIR_EXISTENTE a NUEVO_DIR.\n"
+#~ "   --help      muestra esta ayuda y finaliza\n"
+#~ "   --version   informa de la versión y finaliza\n"
+
+#~ msgid "cannot get current directory"
+#~ msgstr "no se puede obtener el directorio actual"
+
+#~ msgid "cannot rename `.' or `..'"
+#~ msgstr "no se puede renombrar `.' o `..'"
+
+# ¿ancestro?
+#
+# Sip :) Es la traducción. ipg
+#
+# Supongo que será un directorio que abarca a uno dado em+
+# No sé como te las apaqanas aquí, pero lo de ancestro no lo dejes, porfa
+#
+# ¿Sugerencias? sv+
+# ¿Qué es un ancestro? ¿Un predecesor? tb
+# Ni idea. sv
+#
+# ancestro es un familiar ascendiente en el árbol genealógico (recordad que
+# normalmente los árboles se dibujan de arriba hacia abajo) uac
+#
+# Si te digo la verdad, nunca me ha hecho gracia eso de que los árboles
+# crezcan hacia abajo... sv
+#
+# Aunque ancestro creo que no estará mal, antecesor estará igual de bien y
+# mucho más claro, ¿o no? uac
+#
+# Si no os han aclarado las ideas mis explicaciones, recordad cuando
+# utilizáis el NOTESCAPES para ftpear y veis: "upper directory"= ".." uac
+#
+# Bueno, esto sería el "directorio superior", lo cual indica que en
+# Netscape Communications Inc., los árboles también crecen al revés... :-) sv
+#
+# Bueno, vale. De momento lo cambio. Antes decía ancestro.
+#~ msgid "`%s' is an ancestor of `%s'"
+#~ msgstr "`%s' es un antecesor de `%s'"
+
+#~ msgid "%s is closed"
+#~ msgstr "%s está cerrado"
+
+#~ msgid "out of memory"
+#~ msgstr "memoria agotada"
+
+#~ msgid "%s: lseek"
+#~ msgstr "%s: lseek"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%lu/%lu K"
+#~ msgstr "%s: paso %lu/%lu (%s)...%lu/%lu K"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%lu K"
+#~ msgstr "%s: paso %lu/%lu (%s)...%lu K"
+
+#~ msgid "%s: fsync"
+#~ msgstr "%s: fsync"
+
+#~ msgid "%s: fstat"
+#~ msgstr "%s: fstat"
+
+#~ msgid "%s: not a regular file; use -D to enable operations on devices"
+#~ msgstr ""
+#~ "%s: no es un fichero regular; utilice -D para activar las operaciones\n"
+#~ "sobre dispositivos"
+
+#~ msgid "unable to allocate storage for %lu passes"
+#~ msgstr "no se puede asignar espacio de almacenamiento para %lu pasos"
+
+#~ msgid "%s: fcntl"
+#~ msgstr "%s: fcntl"
+
+#~ msgid "%s: cannot shred read-only file descriptor"
+#~ msgstr ""
+#~ "%s: no se puede ejecutar shred sobre un descriptor de fichero de sólo lectura"
+
+#~ msgid "%s: can't wipe stdout and print verbose messages to it"
+#~ msgstr ""
+#~ "%s: no se puede cepillar la salida estándar e imprimir mensajes explicativos"
+
+# FIXME: Decirle al autor que lo ponga como en fork.
+#~ msgid "malloc failed"
+#~ msgstr "falló la llamada al sistema `malloc'"
+
+#~ msgid "Unable to open `%s'"
+#~ msgstr "No se puede abrir `%s'"
+
+#~ msgid "Unable to delete file `%s'"
+#~ msgstr "No se puede borrar el fichero `%s'"
+
+# Esta generó en su día una gran discusión, pues el original no era tan
+# explicativo. Finalmente, el autor (Jim Meyering) accedió amablemente a
+# cambiar el msgid original a como está ahora.
+# (Antes decía simplemente "cannot fork").
+# Gracias a este cambio, tanto el original como la traducción son claros
+# y precisos, pero sin llegar a ser verborreicos.
+#~ msgid "fork system call failed"
+#~ msgstr "falló la llamada al sistema `fork'"
+
+#~ msgid "Can't fstat file `%s'"
+#~ msgstr "No se puede ejecutar fstat sobre el fichero `%s'"
+
+# Un fichero `sparse' es un fichero que contiene muchos ceros seguidos, y
+# que en algunos casos, el sistema operativo trata de forma especial.
+# ¿tiene traducción?
+#
+# Creo que finalmente me decidiré por traducirlo como "disperso".
+# (creo que Federico Rivas ya lo ha hecho así en tar).
+# Tal vez añadiendo el sparse al final, para que todo el mundo se entere. sv
+# O sea: tipo disperso (sparse).
+# De momento lo dejo en `sparse'.
+# FIXME.
+#~ msgid "sparse type"
+#~ msgstr "tipo `sparse'"
+
+# FIXME
+# Esto sería "tipo de ordenación",
+# pero como forma parte de un mensaje más largo que *no*
+# está todavía internacionalizado, para evitar que, por ejemplo
+# "ls --sort=ñ" dé como resultado "invalid tipo de ordenación `ñ'"
+# lo dejo de momento en inglés, para no mezclar.
+#~ msgid "sort type"
+#~ msgstr "sort type"
+
+# FIXME
+# Esto sería "tipo de fecha",
+# pero como forma parte de un mensaje más largo que *no*
+# está todavía internacionalizado, para evitar que, por ejemplo,
+# "ls --time=ñ" dé como resultado "invalid tipo de fecha `ñ'"
+# lo dejo de momento en inglés, para no mezclar.
+#~ msgid "time type"
+#~ msgstr "time type"
+
+# FIXME
+# Esto sería "tipo de formato",
+# pero como forma parte de un mensaje más largo que *no*
+# está todavía internacionalizado, para evitar que, por ejemplo,
+# "ls --format=ñ" dé como resultado "invalid tipo de formato `ñ'"
+# lo dejo de momento en inglés, para no mezclar.
+#~ msgid "format type"
+#~ msgstr "format type"
+
+# Del diccionario de María Moliner:
+# Colorear: Colorar. Teñir. Dar [Dar un] color a cierta cosa.
+# Coloración: Acción de colorear.
+#~ msgid "colorization criterion"
+#~ msgstr "criterio de coloración"
+
+# De este no estoy muy seguro.
+#~ msgid "indicator style"
+#~ msgstr "estilo de indicación"
+
+# De este tampoco...
+#~ msgid "quoting style"
+#~ msgstr "estilo de cita"
+
+# FIXME
+# o igual es hora, o tiempo, vaya usted a saber. Mirarlo bien.
+#~ msgid "time selector"
+#~ msgstr "selector de fecha"
+
+# SIoNO
+#~ msgid "remove directory `%s'%s? "
+#~ msgstr "¿borrar el directorio `%s'%s? (s/n) "
+
+#~ msgid ""
+#~ "the option for counting 1MB blocks may not be used\n"
+#~ "with the portable output format"
+#~ msgstr ""
+#~ "la opción para contar bloques de 1MB no se puede usar\n"
+#~ "con el formato de salida portable"
+
+# ¿adaptive es adaptable?
+# ¿eh?
+#
+# Yo lo he mirado en el Collins y no está, por otra parte adaptable= adaptable
+# (inglis= castellano)... uac
+#
+# Una cosa creo que está clara, se refiere a las opciones para especificar
+# diferentes unidades de capacidad... y _creo_ que si pensamos en este sentido
+# la traducción no es muy coherente... al menos en castellano... uac
+#
+# Yo lo cambiaría a algo como:
+# "la opción para imprimir con unidades específicas no se puede usar..." uac
+#
+# Este tengo que pensarlo despacio. sv
+#~ msgid ""
+#~ "the option for printing with adaptive units may not be used\n"
+#~ "with the portable output format"
+#~ msgstr ""
+#~ "la opción para imprimir con unidades adaptables no se puede usar\n"
+#~ "con el formato de salida portable"
+
+# FIXME: ¿No quedaría mejor "removed %s directory"?
+# SIoNO
+#~ msgid "removing non-directory %s\n"
+#~ msgstr "se borró el no-directorio %s\n"
+
+#~ msgid "`%s' is not a regular file"
+#~ msgstr "`%s' no es un fichero regular"
+
+# ¿Tal vez la interrogación de apertura va justo después de la coma? ipg
+#
+# Excelente pregunta. Esto parece el referéndum de la OTAN:
+# Creo que el programa nos pregunta si queremos reemplazar un fichero
+# por otro, para que contestemos que sí o que no.
+# Al mismo tiempo, nos advierte de que, de llevarse a cabo el reemplazo
+# de un fichero por otro, también el modo resultaría sustituído.
+#
+# Si esto es así, ¿dónde habría que poner la interrogación?
+# O incluso: ¿Está bien el original?
+#
+# Creo que tal y como está, está bien. sv
+# SIoNO
+#
+#~ msgid "%s: replace `%s', overriding mode %04o? "
+#~ msgstr "%s: ¿reemplazar `%s', sustituyendo el modo %04o? (s/n) "
+
+# Yo no traduciría "regular file" literalmente... a mi entender en el Collins
+# salen acepciones mucho mejores, como:
+# fichero normal
+# fichero corriente
+# y esta que me la invento yo: fichero genérico. uac
+#
+# ¿Y una expresión regular? sv
+#
+# Aunque a decir verdad, eso de "normal" no me parece mal del todo,
+# habrá que pensarlo seriamente. sv
+# FIXME.
+#~ msgid "cannot move `%s' across filesystems: Not a regular file"
+#~ msgstr ""
+#~ "no se puede mover `%s' de un sistema de ficheros a otro:\n"
+#~ "No es un fichero regular"
+
+#~ msgid "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ msgstr "Modo de empleo: %s [OPCIÓN]... GRUPO FICHERO...\n"
+
+# Este overriding no es como el de "mv".
+# ¿Tal vez el original no tiene sentido?
+# (lo digo porque para borrar, el modo que importa es el del directorio,
+# donde está lo que se va a borrar)
+#
+# overriding es pasar por alto em
+#
+# En general no, solamente en este caso.
+# ¿Quieres decir que sugieres poner
+# "..., pasando por alto el modo %04o"? sv+
+#
+#~ msgid "%s: remove %s`%s', overriding mode %04o? "
+#~ msgstr "%s: ¿borrar %s`%s', sustituyendo el modo %04o? (s/n) "
+
+#~ msgid "directory "
+#~ msgstr "directorio "
+
+# Este tendré que estudiarlo más.
+# De momento lo dejo así.
+# SIoNO
+#~ msgid "%s: descend directory `%s', overriding mode %04o? "
+#~ msgstr ""
+#~ "%s: ¿descender al directorio `%s', sustituyendo el modo %04o? (s/n) "
+
+# SIoNO
+#~ msgid "%s: remove directory `%s' (might be nonempty)? "
+#~ msgstr "%s: ¿borrar el directorio `%s'? (podría no estar vacío) (s/n) "

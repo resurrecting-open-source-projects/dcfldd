@@ -1,0 +1,2193 @@
+# Norwegian messages for GNU fileutils.  (bokmål dialect)
+# Copyright (C) 1996, 1997, 1998 Free Software Foundation, Inc.
+# Karl Anders Øygard <karl.oygard@fou.telenor.no>, 1996.
+#
+# Eivind Tagseth <eivindt@multinet.no>, 1997, 1998.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fileutils 4.0-b6\n"
+"POT-Creation-Date: 2001-10-26 15:00-0400\n"
+"PO-Revision-Date: 1998-11-05 13:07-0100\n"
+"Last-Translator: Eivind Tagseth <eivindt@multinet.no>\n"
+"Language-Team: Norwegian <no@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lib/argmatch.c:159
+#, fuzzy, c-format
+msgid "invalid argument %s for `%s'"
+msgstr "ugyldig datoformat «%s»"
+
+#: lib/argmatch.c:160
+#, fuzzy, c-format
+msgid "ambiguous argument %s for `%s'"
+msgstr "ugyldig datoformat «%s»"
+
+#. We try to put synonyms on the same line.  The assumption is that
+#. synonyms follow each other
+#: lib/argmatch.c:178
+msgid "Valid arguments are:"
+msgstr ""
+
+#: lib/closeout.c:104
+msgid "write error"
+msgstr ""
+
+#: lib/error.c:117
+msgid "Unknown system error"
+msgstr ""
+
+#: lib/getopt.c:686
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr ""
+
+#: lib/getopt.c:711
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/getopt.c:716
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/getopt.c:734 lib/getopt.c:907
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr ""
+
+#. --option
+#: lib/getopt.c:763
+#, fuzzy, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "ukjent flagg «%s»"
+
+#. +option or -option
+#: lib/getopt.c:767
+#, fuzzy, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "ukjent flagg «%s»"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:793
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr ""
+
+#: lib/getopt.c:796
+#, fuzzy, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: ugyldig konvertering"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:826 lib/getopt.c:956
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr ""
+
+#: lib/getopt.c:873
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr ""
+
+#: lib/getopt.c:891
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/human.c:341
+msgid "block size"
+msgstr ""
+
+#: lib/makepath.c:177
+#, fuzzy, c-format
+msgid "cannot create directory %s"
+msgstr "kan ikke opprette filkatalogen «%s»"
+
+#: lib/makepath.c:183 lib/makepath.c:425
+#, fuzzy, c-format
+msgid "%s exists but is not a directory"
+msgstr "«%s» eksisterer, men er ikke en filkatalog"
+
+#: lib/makepath.c:321 lib/makepath.c:383 lib/makepath.c:444
+#, fuzzy, c-format
+msgid "cannot change owner and/or group of %s"
+msgstr "kan ikke endre til navnløs gruppe"
+
+#: lib/makepath.c:343
+#, fuzzy, c-format
+msgid "cannot chdir to directory, %s"
+msgstr "kan ikke gå til filkatalogen %s"
+
+#: lib/makepath.c:397 lib/makepath.c:450
+#, fuzzy, c-format
+msgid "cannot change permissions of %s"
+msgstr "setter beskyttelse for %s"
+
+#. If XALLOC_FAIL_FUNC is NULL, or does return, display this message
+#. before exiting when memory is exhausted.  Goes through gettext.
+#: lib/obstack.c:477 lib/xmalloc.c:66
+#, fuzzy
+msgid "memory exhausted"
+msgstr "virtuelt minne oppbrukt"
+
+#. Get translations for open and closing quotation marks.
+#.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  If the catalog has no translation,
+#. locale_quoting_style quotes `like this', and
+#. clocale_quoting_style quotes "like this".
+#.
+#. For example, an American English Unicode locale should
+#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
+#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
+#. MARK).  A British English Unicode locale should instead
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#: lib/quotearg.c:259
+msgid "`"
+msgstr ""
+
+#: lib/quotearg.c:260
+msgid "'"
+msgstr ""
+
+#: lib/rpmatch.c:78
+msgid "^[yY]"
+msgstr "^[jJyY]"
+
+#: lib/rpmatch.c:81
+msgid "^[nN]"
+msgstr "^[nN]"
+
+#: lib/unicodeio.c:138
+#, c-format
+msgid "cannot output U+%04X: iconv function not usable"
+msgstr ""
+
+#: lib/unicodeio.c:149
+#, c-format
+msgid "U+%04X: character out of range"
+msgstr ""
+
+#: lib/unicodeio.c:181 lib/unicodeio.c:190
+#, c-format
+msgid "cannot convert U+%04X to local character set"
+msgstr ""
+
+#: lib/unicodeio.c:196
+#, c-format
+msgid "cannot output U+%04X: iconv function not available"
+msgstr ""
+
+#: lib/userspec.c:179
+#, fuzzy
+msgid "invalid user"
+msgstr "ugyldig bruker «%s»"
+
+#: lib/userspec.c:180
+#, fuzzy
+msgid "invalid group"
+msgstr "ugyldig gruppe «%s»"
+
+#: lib/userspec.c:182
+msgid "cannot get the login group of a numeric UID"
+msgstr ""
+
+#: lib/userspec.c:184
+msgid "cannot omit both user and group"
+msgstr ""
+
+#: lib/version-etc.c:38
+msgid "Copyright (C) 2001 Free Software Foundation, Inc."
+msgstr ""
+
+#: lib/version-etc.c:60
+#, c-format
+msgid "Written by %s.\n"
+msgstr ""
+
+#: lib/version-etc.c:66
+msgid ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+
+#: src/dcfldd.c:321
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Prøv «%s --help» for mer informasjon.\n"
+
+#: src/dcfldd.c:325
+#, c-format
+msgid "Usage: %s [OPTION]...\n"
+msgstr "Bruk: %s [FLAGG]...\n"
+
+#: src/dcfldd.c:326
+#, fuzzy
+msgid ""
+"Copy a file, converting and formatting according to the options.\n"
+"\n"
+"  bs=BYTES             force ibs=BYTES and obs=BYTES\n"
+"  cbs=BYTES            convert BYTES bytes at a time\n"
+"  conv=KEYWORDS        convert the file as per the comma separated keyword "
+"list\n"
+"  count=BLOCKS         copy only BLOCKS input blocks\n"
+"  ibs=BYTES            read BYTES bytes at a time\n"
+"  if=FILE              read from FILE instead of stdin\n"
+"  obs=BYTES            write BYTES bytes at a time\n"
+"  of=FILE              write to FILE instead of stdout\n"
+"  seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n"
+"  skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n"
+"  pattern=BYTES        use the specified binary pattern as input\n"
+"  textpattern=TEXT     use repeating TEXT as input\n"
+"  hashwindow=BYTES     perform an MD5 hash on every BYTES amount of data\n"
+"  hashlog=FILE         send MD5 hash output to FILE instead of stderr\n"
+"  status=[on|off]      display a continual status message on stderr\n"
+"                         default state is \"on\"\n"
+"  sizeprobe=[if|of]    determine the size of the input or output file"
+msgstr ""
+"Kopier en fil, med konvertering og formattering som spesifisert.\n"
+"\n"
+"  bs=BYTES        tving ibs=BYTES og obs=BYTES\n"
+"  cbs=BYTES       konverter BYTES bytes om gangen\n"
+"  conv=NØKKELORD  konverter filen vha. en liste med kommaseparerte "
+"nøkkelord\n"
+"  count=BLOKKER   kopier bare BLOKKER innblokker\n"
+"  ibs=BYTES       les BYTES bytes om gangen\n"
+"  if=FIL          les fra FIL istedet for stdin\n"
+"  obs=BYTES       skriv BYTES bytes om gangen\n"
+"  of=FIL          skriv til FIL istedet for stdout, ikke kutt filen\n"
+"  seek=BLOKKER    hopp over BLOKKER blokker med størrelse obs fra\n"
+"                  begynnelsen av utdata\n"
+"  skip=BLOKKER    hopp over BLOKKER blokkermed størrelse ibs fra\n"
+"                  begynnelsen av inndata\n"
+"      --help      vis denne hjelpeteksten og avslutt\n"
+"      --version   vis programversjon og avslutt\n"
+"\n"
+"BYTES kan ha suffiks: xM M, c 1, w 2, b 512, kD 1000, k 1024, MD 1.000.000,\n"
+"M 1.048.576, GD 1.000.000.000, G 1.073.741.824, og så videre for T, P, E,\n"
+"Z og Y.\n"
+"Hvert NØKKELORD kan være:\n"
+"  ascii     fra EBCDIC til ASCII\n"
+"  ebcdic    fra ASCII til EBCDIC\n"
+"  ibm       fra ASCII til alternert EBCDIC\n"
+"  block     fyll ut felter terminert med linjeskift med mellomrom til\n"
+"            størrelse gitt i cbs\n"
+"  unblock   bytt ut mellomrom med linjeskift i blokker med størrelse\n"
+"            som gitt i cbs\n"
+"  lcase     gjør om store bokstaver til små\n"
+"  notrunc   ikke forkort utfilen\n"
+"  ucase     gjør om små bokstaver til store\n"
+"  swab      bytt om hvert par av bytes i inndata\n"
+"  noerror   forsett etter lesefeil\n"
+"  sync      fyll ut hver inndata-blokk med null-tegn til størrelse gitt i "
+"ibs\n"
+
+#: src/dcfldd.c:371
+msgid ""
+"\n"
+"Report bugs to <bug-fileutils@gnu.org>."
+msgstr ""
+"\n"
+"Rapporter feil til <bug-fileutils@gnu.org>."
+
+#: src/dcfldd.c:402
+#, c-format
+msgid "%s+%s records in\n"
+msgstr "%s+%s blokker inn\n"
+
+#: src/dcfldd.c:405
+#, c-format
+msgid "%s+%s records out\n"
+msgstr "%s+%s blokker ut\n"
+
+#: src/dcfldd.c:413
+msgid "truncated record"
+msgstr "forkortet blokk"
+
+#: src/dcfldd.c:414
+msgid "truncated records"
+msgstr "forkortede blokker"
+
+#: src/dcfldd.c:423
+#, fuzzy, c-format
+msgid "closing input file %s"
+msgstr "sletter %s\n"
+
+#: src/dcfldd.c:425
+#, fuzzy, c-format
+msgid "closing output file %s"
+msgstr "sletter %s\n"
+
+#: src/dcfldd.c:509
+#, fuzzy, c-format
+msgid "writing to %s"
+msgstr "sletter %s\n"
+
+#: src/dcfldd.c:541
+#, fuzzy, c-format
+msgid "invalid conversion: %s"
+msgstr "%s: ugyldig konvertering"
+
+#: src/dcfldd.c:645
+#, fuzzy, c-format
+msgid "unrecognized option %s"
+msgstr "ukjent flagg «%s»"
+
+#: src/dcfldd.c:659
+#, fuzzy, c-format
+msgid "invalid hex pattern: %s"
+msgstr "ugyldig beskyttelse «%s»"
+
+#: src/dcfldd.c:672 src/dcfldd.c:1455 src/dcfldd.c:1473
+#, fuzzy, c-format
+msgid "opening %s"
+msgstr "sletter %s\n"
+
+#: src/dcfldd.c:729
+#, fuzzy, c-format
+msgid "unrecognized option %s=%s"
+msgstr "ukjent flagg «%s=%s»"
+
+#: src/dcfldd.c:735
+#, fuzzy, c-format
+msgid "invalid number %s"
+msgstr "ugyldig nummer «%s»"
+
+#: src/dcfldd.c:765
+msgid ""
+"only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+msgstr ""
+"kun én konvertering fra {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+
+#: src/dcfldd.c:915 src/dcfldd.c:1206
+#, fuzzy, c-format
+msgid "reading %s"
+msgstr "sletter %s\n"
+
+#: src/dcfldd.c:1252 src/dcfldd.c:1315
+#, fuzzy, c-format
+msgid "writing %s"
+msgstr "sletter %s\n"
+
+#: src/dcfldd.c:1408
+#, fuzzy
+msgid "stating file"
+msgstr "startfilkatalog"
+
+#: src/dcfldd.c:1458
+msgid "standard input"
+msgstr "standard innkanal"
+
+#: src/dcfldd.c:1481
+msgid "file offset out of range"
+msgstr "filposisjon ute av rekkevidde"
+
+#: src/dcfldd.c:1484
+#, fuzzy, c-format
+msgid "cannot fstat %s"
+msgstr "kan ikke opprette linken «%s»"
+
+#: src/dcfldd.c:1497
+#, fuzzy, c-format
+msgid "advancing past %s bytes in output file %s"
+msgstr "sletter %s\n"
+
+#: src/dcfldd.c:1506
+msgid "standard output"
+msgstr "standard utkanal"
+
+#, fuzzy
+#~ msgid "cannot change to null group"
+#~ msgstr "kan ikke endre til navnløs gruppe"
+
+#, fuzzy
+#~ msgid "invalid group name %s"
+#~ msgstr "ugyldig gruppenavn «%s»"
+
+#~ msgid "group number"
+#~ msgstr "gruppenummer"
+
+#, fuzzy
+#~ msgid "invalid group number %s"
+#~ msgstr "ugyldig gruppenummer «%s»"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Bruk:   %s [FLAGG]... GRUPPE FIL...\n"
+#~ " eller: %s [FLAGG]... --reference=RFIL FIL...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the group membership of each FILE to GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's group rather than the specified\n"
+#~ "                         GROUP value\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ msgstr ""
+#~ "Endre gruppen til hver FIL til GRUPPE.\n"
+#~ "\n"
+#~ "  -c, --changes           som verbose, men rapporter bare ved endringer\n"
+#~ "  -h, --no-dereference    endre symbolske linker istedet for refererte "
+#~ "filer\n"
+#~ "                            (kun for systemer med systemkallet «lchown»)\n"
+#~ "  -f, --silent, --quiet   undertrykk de fleste feilmeldingene\n"
+#~ "      --reference=RFIL    bruke RFIL sin gruppe istedenfor å bruke en\n"
+#~ "                          GRUPPE-verdi\n"
+#~ "  -R, --recursive         endre filer og filkataloger rekursivt\n"
+#~ "  -v, --verbose           gi en diagnostikk for hver fil som behandles\n"
+#~ "      --help              vis denne hjelpeteksten og avslutt\n"
+#~ "      --version           vis programversjon og avslutt\n"
+
+#~ msgid "too few arguments"
+#~ msgstr "for få argumenter"
+
+#, fuzzy
+#~ msgid "getting attributes of %s"
+#~ msgstr "bevarer tider for %s"
+
+#, fuzzy
+#~ msgid "getting new attributes of %s"
+#~ msgstr "bevarer tider for %s"
+
+#, fuzzy
+#~ msgid "mode of %s changed to %04lo (%s)\n"
+#~ msgstr "beskyttelse for %s endret til %04o (%s)\n"
+
+#, fuzzy
+#~ msgid "failed to change mode of %s to %04lo (%s)\n"
+#~ msgstr "klarte ikke å endre beskyttelse for %s til %04o (%s)\n"
+
+#, fuzzy
+#~ msgid "mode of %s retained as %04lo (%s)\n"
+#~ msgstr "beskyttelse for %s beholdt som %04o (%s)\n"
+
+#, fuzzy
+#~ msgid "changing permissions of %s"
+#~ msgstr "setter beskyttelse for %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [OPTION]... MODE[,MODE]... FILE...\n"
+#~ "  or:  %s [OPTION]... OCTAL-MODE FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Bruk:   %s [FLAGG]... BESKYTTELSE[,BESKYTTELSE]... FIL...\n"
+#~ " eller: %s [FLAGG]... OKTAL_BESKYTTELSE FIL...\n"
+#~ " eller: %s [FLAGG]... --reference=RFIL FIL...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the mode of each FILE to MODE.\n"
+#~ "\n"
+#~ "  -c, --changes           like verbose but report only when a change is "
+#~ "made\n"
+#~ "  -f, --silent, --quiet   suppress most error messages\n"
+#~ "  -v, --verbose           output a diagnostic for every file processed\n"
+#~ "      --reference=RFILE   use RFILE's mode instead of MODE values\n"
+#~ "  -R, --recursive         change files and directories recursively\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "\n"
+#~ "Each MODE is one or more of the letters ugoa, one of the symbols +-= and\n"
+#~ "one or more of the letters rwxXstugo.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "  -c, --changes           som verbose, men rapporter bare ved endringer\n"
+#~ "  -f, --silent, --quiet   undertrykk de fleste feilmeldingene\n"
+#~ "  -v, --verbose           gi en diagnostikk for hver fil som behandles\n"
+#~ "      --reference=RFIL    bruk RFIL sin beskyttelse istedenfor BESKYTTELSE-\n"
+#~ "                          verdier\n"
+#~ "  -R, --recursive         endre filer og filkataloger rekursivt\n"
+#~ "      --help              vis denne hjelpeteksten og avslutt\n"
+#~ "      --version           vis programversjon og avslutt\n"
+#~ "\n"
+#~ "Hver BESKYTTELSE er en eller flere av bokstavene ugoa, ett av symbolene\n"
+#~ "+-=, og en eller flere av bokstavene rwxXstugo.\n"
+
+#, fuzzy
+#~ msgid "invalid character %s in mode string %s"
+#~ msgstr "ugyldig datoformat «%s»"
+
+#, fuzzy
+#~ msgid "invalid mode string: %s"
+#~ msgstr "ugyldig beskyttelse «%s»"
+
+#~ msgid "neither symbolic link %s nor referent has been changed\n"
+#~ msgstr "verken symbolsk link %s eller referant har blitt endret\n"
+
+#, fuzzy
+#~ msgid "changed ownership of %s to %s\n"
+#~ msgstr "klarte ikke å endre eier av %s til "
+
+#, fuzzy
+#~ msgid "changed group of %s to %s\n"
+#~ msgstr "klarte ikke å endre gruppen til %s til %s\n"
+
+#, fuzzy
+#~ msgid "failed to change ownership of %s to %s\n"
+#~ msgstr "klarte ikke å endre eier av %s til "
+
+#~ msgid "failed to change group of %s to %s\n"
+#~ msgstr "klarte ikke å endre gruppen til %s til %s\n"
+
+#, fuzzy
+#~ msgid "ownership of %s retained as %s\n"
+#~ msgstr "eier av %s beholdt som "
+
+#~ msgid "group of %s retained as %s\n"
+#~ msgstr "gruppe til %s beholdt som %s\n"
+
+#, fuzzy
+#~ msgid "changing ownership of %s"
+#~ msgstr "bevarer eierrettigheter for %s"
+
+#, fuzzy
+#~ msgid "changing group of %s"
+#~ msgstr "bevarer eierrettigheter for %s"
+
+#, fuzzy
+#~ msgid "unable to restore permissions of %s"
+#~ msgstr "gjenoppretter beskyttelse for %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [OPTION]... OWNER[:[GROUP]] FILE...\n"
+#~ "  or:  %s [OPTION]... :GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Bruk:   %s [FLAGG]... EIER[.[GRUPPE]] FIL...\n"
+#~ " eller: %s [FLAGG]... .GRUPPE FIL...\n"
+#~ " eller: %s [FLAGG]... --reference=RFIL FIL...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the owner and/or group of each FILE to OWNER and/or GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                         change the owner and/or group of each file only if\n"
+#~ "                         its current owner and/or group match those "
+#~ "specified\n"
+#~ "                         here.  Either may be omitted, in which case a "
+#~ "match\n"
+#~ "                         is not required for the omitted attribute.\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's owner and group rather than\n"
+#~ "                         the specified OWNER:GROUP values\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Endre eier og/eller gruppe til hver FIL til EIER og/eller GRUPPE.\n"
+#~ "\n"
+#~ "  -c, --changes          rapporter alle endringer\n"
+#~ "      --dereference      foreta endringene på referenten av hver symbolsk\n"
+#~ "                         link isteden for den sombolske linken selv\n"
+#~ "  -h, --no-dereference   endre symbolske linker istedet for refererte filer\n"
+#~ "                         (kun for systemer med systemkallet «lchown»)\n"
+#~ "  -f, --silent, --quiet  undertrykk de fleste feilmeldingene\n"
+#~ "      --reference=RFIL   bruk eier og gruppe til RFIL isteden for å bruke\n"
+#~ "                         eksplisitte EIER.GRUPPE-verdier\n"
+#~ "  -R, --recursive        endre filer og filkataloger rekursivt\n"
+#~ "  -v, --verbose          fortell hva som skjer\n"
+#~ "      --help             vis denne hjelpeteksten og avslutt\n"
+#~ "      --version          vis programversjon og avslutt\n"
+#~ "\n"
+#~ "Eier forblir uendret dersom utelatt.  Gruppen forblir uendret dersom den\n"
+#~ "ikke er spesifiert, men blir satt til login-gruppen dersom den er implisert\n"
+#~ "med et punktum.  Punktumet kan byttes ut med et kolon.\n"
+
+#, fuzzy
+#~ msgid "cannot access %s"
+#~ msgstr "kan ikke gjøre sikkerhetskopi av «%s»"
+
+#, fuzzy
+#~ msgid "%s and %s are the same file"
+#~ msgstr "«%s» og «%s» er samme fil"
+
+#, fuzzy
+#~ msgid "cannot open %s for reading"
+#~ msgstr "kan ikke linke «%s» til «%s»"
+
+#, fuzzy
+#~ msgid "cannot remove %s"
+#~ msgstr "kan ikke slette «%s»"
+
+#, fuzzy
+#~ msgid "cannot create regular file %s"
+#~ msgstr "kan ikke opprette vanlig fil «%s»"
+
+#, fuzzy
+#~ msgid "cannot lseek %s"
+#~ msgstr "kan ikke slette «%s»"
+
+#, fuzzy
+#~ msgid "closing %s"
+#~ msgstr "sletter %s\n"
+
+#, fuzzy
+#~ msgid "cannot stat %s"
+#~ msgstr "kan ikke opprette linken «%s»"
+
+#, fuzzy
+#~ msgid "omitting directory %s"
+#~ msgstr "%s: hopper over filkatalog"
+
+#, fuzzy
+#~ msgid "cannot overwrite non-directory %s with directory %s"
+#~ msgstr "%s: kan ikke overskrive filkatalog med annet enn filkatalog"
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s with non-directory"
+#~ msgstr "%s: kan ikke overskrive filkatalog med annet enn filkatalog"
+
+#, fuzzy
+#~ msgid "%s: overwrite %s, overriding mode %04lo? "
+#~ msgstr "%s: overskrive «%s», uten hensyn til beskyttelse %04o?"
+
+#, fuzzy
+#~ msgid "%s: overwrite %s? "
+#~ msgstr "%s: overskrive «%s»? "
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s"
+#~ msgstr "%s: kan ikke overskrive filkatalog"
+
+#, fuzzy
+#~ msgid "cannot move directory onto non-directory: %s -> %s"
+#~ msgstr "%s: kan ikke overskrive filkatalog med annet enn filkatalog"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not moved"
+#~ msgstr ""
+#~ "sikkerhetskopiering av «%s» vil overskrive kildefil.  «%s» er ikke flyttet"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not copied"
+#~ msgstr ""
+#~ "sikkerhetskopiering av «%s» vil overskrive kildefil.  «%s» er ikke kopiert"
+
+#, fuzzy
+#~ msgid "cannot backup %s"
+#~ msgstr "kan ikke gjøre sikkerhetskopi av «%s»"
+
+#, fuzzy
+#~ msgid " (backup: %s)"
+#~ msgstr "kan ikke gjøre sikkerhetskopi av «%s»"
+
+#, fuzzy
+#~ msgid "cannot copy a directory, %s, into itself, %s"
+#~ msgstr "kan ikke flytte «%s» til en underkatalog av seg selv, «%s»"
+
+#, fuzzy
+#~ msgid "will not create hard link %s to directory %s"
+#~ msgstr "%s: vil ikke lage hard link «%s» til katalog «%s»"
+
+#, fuzzy
+#~ msgid "cannot create hard link %s to %s"
+#~ msgstr "%s: vil ikke lage hard link «%s» til katalog «%s»"
+
+#, fuzzy
+#~ msgid "cannot move %s to a subdirectory of itself, %s"
+#~ msgstr "kan ikke flytte «%s» til en underkatalog av seg selv, «%s»"
+
+#, fuzzy
+#~ msgid "cannot move %s to %s"
+#~ msgstr "kan ikke linke «%s» til «%s»"
+
+#, fuzzy
+#~ msgid "cannot copy cyclic symbolic link %s"
+#~ msgstr "%s: kan ikke kopiere syklisk symbolsk link"
+
+#~ msgid "%s: can make relative symbolic links only in current directory"
+#~ msgstr "%s: kan bare lage relative symbolske linker i aktiv filkatalog"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s to %s"
+#~ msgstr "kan ikke opprette symbolsk link «%s»"
+
+#, fuzzy
+#~ msgid "cannot create link %s"
+#~ msgstr "kan ikke opprette linken «%s»"
+
+#, fuzzy
+#~ msgid "cannot create fifo %s"
+#~ msgstr "kan ikke opprette fifo «%s»"
+
+#, fuzzy
+#~ msgid "cannot create special file %s"
+#~ msgstr "kan ikke opprette spesiell fil «%s»"
+
+#, fuzzy
+#~ msgid "cannot read symbolic link %s"
+#~ msgstr "kan ikke lese symbolsk link «%s»"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s"
+#~ msgstr "kan ikke opprette symbolsk link «%s»"
+
+#~ msgid "preserving ownership for %s"
+#~ msgstr "bevarer eierrettigheter for %s"
+
+#, fuzzy
+#~ msgid "%s has unknown file type"
+#~ msgstr "%s: ukjent filtype"
+
+#~ msgid "preserving times for %s"
+#~ msgstr "bevarer tider for %s"
+
+#~ msgid "setting permissions for %s"
+#~ msgstr "setter beskyttelse for %s"
+
+#, fuzzy
+#~ msgid "cannot un-backup %s"
+#~ msgstr "kan ikke ta tilbake sikkerhetskopi av «%s»"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY SOURCE...\n"
+#~ msgstr ""
+#~ "Bruk:   %s [FLAGG]... KILDE MÅL             (1. format)\n"
+#~ " eller: %s [FLAGG]... KILDE... FILKATALOG   (2. format)\n"
+#~ " eller: %s -d [FLAGG]... FILKATALOG...      (3. format)\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                same as -dpR\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -d, --no-dereference         never follow symbolic links\n"
+#~ "  -f, --force                  if an existing destination file cannot be\n"
+#~ "                                   opened, remove it and try again\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "  -H                           follow command-line symbolic links\n"
+#~ "  -l, --link                   link files instead of copying\n"
+#~ "  -L, --dereference            always follow symbolic links\n"
+#~ "  -p, --preserve               preserve file attributes if possible\n"
+#~ "      --parents                append source path to DIRECTORY\n"
+#~ "  -P                           same as `--parents' for now; soon to change "
+#~ "to\n"
+#~ "                                 `--no-dereference' to conform to POSIX\n"
+#~ "  -r                           copy recursively, non-directories as files\n"
+#~ "                                 WARNING: use -R instead when you might "
+#~ "copy\n"
+#~ "                                 special files like FIFOs or /dev/zero\n"
+#~ "      --remove-destination     remove each existing destination file before\n"
+#~ "                                 attempting to open it (contrast with "
+#~ "--force)\n"
+#~ msgstr ""
+#~ "Kopier KILDE til MÅL, eller en eller flere KILDE(r) til FILKATALOG.\n"
+#~ "\n"
+#~ "  -a, --archive                samme som -dpR\n"
+#~ "  -b, --backup                 lag sikkerhetskopi før sletting\n"
+#~ "  -d, --no-dereference         bevar linker\n"
+#~ "  -f, --force                  slett eksisterende filer uten bekreftelse\n"
+#~ "  -i, --interactive            be om bekreftelse før overskriving av filer\n"
+#~ "  -l, --link                   lag linker istedet for å kopiere\n"
+#~ "  -p, --preserve               forsøk å beholde filattributter\n"
+#~ "  -P, --parents                legg kildens søkesti til FILKATALOG\n"
+#~ "  -r                           kopier rekursivt, alt utenom filkataloger\n"
+#~ "                                 kopieres som filer\n"
+#~ "      --sparse=NÅR             kontroller oppretting av filer med hull\n"
+#~ "  -R, --recursive              kopier filkataloger rekursivt\n"
+#~ "  -s, --symbolic-link          lag symbolske linker istedet for å kopiere\n"
+#~ "  -S, --suffix=SUFFIKS         overstyr det vanlige "
+#~ "sikkerhetskopi-suffikset\n"
+#~ "  -u, --update                 kopier bare eldre eller helt nye filer\n"
+#~ "  -v, --verbose                forklar hva som skjer\n"
+#~ "  -V, --version-control=ORD    overstyr den vanlige versjonskontrollen\n"
+#~ "  -x, --one-file-system        kopier bare filer fra dette filsystemet\n"
+#~ "      --help                   vis denne hjelpeteksten og avslutt\n"
+#~ "      --version                vis programversjon og avslutt\n"
+#~ "\n"
+#~ "Normalt blir kildefiler med hull oppdaget ved hjelp av en enkel heuristikk,\n"
+#~ "og målfilen blir også laget med hull.  Dette er oppførselen som er gitt med\n"
+#~ "--sparse=auto.  Spesifiser --sparse=always for å opprette en målfil med\n"
+#~ "hull i, dersom kildefilen inneholder en tilstrekkelig lang sekvens med\n"
+#~ "null-tegn.  Bruk --sparse=never for å hindre oppretting av filer med hull.\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "      --sparse=WHEN            control creation of sparse files\n"
+#~ "  -R, --recursive              copy directories recursively\n"
+#~ "      --strip-trailing-slashes remove any trailing slashes from each SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -s, --symbolic-link          make symbolic links instead of copying\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 copy only when the SOURCE file is newer\n"
+#~ "                                 than the destination file or when the\n"
+#~ "                                 destination file is missing\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "  -x, --one-file-system        stay on this file system\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ "By default, sparse SOURCE files are detected by a crude heuristic and the\n"
+#~ "corresponding DEST file is made sparse as well.  That is the behavior\n"
+#~ "selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST\n"
+#~ "file whenever the SOURCE file contains a long enough sequence of zero "
+#~ "bytes.\n"
+#~ "Use --sparse=never to inhibit creation of sparse files.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Kopier KILDE til MÅL, eller en eller flere KILDE(r) til FILKATALOG.\n"
+#~ "\n"
+#~ "  -a, --archive                samme som -dpR\n"
+#~ "  -b, --backup                 lag sikkerhetskopi før sletting\n"
+#~ "  -d, --no-dereference         bevar linker\n"
+#~ "  -f, --force                  slett eksisterende filer uten bekreftelse\n"
+#~ "  -i, --interactive            be om bekreftelse før overskriving av filer\n"
+#~ "  -l, --link                   lag linker istedet for å kopiere\n"
+#~ "  -p, --preserve               forsøk å beholde filattributter\n"
+#~ "  -P, --parents                legg kildens søkesti til FILKATALOG\n"
+#~ "  -r                           kopier rekursivt, alt utenom filkataloger\n"
+#~ "                                 kopieres som filer\n"
+#~ "      --sparse=NÅR             kontroller oppretting av filer med hull\n"
+#~ "  -R, --recursive              kopier filkataloger rekursivt\n"
+#~ "  -s, --symbolic-link          lag symbolske linker istedet for å kopiere\n"
+#~ "  -S, --suffix=SUFFIKS         overstyr det vanlige "
+#~ "sikkerhetskopi-suffikset\n"
+#~ "  -u, --update                 kopier bare eldre eller helt nye filer\n"
+#~ "  -v, --verbose                forklar hva som skjer\n"
+#~ "  -V, --version-control=ORD    overstyr den vanlige versjonskontrollen\n"
+#~ "  -x, --one-file-system        kopier bare filer fra dette filsystemet\n"
+#~ "      --help                   vis denne hjelpeteksten og avslutt\n"
+#~ "      --version                vis programversjon og avslutt\n"
+#~ "\n"
+#~ "Normalt blir kildefiler med hull oppdaget ved hjelp av en enkel heuristikk,\n"
+#~ "og målfilen blir også laget med hull.  Dette er oppførselen som er gitt med\n"
+#~ "--sparse=auto.  Spesifiser --sparse=always for å opprette en målfil med\n"
+#~ "hull i, dersom kildefilen inneholder en tilstrekkelig lang sekvens med\n"
+#~ "null-tegn.  Bruk --sparse=never for å hindre oppretting av filer med hull.\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "The backup suffix is `~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\n"
+#~ "The version control method may be selected via the --backup option or "
+#~ "through\n"
+#~ "the VERSION_CONTROL environment variable.  Here are the values:\n"
+#~ "\n"
+#~ "  none, off       never make backups (even if --backup is given)\n"
+#~ "  numbered, t     make numbered backups\n"
+#~ "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
+#~ "  simple, never   always make simple backups\n"
+#~ msgstr ""
+#~ "Suffikset for sikkerhetskopiering er ~, med mindre det er spesifisert via\n"
+#~ "SIMPLE_BACKUP_SUFFIX.  Versjonskontroll kan settes med VERSION_CONTROL.\n"
+#~ "Gyldige verdier er:\n"
+#~ "\n"
+#~ "  t, numbered     lag nummererte sikkerhetskopier\n"
+#~ "  nil, existing   nummererte, dersom nummererte sikkerhetskopier "
+#~ "eksisterer,\n"
+#~ "                  ellers enkle\n"
+#~ "  never, simple   lag enkle sikkerhetskopier\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "As a special case, cp makes a backup of SOURCE when the force and backup\n"
+#~ "options are given and SOURCE and DEST are the same name for an existing,\n"
+#~ "regular file.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Som et spesialtilfelle, gjør cp en sikkerhetskopi av KILDE når flaggene for\n"
+#~ "force og backup er gitt, og KILDE og MÅL er samme navn for en eksisterende,\n"
+#~ "vanlig fil.\n"
+
+#~ msgid "preserving permissions for %s"
+#~ msgstr "bevarer beskyttelse for %s"
+
+#, fuzzy
+#~ msgid "cannot make directory %s"
+#~ msgstr "kan ikke opprette filkatalogen «%s»"
+
+#~ msgid "missing file arguments"
+#~ msgstr "mangler filargumenter"
+
+#~ msgid "missing destination file"
+#~ msgstr "mangler målfil"
+
+#, fuzzy
+#~ msgid "accessing %s"
+#~ msgstr "sletter %s\n"
+
+#, fuzzy
+#~ msgid "specified target, %s is not a directory"
+#~ msgstr "«%s» er ikke en filkatalog"
+
+#, fuzzy
+#~ msgid "copying multiple files, but last argument %s is not a directory"
+#~ msgstr "kopierer flere filer, men siste argument (%s) er ikke en filkatalog"
+
+#, fuzzy
+#~ msgid "when preserving paths, the destination must be a directory"
+#~ msgstr "når søkestien skal beholdes, må siste argument være en filkatalog"
+
+#~ msgid "symbolic links are not supported on this system"
+#~ msgstr "symbolske linker er ikke støttet på dette systemet"
+
+#~ msgid "cannot make both hard and symbolic links"
+#~ msgstr "kan ikke lage både harde og symbolske linker"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]\n"
+#~ msgstr "Bruk: %s [FLAGG]... [FIL]\n"
+
+#~ msgid ""
+#~ "Output commands to set the LS_COLORS environment variable.\n"
+#~ "\n"
+#~ "Determine format of output:\n"
+#~ "  -b, --sh, --bourne-shell    output Bourne shell code to set LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        output C shell code to set LS_COLORS\n"
+#~ "  -p, --print-database        output defaults\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If FILE is specified, read it to determine which colors to use for which\n"
+#~ "file types and extensions.  Otherwise, a precompiled database is used.\n"
+#~ "For details on the format of these files, run `dircolors --print-database'.\n"
+#~ msgstr ""
+#~ "Skriv ut kommandoer for å sette miljøvariabelen LS_COLORS.\n"
+#~ "\n"
+#~ "Bestem ut-format:\n"
+#~ "  -b, --sh, --bourne-shell    skriv ut Bourne shell-kode for å sette "
+#~ "LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        skriv ut C shell-kode for å sette LS_COLORS\n"
+#~ "  -p, --print-data-base       skriv ut den interne databasen\n"
+#~ "      --help                  vis denne hjelpeteksten og avslutt\n"
+#~ "      --version               vis programversjon og avslutt\n"
+
+#~ msgid "%s:%lu: invalid line;  missing second token"
+#~ msgstr "%s:%lu: ugyldig linje;  mangler det andre symbolet"
+
+#, fuzzy
+#~ msgid "%s:%lu: unrecognized keyword %s"
+#~ msgstr "%s:%lu: kjenner ikke nøkkelordet «%s»"
+
+#~ msgid ""
+#~ "the options to output dircolors' internal database and\n"
+#~ "to select a shell syntax are mutually exclusive"
+#~ msgstr ""
+#~ "flaggene for å skrive ut den interne databasen til dircolor og for å\n"
+#~ "velge et shell-syntaks utelukker hverandre."
+
+#~ msgid ""
+#~ "no FILE arguments may be used with the option to output\n"
+#~ "dircolors' internal database"
+#~ msgstr ""
+#~ "flagget for å skrive ut den interne databasen til dircolor tar\n"
+#~ "ikke argumenter"
+
+#~ msgid "too many arguments"
+#~ msgstr "for mange argumenter"
+
+#~ msgid "no SHELL environment variable, and no shell type option given"
+#~ msgstr ""
+#~ "ingen SHELL-miljøvariabel, og ingen shell-type spesifisert med flagg"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "Bruk: %s [FLAGG]... [FIL]...\n"
+
+#~ msgid ""
+#~ "Show information about the filesystem on which each FILE resides,\n"
+#~ "or all filesystems by default.\n"
+#~ "\n"
+#~ "  -a, --all             include filesystems having 0 blocks\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -i, --inodes          list inode information instead of block usage\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --local           limit listing to local filesystems\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "      --no-sync         do not invoke sync before getting usage info "
+#~ "(default)\n"
+#~ "  -P, --portability     use the POSIX output format\n"
+#~ "      --sync            invoke sync before getting usage info\n"
+#~ "  -t, --type=TYPE       limit listing to filesystems of type TYPE\n"
+#~ "  -T, --print-type      print filesystem type\n"
+#~ "  -x, --exclude-type=TYPE   limit listing to filesystems not of type TYPE\n"
+#~ "  -v                    (ignored)\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "Vis informasjon om filsystemet som FIL ligger på, eller alle filsystemer.\n"
+#~ "\n"
+#~ "  -a, --all             ta med filsystemer med 0 blokker\n"
+#~ "      --block-size=STØR bruke blokker på STØR bytes\n"
+#~ "  -h, --human-readable  skriv størrelser på en form lesbar for mennesker\n"
+#~ "                        (f.eks. 1K 234M 2G)\n"
+#~ "  -H, --si              det samme, men bruk 1000 som base, ikke 1024\n"
+#~ "  -i, --inodes          skriv inodeinformasjon istedet for blokk-forbruk\n"
+#~ "  -k, --kilobytes       bruk 1024-byte blokker\n"
+#~ "  -m, --megabytes       bruk 1024K-byte blokker\n"
+#~ "      --no-sync         ikke kjør sync før henting av informasjon "
+#~ "(forvalgt)\n"
+#~ "  -P, --portability     bruk POSIX-format på utdata\n"
+#~ "      --sync            kjør sync før henting av informasjon\n"
+#~ "  -t, --type=TYPE       list filsystemer av type TYPE\n"
+#~ "  -T, --print-type      skriv ut typen på filsystemet\n"
+#~ "  -x, --exclude-type=TYPE  list filsystemer som ikke er av type TYPE\n"
+#~ "  -v                    (ignorert)\n"
+#~ "      --help            vis denne hjelpeteksten og avslutt\n"
+#~ "      --version         vis programversjon og avslutt\n"
+
+#, fuzzy
+#~ msgid "file system type %s both selected and excluded"
+#~ msgstr "filsystem av type «%s» er både valgt og ekskludert"
+
+#, fuzzy
+#~ msgid "%scannot read table of mounted filesystems"
+#~ msgstr "kan ikke lese tabellen over monterte filsystemer"
+
+#~ msgid ""
+#~ "Summarize disk usage of each FILE, recursively for directories.\n"
+#~ "\n"
+#~ "  -a, --all             write counts for all files, not just directories\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -b, --bytes           print size in bytes\n"
+#~ "  -c, --total           produce a grand total\n"
+#~ "  -D, --dereference-args  dereference PATHs when symbolic link\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --count-links     count sizes many times if hard linked\n"
+#~ "  -L, --dereference     dereference all symbolic links\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "  -S, --separate-dirs   do not include size of subdirectories\n"
+#~ "  -s, --summarize       display only a total for each argument\n"
+#~ "  -x, --one-file-system  skip directories on different filesystems\n"
+#~ "  -X FILE, --exclude-from=FILE  Exclude files that match any pattern in "
+#~ "FILE.\n"
+#~ "      --exclude=PAT     Exclude files that match PAT.\n"
+#~ "      --max-depth=N     print the total for a directory (or file, with "
+#~ "--all)\n"
+#~ "                          only if it is N or fewer levels below the command\n"
+#~ "                          line argument;  --max-depth=0 is the same as\n"
+#~ "                          --summarize\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "Summer diskforbruk for hver FIL, rekursivt for filkataloger.\n"
+#~ "\n"
+#~ "  -a, --all             ta med filer, ikke bare filkataloger\n"
+#~ "      --block-size=STØR bruk blokker på STØR bytes\n"
+#~ "  -b, --bytes           skriv størrelse i bytes\n"
+#~ "  -c, --total           skriv ut totalsum\n"
+#~ "  -D, --dereference-args  følg søkestier når de er symbolske linker\n"
+#~ "  -h, --human-readable  skriv størrelser på en form lesbar for mennesker\n"
+#~ "                        (f.eks. 1K 234M 2G)\n"
+#~ "  -H, --si              det samme, men bruk 1000 som base, ikke 1024\n"
+#~ "  -k, --kilobytes       bruk 1024-byte blokker\n"
+#~ "  -l, --count-links     regn med størrelsen flere ganger for harde linker\n"
+#~ "  -L, --dereference     følg symbolske linker\n"
+#~ "  -m, --megabytes       bruk 1024K-byte blokker\n"
+#~ "  -S, --separate-dirs   ta ikke med størrelsen på underkataloger\n"
+#~ "  -s, --summarize       vis bare sum for hvert argument\n"
+#~ "  -x, --one-file-system  ta ikke med filkataloger på andre filsystem\n"
+#~ "  -X FIL, --exclude-from=FIL  Eksluder filer som svarer til et hvilket som\n"
+#~ "                        helst mønster i FIL.\n"
+#~ "      --exclude=MØN     eksluder filer som svarer til MØN.\n"
+#~ "      --max-depth=N     skriv totalen for en katalog (eller fil med --all)\n"
+#~ "                        bare hvis det er N eller færre nivå under "
+#~ "kommandoen.\n"
+#~ "      --help            vis denne hjelpeteksten og avslutt\n"
+#~ "      --version         vis programversjon og avslutt\n"
+
+#~ msgid "cannot change to `..' from directory %s"
+#~ msgstr "kan ikke gå til «..» fra filkatalogen %s"
+
+#~ msgid "cannot change to directory %s"
+#~ msgstr "kan ikke gå til filkatalogen %s"
+
+#~ msgid "total"
+#~ msgstr "totalt"
+
+#, fuzzy
+#~ msgid "invalid maximum depth %s"
+#~ msgstr "ugyldig maksiumunivå «%s»"
+
+#~ msgid "cannot both summarize and show all entries"
+#~ msgstr "kan ikke vise alle størrelser og bare vise summer samtidig."
+
+#~ msgid "warning: summarizing is the same as using --max-depth=0"
+#~ msgstr "advarsel: summering er det samme som å bruke --max-depth=0"
+
+#~ msgid "warning: summarizing conflicts with --max-depth=%d"
+#~ msgstr "advarsel: summering er i konflikt med --max-depth=%d"
+
+#~ msgid "the strip option may not be used when installing a directory"
+#~ msgstr "strip-flagget kan ikke brukes ved installering av en filkatalog"
+
+#, fuzzy
+#~ msgid "invalid mode %s"
+#~ msgstr "ugyldig beskyttelse «%s»"
+
+#, fuzzy
+#~ msgid "creating directory %s"
+#~ msgstr "oppretter filkatalog «%s»"
+
+#, fuzzy
+#~ msgid "installing multiple files, but last argument, %s is not a directory"
+#~ msgstr ""
+#~ "installerer flere filer, men siste argument (%s) er ikke en filkatalog"
+
+#, fuzzy
+#~ msgid "%s is a directory"
+#~ msgstr "%s: er en filkatalog"
+
+#, fuzzy
+#~ msgid "cannot obtain time stamps for %s"
+#~ msgstr "kan ikke slette filkatalogen «%s»"
+
+#, fuzzy
+#~ msgid "cannot set time stamps for %s"
+#~ msgstr "kan ikke opprette filkatalogen «%s»"
+
+#, fuzzy
+#~ msgid "cannot fork"
+#~ msgstr "kan ikke gjøre sikkerhetskopi av «%s»"
+
+#~ msgid "cannot run strip"
+#~ msgstr "kan ikke kjøre «strip»"
+
+#, fuzzy
+#~ msgid "invalid user %s"
+#~ msgstr "ugyldig bruker «%s»"
+
+#, fuzzy
+#~ msgid "invalid group %s"
+#~ msgstr "ugyldig gruppe «%s»"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST           (1st format)\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY   (2nd format)\n"
+#~ "  or:  %s -d [OPTION]... DIRECTORY...       (3rd format)\n"
+#~ msgstr ""
+#~ "Bruk:   %s [FLAGG]... KILDE MÅL             (1. format)\n"
+#~ " eller: %s [FLAGG]... KILDE... FILKATALOG   (2. format)\n"
+#~ " eller: %s -d [FLAGG]... FILKATALOG...      (3. format)\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "In the first two formats, copy SOURCE to DEST or multiple SOURCE(s) to\n"
+#~ "the existing DIRECTORY, while setting permission modes and owner/group.\n"
+#~ "In the third format, create all components of the given DIRECTORY(ies).\n"
+#~ "\n"
+#~ "      --backup[=CONTROL] make a backup of each existing destination file\n"
+#~ "  -b                  like --backup but does not accept an argument\n"
+#~ "  -c                  (ignored)\n"
+#~ "  -d, --directory     treat all arguments as directory names; create all\n"
+#~ "                        components of the specified directories\n"
+#~ "  -D                  create all leading components of DEST except the "
+#~ "last,\n"
+#~ "                        then copy SOURCE to DEST;  useful in the 1st format\n"
+#~ "  -g, --group=GROUP   set group ownership, instead of process' current "
+#~ "group\n"
+#~ "  -m, --mode=MODE     set permission mode (as in chmod), instead of "
+#~ "rwxr-xr-x\n"
+#~ "  -o, --owner=OWNER   set ownership (super-user only)\n"
+#~ "  -p, --preserve-timestamps   apply access/modification times of SOURCE "
+#~ "files\n"
+#~ "                        to corresponding destination files\n"
+#~ "  -s, --strip         strip symbol tables, only for 1st and 2nd formats\n"
+#~ "  -S, --suffix=SUFFIX override the usual backup suffix\n"
+#~ "  -v, --verbose       print the name of each directory as it is created\n"
+#~ "      --help          display this help and exit\n"
+#~ "      --version       output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "De to første formatene kopierer KILDE til MÅL eller en eller flere KILDE(r)\n"
+#~ "til FILKATALOG, samtidig som beskyttelser og eier/gruppe settes.  Det\n"
+#~ "tredje formatet oppretter FILKATALOG(er) samt eventuelle foreldrekataloger.\n"
+#~ "\n"
+#~ "  -b, --backup           gjør sikkerhetskopi før sletting\n"
+#~ "  -c                     (ignorert)\n"
+#~ "  -d, --directory        opprett filkataloger, inklusive foreldrekataloger.\n"
+#~ "  -D                     opprett alle ledende komponentene av MÅL utenom "
+#~ "den\n"
+#~ "                         siste, kopier deretter KILDE til MÅL; nyttig for "
+#~ "det\n"
+#~ "                         første formatet.\n"
+#~ "  -g, --group=GRUPPE     sett gruppe, istedet for prosessens nåværende "
+#~ "gruppe\n"
+#~ "  -m, --mode=BESKYTTELSE sett beskyttelse (som chmod), istedet for 0644\n"
+#~ "  -o, --owner=EIER       sett eier (kun super-user)\n"
+#~ "  -p, --preserve-timestamps   sett aksess/endringstider på mål-filene som\n"
+#~ "                         tilsvarer KILDE-filene.\n"
+#~ "  -s, --strip            ta bort symboltabeller, kun format 1 og 2\n"
+#~ "  -S, --suffix=SUFFIKS   overstyr det vanlige sikkerhetskopi-suffikset\n"
+#~ "      --verbose          skriv navnet på hver katalog når det blir "
+#~ "opprettet\n"
+#~ "  -V, --version-control=ORD  overstyr den vanlige versjonskontrollen\n"
+#~ "      --help             vis denne hjelpeteksten og avslutt\n"
+#~ "      --version          vis programversjon og avslutt\n"
+#~ "\n"
+
+#~ msgid "%s: hard link not allowed for directory"
+#~ msgstr "%s: hard link er ikke tillatt for filkataloger"
+
+#~ msgid "%s: cannot overwrite directory"
+#~ msgstr "%s: kan ikke overskrive filkatalog"
+
+#, fuzzy
+#~ msgid "%s: replace %s? "
+#~ msgstr "%s: overskrive «%s»? "
+
+#~ msgid "%s: File exists"
+#~ msgstr "%s: Fil eksisterer"
+
+#, fuzzy
+#~ msgid "create symbolic link %s to %s"
+#~ msgstr "kan ikke opprette symbolsk link «%s»"
+
+#, fuzzy
+#~ msgid "create hard link %s to %s"
+#~ msgstr "%s: vil ikke lage hard link «%s» til katalog «%s»"
+
+#, fuzzy
+#~ msgid "creating symbolic link %s to %s"
+#~ msgstr "kan ikke opprette symbolsk link «%s»"
+
+#, fuzzy
+#~ msgid "creating hard link %s to %s"
+#~ msgstr "%s: vil ikke lage hard link «%s» til katalog «%s»"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY TARGET...\n"
+#~ msgstr ""
+#~ "Bruk:   %s [FLAGG]... KILDE MÅL             (1. format)\n"
+#~ " eller: %s [FLAGG]... KILDE... FILKATALOG   (2. format)\n"
+#~ " eller: %s -d [FLAGG]... FILKATALOG...      (3. format)\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Create a link to the specified TARGET with optional LINK_NAME.\n"
+#~ "If LINK_NAME is omitted, a link with the same basename as the TARGET is\n"
+#~ "created in the current directory.  When using the second form with more\n"
+#~ "than one TARGET, the last argument must be a directory;  create links\n"
+#~ "in DIRECTORY to each TARGET.  Create hard links by default, symbolic\n"
+#~ "links with --symbolic.  When creating hard links, each TARGET must exist.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]      make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                          like --backup but does not accept an argument\n"
+#~ "  -d, -F, --directory         hard link directories (super-user only)\n"
+#~ "  -f, --force                 remove existing destination files\n"
+#~ "  -n, --no-dereference        treat destination that is a symlink to a\n"
+#~ "                                directory as if it were a normal file\n"
+#~ "  -i, --interactive           prompt whether to remove destinations\n"
+#~ "  -s, --symbolic              make symbolic links instead of hard links\n"
+#~ "  -S, --suffix=SUFFIX         override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  specify the DIRECTORY in which to "
+#~ "create\n"
+#~ "                                the links\n"
+#~ "  -v, --verbose               print name of each file before linking\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Opprett en link til det spesifiserte MÅLer med eventuelt LINKNAVN.  Hvis "
+#~ "det\n"
+#~ "er mer enn ett MÅL, må det siste argumentet være en katalog;  lag linker\n"
+#~ "i KATALOG til hvert MÅL.  Forvalgt er å lage harde linker, symbolske linker\n"
+#~ "med --symbolic.  Når det opprettes harde linker må hvert MÅL eksistere.\n"
+#~ "\n"
+#~ "  -b, --backup                 gjør sikkerhetskopi av slettede filer\n"
+#~ "  -d, -F, --directory          lag harde linker for filkataloger\n"
+#~ "                               (kun super-user)\n"
+#~ "  -f, --force                  slett eksisterende mål\n"
+#~ "  -n, --no-dereference         behandle mål som er en symbolsk link som om\n"
+#~ "                                 det skulle være en normal fil\n"
+#~ "  -i, --interactive            be om bekreftelse før sletting av filer\n"
+#~ "  -s, --symbolic               lag symbolske linker istedet for harde "
+#~ "linker\n"
+#~ "  -S, --suffix=SUFFIKS         overstyr det vanlige "
+#~ "sikkerhetskopi-suffikset\n"
+#~ "  -v, --verbose                skriv navnet på hver fil før linking\n"
+#~ "  -V, --version-control=ORD    overstyr den vanlige versjonskontrollen\n"
+#~ "      --help                   vis denne hjelpeteksten og avslutt\n"
+#~ "      --version                vis programversjon og avslutt\n"
+#~ "\n"
+
+#~ msgid "missing file argument"
+#~ msgstr "mangler filargument"
+
+#, fuzzy
+#~ msgid "specified target directory, %s is not a directory"
+#~ msgstr "«%s» er ikke en filkatalog"
+
+#~ msgid "when making multiple links, last argument must be a directory"
+#~ msgstr ""
+#~ "ved oppretting av flere linker, må siste argument være en filkatalog"
+
+#~ msgid "ignoring invalid width in environment variable COLUMNS: %s"
+#~ msgstr "ignorerer ugyldig lengde i miljøvariabelen COLUMNS: %s"
+
+#~ msgid "ignoring invalid tab size in environment variable TABSIZE: %s"
+#~ msgstr "ignorerer ugyldig tab-størrelse i miljøvariabelen TABSIZE: %s"
+
+#~ msgid "invalid line width: %s"
+#~ msgstr "ugyldig linjelengde: %s"
+
+#~ msgid "invalid tab size: %s"
+#~ msgstr "ugyldig tab-størrelse: %s"
+
+#~ msgid "unrecognized prefix: %s"
+#~ msgstr "ukjent prefiks: %s"
+
+#~ msgid "unparsable value for LS_COLORS environment variable"
+#~ msgstr "ubegripelig verdi i miljøvariabelen LS_COLORS"
+
+#, fuzzy
+#~ msgid ""
+#~ "List information about the FILEs (the current directory by default).\n"
+#~ "Sort entries alphabetically if none of -cftuSUX nor --sort.\n"
+#~ "\n"
+#~ "  -a, --all                  do not hide entries starting with .\n"
+#~ "  -A, --almost-all           do not list implied . and ..\n"
+#~ "  -b, --escape               print octal escapes for nongraphic characters\n"
+#~ "      --block-size=SIZE      use SIZE-byte blocks\n"
+#~ "  -B, --ignore-backups       do not list implied entries ending with ~\n"
+#~ "  -c                         with -lt: sort by, and show, ctime (time of "
+#~ "last\n"
+#~ "                               modification of file status information)\n"
+#~ "                               with -l: show ctime and sort by name\n"
+#~ "                               otherwise: sort by ctime\n"
+#~ "  -C                         list entries by columns\n"
+#~ "      --color[=WHEN]         control whether color is used to distinguish "
+#~ "file\n"
+#~ "                               types.  WHEN may be `never', `always', or "
+#~ "`auto'\n"
+#~ "  -d, --directory            list directory entries instead of contents\n"
+#~ "  -D, --dired                generate output designed for Emacs' dired mode\n"
+#~ "  -f                         do not sort, enable -aU, disable -lst\n"
+#~ "  -F, --classify             append indicator (one of */=@|) to entries\n"
+#~ "      --format=WORD          across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            list both full date and full time\n"
+#~ msgstr ""
+#~ "List informasjon om FILer (aktiv filkatalog om ikke annet spesifiseres).\n"
+#~ "Sorter filene alfabetisk om ingen av flaggene -cftuSUX eller --sort gis.\n"
+#~ "\n"
+#~ "  -a, --all                  ikke gjem filer som starter med .\n"
+#~ "  -A, --almost-all           ikke vis . og ..\n"
+#~ "  -b, --escape               skriv oktale koder for ikke-grafiske tegn\n"
+#~ "      --block-size=STØRRELSE use blokker på STØRRELSE bytes\n"
+#~ "  -B, --ignore-backups       ikke vis filer som slutter med ~\n"
+#~ "  -c                         sorter på endringsdato; med -l: vis "
+#~ "endringsdato\n"
+#~ "  -C                         list filer i kolonner\n"
+#~ "      --color[=NÅR]          kontroller om farge skal brukes for å skille\n"
+#~ "                               filtyper.  NÅR kan være «never», «always»,\n"
+#~ "                               eller «auto».\n"
+#~ "  -d, --directory            list filkataloger istedet for innholdet\n"
+#~ "  -D, --dired                generer utdata for Emacs' dired-modus\n"
+#~ "  -f                         ikke sorter, slå på -aU, slå av -lst\n"
+#~ "  -F, --classify             legg til en bokstav (en av */=@|) for filtypen\n"
+#~ "      --format=ORD           across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            list full dato og klokkeslett\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -g                         (ignored)\n"
+#~ "  -G, --no-group             inhibit display of group information\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "      --si                   likewise, but use powers of 1000 not 1024\n"
+#~ "  -H                         same as `--si' for now; soon to change\n"
+#~ "                               to conform to POSIX\n"
+#~ "      --indicator-style=WORD append indicator with style WORD to entry "
+#~ "names:\n"
+#~ "                               none (default), classify (-F), file-type "
+#~ "(-p)\n"
+#~ "  -i, --inode                print index number of each file\n"
+#~ "  -I, --ignore=PATTERN       do not list implied entries matching shell "
+#~ "PATTERN\n"
+#~ "  -k, --kilobytes            like --block-size=1024\n"
+#~ "  -l                         use a long listing format\n"
+#~ "  -L, --dereference          list entries pointed to by symbolic links\n"
+#~ "  -m                         fill width with a comma separated list of "
+#~ "entries\n"
+#~ "  -n, --numeric-uid-gid      list numeric UIDs and GIDs instead of names\n"
+#~ "  -N, --literal              print raw entry names (don't treat e.g. "
+#~ "control\n"
+#~ "                               characters specially)\n"
+#~ "  -o                         use long listing format without group info\n"
+#~ "  -p, --file-type            append indicator (one of /=@|) to entries\n"
+#~ "  -q, --hide-control-chars   print ? instead of non graphic characters\n"
+#~ "      --show-control-chars   show non graphic characters as-is (default\n"
+#~ "                             unless program is `ls' and output is a "
+#~ "terminal)\n"
+#~ "  -Q, --quote-name           enclose entry names in double quotes\n"
+#~ "      --quoting-style=WORD   use quoting style WORD for entry names:\n"
+#~ "                               literal, locale, shell, shell-always, c, "
+#~ "escape\n"
+#~ "  -r, --reverse              reverse order while sorting\n"
+#~ "  -R, --recursive            list subdirectories recursively\n"
+#~ "  -s, --size                 print size of each file, in blocks\n"
+#~ msgstr ""
+#~ "  -g                         (ignorert)\n"
+#~ "  -G, --no-group             ta ikke med gruppe i listingen\n"
+#~ "  -h, --human-readable       skriv størrelser i et format lesbart av "
+#~ "mennesker\n"
+#~ "                             (f.eks. 1K 234M 2G)\n"
+#~ "  -H, --si                   det sammen, men bruk 1000 som base, ikke 1024\n"
+#~ "      --indicator-style=ORD  legg til indikator med stil ORD til elementer:\n"
+#~ "                             none (forvalgt), classify (-F), file-type (-p)\n"
+#~ "  -i, --inode                list indeksnummeret for hver fil\n"
+#~ "  -I, --ignore=MØNSTER       vis ikke filer som stemmer overens med\n"
+#~ "                             shell-MØNSTERet\n"
+#~ "  -k, --kilobytes            bruk 1024 blokker, på tross av POSIXLY_CORRECT\n"
+#~ "  -l                         bruk langt listeformat\n"
+#~ "  -L, --dereference          vis filer som pekes på av symbolske linker\n"
+#~ "  -m                         skriv full skjermbredde med kommaseparering\n"
+#~ "  -n, --numeric-uid-gid      skriv UID og GID med tall istedet for navn\n"
+#~ "  -N, --literal              skriv ut alle tegn (inklusive kontrolltegn)\n"
+#~ "  -o                         bruk langt listeformat uten gruppeinformasjon\n"
+#~ "  -p                         legg til en bokstav for filtypen\n"
+#~ "  -q, --hide-control-chars   skriv ? istedet for ikke-grafiske tegn\n"
+#~ "      --show-control-chars   vis kontrolltegn som de er (forvalgt)\n"
+#~ "  -Q, --quote-name           sett filnavn i gåseøyne\n"
+#~ "      --quoting-style=ORD    bruk beskyttelsesstil ORD for filnavn:\n"
+#~ "                               literal, shell, shell-always, c eller escape\n"
+#~ "  -r, --reverse              sorter baklengs\n"
+#~ "  -R, --recursive            list underkataloger rekursivt\n"
+#~ "  -s, --size                 skriv blokkstørrelse for hver fil\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -S                         sort by file size\n"
+#~ "      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+#~ "                               version -v\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=WORD            show time as WORD instead of modification "
+#~ "time:\n"
+#~ "                               atime, access, use, ctime or status; use\n"
+#~ "                               specified time as sort key if --sort=time\n"
+#~ "  -t                         sort by modification time\n"
+#~ "  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8\n"
+#~ "  -u                         with -lt: sort by, and show, access time\n"
+#~ "                               with -l: show access time and sort by name\n"
+#~ "                               otherwise: sort by access time\n"
+#~ "  -U                         do not sort; list entries in directory order\n"
+#~ "  -v                         sort by version\n"
+#~ "  -w, --width=COLS           assume screen width instead of current value\n"
+#~ "  -x                         list entries by lines instead of by columns\n"
+#~ "  -X                         sort alphabetically by entry extension\n"
+#~ "  -1                         list one file per line\n"
+#~ "      --help                 display this help and exit\n"
+#~ "      --version              output version information and exit\n"
+#~ "\n"
+#~ "By default, color is not used to distinguish types of files.  That is\n"
+#~ "equivalent to using --color=none.  Using the --color option without the\n"
+#~ "optional WHEN argument is equivalent to using --color=always.  With\n"
+#~ "--color=auto, color codes are output only if standard output is connected\n"
+#~ "to a terminal (tty).\n"
+#~ msgstr ""
+#~ "  -S                         sorter etter filstørrelse\n"
+#~ "      --sort=ORD             ctime -c, extension -X, none -U, size -S,\n"
+#~ "                               status -c, time -t\n"
+#~ "      --time=ORD             atime -u, access -u, use -u\n"
+#~ "  -t                         sorter på modifiseringstid, med -l: vis\n"
+#~ "                               modifiseringstid\n"
+#~ "  -T, --tabsize=KOLONNER     sett tabulatorstørrelse til KOLONNER\n"
+#~ "                               (8 er forvalgt)\n"
+#~ "  -u                         sorter på tilgangstid, med -l: vis tilgangstid\n"
+#~ "  -U                         ikke sorter, list filer slik de ligger i "
+#~ "katalogen\n"
+#~ "  -v                         sorter på versjon\n"
+#~ "  -w, --width=KOLONNER       sett skjermbredde til KOLONNER\n"
+#~ "  -x                         list filer i rader istedet for kolonner\n"
+#~ "  -X                         sorter alfabetisk på fil-ekstensjon\n"
+#~ "  -1                         list én fil per linje\n"
+#~ "      --help                 vis denne hjelpeteksten og avslutt\n"
+#~ "      --version              vis programversjon og avslutt\n"
+#~ "\n"
+#~ "Normalt brukes ikke farge for å skille mellom filtyper.  Det er ekvivalent\n"
+#~ "med å bruke --color=none.  Flagget --color uten argumenter er ekvivalent\n"
+#~ "med --color=always.  Med --color=auto blir fargekoder skrevet ut kun dersom\n"
+#~ "standard utkanal er koblet til en terminal (tty).\n"
+
+#~ msgid "Usage: %s [OPTION] DIRECTORY...\n"
+#~ msgstr "Bruk: %s [FLAGG] FILKATALOG...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Create the DIRECTORY(ies), if they do not already exist.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not rwxrwxrwx - "
+#~ "umask\n"
+#~ "  -p, --parents     no error if existing, make parent directories as needed\n"
+#~ "  -v, --verbose     print a message for each created directory\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Opprett FILKATALOG(ene), dersom de ikke allerede eksisterer.\n"
+#~ "\n"
+#~ "  -m, --mode=BESKYTTELSE sett beskyttelse (som chmod), ikke rwxrwxrwx - "
+#~ "umask\n"
+#~ "  -p, --parents          opprett foreldrekataloger som nødvendig\n"
+#~ "      --verbose          skriv en melding for hver filkatalog som opprettes\n"
+#~ "      --help             vis denne hjelpeteksten og avslutt\n"
+#~ "      --version          vis programversjon og avslutt\n"
+
+#, fuzzy
+#~ msgid "created directory %s"
+#~ msgstr "opprettet filkatalog «%s»"
+
+#, fuzzy
+#~ msgid "cannot set permissions of directory %s"
+#~ msgstr "kan ikke opprette filkatalogen «%s»"
+
+#~ msgid "Usage: %s [OPTION] NAME...\n"
+#~ msgstr "Bruk: %s [FLAGG] NAVN...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Create named pipes (FIFOs) with the given NAMEs.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Opprett navngitte pipes (FIFOs) med angitte NAVN.\n"
+#~ "\n"
+#~ "  -m, --mode=BESKYTTELSE sett beskyttelse (som chmod), 0666 - ikke umask\n"
+#~ "      --help             vis denne hjelpeteksten og avslutt\n"
+#~ "      --version          vis programversjon og avslutt\n"
+
+#~ msgid "fifo files not supported"
+#~ msgstr "fifo-filer er ikke støttet"
+
+#~ msgid "invalid mode"
+#~ msgstr "ugyldig beskyttelse"
+
+#, fuzzy
+#~ msgid "cannot create fifo `%s'"
+#~ msgstr "kan ikke opprette fifo «%s»"
+
+#, fuzzy
+#~ msgid "cannot set permissions of fifo `%s'"
+#~ msgstr "kan ikke opprette filkatalogen «%s»"
+
+#~ msgid "Usage: %s [OPTION]... NAME TYPE [MAJOR MINOR]\n"
+#~ msgstr "Bruk: %s [FLAGG]... NAVN TYPE [MAJOR MINOR]\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Create the special file NAME of the given TYPE.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ "\n"
+#~ "MAJOR MINOR are forbidden for TYPE p, mandatory otherwise.  TYPE may be:\n"
+#~ "\n"
+#~ "  b      create a block (buffered) special file\n"
+#~ "  c, u   create a character (unbuffered) special file\n"
+#~ "  p      create a FIFO\n"
+#~ msgstr ""
+#~ "Opprett den spesielle filen NAVN med gitt TYPE.\n"
+#~ "\n"
+#~ "  -m, --mode=BESKYTTELSE sett beskyttelse (som chmod), 0666 - ikke umask\n"
+#~ "      --help             vis denne hjelpeteksten og avslutt\n"
+#~ "      --version          vis programversjon og avslutt\n"
+#~ "\n"
+#~ "MAJOR MINOR er ikke tillatt for TYPE p, men er nødvendig ellers.  TYPE kan\n"
+#~ "være:\n"
+#~ "\n"
+#~ "  b      opprett en blokk spesiell fil (bufret) \n"
+#~ "  c, u   opprett en tegn spesiell fil (ubufret) \n"
+#~ "  p      opprett en FIFO\n"
+
+#~ msgid "wrong number of arguments"
+#~ msgstr "feil antall argumenter"
+
+#~ msgid "block special files not supported"
+#~ msgstr "blokk-spesiell fil er ikke støttet"
+
+#~ msgid ""
+#~ "when creating block special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "ved oppretting av blokk-spesielle filer, må major og minor enhetsnummer\n"
+#~ "spesifiseres"
+
+#, fuzzy
+#~ msgid "invalid major device number %s"
+#~ msgstr "ugyldig major enhetsnummer «%s»"
+
+#, fuzzy
+#~ msgid "invalid minor device number %s"
+#~ msgstr "ugyldig minor enhetsnummer «%s»"
+
+#~ msgid "character special files not supported"
+#~ msgstr "tegn-spesielle filer er ikke støttet"
+
+#~ msgid ""
+#~ "when creating character special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "ved oppretting av tegn spesielle filer, må major og minor enhetsnummer\n"
+#~ "spesifiseres"
+
+#~ msgid "major and minor device numbers may not be specified for fifo files"
+#~ msgstr "major- og minor-nummer kan ikke angis for fifo-filer"
+
+#, fuzzy
+#~ msgid "cannot set permissions of `%s'"
+#~ msgstr "setter beskyttelse for %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -f, --force                  never prompt before overwriting\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "      --strip-trailing-slashes  remove any trailing slashes from each "
+#~ "SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 move only older or brand new non-directories\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Endre navn på KILDE til MÅL, eller flytt KILDE(r) til FILKATALOG.\n"
+#~ "\n"
+#~ "  -b, --backup                 gjør sikkerhetskopi før sletting\n"
+#~ "  -f, --force                  slett eksisterende filer uten bekreftelse\n"
+#~ "  -i, --interactive            be om bekreftelse før overskriving av filer\n"
+#~ "  -S, --suffix=SUFFIKS         overstyr det vanlige "
+#~ "sikkerhetskopi-suffikset\n"
+#~ "  -u, --update                 flytt bare eldre eller helt nye filer\n"
+#~ "  -v, --verbose                forklar hva som skjer\n"
+#~ "  -V, --version-control=ORD    overstyr den vanlige versjonskontrollen\n"
+#~ "      --help                   vis denne hjelpeteksten og avslutt\n"
+#~ "      --version                vis programversjon og avslutt\n"
+#~ "\n"
+
+#~ msgid "when moving multiple files, last argument must be a directory"
+#~ msgstr "ved flytting av flere filer, må siste argument være en filkatalog"
+
+#, fuzzy
+#~ msgid "cannot open directory %s"
+#~ msgstr "kan ikke slette filkatalogen «%s»"
+
+#, fuzzy
+#~ msgid "closing directory %s"
+#~ msgstr "slettes filkatalog, %s"
+
+#, fuzzy
+#~ msgid "%s: remove write-protected directory %s? "
+#~ msgstr "%s: slette skrivebeskyttet filkatalog «%s»? "
+
+#, fuzzy
+#~ msgid "%s: remove write-protected file %s? "
+#~ msgstr "%s: slette skrive-beskyttet fil «%s»? "
+
+#, fuzzy
+#~ msgid "%s: remove directory %s? "
+#~ msgstr "%s: slette filkatalog «%s»? "
+
+#, fuzzy
+#~ msgid "%s: remove %s? "
+#~ msgstr "%s: slette «%s»? "
+
+#~ msgid "removing %s\n"
+#~ msgstr "sletter %s\n"
+
+#, fuzzy
+#~ msgid "cannot unlink %s"
+#~ msgstr "kan ikke slette «%s»"
+
+#, fuzzy
+#~ msgid "%s: directory %s is write protected; descend into it anyway? "
+#~ msgstr "%s: katalog «%s» er skrivebskyttet; gå inn i den likevel? "
+
+#, fuzzy
+#~ msgid "%s: descend into directory %s? "
+#~ msgstr "%s: gå inn i filkatalog «%s»? "
+
+#~ msgid "removing all entries of directory %s\n"
+#~ msgstr "fjerner alt i filkatalog «%s»\n"
+
+#, fuzzy
+#~ msgid "cannot lstat `.' in %s"
+#~ msgstr "kan ikke opprette linken «%s»"
+
+#~ msgid "cannot change back to directory %s via `..'"
+#~ msgstr "kan ikke gå tilbake til filkatalogen %s via «..»"
+
+#, fuzzy
+#~ msgid "%s: remove directory %s%s? "
+#~ msgstr "%s: slette filkatalog «%s»%s? "
+
+#~ msgid " (might be nonempty)"
+#~ msgstr " (er kanskje ikke tom)"
+
+#~ msgid "removing the directory itself: %s\n"
+#~ msgstr "sletter katalogen selv: %s\n"
+
+#, fuzzy
+#~ msgid "cannot remove current directory %s"
+#~ msgstr "kan ikke slette aktiv filkatalog «%s»"
+
+#, fuzzy
+#~ msgid "cannot remove directory %s"
+#~ msgstr "kan ikke slette filkatalogen «%s»"
+
+#~ msgid "cannot remove `.' or `..'"
+#~ msgstr "kan ikke slette «.» eller «..»"
+
+#~ msgid ""
+#~ "WARNING: Circular directory structure.\n"
+#~ "This almost certainly means that you have a corrupted file system.\n"
+#~ "NOTIFY YOUR SYSTEM MANAGER.\n"
+#~ "The following two directories have the same inode number:\n"
+#~ msgstr ""
+#~ "ADVARSEL: Sirkulær katalogstruktur.\n"
+#~ "Dette betyr nesten helt sikkert at du har et skadet filsystem.\n"
+#~ "MELD IFRA TIL DIN SYSTEMADMININISTRATOR.\n"
+#~ "Følgende to kataloger har samme inode-nummer:\n"
+
+#~ msgid "continue? "
+#~ msgstr "fortsette? "
+
+#~ msgid "Usage: %s [OPTION]... FILE...\n"
+#~ msgstr "Bruk: %s [FLAGG]... FIL...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Remove (unlink) the FILE(s).\n"
+#~ "\n"
+#~ "  -d, --directory       unlink directory, even if non-empty (super-user "
+#~ "only)\n"
+#~ "  -f, --force           ignore nonexistent files, never prompt\n"
+#~ "  -i, --interactive     prompt before any removal\n"
+#~ "  -r, -R, --recursive   remove the contents of directories recursively\n"
+#~ "  -v, --verbose         explain what is being done\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ "\n"
+#~ "To remove a file whose name starts with a `-', for example `-foo',\n"
+#~ "use one of these commands:\n"
+#~ "  %s -- -foo\n"
+#~ "\n"
+#~ "  %s ./-foo\n"
+#~ "\n"
+#~ "Note that if you use rm to remove a file, it is usually possible to recover\n"
+#~ "the contents of that file.  If you want more assurance that the contents "
+#~ "are\n"
+#~ "truly unrecoverable, consider using shred.\n"
+#~ msgstr ""
+#~ "Slett FIL(er).\n"
+#~ "\n"
+#~ "  -d, --directory       slett filkataloger, selv om de ikke er tomme\n"
+#~ "                          (kun super-user)\n"
+#~ "  -f, --force           ignorer filer som ikke eksisterer, ingen "
+#~ "bekreftelse\n"
+#~ "  -i, --interactive     be om bekreftelse før sletting av filer\n"
+#~ "  -r, -R, --recursive   slett innholdet av filkataloger rekursivt\n"
+#~ "  -v, --verbose         forklar hva som skjer\n"
+#~ "      --help            vis denne hjelpeteksten og avslutt\n"
+#~ "      --version         vis programversjon og avslutt\n"
+
+#~ msgid "removing directory, %s"
+#~ msgstr "slettes filkatalog, %s"
+
+#~ msgid "Usage: %s [OPTION]... DIRECTORY...\n"
+#~ msgstr "Bruk: %s [FLAGG]... FILKATALOG...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Remove the DIRECTORY(ies), if they are empty.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ignore each failure that is solely because a directory\n"
+#~ "                  is non-empty\n"
+#~ "  -p, --parents   remove DIRECTORY, then try to remove each directory\n"
+#~ "                  component of that path name.  E.g., `rmdir -p a/b/c' is\n"
+#~ "                  similar to `rmdir a/b/c a/b a'.\n"
+#~ "  -v, --verbose   output a diagnostic for every directory processed\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Slett FILKATALOG(er), dersom de er tomme.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ignorer alle feil som enbart skyldes at katalogen ikke\n"
+#~ "                  er tom\n"
+#~ "  -p, --parents   slett gitte foreldrekataloger dersom de blir tomme\n"
+#~ "      --verbose   skriv ut diagnostikk for hver katalog som behandles\n"
+#~ "      --help      vis denne hjelpeteksten og avslutt\n"
+#~ "      --version   vis programversjon og avslutt\n"
+
+#, fuzzy
+#~ msgid "Usage: %s [OPTIONS] FILE [...]\n"
+#~ msgstr "Bruk: %s [FLAGG]... FIL...\n"
+
+#, fuzzy
+#~ msgid "%s: cannot rewind"
+#~ msgstr "%s: kan ikke overskrive filkatalog"
+
+#, fuzzy
+#~ msgid "%s: invalid file type"
+#~ msgstr "%s: ukjent filtype"
+
+#, fuzzy
+#~ msgid "%s: removing"
+#~ msgstr "sletter %s\n"
+
+#, fuzzy
+#~ msgid "%s: renamed to %s"
+#~ msgstr "%s: slette «%s»? "
+
+#, fuzzy
+#~ msgid "%s: removed"
+#~ msgstr "%s: slette «%s»? "
+
+#, fuzzy
+#~ msgid "%s: cannot remove"
+#~ msgstr "%s: kan ikke overskrive filkatalog"
+
+#, fuzzy
+#~ msgid "%s: invalid number of passes"
+#~ msgstr "ugyldig nummer «%s»"
+
+#, fuzzy
+#~ msgid "%s: invalid file size"
+#~ msgstr "ugyldig tab-størrelse: %s"
+
+#~ msgid "Usage: %s [OPTION]\n"
+#~ msgstr "Bruk: %s [FLAGG]\n"
+
+#~ msgid ""
+#~ "Force changed blocks to disk, update the super block.\n"
+#~ "\n"
+#~ "  --help      display this help and exit\n"
+#~ "  --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Lagre endrede blokker til disk, oppdater superblokken.\n"
+#~ "\n"
+#~ "  --help      vis denne hjelpeteksten og avslutt\n"
+#~ "  --version   vis programversjon og avslutt\n"
+
+#~ msgid "ignoring all arguments"
+#~ msgstr "ignorerer alle argumenter"
+
+#, fuzzy
+#~ msgid "creating %s"
+#~ msgstr "sletter %s\n"
+
+#, fuzzy
+#~ msgid "setting times of %s"
+#~ msgstr "bevarer tider for %s"
+
+#, fuzzy
+#~ msgid "  or:  %s [-acm] MMDDhhmm[YY] FILE... (obsolescent)\n"
+#~ msgstr "  eller: %s [-acm] MMDDttmm[ÅÅ] FIL... (avleggs)\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Update the access and modification times of each FILE to the current time.\n"
+#~ "\n"
+#~ "  -a                     change only the access time\n"
+#~ "  -c, --no-create        do not create any files\n"
+#~ "  -d, --date=STRING      parse STRING and use it instead of current time\n"
+#~ "  -f                     (ignored)\n"
+#~ "  -m                     change only the modification time\n"
+#~ "  -r, --reference=FILE   use this file's times instead of current time\n"
+#~ "  -t STAMP               use [[CC]YY]MMDDhhmm[.ss] instead of current time\n"
+#~ "  --time=WORD            set time given by WORD: access atime use (same as "
+#~ "-a)\n"
+#~ "                           modify mtime (same as -m)\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ "Note that the three time-date formats recognized for the -d and -t options\n"
+#~ "and for the obsolescent argument are all different.\n"
+#~ msgstr ""
+#~ "Sett tilgangs- og modifiseringstidene for FIL(er) til nåværende\n"
+#~ "klokkeslett.\n"
+#~ "\n"
+#~ "  -a                     endre bare tilgangstiden\n"
+#~ "  -c                     ikke opprett filer\n"
+#~ "  -d, --date=STRENG      les STRENG og bruk det som nåværende klokkeslett\n"
+#~ "  -f                     (ignorert)\n"
+#~ "  -m                     endre bare modifiseringstiden\n"
+#~ "  -r, --reference=FILE   bruk denne filens tider istedet for nåværende\n"
+#~ "                           klokkeslett\n"
+#~ "  -t STAMP               bruk MMDDttmm[[HH]ÅÅ][.ss] istedet for nåværende\n"
+#~ "                           klokkeslett\n"
+#~ "      --time=WORD        access -a, atime -a, mtime -m, modify -m, use -a\n"
+#~ "      --help             vis denne hjelpeteksten og avslutt\n"
+#~ "      --version          vis programversjon og avslutt\n"
+#~ "\n"
+#~ "STAMP kan bli brukt uten -t hvis ingen av -drt eller -- er brukt.\n"
+#~ "Merk at de tre tid-dato-formatene som gjenkjennes for flaggene -d og -t\n"
+#~ "og for det gamle argumentet er alle forskjellige.\n"
+
+#, fuzzy
+#~ msgid "invalid date format %s"
+#~ msgstr "ugyldig datoformat «%s»"
+
+#~ msgid "cannot specify times from more than one source"
+#~ msgstr "kan ikke ta klokkeslett fra mer enn én kilde"
+
+#~ msgid "file arguments missing"
+#~ msgstr "mangler filargumenter"
+
+#~ msgid "group of %s changed to %s\n"
+#~ msgstr "gruppe til %s endret til %s\n"
+
+#, fuzzy
+#~ msgid "ownership of %s changed to "
+#~ msgstr "eier av %s endret til "
+
+#, fuzzy
+#~ msgid "you are not a member of group %s"
+#~ msgstr "du er ikke medlem av gruppen «%s»"
+
+#~ msgid "%s: invalid group number"
+#~ msgstr "%s: ugyldig gruppenummer"
+
+#, fuzzy
+#~ msgid "%s: cannot determine size"
+#~ msgstr "%s: kan ikke overskrive filkatalog"
+
+#, fuzzy
+#~ msgid "cannot make fifo %s"
+#~ msgstr "kan ikke lage fifo-fil «%s»"
+
+#, fuzzy
+#~ msgid "cannot change permissions for %s"
+#~ msgstr "setter beskyttelse for %s"
+
+#, fuzzy
+#~ msgid "cannot remove old link to %s"
+#~ msgstr "kan ikke slette gammel link til «%s»"
+
+#~ msgid "virtual memory exhausted"
+#~ msgstr "virtuelt minne oppbrukt"
+
+#, fuzzy
+#~ msgid "Memory exhausted"
+#~ msgstr "virtuelt minne oppbrukt"
+
+#~ msgid "invalid mode `%s'"
+#~ msgstr "ugyldig beskyttelse «%s»"
+
+#~ msgid "cannot create directory `%s'"
+#~ msgstr "kan ikke opprette filkatalogen «%s»"
+
+#~ msgid "cannot remove `%s'"
+#~ msgstr "kan ikke slette «%s»"
+
+#, fuzzy
+#~ msgid "specified target, `%s' is not a directory"
+#~ msgstr "«%s» er ikke en filkatalog"
+
+#~ msgid "`%s' and `%s' are the same file"
+#~ msgstr "«%s» og «%s» er samme fil"
+
+#~ msgid "cannot backup `%s'"
+#~ msgstr "kan ikke gjøre sikkerhetskopi av «%s»"
+
+#~ msgid "cannot un-backup `%s'"
+#~ msgstr "kan ikke ta tilbake sikkerhetskopi av «%s»"
+
+#, fuzzy
+#~ msgid "cannot chown %s"
+#~ msgstr "kan ikke gjøre sikkerhetskopi av «%s»"
+
+#, fuzzy
+#~ msgid "cannot chmod %s"
+#~ msgstr "kan ikke slette «%s»"
+
+#~ msgid "`%s' exists but is not a directory"
+#~ msgstr "«%s» eksisterer, men er ikke en filkatalog"
+
+#~ msgid "`%s' is a directory"
+#~ msgstr "«%s» er en filkatalog"
+
+#, fuzzy
+#~ msgid "create %s %s to %s"
+#~ msgstr "opprette %s %s til %s\n"
+
+#~ msgid "cannot create %s `%s' to `%s'"
+#~ msgstr "kan ikke opprette %s «%s» til «%s»"
+
+#~ msgid "symbolic link"
+#~ msgstr "symbolsk link"
+
+#~ msgid "hard link"
+#~ msgstr "hard link"
+
+#~ msgid "link"
+#~ msgstr "link"
+
+#~ msgid "current directory"
+#~ msgstr "aktiv filkatalog"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ msgstr ""
+#~ "Bruk:   %s [FLAGG]... MÅL [LINKNAVN]\n"
+#~ " eller: %s [FLAGG]... MÅL... FILKATALOG\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ msgstr ""
+#~ "Bruk:   %s [FLAGG]... KILDE MÅL\n"
+#~ " eller: %s [FLAGG]... KILDE... FILKATALOG\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "The backup suffix is ~, unless set with SIMPLE_BACKUP_SUFFIX.  The\n"
+#~ "version control may be set with VERSION_CONTROL, values are:\n"
+#~ "\n"
+#~ "  none, off       never make backups (even if --backup is given)\n"
+#~ "  numbered, t     make numbered backups\n"
+#~ "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
+#~ "  simple, never   always make simple backups\n"
+#~ msgstr ""
+#~ "Suffikset for sikkerhetskopiering er ~, med mindre det er spesifisert via\n"
+#~ "SIMPLE_BACKUP_SUFFIX.  Versjonskontroll kan settes med VERSION_CONTROL.\n"
+#~ "Gyldige verdier er:\n"
+#~ "\n"
+#~ "  t, numbered     lag nummererte sikkerhetskopier\n"
+#~ "  nil, existing   nummererte, dersom nummererte sikkerhetskopier "
+#~ "eksisterer,\n"
+#~ "                  ellers enkle\n"
+#~ "  never, simple   lag enkle sikkerhetskopier\n"
+
+#~ msgid "--no-dereference (-h) is not supported on this system"
+#~ msgstr "--no-dereference (-h) er ikke støttet på dette systemet"
+
+#~ msgid "Usage: %s [OPTION]... EXISTING_DIR NEW_DIR\n"
+#~ msgstr "Bruk: %s [FLAGG]... EKSISTERENDE_FILKATALOG NY_FILKATALOG\n"
+
+#~ msgid ""
+#~ "Rename EXISTING_DIR to NEW_DIR.\n"
+#~ "\n"
+#~ "   --help      display this help and exit\n"
+#~ "   --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Endre navn på EKSISTERENDE_FILKATALOG til NY_FILKATALOG.\n"
+#~ "\n"
+#~ "   --help      vis denne hjelpeteksten og avslutt\n"
+#~ "   --version   vis programversjon og avslutt\n"
+
+#~ msgid "cannot get current directory"
+#~ msgstr "kunne ikke hente navnet på aktiv filkatalog"
+
+#~ msgid "cannot rename `.' or `..'"
+#~ msgstr "kan ikke endre navn på «.» eller «..»"
+
+#~ msgid "cannot write to `%s'"
+#~ msgstr "kan ikke skrive til «%s»"
+
+#~ msgid "`%s' is an ancestor of `%s'"
+#~ msgstr "«%s» er en forgjenger av «%s»"
+
+#~ msgid "%s is closed"
+#~ msgstr "%s er lukket"
+
+#, fuzzy
+#~ msgid "%s: cannot shred read-only file descriptor"
+#~ msgstr "%s: kan ikke overskrive filkatalog"
+
+#, fuzzy
+#~ msgid "malloc failed"
+#~ msgstr "systemkallet «fork» feilet"
+
+#, fuzzy
+#~ msgid "Unable to open `%s'"
+#~ msgstr "ugyldig beskyttelse «%s»"
+
+#, fuzzy
+#~ msgid "Can't fstat file `%s'"
+#~ msgstr "kan ikke opprette fifo «%s»"
+
+#~ msgid "fork system call failed"
+#~ msgstr "systemkallet «fork» feilet"
+
+#, fuzzy
+#~ msgid "sparse type"
+#~ msgstr "type for filer med hull"
+
+#~ msgid "sort type"
+#~ msgstr "sorteringstype"
+
+#~ msgid "time type"
+#~ msgstr "tidstype"
+
+#~ msgid "format type"
+#~ msgstr "formattype"
+
+#~ msgid "colorization criterion"
+#~ msgstr "fargeleggingskriterie"
+
+#~ msgid "indicator style"
+#~ msgstr "indikatorstil"
+
+#~ msgid "quoting style"
+#~ msgstr "beskyttelsesstil (quoting style)"
+
+#~ msgid "time selector"
+#~ msgstr "tidsvalg"

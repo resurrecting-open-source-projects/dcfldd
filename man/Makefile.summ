@@ -1,0 +1,10 @@
+# -*- makefile -*-
+
+# man pages whose name $i doesn't correspond to source in
+# ../src/`basename $i`.c
+irregular-men = dir.1 ginstall.1 vdir.1
+
+# Handle cases where executable name doesn't match source file name.
+dir.1: $(top_srcdir)/src/ls.c
+ginstall.1: $(top_srcdir)/src/install.c
+vdir.1: $(top_srcdir)/src/ls.c

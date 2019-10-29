@@ -1,0 +1,359 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2001-10-26 15:00-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+
+#: lib/argmatch.c:159
+#, c-format
+msgid "invalid argument %s for `%s'"
+msgstr ""
+
+#: lib/argmatch.c:160
+#, c-format
+msgid "ambiguous argument %s for `%s'"
+msgstr ""
+
+#. We try to put synonyms on the same line.  The assumption is that
+#. synonyms follow each other
+#: lib/argmatch.c:178
+msgid "Valid arguments are:"
+msgstr ""
+
+#: lib/closeout.c:104
+msgid "write error"
+msgstr ""
+
+#: lib/error.c:117
+msgid "Unknown system error"
+msgstr ""
+
+#: lib/getopt.c:686
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr ""
+
+#: lib/getopt.c:711
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/getopt.c:716
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/getopt.c:734 lib/getopt.c:907
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr ""
+
+#. --option
+#: lib/getopt.c:763
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr ""
+
+#. +option or -option
+#: lib/getopt.c:767
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr ""
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:793
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr ""
+
+#: lib/getopt.c:796
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr ""
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:826 lib/getopt.c:956
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr ""
+
+#: lib/getopt.c:873
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr ""
+
+#: lib/getopt.c:891
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/human.c:341
+msgid "block size"
+msgstr ""
+
+#: lib/makepath.c:177
+#, c-format
+msgid "cannot create directory %s"
+msgstr ""
+
+#: lib/makepath.c:183 lib/makepath.c:425
+#, c-format
+msgid "%s exists but is not a directory"
+msgstr ""
+
+#: lib/makepath.c:321 lib/makepath.c:383 lib/makepath.c:444
+#, c-format
+msgid "cannot change owner and/or group of %s"
+msgstr ""
+
+#: lib/makepath.c:343
+#, c-format
+msgid "cannot chdir to directory, %s"
+msgstr ""
+
+#: lib/makepath.c:397 lib/makepath.c:450
+#, c-format
+msgid "cannot change permissions of %s"
+msgstr ""
+
+#. If XALLOC_FAIL_FUNC is NULL, or does return, display this message
+#. before exiting when memory is exhausted.  Goes through gettext.
+#: lib/obstack.c:477 lib/xmalloc.c:66
+msgid "memory exhausted"
+msgstr ""
+
+#. Get translations for open and closing quotation marks.
+#.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  If the catalog has no translation,
+#. locale_quoting_style quotes `like this', and
+#. clocale_quoting_style quotes "like this".
+#.
+#. For example, an American English Unicode locale should
+#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
+#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
+#. MARK).  A British English Unicode locale should instead
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#: lib/quotearg.c:259
+msgid "`"
+msgstr ""
+
+#: lib/quotearg.c:260
+msgid "'"
+msgstr ""
+
+#: lib/rpmatch.c:78
+msgid "^[yY]"
+msgstr ""
+
+#: lib/rpmatch.c:81
+msgid "^[nN]"
+msgstr ""
+
+#: lib/unicodeio.c:138
+#, c-format
+msgid "cannot output U+%04X: iconv function not usable"
+msgstr ""
+
+#: lib/unicodeio.c:149
+#, c-format
+msgid "U+%04X: character out of range"
+msgstr ""
+
+#: lib/unicodeio.c:181 lib/unicodeio.c:190
+#, c-format
+msgid "cannot convert U+%04X to local character set"
+msgstr ""
+
+#: lib/unicodeio.c:196
+#, c-format
+msgid "cannot output U+%04X: iconv function not available"
+msgstr ""
+
+#: lib/userspec.c:179
+msgid "invalid user"
+msgstr ""
+
+#: lib/userspec.c:180
+msgid "invalid group"
+msgstr ""
+
+#: lib/userspec.c:182
+msgid "cannot get the login group of a numeric UID"
+msgstr ""
+
+#: lib/userspec.c:184
+msgid "cannot omit both user and group"
+msgstr ""
+
+#: lib/version-etc.c:38
+msgid "Copyright (C) 2001 Free Software Foundation, Inc."
+msgstr ""
+
+#: lib/version-etc.c:60
+#, c-format
+msgid "Written by %s.\n"
+msgstr ""
+
+#: lib/version-etc.c:66
+msgid ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+
+#: src/dcfldd.c:321
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr ""
+
+#: src/dcfldd.c:325
+#, c-format
+msgid "Usage: %s [OPTION]...\n"
+msgstr ""
+
+#: src/dcfldd.c:326
+msgid ""
+"Copy a file, converting and formatting according to the options.\n"
+"\n"
+"  bs=BYTES             force ibs=BYTES and obs=BYTES\n"
+"  cbs=BYTES            convert BYTES bytes at a time\n"
+"  conv=KEYWORDS        convert the file as per the comma separated keyword "
+"list\n"
+"  count=BLOCKS         copy only BLOCKS input blocks\n"
+"  ibs=BYTES            read BYTES bytes at a time\n"
+"  if=FILE              read from FILE instead of stdin\n"
+"  obs=BYTES            write BYTES bytes at a time\n"
+"  of=FILE              write to FILE instead of stdout\n"
+"  seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n"
+"  skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n"
+"  pattern=BYTES        use the specified binary pattern as input\n"
+"  textpattern=TEXT     use repeating TEXT as input\n"
+"  hashwindow=BYTES     perform an MD5 hash on every BYTES amount of data\n"
+"  hashlog=FILE         send MD5 hash output to FILE instead of stderr\n"
+"  status=[on|off]      display a continual status message on stderr\n"
+"                         default state is \"on\"\n"
+"  sizeprobe=[if|of]    determine the size of the input or output file"
+msgstr ""
+
+#: src/dcfldd.c:371
+msgid ""
+"\n"
+"Report bugs to <bug-fileutils@gnu.org>."
+msgstr ""
+
+#: src/dcfldd.c:402
+#, c-format
+msgid "%s+%s records in\n"
+msgstr ""
+
+#: src/dcfldd.c:405
+#, c-format
+msgid "%s+%s records out\n"
+msgstr ""
+
+#: src/dcfldd.c:413
+msgid "truncated record"
+msgstr ""
+
+#: src/dcfldd.c:414
+msgid "truncated records"
+msgstr ""
+
+#: src/dcfldd.c:423
+#, c-format
+msgid "closing input file %s"
+msgstr ""
+
+#: src/dcfldd.c:425
+#, c-format
+msgid "closing output file %s"
+msgstr ""
+
+#: src/dcfldd.c:509
+#, c-format
+msgid "writing to %s"
+msgstr ""
+
+#: src/dcfldd.c:541
+#, c-format
+msgid "invalid conversion: %s"
+msgstr ""
+
+#: src/dcfldd.c:645
+#, c-format
+msgid "unrecognized option %s"
+msgstr ""
+
+#: src/dcfldd.c:659
+#, c-format
+msgid "invalid hex pattern: %s"
+msgstr ""
+
+#: src/dcfldd.c:672 src/dcfldd.c:1455 src/dcfldd.c:1473
+#, c-format
+msgid "opening %s"
+msgstr ""
+
+#: src/dcfldd.c:729
+#, c-format
+msgid "unrecognized option %s=%s"
+msgstr ""
+
+#: src/dcfldd.c:735
+#, c-format
+msgid "invalid number %s"
+msgstr ""
+
+#: src/dcfldd.c:765
+msgid ""
+"only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+msgstr ""
+
+#: src/dcfldd.c:915 src/dcfldd.c:1206
+#, c-format
+msgid "reading %s"
+msgstr ""
+
+#: src/dcfldd.c:1252 src/dcfldd.c:1315
+#, c-format
+msgid "writing %s"
+msgstr ""
+
+#: src/dcfldd.c:1408
+msgid "stating file"
+msgstr ""
+
+#: src/dcfldd.c:1458
+msgid "standard input"
+msgstr ""
+
+#: src/dcfldd.c:1481
+msgid "file offset out of range"
+msgstr ""
+
+#: src/dcfldd.c:1484
+#, c-format
+msgid "cannot fstat %s"
+msgstr ""
+
+#: src/dcfldd.c:1497
+#, c-format
+msgid "advancing past %s bytes in output file %s"
+msgstr ""
+
+#: src/dcfldd.c:1506
+msgid "standard output"
+msgstr ""

@@ -1,0 +1,2364 @@
+# Brazilian Portuguese translation of the "fileutils" messages
+# Copyright (C) 1996 Free Software Foundation, Inc.
+# Wanderlei Antonio Cavassin <cavassin@conectiva.com.br>, 1997
+# Based on fileutils.pt by arendas@mail.telepac.pt
+# Revisado por Rafael Caetano dos Santos <rcaetano@linux.ime.usp.br>
+# Atualização da tradução para a versão 4.0:
+# Arnaldo Carvalho de Melo <acme@conectiva.com.br>
+# Rodrigo Stulzer Lopes <rodrigo@conectiva.com.br>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fileutils 4.0t\n"
+"POT-Creation-Date: 2001-10-26 15:00-0400\n"
+"PO-Revision-Date: 2000-10-27 15:56+02:00\n"
+"Last-Translator: Rodrigo Stulzer Lopes <rodrigo@conectiva.com.br>\n"
+"Language-Team: Brazilian Portuguese <ldp-br@bazar.conectiva.com.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: lib/argmatch.c:159
+#, c-format
+msgid "invalid argument %s for `%s'"
+msgstr "parâmetro inválido %s para `%s'"
+
+#: lib/argmatch.c:160
+#, c-format
+msgid "ambiguous argument %s for `%s'"
+msgstr "parâmetro ambigüo %s para `%s'"
+
+#. We try to put synonyms on the same line.  The assumption is that
+#. synonyms follow each other
+#: lib/argmatch.c:178
+msgid "Valid arguments are:"
+msgstr "Parâmetros válidos são:"
+
+#: lib/closeout.c:104
+msgid "write error"
+msgstr "erro de gravação"
+
+#: lib/error.c:117
+msgid "Unknown system error"
+msgstr "Erro de sistema desconhecido"
+
+#: lib/getopt.c:686
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: opção `%s' é ambigüa\n"
+
+#: lib/getopt.c:711
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: opção `--%s' não permite um parâmetro\n"
+
+#: lib/getopt.c:716
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: opção `%c%s' não permite um parâmetro\n"
+
+#: lib/getopt.c:734 lib/getopt.c:907
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: opção `%s' requer um parâmetro\n"
+
+#. --option
+#: lib/getopt.c:763
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: opção desconhecida `--%s'\n"
+
+#. +option or -option
+#: lib/getopt.c:767
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: opção desconhecida `%c%s'\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:793
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: opção ilegal -- %c\n"
+
+#: lib/getopt.c:796
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: opção inválida -- %c\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:826 lib/getopt.c:956
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: opção requer um parâmetro -- %c\n"
+
+#: lib/getopt.c:873
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: opção `-W %s' é ambigüa\n"
+
+#: lib/getopt.c:891
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr "%s: opção `-W %s' não permite um parâmetro\n"
+
+#: lib/human.c:341
+msgid "block size"
+msgstr "tamanho de bloco"
+
+#: lib/makepath.c:177
+#, fuzzy, c-format
+msgid "cannot create directory %s"
+msgstr "não foi possível criar diretório `%s'"
+
+#: lib/makepath.c:183 lib/makepath.c:425
+#, fuzzy, c-format
+msgid "%s exists but is not a directory"
+msgstr "`%s' existe mas não é um diretório"
+
+#: lib/makepath.c:321 lib/makepath.c:383 lib/makepath.c:444
+#, fuzzy, c-format
+msgid "cannot change owner and/or group of %s"
+msgstr "não foi possível alterar para o grupo nulo (null group)"
+
+#: lib/makepath.c:343
+#, c-format
+msgid "cannot chdir to directory, %s"
+msgstr "não foi possível mudar para o diretório %s"
+
+#: lib/makepath.c:397 lib/makepath.c:450
+#, fuzzy, c-format
+msgid "cannot change permissions of %s"
+msgstr "não foi possível criar diretório `%s'"
+
+#. If XALLOC_FAIL_FUNC is NULL, or does return, display this message
+#. before exiting when memory is exhausted.  Goes through gettext.
+#: lib/obstack.c:477 lib/xmalloc.c:66
+msgid "memory exhausted"
+msgstr "memória esgotada"
+
+#. Get translations for open and closing quotation marks.
+#.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  If the catalog has no translation,
+#. locale_quoting_style quotes `like this', and
+#. clocale_quoting_style quotes "like this".
+#.
+#. For example, an American English Unicode locale should
+#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
+#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
+#. MARK).  A British English Unicode locale should instead
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#: lib/quotearg.c:259
+msgid "`"
+msgstr "`"
+
+#: lib/quotearg.c:260
+msgid "'"
+msgstr "'"
+
+#: lib/rpmatch.c:78
+msgid "^[yY]"
+msgstr "^[yY]"
+
+#: lib/rpmatch.c:81
+msgid "^[nN]"
+msgstr "^[nN]"
+
+#: lib/unicodeio.c:138
+#, c-format
+msgid "cannot output U+%04X: iconv function not usable"
+msgstr "não é possível gerar saída U+%04X: função iconv não é usável"
+
+#: lib/unicodeio.c:149
+#, c-format
+msgid "U+%04X: character out of range"
+msgstr "U+%04X: caractere fora de faixa"
+
+#: lib/unicodeio.c:181 lib/unicodeio.c:190
+#, c-format
+msgid "cannot convert U+%04X to local character set"
+msgstr "não é possível converter U+%04X para configuração de caracteres locais"
+
+#: lib/unicodeio.c:196
+#, c-format
+msgid "cannot output U+%04X: iconv function not available"
+msgstr "não é possível gerar saída U+%04X: função iconv não disponível"
+
+#: lib/userspec.c:179
+msgid "invalid user"
+msgstr "usuário inválido"
+
+#: lib/userspec.c:180
+msgid "invalid group"
+msgstr "grupo inválido"
+
+#: lib/userspec.c:182
+msgid "cannot get the login group of a numeric UID"
+msgstr "não é possível acessar o grupo de login de um UID numérico"
+
+#: lib/userspec.c:184
+msgid "cannot omit both user and group"
+msgstr "não é possível omitir usuário e grupo ao mesmo tempo"
+
+#: lib/version-etc.c:38
+#, fuzzy
+msgid "Copyright (C) 2001 Free Software Foundation, Inc."
+msgstr "Copyright (C) 2000 Free Software Foundation, Inc."
+
+#: lib/version-etc.c:60
+#, c-format
+msgid "Written by %s.\n"
+msgstr "Escrito por %s.\n"
+
+#: lib/version-etc.c:66
+msgid ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Este programa é um programa livre; veja o fonte para as condições de cópia.\n"
+"Não existe garantia; nem mesmo COMERCIAL ou PARA UM PROPÓSITO ESPECÍFICO.\n"
+
+#: src/dcfldd.c:321
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Tente `%s --help' para mais informações.\n"
+
+#: src/dcfldd.c:325
+#, c-format
+msgid "Usage: %s [OPTION]...\n"
+msgstr "Uso: %s [OPÇÃO]...\n"
+
+#: src/dcfldd.c:326
+#, fuzzy
+msgid ""
+"Copy a file, converting and formatting according to the options.\n"
+"\n"
+"  bs=BYTES             force ibs=BYTES and obs=BYTES\n"
+"  cbs=BYTES            convert BYTES bytes at a time\n"
+"  conv=KEYWORDS        convert the file as per the comma separated keyword "
+"list\n"
+"  count=BLOCKS         copy only BLOCKS input blocks\n"
+"  ibs=BYTES            read BYTES bytes at a time\n"
+"  if=FILE              read from FILE instead of stdin\n"
+"  obs=BYTES            write BYTES bytes at a time\n"
+"  of=FILE              write to FILE instead of stdout\n"
+"  seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n"
+"  skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n"
+"  pattern=BYTES        use the specified binary pattern as input\n"
+"  textpattern=TEXT     use repeating TEXT as input\n"
+"  hashwindow=BYTES     perform an MD5 hash on every BYTES amount of data\n"
+"  hashlog=FILE         send MD5 hash output to FILE instead of stderr\n"
+"  status=[on|off]      display a continual status message on stderr\n"
+"                         default state is \"on\"\n"
+"  sizeprobe=[if|of]    determine the size of the input or output file"
+msgstr ""
+"Copia um arquivo, convertendo e formatando de acordo com as opções.\n"
+"\n"
+"   bs=BYTES        forçar ibs=BYTES e obs=BYTES\n"
+"   cbs=BYTES       converter BYTES bytes de cada vez\n"
+"   conv=PALAVRAS-CHAVE converter o arquivo de acordo com lista de palavras-\n"
+"                   chave separadas por vírgulas\n"
+"   count=BLOCOS    copiar só BLOCOS blocos de entrada\n"
+"   ibs=BYTES       ler BYTES bytes de cada vez\n"
+"   if=ARQUIVO      ler de ARQUIVO em vez de stdin\n"
+"   obs=BYTES       escrever BYTES bytes de cada vez\n"
+"   of=ARQUIVO      escrever em ARQUIVO em vez de stdout\n"
+"   seek=BLOCOS     desconsiderar os primeiros BLOCOS blocos de tamanho \n"
+"                   obs no início da saída\n"
+"   skip=BLOCOS     desconsiderar os primeiros BLOCOS blocos de tamanho \n"
+"                   ibs no início da entrada\n"
+"       --help      mostrar esta ajuda e sai\n"
+"       --version   mostrar informação sobre versão e sai\n"
+"\n"
+"BYTES pode ser seguido pelos sufixos multiplicativos a seguir: \n"
+"xM M, c 1, w 2, b 512, kD 1000, k 1024, MD 1,000,000, M 1,048,576,\\n\"\n"
+"\"GD 1,000,000,000, G 1,073,741,824, e assim por diante para T, P, E, Z, "
+"Y.\\n\"\n"
+"\n"
+"Cada PALAVRA-CHAVE pode ser:\n"
+"\n"
+"   ascii     de EBCDIC para ASCII\n"
+"   ebcdic    de ASCII para EBCDIC\n"
+"   ibm       de ASCII para EBCDIC alternado\n"
+"   block     completar com espaços os registros terminados com fim de linha\n"
+"             até o tamanho cbs\n"
+"   unblock   substituir os espaços no fim dos registros de tamanho cbs com \n"
+"             um fim de linha\n"
+"   lcase     mudar de letras maiúsculas para minúsculas\n"
+"   notrunc   não trunca o arquivo de saída\n"
+"   ucase     mudar de letras minúsculas para maiúsculas\n"
+"   swab      trocar cada par dos bytes de entrada\n"
+"   noerror   continuar mesmo depois de erros de leitura\n"
+"   sync      completar cada bloco de entrada com NULs até o tamanho ibs\n"
+
+#: src/dcfldd.c:371
+msgid ""
+"\n"
+"Report bugs to <bug-fileutils@gnu.org>."
+msgstr ""
+"\n"
+"Avisar bug-fileutils@gnu.org em caso de bugs."
+
+#: src/dcfldd.c:402
+#, c-format
+msgid "%s+%s records in\n"
+msgstr "%s+%s registros de entrada\n"
+
+#: src/dcfldd.c:405
+#, c-format
+msgid "%s+%s records out\n"
+msgstr "%s+%s registros de saída\n"
+
+#: src/dcfldd.c:413
+msgid "truncated record"
+msgstr "registro truncado"
+
+#: src/dcfldd.c:414
+msgid "truncated records"
+msgstr "registros truncados"
+
+#: src/dcfldd.c:423
+#, c-format
+msgid "closing input file %s"
+msgstr ""
+
+#: src/dcfldd.c:425
+#, c-format
+msgid "closing output file %s"
+msgstr ""
+
+#: src/dcfldd.c:509
+#, fuzzy, c-format
+msgid "writing to %s"
+msgstr "criando diretório `%s'"
+
+#: src/dcfldd.c:541
+#, fuzzy, c-format
+msgid "invalid conversion: %s"
+msgstr "%s: conversão inválida"
+
+#: src/dcfldd.c:645
+#, fuzzy, c-format
+msgid "unrecognized option %s"
+msgstr "opção desconhecida `%s'"
+
+#: src/dcfldd.c:659
+#, fuzzy, c-format
+msgid "invalid hex pattern: %s"
+msgstr "modo inválido `%s'"
+
+#: src/dcfldd.c:672 src/dcfldd.c:1455 src/dcfldd.c:1473
+#, fuzzy, c-format
+msgid "opening %s"
+msgstr "removendo %s\n"
+
+#: src/dcfldd.c:729
+#, fuzzy, c-format
+msgid "unrecognized option %s=%s"
+msgstr "opção desconhecida `%s=%s'"
+
+#: src/dcfldd.c:735
+#, fuzzy, c-format
+msgid "invalid number %s"
+msgstr "número inválido `%s'"
+
+#: src/dcfldd.c:765
+msgid ""
+"only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+msgstr ""
+"somente uma conversão em {ascii,ebcdic,ibm}, {lcase,ucase}, "
+"{block,unblock},\n"
+"{unblock,sync}"
+
+#: src/dcfldd.c:915 src/dcfldd.c:1206
+#, fuzzy, c-format
+msgid "reading %s"
+msgstr "removendo %s\n"
+
+#: src/dcfldd.c:1252 src/dcfldd.c:1315
+#, fuzzy, c-format
+msgid "writing %s"
+msgstr "removendo %s\n"
+
+#: src/dcfldd.c:1408
+#, fuzzy
+msgid "stating file"
+msgstr "strip falhou"
+
+#: src/dcfldd.c:1458
+msgid "standard input"
+msgstr "entrada padrão (stdin)"
+
+#: src/dcfldd.c:1481
+msgid "file offset out of range"
+msgstr "deslocamento do arquivo fora da faixa"
+
+#: src/dcfldd.c:1484
+#, fuzzy, c-format
+msgid "cannot fstat %s"
+msgstr "não foi possível gerar status `%s'"
+
+#: src/dcfldd.c:1497
+#, c-format
+msgid "advancing past %s bytes in output file %s"
+msgstr ""
+
+#: src/dcfldd.c:1506
+msgid "standard output"
+msgstr "saída padrão (stdout)"
+
+#, fuzzy
+#~ msgid "cannot change to null group"
+#~ msgstr "não foi possível alterar para o grupo nulo (null group)"
+
+#, fuzzy
+#~ msgid "invalid group name %s"
+#~ msgstr "nome de grupo inválido `%s'"
+
+#~ msgid "group number"
+#~ msgstr "grupo número"
+
+#, fuzzy
+#~ msgid "invalid group number %s"
+#~ msgstr "número de grupo inválido `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Uso: %s [OPÇÃO]... GRUPO ARQUIVO...\n"
+#~ " ou: %s [OPÇÃO]... --reference=ARQUIVO_REFERÊNCIAS ARQUIVO...\n"
+
+#~ msgid ""
+#~ "Change the group membership of each FILE to GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's group rather than the specified\n"
+#~ "                         GROUP value\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ msgstr ""
+#~ "Muda as permissões de grupo de cada ARQUIVO para GRUPO.\n"
+#~ "\n"
+#~ "  -c, --changes         como o modo \"verbose\" mas só avisa quando uma \n"
+#~ "                        alteração for feita\n"
+#~ "      --dereference     afeta a referência de cada ligação simbólica, ao "
+#~ "invés\n"
+#~ "                        da própria ligação simbólica\n"
+#~ "  -h, --no-dereference  afetar ligações simbólicas (symlinks) em vez dos\n"
+#~ "                        arquivos referenciados (disponível somente em "
+#~ "sistemas\n"
+#~ "                        que podem trocar as permissões de ligações "
+#~ "simbólicas)\n"
+#~ "  -f, --silent, --quiet desligar a maior parte das mensagens de erro\n"
+#~ "      --reference=RARQ  usa grupo de RARQ invés do valor especificado em "
+#~ "GRUPO\n"
+#~ "  -R, --recursive       mudar arquivos e diretórios recursivamente\n"
+#~ "  -v, --verbose         mostrar um diagnóstico para cada arquivo processado\n"
+#~ "      --help            mostrar esta ajuda e sair\n"
+#~ "      --version         mostrar informação sobre versão e sair\n"
+
+#~ msgid "too few arguments"
+#~ msgstr "poucos argumentos"
+
+#, fuzzy
+#~ msgid "getting attributes of %s"
+#~ msgstr "definindo permissões para %s"
+
+#, fuzzy
+#~ msgid "getting new attributes of %s"
+#~ msgstr "definindo permissões para %s"
+
+#~ msgid "mode of %s changed to %04lo (%s)\n"
+#~ msgstr "modo de %s mudado para %04lo (%s)\n"
+
+#~ msgid "failed to change mode of %s to %04lo (%s)\n"
+#~ msgstr "falha na troca do modo de %s para %04lo (%s)\n"
+
+#~ msgid "mode of %s retained as %04lo (%s)\n"
+#~ msgstr "modo de %s mantido como %04lo (%s)\n"
+
+#, fuzzy
+#~ msgid "changing permissions of %s"
+#~ msgstr "restaurando permissões de %s"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... MODE[,MODE]... FILE...\n"
+#~ "  or:  %s [OPTION]... OCTAL-MODE FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Uso: %s [OPÇÃO]... MODO[,MODO]... ARQUIVO...\n"
+#~ " ou: %s [OPÇÃO]... MODO-OCTAL ARQUIVO...\n"
+#~ " ou: %s [OPÇÃO]... --reference=RARQUIVO ARQUIVO...\n"
+
+#~ msgid ""
+#~ "Change the mode of each FILE to MODE.\n"
+#~ "\n"
+#~ "  -c, --changes           like verbose but report only when a change is "
+#~ "made\n"
+#~ "  -f, --silent, --quiet   suppress most error messages\n"
+#~ "  -v, --verbose           output a diagnostic for every file processed\n"
+#~ "      --reference=RFILE   use RFILE's mode instead of MODE values\n"
+#~ "  -R, --recursive         change files and directories recursively\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "\n"
+#~ "Each MODE is one or more of the letters ugoa, one of the symbols +-= and\n"
+#~ "one or more of the letters rwxXstugo.\n"
+#~ msgstr ""
+#~ "Troca o modo de cada ARQUIVO para MODO.\n"
+#~ "\n"
+#~ "  -c, --changes         como o modo \"verbose\" mas só avisa quando uma \n"
+#~ "                        alteração for feita\n"
+#~ "  -f, --silent, --quiet desligar a maior parte das mensagens de erro\n"
+#~ "  -v, --verbose         mostrar um diagnóstico para cada arquivo processado\n"
+#~ "    --reference=ARQUIVO usa o modo do ARQUIVO em vez dos valores de MODO\n"
+#~ "  -R, --recursive       mudar arquivos e diretórios recursivamente\n"
+#~ "      --help            mostrar esta ajuda e sai\n"
+#~ "      --version         mostrar informação sobre versão e sai\n"
+#~ "\n"
+#~ "Cada MODO é uma ou mais das letras ugoa, um dos símbolos +-= e uma ou\n"
+#~ "mais das letras rwxXstugo.\n"
+
+#, fuzzy
+#~ msgid "invalid character %s in mode string %s"
+#~ msgstr "parâmetro inválido %s para `%s'"
+
+#, fuzzy
+#~ msgid "invalid mode string: %s"
+#~ msgstr "modo inválido `%s'"
+
+#~ msgid "neither symbolic link %s nor referent has been changed\n"
+#~ msgstr "ligação simbólica %s e referência inalterados\n"
+
+#, fuzzy
+#~ msgid "changed ownership of %s to %s\n"
+#~ msgstr "falha em trocar dono de %s para "
+
+#, fuzzy
+#~ msgid "changed group of %s to %s\n"
+#~ msgstr "não foi possível alterar o grupo de %s para %s\n"
+
+#, fuzzy
+#~ msgid "failed to change ownership of %s to %s\n"
+#~ msgstr "falha em trocar dono de %s para "
+
+#~ msgid "failed to change group of %s to %s\n"
+#~ msgstr "não foi possível alterar o grupo de %s para %s\n"
+
+#, fuzzy
+#~ msgid "ownership of %s retained as %s\n"
+#~ msgstr "dono de %s mantido como "
+
+#~ msgid "group of %s retained as %s\n"
+#~ msgstr "grupo de %s mantido como %s\n"
+
+#, fuzzy
+#~ msgid "changing ownership of %s"
+#~ msgstr "preservando permissões para %s"
+
+#, fuzzy
+#~ msgid "changing group of %s"
+#~ msgstr "não foi possível alterar o grupo de %s para %s\n"
+
+#, fuzzy
+#~ msgid "unable to restore permissions of %s"
+#~ msgstr "não foi possível criar diretório `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... OWNER[:[GROUP]] FILE...\n"
+#~ "  or:  %s [OPTION]... :GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Uso: %s [OPÇÃO]... DONO[:[GRUPO]] ARQUIVO...\n"
+#~ " ou: %s [OPÇÃO]... :GRUPO ARQUIVO...\n"
+#~ " ou: %s [OPÇÃO]... --reference=RARQUIVO ARQUIVO...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the owner and/or group of each FILE to OWNER and/or GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                         change the owner and/or group of each file only if\n"
+#~ "                         its current owner and/or group match those "
+#~ "specified\n"
+#~ "                         here.  Either may be omitted, in which case a "
+#~ "match\n"
+#~ "                         is not required for the omitted attribute.\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's owner and group rather than\n"
+#~ "                         the specified OWNER:GROUP values\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Muda o dono e/ou grupo de cada ARQUIVO para DONO e/ou GRUPO.\n"
+#~ "\n"
+#~ "   -c, --changes           ser detalhado quando forem feitas alterações\n"
+#~ "       --dereference       afeta a referência de cada ligação simbólica ao\n"
+#~ "                           invés da própria ligação simbólica\n"
+#~ "   -h, --no-dereference    afetar ligações simbólicas (symlinks) em vez dos\n"
+#~ "                           arquivos referenciados.\n"
+#~ "                           (disponível somente em sistemas que possibilitam\n"
+#~ "                            a mudança de propriedade de um link simbólico)\n"
+#~ "   --from=DONO_CORRENTE:GRUPO_CORRENTE\n"
+#~ "                           troca o done e/o grupo de cada arquivo somente "
+#~ "se\n"
+#~ "                           o seu dono e/ou grupo atual for igual aos\n"
+#~ "                           especificados aqui. Qualquer um pode ser "
+#~ "omitido.\n"
+#~ "                           Neste caso a busca é feita somente no dado "
+#~ "passado.\n"
+#~ "   -f, --silent, --quiet   desliga a maioria das mensagens de erro\n"
+#~ "       --reference=RARQ    usa dono e grupo de RARQ ao invés dos valores\n"
+#~ "                           especificados em DONO.GRUPO\n"
+#~ "   -R, --recursive         trabalha em arquivos e diretórios recursivamente\n"
+#~ "   -v, --verbose           explica o que está sendo feito\n"
+#~ "       --help              mostra esta ajuda e sai\n"
+#~ "       --version           mostra informação sobre versão e sai\n"
+#~ "\n"
+#~ "O Dono é mantido  se inexistente. O Grupo é mantido se inexistente, mas "
+#~ "mudado \n"
+#~ "para grupo de login se implícito com um `:'. DONO e GRUPO podem ser dados \n"
+#~ "numéricos assim como simbólicos.\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid "cannot access %s"
+#~ msgstr "não foi possível trocar dono de `%s'"
+
+#, fuzzy
+#~ msgid "%s and %s are the same file"
+#~ msgstr "`%s' e `%s' são o mesmo arquivo"
+
+#, fuzzy
+#~ msgid "cannot open %s for reading"
+#~ msgstr "não foi possível mover `%s' para `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove %s"
+#~ msgstr "não foi possível remover `%s'"
+
+#, fuzzy
+#~ msgid "cannot create regular file %s"
+#~ msgstr "não foi possível criar arquivo normal `%s'"
+
+#, fuzzy
+#~ msgid "cannot lseek %s"
+#~ msgstr "não foi possível remover `%s'"
+
+#, fuzzy
+#~ msgid "closing %s"
+#~ msgstr "removendo %s\n"
+
+#, fuzzy
+#~ msgid "cannot stat %s"
+#~ msgstr "não foi possível gerar status `%s'"
+
+#, fuzzy
+#~ msgid "omitting directory %s"
+#~ msgstr "%s: omitindo diretório"
+
+#, fuzzy
+#~ msgid "cannot overwrite non-directory %s with directory %s"
+#~ msgstr "%s: não é possível sobrescrever diretório com não-diretório"
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s with non-directory"
+#~ msgstr "%s: não é possível sobrescrever diretório com não-diretório"
+
+#, fuzzy
+#~ msgid "%s: overwrite %s, overriding mode %04lo? "
+#~ msgstr "%s: sobrescrever `%s', apesar do modo %04lo? "
+
+#, fuzzy
+#~ msgid "%s: overwrite %s? "
+#~ msgstr "%s: sobrescrever `%s'? "
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s"
+#~ msgstr "%s: não é possível sobrescrever o diretório"
+
+#~ msgid "cannot move directory onto non-directory: %s -> %s"
+#~ msgstr "não é possível sobrescrever diretório com não-diretório: %s -> %s"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not moved"
+#~ msgstr "fazer cópia de `%s' iria destruir o original; `%s' não movido"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not copied"
+#~ msgstr "fazer backup de `%s' iria destruir o original; `%s' não copiado"
+
+#, fuzzy
+#~ msgid "cannot backup %s"
+#~ msgstr "não foi possível fazer backup de `%s'"
+
+#~ msgid " (backup: %s)"
+#~ msgstr "(backup: %s)"
+
+#, fuzzy
+#~ msgid "cannot copy a directory, %s, into itself, %s"
+#~ msgstr "não foi possível mover `%s' para um subdiretório dele mesmo, `%s'"
+
+#, fuzzy
+#~ msgid "will not create hard link %s to directory %s"
+#~ msgstr "não foi possível criar link `%s' para o diretório `%s'"
+
+#, fuzzy
+#~ msgid "cannot create hard link %s to %s"
+#~ msgstr "criar link `%s' para `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to a subdirectory of itself, %s"
+#~ msgstr "não foi possível mover `%s' para um subdiretório dele mesmo, `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to %s"
+#~ msgstr "não foi possível mover `%s' para `%s'"
+
+#, fuzzy
+#~ msgid "cannot copy cyclic symbolic link %s"
+#~ msgstr "%s: não é possível copiar link simbólico cíclico"
+
+#~ msgid "%s: can make relative symbolic links only in current directory"
+#~ msgstr "%s: só é possível fazer links simbólicos no diretório corrente"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s to %s"
+#~ msgstr "não foi possível criar link simbólico `%s'"
+
+#, fuzzy
+#~ msgid "cannot create link %s"
+#~ msgstr "não foi possível criar o link `%s'"
+
+#, fuzzy
+#~ msgid "cannot create fifo %s"
+#~ msgstr "não foi possível criar \"fifo\" `%s'"
+
+#, fuzzy
+#~ msgid "cannot create special file %s"
+#~ msgstr "não foi possível criar arquivo especial `%s'"
+
+#, fuzzy
+#~ msgid "cannot read symbolic link %s"
+#~ msgstr "não foi possível ler link simbólico `%s'"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s"
+#~ msgstr "não foi possível criar link simbólico `%s'"
+
+#~ msgid "preserving ownership for %s"
+#~ msgstr "preservando permissões para %s"
+
+#, fuzzy
+#~ msgid "%s has unknown file type"
+#~ msgstr "%s: tipo de arquivo desconhecido"
+
+#~ msgid "preserving times for %s"
+#~ msgstr "preservando horário para %s"
+
+#~ msgid "setting permissions for %s"
+#~ msgstr "definindo permissões para %s"
+
+#, fuzzy
+#~ msgid "cannot un-backup %s"
+#~ msgstr "não foi possível tirar `%s' do backup"
+
+#~ msgid "%s -> %s (unbackup)\n"
+#~ msgstr "%s -> %s (unbackup)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY SOURCE...\n"
+#~ msgstr ""
+#~ "Uso:  %s [OPÇÃO]... FONTE DESTINO\n"
+#~ " ou:  %s [OPÇÃO]... FONTE... DIRETÓRIO\n"
+#~ " ou:  %s -d [OPÇÃO]... --target-directory=DIRETÓRIO FONTE...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                same as -dpR\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -d, --no-dereference         never follow symbolic links\n"
+#~ "  -f, --force                  if an existing destination file cannot be\n"
+#~ "                                   opened, remove it and try again\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "  -H                           follow command-line symbolic links\n"
+#~ "  -l, --link                   link files instead of copying\n"
+#~ "  -L, --dereference            always follow symbolic links\n"
+#~ "  -p, --preserve               preserve file attributes if possible\n"
+#~ "      --parents                append source path to DIRECTORY\n"
+#~ "  -P                           same as `--parents' for now; soon to change "
+#~ "to\n"
+#~ "                                 `--no-dereference' to conform to POSIX\n"
+#~ "  -r                           copy recursively, non-directories as files\n"
+#~ "                                 WARNING: use -R instead when you might "
+#~ "copy\n"
+#~ "                                 special files like FIFOs or /dev/zero\n"
+#~ "      --remove-destination     remove each existing destination file before\n"
+#~ "                                 attempting to open it (contrast with "
+#~ "--force)\n"
+#~ msgstr ""
+#~ "Copia FONTE para DESTINO, ou múltiplos FONTE(s) para DIRETÓRIO.\n"
+#~ "\n"
+#~ "   -a, --archive                 igual a -dpR\n"
+#~ "       --backup[=CONTROLE]       fazer \"backup\" de cada arquivo existente "
+#~ "de\n"
+#~ "                                 destino\n"
+#~ "   -b                            como --backup mas não aceita parâmetros\n"
+#~ "   -d, --no-dereference          manter os links\n"
+#~ "   -f, --force                   remove destinos existentes, sem perguntar\n"
+#~ "   -i, --interactive             perguntar antes de sobrescrever\n"
+#~ "   -l, --link                    fazer links de arquivos ao invés de copiar\n"
+#~ "   -p, --preserve                manter atributos dos arquivos se possível\n"
+#~ "   -P, --parents                 anexar caminho (path) do fonte ao\n"
+#~ "                                 DIRETÓRIO\n"
+#~ "   -r                            copiar recursivamente, não-diretórios\n"
+#~ "                                 como arquivos\n"
+#~ "                                 ATENÇÃO: use -R quando você quiser copiar\n"
+#~ "                                 arquivos especiais como FIFOs ou /dev/zero\n"
+#~ "       --sparse=QUANDO           controlar a criação de arquivos esparsos\n"
+#~ "   -R, --recursive               copiar diretórios recursivamente\n"
+#~ "   -s, --symbolic-link           fazer links simbólicos ao invés de copiar\n"
+#~ "   -S, --sufix=SUFIXO            usar SUFIXO como sufixo de \"backup\"\n"
+#~ "       --target-directory=DIR    move todos parâmetros FONTE para DIR\n"
+#~ "   -u, --update                  copiar somente se o arquivo FONTE for mais\n"
+#~ "                                 novo que o arquivo destino ou quando o\n"
+#~ "                                 arquivo destino não existir\n"
+#~ "   -v, --verbose                 explicar o que está sendo feito\n"
+#~ "   -x, --one-file-system         ficar só neste sistema de arquivos\n"
+#~ "       --help                    mostrar esta ajuda e sair\n"
+#~ "       --version                 mostrar informação sobre versão e sair\n"
+#~ "\n"
+#~ "Por padrão, arquivos esparsos da FONTE são detectados por uma heurística \n"
+#~ "grosseira e o correspondente arquivo DESTINO é também feito um arquivo \n"
+#~ "esparso. Este é o comportamento escolhido por --sparse=auto. Especifique \n"
+#~ "--sparse=always para criar um arquivo esparso em DESTINO quando o arquivo\n"
+#~ "SOURCE tiver uma sequência de bytes zero suficientemente grande.\n"
+#~ "\n"
+#~ "Use --sparse=never para inibir a criação de arquivos esparsos.\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "      --sparse=WHEN            control creation of sparse files\n"
+#~ "  -R, --recursive              copy directories recursively\n"
+#~ "      --strip-trailing-slashes remove any trailing slashes from each SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -s, --symbolic-link          make symbolic links instead of copying\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 copy only when the SOURCE file is newer\n"
+#~ "                                 than the destination file or when the\n"
+#~ "                                 destination file is missing\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "  -x, --one-file-system        stay on this file system\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ "By default, sparse SOURCE files are detected by a crude heuristic and the\n"
+#~ "corresponding DEST file is made sparse as well.  That is the behavior\n"
+#~ "selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST\n"
+#~ "file whenever the SOURCE file contains a long enough sequence of zero "
+#~ "bytes.\n"
+#~ "Use --sparse=never to inhibit creation of sparse files.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Copia FONTE para DESTINO, ou múltiplos FONTE(s) para DIRETÓRIO.\n"
+#~ "\n"
+#~ "   -a, --archive                 igual a -dpR\n"
+#~ "       --backup[=CONTROLE]       fazer \"backup\" de cada arquivo existente "
+#~ "de\n"
+#~ "                                 destino\n"
+#~ "   -b                            como --backup mas não aceita parâmetros\n"
+#~ "   -d, --no-dereference          manter os links\n"
+#~ "   -f, --force                   remove destinos existentes, sem perguntar\n"
+#~ "   -i, --interactive             perguntar antes de sobrescrever\n"
+#~ "   -l, --link                    fazer links de arquivos ao invés de copiar\n"
+#~ "   -p, --preserve                manter atributos dos arquivos se possível\n"
+#~ "   -P, --parents                 anexar caminho (path) do fonte ao\n"
+#~ "                                 DIRETÓRIO\n"
+#~ "   -r                            copiar recursivamente, não-diretórios\n"
+#~ "                                 como arquivos\n"
+#~ "                                 ATENÇÃO: use -R quando você quiser copiar\n"
+#~ "                                 arquivos especiais como FIFOs ou /dev/zero\n"
+#~ "       --sparse=QUANDO           controlar a criação de arquivos esparsos\n"
+#~ "   -R, --recursive               copiar diretórios recursivamente\n"
+#~ "   -s, --symbolic-link           fazer links simbólicos ao invés de copiar\n"
+#~ "   -S, --sufix=SUFIXO            usar SUFIXO como sufixo de \"backup\"\n"
+#~ "       --target-directory=DIR    move todos parâmetros FONTE para DIR\n"
+#~ "   -u, --update                  copiar somente se o arquivo FONTE for mais\n"
+#~ "                                 novo que o arquivo destino ou quando o\n"
+#~ "                                 arquivo destino não existir\n"
+#~ "   -v, --verbose                 explicar o que está sendo feito\n"
+#~ "   -x, --one-file-system         ficar só neste sistema de arquivos\n"
+#~ "       --help                    mostrar esta ajuda e sair\n"
+#~ "       --version                 mostrar informação sobre versão e sair\n"
+#~ "\n"
+#~ "Por padrão, arquivos esparsos da FONTE são detectados por uma heurística \n"
+#~ "grosseira e o correspondente arquivo DESTINO é também feito um arquivo \n"
+#~ "esparso. Este é o comportamento escolhido por --sparse=auto. Especifique \n"
+#~ "--sparse=always para criar um arquivo esparso em DESTINO quando o arquivo\n"
+#~ "SOURCE tiver uma sequência de bytes zero suficientemente grande.\n"
+#~ "\n"
+#~ "Use --sparse=never para inibir a criação de arquivos esparsos.\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "The backup suffix is `~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\n"
+#~ "The version control method may be selected via the --backup option or "
+#~ "through\n"
+#~ "the VERSION_CONTROL environment variable.  Here are the values:\n"
+#~ "\n"
+#~ "  none, off       never make backups (even if --backup is given)\n"
+#~ "  numbered, t     make numbered backups\n"
+#~ "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
+#~ "  simple, never   always make simple backups\n"
+#~ msgstr ""
+#~ "O sufixo de backup é ~, a não ser que --suffix ou SIMPLE_BACKUP_SUFFIX "
+#~ "esteja\n"
+#~ "definido. O controle de versão pode ser definido com --backup ou\n"
+#~ "VERSION_CONTROL, valores possíveis são:\n"
+#~ "\n"
+#~ "   none, off       nunca faz backups (mesmo que --backup for passado)\n"
+#~ "   numbered,t      fazer backups numerados\n"
+#~ "   existing,nil    numerados se já existirem backups numerados, simples em\n"
+#~ "                   caso contrário\n"
+#~ "   simple,never    fazer backups simples sempre\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "As a special case, cp makes a backup of SOURCE when the force and backup\n"
+#~ "options are given and SOURCE and DEST are the same name for an existing,\n"
+#~ "regular file.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Como caso especial, cp faz um backup de FONTE quando as opções \"force\" e\n"
+#~ "\"backup\" são dadas e FONTE e DESTINO são iguais ao nome de um arquivo \n"
+#~ "regular já existente.\n"
+
+#~ msgid "preserving permissions for %s"
+#~ msgstr "preservando permissões para %s"
+
+#, fuzzy
+#~ msgid "cannot make directory %s"
+#~ msgstr "não foi possível criar diretório `%s'"
+
+#~ msgid "missing file arguments"
+#~ msgstr "arquivos não informados"
+
+#~ msgid "missing destination file"
+#~ msgstr "arquivo de destino não informado"
+
+#, fuzzy
+#~ msgid "specified target, %s is not a directory"
+#~ msgstr "alvo especificado, `%s' não é um diretório"
+
+#, fuzzy
+#~ msgid "copying multiple files, but last argument %s is not a directory"
+#~ msgstr ""
+#~ "copiando vários arquivos, mas o último argumento (%s) não é um diretório"
+
+#~ msgid "when preserving paths, the destination must be a directory"
+#~ msgstr ""
+#~ "ao preservar caminhos (paths), o último argumento deve ser um diretório"
+
+#~ msgid ""
+#~ "warning: --version-control (-V) is obsolete;  support for it\n"
+#~ "will be removed in some future release.  Use --backup=%s instead."
+#~ msgstr ""
+#~ "aviso: --version-control (-V) é obsoleto; o suporte será removido\n"
+#~ "numa versão futura.  Use --backup=%s."
+
+#~ msgid "symbolic links are not supported on this system"
+#~ msgstr "links simbólicos não são suportadas neste sistema"
+
+#~ msgid "cannot make both hard and symbolic links"
+#~ msgstr ""
+#~ "não é possível fazer links simbólicos e fixos (hard links) ao mesmo tempo"
+
+#~ msgid "backup type"
+#~ msgstr "tipo de backup"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]\n"
+#~ msgstr "Uso: %s [OPÇÃO]... [ARQUIVO]...\n"
+
+#~ msgid ""
+#~ "Output commands to set the LS_COLORS environment variable.\n"
+#~ "\n"
+#~ "Determine format of output:\n"
+#~ "  -b, --sh, --bourne-shell    output Bourne shell code to set LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        output C shell code to set LS_COLORS\n"
+#~ "  -p, --print-database        output defaults\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If FILE is specified, read it to determine which colors to use for which\n"
+#~ "file types and extensions.  Otherwise, a precompiled database is used.\n"
+#~ "For details on the format of these files, run `dircolors --print-database'.\n"
+#~ msgstr ""
+#~ "Emite comandos de saída para definir a variável de ambiente LS_COLORS.\n"
+#~ "\n"
+#~ "Para determinar o formato da saída:\n"
+#~ "   -b, --sh, --bourne-shell   emitir o código para definir LS_COLORS em \n"
+#~ "                              formato conhecido pela Bourne shell\n"
+#~ "   -c, --csh, --c-shell       emitir o código para definir LS_COLORS em \n"
+#~ "                              formato conhecido pela C shell\n"
+#~ "   -p, --print-data-base      emitir os códigos default\n"
+#~ "       --help                 mostrar esta ajuda e sair\n"
+#~ "       --version              mostrar informação sobre versão e sair\n"
+#~ "Se o ARQUIVO é especificado, ele será lido para determinar quais cores\n"
+#~ "usar para os tipos de arquivos e extensões. Caso contrário, são usados\n"
+#~ "valores precompilados. Para detalhes sobre o formato destes arquivos,\n"
+#~ "execute `dircolors --print-database'.\n"
+
+#~ msgid "%s:%lu: invalid line;  missing second token"
+#~ msgstr "%s:%lu: linha inválida; faltando segundo token"
+
+#, fuzzy
+#~ msgid "%s:%lu: unrecognized keyword %s"
+#~ msgstr "%s:%lu: palavra-chave desconhecida `%s'"
+
+#~ msgid "<internal>"
+#~ msgstr "<interno>"
+
+#~ msgid ""
+#~ "the options to output dircolors' internal database and\n"
+#~ "to select a shell syntax are mutually exclusive"
+#~ msgstr ""
+#~ "as opções para mostrar a base de dados interna do \"dircolors\" e para "
+#~ "escolher\n"
+#~ "uma sintaxe entendida por uma shell são mutuamente exclusivas"
+
+#~ msgid ""
+#~ "no FILE arguments may be used with the option to output\n"
+#~ "dircolors' internal database"
+#~ msgstr ""
+#~ "não se podem usar argumentos de tipo ARQUIVO com a opção para mostrar a "
+#~ "base\n"
+#~ "de dados interna do \"dircolors\""
+
+#~ msgid "too many arguments"
+#~ msgstr "muitos argumentos"
+
+#~ msgid "no SHELL environment variable, and no shell type option given"
+#~ msgstr ""
+#~ "variável de ambiente SHELL não existente e não se especificou nenhum\n"
+#~ "tipo de shell como argumento"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "Uso: %s [OPÇÃO]... [ARQUIVO]...\n"
+
+#~ msgid ""
+#~ "Show information about the filesystem on which each FILE resides,\n"
+#~ "or all filesystems by default.\n"
+#~ "\n"
+#~ "  -a, --all             include filesystems having 0 blocks\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -i, --inodes          list inode information instead of block usage\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --local           limit listing to local filesystems\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "      --no-sync         do not invoke sync before getting usage info "
+#~ "(default)\n"
+#~ "  -P, --portability     use the POSIX output format\n"
+#~ "      --sync            invoke sync before getting usage info\n"
+#~ "  -t, --type=TYPE       limit listing to filesystems of type TYPE\n"
+#~ "  -T, --print-type      print filesystem type\n"
+#~ "  -x, --exclude-type=TYPE   limit listing to filesystems not of type TYPE\n"
+#~ "  -v                    (ignored)\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "Mostrar informações sobre o sistema de arquivos onde cada ARQUIVO reside,\n"
+#~ "ou todos os sistemas de arquivos por default.\n"
+#~ "\n"
+#~ "  -a, --all          incluir sistemas de arquivos com 0 blocos\n"
+#~ "      --block-size=SIZE usa blocos de SIZE-byte\n"
+#~ "  -h, --human-readable  mostrar tamanhos em formato legível por humanos\n"
+#~ "                     (ex. 1K 234M 2G)\n"
+#~ "  -H, --si           como o anterior, mas usa o padrão de 1000 e não 1024\n"
+#~ "  -i, --inodes       mostra informação sobre inodes em vez de blocos "
+#~ "utilizados\n"
+#~ "  -k, --kilobytes    como  --block-size=1024\n"
+#~ "  -l, --local        limita a listagem ao sistema de arquivos local\n"
+#~ "  -m, --megabytes    como --block-size=1048576\n"
+#~ "      --no-sync      não chamar sync antes de obter as informações "
+#~ "(default)\n"
+#~ "  -P, --portability  usar o formato POSIX de saída\n"
+#~ "      --sync         chamar sync antes de obter as informações\n"
+#~ "  -t, --type=TIPO    limitar a listagem a sistemas de arquivos do tipo TIPO\n"
+#~ "  -T, --print-type   mostrar o tipo do sistema de arquivos\n"
+#~ "  -x, --exclude-type=TIPO limitar a listagem a sistemas de arquivos que não\n"
+#~ "                     sejam do tipo TIPO\n"
+#~ "  -v                 (ignorado)\n"
+#~ "      --help         mostrar esta ajuda e sai\n"
+#~ "      --version      mostrar informação sobre versão e sai\n"
+
+#, fuzzy
+#~ msgid "file system type %s both selected and excluded"
+#~ msgstr ""
+#~ "sistema de arquivos de tipo `%s' selecionado e excluído ao mesmo tempo"
+
+#~ msgid "Warning: "
+#~ msgstr "Aviso: "
+
+#~ msgid "%scannot read table of mounted filesystems"
+#~ msgstr "%s não foi possível ler a tabela dos sistemas de arquivos montados"
+
+#~ msgid ""
+#~ "Summarize disk usage of each FILE, recursively for directories.\n"
+#~ "\n"
+#~ "  -a, --all             write counts for all files, not just directories\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -b, --bytes           print size in bytes\n"
+#~ "  -c, --total           produce a grand total\n"
+#~ "  -D, --dereference-args  dereference PATHs when symbolic link\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --count-links     count sizes many times if hard linked\n"
+#~ "  -L, --dereference     dereference all symbolic links\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "  -S, --separate-dirs   do not include size of subdirectories\n"
+#~ "  -s, --summarize       display only a total for each argument\n"
+#~ "  -x, --one-file-system  skip directories on different filesystems\n"
+#~ "  -X FILE, --exclude-from=FILE  Exclude files that match any pattern in "
+#~ "FILE.\n"
+#~ "      --exclude=PAT     Exclude files that match PAT.\n"
+#~ "      --max-depth=N     print the total for a directory (or file, with "
+#~ "--all)\n"
+#~ "                          only if it is N or fewer levels below the command\n"
+#~ "                          line argument;  --max-depth=0 is the same as\n"
+#~ "                          --summarize\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "Mostrar o uso de disco de cada ARQUIVO, recursivamente para diretórios.\n"
+#~ "\n"
+#~ "   -a, --all             escreve a contagem para todos os arquivos, não\n"
+#~ "                         apenas diretórios\n"
+#~ "       --block-size=SIZE usa blocos de SIZE-bytes\n"
+#~ "   -b, --bytes           imprimir o tamanho em bytes\n"
+#~ "   -c, --total           produzir um total final\n"
+#~ "   -D, --dereference-args  desreferenciar rotas se link simbólico\n"
+#~ "   -h, --human-readable  imprimir tamanhos em formato legível por humanos\n"
+#~ "                         (ex. 1K 234M 2G)\n"
+#~ "   -H, --si              como o anterior, mas usa o padrão de 1000 em vez de "
+#~ "1024\n"
+#~ "   -k, --kilobytes       como --block-size=1024\n"
+#~ "   -l, --count-links     contar tamanho várias vezes se houver links "
+#~ "físicos\n"
+#~ "                         (hard links)\n"
+#~ "   -L, --dereference     desreferenciar todos os links simbólicos\n"
+#~ "   -m, --megabytes       usar blocos de 1024K bytes em vez de 512,\n"
+#~ "                         apesar de POSIXLY_CORRECT\n"
+#~ "   -S, --separate-dirs   não incluir tamanho de sub-diretórios\n"
+#~ "   -s, --summarize       mostrar só um total para cada argumento\n"
+#~ "   -x, --one-file-sysyem desconsiderar diretórios em sistemas de arquivos\n"
+#~ "                         diferentes\n"
+#~ "   -X ARQUIVO, --exclude-from=ARQUIVO Exclui arquivos que combinem com "
+#~ "qualquer\n"
+#~ "                         padrão em ARQUIVO.\n"
+#~ "       --exclude=PAD     Exclui arquivos que combinem com PAD.\\n\"\n"
+#~ "       --max-depth=N     mostra o total para um diretório (ou arquivo, com "
+#~ "--all)\"\n"
+#~ "                         somente se estiver N ou menos níveis abaixo do "
+#~ "parâmetro\n"
+#~ "                         da linha de comando; --max-depth=0 é o mesmo que \n"
+#~ "                         --summarize                         \n"
+#~ "       --help            mostrar esta ajuda e sai\n"
+#~ "       --version         mostrar informação sobre versão e sai\n"
+
+#~ msgid "cannot change to `..' from directory %s"
+#~ msgstr "não foi possível mudar para `..' do diretório %s"
+
+#~ msgid "cannot change to directory %s"
+#~ msgstr "não foi possível mudar para o diretório %s"
+
+#~ msgid "total"
+#~ msgstr "total"
+
+#, fuzzy
+#~ msgid "invalid maximum depth %s"
+#~ msgstr "profundidade máxima `%s' inválida"
+
+#~ msgid "cannot both summarize and show all entries"
+#~ msgstr "não é possível resumir e mostrar todas as entradas ao mesmo tempo"
+
+#~ msgid "warning: summarizing is the same as using --max-depth=0"
+#~ msgstr "alerta: summarizing é o mesmo que usar --max-depth=0"
+
+#~ msgid "warning: summarizing conflicts with --max-depth=%d"
+#~ msgstr "alerta: summarizing conflita com --max-depth=%d"
+
+#~ msgid "the strip option may not be used when installing a directory"
+#~ msgstr "a opção strip não pode ser usada ao instalar um diretório"
+
+#, fuzzy
+#~ msgid "invalid mode %s"
+#~ msgstr "modo inválido `%s'"
+
+#, fuzzy
+#~ msgid "creating directory %s"
+#~ msgstr "criando diretório `%s'"
+
+#, fuzzy
+#~ msgid "installing multiple files, but last argument, %s is not a directory"
+#~ msgstr ""
+#~ "instalando vários arquivos, mas o último argumento (%s) não é um diretório"
+
+#, fuzzy
+#~ msgid "%s is a directory"
+#~ msgstr "%s: é um diretório"
+
+#, fuzzy
+#~ msgid "cannot obtain time stamps for %s"
+#~ msgstr "não foi possível encontrar o \"mount point\" de %s"
+
+#, fuzzy
+#~ msgid "cannot set time stamps for %s"
+#~ msgstr "não foi possível criar diretório `%s'"
+
+#~ msgid "cannot fork"
+#~ msgstr "não foi possível fazer \"fork\""
+
+#~ msgid "cannot run strip"
+#~ msgstr "não foi possível rodar o strip"
+
+#, fuzzy
+#~ msgid "invalid user %s"
+#~ msgstr "usuário inválido `%s'"
+
+#, fuzzy
+#~ msgid "invalid group %s"
+#~ msgstr "grupo inválido `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST           (1st format)\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY   (2nd format)\n"
+#~ "  or:  %s -d [OPTION]... DIRECTORY...       (3rd format)\n"
+#~ msgstr ""
+#~ "Uso:  %s [OPÇÃO]... FONTE DESTINO           (1º formato)\n"
+#~ " ou:  %s [OPÇÃO]... FONTE... DIRETÓRIO      (2º formato)\n"
+#~ " ou:  %s -d [OPÇÃO]... DIRETÓRIO...         (3º formato)\n"
+
+#~ msgid ""
+#~ "In the first two formats, copy SOURCE to DEST or multiple SOURCE(s) to\n"
+#~ "the existing DIRECTORY, while setting permission modes and owner/group.\n"
+#~ "In the third format, create all components of the given DIRECTORY(ies).\n"
+#~ "\n"
+#~ "      --backup[=CONTROL] make a backup of each existing destination file\n"
+#~ "  -b                  like --backup but does not accept an argument\n"
+#~ "  -c                  (ignored)\n"
+#~ "  -d, --directory     treat all arguments as directory names; create all\n"
+#~ "                        components of the specified directories\n"
+#~ "  -D                  create all leading components of DEST except the "
+#~ "last,\n"
+#~ "                        then copy SOURCE to DEST;  useful in the 1st format\n"
+#~ "  -g, --group=GROUP   set group ownership, instead of process' current "
+#~ "group\n"
+#~ "  -m, --mode=MODE     set permission mode (as in chmod), instead of "
+#~ "rwxr-xr-x\n"
+#~ "  -o, --owner=OWNER   set ownership (super-user only)\n"
+#~ "  -p, --preserve-timestamps   apply access/modification times of SOURCE "
+#~ "files\n"
+#~ "                        to corresponding destination files\n"
+#~ "  -s, --strip         strip symbol tables, only for 1st and 2nd formats\n"
+#~ "  -S, --suffix=SUFFIX override the usual backup suffix\n"
+#~ "  -v, --verbose       print the name of each directory as it is created\n"
+#~ "      --help          display this help and exit\n"
+#~ "      --version       output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Nos dois primeiros formatos, copia FONTE para DESTINO ou múltiplos\n"
+#~ "FONTE(s) para DIRETÓRIO, ao mesmo tempo em que define permissões e\n"
+#~ "dono/grupo. No terceiro formato, cria todos os componentes do(s)\n"
+#~ "DIRETÓRIO(s) dado(s).\n"
+#~ "\n"
+#~ "   -b, --backup[=CONTROLE]     fazer backup antes da remoção\n"
+#~ "   -c                  (ignorado)\n"
+#~ "   -d, --directory     trata todos os parâmetros como nomes de diretórios;\n"
+#~ "                       cria todos os componentes do diretório especificado\n"
+#~ "   -D                  cria todos os componentes iniciais do DESTINO exceto "
+#~ "o \n"
+#~ "                       último, então copia o FONTE para o DESTINO; útil no\n"
+#~ "                       1o formato\n"
+#~ "   -g, --group=GRUPO   define o grupo como GRUPO em vez do grupo atual do "
+#~ "processo\n"
+#~ "   -m, --mode=MODO     define as permissões como MODO (como no chmod)\n"
+#~ "                       em vez de rwxr-xr-x\n"
+#~ "   -o, --owner=DONO    define o dono (somente para o superusuário)\n"
+#~ "   -p, --preserve-timestamps aplica horário de acesso/modificações dos "
+#~ "arquivos\n"
+#~ "                       FONTE\n"
+#~ "   -s, --strip         retirar as tabelas de símbolos, só para o 1º ou 2º\n"
+#~ "                       formato\n"
+#~ "   -S, --sufix=SUFIXO  usar SUFIXO em vez do sufixo habitual de backup\n"
+#~ "       --verbose       mostra o nome de cada diretório enquanto são criados\n"
+#~ "       --help          mostrar esta ajuda e sai\n"
+#~ "       --version       mostrar informação sobre versão e sai\n"
+
+#~ msgid "%s: warning: making a hard link to a symbolic link is not portable"
+#~ msgstr ""
+#~ "%s: aviso: fazer uma ligação (hard) para uma ligação simbólica não é portável"
+
+#~ msgid "%s: hard link not allowed for directory"
+#~ msgstr "%s: não é permitido fazer links fixos de diretórios"
+
+#~ msgid "%s: cannot overwrite directory"
+#~ msgstr "%s: não é possível sobrescrever o diretório"
+
+#, fuzzy
+#~ msgid "%s: replace %s? "
+#~ msgstr "%s: substituir `%s'? "
+
+#~ msgid "%s: File exists"
+#~ msgstr "%s: Arquivo já existente"
+
+#, fuzzy
+#~ msgid "create symbolic link %s to %s"
+#~ msgstr "criar link simbólico `%s' to `%s'"
+
+#, fuzzy
+#~ msgid "create hard link %s to %s"
+#~ msgstr "criar link `%s' para `%s'"
+
+#, fuzzy
+#~ msgid "creating symbolic link %s to %s"
+#~ msgstr "criar link simbólico `%s' to `%s'"
+
+#, fuzzy
+#~ msgid "creating hard link %s to %s"
+#~ msgstr "criar link `%s' para `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY TARGET...\n"
+#~ msgstr ""
+#~ "Uso:  %s [OPÇÃO]... ALVO [NOME_LINK]\n"
+#~ " ou:  %s [OPÇÃO]... ALVO... DIRETÓRIO\n"
+#~ " ou:  %s -d [OPÇÃO]... --target-directory=DIRETÓRIO ALVO...\n"
+
+#~ msgid ""
+#~ "Create a link to the specified TARGET with optional LINK_NAME.\n"
+#~ "If LINK_NAME is omitted, a link with the same basename as the TARGET is\n"
+#~ "created in the current directory.  When using the second form with more\n"
+#~ "than one TARGET, the last argument must be a directory;  create links\n"
+#~ "in DIRECTORY to each TARGET.  Create hard links by default, symbolic\n"
+#~ "links with --symbolic.  When creating hard links, each TARGET must exist.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]      make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                          like --backup but does not accept an argument\n"
+#~ "  -d, -F, --directory         hard link directories (super-user only)\n"
+#~ "  -f, --force                 remove existing destination files\n"
+#~ "  -n, --no-dereference        treat destination that is a symlink to a\n"
+#~ "                                directory as if it were a normal file\n"
+#~ "  -i, --interactive           prompt whether to remove destinations\n"
+#~ "  -s, --symbolic              make symbolic links instead of hard links\n"
+#~ "  -S, --suffix=SUFFIX         override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  specify the DIRECTORY in which to "
+#~ "create\n"
+#~ "                                the links\n"
+#~ "  -v, --verbose               print name of each file before linking\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Cria um link para o DESTINO específico com NOME_DE_LINK opcional. Se "
+#~ "existir\n"
+#~ "mais de um DESTINO, o último parâmetro deve ser um diretório; cria links\n"
+#~ "em DIRETÓRIO para cada DESTINO. Cria links por padrão, ou simbólicos com \n"
+#~ "--symbolic. Quando criando links, cada DESTINO deve existir.\n"
+#~ "\n"
+#~ "     --backup[=CONTROLE]       fazer backup de arquivos de destino "
+#~ "existentes\n"
+#~ "  -b                           o mesmo que --backup mas não aceita "
+#~ "parâmetros\n"
+#~ "  -d, -F, --directory          fazer links fixos para diretórios\n"
+#~ "                               (só superusuário)\n"
+#~ "  -f, --force                  remover destinos existentes\n"
+#~ "  -n, --no-dereference         tratar destinos que sejam links simbólicos\n"
+#~ "                               para um diretório como arquivos normais\n"
+#~ "  -i, --interactive            perguntar se deve apagar destinos\n"
+#~ "  -s, --symbolic               fazer links simbólicos em vez de links fixos\n"
+#~ "  -S, --suffix=SUFIXO          usar SUFIXO em vez do sufixo de backup usual\n"
+#~ "      --target-directory=DIR   move  os parâmetros FONTE para o diretório "
+#~ "DIR\n"
+#~ "  -v, --verbose                mostra o nome de cada arquivo antes de\n"
+#~ "                               criar o link\n"
+#~ "      --help                   mostrar esta ajuda e sair\n"
+#~ "      --version                mostrar informação sobre versão e sair\n"
+#~ "\n"
+
+#~ msgid "missing file argument"
+#~ msgstr "arquivo não informado"
+
+#, fuzzy
+#~ msgid "specified target directory, %s is not a directory"
+#~ msgstr "diretório alvo especificado, `%s' não é um diretório"
+
+#~ msgid "when making multiple links, last argument must be a directory"
+#~ msgstr ""
+#~ "quando há vários links a serem feitos, o último argumento deve ser um "
+#~ "diretório"
+
+#~ msgid "ignoring invalid width in environment variable COLUMNS: %s"
+#~ msgstr "ignorando largura inválida na variável de ambiente COLUMNS: %s"
+
+#~ msgid "ignoring invalid tab size in environment variable TABSIZE: %s"
+#~ msgstr ""
+#~ "ignorando tamanho de tab inválido na variável de ambiente TABSIZE: %s"
+
+#~ msgid "invalid line width: %s"
+#~ msgstr "largura de linha inválida: %s"
+
+#~ msgid "invalid tab size: %s"
+#~ msgstr "tamanho de tab inválido: %s"
+
+#~ msgid "unrecognized prefix: %s"
+#~ msgstr "prefixo desconhecido: %s"
+
+#~ msgid "unparsable value for LS_COLORS environment variable"
+#~ msgstr "o valor da variável de ambiente LS_COLORS não pode ser analisado"
+
+#, fuzzy
+#~ msgid ""
+#~ "List information about the FILEs (the current directory by default).\n"
+#~ "Sort entries alphabetically if none of -cftuSUX nor --sort.\n"
+#~ "\n"
+#~ "  -a, --all                  do not hide entries starting with .\n"
+#~ "  -A, --almost-all           do not list implied . and ..\n"
+#~ "  -b, --escape               print octal escapes for nongraphic characters\n"
+#~ "      --block-size=SIZE      use SIZE-byte blocks\n"
+#~ "  -B, --ignore-backups       do not list implied entries ending with ~\n"
+#~ "  -c                         with -lt: sort by, and show, ctime (time of "
+#~ "last\n"
+#~ "                               modification of file status information)\n"
+#~ "                               with -l: show ctime and sort by name\n"
+#~ "                               otherwise: sort by ctime\n"
+#~ "  -C                         list entries by columns\n"
+#~ "      --color[=WHEN]         control whether color is used to distinguish "
+#~ "file\n"
+#~ "                               types.  WHEN may be `never', `always', or "
+#~ "`auto'\n"
+#~ "  -d, --directory            list directory entries instead of contents\n"
+#~ "  -D, --dired                generate output designed for Emacs' dired mode\n"
+#~ "  -f                         do not sort, enable -aU, disable -lst\n"
+#~ "  -F, --classify             append indicator (one of */=@|) to entries\n"
+#~ "      --format=WORD          across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            list both full date and full time\n"
+#~ msgstr ""
+#~ "Lista informação sobre os ARQUIVOs (no diretório corrente por padrão).\n"
+#~ "Ordena alfabeticamente se não forem usadas as opções -cftuSUX ou -sort.\n"
+#~ "\n"
+#~ "  -a, --all                  não esconder entradas que começam com .\n"
+#~ "  -A, --almost-all           não mostrar . e .. implícitos\n"
+#~ "  -b, --escape               mostrar caracteres de escape octais para \n"
+#~ "                             caracteres não-gráficos\n"
+#~ "      --block-size=TAM       use TAM-byte blocos\n"
+#~ "  -B, --ignore-backups       não mostrar entradas implícitas acabando em ~\n"
+#~ "  -c                         com -lt:ordena e mostra, ctime (hora da última "
+#~ "\n"
+#~ "                                     modificação das informações do arquivo\n"
+#~ "                             com  -l: mostra ctime e ordena por nome\n"
+#~ "  -C                         mostrar entradas em colunas\n"
+#~ "      --color[=QUANDO]       controlar se a cor é usada para distinguir\n"
+#~ "                             tipos de arquivos. QUANDO pode ser 'never',\n"
+#~ "                             'always' ou 'auto'\n"
+#~ "  -d, --directory            mostrar os nomes dos diretórios em vez do\n"
+#~ "                             seu conteúdo\n"
+#~ "  -D, --dired                gerar saída formatada para o modo dired do \n"
+#~ "                             Emacs\n"
+#~ "  -f                         não ordenar, liga -aU, desliga -lst\n"
+#~ "  -F, --classify             acrescentar um caracter para tipificar cada\n"
+#~ "                             entrada\n"
+#~ "      --format=PALAVRA       across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                             single-column -1, verbose -l, vertical -C\n"
+#~ "                             (veja a opção de um caractere correspondente\n"
+#~ "                             a cada uma das palavras)      \n"
+#~ "      --full-time            mostrar data e hora completas\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -g                         (ignored)\n"
+#~ "  -G, --no-group             inhibit display of group information\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "      --si                   likewise, but use powers of 1000 not 1024\n"
+#~ "  -H                         same as `--si' for now; soon to change\n"
+#~ "                               to conform to POSIX\n"
+#~ "      --indicator-style=WORD append indicator with style WORD to entry "
+#~ "names:\n"
+#~ "                               none (default), classify (-F), file-type "
+#~ "(-p)\n"
+#~ "  -i, --inode                print index number of each file\n"
+#~ "  -I, --ignore=PATTERN       do not list implied entries matching shell "
+#~ "PATTERN\n"
+#~ "  -k, --kilobytes            like --block-size=1024\n"
+#~ "  -l                         use a long listing format\n"
+#~ "  -L, --dereference          list entries pointed to by symbolic links\n"
+#~ "  -m                         fill width with a comma separated list of "
+#~ "entries\n"
+#~ "  -n, --numeric-uid-gid      list numeric UIDs and GIDs instead of names\n"
+#~ "  -N, --literal              print raw entry names (don't treat e.g. "
+#~ "control\n"
+#~ "                               characters specially)\n"
+#~ "  -o                         use long listing format without group info\n"
+#~ "  -p, --file-type            append indicator (one of /=@|) to entries\n"
+#~ "  -q, --hide-control-chars   print ? instead of non graphic characters\n"
+#~ "      --show-control-chars   show non graphic characters as-is (default\n"
+#~ "                             unless program is `ls' and output is a "
+#~ "terminal)\n"
+#~ "  -Q, --quote-name           enclose entry names in double quotes\n"
+#~ "      --quoting-style=WORD   use quoting style WORD for entry names:\n"
+#~ "                               literal, locale, shell, shell-always, c, "
+#~ "escape\n"
+#~ "  -r, --reverse              reverse order while sorting\n"
+#~ "  -R, --recursive            list subdirectories recursively\n"
+#~ "  -s, --size                 print size of each file, in blocks\n"
+#~ msgstr ""
+#~ "  -g                         (ignorado)\n"
+#~ "  -G, --no-group             não mostra o grupo\n"
+#~ "  -h, --human-readable       mostra tamanhos em formato de leitura para \n"
+#~ "                             humanos (ex: 1K 234M 2G)\n"
+#~ "  -H, --si                   como o anterior, mas usa o multiplicador \n"
+#~ "                             1000 em vez de 1024\n"
+#~ "      --indicator-style=PALAVRA  concatena o indicador com o estilo \n"
+#~ "                             PALAVRA na entrada de nomes:\n"
+#~ "                               none             (padrao)\n"
+#~ "                               classificado     (-F)\n"
+#~ "                               tipo-de-arquivo  (-p)\n"
+#~ "  -i, --inode                mostrar o número de índice de cada arquivo\n"
+#~ "  -I, --ignore=PADRÃO        não mostrar entradas que coincidam com o\n"
+#~ "                             PADRÃO de shell\n"
+#~ "  -k, --kilobytes            como --block-size=1024\n"
+#~ "  -l                         usar formato longo de listagem\n"
+#~ "  -L, --dereference          mostrar entradas apontadas pelos\n"
+#~ "                             links simbólicos\n"
+#~ "  -m                         preencher largura com as entradas separadas "
+#~ "por\n"
+#~ "                             vírgulas\n"
+#~ "  -n, --numeric-uid-gid      mostrar UIDs e GIDs numéricos em vez dos nomes\n"
+#~ "  -N, --literal              mostrar os nomes das entradas sem tratar\n"
+#~ "                             tratar caracteres de controle\n"
+#~ "  -o                         usar formato de listagem longo sem informação\n"
+#~ "                             de grupo\n"
+#~ "  -p, --file-type            acrescentar um indicador (/=@|) nas entradas\n"
+#~ "  -q, --hide-control-chars   mostrar ? em vez de caracteres não gráficos\n"
+#~ "      --show-control-chars   mostra caracteres não gráficos como são "
+#~ "(padrão\n"
+#~ "                             a menos que o programa seja o `ls' e a saída\n"
+#~ "                             seja um terminal)\n"
+#~ "  -Q, --quote-name           colocar aspas nos nomes das entradas\n"
+#~ "      --quoting-style=PALAVRA use estilo de quote para nomes de entrada:\n"
+#~ "                              literal, shell, shell-always, c, escape\n"
+#~ "  -r, --reverse              inverter a ordem na ordenação\n"
+#~ "  -R, --recursive            mostrar subdiretórios recursivamente\n"
+#~ "  -s, --size                 mostrar o tamanho de cada arquivo, em blocos\n"
+
+#~ msgid ""
+#~ "  -S                         sort by file size\n"
+#~ "      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+#~ "                               version -v\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=WORD            show time as WORD instead of modification "
+#~ "time:\n"
+#~ "                               atime, access, use, ctime or status; use\n"
+#~ "                               specified time as sort key if --sort=time\n"
+#~ "  -t                         sort by modification time\n"
+#~ "  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8\n"
+#~ "  -u                         with -lt: sort by, and show, access time\n"
+#~ "                               with -l: show access time and sort by name\n"
+#~ "                               otherwise: sort by access time\n"
+#~ "  -U                         do not sort; list entries in directory order\n"
+#~ "  -v                         sort by version\n"
+#~ "  -w, --width=COLS           assume screen width instead of current value\n"
+#~ "  -x                         list entries by lines instead of by columns\n"
+#~ "  -X                         sort alphabetically by entry extension\n"
+#~ "  -1                         list one file per line\n"
+#~ "      --help                 display this help and exit\n"
+#~ "      --version              output version information and exit\n"
+#~ "\n"
+#~ "By default, color is not used to distinguish types of files.  That is\n"
+#~ "equivalent to using --color=none.  Using the --color option without the\n"
+#~ "optional WHEN argument is equivalent to using --color=always.  With\n"
+#~ "--color=auto, color codes are output only if standard output is connected\n"
+#~ "to a terminal (tty).\n"
+#~ msgstr ""
+#~ "  -S                         ordenar pelo tamanho do arquivo\n"
+#~ "      --sort=PALAVRA         ctime -c, extension -X, none -U, size -S,\n"
+#~ "                             status -c, time -t, atime -u, access -u, use\n"
+#~ "                             -u (veja a opção de um caractere "
+#~ "correspondente\n"
+#~ "                             a cada uma das palavras)\n"
+#~ "      --time=PALAVRA         mostra hora como PALAVRA em vez da hora de\n"
+#~ "                             alteração: atime, access, use, ctime or status\n"
+#~ "  -t                         ordenar por tempo da última alteração;\n"
+#~ "                             com -l: mostrar mtime\n"
+#~ "  -T, --tabsize=COLUNA       assumir que há tabs de COLUNA em COLUNA \n"
+#~ "                             colunas em vez de 8 em 8\n"
+#~ "  -u                         ordenar por tempo do último acesso;\n"
+#~ "                             com -l: mostrar atime\n"
+#~ "  -U                         não ordenar; mostrar entradas na ordem do\n"
+#~ "                             diretório\n"
+#~ "  -v                         ordena por versão\n"
+#~ "  -w, --width=COLUNAS        assumir que a tela tem largura COLUNAS\n"
+#~ "  -x                         mostrar entradas por linhas em vez de colunas\n"
+#~ "  -X                         ordenar alfabeticamente pela extensão da\n"
+#~ "                             entrada\n"
+#~ "  -1                         mostrar um arquivo por linha\n"
+#~ "      --help                 mostrar esta ajuda e sair\n"
+#~ "      --version              mostrar informação sobre versão e sair\n"
+#~ "\n"
+#~ "Por padrão não é usada cor para distinguir entre os tipos de arquivos.\n"
+#~ "Isto é equivalente a usar --color=none. Usar a opção --color sem o "
+#~ "argumento\n"
+#~ "opcional QUANDO é equivalente a usar --color=always. Com "
+#~ "--color=autousam-se\n"
+#~ "códigos de cores só se a saída padrão for um terminal (tty)\n"
+
+#~ msgid "Usage: %s [OPTION] DIRECTORY...\n"
+#~ msgstr "Uso: %s [OPÇÃO] DIRETÓRIO...\n"
+
+#~ msgid ""
+#~ "Create the DIRECTORY(ies), if they do not already exist.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not rwxrwxrwx - "
+#~ "umask\n"
+#~ "  -p, --parents     no error if existing, make parent directories as needed\n"
+#~ "  -v, --verbose     print a message for each created directory\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Criar o(s) DIRETÓRIO(s), se ainda não existirem.\n"
+#~ "\n"
+#~ "   -m, --mode=MODO   colocar permissões MODO (como no chmod) em vez\n"
+#~ "                     de rwxrwxrwx - umask\n"
+#~ "   -p, --parents     suprimir erros caso existam, criar diretórios\n"
+#~ "                     pais à medida que for necessário\n"
+#~ "   -v, --verbose     mostrar uma mensagem para cada diretório criado\n"
+#~ "       --help        mostrar esta ajuda e sair\n"
+#~ "       --version     mostrar informação sobre versão e sair\n"
+
+#, fuzzy
+#~ msgid "created directory %s"
+#~ msgstr "diretório `%s' criado"
+
+#, fuzzy
+#~ msgid "cannot set permissions of directory %s"
+#~ msgstr "não foi possível criar diretório `%s'"
+
+#~ msgid "Usage: %s [OPTION] NAME...\n"
+#~ msgstr "Uso: %s [OPÇÃO] NOME...\n"
+
+#~ msgid ""
+#~ "Create named pipes (FIFOs) with the given NAMEs.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Criar pipes com nome (FIFOs) com o NOME dado.\n"
+#~ "\n"
+#~ "   -m, --mode=MODO   configurar permissões (como no chmod)\n"
+#~ "       --help        mostrar esta ajuda e sai\n"
+#~ "       --version     mostrar informação sobre versão e sai\n"
+
+#~ msgid "fifo files not supported"
+#~ msgstr "arquivos \"fifo\" não suportados"
+
+#~ msgid "invalid mode"
+#~ msgstr "modo inválido"
+
+#~ msgid "cannot create fifo `%s'"
+#~ msgstr "não foi possível criar \"fifo\" `%s'"
+
+#, fuzzy
+#~ msgid "cannot set permissions of fifo `%s'"
+#~ msgstr "não foi possível criar diretório `%s'"
+
+#~ msgid "Usage: %s [OPTION]... NAME TYPE [MAJOR MINOR]\n"
+#~ msgstr "Uso: %s [OPÇÃO]... NOME TIPO [MAJOR MINOR]\n"
+
+#~ msgid ""
+#~ "Create the special file NAME of the given TYPE.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ "\n"
+#~ "MAJOR MINOR are forbidden for TYPE p, mandatory otherwise.  TYPE may be:\n"
+#~ "\n"
+#~ "  b      create a block (buffered) special file\n"
+#~ "  c, u   create a character (unbuffered) special file\n"
+#~ "  p      create a FIFO\n"
+#~ msgstr ""
+#~ "Criar o arquivo especial NOME do TIPO dado.\n"
+#~ "\n"
+#~ "   -m, --mode=MODO   colocar permissões MODO (como no chmod), em vez de \n"
+#~ "                     0666-umask\n"
+#~ "       --help        mostrar esta ajuda e sai\n"
+#~ "       --version     mostrar informação sobre versão e sai\n"
+#~ "\n"
+#~ "MAJOR e MINOR são proibidos para o TIPO p, obrigatórios nos outros casos.\n"
+#~ "TIPO pode ser:\n"
+#~ "   b       criar um arquivo especial de tipo bloco (buffered)\n"
+#~ "   c, u    criar um arquivo especial de tipo caracter (não buffered)\n"
+#~ "   p       criar um \"FIFO\"\n"
+
+#~ msgid "wrong number of arguments"
+#~ msgstr "número de argumentos inválido"
+
+#~ msgid "block special files not supported"
+#~ msgstr "arquivos especiais de tipo bloco não suportados"
+
+#~ msgid ""
+#~ "when creating block special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "ao criar arquivos especiais de bloco, são necessários os números \n"
+#~ "\"major\" e \"minor do dispositivo"
+
+#, fuzzy
+#~ msgid "invalid major device number %s"
+#~ msgstr "numero \"major\" do dispositivo inválido `%s'"
+
+#, fuzzy
+#~ msgid "invalid minor device number %s"
+#~ msgstr "número \"minor\" do dispositivo inválido `%s'"
+
+#~ msgid "character special files not supported"
+#~ msgstr "arquivos especiais de tipo caracter não suportados"
+
+#~ msgid ""
+#~ "when creating character special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "ao criar arquivos especiais de tipo caracter é necessário especificar\n"
+#~ "os números \"major\" e \"minor\" do dispositivo"
+
+#~ msgid "major and minor device numbers may not be specified for fifo files"
+#~ msgstr ""
+#~ "arquivos especiais de tipo \"fifo\" não podem ter os números \"major\" e "
+#~ "\"minor\"\n"
+#~ "do dispositivo"
+
+#, fuzzy
+#~ msgid "cannot set permissions of `%s'"
+#~ msgstr "não foi possível criar diretório `%s'"
+
+#, fuzzy
+#~ msgid ""
+#~ "Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -f, --force                  never prompt before overwriting\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "      --strip-trailing-slashes  remove any trailing slashes from each "
+#~ "SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 move only older or brand new non-directories\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Renomear FONTE como DESTINO ou mover FONTE(s) para DIRETÓRIO.\n"
+#~ "\n"
+#~ "   -b, --backup[=CONTROLE]      fazer \"backup\" antes da remoção\n"
+#~ "   -f, --force                  apagar destinos existentes, nunca perguntar\n"
+#~ "   -i, --interactive            perguntar antes de sobrescrever\n"
+#~ "       --strip-trailing-slashes remove todas as barras finais de cada \n"
+#~ "                                parâmetro FONTE\n"
+#~ "   -S, --suffix=SUFIXO          usar SUFIXO em vez do sufixo habitual de\n"
+#~ "                                \"backup\"\n"
+#~ "       --target-directory=DIR   move todos os parâmetros FONTE para o\n"
+#~ "                                diretório DIR\n"
+#~ "   -u, --update                 mover somente arquivos novos ou mais \n"
+#~ "                                recentes\n"
+#~ "   -v, --verbose                explicar o que está sendo feito\n"
+#~ "       --help                   mostrar esta ajuda e sair\n"
+#~ "       --version                mostrar informação sobre versão e sair\n"
+
+#~ msgid "when moving multiple files, last argument must be a directory"
+#~ msgstr ""
+#~ "ao mover múltiplos arquivos o último argumento deve ser um diretório"
+
+#, fuzzy
+#~ msgid "cannot open directory %s"
+#~ msgstr "não foi possível remover diretório `%s'"
+
+#, fuzzy
+#~ msgid "closing directory %s"
+#~ msgstr "removendo diretório %s"
+
+#, fuzzy
+#~ msgid "%s: remove write-protected directory %s? "
+#~ msgstr "%s: remover diretório `%s' protegido contra escrita? "
+
+#, fuzzy
+#~ msgid "%s: remove write-protected file %s? "
+#~ msgstr "%s: remover arquivo `%s' protegido contra escrita? "
+
+#, fuzzy
+#~ msgid "%s: remove directory %s? "
+#~ msgstr "%s: remover diretório `%s'? "
+
+#, fuzzy
+#~ msgid "%s: remove %s? "
+#~ msgstr "%s: remover `%s'? "
+
+#~ msgid "removing %s\n"
+#~ msgstr "removendo %s\n"
+
+#, fuzzy
+#~ msgid "cannot unlink %s"
+#~ msgstr "não foi possível remover o link `%s'"
+
+#, fuzzy
+#~ msgid "%s: directory %s is write protected; descend into it anyway? "
+#~ msgstr ""
+#~ "%s: diretório `%s' é protegido contra escrita; entrar nele mesmo assim? "
+
+#, fuzzy
+#~ msgid "%s: descend into directory %s? "
+#~ msgstr "%s: descer no diretório `%s'? "
+
+#~ msgid "removing all entries of directory %s\n"
+#~ msgstr "removendo todas as entradas do diretório %s\n"
+
+#, fuzzy
+#~ msgid "cannot lstat `.' in %s"
+#~ msgstr "não foi possível fazer lstat `.' em `%s'"
+
+#, fuzzy
+#~ msgid ""
+#~ "ERROR: the directory %s initially had device/inode\n"
+#~ "numbers %lu/%lu, but now (after a chdir into it), the numbers for `.'\n"
+#~ "are %lu/%lu.  That means that while rm was running, the directory\n"
+#~ "was replaced with either another directory or a link to another directory."
+#~ msgstr ""
+#~ "ERRO: o  diretório `%s' inicialmente tinha números de dispositivo/inode\n"
+#~ " %lu/%lu, mas agora (depois de um chdir para ele), os números para `.'\n"
+#~ "são %lu/%lu.  Isto quer dizer que enquanto o rm estava rodando, o diretório\n"
+#~ "foi trocado por outro ou por um link para outro diretório."
+
+#~ msgid "cannot change back to directory %s via `..'"
+#~ msgstr "não foi possível mudar para o diretório %s via `..'"
+
+#, fuzzy
+#~ msgid "%s: remove directory %s%s? "
+#~ msgstr "%s: remover diretório `%s'%s? "
+
+#~ msgid " (might be nonempty)"
+#~ msgstr " (pode não estar vazio)"
+
+#~ msgid "removing the directory itself: %s\n"
+#~ msgstr "removendo o próprio diretório: %s\n"
+
+#, fuzzy
+#~ msgid "cannot remove current directory %s"
+#~ msgstr "não foi possível remover diretório corrente `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove directory %s"
+#~ msgstr "não foi possível remover diretório `%s'"
+
+#~ msgid "cannot remove `.' or `..'"
+#~ msgstr "não é possível remover `.' ou `..'"
+
+#~ msgid ""
+#~ "WARNING: Circular directory structure.\n"
+#~ "This almost certainly means that you have a corrupted file system.\n"
+#~ "NOTIFY YOUR SYSTEM MANAGER.\n"
+#~ "The following two directories have the same inode number:\n"
+#~ msgstr ""
+#~ "%s: AVISO: Estrutura de diretórios circular.\n"
+#~ "Isto quer dizer quase com certeza que o sistema de arquivos\n"
+#~ "está corrompido.\n"
+#~ "NOTIFIQUE O ADMINISTRADOR DO SISTEMA.\n"
+#~ "Os próximos dois diretórios tem o mesmo número de inode:\n"
+
+#~ msgid "continue? "
+#~ msgstr "continuar? "
+
+#~ msgid "Usage: %s [OPTION]... FILE...\n"
+#~ msgstr "Uso: %s [OPÇÃO]... ARQUIVO...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Remove (unlink) the FILE(s).\n"
+#~ "\n"
+#~ "  -d, --directory       unlink directory, even if non-empty (super-user "
+#~ "only)\n"
+#~ "  -f, --force           ignore nonexistent files, never prompt\n"
+#~ "  -i, --interactive     prompt before any removal\n"
+#~ "  -r, -R, --recursive   remove the contents of directories recursively\n"
+#~ "  -v, --verbose         explain what is being done\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ "\n"
+#~ "To remove a file whose name starts with a `-', for example `-foo',\n"
+#~ "use one of these commands:\n"
+#~ "  %s -- -foo\n"
+#~ "\n"
+#~ "  %s ./-foo\n"
+#~ "\n"
+#~ "Note that if you use rm to remove a file, it is usually possible to recover\n"
+#~ "the contents of that file.  If you want more assurance that the contents "
+#~ "are\n"
+#~ "truly unrecoverable, consider using shred.\n"
+#~ msgstr ""
+#~ "Remover (link) do(s) ARQUIVO(s).\n"
+#~ "\n"
+#~ "   -d, --directory       remover diretório, mesmo que\n"
+#~ "                         não vazio (só superusuário)\n"
+#~ "   -f, --force           ignorar arquivos não existentes, nunca perguntar\n"
+#~ "   -i, --interactive     perguntar antes de qualquer remoção\n"
+#~ "   -r, -R, --recursive   apagar o conteúdos dos diretórios recursivamente\n"
+#~ "   -v, --verbose         explicar o que se está sendo feito\n"
+#~ "       --help            mostrar esta ajuda e sair\n"
+#~ "       --version         mostrar informação sobre versão e sair\n"
+#~ "\n"
+#~ "Para remover um arquivo que o nome inicia-se com um `-', por exemplo "
+#~ "`-foo',\n"
+#~ "use um destes comandos:\n"
+#~ "  %s -- -foo\n"
+#~ "  %s ./-foo\n"
+
+#~ msgid "removing directory, %s"
+#~ msgstr "removendo diretório %s"
+
+#~ msgid "Usage: %s [OPTION]... DIRECTORY...\n"
+#~ msgstr "Uso: %s [OPÇÃO]... DIRETÓRIO...\n"
+
+#~ msgid ""
+#~ "Remove the DIRECTORY(ies), if they are empty.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ignore each failure that is solely because a directory\n"
+#~ "                  is non-empty\n"
+#~ "  -p, --parents   remove DIRECTORY, then try to remove each directory\n"
+#~ "                  component of that path name.  E.g., `rmdir -p a/b/c' is\n"
+#~ "                  similar to `rmdir a/b/c a/b a'.\n"
+#~ "  -v, --verbose   output a diagnostic for every directory processed\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Remove o(s) DIRETÓRIO(s), se eles estiverem vazios.\n"
+#~ "\n"
+#~ "        --ignore-fail-on-non-empty\n"
+#~ "                   ignora cada falha causada somente se  o diretório não \n"
+#~ "                   está vazio\n"
+#~ "   -p, --parents   remove DIRETÓRIO, depois tenta remover cada diretório\n"
+#~ "                   componente da rota. Ex. `rmdir -p a/b/c é similar\n"
+#~ "                   a `rmdir a/b/c a/b a'.\n"
+#~ "       --verbose   mostra um diagnóstico para cada diretório processado\n"
+#~ "                   vazios\n"
+#~ "       --help      mostrar esta ajuda e sai\n"
+#~ "       --version   mostrar informação sobre versão e sai\n"
+
+#~ msgid "Usage: %s [OPTIONS] FILE [...]\n"
+#~ msgstr "Uso: %s [OPÇÃO]... ARQUIVO [...]\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Overwrite the specified FILE(s) repeatedly, in order to make it harder\n"
+#~ "for even very expensive hardware probing to recover the data.\n"
+#~ "\n"
+#~ "  -f, --force    change permissions to allow writing if necessary\n"
+#~ "  -n, --iterations=N  Overwrite N times instead of the default (%d)\n"
+#~ "  -s, --size=N   shred this many bytes (suffixes like k, M, G accepted)\n"
+#~ "  -u, --remove   truncate and remove file after overwriting\n"
+#~ "  -v, --verbose  show progress\n"
+#~ "  -x, --exact    do not round file sizes up to the next full block\n"
+#~ "  -z, --zero     add a final overwrite with zeros to hide shredding\n"
+#~ "  -              shred standard output\n"
+#~ "      --help     display this help and exit\n"
+#~ "      --version  print version information and exit\n"
+#~ "\n"
+#~ "Delete FILE(s) if --remove (-u) is specified.  The default is not to remove\n"
+#~ "the files because it is common to operate on device files like /dev/hda,\n"
+#~ "and those files usually should not be removed.  When operating on regular\n"
+#~ "files, most people use the --remove option.\n"
+#~ "\n"
+#~ "CAUTION: Note that shred relies on a very important assumption:\n"
+#~ "that the filesystem overwrites data in place.  This is the traditional\n"
+#~ "way to do things, but many modern filesystem designs do not satisfy this\n"
+#~ "assumption.  The following are examples of filesystems on which shred is\n"
+#~ "not effective:\n"
+#~ "\n"
+#~ "* log-structured or journaled filesystems, such as those supplied with\n"
+#~ "  AIX and Solaris (and JFS, ReiserFS, XFS, etc.)\n"
+#~ "\n"
+#~ "* filesystems that write redundant data and carry on even if some writes\n"
+#~ "  fail, such as RAID-based filesystems\n"
+#~ "\n"
+#~ "* filesystems that make snapshots, such as Network Appliance's NFS server\n"
+#~ "\n"
+#~ "* filesystems that cache in temporary locations, such as NFS\n"
+#~ "  version 3 clients\n"
+#~ "\n"
+#~ "* compressed filesystems\n"
+#~ msgstr ""
+#~ "Apaga um arquivo de maneira segura, primeiro sobrescreve-o para inutilizar \n"
+#~ "seu conteúdo.\n"
+#~ "\n"
+#~ "  -f, --force    troca permissões para permitir gravação caso necessário\n"
+#~ "  -n, --iterations=N  Sobrescreve N vezes em vez do padrão (%d)\n"
+#~ "  -s, --size=N   separa N bytes (sufixos como k, M e G são aceitos\n"
+#~ "  -u, --remove   truncar e remover o arquivo após sobrescrever\n"
+#~ "  -v, --verbose  mostra o progresso\n"
+#~ "  -x, --exact    não arredonda tamanho de arquivo até o próximo bloco\n"
+#~ "  -z, --zero     adiciona uma sobrescrição com zeros para esconder "
+#~ "fragmentos\n"
+#~ "                 na saída padrão\n"
+#~ "  -              shred standard output\n"
+#~ "      --help     mostra esta ajuda e sai\n"
+#~ "      --version  mostra informações de versão e sai\n"
+#~ "\n"
+#~ "MEARRUME quem sabe adicionar mais discussões aqui"
+
+#~ msgid "%s: cannot rewind"
+#~ msgstr "%s: não é possível voltar (rewind)"
+
+#~ msgid "%s: pass %lu/%lu (%s)..."
+#~ msgstr "%s: passou %lu/%lu (%s)..."
+
+#~ msgid "%s: error writing at offset %s"
+#~ msgstr "%s: erro escrevendo no deslocamento %s"
+
+#~ msgid "%s: file too large"
+#~ msgstr "%s: arquivo muito grande"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%s/%s"
+#~ msgstr "%s: passou %lu/%lu (%s)...%s/%s"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%s"
+#~ msgstr "%s: pass %lu/%lu (%s)...%s"
+
+#~ msgid "%s: invalid file type"
+#~ msgstr "%s: tipo de arquivo desconhecido"
+
+#~ msgid "%s: file has negative size"
+#~ msgstr "%s: arquivo tem tamanho negativo"
+
+#~ msgid "%s: error truncating"
+#~ msgstr "%s: erro truncando"
+
+#~ msgid "%s: cannot shred append-only file descriptor"
+#~ msgstr ""
+#~ "%s: não foi possível fragmentar (shred) descritor de arquivo (append-only)"
+
+#~ msgid "%s: removing"
+#~ msgstr "removendo %s"
+
+#, fuzzy
+#~ msgid "%s: renamed to %s"
+#~ msgstr "%s: renomeado para `%s'"
+
+#~ msgid "%s: removed"
+#~ msgstr "%s: removido"
+
+#~ msgid "%s: cannot remove"
+#~ msgstr "não foi possível remover `%s'"
+
+#~ msgid "%s: invalid number of passes"
+#~ msgstr "%s: número de passagens inválido"
+
+#~ msgid "%s: invalid file size"
+#~ msgstr "%s: tamanho de arquivo inválido"
+
+#~ msgid "Usage: %s [OPTION]\n"
+#~ msgstr "Uso: %s [OPÇÃO]\n"
+
+#~ msgid ""
+#~ "Force changed blocks to disk, update the super block.\n"
+#~ "\n"
+#~ "  --help      display this help and exit\n"
+#~ "  --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Forçar os blocos de disco mudados a serem escritos no disco,\n"
+#~ "atualizando o superbloco.\n"
+#~ "   --help      mostrar esta ajuda e sair\n"
+#~ "   --version   mostrar informação sobre versão e sair\n"
+
+#~ msgid "ignoring all arguments"
+#~ msgstr "ignorando todos os argumentos"
+
+#, fuzzy
+#~ msgid "creating %s"
+#~ msgstr "removendo %s\n"
+
+#, fuzzy
+#~ msgid "setting times of %s"
+#~ msgstr "preservando horário para %s"
+
+#, fuzzy
+#~ msgid "  or:  %s [-acm] MMDDhhmm[YY] FILE... (obsolescent)\n"
+#~ msgstr "  ou : %s [-acm] MMDDhhmm[YY] ARQUIVO... (obsoleto)\n"
+
+#~ msgid ""
+#~ "Update the access and modification times of each FILE to the current time.\n"
+#~ "\n"
+#~ "  -a                     change only the access time\n"
+#~ "  -c, --no-create        do not create any files\n"
+#~ "  -d, --date=STRING      parse STRING and use it instead of current time\n"
+#~ "  -f                     (ignored)\n"
+#~ "  -m                     change only the modification time\n"
+#~ "  -r, --reference=FILE   use this file's times instead of current time\n"
+#~ "  -t STAMP               use [[CC]YY]MMDDhhmm[.ss] instead of current time\n"
+#~ "  --time=WORD            set time given by WORD: access atime use (same as "
+#~ "-a)\n"
+#~ "                           modify mtime (same as -m)\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ "Note that the three time-date formats recognized for the -d and -t options\n"
+#~ "and for the obsolescent argument are all different.\n"
+#~ msgstr ""
+#~ "Atualizar os tempos de acesso e modificação de cada ARQUIVO para o tempo\n"
+#~ "atual.\n"
+#~ "\n"
+#~ "  -a                      mudar só os tempos de acesso\n"
+#~ "  -c, --no-create         não criar arquivos\n"
+#~ "  -d, --date=STRING       analisar STRING e usá-la em vez do tempo atual\n"
+#~ "  -f                      (ignorado)\n"
+#~ "  -m                      mudar só os tempos de modificação\n"
+#~ "  -r, --reference=ARQUIVO usar os tempos do ARQUIVO em vez do tempo atual\n"
+#~ "  -t TEMPO                usar MMDDhhmm[[CC]YY][.ss] em vez do tempo atual\n"
+#~ "      --time=PALAVRA      acess -a, atime -a, mtime -m, modify -m,\n"
+#~ "                          use -a\n"
+#~ "      --help              mostrar esta ajuda e sair\n"
+#~ "      --version           mostrar informação sobre versão e sair\n"
+#~ "\n"
+#~ "Note que os três formatos de data reconhecidos pelas opções -d e -t e \n"
+#~ "para o parâmetro obsoleto são diferentes.\n"
+
+#, fuzzy
+#~ msgid "invalid date format %s"
+#~ msgstr "formato da data inválido `%s'"
+
+#~ msgid "cannot specify times from more than one source"
+#~ msgstr "não é possível especificar tempos a partir de mais de uma fonte"
+
+#~ msgid "file arguments missing"
+#~ msgstr "argumentos de arquivo não informados"
+
+#~ msgid "group of %s changed to %s\n"
+#~ msgstr "grupo de %s alterado para %s\n"
+
+#, fuzzy
+#~ msgid "ownership of %s changed to "
+#~ msgstr "dono de %s alterado para "
+
+#, fuzzy
+#~ msgid "you are not a member of group %s"
+#~ msgstr "você não é membro do grupo `%s'"
+
+#~ msgid "%s: invalid group number"
+#~ msgstr "%s: número de grupo inválido"
+
+#~ msgid "cannot chmod %s"
+#~ msgstr "não foi possível mudar permissões de `%s'"
+
+#~ msgid "virtual memory exhausted"
+#~ msgstr "memória virtual esgotada"
+
+#~ msgid "Memory exhausted"
+#~ msgstr "memória esgotada"
+
+#~ msgid "cannot remove old link to `%s'"
+#~ msgstr "não foi possível romover o link antigo para `%s'"
+
+#~ msgid "`%s' is a directory"
+#~ msgstr "`%s' é um diretório"
+
+#~ msgid "cannot make fifo `%s'"
+#~ msgstr "não foi possível criar \"fifo\" `%s'"
+
+#~ msgid "--version-control"
+#~ msgstr "--version-control"
+
+#~ msgid "current directory"
+#~ msgstr "diretório corrente"
+
+#~ msgid "starting directory"
+#~ msgstr "diretório inicial"
+
+#~ msgid "create %s %s to %s"
+#~ msgstr "criar %s %s para %s"
+
+#~ msgid "cannot create %s `%s' to `%s'"
+#~ msgstr "não foi possível criar %s `%s' para `%s'"
+
+#~ msgid "symbolic link"
+#~ msgstr "link simbólico"
+
+#~ msgid "hard link"
+#~ msgstr "link fixo"
+
+#~ msgid "link"
+#~ msgstr "link"
+
+#~ msgid "%s -> %s (backup)\n"
+#~ msgstr "%s -> %s (backup)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ msgstr ""
+#~ "Uso: %s [OPÇÃO]... DESTINO [NOME_LINK]\n"
+#~ " ou: %s [OPÇÃO]... DESTINO... DIRETÓRIO\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ msgstr ""
+#~ "Uso: %s [OPÇÃO]... FONTE DESTINO\n"
+#~ " ou: %s [OPÇÃO]... FONTE... DIRETÓRIO\n"
+
+#~ msgid "--no-dereference (-h) is not supported on this system"
+#~ msgstr "--no-dereference (-h) não é suportado neste sistema"
+
+#~ msgid "Usage: %s [OPTION]... EXISTING_DIR NEW_DIR\n"
+#~ msgstr "Uso: %s [OPÇÃO]... DIRETÓRIO NOVO_DIRETÓRIO\n"
+
+#~ msgid ""
+#~ "Rename EXISTING_DIR to NEW_DIR.\n"
+#~ "\n"
+#~ "   --help      display this help and exit\n"
+#~ "   --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Renomear DIRETÓRIO como NOVO_DIRETÓRIO.\n"
+#~ "\n"
+#~ "    --help      mostrar esta ajuda e sair\n"
+#~ "    --version   mostrar informação sobre versão e sair\n"
+
+#~ msgid "cannot get current directory"
+#~ msgstr "não foi possível obter diretório corrente"
+
+#~ msgid "cannot rename `.' or `..'"
+#~ msgstr "não foi possível renomear `.' e `..'"
+
+#~ msgid "`%s' is an ancestor of `%s'"
+#~ msgstr "`%s' é ascendente de `%s'"
+
+#~ msgid "sparse type"
+#~ msgstr "tipo esparso"
+
+#~ msgid "%s is closed"
+#~ msgstr "%s está fechado"
+
+#~ msgid "fork system call failed"
+#~ msgstr "falha na chamada de sistema fork"
+
+#~ msgid "sort type"
+#~ msgstr "tipo de ordenação"
+
+# ??? time
+#~ msgid "time type"
+#~ msgstr "tipo de hora"
+
+#~ msgid "format type"
+#~ msgstr "tipo de formato"
+
+#~ msgid "colorization criterion"
+#~ msgstr "critério de colorização"
+
+#~ msgid "indicator style"
+#~ msgstr "indicador de estilo"
+
+#~ msgid "quoting style"
+#~ msgstr "estilo de quote"
+
+# ???
+#~ msgid "time selector"
+#~ msgstr "seletor de tempo"
+
+#~ msgid "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ msgstr "Uso: %s [OPÇÃO]... GRUPO ARQUIVO...\n"
+
+#~ msgid ""
+#~ "the option for counting 1MB blocks may not be used\n"
+#~ "with the portable output format"
+#~ msgstr ""
+#~ "a opção para contar blocos de 1MB não pode ser usada\n"
+#~ "com o formato de saída portável"
+
+#~ msgid ""
+#~ "the option for printing with adaptive units may not be used\n"
+#~ "with the portable output format"
+#~ msgstr ""
+#~ "a opção para imprimir com unidades adaptativas não pode ser usada\n"
+#~ "com formato de saída portável"
+
+#~ msgid "`%s' is not a regular file"
+#~ msgstr "`%s' não é um arquivo normal"
+
+#~ msgid "cannot move `%s' across filesystems: Not a regular file"
+#~ msgstr ""
+#~ "não é possível mover `%s' entre sistemas de arquivos diferentes:\n"
+#~ "Não é um arquivo normal"
+
+#~ msgid "%s: replace `%s', overriding mode %04o? "
+#~ msgstr "%s: substituir `%s', apesar do modo %04o? "
+
+#~ msgid "%s: remove %s`%s', overriding mode %04o? "
+#~ msgstr "%s: remover %s`%s' apesar do modo %04o? "
+
+#~ msgid "directory "
+#~ msgstr "diretório "
+
+#~ msgid "%s: descend directory `%s', overriding mode %04o? "
+#~ msgstr "%s: descer no diretório `%s', apesar do modo %04o? "
+
+#~ msgid "%s: remove directory `%s' (might be nonempty)? "
+#~ msgstr "%s: remover diretório `%s' (possivelmente não vazio)? "
+
+#~ msgid "missing file argument%s"
+#~ msgstr "argumentos de arquivo%s não informados"

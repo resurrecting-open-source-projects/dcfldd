@@ -1,0 +1,2308 @@
+# Japanese messages for GNU fileutils 4.0t
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Daisuke Yamashita <yamad@mb.infoweb.ne.jp>, 1999-2000.
+#   derived from
+#           Yasuyuki Furukawa <yasu@on.cs.keio.ac.jp>, 1997.
+#           Project Vine:
+#            Eiji Takeda
+#            Jun Nishii <jun@flatout.org>, 1999
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNU fileutils 4.0t\n"
+"POT-Creation-Date: 2001-10-26 15:00-0400\n"
+"PO-Revision-Date: 2000-06-06 00:12+09:00\n"
+"Last-Translator: Daisuke Yamashita <yamad@mb.infoweb.ne.jp>\n"
+"Language-Team: Japanese <ja@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=EUC-JP\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lib/argmatch.c:159
+#, c-format
+msgid "invalid argument %s for `%s'"
+msgstr "`%2$s' に対して無効な引数 %1$s"
+
+#: lib/argmatch.c:160
+#, c-format
+msgid "ambiguous argument %s for `%s'"
+msgstr "`%2$s' に対して曖昧な引数 `%1$s'"
+
+#. We try to put synonyms on the same line.  The assumption is that
+#. synonyms follow each other
+#: lib/argmatch.c:178
+msgid "Valid arguments are:"
+msgstr "正常な引数は:"
+
+#: lib/closeout.c:104
+msgid "write error"
+msgstr "書き込みエラー"
+
+#: lib/error.c:117
+msgid "Unknown system error"
+msgstr "不測のシステムエラー"
+
+#: lib/getopt.c:686
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: オプション `%s' は曖昧です\n"
+
+#: lib/getopt.c:711
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: オプション `--%s' は引数を取りません\n"
+
+#: lib/getopt.c:716
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: オプション `%c%s' は引数を取りません\n"
+
+#: lib/getopt.c:734 lib/getopt.c:907
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: オプション `%s' には引数が必要です\n"
+
+#. --option
+#: lib/getopt.c:763
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: 認識できないオプション `--%s' です\n"
+
+#. +option or -option
+#: lib/getopt.c:767
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: 認識できないオプション `%c%s' です\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:793
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: 不正なオプション -- %c\n"
+
+#: lib/getopt.c:796
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: 無効なオプション -- %c\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:826 lib/getopt.c:956
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: オプションには引数が必要です -- %c\n"
+
+#: lib/getopt.c:873
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: オプション `-W %s' は曖昧です\n"
+
+#: lib/getopt.c:891
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr "%s: オプション `-W %s' は引数を取りません\n"
+
+#: lib/human.c:341
+msgid "block size"
+msgstr "ブロックサイズ"
+
+#: lib/makepath.c:177
+#, fuzzy, c-format
+msgid "cannot create directory %s"
+msgstr "ディレクトリ `%s' を作れません"
+
+#: lib/makepath.c:183 lib/makepath.c:425
+#, fuzzy, c-format
+msgid "%s exists but is not a directory"
+msgstr "`%s' は存在しますが、ディレクトリではありません"
+
+#: lib/makepath.c:321 lib/makepath.c:383 lib/makepath.c:444
+#, fuzzy, c-format
+msgid "cannot change owner and/or group of %s"
+msgstr "ヌル(NULL)グループへは変更できません"
+
+#: lib/makepath.c:343
+#, c-format
+msgid "cannot chdir to directory, %s"
+msgstr "ディレクトリ %s に移動できません"
+
+#: lib/makepath.c:397 lib/makepath.c:450
+#, fuzzy, c-format
+msgid "cannot change permissions of %s"
+msgstr "%s のアクセス権を設定"
+
+#. If XALLOC_FAIL_FUNC is NULL, or does return, display this message
+#. before exiting when memory is exhausted.  Goes through gettext.
+#: lib/obstack.c:477 lib/xmalloc.c:66
+msgid "memory exhausted"
+msgstr "メモリを使い果たしました"
+
+#. Get translations for open and closing quotation marks.
+#.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  If the catalog has no translation,
+#. locale_quoting_style quotes `like this', and
+#. clocale_quoting_style quotes "like this".
+#.
+#. For example, an American English Unicode locale should
+#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
+#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
+#. MARK).  A British English Unicode locale should instead
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#: lib/quotearg.c:259
+msgid "`"
+msgstr "`"
+
+#: lib/quotearg.c:260
+msgid "'"
+msgstr "'"
+
+#: lib/rpmatch.c:78
+msgid "^[yY]"
+msgstr "^[yY]"
+
+#: lib/rpmatch.c:81
+msgid "^[nN]"
+msgstr "^[nN]"
+
+#: lib/unicodeio.c:138
+#, c-format
+msgid "cannot output U+%04X: iconv function not usable"
+msgstr "U+%04X を出力できません: iconv 関数を使えません"
+
+#: lib/unicodeio.c:149
+#, c-format
+msgid "U+%04X: character out of range"
+msgstr "U+%04X: 範囲外の文字"
+
+#: lib/unicodeio.c:181 lib/unicodeio.c:190
+#, c-format
+msgid "cannot convert U+%04X to local character set"
+msgstr "U+%04X をローカル文字集合に変換できません"
+
+#: lib/unicodeio.c:196
+#, c-format
+msgid "cannot output U+%04X: iconv function not available"
+msgstr "U+%04X を出力できません: iconv 関数が使用可能になっていません"
+
+#: lib/userspec.c:179
+msgid "invalid user"
+msgstr "無効なユーザ"
+
+#: lib/userspec.c:180
+msgid "invalid group"
+msgstr "無効なグループ"
+
+#: lib/userspec.c:182
+msgid "cannot get the login group of a numeric UID"
+msgstr "番号で指定された UID のログイングループを取得できません"
+
+#: lib/userspec.c:184
+msgid "cannot omit both user and group"
+msgstr "ユーザとグループの両方を省略することはできません"
+
+#: lib/version-etc.c:38
+#, fuzzy
+msgid "Copyright (C) 2001 Free Software Foundation, Inc."
+msgstr "Copyright (C) 2000 Free Software Foundation, Inc."
+
+#: lib/version-etc.c:60
+#, c-format
+msgid "Written by %s.\n"
+msgstr "%s によって書かれた\n"
+
+#: lib/version-etc.c:66
+msgid ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+"\n"
+"-- 参考訳\n"
+"これはフリーソフトウェアです -- ソースコードの複製条件を見ましょう。\n"
+"一切の保証はありません -- "
+"市場性や特定目的適合性についての保証もありません。\n"
+
+#: src/dcfldd.c:321
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "詳しくは `%s --help' を実行して下さい.\n"
+
+#: src/dcfldd.c:325
+#, c-format
+msgid "Usage: %s [OPTION]...\n"
+msgstr "使用法: %s [オプション]‥‥\n"
+
+#: src/dcfldd.c:326
+#, fuzzy
+msgid ""
+"Copy a file, converting and formatting according to the options.\n"
+"\n"
+"  bs=BYTES             force ibs=BYTES and obs=BYTES\n"
+"  cbs=BYTES            convert BYTES bytes at a time\n"
+"  conv=KEYWORDS        convert the file as per the comma separated keyword "
+"list\n"
+"  count=BLOCKS         copy only BLOCKS input blocks\n"
+"  ibs=BYTES            read BYTES bytes at a time\n"
+"  if=FILE              read from FILE instead of stdin\n"
+"  obs=BYTES            write BYTES bytes at a time\n"
+"  of=FILE              write to FILE instead of stdout\n"
+"  seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n"
+"  skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n"
+"  pattern=BYTES        use the specified binary pattern as input\n"
+"  textpattern=TEXT     use repeating TEXT as input\n"
+"  hashwindow=BYTES     perform an MD5 hash on every BYTES amount of data\n"
+"  hashlog=FILE         send MD5 hash output to FILE instead of stderr\n"
+"  status=[on|off]      display a continual status message on stderr\n"
+"                         default state is \"on\"\n"
+"  sizeprobe=[if|of]    determine the size of the input or output file"
+msgstr ""
+"ファイルのコピー。オプション指定に応じた変換・形式によって加工を行なう。\n"
+"\n"
+"  bs=バイト数      obs, ibs の両方の値を、指定バイト数の値とする\n"
+"  cbs=バイト数     一度あたり指定バイト数の変換を行なう\n"
+"  conv=キーワード  キーワードのリストで指定されたファイル変換を行なう\n"
+"                       キーワードのリストはカンマで区切る\n"
+"  count=ブロック数 入力ブロックを指定ブロック数の大きさでコピーする\n"
+"  ibs=バイト数     一度あたり指定バイト数の読み込みを行なう\n"
+"  if=ファイル      標準入力の代わりに、指定ファイルを読み込む\n"
+"  obs=バイト数     一度あたり指定バイト数の書き込みを行なう\n"
+"  of=ファイル      標準出力の代わりに、指定ファイルへ書き込む\n"
+"  seek=ブロック数  指定ブロック数の分だけ書き込み開始位置を移動させる\n"
+"                       この時 obs 値が 1 ブロックあたりのサイズとなる\n"
+"  skip=ブロック数  指定ブロック数の分だけ読み込み開始位置を移動させる\n"
+"                       この時 ibs 値が 1 ブロックあたりのサイズとなる\n"
+"      --help       使い方を表示する\n"
+"      --version    バージョン情報を表示する\n"
+"\n"
+"バイト数の指定には、以下の様な単位を表すサフィックスを指定できます。\n"
+"例えば M を付ければ、1,048,576 倍となります。\n"
+"c 1, w 2, b 512, kD 1000, k 1024, MD 1,000,000, M 1,048,576,\n"
+"GD 1,000,000,000, G 1,073,741,824, それ以上なら T, P, E, Z, Y とします。\n"
+"\n"
+"キーワードの指定には、以下のものを指定できます。\n"
+"\n"
+"  ascii     EBCDIC から ASCII に変換。\n"
+"  ebcdic    ASCII から EBCDIC に変換。\n"
+"  ibm       ASCII から 代替 EBCDIC に変換。\n"
+"  block     改行で区切られたレコードを、cbs で指定されたブロックサイズに\n"
+"                合わせる。足りない部分は空白で埋める。\n"
+"  unblock   cbs で指定されたブロック末尾の空白を改行に変換する。\n"
+"  lcase     大文字を小文字に変換する。\n"
+"  notrunc   出力ファイルの切り詰めを行なわない。\n"
+"  ucase     小文字を大文字に変換する。\n"
+"  swab      奇数バイトと偶数バイトを入れ替える。\n"
+"  noerror   入力エラーが発生しても、処理を継続する\n"
+"  sync      入力ファイルに連続した NUL を詰めて、ibs で指定したブロック\n"
+"                サイズに合わせる。\n"
+
+#: src/dcfldd.c:371
+msgid ""
+"\n"
+"Report bugs to <bug-fileutils@gnu.org>."
+msgstr ""
+"\n"
+"バグを発見したら <bug-fileutils@gnu.org> 宛に報告して下さい。"
+
+#: src/dcfldd.c:402
+#, c-format
+msgid "%s+%s records in\n"
+msgstr "読み込んだブロック数は %s+%s\n"
+
+#: src/dcfldd.c:405
+#, c-format
+msgid "%s+%s records out\n"
+msgstr "書き込んだブロック数は %s+%s\n"
+
+#: src/dcfldd.c:413
+msgid "truncated record"
+msgstr "切り詰められた書き込み"
+
+#: src/dcfldd.c:414
+msgid "truncated records"
+msgstr "切り詰められた書き込みブロック数"
+
+#: src/dcfldd.c:423
+#, fuzzy, c-format
+msgid "closing input file %s"
+msgstr "%s を削除しています\n"
+
+#: src/dcfldd.c:425
+#, fuzzy, c-format
+msgid "closing output file %s"
+msgstr "%s を削除しています\n"
+
+#: src/dcfldd.c:509
+#, fuzzy, c-format
+msgid "writing to %s"
+msgstr "%s を削除しています\n"
+
+#: src/dcfldd.c:541
+#, fuzzy, c-format
+msgid "invalid conversion: %s"
+msgstr "%s: 無効な変換です"
+
+#: src/dcfldd.c:645
+#, fuzzy, c-format
+msgid "unrecognized option %s"
+msgstr "間違ったオプションです `%s'"
+
+#: src/dcfldd.c:659
+#, fuzzy, c-format
+msgid "invalid hex pattern: %s"
+msgstr "無効なモード `%s' です"
+
+#: src/dcfldd.c:672 src/dcfldd.c:1455 src/dcfldd.c:1473
+#, fuzzy, c-format
+msgid "opening %s"
+msgstr "%s を削除しています\n"
+
+#: src/dcfldd.c:729
+#, fuzzy, c-format
+msgid "unrecognized option %s=%s"
+msgstr "オプション `%s=%s' は間違っています"
+
+#: src/dcfldd.c:735
+#, fuzzy, c-format
+msgid "invalid number %s"
+msgstr "無効な数字 (%s) が与えられています"
+
+#: src/dcfldd.c:765
+msgid ""
+"only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+msgstr ""
+"`-conv'により一度にできる変換は {ascii,ebcdic,ibm}, {lcase,ucase}, "
+"{block,unblock}, {unblock,sync} のいずれかのみです。"
+
+#: src/dcfldd.c:915 src/dcfldd.c:1206
+#, fuzzy, c-format
+msgid "reading %s"
+msgstr "%s を削除しています\n"
+
+#: src/dcfldd.c:1252 src/dcfldd.c:1315
+#, fuzzy, c-format
+msgid "writing %s"
+msgstr "%s を削除しています\n"
+
+#: src/dcfldd.c:1408
+#, fuzzy
+msgid "stating file"
+msgstr "strip が失敗"
+
+#: src/dcfldd.c:1458
+msgid "standard input"
+msgstr "標準入力"
+
+#: src/dcfldd.c:1481
+msgid "file offset out of range"
+msgstr "ファイルオフセットの指定値が範囲外です"
+
+#: src/dcfldd.c:1484
+#, fuzzy, c-format
+msgid "cannot fstat %s"
+msgstr "stat `%s' できません"
+
+#: src/dcfldd.c:1497
+#, fuzzy, c-format
+msgid "advancing past %s bytes in output file %s"
+msgstr "%s を削除しています\n"
+
+#: src/dcfldd.c:1506
+msgid "standard output"
+msgstr "標準出力"
+
+#, fuzzy
+#~ msgid "cannot change to null group"
+#~ msgstr "ヌル(NULL)グループへは変更できません"
+
+#, fuzzy
+#~ msgid "invalid group name %s"
+#~ msgstr "`%s' は無効なグループ名です"
+
+#~ msgid "group number"
+#~ msgstr "グループ番号"
+
+#, fuzzy
+#~ msgid "invalid group number %s"
+#~ msgstr "`%s' は無効なグループ番号です"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "使用法: %s [オプション]‥‥ 所有者 ファイル‥‥\n"
+#~ "  又は  %s [オプション]‥‥ --reference=参照ファイル ファイル‥‥\n"
+
+#~ msgid ""
+#~ "Change the group membership of each FILE to GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's group rather than the specified\n"
+#~ "                         GROUP value\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ msgstr ""
+#~ "各ファイルの所有グループ属性の変更.\n"
+#~ "\n"
+#~ "  -c, --changes          変更を行なった時にのみ、変更の結果を報告する\n"
+#~ "      --dereference      シンボリックリンクそのものではなく、リンク先の\n"
+#~ "                           ファイルに対して影響させる\n"
+#~ "  -h, --no-dereference   シンボリックリンクの参照先ファイルではなく\n"
+#~ "                           リンクファイルそのものに影響させる\n"
+#~ "                         (lchown() をサポートするシステムでのみ有効)\n"
+#~ "  -f, --silent, --quiet  エラーメッセージを極力抑える\n"
+#~ "      --reference=RFILE  RFILE に指定したファイルのグループ名を利用する\n"
+#~ "  -R, --recursive        ディレクトリとその中身を再帰的に変更する\n"
+#~ "  -v, --verbose          ファイルを処理するたびに、詳細な報告を行なう\n"
+#~ "      --help             使い方を標準出力に表示する\n"
+#~ "      --version          バージョン情報を標準出力に表示する\n"
+
+#~ msgid "too few arguments"
+#~ msgstr "引数の数が少なすぎます"
+
+#, fuzzy
+#~ msgid "getting attributes of %s"
+#~ msgstr "%s のタイムスタンプを保持"
+
+#, fuzzy
+#~ msgid "getting new attributes of %s"
+#~ msgstr "%s のタイムスタンプを保持"
+
+#~ msgid "mode of %s changed to %04lo (%s)\n"
+#~ msgstr "%s のモードを %04lo (%s) に変更しました\n"
+
+#~ msgid "failed to change mode of %s to %04lo (%s)\n"
+#~ msgstr "%s のモードを %04lo (%s) に変更することに失敗しました\n"
+
+#~ msgid "mode of %s retained as %04lo (%s)\n"
+#~ msgstr "%s のモードは %04lo (%s) として保留されました\n"
+
+#, fuzzy
+#~ msgid "changing permissions of %s"
+#~ msgstr "%s のアクセス権を設定"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... MODE[,MODE]... FILE...\n"
+#~ "  or:  %s [OPTION]... OCTAL-MODE FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "使用法: %s [オプション]... モード[,モード]... ファイル...\n"
+#~ " 又は:  %s [オプション]... 8進表記モード ファイル...\n"
+#~ " 又は:  %s [オプション]... --reference=参照ファイル ファイル...\n"
+
+#~ msgid ""
+#~ "Change the mode of each FILE to MODE.\n"
+#~ "\n"
+#~ "  -c, --changes           like verbose but report only when a change is "
+#~ "made\n"
+#~ "  -f, --silent, --quiet   suppress most error messages\n"
+#~ "  -v, --verbose           output a diagnostic for every file processed\n"
+#~ "      --reference=RFILE   use RFILE's mode instead of MODE values\n"
+#~ "  -R, --recursive         change files and directories recursively\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "\n"
+#~ "Each MODE is one or more of the letters ugoa, one of the symbols +-= and\n"
+#~ "one or more of the letters rwxXstugo.\n"
+#~ msgstr ""
+#~ "それぞれのファイルモードを指定されたモードに変更。\n"
+#~ "\n"
+#~ "  -c, --changes           変更を行なった時にのみ、変更の結果を報告する\n"
+#~ "  -f, --silent, --quiet   エラーメッセージを極力抑える\n"
+#~ "  -v, --verbose           ファイルを処理するたびに、詳細な報告を行なう\n"
+#~ "      --reference=RFILE   RFILE "
+#~ "に指定したファイルのアクセスモードを利用する\n"
+#~ "  -R, --recursive         ディレクトリとその中身を再帰的に変更する\n"
+#~ "      --help              使い方を標準出力に表示する\n"
+#~ "      --version           バージョン情報を標準出力に表示する\n"
+#~ "\n"
+#~ "アクセスモードは、1 文字又はそれ以上の `ugoa' のいずれかの文字の組み合わせ\n"
+#~ "でユーザアクセス権を表し、次に `+-=' の演算子 1 文字によって変更動作を指定\n"
+#~ "し、最後に 1 文字又はそれ以上の `rwxXstugo' のいずれかの文字の組合わせで\n"
+#~ "変更する属性を指定する。\n"
+
+#, fuzzy
+#~ msgid "invalid character %s in mode string %s"
+#~ msgstr "`%2$s' に対して無効な引数 %1$s"
+
+#, fuzzy
+#~ msgid "invalid mode string: %s"
+#~ msgstr "無効なモード `%s' です"
+
+#~ msgid "neither symbolic link %s nor referent has been changed\n"
+#~ msgstr "シンボリックリンク %s もその参照先も変更されませんでした\n"
+
+#, fuzzy
+#~ msgid "changed ownership of %s to %s\n"
+#~ msgstr "%s の所有者を以下の様に変更できませんでした : "
+
+#, fuzzy
+#~ msgid "changed group of %s to %s\n"
+#~ msgstr "グループ %s を %s に変更する事に失敗しました\n"
+
+#, fuzzy
+#~ msgid "failed to change ownership of %s to %s\n"
+#~ msgstr "%s の所有者を以下の様に変更できませんでした : "
+
+#~ msgid "failed to change group of %s to %s\n"
+#~ msgstr "グループ %s を %s に変更する事に失敗しました\n"
+
+#, fuzzy
+#~ msgid "ownership of %s retained as %s\n"
+#~ msgstr "%s の所有者を以下のまま保留 : "
+
+#~ msgid "group of %s retained as %s\n"
+#~ msgstr "%s のグループは %s のまま保留\n"
+
+#, fuzzy
+#~ msgid "changing ownership of %s"
+#~ msgstr "%s の所有権を保持"
+
+#, fuzzy
+#~ msgid "changing group of %s"
+#~ msgstr "%s の所有権を保持"
+
+#, fuzzy
+#~ msgid "unable to restore permissions of %s"
+#~ msgstr "%s のアクセス権を修復"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... OWNER[:[GROUP]] FILE...\n"
+#~ "  or:  %s [OPTION]... :GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "使用法: %s [オプション]‥‥ 所有者[:[グループ]] ファイル‥‥\n"
+#~ "  又は  %s [オプション]‥‥ :[グループ] ファイル‥‥\n"
+#~ "  又は  %s [オプション]‥‥ --reference=参照ファイル ファイル‥‥\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the owner and/or group of each FILE to OWNER and/or GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                         change the owner and/or group of each file only if\n"
+#~ "                         its current owner and/or group match those "
+#~ "specified\n"
+#~ "                         here.  Either may be omitted, in which case a "
+#~ "match\n"
+#~ "                         is not required for the omitted attribute.\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's owner and group rather than\n"
+#~ "                         the specified OWNER:GROUP values\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "各ファイルの所有者やグループを OWNER や GROUP に変更する。\n"
+#~ "\n"
+#~ "  -c, --changes          変更を行なったときだけ詳細な報告を行なう\n"
+#~ "      --dereference      シンボリックリンクそのものではなく、その参照先の\n"
+#~ "                             ファイルに対して影響を与える\n"
+#~ "  -h, --no-dereference   シンボリックリンクの参照先ファイルではなく\n"
+#~ "                             リンクファイルそのものに影響を与える\n"
+#~ "                            "
+#~ "(シンボリックリンクの所有属性を変更できるシステム\n"
+#~ "                             でのみ有効となる)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                         指定された所有者やグループと一致するファイルのみ、\n"
+#~ "                             所有者やグループを変更する。いずれか一方を省略\n"
+#~ "                             したときは、省略された方をマッチさせない。\n"
+#~ "  -f, --silent, --quiet  エラーメッセージを抑制する\n"
+#~ "      --reference=RFILE  OWNER:GROUP を指定する代わりに RFILE で指定された\n"
+#~ "                             ファイルの所有者・グループの属性値を利用する\n"
+#~ "  -R, --recursive        ディレクトリの中のファイルを、再帰的に処理する\n"
+#~ "  -v, --verbose          処理毎の診断内容を報告する\n"
+#~ "      --help             使い方を標準出力に表示して終了する\n"
+#~ "      --version          バージョン情報を標準出力に表示して終了する\n"
+#~ "\n"
+#~ "所有者の指定がない場合には変更されません。グループの指定がない場合には、\n"
+#~ "変更されませんが、`:' で暗示するとログイングループに変更されます。\n"
+#~ "OWNER や GROUP は数値でも名前でも構いません。\n"
+
+#, fuzzy
+#~ msgid "cannot access %s"
+#~ msgstr "%s を chown できません"
+
+#, fuzzy
+#~ msgid "%s and %s are the same file"
+#~ msgstr "`%s' と `%s' は同じファイルです"
+
+#, fuzzy
+#~ msgid "cannot open %s for reading"
+#~ msgstr "`%s' を `%s' に移動できません"
+
+#, fuzzy
+#~ msgid "cannot remove %s"
+#~ msgstr "`%s' を削除できません"
+
+#, fuzzy
+#~ msgid "cannot create regular file %s"
+#~ msgstr "ファイル `%s' を作ることができませんでした"
+
+#, fuzzy
+#~ msgid "cannot lseek %s"
+#~ msgstr "`%s' を削除できません"
+
+#, fuzzy
+#~ msgid "closing %s"
+#~ msgstr "%s を削除しています\n"
+
+#, fuzzy
+#~ msgid "cannot stat %s"
+#~ msgstr "stat `%s' できません"
+
+#, fuzzy
+#~ msgid "omitting directory %s"
+#~ msgstr "%s: ディレクトリは対象外です"
+
+#, fuzzy
+#~ msgid "cannot overwrite non-directory %s with directory %s"
+#~ msgstr "%s: ディレクトリでないファイルではディレクトリを上書きできません"
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s with non-directory"
+#~ msgstr "%s: ディレクトリでないファイルではディレクトリを上書きできません"
+
+#, fuzzy
+#~ msgid "%s: overwrite %s, overriding mode %04lo? "
+#~ msgstr "%s: `%s' のモード %04lo を乗っ取って上書きしますか？ "
+
+#, fuzzy
+#~ msgid "%s: overwrite %s? "
+#~ msgstr "%s: `%s' を上書きしてもよろしいですか (yes/no)? "
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s"
+#~ msgstr "ディレクトリ`%s'を上書きできません"
+
+#~ msgid "cannot move directory onto non-directory: %s -> %s"
+#~ msgstr "ディレクトリ以外へは、ディレクトリを移動できません: %s -> %s"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not moved"
+#~ msgstr ""
+#~ "%s をバックアップするとソースファイルが破壊されます\n"
+#~ "       -- %s を移動しませんでした"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not copied"
+#~ msgstr ""
+#~ "%s をバックアップするとソースが破壊されます\n"
+#~ "       -- %s をコピーしませんでした"
+
+#, fuzzy
+#~ msgid "cannot backup %s"
+#~ msgstr "`%s' をバックアップできません"
+
+#~ msgid " (backup: %s)"
+#~ msgstr " (バックアップ: %s)"
+
+#, fuzzy
+#~ msgid "cannot copy a directory, %s, into itself, %s"
+#~ msgstr ""
+#~ "`%2$s' は、`%1$s' のサブディレクトリなので、そこには移動できません。"
+
+#, fuzzy
+#~ msgid "will not create hard link %s to directory %s"
+#~ msgstr "ディレクトリ `%2$s' へのハードリンク `%1$s' は作成できません"
+
+#, fuzzy
+#~ msgid "cannot create hard link %s to %s"
+#~ msgstr "`%2$s' へのハードリンク `%1$s' を作れません"
+
+#, fuzzy
+#~ msgid "cannot move %s to a subdirectory of itself, %s"
+#~ msgstr ""
+#~ "`%2$s' は、`%1$s' のサブディレクトリなので、そこには移動できません。"
+
+#, fuzzy
+#~ msgid "cannot move %s to %s"
+#~ msgstr "`%s' を `%s' に移動できません"
+
+#, fuzzy
+#~ msgid "cannot copy cyclic symbolic link %s"
+#~ msgstr "%s: サイクリックなシンボリックリンクはコピーできません"
+
+#~ msgid "%s: can make relative symbolic links only in current directory"
+#~ msgstr "%s: カレントディレクトリ上でのみ相対シンボリックリンクができます"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s to %s"
+#~ msgstr "シンボリックリンク `%s' を作れません"
+
+#, fuzzy
+#~ msgid "cannot create link %s"
+#~ msgstr "リンク `%s' を作れません"
+
+#, fuzzy
+#~ msgid "cannot create fifo %s"
+#~ msgstr "名前つきパイプ `%s' を作れません"
+
+#, fuzzy
+#~ msgid "cannot create special file %s"
+#~ msgstr "スペシャルファイル `%s' を作れません"
+
+#, fuzzy
+#~ msgid "cannot read symbolic link %s"
+#~ msgstr "シンボリックリンク `%s' を読めません"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s"
+#~ msgstr "シンボリックリンク `%s' を作れません"
+
+#~ msgid "preserving ownership for %s"
+#~ msgstr "%s の所有権を保持"
+
+#, fuzzy
+#~ msgid "%s has unknown file type"
+#~ msgstr "%s: 不明なファイルタイプです"
+
+#~ msgid "preserving times for %s"
+#~ msgstr "%s のタイムスタンプを保持"
+
+#~ msgid "setting permissions for %s"
+#~ msgstr "%s のアクセス権を設定"
+
+#, fuzzy
+#~ msgid "cannot un-backup %s"
+#~ msgstr "%s をバックアップから復元できません"
+
+#~ msgid "%s -> %s (unbackup)\n"
+#~ msgstr "%s -> %s (バックアップしない)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY SOURCE...\n"
+#~ msgstr ""
+#~ "使用法: %s [オプション]‥‥ SOURCE DEST\n"
+#~ "  又は  %s [オプション]‥‥ SOURCE... ディレクトリ\n"
+#~ "  又は  %s [オプション]‥‥ --target-directory=ディレクトリ SOURCE...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                same as -dpR\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -d, --no-dereference         never follow symbolic links\n"
+#~ "  -f, --force                  if an existing destination file cannot be\n"
+#~ "                                   opened, remove it and try again\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "  -H                           follow command-line symbolic links\n"
+#~ "  -l, --link                   link files instead of copying\n"
+#~ "  -L, --dereference            always follow symbolic links\n"
+#~ "  -p, --preserve               preserve file attributes if possible\n"
+#~ "      --parents                append source path to DIRECTORY\n"
+#~ "  -P                           same as `--parents' for now; soon to change "
+#~ "to\n"
+#~ "                                 `--no-dereference' to conform to POSIX\n"
+#~ "  -r                           copy recursively, non-directories as files\n"
+#~ "                                 WARNING: use -R instead when you might "
+#~ "copy\n"
+#~ "                                 special files like FIFOs or /dev/zero\n"
+#~ "      --remove-destination     remove each existing destination file before\n"
+#~ "                                 attempting to open it (contrast with "
+#~ "--force)\n"
+#~ msgstr ""
+#~ "SOURCE を DEST にコピーする。あるいは複数の SOURCE(s) を DIRECTORY へコピー\n"
+#~ "する。\n"
+#~ "\n"
+#~ "  -a, --archive                -dpR と同じ\n"
+#~ "      --backup[=CONTROL]       ファイルを上書きする際バックアップをつくる\n"
+#~ "  -b                           引数を取らないこと以外は --backup と同じ\n"
+#~ "  -d, --no-dereference         リンク自体をコピーする\n"
+#~ "  -f, --force                  問い合わせ無しに上書きコピーする\n"
+#~ "  -i, --interactive            上書きをする前に確認をとる\n"
+#~ "  -l, --link                   コピーのかわりにリンクを貼る\n"
+#~ "  -p, --preserve               可能ならファイル属性を維持する\n"
+#~ "  -P, --parents                ソースパスをDIRECTORYに付け足す\n"
+#~ "  -r                           "
+#~ "ディレクトリ以外のファイルを再帰的にコピーする\n"
+#~ "                                 警告: FIFO や /dev/zero の様なスペシャル\n"
+#~ "                                   ファイルをコピーするなら -R "
+#~ "を使いましょう\n"
+#~ "      --sparse=WHEN            疎らなファイルの作成方法を制御\n"
+#~ "  -R, --recursive              ディレクトリを再帰的にコピーする\n"
+#~ "      --strip-trailing-slashes SOURCE 引数に付いているスラッシュを取り除く\n"
+#~ "  -s, --symbolic-link          コピーする代わりにシンボリックリンクを貼る\n"
+#~ "  -S, --suffix=SUFFIX          単純バックアップの際のサフィックスの指定\n"
+#~ "      --target-directory=DIR   全 SOURCE 引数を DIR ディレクトリへ移動する\n"
+#~ "  -u, --update                 同一ファイル, 同一タイムスタンプなら\n"
+#~ "                                 コピーを行なわない\n"
+#~ "  -v, --verbose                コピーするまえにそのファイル名を表示する\n"
+#~ "  -x, --one-file-system        異なるファイルシステムにはコピーしない\n"
+#~ "      --help                   使い方を標準出力に表示する\n"
+#~ "      --version                バージョン情報を標準出力に表示する\n"
+#~ "\n"
+#~ "特に指定がなければ、疎らな SOURCE ファイルは発見的手法で検出され、対応する\n"
+#~ "DEST ファイルは疎らなファイルとして作成される。これは `--sparse=auto'\n"
+#~ "オプションをつけたのと同じである。 `--sparse=always' を指定すると、SOURCE\n"
+#~ "ファイルが、長い連続するゼロのバイトシーケンスをもっている時には、常に\n"
+#~ "疎らなファイルとして DEST ファイルを作成する。\n"
+#~ "\n"
+#~ "疎らなファイルとしてファイルを作成をしたくなければ、--sparse=never\n"
+#~ "オプションを使うこと。\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "      --sparse=WHEN            control creation of sparse files\n"
+#~ "  -R, --recursive              copy directories recursively\n"
+#~ "      --strip-trailing-slashes remove any trailing slashes from each SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -s, --symbolic-link          make symbolic links instead of copying\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 copy only when the SOURCE file is newer\n"
+#~ "                                 than the destination file or when the\n"
+#~ "                                 destination file is missing\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "  -x, --one-file-system        stay on this file system\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ "By default, sparse SOURCE files are detected by a crude heuristic and the\n"
+#~ "corresponding DEST file is made sparse as well.  That is the behavior\n"
+#~ "selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST\n"
+#~ "file whenever the SOURCE file contains a long enough sequence of zero "
+#~ "bytes.\n"
+#~ "Use --sparse=never to inhibit creation of sparse files.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "SOURCE を DEST にコピーする。あるいは複数の SOURCE(s) を DIRECTORY へコピー\n"
+#~ "する。\n"
+#~ "\n"
+#~ "  -a, --archive                -dpR と同じ\n"
+#~ "      --backup[=CONTROL]       ファイルを上書きする際バックアップをつくる\n"
+#~ "  -b                           引数を取らないこと以外は --backup と同じ\n"
+#~ "  -d, --no-dereference         リンク自体をコピーする\n"
+#~ "  -f, --force                  問い合わせ無しに上書きコピーする\n"
+#~ "  -i, --interactive            上書きをする前に確認をとる\n"
+#~ "  -l, --link                   コピーのかわりにリンクを貼る\n"
+#~ "  -p, --preserve               可能ならファイル属性を維持する\n"
+#~ "  -P, --parents                ソースパスをDIRECTORYに付け足す\n"
+#~ "  -r                           "
+#~ "ディレクトリ以外のファイルを再帰的にコピーする\n"
+#~ "                                 警告: FIFO や /dev/zero の様なスペシャル\n"
+#~ "                                   ファイルをコピーするなら -R "
+#~ "を使いましょう\n"
+#~ "      --sparse=WHEN            疎らなファイルの作成方法を制御\n"
+#~ "  -R, --recursive              ディレクトリを再帰的にコピーする\n"
+#~ "      --strip-trailing-slashes SOURCE 引数に付いているスラッシュを取り除く\n"
+#~ "  -s, --symbolic-link          コピーする代わりにシンボリックリンクを貼る\n"
+#~ "  -S, --suffix=SUFFIX          単純バックアップの際のサフィックスの指定\n"
+#~ "      --target-directory=DIR   全 SOURCE 引数を DIR ディレクトリへ移動する\n"
+#~ "  -u, --update                 同一ファイル, 同一タイムスタンプなら\n"
+#~ "                                 コピーを行なわない\n"
+#~ "  -v, --verbose                コピーするまえにそのファイル名を表示する\n"
+#~ "  -x, --one-file-system        異なるファイルシステムにはコピーしない\n"
+#~ "      --help                   使い方を標準出力に表示する\n"
+#~ "      --version                バージョン情報を標準出力に表示する\n"
+#~ "\n"
+#~ "特に指定がなければ、疎らな SOURCE ファイルは発見的手法で検出され、対応する\n"
+#~ "DEST ファイルは疎らなファイルとして作成される。これは `--sparse=auto'\n"
+#~ "オプションをつけたのと同じである。 `--sparse=always' を指定すると、SOURCE\n"
+#~ "ファイルが、長い連続するゼロのバイトシーケンスをもっている時には、常に\n"
+#~ "疎らなファイルとして DEST ファイルを作成する。\n"
+#~ "\n"
+#~ "疎らなファイルとしてファイルを作成をしたくなければ、--sparse=never\n"
+#~ "オプションを使うこと。\n"
+
+#~ msgid ""
+#~ "The backup suffix is `~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\n"
+#~ "The version control method may be selected via the --backup option or "
+#~ "through\n"
+#~ "the VERSION_CONTROL environment variable.  Here are the values:\n"
+#~ "\n"
+#~ "  none, off       never make backups (even if --backup is given)\n"
+#~ "  numbered, t     make numbered backups\n"
+#~ "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
+#~ "  simple, never   always make simple backups\n"
+#~ msgstr ""
+#~ "--suffix や環境変数 SIMPLE_BACKUP_SUFFIX を設定しなければ、バックアップの\n"
+#~ "サフィックスは `~' になる。バージョン管理は環境変数 VERSION_CONTROL "
+#~ "で行い、\n"
+#~ "その際の値は次の通り:\n"
+#~ "\n"
+#~ "  none, off       バックアップを作らない (--backup を指定しても)\n"
+#~ "  numbered, t     数字を使ってバックアップする\n"
+#~ "  existing, nil   すでに数字を用いたバックアップがあればそれに従い、\n"
+#~ "                      そうでなければ単純バックアップを行なう\n"
+#~ "  simple, never   常に単純バックアップを行なう\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "As a special case, cp makes a backup of SOURCE when the force and backup\n"
+#~ "options are given and SOURCE and DEST are the same name for an existing,\n"
+#~ "regular file.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "特別な場合として、cp は -f と -b オプションが与えられ、SOURCE と DEST が\n"
+#~ "同一ファイルである時、SOURCE のバックアップを作成する。\n"
+
+#~ msgid "preserving permissions for %s"
+#~ msgstr "%s のアクセス権を保持"
+
+#, fuzzy
+#~ msgid "cannot make directory %s"
+#~ msgstr "ディレクトリ `%s' を作れません"
+
+#~ msgid "missing file arguments"
+#~ msgstr "引数にファイルが指定されていません"
+
+#~ msgid "missing destination file"
+#~ msgstr "コピー先が指定されていません"
+
+#, fuzzy
+#~ msgid "accessing %s"
+#~ msgstr "%s を削除しています\n"
+
+#, fuzzy
+#~ msgid "specified target, %s is not a directory"
+#~ msgstr "対象として指定された `%s' が、ディレクトリではありません"
+
+#, fuzzy
+#~ msgid "copying multiple files, but last argument %s is not a directory"
+#~ msgstr ""
+#~ "複数のファイルをコピーする場合、最後の引数 (%s) "
+#~ "はディレクトリでなくてはなりません"
+
+#~ msgid "when preserving paths, the destination must be a directory"
+#~ msgstr "パスを保存する場合、指定先はディレクトリでなくてはなりません"
+
+#~ msgid ""
+#~ "warning: --version-control (-V) is obsolete;  support for it\n"
+#~ "will be removed in some future release.  Use --backup=%s instead."
+#~ msgstr ""
+#~ "警告: --version-control (-V) は廃れた方法です -- "
+#~ "そのサポートは将来のリリース\n"
+#~ "で取り除かれる事になります。代わりに --backup=%s を使いましょう。"
+
+#~ msgid "symbolic links are not supported on this system"
+#~ msgstr "ファイルシステムがシンボリックリンクをサポートしていません"
+
+#~ msgid "cannot make both hard and symbolic links"
+#~ msgstr "ハードリンクもシンボリックリンクもできません"
+
+#~ msgid "backup type"
+#~ msgstr "バックアップタイプ"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]\n"
+#~ msgstr "使用法: %s [オプション]‥‥ [ファイル]‥‥\n"
+
+#~ msgid ""
+#~ "Output commands to set the LS_COLORS environment variable.\n"
+#~ "\n"
+#~ "Determine format of output:\n"
+#~ "  -b, --sh, --bourne-shell    output Bourne shell code to set LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        output C shell code to set LS_COLORS\n"
+#~ "  -p, --print-database        output defaults\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If FILE is specified, read it to determine which colors to use for which\n"
+#~ "file types and extensions.  Otherwise, a precompiled database is used.\n"
+#~ "For details on the format of these files, run `dircolors --print-database'.\n"
+#~ msgstr ""
+#~ "環境変数 LS_COLORS の定義するためのコマンドを出力する。\n"
+#~ "\n"
+#~ "出力フォーマットの決定:\n"
+#~ "  -b, --sh, --bourne-shell    Bourne シェル形式で LS_COLORS を出力する\n"
+#~ "  -c, --csh, --c-shell        C シェル形式で LS_COLORS を出力する\n"
+#~ "  -p, --print-database        デフォルト値を標準出力に表示する\n"
+#~ "      --help                  使い方を標準出力に表示する\n"
+#~ "      --version               バージョン情報を標準出力に表示する\n"
+#~ "\n"
+#~ "ファイルを指定した時は、ファイルタイプや拡張子ごとにどの色を使うかは、\n"
+#~ "そのファイルに書かれたものになる。それ以外では、内蔵されているデータ\n"
+#~ "ベースが使われる。ファイルフォーマットの詳細が知りたければ `dircolors\n"
+#~ " --print-database' を実行してみるとよい。\n"
+
+#~ msgid "%s:%lu: invalid line;  missing second token"
+#~ msgstr "%s:%lu: 不適切な行 -- 2 番目のトークンがありません"
+
+#, fuzzy
+#~ msgid "%s:%lu: unrecognized keyword %s"
+#~ msgstr "%s:%lu: キーワード `%s' が違います"
+
+#~ msgid "<internal>"
+#~ msgstr "<内部>"
+
+#~ msgid ""
+#~ "the options to output dircolors' internal database and\n"
+#~ "to select a shell syntax are mutually exclusive"
+#~ msgstr ""
+#~ "dircolor の内部データベースを見るオプションとシェル文法選択のオプションは、\n"
+#~ "一緒に指定できません"
+
+#~ msgid ""
+#~ "no FILE arguments may be used with the option to output\n"
+#~ "dircolors' internal database"
+#~ msgstr ""
+#~ "dircolorの内部データベースを出力するオプションを指定した時はファイル\n"
+#~ "引数を指定する必要はありません"
+
+#~ msgid "too many arguments"
+#~ msgstr "引数の数が多すぎます"
+
+#~ msgid "no SHELL environment variable, and no shell type option given"
+#~ msgstr ""
+#~ "環境変数 SHELL が定義されておらず、シェル型のオプションも与えられていません"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "使用法: %s [オプション]‥‥ [ファイル]‥‥\n"
+
+#~ msgid ""
+#~ "Show information about the filesystem on which each FILE resides,\n"
+#~ "or all filesystems by default.\n"
+#~ "\n"
+#~ "  -a, --all             include filesystems having 0 blocks\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -i, --inodes          list inode information instead of block usage\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --local           limit listing to local filesystems\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "      --no-sync         do not invoke sync before getting usage info "
+#~ "(default)\n"
+#~ "  -P, --portability     use the POSIX output format\n"
+#~ "      --sync            invoke sync before getting usage info\n"
+#~ "  -t, --type=TYPE       limit listing to filesystems of type TYPE\n"
+#~ "  -T, --print-type      print filesystem type\n"
+#~ "  -x, --exclude-type=TYPE   limit listing to filesystems not of type TYPE\n"
+#~ "  -v                    (ignored)\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "ファイルが属するファイルシステムについての情報を表示する。\n"
+#~ "或いは、指定がなければ、全ファイルシステムの使用量を表示する。\n"
+#~ "\n"
+#~ "  -a, --all             0 ブロックのファイルシステムも表示させる\n"
+#~ "      --block-size=サイズ  指定サイズの大きさを 1 ブロックとする\n"
+#~ "  -h, --human-readable  人に解りやすい形式で表示する (例: 1K 234M 2G)\n"
+#~ "  -H, --si              同上。但し、桁幅を 1024 の代わりに 1000 とする\n"
+#~ "  -i, --inodes          ブロック使用情報の代わりに、inode 情報を表示\n"
+#~ "  -k, --kilobytes       キロバイト単位で表示\n"
+#~ "  -l, --local           ローカルファイルシステムのみ表示する\n"
+#~ "  -m, --megabytes       メガバイト単位で表示\n"
+#~ "      --no-sync         キャッシュとディスクとの同期を取らずに表示(標準)\n"
+#~ "  -P, --portability     POSIX 形式の出力フォーマットを利用する\n"
+#~ "      --sync            キャッシュとディスクとの同期を取ってから表示\n"
+#~ "  -t, --type=タイプ     指定したタイプのファイルシステムのみ表示する\n"
+#~ "  -T, --print-type      ファイルシステムの種類を表示する\n"
+#~ "  -x, --exclude-type=タイプ  指定したタイプのファイルシステム以外を表示する\n"
+#~ "  -v                    (無視される)\n"
+#~ "      --help            使い方を表示する\n"
+#~ "      --version         バージョン番号を表示する\n"
+
+#, fuzzy
+#~ msgid "file system type %s both selected and excluded"
+#~ msgstr "%s 型ファイルシステムは選択/非選択の両方で宣言されています"
+
+#~ msgid "Warning: "
+#~ msgstr "警告: "
+
+#~ msgid "%scannot read table of mounted filesystems"
+#~ msgstr "%sマウントされているファイルシステムのテーブルを読めません"
+
+#~ msgid ""
+#~ "Summarize disk usage of each FILE, recursively for directories.\n"
+#~ "\n"
+#~ "  -a, --all             write counts for all files, not just directories\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -b, --bytes           print size in bytes\n"
+#~ "  -c, --total           produce a grand total\n"
+#~ "  -D, --dereference-args  dereference PATHs when symbolic link\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --count-links     count sizes many times if hard linked\n"
+#~ "  -L, --dereference     dereference all symbolic links\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "  -S, --separate-dirs   do not include size of subdirectories\n"
+#~ "  -s, --summarize       display only a total for each argument\n"
+#~ "  -x, --one-file-system  skip directories on different filesystems\n"
+#~ "  -X FILE, --exclude-from=FILE  Exclude files that match any pattern in "
+#~ "FILE.\n"
+#~ "      --exclude=PAT     Exclude files that match PAT.\n"
+#~ "      --max-depth=N     print the total for a directory (or file, with "
+#~ "--all)\n"
+#~ "                          only if it is N or fewer levels below the command\n"
+#~ "                          line argument;  --max-depth=0 is the same as\n"
+#~ "                          --summarize\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "ファイル毎のディスク使用量を集計する。ディレクトリは再帰的に処理する。\n"
+#~ "\n"
+#~ "  -a, --all             ディレクトリだけでなく、全てのファイルについて表示\n"
+#~ "      --block-size=サイズ  指定サイズの大きさを 1 ブロックとする\n"
+#~ "  -b, --bytes           バイト単位で表示する\n"
+#~ "  -c, --total           合計を表示する\n"
+#~ "  -D, --dereference-args  シンボリックリンクの場合は、参照先を辿る\n"
+#~ "  -h, --human-readable  人に解りやすい形式で表示する (例: 1K 234M 2G)\n"
+#~ "  -H, --si              同上。但し、桁幅を 1024 の代わりに 1000 とする\n"
+#~ "  -k, --kilobytes       キロバイト単位で表示する\n"
+#~ "  -l, --count-links     同じファイルを示すハードリンクの場合であっても\n"
+#~ "                            全て集計に加える\n"
+#~ "  -L, --dereference     全てのシンボリックリンクの参照先を辿る\n"
+#~ "  -m, --megabytes       メガバイト単位で表示する\n"
+#~ "  -S, --separate-dirs   サブディレクトリのサイズを集計に含めない\n"
+#~ "  -s, --summarize       引数毎の合計のみ表示する\n"
+#~ "  -x, --one-file-system  異なるファイルシステムのディレクトリは集計しない\n"
+#~ "  -X ファイル, --exclude-from=ファイル  指定ファイル中のパターンに一致する\n"
+#~ "                                            ファイルは集計しない\n"
+#~ "      --exclude=パターン  パターンに一致するファイルは集計しない\n"
+#~ "      --max-depth=N     コマンドライン引数より、最大 N 個下の階層までの\n"
+#~ "                        ディレクトリ(--all の指定でファイルも)を集計する\n"
+#~ "                        --max-depth=0 なら、--summarize と同等となる\n"
+#~ "      --help            使い方を表示する\n"
+#~ "      --version         バージョン情報を表示する\n"
+
+#~ msgid "cannot change to `..' from directory %s"
+#~ msgstr "%s から上のディレクトリに移動できません"
+
+#~ msgid "cannot change to directory %s"
+#~ msgstr "ディレクトリ %s に移動できません"
+
+#~ msgid "total"
+#~ msgstr "合計"
+
+#, fuzzy
+#~ msgid "invalid maximum depth %s"
+#~ msgstr "最大深さの指定 `%s' が無効です"
+
+#~ msgid "cannot both summarize and show all entries"
+#~ msgstr "合計と全エントリの表示の両方を、一度に指定することはできません"
+
+#~ msgid "warning: summarizing is the same as using --max-depth=0"
+#~ msgstr "警告: 統計(-s)と -max-depth=0 は同じ用法です"
+
+#~ msgid "warning: summarizing conflicts with --max-depth=%d"
+#~ msgstr "警告: 統計(-s)と -max-depth=%d の指定が競合しています"
+
+#~ msgid "the strip option may not be used when installing a directory"
+#~ msgstr "ディレクトリをインストールするときは strip オプションは無効です"
+
+#, fuzzy
+#~ msgid "invalid mode %s"
+#~ msgstr "無効なモード `%s' です"
+
+#, fuzzy
+#~ msgid "creating directory %s"
+#~ msgstr "ディレクトリ `%s' を作成"
+
+#, fuzzy
+#~ msgid "installing multiple files, but last argument, %s is not a directory"
+#~ msgstr ""
+#~ "複数のファイルをインストールする場合、最後の引数 (%s) "
+#~ "はディレクトリでなくてはなりません"
+
+#, fuzzy
+#~ msgid "%s is a directory"
+#~ msgstr "%s はディレクトリです"
+
+#, fuzzy
+#~ msgid "cannot obtain time stamps for %s"
+#~ msgstr "ディレクトリ `%s' を削除できません"
+
+#, fuzzy
+#~ msgid "cannot set time stamps for %s"
+#~ msgstr "ディレクトリ `%s' を作れません"
+
+#~ msgid "cannot fork"
+#~ msgstr "fork できません"
+
+#~ msgid "cannot run strip"
+#~ msgstr "strip を実行できません"
+
+#, fuzzy
+#~ msgid "invalid user %s"
+#~ msgstr "無効なユーザー名 `%s' です"
+
+#, fuzzy
+#~ msgid "invalid group %s"
+#~ msgstr "無効なグループ名 `%s' です"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST           (1st format)\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY   (2nd format)\n"
+#~ "  or:  %s -d [OPTION]... DIRECTORY...       (3rd format)\n"
+#~ msgstr ""
+#~ "使用法: %s [オプション]‥‥ SOURCE DEST             (1stフォーマット)\n"
+#~ "  又は  %s [オプション]‥‥ SOURCE... ディレクトリ  (2ndフォーマット)\n"
+#~ "  又は  %s -d [オプション]‥‥ ディレクトリ...      (3rdフォーマット)\n"
+
+#~ msgid ""
+#~ "In the first two formats, copy SOURCE to DEST or multiple SOURCE(s) to\n"
+#~ "the existing DIRECTORY, while setting permission modes and owner/group.\n"
+#~ "In the third format, create all components of the given DIRECTORY(ies).\n"
+#~ "\n"
+#~ "      --backup[=CONTROL] make a backup of each existing destination file\n"
+#~ "  -b                  like --backup but does not accept an argument\n"
+#~ "  -c                  (ignored)\n"
+#~ "  -d, --directory     treat all arguments as directory names; create all\n"
+#~ "                        components of the specified directories\n"
+#~ "  -D                  create all leading components of DEST except the "
+#~ "last,\n"
+#~ "                        then copy SOURCE to DEST;  useful in the 1st format\n"
+#~ "  -g, --group=GROUP   set group ownership, instead of process' current "
+#~ "group\n"
+#~ "  -m, --mode=MODE     set permission mode (as in chmod), instead of "
+#~ "rwxr-xr-x\n"
+#~ "  -o, --owner=OWNER   set ownership (super-user only)\n"
+#~ "  -p, --preserve-timestamps   apply access/modification times of SOURCE "
+#~ "files\n"
+#~ "                        to corresponding destination files\n"
+#~ "  -s, --strip         strip symbol tables, only for 1st and 2nd formats\n"
+#~ "  -S, --suffix=SUFFIX override the usual backup suffix\n"
+#~ "  -v, --verbose       print the name of each directory as it is created\n"
+#~ "      --help          display this help and exit\n"
+#~ "      --version       output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "前二つの書式では、SOURCE ファイルを DEST へコピーするか、複数の SOURCE\n"
+#~ "ファイルを既存ディレクトリへコピーします。同時にアクセス権、所有者やグループ"
+#~ "\n"
+#~ "も設定します。三つ目の書式では、指定されたディレクトリを全て作成します。\n"
+#~ "\n"
+#~ "      --backup[=CONTROL] ファイルを上書きする前にバックアップを作成する\n"
+#~ "  -b                    引数を取らないこと以外は --backup と同じ\n"
+#~ "  -c                    (無視される)\n"
+#~ "  -d, --directory       全ての引数をディレクトリ名であると解釈する\n"
+#~ "                           指定されたディレクトリを一度に作成する\n"
+#~ "  -D                    DEST の最後以外のファイルをまず全て作成し、その後で\n"
+#~ "                            SOURCE を DEST にコピーする。一番目の書式に有効\n"
+#~ "  -g, --group=GROUP     "
+#~ "現在のプロセスグループの代わりにグループ属性を指定する\n"
+#~ "  -m, --mode=MODE       アクセスモードを変更する。(指定が無ければ "
+#~ "rwxr-xr-x)\n"
+#~ "  -o, --owner=OWNER     所有者を変更する (スーパーユーザーだけが可能)\n"
+#~ "  -p, --preserve-timestamps   SOURCE ファイルのアクセス・変更時刻を対応する\n"
+#~ "                                  DEST ファイルにも利用する\n"
+#~ "  -s, --strip           シンボルテーブルを剥ぎ落とす 1 又は 2 番目の形式の\n"
+#~ "                            引数の際にのみ利用可\n"
+#~ "  -S, --suffix=SUFFIX   普段のバックアップサフィックスを無視する\n"
+#~ "      --verbose         ディレクトリを作成するたびに、その名前を表示する\n"
+#~ "      --help            使い方を表示する\n"
+#~ "      --version         バージョン情報を表示する\n"
+#~ "\n"
+
+#~ msgid "%s: warning: making a hard link to a symbolic link is not portable"
+#~ msgstr ""
+#~ "%s: 警告: シンボリックリンクに対するハードリンクの作成は可搬性がありません"
+
+#~ msgid "%s: hard link not allowed for directory"
+#~ msgstr "%s: ディレクトリへのハードリンクは作成できません"
+
+#~ msgid "%s: cannot overwrite directory"
+#~ msgstr "ディレクトリ`%s'を上書きできません"
+
+# %s: ersetze `%s'?
+#, fuzzy
+#~ msgid "%s: replace %s? "
+#~ msgstr "%s: `%s' を上書きしてもよろしいですか(yes/no)? "
+
+#~ msgid "%s: File exists"
+#~ msgstr "%s: すでにファイルが存在します"
+
+#, fuzzy
+#~ msgid "create symbolic link %s to %s"
+#~ msgstr "`%2$s' へのシンボリックリンク `%1$s' を作れません"
+
+#, fuzzy
+#~ msgid "create hard link %s to %s"
+#~ msgstr "`%2$s' へのハードリンク `%1$s' を作れません"
+
+#, fuzzy
+#~ msgid "creating symbolic link %s to %s"
+#~ msgstr "`%2$s' へのシンボリックリンク `%1$s' を作れません"
+
+#, fuzzy
+#~ msgid "creating hard link %s to %s"
+#~ msgstr "`%2$s' へのハードリンク `%1$s' を作れません"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY TARGET...\n"
+#~ msgstr ""
+#~ "使用法: %s [オプション]‥‥ TARGET [リンク名]\n"
+#~ "  又は  %s [オプション]‥‥ TARGET... ディレクトリ\n"
+#~ "  又は  %s [オプション]‥‥ --target-directory=ディレクトリ TARGET...\n"
+
+#~ msgid ""
+#~ "Create a link to the specified TARGET with optional LINK_NAME.\n"
+#~ "If LINK_NAME is omitted, a link with the same basename as the TARGET is\n"
+#~ "created in the current directory.  When using the second form with more\n"
+#~ "than one TARGET, the last argument must be a directory;  create links\n"
+#~ "in DIRECTORY to each TARGET.  Create hard links by default, symbolic\n"
+#~ "links with --symbolic.  When creating hard links, each TARGET must exist.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]      make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                          like --backup but does not accept an argument\n"
+#~ "  -d, -F, --directory         hard link directories (super-user only)\n"
+#~ "  -f, --force                 remove existing destination files\n"
+#~ "  -n, --no-dereference        treat destination that is a symlink to a\n"
+#~ "                                directory as if it were a normal file\n"
+#~ "  -i, --interactive           prompt whether to remove destinations\n"
+#~ "  -s, --symbolic              make symbolic links instead of hard links\n"
+#~ "  -S, --suffix=SUFFIX         override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  specify the DIRECTORY in which to "
+#~ "create\n"
+#~ "                                the links\n"
+#~ "  -v, --verbose               print name of each file before linking\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "TARGET に指定したファイルに対して、任意のリンク名でリンクを作成する。\n"
+#~ "リンク名が省略された場合、TARGET と同じベースファイル名のリンクを現在の\n"
+#~ "ディレクトリに作成する。複数の TARGET が指定される様な、二番目の形式を\n"
+#~ "使った場合、最後の引数はディレクトリでなければならない。\n"
+#~ "-- この場合、ディレクトリの中にそれぞれの対象ファイル毎にリンクを作成する。\n"
+#~ "特に指定がない場合、ハードリンクを作成するので、シンボリックリンクを\n"
+#~ "作成するには、--symbolic を指定する。ハードリンクを作成する場合、\n"
+#~ "TARGET ファイルは作成時に存在していなければならない。\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]      "
+#~ "作成するリンクのファイル名が既に存在する場合、\n"
+#~ "                                  バックアップを作成する\n"
+#~ "  -b                          引数を取らない事以外は --backup と同じ\n"
+#~ "  -d, -F, --directory         ディレクトリに対するハードリンクを作成\n"
+#~ "                                  (管理者(root) のみ利用可能)\n"
+#~ "  -f, --force                 既存の TARGET ファイルは削除する\n"
+#~ "  -n, --no-dereference        指定したリンク名が通常ファイルであっても、\n"
+#~ "                                  "
+#~ "ディレクトリへのシンボリックリンクと見なす\n"
+#~ "  -i, --interactive           上書きする前に確認をとる\n"
+#~ "  -s, --symbolic              "
+#~ "ハードリンクではなくシンボリックリンクを作成する\n"
+#~ "  -S, --suffix=SUFFIX         バックアップサフィックスを指定する\n"
+#~ "      --target-directory=DIR  リンクを作成するディレクトリを DIR に指定する\n"
+#~ "  -v, --verbose               処理内容の詳細を表示する\n"
+#~ "      --help                  使い方を表示して終了する\n"
+#~ "      --version               バージョン番号を表示して終了する\n"
+#~ "\n"
+
+#~ msgid "missing file argument"
+#~ msgstr "引数が足りません"
+
+#, fuzzy
+#~ msgid "specified target directory, %s is not a directory"
+#~ msgstr ""
+#~ "対象として指定されたディレクトリ `%s' が、ディレクトリではありません"
+
+#~ msgid "when making multiple links, last argument must be a directory"
+#~ msgstr ""
+#~ "複数のリンクをはる時は、最後の引数はディレクトリでなくてはなりません"
+
+#~ msgid "ignoring invalid width in environment variable COLUMNS: %s"
+#~ msgstr ""
+#~ "環境変数 COLUMNS(値:%s) に無効なライン幅が指定されているので無視します"
+
+#~ msgid "ignoring invalid tab size in environment variable TABSIZE: %s"
+#~ msgstr ""
+#~ "環境変数 TABSIZE(値:%s) に無効なタブサイズが指定されているので無視します"
+
+#~ msgid "invalid line width: %s"
+#~ msgstr "無効なライン幅 `%s' です"
+
+#~ msgid "invalid tab size: %s"
+#~ msgstr "無効なタブサイズ `%s' です"
+
+#~ msgid "unrecognized prefix: %s"
+#~ msgstr "プレフィックス `%s' を認識できません"
+
+#~ msgid "unparsable value for LS_COLORS environment variable"
+#~ msgstr "環境変数 LS_COLORS の値が間違っています"
+
+#, fuzzy
+#~ msgid ""
+#~ "List information about the FILEs (the current directory by default).\n"
+#~ "Sort entries alphabetically if none of -cftuSUX nor --sort.\n"
+#~ "\n"
+#~ "  -a, --all                  do not hide entries starting with .\n"
+#~ "  -A, --almost-all           do not list implied . and ..\n"
+#~ "  -b, --escape               print octal escapes for nongraphic characters\n"
+#~ "      --block-size=SIZE      use SIZE-byte blocks\n"
+#~ "  -B, --ignore-backups       do not list implied entries ending with ~\n"
+#~ "  -c                         with -lt: sort by, and show, ctime (time of "
+#~ "last\n"
+#~ "                               modification of file status information)\n"
+#~ "                               with -l: show ctime and sort by name\n"
+#~ "                               otherwise: sort by ctime\n"
+#~ "  -C                         list entries by columns\n"
+#~ "      --color[=WHEN]         control whether color is used to distinguish "
+#~ "file\n"
+#~ "                               types.  WHEN may be `never', `always', or "
+#~ "`auto'\n"
+#~ "  -d, --directory            list directory entries instead of contents\n"
+#~ "  -D, --dired                generate output designed for Emacs' dired mode\n"
+#~ "  -f                         do not sort, enable -aU, disable -lst\n"
+#~ "  -F, --classify             append indicator (one of */=@|) to entries\n"
+#~ "      --format=WORD          across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            list both full date and full time\n"
+#~ msgstr ""
+#~ "指定されたファイルの情報をリスト出力する(省略時は現在のディレクトリ)。\n"
+#~ "-cftuSUX も --sort も指定がないと、アルファベット順にソートする。\n"
+#~ "\n"
+#~ "  -a, --all                  '.' で始まる隠しファイルも表示する\n"
+#~ "  -A, --almost-all           '.' で始まる隠しファイルも表示するが、\n"
+#~ "                                  ディレクトリ '.' と '..' は表示しない\n"
+#~ "  -b, --escape               バックスラッシュシーケンスなどの\n"
+#~ "                                 非表示文字を引用する\n"
+#~ "      --block-size=サイズ    指定したサイズを 1 ブロックの大きさとする。\n"
+#~ "  -B, --ignore-backups       '~' が最後につくファイルをリスト表示しない\n"
+#~ "  -c                          -lt と利用: ctime (最終更新時刻) でソートし、\n"
+#~ "                                      表示する\n"
+#~ "                              -l と利用: ctime を表示し、名前でソートする\n"
+#~ "                              その他と利用: ctime でソートする\n"
+#~ "  -C                         垂直方向にソートして列方向に\n"
+#~ "                                 ファイルをリスト表示する\n"
+#~ "      --color[=WHEN]         ファイルタイプによって色づけで表示する\n"
+#~ "                                 WHEN には`never', `always' 又は `auto' "
+#~ "が入る\n"
+#~ "  -d, --directory            ディレクトリを中身を表示するのではなく\n"
+#~ "                                 他のファイルと同じように表示する\n"
+#~ "  -D, --dired                Emacs の dired-mode のような表示形式にする\n"
+#~ "  -f                         ディレクトリの中身をソートしない\n"
+#~ "  -F, --classify             ファイル名の型を示す文字 (*/=@) を付ける\n"
+#~ "      --format=WORD          across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            日付・時刻に関する全ての情報を表示する\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -g                         (ignored)\n"
+#~ "  -G, --no-group             inhibit display of group information\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "      --si                   likewise, but use powers of 1000 not 1024\n"
+#~ "  -H                         same as `--si' for now; soon to change\n"
+#~ "                               to conform to POSIX\n"
+#~ "      --indicator-style=WORD append indicator with style WORD to entry "
+#~ "names:\n"
+#~ "                               none (default), classify (-F), file-type "
+#~ "(-p)\n"
+#~ "  -i, --inode                print index number of each file\n"
+#~ "  -I, --ignore=PATTERN       do not list implied entries matching shell "
+#~ "PATTERN\n"
+#~ "  -k, --kilobytes            like --block-size=1024\n"
+#~ "  -l                         use a long listing format\n"
+#~ "  -L, --dereference          list entries pointed to by symbolic links\n"
+#~ "  -m                         fill width with a comma separated list of "
+#~ "entries\n"
+#~ "  -n, --numeric-uid-gid      list numeric UIDs and GIDs instead of names\n"
+#~ "  -N, --literal              print raw entry names (don't treat e.g. "
+#~ "control\n"
+#~ "                               characters specially)\n"
+#~ "  -o                         use long listing format without group info\n"
+#~ "  -p, --file-type            append indicator (one of /=@|) to entries\n"
+#~ "  -q, --hide-control-chars   print ? instead of non graphic characters\n"
+#~ "      --show-control-chars   show non graphic characters as-is (default\n"
+#~ "                             unless program is `ls' and output is a "
+#~ "terminal)\n"
+#~ "  -Q, --quote-name           enclose entry names in double quotes\n"
+#~ "      --quoting-style=WORD   use quoting style WORD for entry names:\n"
+#~ "                               literal, locale, shell, shell-always, c, "
+#~ "escape\n"
+#~ "  -r, --reverse              reverse order while sorting\n"
+#~ "  -R, --recursive            list subdirectories recursively\n"
+#~ "  -s, --size                 print size of each file, in blocks\n"
+#~ msgstr ""
+#~ "  -g                         (無視される)\n"
+#~ "  -G, --no-group             グループ情報の表示を行なわない\n"
+#~ "  -h, --human-readable       人に解りやすい形式で出力する (例: 1K 234M 2G)\n"
+#~ "  -H  --si                   同上。但し、桁幅を 1024 でなく、1000 とする\n"
+#~ "      --indicator-style=WORD  ファイル標識スタイルの指定。WORD として使える\n"
+#~ "                                  単語は以下の通り\n"
+#~ "                                   none (標準), classify (-F), file-type "
+#~ "(-p)\n"
+#~ "  -i, --inode                ファイルのインデックス番号を表示する\n"
+#~ "  -I, --ignore=PATTERN       PATTERN と照合するリストを表示しない\n"
+#~ "  -k, --kilobytes            キロバイト単位で表示する\n"
+#~ "  -l                         詳細リスト形式を表示する\n"
+#~ "  -L, --dereference          "
+#~ "シンボリックリンクされたファイルをリスト表示する\n"
+#~ "  -m                         ファイルをコンマ `,' "
+#~ "で区切り、一行にできる限り\n"
+#~ "                                 ファイルを表示する\n"
+#~ "  -n, --numeric-uid-gid      UID や GID を名前でなく番号で表示する\n"
+#~ "  -N, --literal              生の項目名を表示する\n"
+#~ "                               (例えば、コントロール文字を特別扱いしない)\n"
+#~ "  -o                         所有グループ除いた詳細リスト形式で表示する\n"
+#~ "  -p, --file-type            ファイルに目印(/=@! のどれか)を項目に付け足す\n"
+#~ "  -q, --hide-control-chars   表示できない文字を '?' に置き換える\n"
+#~ "      --show-control-chars   "
+#~ "表示できない文字もそのまま出力する(プログラムが\n"
+#~ "                              `ls' "
+#~ "ではないか出力が端末ではない場合の初期状態)\n"
+#~ "  -Q, --quote-name           ファイル名をダブルクオート(\")でくくる\n"
+#~ "      --quoting-style=WORD   項目名のクオートに WORD 文字を使う:\n"
+#~ "                                literal, shell, shell-always, c, escape\n"
+#~ "  -r, --reverse              ソートを反転する\n"
+#~ "  -R, --recursive            すべてのサブディレクトリを再帰的に表示する\n"
+#~ "  -s, --size                 各ファイルのファイルサイズを表示する\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -S                         sort by file size\n"
+#~ "      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+#~ "                               version -v\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=WORD            show time as WORD instead of modification "
+#~ "time:\n"
+#~ "                               atime, access, use, ctime or status; use\n"
+#~ "                               specified time as sort key if --sort=time\n"
+#~ "  -t                         sort by modification time\n"
+#~ "  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8\n"
+#~ "  -u                         with -lt: sort by, and show, access time\n"
+#~ "                               with -l: show access time and sort by name\n"
+#~ "                               otherwise: sort by access time\n"
+#~ "  -U                         do not sort; list entries in directory order\n"
+#~ "  -v                         sort by version\n"
+#~ "  -w, --width=COLS           assume screen width instead of current value\n"
+#~ "  -x                         list entries by lines instead of by columns\n"
+#~ "  -X                         sort alphabetically by entry extension\n"
+#~ "  -1                         list one file per line\n"
+#~ "      --help                 display this help and exit\n"
+#~ "      --version              output version information and exit\n"
+#~ "\n"
+#~ "By default, color is not used to distinguish types of files.  That is\n"
+#~ "equivalent to using --color=none.  Using the --color option without the\n"
+#~ "optional WHEN argument is equivalent to using --color=always.  With\n"
+#~ "--color=auto, color codes are output only if standard output is connected\n"
+#~ "to a terminal (tty).\n"
+#~ msgstr ""
+#~ "  -S                         ファイルサイズでソートする\n"
+#~ "      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+#~ "                               version -v\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=WORD            時刻を修正時刻ではなく WORD の時刻を使う\n"
+#~ "                               atime, access, use, ctime 又は status\n"
+#~ "                               指定した時刻は--sort=time "
+#~ "のキーとして使われる\n"
+#~ "  -t                         修正時刻でソートする\n"
+#~ "  -T, --tabsize=COLS         8 の代わりにタブストップを COLS とみなす\n"
+#~ "  -u                          -lt と利用: アクセス時刻でソートし、表示する\n"
+#~ "                              -l と利用: アクセス時刻を表示する\n"
+#~ "                              その他と利用: アクセス時刻でソートする\n"
+#~ "  -U                         ソートをしない -- ディレクトリ順にリストする\n"
+#~ "  -v                         バージョンでソートする\n"
+#~ "  -w, --width=COLS           画面幅を現在値ではなく COLS と見なす\n"
+#~ "  -x                         列方向ではなく、行方向に項目をリストする\n"
+#~ "  -X                         項目の拡張子順でソートする\n"
+#~ "  -1                         一行あたりに一つのファイルをリストする\n"
+#~ "      --help                 このヘルプを表示して終了する\n"
+#~ "      --version              バージョン情報を表示して終了する\n"
+#~ "\n"
+#~ "特に指定がなければ、color はファイルタイプによって区別されません。これは\n"
+#~ "--color=none を使うのと同等です。WHEN 引数を指定せずに --color オプションを\n"
+#~ "使うと、--color=always を使うのと同等です。--color=auto "
+#~ "を使えば、接続された\n"
+#~ "端末(tty)の標準出力にのみカラーコードを出力します。\n"
+
+#~ msgid "Usage: %s [OPTION] DIRECTORY...\n"
+#~ msgstr "使用法: %s [オプション] ディレクトリ‥‥\n"
+
+#~ msgid ""
+#~ "Create the DIRECTORY(ies), if they do not already exist.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not rwxrwxrwx - "
+#~ "umask\n"
+#~ "  -p, --parents     no error if existing, make parent directories as needed\n"
+#~ "  -v, --verbose     print a message for each created directory\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "ディレクトリを作成する。ただしディレクトリが既にあれば何もしない。\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   rwxrwxrwx - umask でなく(chmod "
+#~ "のように)アクセス権を設定\n"
+#~ "  -p, --parents     "
+#~ "既存であってもエラーとせず、必要となるディレクトリも作成\n"
+#~ "  -v, --verbose     ディレクトリの作成ごとにメッセージを出力する\n"
+#~ "      --help        使い方を標準出力に表示する\n"
+#~ "      --version     バージョン情報を標準出力に表示する\n"
+
+#, fuzzy
+#~ msgid "created directory %s"
+#~ msgstr "ディレクトリ `%s' を作成"
+
+#, fuzzy
+#~ msgid "cannot set permissions of directory %s"
+#~ msgstr "ディレクトリ `%s' のアクセス権を設定できません"
+
+#~ msgid "Usage: %s [OPTION] NAME...\n"
+#~ msgstr "使用法: %s [オプション] 名前...\n"
+
+#~ msgid ""
+#~ "Create named pipes (FIFOs) with the given NAMEs.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "与えられた `名前' で 名前つきパイプ(FIFO)を作る。\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   アクセス権を(chmod のように)指定する\n"
+#~ "                        省略時は a=rw から umask を引いたものとなる\n"
+#~ "      --help        使い方を標準出力に表示する\n"
+#~ "      --version     バージョン情報を標準出力に表示する\n"
+
+#~ msgid "fifo files not supported"
+#~ msgstr "名前つきパイプがサポートされていません"
+
+#~ msgid "invalid mode"
+#~ msgstr "無効なモード"
+
+#, fuzzy
+#~ msgid "cannot create fifo `%s'"
+#~ msgstr "名前つきパイプ `%s' を作れません"
+
+#, fuzzy
+#~ msgid "cannot set permissions of fifo `%s'"
+#~ msgstr "ディレクトリ `%s' のアクセス権を設定できません"
+
+#~ msgid "Usage: %s [OPTION]... NAME TYPE [MAJOR MINOR]\n"
+#~ msgstr "使用法: %s [オプション]‥‥ NAME TYPE [MAJOR MINOR]\n"
+
+#~ msgid ""
+#~ "Create the special file NAME of the given TYPE.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ "\n"
+#~ "MAJOR MINOR are forbidden for TYPE p, mandatory otherwise.  TYPE may be:\n"
+#~ "\n"
+#~ "  b      create a block (buffered) special file\n"
+#~ "  c, u   create a character (unbuffered) special file\n"
+#~ "  p      create a FIFO\n"
+#~ msgstr ""
+#~ "与えられた `TYPE' のスペシャルファイル `NAME' を作る。\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   アクセス権を(chmod のように)指定する\n"
+#~ "                        省略時は a=rw から umask を引いたものになる\n"
+#~ "      --help        使い方を標準出力に表示する\n"
+#~ "      --version     バージョン情報を標準出力に表示する\n"
+#~ "\n"
+#~ "MAJOR と MINOR は TYPE p に対しては自分で責任をとれる以外は禁物である。\n"
+#~ "TYPEの指定は以下の通り:\n"
+#~ "\n"
+#~ "  b      ブロック型(バッファリングされる)スペシャルファイルの作成\n"
+#~ "  c, u   キャラクタ型(バッファリングされない)スペシャルファイルの作成\n"
+#~ "  p      名前つきパイプの作成\n"
+
+#~ msgid "wrong number of arguments"
+#~ msgstr "引数の数が違います"
+
+#~ msgid "block special files not supported"
+#~ msgstr "ブロックスペシャルファイルはサポートされていません"
+
+#~ msgid ""
+#~ "when creating block special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "キャラクタ型スペシャルファイルを作成する時は、メジャー及びマイナーデバイス\n"
+#~ "番号を指定しなければなりません"
+
+#, fuzzy
+#~ msgid "invalid major device number %s"
+#~ msgstr "無効なメジャーデバイス番号 `%s' です"
+
+#, fuzzy
+#~ msgid "invalid minor device number %s"
+#~ msgstr "無効なマイナーデバイス番号 `%s' です"
+
+#~ msgid "character special files not supported"
+#~ msgstr "キャラクタ型スペシャルファイルはサポートされていません"
+
+#~ msgid ""
+#~ "when creating character special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "キャラクタ型スペシャルファイルを作成する時は、メジャー及びマイナーデバイス\n"
+#~ "番号を指定しなければなりません"
+
+#~ msgid "major and minor device numbers may not be specified for fifo files"
+#~ msgstr ""
+#~ "名前つきパイプに対してメジャーおよびマイナーデバイス番号が指定されて\n"
+#~ "いません"
+
+#, fuzzy
+#~ msgid "cannot set permissions of `%s'"
+#~ msgstr "%s のアクセス権を設定"
+
+#, fuzzy
+#~ msgid ""
+#~ "Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -f, --force                  never prompt before overwriting\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "      --strip-trailing-slashes  remove any trailing slashes from each "
+#~ "SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 move only older or brand new non-directories\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "ファイル名の変更、もしくは複数のファイルをディレクトリへ移動する。\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       ファイルを上書きする際, バックアップをとる\n"
+#~ "  -b                           引数を取らないこと以外は --backup と同じ\n"
+#~ "  -f, --force                  強制的に上書きをする\n"
+#~ "  -i, --interactive            上書きをする前に確認をとる\n"
+#~ "      --strip-trailing-slashes SOURCE 引数から余計なスラッシュを取り除く\n"
+#~ "  -S, --suffix=SUFFIX          バックアップサフィックスの指定\n"
+#~ "      --target-directory=DIR   全 SOURCE 引数を DIR ディレクトリに移動する\n"
+#~ "  -u, --update                 同一ファイル名、同一タイムスタンプの\n"
+#~ "                                   ファイルは移動しない\n"
+#~ "  -v  --verbose                行なわれることを説明する\n"
+#~ "      --help                   使い方を標準出力に表示する\n"
+#~ "      --version                バージョン情報を標準出力に表示する\n"
+#~ "\n"
+
+#~ msgid "when moving multiple files, last argument must be a directory"
+#~ msgstr ""
+#~ "複数のファイルを移動させる時は、最後の引数はディレクトリでなければなりません"
+
+#, fuzzy
+#~ msgid "cannot open directory %s"
+#~ msgstr "ディレクトリ `%s' を削除できません"
+
+#, fuzzy
+#~ msgid "closing directory %s"
+#~ msgstr "ディレクトリの削除: %s "
+
+#, fuzzy
+#~ msgid "%s: remove write-protected directory %s? "
+#~ msgstr "%s: 書き込み保護されたディレクトリ `%s' を削除しますか(yes/no)? "
+
+#, fuzzy
+#~ msgid "%s: remove write-protected file %s? "
+#~ msgstr "%s: 書き込み保護されたファイル `%s' を削除しますか(yes/no)? "
+
+#, fuzzy
+#~ msgid "%s: remove directory %s? "
+#~ msgstr "%s: ディレクトリ `%s' を削除しますか(yes/no)? "
+
+#, fuzzy
+#~ msgid "%s: remove %s? "
+#~ msgstr "%s: `%s' を削除しますか(yes/no)? "
+
+#~ msgid "removing %s\n"
+#~ msgstr "%s を削除しています\n"
+
+#, fuzzy
+#~ msgid "cannot unlink %s"
+#~ msgstr "リンク %s を削除できません"
+
+#, fuzzy
+#~ msgid "%s: directory %s is write protected; descend into it anyway? "
+#~ msgstr ""
+#~ "%s: ディレクトリ`%s'は書き込み保護されています。\n"
+#~ "      -- それでも下りていきますか(yes/no)? "
+
+#, fuzzy
+#~ msgid "%s: descend into directory %s? "
+#~ msgstr "%s: ディレクトリ `%s' を下りていきますか(y/n)? "
+
+#~ msgid "removing all entries of directory %s\n"
+#~ msgstr "ディレクトリ `%s' 中身を全て削除しました\n"
+
+#, fuzzy
+#~ msgid "cannot lstat `.' in %s"
+#~ msgstr "`%s' で lstat `.' できません"
+
+#, fuzzy
+#~ msgid ""
+#~ "ERROR: the directory %s initially had device/inode\n"
+#~ "numbers %lu/%lu, but now (after a chdir into it), the numbers for `.'\n"
+#~ "are %lu/%lu.  That means that while rm was running, the directory\n"
+#~ "was replaced with either another directory or a link to another directory."
+#~ msgstr ""
+#~ "エラー: ディレクトリ `%s' は元々 デバイスまたは i ノード番号が %lu/%lu\n"
+#~ "でしたが、（そこに chdir した）現在、`.' の番号は %lu/%lu です。\n"
+#~ "どう云うことかというと、rm が動作しているうちに、そのディレクトリは他の\n"
+#~ "ディレクトリに移されたか、他のディレクトリに link したと云う事です。"
+
+#~ msgid "cannot change back to directory %s via `..'"
+#~ msgstr "`..' への移動ができないので、ディレクトリ `%s' に戻れません。"
+
+#, fuzzy
+#~ msgid "%s: remove directory %s%s? "
+#~ msgstr "%s: ディレクトリ `%s' を削除しますか%s[yes/no]? "
+
+#~ msgid " (might be nonempty)"
+#~ msgstr "(多分、ファイルが残ったままです)"
+
+#~ msgid "removing the directory itself: %s\n"
+#~ msgstr "ディレクトリ自身の削除: %s\n"
+
+#, fuzzy
+#~ msgid "cannot remove current directory %s"
+#~ msgstr "現在のディレクトリ `%s' を削除できません"
+
+#, fuzzy
+#~ msgid "cannot remove directory %s"
+#~ msgstr "ディレクトリ `%s' を削除できません"
+
+#~ msgid "cannot remove `.' or `..'"
+#~ msgstr "`.' や `..' は削除できません"
+
+#~ msgid ""
+#~ "WARNING: Circular directory structure.\n"
+#~ "This almost certainly means that you have a corrupted file system.\n"
+#~ "NOTIFY YOUR SYSTEM MANAGER.\n"
+#~ "The following two directories have the same inode number:\n"
+#~ msgstr ""
+#~ "警告: ディレクトリ構造がサイクリックしています\n"
+#~ "これは, ファイルシステムに不正を働いてるのとほとんど同じ行為です\n"
+#~ "### あなたのシステム管理者に通知して下さい ###\n"
+#~ "以下の 2 つのディレクトリの i ノード番号が同じです:\n"
+
+#~ msgid "continue? "
+#~ msgstr "続けますか(yes/no)? "
+
+#~ msgid "Usage: %s [OPTION]... FILE...\n"
+#~ msgstr "使用法: %s [オプション]‥‥ ファイル‥‥\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Remove (unlink) the FILE(s).\n"
+#~ "\n"
+#~ "  -d, --directory       unlink directory, even if non-empty (super-user "
+#~ "only)\n"
+#~ "  -f, --force           ignore nonexistent files, never prompt\n"
+#~ "  -i, --interactive     prompt before any removal\n"
+#~ "  -r, -R, --recursive   remove the contents of directories recursively\n"
+#~ "  -v, --verbose         explain what is being done\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ "\n"
+#~ "To remove a file whose name starts with a `-', for example `-foo',\n"
+#~ "use one of these commands:\n"
+#~ "  %s -- -foo\n"
+#~ "\n"
+#~ "  %s ./-foo\n"
+#~ "\n"
+#~ "Note that if you use rm to remove a file, it is usually possible to recover\n"
+#~ "the contents of that file.  If you want more assurance that the contents "
+#~ "are\n"
+#~ "truly unrecoverable, consider using shred.\n"
+#~ msgstr ""
+#~ "一つあるいは複数のファイルを削除(unlink)する。\n"
+#~ "\n"
+#~ "  -d, --directory       空でなくてもディレクトリのリンクを削除する\n"
+#~ "                            管理者(root)のみ利用可\n"
+#~ "  -f, --force           強制的に削除する\n"
+#~ "  -i, --interactive     削除をする前に確認をとる\n"
+#~ "  -r, -R, --recursive   ディレクトリとその中身を再帰的に削除する\n"
+#~ "  -v  --verbose         ファイルの削除ごとにメッセージを出力する\n"
+#~ "      --help            使い方を標準出力に表示する\n"
+#~ "      --version         バージョン情報を標準出力に表示する\n"
+#~ "\n"
+#~ "`-' で始まる名前のファイルを削除するには、例えば `-foo' と云うファイルなら\n"
+#~ "こういうコマンドを使いましょう:\n"
+#~ "  %s -- -foo\n"
+#~ "  %s ./-foo\n"
+
+#~ msgid "removing directory, %s"
+#~ msgstr "ディレクトリの削除: %s "
+
+#~ msgid "Usage: %s [OPTION]... DIRECTORY...\n"
+#~ msgstr "使用法: %s [オプション]‥‥ ディレクトリ‥‥\n"
+
+#~ msgid ""
+#~ "Remove the DIRECTORY(ies), if they are empty.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ignore each failure that is solely because a directory\n"
+#~ "                  is non-empty\n"
+#~ "  -p, --parents   remove DIRECTORY, then try to remove each directory\n"
+#~ "                  component of that path name.  E.g., `rmdir -p a/b/c' is\n"
+#~ "                  similar to `rmdir a/b/c a/b a'.\n"
+#~ "  -v, --verbose   output a diagnostic for every directory processed\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "ディレクトリの削除をする。ただし, 中身が空である時のみ。\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ディレクトリの中身が空でなかった場合のエラーを無視する\n"
+#~ "  -p, --parents   DIRECTORY を削除し、指定パス名の構成ディレクトリの削除を\n"
+#~ "                    試みる。例えば `rmdir -p a/b/c' は `rmdir a/b/c a/b a' "
+#~ "と\n"
+#~ "                    同等となる\n"
+#~ "  -v, --verbose   ディレクトリ毎に、処理内容の詳細を表示する\n"
+#~ "      --help      使い方を標準出力に表示する\n"
+#~ "      --version   バージョン情報を標準出力に表示する\n"
+
+#~ msgid "Usage: %s [OPTIONS] FILE [...]\n"
+#~ msgstr "使用法: %s [オプション] ファイル [...]\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Overwrite the specified FILE(s) repeatedly, in order to make it harder\n"
+#~ "for even very expensive hardware probing to recover the data.\n"
+#~ "\n"
+#~ "  -f, --force    change permissions to allow writing if necessary\n"
+#~ "  -n, --iterations=N  Overwrite N times instead of the default (%d)\n"
+#~ "  -s, --size=N   shred this many bytes (suffixes like k, M, G accepted)\n"
+#~ "  -u, --remove   truncate and remove file after overwriting\n"
+#~ "  -v, --verbose  show progress\n"
+#~ "  -x, --exact    do not round file sizes up to the next full block\n"
+#~ "  -z, --zero     add a final overwrite with zeros to hide shredding\n"
+#~ "  -              shred standard output\n"
+#~ "      --help     display this help and exit\n"
+#~ "      --version  print version information and exit\n"
+#~ "\n"
+#~ "Delete FILE(s) if --remove (-u) is specified.  The default is not to remove\n"
+#~ "the files because it is common to operate on device files like /dev/hda,\n"
+#~ "and those files usually should not be removed.  When operating on regular\n"
+#~ "files, most people use the --remove option.\n"
+#~ "\n"
+#~ "CAUTION: Note that shred relies on a very important assumption:\n"
+#~ "that the filesystem overwrites data in place.  This is the traditional\n"
+#~ "way to do things, but many modern filesystem designs do not satisfy this\n"
+#~ "assumption.  The following are examples of filesystems on which shred is\n"
+#~ "not effective:\n"
+#~ "\n"
+#~ "* log-structured or journaled filesystems, such as those supplied with\n"
+#~ "  AIX and Solaris (and JFS, ReiserFS, XFS, etc.)\n"
+#~ "\n"
+#~ "* filesystems that write redundant data and carry on even if some writes\n"
+#~ "  fail, such as RAID-based filesystems\n"
+#~ "\n"
+#~ "* filesystems that make snapshots, such as Network Appliance's NFS server\n"
+#~ "\n"
+#~ "* filesystems that cache in temporary locations, such as NFS\n"
+#~ "  version 3 clients\n"
+#~ "\n"
+#~ "* compressed filesystems\n"
+#~ msgstr ""
+#~ "ファイルを安全に削除します、まずは内容を隠蔽するため上書きします。\n"
+#~ "\n"
+#~ "  -f, --force    必要に応じ、書き込みのための許可属性を変更\n"
+#~ "  -n, --iterations=N  初期値(%d)の代わりに N 回上書き\n"
+#~ "  -s, --size=N   多くのバイト数を shred する (k, M, G の様な単位も解釈する)\n"
+#~ "  -u, --remove   上書きの後でファイルを切り詰めて削除\n"
+#~ "  -v, --verbose  進行状況を見る\n"
+#~ "  -x, --exact    ファイルブロック単位へのファイルサイズ切り上げをしない\n"
+#~ "  -z, --zero     shred を隠すため、最後に一回ゼロでの上書きを追加する\n"
+#~ "  -              標準出力の shred\n"
+#~ "      --help     この使い方を表示して終了します\n"
+#~ "      --version  ヴァージョン情報を表示して終了します\n"
+#~ "\n"
+#~ "*修正すべし* ここにいろいろ説明が加わるかな？"
+
+#~ msgid "%s: cannot rewind"
+#~ msgstr "%s: 巻き戻せません"
+
+#~ msgid "%s: pass %lu/%lu (%s)..."
+#~ msgstr "%s: 経過 %lu/%lu (%s)..."
+
+#~ msgid "%s: error writing at offset %s"
+#~ msgstr "%s: オフセット %s での書き込みエラー"
+
+#~ msgid "%s: file too large"
+#~ msgstr "%s: ファイルが大きすぎます"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%s/%s"
+#~ msgstr "%s: 経過 %lu/%lu (%s)...%s/%s"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%s"
+#~ msgstr "%s: 経過 %lu/%lu (%s)...%s"
+
+#~ msgid "%s: invalid file type"
+#~ msgstr "%s: 無効なファイルタイプです"
+
+#~ msgid "%s: file has negative size"
+#~ msgstr "%s: ファイルが負の大きさになっています"
+
+#~ msgid "%s: error truncating"
+#~ msgstr "%s: 切り詰めの際のエラー"
+
+#~ msgid "%s: cannot shred append-only file descriptor"
+#~ msgstr "%s: 追加用ファイル記述子には shred できません"
+
+#~ msgid "%s: removing"
+#~ msgstr "%s: 削除します"
+
+#, fuzzy
+#~ msgid "%s: renamed to %s"
+#~ msgstr "%s: `%s' に名前を変えました"
+
+#~ msgid "%s: removed"
+#~ msgstr "%s: 削除しました"
+
+#~ msgid "%s: cannot remove"
+#~ msgstr "%s: 削除できません"
+
+#~ msgid "%s: invalid number of passes"
+#~ msgstr "%s: 無効な上書き回数"
+
+#~ msgid "%s: invalid file size"
+#~ msgstr "%s: 無効なファイルサイズ"
+
+#~ msgid "Usage: %s [OPTION]\n"
+#~ msgstr "使用法: %s [オプション]\n"
+
+#~ msgid ""
+#~ "Force changed blocks to disk, update the super block.\n"
+#~ "\n"
+#~ "  --help      display this help and exit\n"
+#~ "  --version   output version information and exit\n"
+#~ msgstr ""
+#~ "ファイルシステムバッファのフラッシュ\n"
+#~ "\n"
+#~ "   --help      使い方を標準出力に表示する\n"
+#~ "   --version   バージョン情報を標準出力に表示する\n"
+
+#~ msgid "ignoring all arguments"
+#~ msgstr "全ての引数は無視されます"
+
+#, fuzzy
+#~ msgid "creating %s"
+#~ msgstr "%s を削除しています\n"
+
+#, fuzzy
+#~ msgid "setting times of %s"
+#~ msgstr "%s のタイムスタンプを保持"
+
+#, fuzzy
+#~ msgid "  or:  %s [-acm] MMDDhhmm[YY] FILE... (obsolescent)\n"
+#~ msgstr " 又は: %s [-acm] MMDDhhmm[YY] FILE... (廃れた方法です)\n"
+
+#~ msgid ""
+#~ "Update the access and modification times of each FILE to the current time.\n"
+#~ "\n"
+#~ "  -a                     change only the access time\n"
+#~ "  -c, --no-create        do not create any files\n"
+#~ "  -d, --date=STRING      parse STRING and use it instead of current time\n"
+#~ "  -f                     (ignored)\n"
+#~ "  -m                     change only the modification time\n"
+#~ "  -r, --reference=FILE   use this file's times instead of current time\n"
+#~ "  -t STAMP               use [[CC]YY]MMDDhhmm[.ss] instead of current time\n"
+#~ "  --time=WORD            set time given by WORD: access atime use (same as "
+#~ "-a)\n"
+#~ "                           modify mtime (same as -m)\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ "Note that the three time-date formats recognized for the -d and -t options\n"
+#~ "and for the obsolescent argument are all different.\n"
+#~ msgstr ""
+#~ "それぞれのファイルのアクセス時刻や修正時刻を現在時刻に更新する。\n"
+#~ "\n"
+#~ "  -a                     アクセス時刻のみを変更する\n"
+#~ "  -c                     ファイルが存在しない場合に新規作成を行わない\n"
+#~ "  -d, --date=STRING      現在の時刻の代わりに STRING の時刻を用いる\n"
+#~ "  -f                     (無視される)\n"
+#~ "  -m                     修正時刻のみを変更する\n"
+#~ "  -r, --reference=FILE   現在の時刻の代わりに FILE の時刻を用いる\n"
+#~ "  -t STAMP               現在の時刻の代わりに\n"
+#~ "                             [[CC]YY]MMDDhhmm[.ss]を用いる\n"
+#~ "  --time=WORD            WORD によって与えられた 時刻を設定する\n"
+#~ "                           access なら atime (-a と同じ)、modify なら mtime\n"
+#~ "                           (-m と同じ)を使う\n"
+#~ "      --help             使い方を標準出力に表示する\n"
+#~ "      --version          バージョン情報を標準出力に表示する\n"
+#~ "\n"
+#~ "3 つの 時刻-日付の書式は -d と -t オプション用と見なされ、廃れた方法の\n"
+#~ "引数とは全く異なることに注意しましょう。\n"
+
+#, fuzzy
+#~ msgid "invalid date format %s"
+#~ msgstr "日付フォーマット `%s' が間違っています"
+
+#~ msgid "cannot specify times from more than one source"
+#~ msgstr "一つ以上のソースからタイムを特定できません"
+
+#~ msgid "file arguments missing"
+#~ msgstr "ファイル名の引数がありません"
+
+#~ msgid "group of %s changed to %s\n"
+#~ msgstr "%s のグループを %s へ変更しました\n"
+
+#, fuzzy
+#~ msgid "ownership of %s changed to "
+#~ msgstr "%s の所有者を以下に変更 : "
+
+#, fuzzy
+#~ msgid "you are not a member of group %s"
+#~ msgstr "あなたはグループ `%s' のメンバーではありません"
+
+#~ msgid "%s: invalid group number"
+#~ msgstr "%s: 無効なグループ番号です"
+
+#, fuzzy
+#~ msgid "%s: cannot determine size"
+#~ msgstr "%s: 巻き戻せません"
+
+#, fuzzy
+#~ msgid "cannot make fifo %s"
+#~ msgstr "名前つきパイプ `%s' を作れません"
+
+#, fuzzy
+#~ msgid "cannot change permissions for %s"
+#~ msgstr "%s のアクセス権を設定"
+
+#, fuzzy
+#~ msgid "cannot remove old link to %s"
+#~ msgstr "%s への古いリンクを削除できません"
+
+#~ msgid "virtual memory exhausted"
+#~ msgstr "仮想メモリ領域を使い果たしました"
+
+#~ msgid "Memory exhausted"
+#~ msgstr "メモリを使い果たしました"
+
+#~ msgid "invalid mode `%s'"
+#~ msgstr "無効なモード `%s' です"
+
+#~ msgid "cannot create directory `%s'"
+#~ msgstr "ディレクトリ `%s' を作れません"
+
+#~ msgid "cannot remove `%s'"
+#~ msgstr "`%s' を削除できません"
+
+#~ msgid "specified target, `%s' is not a directory"
+#~ msgstr "対象として指定された `%s' が、ディレクトリではありません"
+
+#~ msgid "`%s' and `%s' are the same file"
+#~ msgstr "`%s' と `%s' は同じファイルです"
+
+#~ msgid "cannot backup `%s'"
+#~ msgstr "`%s' をバックアップできません"
+
+#~ msgid "cannot un-backup `%s'"
+#~ msgstr "%s をバックアップから復元できません"
+
+#~ msgid "cannot chown %s"
+#~ msgstr "%s を chown できません"
+
+#~ msgid "cannot chmod %s"
+#~ msgstr "%s を chmod できません"
+
+#~ msgid "`%s' exists but is not a directory"
+#~ msgstr "`%s' は存在しますが、ディレクトリではありません"
+
+#~ msgid "`%s' is a directory"
+#~ msgstr "`%s' はディレクトリです"
+
+#~ msgid "%s: write error"
+#~ msgstr "%s: 書き込みエラー"
+
+#~ msgid "create %s %s to %s"
+#~ msgstr "%2$s から %3$s に%1$sをはりました"
+
+#~ msgid "cannot create %s `%s' to `%s'"
+#~ msgstr "`%2$s'から`%3$s'に%1$sをはれませんでした"
+
+#~ msgid "symbolic link"
+#~ msgstr "シンボリックリンク"
+
+#~ msgid "hard link"
+#~ msgstr "ハードリンク"
+
+#~ msgid "link"
+#~ msgstr "リンク"
+
+#~ msgid "--version-control"
+#~ msgstr "--version-control"
+
+#~ msgid "current directory"
+#~ msgstr "カレントディレクトリ"
+
+#~ msgid "starting directory"
+#~ msgstr "開始ディレクトリ"
+
+#~ msgid "%s -> %s (backup)\n"
+#~ msgstr "%s -> %s (バックアップ)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ msgstr ""
+#~ "使用法: %s [オプション]... リンク先 [リンク名]\n"
+#~ "  又は  %s [オプション]... リンク先... ディレクトリ\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ msgstr ""
+#~ "使用法: %s [オプション]‥‥ SOURCE DEST\n"
+#~ "  又は  %s [オプション]‥‥ SOURCE‥‥ DIRECTORY\n"
+
+#~ msgid "--no-dereference (-h) is not supported on this system"
+#~ msgstr "システムが --no-dereference (-h) をサポートしていません"
+
+#~ msgid "Usage: %s [OPTION]... EXISTING_DIR NEW_DIR\n"
+#~ msgstr "使用法: %s [オプション]‥‥ EXISTING_DIR NEW_DIR\n"
+
+#~ msgid ""
+#~ "Rename EXISTING_DIR to NEW_DIR.\n"
+#~ "\n"
+#~ "   --help      display this help and exit\n"
+#~ "   --version   output version information and exit\n"
+#~ msgstr ""
+#~ "EXISTING_DIR から NEW_DIR にディレクトリ名を変更する.\n"
+#~ "\n"
+#~ "   --help      使い方を標準出力に表示する\n"
+#~ "   --version   バージョン情報を標準出力に表示する\n"
+
+#~ msgid "cannot get current directory"
+#~ msgstr "カレントディレクトリが得られません"
+
+#~ msgid "cannot rename `.' or `..'"
+#~ msgstr "`.' や `..' は変更できません"
+
+#~ msgid "cannot write to `%s'"
+#~ msgstr "%s に書込みできません"
+
+#~ msgid "`%s' is an ancestor of `%s'"
+#~ msgstr "`%s' は `%s' の親です"

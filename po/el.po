@@ -1,0 +1,2508 @@
+# Greek messages for GNU fileutils.
+# Copyright (C) 1998, 1999, 2000 Free Software Foundation, Inc.
+# Simos Xenitellis <S.Xenitellis@rhbnc.ac.uk>, 1998, 1999, 2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNU fileutils 4.0t\n"
+"POT-Creation-Date: 2001-10-26 15:00-0400\n"
+"PO-Revision-Date: 2000-06-05 02:05+0000\n"
+"Last-Translator: Simos Xenitellis <S.Xenitellis@rhbnc.ac.uk>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-7\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: lib/argmatch.c:159
+#, c-format
+msgid "invalid argument %s for `%s'"
+msgstr "μη έγκυρο όρισμα %s για `%s'"
+
+#: lib/argmatch.c:160
+#, c-format
+msgid "ambiguous argument %s for `%s'"
+msgstr "ασαφές όρισμα %s για `%s'"
+
+# lib/argmatch.c:188
+#. We try to put synonyms on the same line.  The assumption is that
+#. synonyms follow each other
+#: lib/argmatch.c:178
+msgid "Valid arguments are:"
+msgstr "Έγκυρα ορίσματα είναι:"
+
+#: lib/closeout.c:104
+msgid "write error"
+msgstr "σφάλμα εγγραφής"
+
+#: lib/error.c:117
+msgid "Unknown system error"
+msgstr "¶γνωστο σφάλμα συστήματος"
+
+#: lib/getopt.c:686
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: η επιλογή `%s' είναι ασαφής\n"
+
+#: lib/getopt.c:711
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: η επιλογή `--%s' δεν επιτρέπει όρισμα\n"
+
+#: lib/getopt.c:716
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: η επιλογή `%c%s' δεν επιτρέπει όρισμα\n"
+
+#: lib/getopt.c:734 lib/getopt.c:907
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: η επιλογή `%s' απαιτεί όρισμα\n"
+
+#. --option
+#: lib/getopt.c:763
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: μη αναγνωρίσιμη επιλογή `--%s'\n"
+
+#. +option or -option
+#: lib/getopt.c:767
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: άγνωστη επιλογή `%c%s'\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:793
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: ακατάλληλη επιλογή -- %c\n"
+
+#: lib/getopt.c:796
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: μη έγκυρη επιλογή -- %c\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:826 lib/getopt.c:956
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: η επιλογή απαιτεί ένα όρισμα -- %c\n"
+
+#: lib/getopt.c:873
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: η επιλογή `-W %s' είναι διφορούμενη\n"
+
+#: lib/getopt.c:891
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr "%s: η επιλογή `-W %s' δεν επιτρέπει όρισμα\n"
+
+#: lib/human.c:341
+msgid "block size"
+msgstr "μέγεθος μπλοκ"
+
+#: lib/makepath.c:177
+#, fuzzy, c-format
+msgid "cannot create directory %s"
+msgstr "αδυναμία δημιουργίας καταλόγου `%s'"
+
+#: lib/makepath.c:183 lib/makepath.c:425
+#, fuzzy, c-format
+msgid "%s exists but is not a directory"
+msgstr "το `%s' υπάρχει ήδη, αλλά δεν είναι κατάλογος"
+
+#: lib/makepath.c:321 lib/makepath.c:383 lib/makepath.c:444
+#, fuzzy, c-format
+msgid "cannot change owner and/or group of %s"
+msgstr "δε μπορεί να αλλαχτεί σε κενή ομάδα"
+
+#: lib/makepath.c:343
+#, c-format
+msgid "cannot chdir to directory, %s"
+msgstr "αδυναμία αλλαγής στο κατάλογο, %s"
+
+#: lib/makepath.c:397 lib/makepath.c:450
+#, fuzzy, c-format
+msgid "cannot change permissions of %s"
+msgstr "ορισμός δικαιωμάτων στο %s"
+
+#. If XALLOC_FAIL_FUNC is NULL, or does return, display this message
+#. before exiting when memory is exhausted.  Goes through gettext.
+#: lib/obstack.c:477 lib/xmalloc.c:66
+msgid "memory exhausted"
+msgstr "η μνήμη εξαντλήθηκε"
+
+#. Get translations for open and closing quotation marks.
+#.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  If the catalog has no translation,
+#. locale_quoting_style quotes `like this', and
+#. clocale_quoting_style quotes "like this".
+#.
+#. For example, an American English Unicode locale should
+#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
+#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
+#. MARK).  A British English Unicode locale should instead
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#: lib/quotearg.c:259
+msgid "`"
+msgstr "`"
+
+#: lib/quotearg.c:260
+msgid "'"
+msgstr "'"
+
+#: lib/rpmatch.c:78
+msgid "^[yY]"
+msgstr "^[νΝyY]"
+
+#: lib/rpmatch.c:81
+msgid "^[nN]"
+msgstr "^[οΟnN]"
+
+#: lib/unicodeio.c:138
+#, c-format
+msgid "cannot output U+%04X: iconv function not usable"
+msgstr "αδύνατη η έξοδος U+%04X: η συνάρτηση iconv δεν είναι χρησιμοποιήσιμη"
+
+#: lib/unicodeio.c:149
+#, c-format
+msgid "U+%04X: character out of range"
+msgstr "U+%04X: εκτός ορίων χαρακτήρας"
+
+#: lib/unicodeio.c:181 lib/unicodeio.c:190
+#, c-format
+msgid "cannot convert U+%04X to local character set"
+msgstr "αδύνατη η μετατροπή του U+%04X στο τοπικό σύνολο χαρακτήρων"
+
+#: lib/unicodeio.c:196
+#, c-format
+msgid "cannot output U+%04X: iconv function not available"
+msgstr "αδύνατη η έξοδος του U+%04X: η συνάρτητη iconv δεν είναι διαθέσιμη"
+
+#: lib/userspec.c:179
+msgid "invalid user"
+msgstr "μη έγκυρος χρήστης"
+
+#: lib/userspec.c:180
+msgid "invalid group"
+msgstr "μη έγκυρη ομάδα"
+
+#: lib/userspec.c:182
+msgid "cannot get the login group of a numeric UID"
+msgstr "αδυναμία εύρεσης της ομάδας σύνδεσης αριθμητικού UID"
+
+#: lib/userspec.c:184
+msgid "cannot omit both user and group"
+msgstr "δεν είναι δυνατό να παραληφθεί ο χρήστης και η ομάδα"
+
+#: lib/version-etc.c:38
+#, fuzzy
+msgid "Copyright (C) 2001 Free Software Foundation, Inc."
+msgstr "Πνευματικά Δικαιώματα (C) 2000 Free Software Foundation, Inc."
+
+#: lib/version-etc.c:60
+#, c-format
+msgid "Written by %s.\n"
+msgstr "Γραμμένο από τον/την %s.\n"
+
+#: lib/version-etc.c:66
+msgid ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Αυτό είναι ελεύθερο λογισμικό· δείτε τον πηγαίο κώδικα για τους κανονισμούς\n"
+"αντιγραφής. Δεν υπάρχει ΚΑΜΙΑ εγγύηση· ούτε ακόμα για ΛΕΙΤΟΥΡΓΙΚΟΤΗΤΑ ή \n"
+"ΚΑΤΑΛΛΗΛΟΤΗΤΑ ΓΙΑ ΕΝΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ.\n"
+
+#: src/dcfldd.c:321
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Δοκιμάστε `%s --help' για περισσότερες πληροφορίες.\n"
+
+#: src/dcfldd.c:325
+#, c-format
+msgid "Usage: %s [OPTION]...\n"
+msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ]...\n"
+
+#: src/dcfldd.c:326
+#, fuzzy
+msgid ""
+"Copy a file, converting and formatting according to the options.\n"
+"\n"
+"  bs=BYTES             force ibs=BYTES and obs=BYTES\n"
+"  cbs=BYTES            convert BYTES bytes at a time\n"
+"  conv=KEYWORDS        convert the file as per the comma separated keyword "
+"list\n"
+"  count=BLOCKS         copy only BLOCKS input blocks\n"
+"  ibs=BYTES            read BYTES bytes at a time\n"
+"  if=FILE              read from FILE instead of stdin\n"
+"  obs=BYTES            write BYTES bytes at a time\n"
+"  of=FILE              write to FILE instead of stdout\n"
+"  seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n"
+"  skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n"
+"  pattern=BYTES        use the specified binary pattern as input\n"
+"  textpattern=TEXT     use repeating TEXT as input\n"
+"  hashwindow=BYTES     perform an MD5 hash on every BYTES amount of data\n"
+"  hashlog=FILE         send MD5 hash output to FILE instead of stderr\n"
+"  status=[on|off]      display a continual status message on stderr\n"
+"                         default state is \"on\"\n"
+"  sizeprobe=[if|of]    determine the size of the input or output file"
+msgstr ""
+"Αντιγραφή αρχείου, μετατροπή και μορφοποίηση βάση των επιλογών.\n"
+"\n"
+"  bs=BYTES        επιβολή ibs=BYTES και obs=BYTES\n"
+"  cbs=BYTES       μετατροπή BYTES bytes τη φορά\n"
+"  conv=ΛΕΚΤΙΚΑ    μετατροπή σύμφωνα με τη διαχωριζόμενη με κόμμα "
+"λίσταλεκτικών\n"
+"  count=ΜΠΛΟΚ     αντιγραφή μόνο BLOCKS μπλοκ εισόδου\n"
+"  ibs=BYTES       ανάγνωση BYTES bytes τη φορά\n"
+"  if=ΑΡΧΕΙΟ       ανάγνωση από ΑΡΧΕΙΟ αντί από τη κανονική είσοδο\n"
+"  obs=BYTES       εγγραφή BYTES bytes τη φορά\n"
+"  of=ΑΡΧΕΙΟ       εγγραφή στο ΑΡΧΕΙΟ αντί στη κανονική έξοδο, χωρίς "
+"επικάλυψη\n"
+"  seek=ΜΠΛΟΚ      παράληψη των ΜΠΛΟΚ μπλοκ μεγέθους obs στην αρχή της "
+"εξόδου\n"
+"  skip=ΜΠΛΟΚ      παράληψη των ΜΠΛΟΚ μπλοκ μεγέθους ibs στην αρχή της "
+"εισόδου\n"
+"      --help      εμφάνιση αυτής της βοήθειας και έξοδος\n"
+"      --version   εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+"\n"
+"το BYTES μπορεί να φέρει τις επόμενες πολλαπλασιαστικές καταλήξεις:\n"
+"xM M, c 1, w 2, b 512, kD 1000, k 1024, MD 1,000,000, M 1,048,576,\n"
+"GD 1,000,000,000, G 1,073,741,824, and so on for T, P, E, Z, Y.\n"
+"Κάθε ΛΕΚΤΙΚΟ μπορεί να είναι:\n"
+"\n"
+"  ascii     από EBCDIC σε ASCII\n"
+"  ebcdic    από ASCII σε EBCDIC\n"
+"  ibm       από ASCII σε ενναλακτικό EBCDIC\n"
+"  block     συμπλήρωση των εγγραφών που τερματίζονται με το χαρακτήρα\t     "
+"αλλαγής γραμμής με το χαρακτήρα διαστήματος για σχηματισμό            "
+"μεγέθους cbs\n"
+"  unblock   αντικατάσταση τελικών διαστημάτων στις εγγραφές cbs με χαρακτήρα "
+"αλλαγής γραμμής\n"
+"  lcase     αλλαγή κεφαλαίων σε πεζά\n"
+"  notrunc   αποφυγή δημιουργίας αρχείου εξόδου όταν υπάρχει αρχείο\n"
+"\t     με το ίδιο όνομα\n"
+"  ucase     αλλαγή πεζών σε κεφαλαία\n"
+"  swab      αντικατάσταση μεταξύ τους κάθε ζευγαριού από bytes εισόδου\n"
+"  noerror   συνέχιση ακόμα και με σφάλματα ανάγνωσης\n"
+"  sync      συμπλήρωση κάθε μπλοκ εισόδου με NUL για να σχηματιστεί μέγεθος "
+"ibs\n"
+
+#: src/dcfldd.c:371
+msgid ""
+"\n"
+"Report bugs to <bug-fileutils@gnu.org>."
+msgstr ""
+"\n"
+"Στείλτε αναφορές σφαλμάτων στο <bug-fileutils@gnu.org>."
+
+#: src/dcfldd.c:402
+#, c-format
+msgid "%s+%s records in\n"
+msgstr "%s+%s εγγραφές μέσα\n"
+
+#: src/dcfldd.c:405
+#, c-format
+msgid "%s+%s records out\n"
+msgstr "%s+%s εγγραφές έξω\n"
+
+#: src/dcfldd.c:413
+msgid "truncated record"
+msgstr "μηδενισμένη εγγραφή και γράψιμο πάνω σε αυτή (truncated)"
+
+#: src/dcfldd.c:414
+msgid "truncated records"
+msgstr "μηδενισμένες εγγραφές και γράψιμο πάνω σε αυτές (truncated)"
+
+#: src/dcfldd.c:423
+#, fuzzy, c-format
+msgid "closing input file %s"
+msgstr "διαγραφή καταλόγου %s\n"
+
+#: src/dcfldd.c:425
+#, fuzzy, c-format
+msgid "closing output file %s"
+msgstr "διαγραφή καταλόγου %s\n"
+
+#: src/dcfldd.c:509
+#, fuzzy, c-format
+msgid "writing to %s"
+msgstr "διαγραφή καταλόγου %s\n"
+
+#: src/dcfldd.c:541
+#, fuzzy, c-format
+msgid "invalid conversion: %s"
+msgstr "%s: μη έγκυρη μετατροπή"
+
+#: src/dcfldd.c:645
+#, fuzzy, c-format
+msgid "unrecognized option %s"
+msgstr "άγνωστη επιλογή `%s'"
+
+#: src/dcfldd.c:659
+#, fuzzy, c-format
+msgid "invalid hex pattern: %s"
+msgstr "μη έγκυρα δικαιώματα `%s'"
+
+#: src/dcfldd.c:672 src/dcfldd.c:1455 src/dcfldd.c:1473
+#, fuzzy, c-format
+msgid "opening %s"
+msgstr "διαγραφή καταλόγου %s\n"
+
+#: src/dcfldd.c:729
+#, fuzzy, c-format
+msgid "unrecognized option %s=%s"
+msgstr "άγνωστη επιλογή `%s=%s'"
+
+#: src/dcfldd.c:735
+#, fuzzy, c-format
+msgid "invalid number %s"
+msgstr "μη έγκυρος αριθμός `%s'"
+
+#: src/dcfldd.c:765
+msgid ""
+"only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+msgstr ""
+"μόνο ένα conv στο {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+
+#: src/dcfldd.c:915 src/dcfldd.c:1206
+#, fuzzy, c-format
+msgid "reading %s"
+msgstr "διαγραφή καταλόγου %s\n"
+
+#: src/dcfldd.c:1252 src/dcfldd.c:1315
+#, fuzzy, c-format
+msgid "writing %s"
+msgstr "διαγραφή καταλόγου %s\n"
+
+# src/install.c:573
+#: src/dcfldd.c:1408
+#, fuzzy
+msgid "stating file"
+msgstr "η strip απέτυχε"
+
+#: src/dcfldd.c:1458
+msgid "standard input"
+msgstr "κανονική είσοδος"
+
+#: src/dcfldd.c:1481
+msgid "file offset out of range"
+msgstr "σχετική θέση αρχείου είναι εκτός ορίων"
+
+#: src/dcfldd.c:1484
+#, fuzzy, c-format
+msgid "cannot fstat %s"
+msgstr "αδύνατη χρήση της stat στο `%s'"
+
+#: src/dcfldd.c:1497
+#, fuzzy, c-format
+msgid "advancing past %s bytes in output file %s"
+msgstr "διαγραφή καταλόγου %s\n"
+
+#: src/dcfldd.c:1506
+msgid "standard output"
+msgstr "κανονική έξοδος"
+
+#, fuzzy
+#~ msgid "cannot change to null group"
+#~ msgstr "δε μπορεί να αλλαχτεί σε κενή ομάδα"
+
+#, fuzzy
+#~ msgid "invalid group name %s"
+#~ msgstr "μη έγκυρο όνομα ομάδας `%s'"
+
+#~ msgid "group number"
+#~ msgstr "αριθμός ομάδας"
+
+#, fuzzy
+#~ msgid "invalid group number %s"
+#~ msgstr "μη έγκυρος αριθμός ομάδας `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΟΜΑΔΑ ΑΡΧΕΙΟ...\n"
+#~ "   ή:  %s [ΕΠΙΛΟΓΗ]... --reference=ΑΡΧΕΙΟΑΝΑΦΟΡΑΣ ΑΡΧΕΙΟ...\n"
+
+#~ msgid ""
+#~ "Change the group membership of each FILE to GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's group rather than the specified\n"
+#~ "                         GROUP value\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ msgstr ""
+#~ "Αλλαγή της συμμετοχής σε ομάδα κάθε αρχείου ΑΡΧΕΙΟ στην ΟΜΑΔΑ.\n"
+#~ "\n"
+#~ "  -c, --changes           όπως το \"--verbose\" αλλά εμφάνιση μηνύματος "
+#~ "μόνο\n"
+#~ "                            όταν γίνεται αλλαγή\n"
+#~ "      --dereference       αλλαγή στο αναφερόμενο αρχείο κάθε συμβολικού\n"
+#~ "                            συνδέσμου αντί στον ίδιο τον σύνδεσμο\n"
+#~ "  -h, --no-dereference    τροποποίηση μόνο των συμβολικών συνδέσμων αντί "
+#~ "στα\n"
+#~ "                          αναφερόμενα αρχεία (διαθέσιμο μόνο στα συστήματα\n"
+#~ "                          που επιτρέπουν την αλλαγή ιδιοκτήτη σε συμβολικό\n"
+#~ "                          σύνδεσμο)\n"
+#~ "  -f, --silent, --quiet   αποφυγή εμφάνισης των περισσότερων μηνυμάτων\n"
+#~ "                            σφάλματος\n"
+#~ "      --reference=ΑΡΧΕΙΟΑΝΑΦΟΡΑΣ  χρήση της ομάδας του ΑΡΧΕΙΟΑΝΑΦΟΡΑΣ\n"
+#~ "                            αντί τις τιμής ΟΜΑΔΑ\n"
+#~ "  -R, --recursive         αναδρομικές αλλαγές στα αρχεία και στους\n"
+#~ "                            καταλόγους\n"
+#~ "  -v, --verbose           εμφάνιση διαγνωστικών μηνυμάτων για κάθε αρχείο\n"
+#~ "                            που επεξεργάζεται\n"
+#~ "      --help              εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version           εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+
+#~ msgid "too few arguments"
+#~ msgstr "πολύ λίγα ορίσματα"
+
+#, fuzzy
+#~ msgid "getting attributes of %s"
+#~ msgstr "διατήρηση ωρών στο %s"
+
+#, fuzzy
+#~ msgid "getting new attributes of %s"
+#~ msgstr "διατήρηση ωρών στο %s"
+
+#~ msgid "mode of %s changed to %04lo (%s)\n"
+#~ msgstr "τα δικαιώματα του %s τροποποιήθηκαν σε %04lo (%s)\n"
+
+#~ msgid "failed to change mode of %s to %04lo (%s)\n"
+#~ msgstr "αποτυχία αλλαγής των δικαιωμάτων του %s σε %04lo (%s)\n"
+
+#~ msgid "mode of %s retained as %04lo (%s)\n"
+#~ msgstr "τα δικαιώματα του %s διατηρούνται ως έχουν, δηλαδή %04lo (%s)\n"
+
+#, fuzzy
+#~ msgid "changing permissions of %s"
+#~ msgstr "ορισμός δικαιωμάτων στο %s"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... MODE[,MODE]... FILE...\n"
+#~ "  or:  %s [OPTION]... OCTAL-MODE FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΔΙΚΑΙΩΜΑ[,ΔΙΚΑΙΩΜΑ]... ΑΡΧΕΙΟ...\n"
+#~ "   ή:  %s [ΕΠΙΛΟΓΗ]... ΟΚΤΑΔΙΚΟ_ΔΙΚΑΙΩΜΑ ΑΡΧΕΙΟ...\n"
+#~ "   ή:  %s [ΕΠΙΛΟΓΗ]... --reference=ΑΡΧΕΙΟΑΝΑΦΟΡΑΣ ΑΡΧΕΙΟ...\n"
+
+#~ msgid ""
+#~ "Change the mode of each FILE to MODE.\n"
+#~ "\n"
+#~ "  -c, --changes           like verbose but report only when a change is "
+#~ "made\n"
+#~ "  -f, --silent, --quiet   suppress most error messages\n"
+#~ "  -v, --verbose           output a diagnostic for every file processed\n"
+#~ "      --reference=RFILE   use RFILE's mode instead of MODE values\n"
+#~ "  -R, --recursive         change files and directories recursively\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "\n"
+#~ "Each MODE is one or more of the letters ugoa, one of the symbols +-= and\n"
+#~ "one or more of the letters rwxXstugo.\n"
+#~ msgstr ""
+#~ "Αλλαγή των δικαιωμάτων κάθε ΑΡΧΕΙΟΥ σε ΔΙΚΑΙΩΜΑ.\n"
+#~ "\n"
+#~ "  -c, --changes           όπως το \"--verbose\" αλλά εμφάνιση μηνύματος μόνο "
+#~ "όταν γίνεται αλλαγή\n"
+#~ "  -f, --silent, --quiet   αποφυγή εμφάνισης των περισσότερων μηνυμάτων "
+#~ "σφάλματος\n"
+#~ "  -v, --verbose           εμφάνιση διαγνωστικών μηνυμάτων για κάθε αρχείο "
+#~ "που επεξεργάζετε\n"
+#~ "      --reference=ΑΡΧΕΙΟΑΝΑΦΟΡΑΣ  χρήση των δικαιωμάτων του ΑΡΧΕΙΟΑΝΑΦΟΡΑΣ\n"
+#~ "                          αντί τις τιμής του ΔΙΚΑΙΩΜΑ\n"
+#~ "  -R, --recursive         αλλαγές στα αρχεία και στους καταλόγους "
+#~ "αναδρομικά\n"
+#~ "      --help              εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version           εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+#~ "Κάθε ΔΙΚΑΙΩΜΑ είναι ένα ή περισσότερα από τα γράμματα ugoa, ένα από τα\n"
+#~ "σύμβολα +-= και ένα ή περισσότερα από τα γράμματα rwxXstugo.\n"
+
+#, fuzzy
+#~ msgid "invalid character %s in mode string %s"
+#~ msgstr "μη έγκυρο όρισμα %s για `%s'"
+
+#, fuzzy
+#~ msgid "invalid mode string: %s"
+#~ msgstr "μη έγκυρα δικαιώματα `%s'"
+
+#~ msgid "neither symbolic link %s nor referent has been changed\n"
+#~ msgstr ""
+#~ "ούτε ο συμβολικός σύνδεσμος %s ούτε το αναφερόμενο αρχείο αλλάχτηκαν\n"
+
+#, fuzzy
+#~ msgid "changed ownership of %s to %s\n"
+#~ msgstr "αποτυχία αλλαγής του ιδιοκτήτη από %s σε "
+
+#, fuzzy
+#~ msgid "changed group of %s to %s\n"
+#~ msgstr "αποτυχία αλλαγής της ομάδας από %s σε %s\n"
+
+#, fuzzy
+#~ msgid "failed to change ownership of %s to %s\n"
+#~ msgstr "αποτυχία αλλαγής του ιδιοκτήτη από %s σε "
+
+#~ msgid "failed to change group of %s to %s\n"
+#~ msgstr "αποτυχία αλλαγής της ομάδας από %s σε %s\n"
+
+#, fuzzy
+#~ msgid "ownership of %s retained as %s\n"
+#~ msgstr "ο ιδιοκτήτης του %s παρέμεινε ως "
+
+#~ msgid "group of %s retained as %s\n"
+#~ msgstr "η ομάδα του %s έχει παραμείνει σε %s\n"
+
+#, fuzzy
+#~ msgid "changing ownership of %s"
+#~ msgstr "διατήρηση ιδιοκτήτη για το %s"
+
+#, fuzzy
+#~ msgid "changing group of %s"
+#~ msgstr "διατήρηση ιδιοκτήτη για το %s"
+
+#, fuzzy
+#~ msgid "unable to restore permissions of %s"
+#~ msgstr "επαναφορά δικαιωμάτων στο %s"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... OWNER[:[GROUP]] FILE...\n"
+#~ "  or:  %s [OPTION]... :GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΙΔΙΟΚΤΗΤΗΣ[.[ΟΜΑΔΑ]] ΑΡΧΕΙΟ...\n"
+#~ "   ή:  %s [ΕΠΙΛΟΓΗ]... :[ΟΜΑΔΑ] ΑΡΧΕΙΟ...\n"
+#~ "   ή:  %s [ΕΠΙΛΟΓΗ]... --reference=ΑΡΧΕΙΟΑΝΑΦΟΡΑΣ ΑΡΧΕΙΟ...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the owner and/or group of each FILE to OWNER and/or GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                         change the owner and/or group of each file only if\n"
+#~ "                         its current owner and/or group match those "
+#~ "specified\n"
+#~ "                         here.  Either may be omitted, in which case a "
+#~ "match\n"
+#~ "                         is not required for the omitted attribute.\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's owner and group rather than\n"
+#~ "                         the specified OWNER:GROUP values\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Αλλαγή του ιδιοκτήτη και/ή της ομάδα για κάθε αρχείο, σε ΙΔΙΟΚΤΗΤΗ και/η "
+#~ "ΟΜΑΔΑ.\n"
+#~ "\n"
+#~ "  -c, --changes           όπως το \"--verbose\" αλλά εμφάνιση μηνύματος "
+#~ "μόνο\n"
+#~ "                            όταν γίνεται αλλαγή\n"
+#~ "      --dereference       αλλαγή στο αναφερόμενο αρχείο κάθε συμβολικού\n"
+#~ "                            συνδέσμου αντί στον ίδιο το σύνδεσμο\n"
+#~ "  -h, --no-dereference    τροποποίηση μόνο των συμβολικών συνδέσμων αντί "
+#~ "στα\n"
+#~ "                          αναφερόμενα αρχεία (διαθέσιμο μόνο στα συστήματα\n"
+#~ "                          που επιτρέπουν την αλλαγή ιδιοκτήτη σε συμβολικό\n"
+#~ "                          σύνδεσμο)\n"
+#~ "      --from=ΤΡΕΧΩΝ_ΙΔΙΟΚΤΗΤΗΣ:ΤΡΕΧΟΥΣΑ_ΟΜΑΔΑ\n"
+#~ "                         αλλαγή του ιδιοκτήτη και/ή της ομάδας κάθε αρχείου "
+#~ "μόνο\n"
+#~ "                         αν ο τρέχων ιδιοκτήτης και/ή ομάδα ταιριάζουν με "
+#~ "τις\n"
+#~ "                         τιμές εδώ. Ένα από τα δύο μπορεί να παραληφθεί, "
+#~ "οπότε\n"
+#~ "                         δεν απαιτείται ταίριασμα στο παραλειπόμενη "
+#~ "ιδιότητα.\n"
+#~ "  -f, --silent, --quiet   αποφυγή εμφάνισης των περισσότερων μηνυμάτων\n"
+#~ "                            σφάλματος\n"
+#~ "      --reference=ΑΡΧΕΙΟΑΝΑΦΟΡΑΣ  χρήση του ιδιοκτήτη και της ομάδας\n"
+#~ "                            του ΑΡΧΕΙΟΑΝΑΦΟΡΑΣ αντί των τιμών "
+#~ "ΙΔΙΟΚΤΗΤΗΣ:ΟΜΑΔΑ\n"
+#~ "  -R, --recursive         αλλαγές στα αρχεία και στους καταλόγους "
+#~ "αναδρομικά\n"
+#~ "  -v, --verbose           εμφάνιση διαγνωστικών μηνυμάτων για κάθε αρχείο\n"
+#~ "                            που επεξεργάζεται\n"
+#~ "      --help              εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version           εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+#~ "Ο ιδιοκτήτης δεν αλλάζει αν έχει παραληφθεί. Η ομάδα δεν αλλάζει αν έχει\n"
+#~ "παραληφθεί, τροποποιείται στη βασική ομάδα χρήστη αν τοποθετηθεί ο\n"
+#~ "χαρακτήρας 'άνω-κάτω τελία'. Ο ΙΔΙΟΚΤΗΤΗΣ και η ΟΜΑΔΑ μπορούν να έχουν\n"
+#~ "είτε αριθμητική είτε συμβολική τιμή.\n"
+
+#, fuzzy
+#~ msgid "cannot access %s"
+#~ msgstr "δε μπορεί να αλλάξει ο ιδιοκτήτης του `%s'"
+
+#, fuzzy
+#~ msgid "%s and %s are the same file"
+#~ msgstr "τα `%s' και `%s' είναι το ίδιο αρχείο"
+
+#, fuzzy
+#~ msgid "cannot open %s for reading"
+#~ msgstr "αδυναμία μεταφοράς του `%s' στο `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove %s"
+#~ msgstr "δεν είναι δυνατό να διαγραφεί το `%s'"
+
+#, fuzzy
+#~ msgid "cannot create regular file %s"
+#~ msgstr "αδυναμία δημιουργίας κανονικού αρχείου `%s'"
+
+#, fuzzy
+#~ msgid "cannot lseek %s"
+#~ msgstr "δεν είναι δυνατό να διαγραφεί το `%s'"
+
+#, fuzzy
+#~ msgid "closing %s"
+#~ msgstr "διαγραφή καταλόγου %s\n"
+
+#, fuzzy
+#~ msgid "cannot stat %s"
+#~ msgstr "αδύνατη χρήση της stat στο `%s'"
+
+#, fuzzy
+#~ msgid "omitting directory %s"
+#~ msgstr "%s: παράληψη καταλόγου"
+
+#, fuzzy
+#~ msgid "cannot overwrite non-directory %s with directory %s"
+#~ msgstr "%s: δε μπορεί να γραφτεί μη-κατάλογος πάνω σε κατάλογο"
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s with non-directory"
+#~ msgstr "%s: δε μπορεί να γραφτεί μη-κατάλογος πάνω σε κατάλογο"
+
+#, fuzzy
+#~ msgid "%s: overwrite %s, overriding mode %04lo? "
+#~ msgstr "%s: αντιγραφή πάνω στο `%s', παράκαμψη δικαιωμάτων %04lo; "
+
+#, fuzzy
+#~ msgid "%s: overwrite %s? "
+#~ msgstr "%s: αντιγραφή πάνω στο `%s';"
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s"
+#~ msgstr "%s: δεν είναι δυνατό να γραφτεί πάνω σε κατάλογο"
+
+#~ msgid "cannot move directory onto non-directory: %s -> %s"
+#~ msgstr "δε μπορεί να μετακινηθεί κατάλογος σε μη-κατάλογο: %s -> %s"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not moved"
+#~ msgstr ""
+#~ "η δημιουργία αντιγράφου ασφαλείας του `%s' θα κατέστρεφε τη πηγή· το `%s' δε "
+#~ "μετακινείται"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not copied"
+#~ msgstr ""
+#~ "στη δημιουργία αντιγράφου ασφαλείας του `%s' θα κατέστρεφε τη πηγή· το `%s' "
+#~ "δεν αντιγράφεται"
+
+#, fuzzy
+#~ msgid "cannot backup %s"
+#~ msgstr "δε μπορεί να δημιουργηθεί αντίγραφο ασφαλείας του `%s'"
+
+#~ msgid " (backup: %s)"
+#~ msgstr " (αντίγραφο ασφαλείας: %s)"
+
+#, fuzzy
+#~ msgid "cannot copy a directory, %s, into itself, %s"
+#~ msgstr "δεν είναι δυνατή η μεταφορά του `%s' σε έναν υποκατάλογό του, `%s'"
+
+#, fuzzy
+#~ msgid "will not create hard link %s to directory %s"
+#~ msgstr "δε θα δημιουργηθεί σθεναρός σύνδεσμος `%s' στον κατάλογο `%s'"
+
+#, fuzzy
+#~ msgid "cannot create hard link %s to %s"
+#~ msgstr "δημιουργία σθεναρού συνδέσμου `%s' στο `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to a subdirectory of itself, %s"
+#~ msgstr "δεν είναι δυνατή η μεταφορά του `%s' σε έναν υποκατάλογό του, `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to %s"
+#~ msgstr "αδυναμία μεταφοράς του `%s' στο `%s'"
+
+#, fuzzy
+#~ msgid "cannot copy cyclic symbolic link %s"
+#~ msgstr "%s: αδυναμία αντιγραφής κυκλίκού συμβολικού συνδέσμου"
+
+#~ msgid "%s: can make relative symbolic links only in current directory"
+#~ msgstr ""
+#~ "%s: δυνατότητα δημιουργίας σχετικών συμβολικών συνδέσμων μόνο στο τρέχον "
+#~ "κατάλογο"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s to %s"
+#~ msgstr "αδυναμία δημιουργίας συμβολικού συνδέσμου `%s'"
+
+#, fuzzy
+#~ msgid "cannot create link %s"
+#~ msgstr "αδυναμία δημιουργίας συνδέσμου `%s'"
+
+#, fuzzy
+#~ msgid "cannot create fifo %s"
+#~ msgstr "αδυναμία δημιουργίας fifo `%s'"
+
+#, fuzzy
+#~ msgid "cannot create special file %s"
+#~ msgstr "αδυναμία δημιουργίας ειδικού αρχείου `%s'"
+
+#, fuzzy
+#~ msgid "cannot read symbolic link %s"
+#~ msgstr "αδυναμία ανάγνωσης συμβολικού συνδέσμου `%s'"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s"
+#~ msgstr "αδυναμία δημιουργίας συμβολικού συνδέσμου `%s'"
+
+#~ msgid "preserving ownership for %s"
+#~ msgstr "διατήρηση ιδιοκτήτη για το %s"
+
+#, fuzzy
+#~ msgid "%s has unknown file type"
+#~ msgstr "%s: άγνωστο είδος αρχείου"
+
+#~ msgid "preserving times for %s"
+#~ msgstr "διατήρηση ωρών στο %s"
+
+#~ msgid "setting permissions for %s"
+#~ msgstr "ορισμός δικαιωμάτων στο %s"
+
+#, fuzzy
+#~ msgid "cannot un-backup %s"
+#~ msgstr "αδυναμία επαναφοράς αντιγράφου ασφαλείας `%s'"
+
+# src/copy.c:924
+#~ msgid "%s -> %s (unbackup)\n"
+#~ msgstr "%s -> %s (χρήση αντιγράφου ασφαλείας)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY SOURCE...\n"
+#~ msgstr ""
+#~ "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΠΗΓΗ ΠΡΟΟΡΙΣΜΟΣ\n"
+#~ "    ή: %s [ΕΠΙΛΟΓΗ]... ΠΗΓΗ... ΚΑΤΑΛΟΓΟΣ\n"
+#~ "    ή: %s [ΕΠΙΛΟΓΗ]... --target-directory=ΚΑΤΑΛΟΓΟΣ ΠΗΓΗ...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                same as -dpR\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -d, --no-dereference         never follow symbolic links\n"
+#~ "  -f, --force                  if an existing destination file cannot be\n"
+#~ "                                   opened, remove it and try again\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "  -H                           follow command-line symbolic links\n"
+#~ "  -l, --link                   link files instead of copying\n"
+#~ "  -L, --dereference            always follow symbolic links\n"
+#~ "  -p, --preserve               preserve file attributes if possible\n"
+#~ "      --parents                append source path to DIRECTORY\n"
+#~ "  -P                           same as `--parents' for now; soon to change "
+#~ "to\n"
+#~ "                                 `--no-dereference' to conform to POSIX\n"
+#~ "  -r                           copy recursively, non-directories as files\n"
+#~ "                                 WARNING: use -R instead when you might "
+#~ "copy\n"
+#~ "                                 special files like FIFOs or /dev/zero\n"
+#~ "      --remove-destination     remove each existing destination file before\n"
+#~ "                                 attempting to open it (contrast with "
+#~ "--force)\n"
+#~ msgstr ""
+#~ "Αντιγραφή της ΠΗΓΗς στο ΠΡΟΟΡΙΣΜΟΣ ή πολλαπλές ΠΗΓΗ(ΕΣ) στο ΚΑΤΑΛΟΓΟ.\n"
+#~ "\n"
+#~ "  -a, --archive                το ίδιο με -dpR\n"
+#~ "      --backup=[ΕΛΕΓΧΟΣ]       δημιουργία αντιγράφου ασφαλείας για κάθε "
+#~ "αρχείο\n"
+#~ "                                 προορισμού\n"
+#~ "  -b                           όπως το --backup αλλά δεν απαιτεί παράμετρο\n"
+#~ "  -d, --no-dereference         διατήρηση συμβολικών συνδέσμων\n"
+#~ "  -f, --force                  διαγραφή υπαρχόντων προορισμών, χωρίς\n"
+#~ "                                 επιβεβαίωση διαγραφής\n"
+#~ "  -i, --interactive            απαίτηση διαβεβαίωσης διαγραφής πριν τη\n"
+#~ "                                 διαγραφή λόγω επικάλυψης\n"
+#~ "  -l, --link                   δημιουργία συνδέσμων αντί αντιγράφων\n"
+#~ "  -p, --preserve               διατήρηση χαρακτηριστικών των αρχείων, αν\n"
+#~ "                                 είναι δυνατόν\n"
+#~ "  -P, --parents                προσθήκη διαδρομής της πηγής στο ΚΑΤΑΛΟΓΟΣ\n"
+#~ "  -r                           αντιγραφή αναδρομικά, τους μη-καταλόγους σαν\n"
+#~ "                                 αρχεία\n"
+#~ "                                 ΠΡΟΕΙΔΟΠΟΙΗΣΗ: κάντε χρήση του -R όταν\n"
+#~ "                                 πρόκειτε να αντιγράψετε ειδικά αρχεία όπως\n"
+#~ "                                 FIFO ή το /dev/zero\n"
+#~ "      --sparse=WHEN            έλεγχος της δημιουργίας αραιών (sparse)\n"
+#~ "                                 αρχείων\n"
+#~ "  -R, --recursive              αντιγραφή καταλόγων αναδρομικά\n"
+#~ "      --strip-trailing-slashes απομάκρυνση οτιδήποτε κάθετων που έπονται "
+#~ "από\n"
+#~ "                                 κάθε όρισμα ΠΗΓΗΣ\n"
+#~ "  -s, --symbolic-link          δημιουργία συμβολικών συνδέσμων αντί\n"
+#~ "                                 αντιγράφων\n"
+#~ "  -S, --suffix=ΚΑΤΑΛΗΞΗ        παράκαμψη της συνηθισμένης κατάληξης των\n"
+#~ "                                 αντιγράφων ασφαλείας\n"
+#~ "      --target-directory=ΚΑΤΑΛΟΓΟΣ  μετακίνησε όλα τα ορίσματα για ΠΗΓΗ στο\n"
+#~ "                                 ΚΑΤΑΛΟΓΟΣ\n"
+#~ "  -u, --update                 αντιγραφή μόνο όταν το αρχείο ΠΗΓΗ είναι\n"
+#~ "                                 νεώτερο από το αρχείο ΠΡΟΟΡΙΣΜΟΣ ή όταν\n"
+#~ "                                 το αρχείο προορισμός δεν υπάρχει\n"
+#~ "  -v, --verbose                εξήγηση του τί γίνεται\n"
+#~ "  -x, --one-file-system        παραμονή στο τρέχον σύστημα αρχείων\n"
+#~ "      --help                   εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version                εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+#~ "Έξ ορισμού, τα αραία (sparse) αρχεία ΠΗΓΗΣ αναγωρίζονται με ένα όχι τόσο\n"
+#~ "καλό ευρεστικό αλγόριθμο και το αντίστοιχο αρχείο ΠΡΟΟΡΙΣΜΟΥ γίνεται αραιό\n"
+#~ "επίσης. Αυτή είναι η συμπεριφορά της επιλογής --sparse=auto. Επιλέξτε\n"
+#~ "--sparse=always για τη δημιουργία αραιών αρχείων ΠΡΟΟΡΙΣΜΟΥ οπότε το αρχείο\n"
+#~ "ΠΗΓΗ περιέχει αρκετά μεγάλες σειρές από μηδενικά bytes.\n"
+#~ "Με --sparse=never απογορεύετε τη δημιουργία αραιών αρχείων.\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "      --sparse=WHEN            control creation of sparse files\n"
+#~ "  -R, --recursive              copy directories recursively\n"
+#~ "      --strip-trailing-slashes remove any trailing slashes from each SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -s, --symbolic-link          make symbolic links instead of copying\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 copy only when the SOURCE file is newer\n"
+#~ "                                 than the destination file or when the\n"
+#~ "                                 destination file is missing\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "  -x, --one-file-system        stay on this file system\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ "By default, sparse SOURCE files are detected by a crude heuristic and the\n"
+#~ "corresponding DEST file is made sparse as well.  That is the behavior\n"
+#~ "selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST\n"
+#~ "file whenever the SOURCE file contains a long enough sequence of zero "
+#~ "bytes.\n"
+#~ "Use --sparse=never to inhibit creation of sparse files.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Αντιγραφή της ΠΗΓΗς στο ΠΡΟΟΡΙΣΜΟΣ ή πολλαπλές ΠΗΓΗ(ΕΣ) στο ΚΑΤΑΛΟΓΟ.\n"
+#~ "\n"
+#~ "  -a, --archive                το ίδιο με -dpR\n"
+#~ "      --backup=[ΕΛΕΓΧΟΣ]       δημιουργία αντιγράφου ασφαλείας για κάθε "
+#~ "αρχείο\n"
+#~ "                                 προορισμού\n"
+#~ "  -b                           όπως το --backup αλλά δεν απαιτεί παράμετρο\n"
+#~ "  -d, --no-dereference         διατήρηση συμβολικών συνδέσμων\n"
+#~ "  -f, --force                  διαγραφή υπαρχόντων προορισμών, χωρίς\n"
+#~ "                                 επιβεβαίωση διαγραφής\n"
+#~ "  -i, --interactive            απαίτηση διαβεβαίωσης διαγραφής πριν τη\n"
+#~ "                                 διαγραφή λόγω επικάλυψης\n"
+#~ "  -l, --link                   δημιουργία συνδέσμων αντί αντιγράφων\n"
+#~ "  -p, --preserve               διατήρηση χαρακτηριστικών των αρχείων, αν\n"
+#~ "                                 είναι δυνατόν\n"
+#~ "  -P, --parents                προσθήκη διαδρομής της πηγής στο ΚΑΤΑΛΟΓΟΣ\n"
+#~ "  -r                           αντιγραφή αναδρομικά, τους μη-καταλόγους σαν\n"
+#~ "                                 αρχεία\n"
+#~ "                                 ΠΡΟΕΙΔΟΠΟΙΗΣΗ: κάντε χρήση του -R όταν\n"
+#~ "                                 πρόκειτε να αντιγράψετε ειδικά αρχεία όπως\n"
+#~ "                                 FIFO ή το /dev/zero\n"
+#~ "      --sparse=WHEN            έλεγχος της δημιουργίας αραιών (sparse)\n"
+#~ "                                 αρχείων\n"
+#~ "  -R, --recursive              αντιγραφή καταλόγων αναδρομικά\n"
+#~ "      --strip-trailing-slashes απομάκρυνση οτιδήποτε κάθετων που έπονται "
+#~ "από\n"
+#~ "                                 κάθε όρισμα ΠΗΓΗΣ\n"
+#~ "  -s, --symbolic-link          δημιουργία συμβολικών συνδέσμων αντί\n"
+#~ "                                 αντιγράφων\n"
+#~ "  -S, --suffix=ΚΑΤΑΛΗΞΗ        παράκαμψη της συνηθισμένης κατάληξης των\n"
+#~ "                                 αντιγράφων ασφαλείας\n"
+#~ "      --target-directory=ΚΑΤΑΛΟΓΟΣ  μετακίνησε όλα τα ορίσματα για ΠΗΓΗ στο\n"
+#~ "                                 ΚΑΤΑΛΟΓΟΣ\n"
+#~ "  -u, --update                 αντιγραφή μόνο όταν το αρχείο ΠΗΓΗ είναι\n"
+#~ "                                 νεώτερο από το αρχείο ΠΡΟΟΡΙΣΜΟΣ ή όταν\n"
+#~ "                                 το αρχείο προορισμός δεν υπάρχει\n"
+#~ "  -v, --verbose                εξήγηση του τί γίνεται\n"
+#~ "  -x, --one-file-system        παραμονή στο τρέχον σύστημα αρχείων\n"
+#~ "      --help                   εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version                εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+#~ "Έξ ορισμού, τα αραία (sparse) αρχεία ΠΗΓΗΣ αναγωρίζονται με ένα όχι τόσο\n"
+#~ "καλό ευρεστικό αλγόριθμο και το αντίστοιχο αρχείο ΠΡΟΟΡΙΣΜΟΥ γίνεται αραιό\n"
+#~ "επίσης. Αυτή είναι η συμπεριφορά της επιλογής --sparse=auto. Επιλέξτε\n"
+#~ "--sparse=always για τη δημιουργία αραιών αρχείων ΠΡΟΟΡΙΣΜΟΥ οπότε το αρχείο\n"
+#~ "ΠΗΓΗ περιέχει αρκετά μεγάλες σειρές από μηδενικά bytes.\n"
+#~ "Με --sparse=never απογορεύετε τη δημιουργία αραιών αρχείων.\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "The backup suffix is `~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\n"
+#~ "The version control method may be selected via the --backup option or "
+#~ "through\n"
+#~ "the VERSION_CONTROL environment variable.  Here are the values:\n"
+#~ "\n"
+#~ "  none, off       never make backups (even if --backup is given)\n"
+#~ "  numbered, t     make numbered backups\n"
+#~ "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
+#~ "  simple, never   always make simple backups\n"
+#~ msgstr ""
+#~ "Η κατάληξη των αντιγράφων ασφαλείας είναι το `~', εκτός αν τεθεί με το\n"
+#~ "--suffix ή το SIMPLE_BACKUP_SUFFIX.\n"
+#~ "Ο έλεγχος έκδοσης μπορεί να τεθεί με την επιλογή --backup ή μέσω της\n"
+#~ "μεταβλητής περιβάλλοντος VERSION_CONTROL. Οι δυνατές τιμές είναι:\n"
+#~ "\n"
+#~ "  none,off        να μη δημιουργούνται αντίγραδα ασφαλείας (ακόμα και\n"
+#~ "                    αν δίνεται --backup)\n"
+#~ "  numbered, t     δημιουργία αριθμημένων αντιγράφων ασφαλείας\n"
+#~ "  existing, nil   αριθμημένων, αν υπάρχουν αριθμημένα αντίγραφα, "
+#~ "διαφορετικά\n"
+#~ "                    απλά αντίγραφα\n"
+#~ "  simple, never   πάντα δημιουργία απλών αντιγράφων\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "As a special case, cp makes a backup of SOURCE when the force and backup\n"
+#~ "options are given and SOURCE and DEST are the same name for an existing,\n"
+#~ "regular file.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Σαν ειδική περίπτωση, η cp δημιουργεί αντίγραφα της ΠΗΓΗΣ όταν οι επιλογές\n"
+#~ "και τα ΠΗΓΗ και ΠΡΟΟΡΙΣΜΟΣ έχουν το ίδιο όνομα, για ένα υπάρχον, κανονικό "
+#~ "αρχείο.\n"
+
+#~ msgid "preserving permissions for %s"
+#~ msgstr "διατήρηση δικαιωμάτων στο %s"
+
+#, fuzzy
+#~ msgid "cannot make directory %s"
+#~ msgstr "αδυναμία δημιουργίας καταλόγου `%s'"
+
+#~ msgid "missing file arguments"
+#~ msgstr "έχουν παραληφθεί ορίσματα"
+
+#~ msgid "missing destination file"
+#~ msgstr "έχει παραληφθεί το αρχείο προορισμού"
+
+#, fuzzy
+#~ msgid "accessing %s"
+#~ msgstr "διαγραφή καταλόγου %s\n"
+
+#, fuzzy
+#~ msgid "specified target, %s is not a directory"
+#~ msgstr "ο αποδέκτης που ορίστηκε, `%s' δεν είναι κατάλογος"
+
+#, fuzzy
+#~ msgid "copying multiple files, but last argument %s is not a directory"
+#~ msgstr ""
+#~ "αντιγραφή πολλαπλών αρχείων, αλλά το τελευταίο όρισμα (%s) δεν είναι "
+#~ "κατάλογος"
+
+#~ msgid "when preserving paths, the destination must be a directory"
+#~ msgstr ""
+#~ "όταν διατηρούνται τα μονοπάτια, το τελευταίο όρισμα πρέπει να είναι κατάλογος"
+
+#~ msgid ""
+#~ "warning: --version-control (-V) is obsolete;  support for it\n"
+#~ "will be removed in some future release.  Use --backup=%s instead."
+#~ msgstr ""
+#~ "προειδοποίηση: το --version-control (-V) δε χρησιμοποιείται πλέον·\n"
+#~ "η υποστήρηξη για αυτό θα πάψει σε κάποια μελλοντική έκδοση. Κάντε\n"
+#~ "χρήση του --backup=%s στη θέση του."
+
+#~ msgid "symbolic links are not supported on this system"
+#~ msgstr "συμβολικοί σύνδεσμοι δεν υποστηρίζονται στο σύστημα αυτό"
+
+#~ msgid "cannot make both hard and symbolic links"
+#~ msgstr "αδυναμία δημιουργίας σθεναρών(hard) και συμβολικών συνδέσμων"
+
+#~ msgid "backup type"
+#~ msgstr "είδος αντιγράφου ασφάλειας"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ]... [ΑΡΧΕΙΟ]\n"
+
+#~ msgid ""
+#~ "Output commands to set the LS_COLORS environment variable.\n"
+#~ "\n"
+#~ "Determine format of output:\n"
+#~ "  -b, --sh, --bourne-shell    output Bourne shell code to set LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        output C shell code to set LS_COLORS\n"
+#~ "  -p, --print-database        output defaults\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If FILE is specified, read it to determine which colors to use for which\n"
+#~ "file types and extensions.  Otherwise, a precompiled database is used.\n"
+#~ "For details on the format of these files, run `dircolors --print-database'.\n"
+#~ msgstr ""
+#~ "Εμφάνιση εντολών για να τεθούν στη μεταβλητή περιβάλλοντος LS_COLORS.\n"
+#~ "\n"
+#~ "Επιλογή μορφής εξόδου:\n"
+#~ "  -b, --sh, --bourne-shell    εμφάνιση κώδικα Bourne shell για να τεθεί στην "
+#~ "LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        εμφάνιση κώδικα C shell για να τεθεί στην "
+#~ "LS_COLORS\n"
+#~ "  -p, --print-database        εμφάνιση εξ ορισμού ρύθμισης\n"
+#~ "      --help                  εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version               εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+#~ "Αν ορίζεται ΑΡΧΕΙΟ, αναγιγνώσκεται για να διευκρινιστεί ποια χρώματα να "
+#~ "χρησιμοποιηθούν για \n"
+#~ "κάθε είδος αρχείου και κατάληξης. Διαφορετικά, χρησιμοποιήται μια έτοιμη "
+#~ "βάση.\n"
+#~ "Για λεπτομέριες για τη μορφή των αρχείων αυτών, τρέξτε `dircolors "
+#~ "--print-database'.\n"
+
+#~ msgid "%s:%lu: invalid line;  missing second token"
+#~ msgstr "%s:%lu: ακατάλληλη γραμμή· παραλήφθηκε το δέυτερο τμήμα"
+
+#, fuzzy
+#~ msgid "%s:%lu: unrecognized keyword %s"
+#~ msgstr "%s:%lu: άγνωστο λεκτικό `%s'"
+
+# src/dircolors.c:372
+#~ msgid "<internal>"
+#~ msgstr "<εσωτερικό>"
+
+#~ msgid ""
+#~ "the options to output dircolors' internal database and\n"
+#~ "to select a shell syntax are mutually exclusive"
+#~ msgstr ""
+#~ "οι επιλογές για να εμφανιστεί η εσωτερική βάση και\n"
+#~ "να επιλεγεί το είδος του φλοιού είναι αμοιβαία αποκλειώμενα"
+
+#~ msgid ""
+#~ "no FILE arguments may be used with the option to output\n"
+#~ "dircolors' internal database"
+#~ msgstr ""
+#~ "δε μπορούν να χρησιμοποιηθούν ορίσματα ΑΡΧΕΙΟΥ με την επιλογή\n"
+#~ "εμφάνισης της εσωτερικής βάσης της dircolor"
+
+#~ msgid "too many arguments"
+#~ msgstr "πάρα πολλά ορίσματα"
+
+#~ msgid "no SHELL environment variable, and no shell type option given"
+#~ msgstr ""
+#~ "δεν υπάρχει μεταβλητή περιβάλλοντος SHELL, και δεν δόθηκε είδος φλοιού"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ]... [ΑΡΧΕΙΟ]...\n"
+
+#~ msgid ""
+#~ "Show information about the filesystem on which each FILE resides,\n"
+#~ "or all filesystems by default.\n"
+#~ "\n"
+#~ "  -a, --all             include filesystems having 0 blocks\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -i, --inodes          list inode information instead of block usage\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --local           limit listing to local filesystems\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "      --no-sync         do not invoke sync before getting usage info "
+#~ "(default)\n"
+#~ "  -P, --portability     use the POSIX output format\n"
+#~ "      --sync            invoke sync before getting usage info\n"
+#~ "  -t, --type=TYPE       limit listing to filesystems of type TYPE\n"
+#~ "  -T, --print-type      print filesystem type\n"
+#~ "  -x, --exclude-type=TYPE   limit listing to filesystems not of type TYPE\n"
+#~ "  -v                    (ignored)\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "Εμφάνιση πληροφοριών για το σύστημα αρχείων στο οποίο κάθε ΑΡΧΕΙΟ βρίσκεται\n"
+#~ "ή όλων των συστημάτων αρχείων εξ ορισμού.\n"
+#~ "\n"
+#~ "  -a, --all             συμπερίληψη συστημάτων αρχείων με 0 μπλοκ\n"
+#~ "      --block-size=ΜΕΓΕΘΟΣ χρήση ΜΕΓΕΘΟΣ-byte μπλοκ\n"
+#~ "  -h, --human-readable  εμφάνιση μεγεθών σε ανθρωπίνως αναγνώσιμη μορφή "
+#~ "(π.χ. 1Κ 234Μ 2G)\n"
+#~ "  -H, --si              όπως παραπάνω, αλλά με δυνάμεις του 1000 αντί του "
+#~ "1024\n"
+#~ "  -i, --inodes          εμφάνιση πληροφοριών κόμβων-δ αντί χρήσης των μπλοκ\n"
+#~ "  -k, --kilobytes       όπως --block-size=1024\n"
+#~ "  -m, --megabytes       όπως like --block-size=1048576\n"
+#~ "      --no-sync         να μη κληθεί η sync πριν παρθούν πληροφορίες "
+#~ "χρήσης(εξ ορισμού)\n"
+#~ "  -P, --portability     χρήση της μορφής εξόδου POSIX\n"
+#~ "      --sync            κλήση της sync πριν τη λήψη πληροφοριών χρήσης\n"
+#~ "  -t, --type=ΕΙΔΟΣ      περιορισμός εμφάνισης στα συστήματα αρχείων του "
+#~ "είδους ΕΙΔΟΣ\n"
+#~ "  -T, --print-type      εμφάνιση το είδος του συστήματος αρχείων\n"
+#~ "  -x, --exclude-type=ΕΙΔΟΣ περιορισμός εμφάνισης συστήματος αρχείων σε όχι "
+#~ "είδος ΕΙΔΟΣ\n"
+#~ "  -v                    (αγνοείται)\n"
+#~ "      --help            εμφάνιση αυτής βοήθειας και έξοδος\n"
+#~ "      --version         εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+
+#, fuzzy
+#~ msgid "file system type %s both selected and excluded"
+#~ msgstr "το σύστημα αρχείων `%s' είναι και επελεγμένο και αποκλειώμενο"
+
+#~ msgid "Warning: "
+#~ msgstr "Προειδοποίηση:"
+
+#~ msgid "%scannot read table of mounted filesystems"
+#~ msgstr "%sαδυναμία ανάγνωσης πίνακα προσαρτημένων συστήματος αρχείων"
+
+#~ msgid ""
+#~ "Summarize disk usage of each FILE, recursively for directories.\n"
+#~ "\n"
+#~ "  -a, --all             write counts for all files, not just directories\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -b, --bytes           print size in bytes\n"
+#~ "  -c, --total           produce a grand total\n"
+#~ "  -D, --dereference-args  dereference PATHs when symbolic link\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --count-links     count sizes many times if hard linked\n"
+#~ "  -L, --dereference     dereference all symbolic links\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "  -S, --separate-dirs   do not include size of subdirectories\n"
+#~ "  -s, --summarize       display only a total for each argument\n"
+#~ "  -x, --one-file-system  skip directories on different filesystems\n"
+#~ "  -X FILE, --exclude-from=FILE  Exclude files that match any pattern in "
+#~ "FILE.\n"
+#~ "      --exclude=PAT     Exclude files that match PAT.\n"
+#~ "      --max-depth=N     print the total for a directory (or file, with "
+#~ "--all)\n"
+#~ "                          only if it is N or fewer levels below the command\n"
+#~ "                          line argument;  --max-depth=0 is the same as\n"
+#~ "                          --summarize\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "Περιληπτική εμφάνιση χρήσης δίσκου για κάθε ΑΡΧΕΙΟ, αναδρομικά για "
+#~ "καταλόγους.\n"
+#~ "\n"
+#~ "  -a, --all             εμφάνιση τιμών για όλα τα αρχεία, όχι μόνο για\n"
+#~ "                          καταλόγους\n"
+#~ "      --block-size=ΜΕΓΕΘΟΣ  χρήση ΜΕΓΕΘΟΣ-byte μπλοκ\n"
+#~ "  -b, --bytes           εμφάνιση μεγεθών σε byte\n"
+#~ "  -c, --total           εμφάνιση τελικού μεγέθους\n"
+#~ "  -D, --dereference-args  αναδίπλωση ΜΟΝΟΠΑΤΙΩΝ όταν υπάρχει συμβολικός\n"
+#~ "                          σύνδεσμος\n"
+#~ "  -h, --human-readable  εμφάνιση μεγεθών σε εύκολη και  αναγνώσιμη μορφή\n"
+#~ "                          (π.χ. 1K 234M 2G)\n"
+#~ "  -H, --si              όπως παραπάνω, αλλά με δυνάμεις του 1000 αντί του "
+#~ "1024\n"
+#~ "  -k, --kilobytes       όπως --block-size=1024\n"
+#~ "  -l, --count-links     μέτρημα μεγεθών πολλές φορές αν είναι σθεναρά\n"
+#~ "                          συνδεδεμένα(hard linked)\n"
+#~ "  -L, --dereference     αναδίπλωση όλων των συμβολικών συνδέσμων\n"
+#~ "  -m, --megabytes       όπως --block-size=1048576\n"
+#~ "  -S, --separate-dirs   χωρίς να συμπεριλαμβάνεται το μέγεθος των "
+#~ "υποκαταλόγων\n"
+#~ "  -s, --summarize       εμφάνιση μόνο συνόλου για κάθε όρισμα\n"
+#~ "  -x, --one-file-system  παράληψη καταλόγων σε διαφορετικά συστήματα "
+#~ "αρχείων\n"
+#~ "  -X ΑΡΧΕΙΟ, --exclude-from=ΑΡΧΕΙΟ  Παράληψη αρχείων με μορφή που\n"
+#~ "                          ταιριάζει μέσα στο ΑΡΧΕΙΟ\n"
+#~ "      --exclude=ΜΟΡΦΗ   Παράληψη αρχείων της μορφής ΜΟΡΦΗ.\n"
+#~ "      --max-depth=N     εμφάνιση του συνολικού ενός καταλόγου (ή αρχείου,\n"
+#~ "                          με --all)\n"
+#~ "                          μόνο αν είναι N ή λιγότερα επίπεδα κάτω από το\n"
+#~ "                          όρισμα της γραμμής εντολών·  --max-depth=0 είναι\n"
+#~ "                          ίδιο με --summarize\n"
+#~ "      --help            εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version         εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+
+#~ msgid "cannot change to `..' from directory %s"
+#~ msgstr "αδυναμία αλλαγής στο `..' από το κατάλογο %s"
+
+#~ msgid "cannot change to directory %s"
+#~ msgstr "αδυναμία αλλαγής στο κατάλογο %s"
+
+#~ msgid "total"
+#~ msgstr "σύνολο"
+
+#, fuzzy
+#~ msgid "invalid maximum depth %s"
+#~ msgstr "μη έγκυρo μέγιστο βάθος `%s'"
+
+#~ msgid "cannot both summarize and show all entries"
+#~ msgstr ""
+#~ "δεν είναι δυνατό να δειχτεί περίληψη και να εμφανιστούν όλες οι καταχωρίσεις"
+
+#~ msgid "warning: summarizing is the same as using --max-depth=0"
+#~ msgstr "προειδοποίηση: η περίληψη είναι όμοιο με --max-depth=0"
+
+#~ msgid "warning: summarizing conflicts with --max-depth=%d"
+#~ msgstr "προειδοποίηση: η περίληψη έρχεται σε αντίφαση με το --max-depth=%d"
+
+#~ msgid "the strip option may not be used when installing a directory"
+#~ msgstr ""
+#~ "η επιλογή strip δε μπορεί να χρησιμοποιηθεί όταν εγκαθίσταται κατάλογος"
+
+#, fuzzy
+#~ msgid "invalid mode %s"
+#~ msgstr "μη έγκυρα δικαιώματα `%s'"
+
+#, fuzzy
+#~ msgid "creating directory %s"
+#~ msgstr "δημιουργία καταλόγου `%s'"
+
+#, fuzzy
+#~ msgid "installing multiple files, but last argument, %s is not a directory"
+#~ msgstr ""
+#~ "εγκατάσταση πολλαπλών αρχείων, αλλά το τελευταίο όρισμα (%s) δεν είναι "
+#~ "κατάλογος"
+
+#, fuzzy
+#~ msgid "%s is a directory"
+#~ msgstr "%s: είναι κατάλογος"
+
+#, fuzzy
+#~ msgid "cannot obtain time stamps for %s"
+#~ msgstr "αποτυχία διαγραφής καταλόγου `%s'"
+
+#, fuzzy
+#~ msgid "cannot set time stamps for %s"
+#~ msgstr "αδυναμία δημιουργίας καταλόγου `%s'"
+
+# src/install.c:562
+#~ msgid "cannot fork"
+#~ msgstr "αδυναμία δικράνωσης"
+
+#~ msgid "cannot run strip"
+#~ msgstr "δεν είναι δυνατό να τρέξει το strip"
+
+#, fuzzy
+#~ msgid "invalid user %s"
+#~ msgstr "μη έγκυρος χρήστης `%s'"
+
+#, fuzzy
+#~ msgid "invalid group %s"
+#~ msgstr "μη έγκυρη ομάδα `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST           (1st format)\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY   (2nd format)\n"
+#~ "  or:  %s -d [OPTION]... DIRECTORY...       (3rd format)\n"
+#~ msgstr ""
+#~ "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΠΗΓΗ ΠΡΟΟΡΙΣΜΟΣ     (1η μορφή)\n"
+#~ "    ή: %s [ΕΠΙΛΟΓΗ]... ΠΗΓΗ... ΚΑΤΑΛΟΓΟΣ   (2η μορφή)\n"
+#~ "    ή: %s -d [ΕΠΙΛΟΓΗ]... ΚΑΤΑΛΟΓΟΣ...     (3η μορφή)\n"
+
+#~ msgid ""
+#~ "In the first two formats, copy SOURCE to DEST or multiple SOURCE(s) to\n"
+#~ "the existing DIRECTORY, while setting permission modes and owner/group.\n"
+#~ "In the third format, create all components of the given DIRECTORY(ies).\n"
+#~ "\n"
+#~ "      --backup[=CONTROL] make a backup of each existing destination file\n"
+#~ "  -b                  like --backup but does not accept an argument\n"
+#~ "  -c                  (ignored)\n"
+#~ "  -d, --directory     treat all arguments as directory names; create all\n"
+#~ "                        components of the specified directories\n"
+#~ "  -D                  create all leading components of DEST except the "
+#~ "last,\n"
+#~ "                        then copy SOURCE to DEST;  useful in the 1st format\n"
+#~ "  -g, --group=GROUP   set group ownership, instead of process' current "
+#~ "group\n"
+#~ "  -m, --mode=MODE     set permission mode (as in chmod), instead of "
+#~ "rwxr-xr-x\n"
+#~ "  -o, --owner=OWNER   set ownership (super-user only)\n"
+#~ "  -p, --preserve-timestamps   apply access/modification times of SOURCE "
+#~ "files\n"
+#~ "                        to corresponding destination files\n"
+#~ "  -s, --strip         strip symbol tables, only for 1st and 2nd formats\n"
+#~ "  -S, --suffix=SUFFIX override the usual backup suffix\n"
+#~ "  -v, --verbose       print the name of each directory as it is created\n"
+#~ "      --help          display this help and exit\n"
+#~ "      --version       output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Στις πρώτες δύο μορφές, αντιγράφει τη ΠΗΓΗ στο ΠΡΟΟΡΙΣΜΟ ή πολλαπλές ΠΗΓΕΣ\n"
+#~ "(ΠΗΓΗ) στον υπάρχον ΚΑΤΑΛΟΓΟ, ενώ τίθενται δικαιώματα αρχείου και\n"
+#~ "ιδιοκτήτης/ομάδα. Στη τρίτη μορφή, δημιουργία όλων των συστατικών του "
+#~ "δοθέντος\n"
+#~ "ΚΑΤΑΛΟΓΟΥ(ΩΝ).\n"
+#~ "\n"
+#~ "      --backup=[ΕΛΕΓΧΟΣ] δημιουργία αντιγράφου ασφαλείας για κάθε αρχείο\n"
+#~ "                      προορισμού\n"
+#~ "  -b                  όπως το --backup αλλά δεν απαιτεί παράμετρο\n"
+#~ "  -c                  (αγνοείται)\n"
+#~ "  -d, --directory     μεταχείρηση όλων των ορισμάτων ως ονόματα καταλόγων·\n"
+#~ "                        δημιουργία όλων των συστατικών των δοθέντων "
+#~ "καταλόγων\n"
+#~ "  -D                  δημιουργία όλων των προπορευόμενων συστατικών του\n"
+#~ "                        ΠΡΟΟΡΙΣΜΟΥ εκτός του τελευταίου, και αντέγραψε τη "
+#~ "ΠΗΓΗ\n"
+#~ "                        στο ΠΡΟΟΡΙΣΜΟ· χρήσιμο στην πρώτη μορφή\n"
+#~ "  -g, --group=ΟΜΑΔΑ   ορισμός ιδιοκτησίας ομάδας, αντί της τρέχουσας της\n"
+#~ "                        διεργασίας\n"
+#~ "  -m, --mode=ΔΙΚΑΙΩΜΑΤΑ  ορισμός δικαιωμάτων (όπως με chmod), αντί του\n"
+#~ "                        rwxr-xr-x\n"
+#~ "  -o, --owner=ΙΔΙΟΚΤΗΤΗΣ  ορισμός ιδιοκτήτη (μόνο υπερχρήστης)\n"
+#~ "  -p, --preserve-timestamps  διατήρηση των ημερομηνιών "
+#~ "πρόσβασης/τροποποίησης\n"
+#~ "                        των αρχείων ΠΗΓΗΣ\n"
+#~ "  -s, --strip         απαλοιφή πινάκων συμβόλων, μόνο για 1η και 2η μορφή\n"
+#~ "  -S, --suffix=ΚΑΤΑΛΗΞΗ  παράκαμψη της συνηθισμένης κατάληξης αρχείων "
+#~ "ασφαλείας\n"
+#~ "  -v, --verbose       εμφάνιση του ονόματος κάθε καταλόγου καθώς "
+#~ "δημιουργείται\n"
+#~ "      --help          εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version       εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+
+#~ msgid "%s: warning: making a hard link to a symbolic link is not portable"
+#~ msgstr ""
+#~ "%s: προειδοποίηση: η δημιουργία σθεναρού συνδέσμου σε συμβολικό,\n"
+#~ "δεν είναι μεταφερτή"
+
+#~ msgid "%s: hard link not allowed for directory"
+#~ msgstr "%s: σθεναρή σύνδεση δεν επιτρέπεται για κατάλογο"
+
+#~ msgid "%s: cannot overwrite directory"
+#~ msgstr "%s: δεν είναι δυνατό να γραφτεί πάνω σε κατάλογο"
+
+#, fuzzy
+#~ msgid "%s: replace %s? "
+#~ msgstr "%s: αντικατάσταση του `%s'; "
+
+#~ msgid "%s: File exists"
+#~ msgstr "%s: Το αρχείο υπάρχει ήδη"
+
+#, fuzzy
+#~ msgid "create symbolic link %s to %s"
+#~ msgstr "δημιουργία συμβολικού συνδέσμου `%s' στο `%s'"
+
+#, fuzzy
+#~ msgid "create hard link %s to %s"
+#~ msgstr "δημιουργία σθεναρού συνδέσμου `%s' στο `%s'"
+
+#, fuzzy
+#~ msgid "creating symbolic link %s to %s"
+#~ msgstr "δημιουργία συμβολικού συνδέσμου `%s' στο `%s'"
+
+#, fuzzy
+#~ msgid "creating hard link %s to %s"
+#~ msgstr "δημιουργία σθεναρού συνδέσμου `%s' στο `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY TARGET...\n"
+#~ msgstr ""
+#~ "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΠΗΓΗ [ΟΝΟΜΑ_ΣΥΝΔΕΣΜΟΥ]\n"
+#~ "    ή: %s [ΕΠΙΛΟΓΗ]... ΠΗΓΗ... ΚΑΤΑΛΟΓΟΣ\n"
+#~ "    ή: %s [ΕΠΙΛΟΓΗ]... --target-directory=ΚΑΤΑΛΟΓΟΣ ΠΡΟΟΡΙΣΜΟΣ...\n"
+
+#~ msgid ""
+#~ "Create a link to the specified TARGET with optional LINK_NAME.\n"
+#~ "If LINK_NAME is omitted, a link with the same basename as the TARGET is\n"
+#~ "created in the current directory.  When using the second form with more\n"
+#~ "than one TARGET, the last argument must be a directory;  create links\n"
+#~ "in DIRECTORY to each TARGET.  Create hard links by default, symbolic\n"
+#~ "links with --symbolic.  When creating hard links, each TARGET must exist.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]      make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                          like --backup but does not accept an argument\n"
+#~ "  -d, -F, --directory         hard link directories (super-user only)\n"
+#~ "  -f, --force                 remove existing destination files\n"
+#~ "  -n, --no-dereference        treat destination that is a symlink to a\n"
+#~ "                                directory as if it were a normal file\n"
+#~ "  -i, --interactive           prompt whether to remove destinations\n"
+#~ "  -s, --symbolic              make symbolic links instead of hard links\n"
+#~ "  -S, --suffix=SUFFIX         override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  specify the DIRECTORY in which to "
+#~ "create\n"
+#~ "                                the links\n"
+#~ "  -v, --verbose               print name of each file before linking\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Δημιουργία συνδέσμου στον αναφερόμενο ΠΡΟΟΡΙΣΜΟ με προαιρετικό\n"
+#~ "ΟΝΟΜΑ_ΣΥΝΔΕΣΜΟΥ. Αν το ΟΝΟΜΑ_ΣΥΝΔΕΣΜΟΥ έχει παραληφθεί, να δημιουργηθεί\n"
+#~ "σύνδεσμος με την ίδια βάση ονόματος όπως ο προορισμός, στο τρέχον κατάλογο.\n"
+#~ "Όταν γίνετε χρήση της δεύτερης μορφής με περισσότερους από έναν "
+#~ "ΠΡΟΟΡΙΣΜΟΥΣ,\n"
+#~ "το τελευταίο όρισμα πρέπει να είναι κατάλογος· δημιουργία συνδέσμων στο\n"
+#~ "ΚΑΤΑΛΟΓΟ για κάθε ΠΡΟΟΡΙΣΜΟ. Δημιουργία σθεναρών συνδέσμων εξ ορισμού,\n"
+#~ "συμβολικών συνδέσμων με --symbolic.\n"
+#~ "Όταν δημιουργούνται σθεναροί σύνδεσμοι, κάθε ΠΡΟΟΡΙΣΜΟΣ πρέπει να "
+#~ "προϋπάρχει.\n"
+#~ "\n"
+#~ "      --backup=[ΕΛΕΓΧΟΣ]       δημιουργία αντιγράφου ασφαλείας για κάθε "
+#~ "αρχείο\n"
+#~ "                                 προορισμού\n"
+#~ "  -b                           όπως το --backup αλλά δεν απαιτεί παράμετρο\n"
+#~ "  -d, -F, --directory          σθεναροί σύνδεσμοι σε καταλόγους (μόνο\n"
+#~ "                                 υπερχρήστης)\n"
+#~ "  -f, --force                  διαγραφή υπαρχόντων αρχείων προορισμού\n"
+#~ "  -n, --no-dereference         μεταχείρηση προορισμών που είναι σύνδεσμος "
+#~ "σε\n"
+#~ "                                 κατάλογο σα να ήταν κανονικό αρχείο\n"
+#~ "  -i, --interactive            επιβεβαίωση για διαγραφή προορισμών\n"
+#~ "  -s, --symbolic               δημιουργία συμβολικών συνδέσμων αντί "
+#~ "σθεναρών\n"
+#~ "  -S, --suffix=ΚΑΤΑΛΗΞΗ        παράκαμψη της συνηθησμένης κατάληξης αρχείων\n"
+#~ "                                 ασφαλείας\n"
+#~ "      --target-directory=ΚΑΤΑΛΟΓΟΣ  ορισμός ΚΑΤΑΛΟΓΟΥ στον οποίο θα\n"
+#~ "                                 δημιουργηθούν σύνδεσμοι\n"
+#~ "  -v, --verbose                εμφάνιση ονόματος κάθε αρχείου πριν τη "
+#~ "σύνδεση\n"
+#~ "  -V, --version-control=ΛΕΞΗ   παράκαμψη του συνηθησμένου ελέγχου έκδοσης\n"
+#~ "      --help                   εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version                εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+
+#~ msgid "missing file argument"
+#~ msgstr "παράληψη ορίσματος αρχείου"
+
+#, fuzzy
+#~ msgid "specified target directory, %s is not a directory"
+#~ msgstr "ο ορισμένος κατάλογος προορισμού, `%s' δεν είναι κατάλογος"
+
+#~ msgid "when making multiple links, last argument must be a directory"
+#~ msgstr ""
+#~ "όταν δημιουργήτε πολλαπλούς συνδέσμους, το τελευταίο όρισμα πρέπει να είναι "
+#~ "κατάλογος"
+
+#~ msgid "ignoring invalid width in environment variable COLUMNS: %s"
+#~ msgstr "αγνοείται μη έγκυρο πλάτος στη μεταβλητή περιβάλλοντος COLUMNS: %s"
+
+#~ msgid "ignoring invalid tab size in environment variable TABSIZE: %s"
+#~ msgstr ""
+#~ "αγνοείται μη έγκυρο μέγεθος οριζόντιου στηλοθέτη στη μεταβλητή περιβάλλοντος "
+#~ "TABSIZE: %s"
+
+#~ msgid "invalid line width: %s"
+#~ msgstr "μη έγκυρο μήκος γραμμής: %s"
+
+#~ msgid "invalid tab size: %s"
+#~ msgstr "μη έγκυρο μέγεθος οριζόντιου στηλοθέτη: %s"
+
+#~ msgid "unrecognized prefix: %s"
+#~ msgstr "άγνωστο πρόθεμα: %s"
+
+#~ msgid "unparsable value for LS_COLORS environment variable"
+#~ msgstr ""
+#~ "τιμή που δε μπορεί να αναγνωριστεί στη μεταβλητή περιβάλλοντος LS_COLORS"
+
+#, fuzzy
+#~ msgid ""
+#~ "List information about the FILEs (the current directory by default).\n"
+#~ "Sort entries alphabetically if none of -cftuSUX nor --sort.\n"
+#~ "\n"
+#~ "  -a, --all                  do not hide entries starting with .\n"
+#~ "  -A, --almost-all           do not list implied . and ..\n"
+#~ "  -b, --escape               print octal escapes for nongraphic characters\n"
+#~ "      --block-size=SIZE      use SIZE-byte blocks\n"
+#~ "  -B, --ignore-backups       do not list implied entries ending with ~\n"
+#~ "  -c                         with -lt: sort by, and show, ctime (time of "
+#~ "last\n"
+#~ "                               modification of file status information)\n"
+#~ "                               with -l: show ctime and sort by name\n"
+#~ "                               otherwise: sort by ctime\n"
+#~ "  -C                         list entries by columns\n"
+#~ "      --color[=WHEN]         control whether color is used to distinguish "
+#~ "file\n"
+#~ "                               types.  WHEN may be `never', `always', or "
+#~ "`auto'\n"
+#~ "  -d, --directory            list directory entries instead of contents\n"
+#~ "  -D, --dired                generate output designed for Emacs' dired mode\n"
+#~ "  -f                         do not sort, enable -aU, disable -lst\n"
+#~ "  -F, --classify             append indicator (one of */=@|) to entries\n"
+#~ "      --format=WORD          across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            list both full date and full time\n"
+#~ msgstr ""
+#~ "Παράθεση πληροφοριών για τα ΑΡΧΕΙΑ (εξ ορισμού ο τρέχον κατάλογος).\n"
+#~ "Ταξινόμηση καταχωρίσεων αλφαβητικά, αν κανένα από τα -cftuSUX ή --sort δεν\n"
+#~ "έχει οριστεί.\n"
+#~ "\n"
+#~ "  -a, --all                  να μην αποκρύπτονται οι καταχωρίσεις που\n"
+#~ "                               αρχίζουν με .\n"
+#~ "  -A, --almost-all           να μην εμφανίζονται τα . και .. που\n"
+#~ "                               εξυπακούονται\n"
+#~ "  -b, --escape               εμφάνιση οκταδικών αριθμών διαφυγής για μη\n"
+#~ "                               εμφανιζόμενους χαρακτήρες\n"
+#~ "      --block-size=ΜΕΓΕΘΟΣ   χρήση ΜΕΓΕΘΟΣ-byte μπλοκ\n"
+#~ "  -B, --ignore-backups       να μην εμφανίζονται καταχωρίσεις που "
+#~ "καταλήγουν\n"
+#~ "                               σε ~\n"
+#~ "  -c                         με -lt: ταξινόμηση ανάλογα, και εμφάνιση,\n"
+#~ "                               της ώρας τελευταίας τροποποίησης των πληρο-\n"
+#~ "                               φοριών κατάστασης του αρχείου (ctime),\n"
+#~ "                               με -l: εμφάνιση του ctime και ταξινόμηση\n"
+#~ "                               βάση ονόματος,\n"
+#~ "                               διαφορετικά, ταξινόμηση βάση ctime\n"
+#~ "  -C                         εμφάνιση καταχωρίσεων σε στήλες\n"
+#~ "      --color[=ΠΟΤΕ]         έλεγχος πότε το χρώμα χρησιμοποιείται για να\n"
+#~ "                               διαχωρίσει τα είδη αρχείων\n"
+#~ "                               Το ΠΟΤΕ μπορεί να είναι `never', `always' ή\n"
+#~ "                               `auto'\n"
+#~ "  -d, --directory            εμφάνιση καταχωρίσεων καταλόγου αντί\n"
+#~ "                               περιεχομένων\n"
+#~ "  -D, --dired                το αποτέλεσμα να είναι της μορφής της\n"
+#~ "                               κατάστασης dired του Emacs\n"
+#~ "  -f                         να μη ταξινομούνται, ενεργοποίηση με -aU,\n"
+#~ "                               απενεργοποίηση με -lst\n"
+#~ "  -F, --classify             προσθήκη χαρακτήρα κατηγοροποίησης στις\n"
+#~ "                               καταχώρισεις\n"
+#~ "                               (ένα από τα */=@|)\n"
+#~ "      --format=ΛΕΚΤΙΚΟ       κατά μήκος across -x, κόμματα commas -m,\n"
+#~ "                               οριζόντια horizontal -x, μακροσκελή long -l,\n"
+#~ "                               μία στήλη single-column -1, περιφραστικά\n"
+#~ "                               verbose -l, κάθετα vertical -C\n"
+#~ "      --full-time            εμφάνιση πλήρης ώρας και πλήρης ημερομηνίας\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -g                         (ignored)\n"
+#~ "  -G, --no-group             inhibit display of group information\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "      --si                   likewise, but use powers of 1000 not 1024\n"
+#~ "  -H                         same as `--si' for now; soon to change\n"
+#~ "                               to conform to POSIX\n"
+#~ "      --indicator-style=WORD append indicator with style WORD to entry "
+#~ "names:\n"
+#~ "                               none (default), classify (-F), file-type "
+#~ "(-p)\n"
+#~ "  -i, --inode                print index number of each file\n"
+#~ "  -I, --ignore=PATTERN       do not list implied entries matching shell "
+#~ "PATTERN\n"
+#~ "  -k, --kilobytes            like --block-size=1024\n"
+#~ "  -l                         use a long listing format\n"
+#~ "  -L, --dereference          list entries pointed to by symbolic links\n"
+#~ "  -m                         fill width with a comma separated list of "
+#~ "entries\n"
+#~ "  -n, --numeric-uid-gid      list numeric UIDs and GIDs instead of names\n"
+#~ "  -N, --literal              print raw entry names (don't treat e.g. "
+#~ "control\n"
+#~ "                               characters specially)\n"
+#~ "  -o                         use long listing format without group info\n"
+#~ "  -p, --file-type            append indicator (one of /=@|) to entries\n"
+#~ "  -q, --hide-control-chars   print ? instead of non graphic characters\n"
+#~ "      --show-control-chars   show non graphic characters as-is (default\n"
+#~ "                             unless program is `ls' and output is a "
+#~ "terminal)\n"
+#~ "  -Q, --quote-name           enclose entry names in double quotes\n"
+#~ "      --quoting-style=WORD   use quoting style WORD for entry names:\n"
+#~ "                               literal, locale, shell, shell-always, c, "
+#~ "escape\n"
+#~ "  -r, --reverse              reverse order while sorting\n"
+#~ "  -R, --recursive            list subdirectories recursively\n"
+#~ "  -s, --size                 print size of each file, in blocks\n"
+#~ msgstr ""
+#~ "  -g                         (αγνοείται)\n"
+#~ "  -G, --no-group             να μην εμφανίζονται πληροφορίες ομάδας\n"
+#~ "  -h, --human-readable       εμφάνιση μεγεθών σε ανθρωπίνως αναγνώσιμη\n"
+#~ "                               μορφή (π.χ. 1Κ 234M 2G)\n"
+#~ "  -H, --si                   όπως παραπάνω, αλλά με δυνάμεις του 1000 αντί\n"
+#~ "                               του 1024\n"
+#~ "      --indicator-style=ΛΕΚΤΙΚΟ  προσθήκη δείκτη ΛΕΚΤΙΚΟ στις καταχωρίσεις\n"
+#~ "                               ονομάτων:\n"
+#~ "                               none (εξ ορισμού), classify (-F), file-type\n"
+#~ "                               (-p)\n"
+#~ "  -i, --inode                εμφάνιση δείκτη κάθε αρχείου\n"
+#~ "  -I, --ignore=PATTERN       να μην εμφανίζονται αναφερόμενες καταχωρίσεις \n"
+#~ "                               που ταιρίαζουν στο PATTERN του φλοιού\n"
+#~ "  -k, --kilobytes            όπως --block-size=1024\n"
+#~ "  -l                         χρήση μακροσκελούς είδους εμφάνισης\n"
+#~ "  -L, --dereference          εμφάνιση καταχωρίσεων που δείχνουν οι\n"
+#~ "                               συμβολικοί σύνδεσμοι\n"
+#~ "  -m                         συμπλήρωση του πλάτους με λίστα από\n"
+#~ "                               καταχωρίσεις διαχωριζόμενων με κόμμα\n"
+#~ "  -n, --numeric-uid-gid      εμφάνιση αριθμητικών UID και GID αντί για\n"
+#~ "                               ονόματα\n"
+#~ "  -N, --literal              εμφάνιση ακατέργαστων καταχωρίσεων (π.χ. να "
+#~ "μην\n"
+#~ "                               τυγχάνουν\n"
+#~ "                               ειδικής επεξεργασίας οι χαρακτήρες ελέγχου)\n"
+#~ "  -o                         χρήση μακροσκελούς εμφάνισης χωρίς πληροφορίες\n"
+#~ "                               ομάδας\n"
+#~ "  -p, --file-type            προσθήκη ενδείξης (ένα από /=@|) στις\n"
+#~ "                               καταχωρίσεις\n"
+#~ "  -q, --hide-control-chars   εμφάνιση του ? αντί των μη-εκτυπώσιμων\n"
+#~ "                               χαρακτήρων\n"
+#~ "      --show-control-chars   εμφάνιση μη εκτυπώσιμων χαρακτήρων όπως είναι\n"
+#~ "                               (εξ ορισμού εκτός αν το πρόγραμμα είναι το\n"
+#~ "                               ls και η έξοδος είναι το τερματικό)\n"
+#~ "  -Q, --quote-name           εμφάνιση καταχωρίσεων μέσα σε διπλά εισαγωγικά\n"
+#~ "      --quoting-style=ΛΕΚΤΙΚΟ  χρήση μορφής ΛΕΚΤΙΚΟ στην εμφάνιση ονομάτων\n"
+#~ "                               καταχωρίσεων:\n"
+#~ "                               literal, shell, shell-always, c, escape\n"
+#~ "  -r, --reverse              αντίστροφη σειρά στην ταξινόμηση\n"
+#~ "  -R, --recursive            εμφάνιση υποκαταλόγων αναδρομικά\n"
+#~ "  -s, --size                 εμφάνιση μεγέθους κάθε αρχείου, σε μπλοκ\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -S                         sort by file size\n"
+#~ "      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+#~ "                               version -v\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=WORD            show time as WORD instead of modification "
+#~ "time:\n"
+#~ "                               atime, access, use, ctime or status; use\n"
+#~ "                               specified time as sort key if --sort=time\n"
+#~ "  -t                         sort by modification time\n"
+#~ "  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8\n"
+#~ "  -u                         with -lt: sort by, and show, access time\n"
+#~ "                               with -l: show access time and sort by name\n"
+#~ "                               otherwise: sort by access time\n"
+#~ "  -U                         do not sort; list entries in directory order\n"
+#~ "  -v                         sort by version\n"
+#~ "  -w, --width=COLS           assume screen width instead of current value\n"
+#~ "  -x                         list entries by lines instead of by columns\n"
+#~ "  -X                         sort alphabetically by entry extension\n"
+#~ "  -1                         list one file per line\n"
+#~ "      --help                 display this help and exit\n"
+#~ "      --version              output version information and exit\n"
+#~ "\n"
+#~ "By default, color is not used to distinguish types of files.  That is\n"
+#~ "equivalent to using --color=none.  Using the --color option without the\n"
+#~ "optional WHEN argument is equivalent to using --color=always.  With\n"
+#~ "--color=auto, color codes are output only if standard output is connected\n"
+#~ "to a terminal (tty).\n"
+#~ msgstr ""
+#~ "  -S                         ταξινόμηση βάση του μεγέθους αρχείου\n"
+#~ "      --sort=ΛΕΚΤΙΚΟ         κατάληξη -X, τίποτα -U, μέγεθος -S, ώρα -t\n"
+#~ "                             έκδοση -v,\n"
+#~ "                             κατάσταση -c, ώρα -t, ώρα πρόσβασης -u\n"
+#~ "      --time=ΛΕΚΤΙΚΟ         εμφάνιση ώρας σαν ΛΕΚΤΙΚΟ αντί της ώρας\n"
+#~ "                               τροποποίησης:\n"
+#~ "                               atime, access, use, ctime ή status· χρήση\n"
+#~ "                               κλειδιού ταξινόμησης την δοσμένη ώρα αν\n"
+#~ "                               --sort=time\n"
+#~ "  -t                         ταξινόμηση βάση ώρας τροποποίησης\n"
+#~ "  -T, --tabsize=ΣΤΗΛΕΣ       θεώρησε τους οριζόντιους στηλοθέτες μεγέθους\n"
+#~ "                               ΣΤΗΛΕΣ αντί για 8\n"
+#~ "  -u                         ταξινόμηση βάση χρόνου τελευταίας πρόσβασης·\n"
+#~ "                               με -l: εμφάνιση του atime\n"
+#~ "  -U                         χωρίς ταξινόμηση· εμφάνιση καταχωρήσεων σε\n"
+#~ "                               φυσική σειρά\n"
+#~ "  -v                         ταξινόμηση βάση έκδοσης\n"
+#~ "  -w, --width=ΣΤΗΛΕΣ         θεώρησε πλάτος οθόνης ΣΤΗΛΕΣ αντί τρεχούσης\n"
+#~ "                               τιμής\n"
+#~ "  -x                         εμφάνισης καταχωρίσεων ανά γραμμές αντί για "
+#~ "στήλες\n"
+#~ "  -X                         αλφαβητική ταξινόμηση βάση κατάληξης\n"
+#~ "  -1                         εμφάνιση ενός αρχείου ανά γραμμή\n"
+#~ "      --help                 εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version              εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+#~ "Εξ ορισμού, το χρώμα δε χρησιμοποιείται στο διαχωρισμό των αρχείων ανάλογα "
+#~ "με το είδος. Δηλάδη, είναι σαν να είναι --color=none. Με την επιλογή\n"
+#~ "--color χωρίς το προαιρετικό όρισμα WHEN είναι συνώνυμο με\n"
+#~ "--color=always. Με --color=auto, οι χρωματικές πληροφορίες εμφανίζονται\n"
+#~ "όταν η κανονική έξοδος συνδέεται με τερματικό (tty).\n"
+
+#~ msgid "Usage: %s [OPTION] DIRECTORY...\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ] ΚΑΤΑΛΟΓΟΣ...\n"
+
+#~ msgid ""
+#~ "Create the DIRECTORY(ies), if they do not already exist.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not rwxrwxrwx - "
+#~ "umask\n"
+#~ "  -p, --parents     no error if existing, make parent directories as needed\n"
+#~ "  -v, --verbose     print a message for each created directory\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Δημιουργία ΚΑΤΑΛΟΓΟΥ(ΩΝ), αν δεν υπάρχουν ήδη.\n"
+#~ "\n"
+#~ "  -m, --mode=ΔΙΚΑΙΩΜΑΤΑ  ορισμός δικαιωμάτων (όπως στη chmod), και όχι "
+#~ "rwxrwxrwx - umask\n"
+#~ "  -p, --parents     χωρίς σφάλμα όταν ο κατάλογος υπάρχει, δημιουργία "
+#~ "γονικών καταλόγων\n"
+#~ "                      όπου χρειάζεται\n"
+#~ "  -v, --verbose     εμφάνιση μηνύματος για κάθε κατάλογο που δημιουργείται\n"
+#~ "      --help        εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version     εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+
+#, fuzzy
+#~ msgid "created directory %s"
+#~ msgstr "δημιουργήθηκε κατάλογος `%s'"
+
+#, fuzzy
+#~ msgid "cannot set permissions of directory %s"
+#~ msgstr "αδυναμία ρύθμισης δικαιωμάτων στον καταλόγο `%s'"
+
+#~ msgid "Usage: %s [OPTION] NAME...\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ] ΟΝΟΜΑ...\n"
+
+#~ msgid ""
+#~ "Create named pipes (FIFOs) with the given NAMEs.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Δημιουργία επώνυμων σωληνώσεων (FIFOs) με το δοθέν ΟΝΟΜΑ(ΤΑ).\n"
+#~ "\n"
+#~ "  -m, --mode=ΔΙΚΑΙΩΜΑ  ορισμός δικαιωμάτων (όπως στη chmod), όχι a=rw - "
+#~ "umask\n"
+#~ "      --help        εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version     εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+
+#~ msgid "fifo files not supported"
+#~ msgstr "αρχεία fifo δεν υποστηρίζονται"
+
+#~ msgid "invalid mode"
+#~ msgstr "μη έγκυρο δικαίωμα"
+
+#, fuzzy
+#~ msgid "cannot create fifo `%s'"
+#~ msgstr "αδυναμία δημιουργίας fifo `%s'"
+
+#, fuzzy
+#~ msgid "cannot set permissions of fifo `%s'"
+#~ msgstr "αδυναμία ρύθμισης δικαιωμάτων στον καταλόγο `%s'"
+
+#~ msgid "Usage: %s [OPTION]... NAME TYPE [MAJOR MINOR]\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΟΝΟΜΑ ΕΙΔΟΣ [MAJOR MINOR]\n"
+
+#~ msgid ""
+#~ "Create the special file NAME of the given TYPE.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ "\n"
+#~ "MAJOR MINOR are forbidden for TYPE p, mandatory otherwise.  TYPE may be:\n"
+#~ "\n"
+#~ "  b      create a block (buffered) special file\n"
+#~ "  c, u   create a character (unbuffered) special file\n"
+#~ "  p      create a FIFO\n"
+#~ msgstr ""
+#~ "Δημιουργία ειδικού αρχείου ΟΝΟΜΑ του δοθέντος ΕΙΔΟΥΣ.\n"
+#~ "\n"
+#~ "  -m, --mode=ΔΙΚΑΙΩΜΑ  ορισμός δικαιωμάτων (όπως στη chmod), όχι a=rw - "
+#~ "umask\n"
+#~ "      --help        εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version     εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+#~ "MAJOR MINOR δεν επιτρέπονται για ΕΙΔΟΣ p, διαφορετικά είναι υποχρεωτικά.\n"
+#~ "Το ΕΙΔΟΣ μπορεί να είναι: \n"
+#~ "\n"
+#~ "  b      δημιουργία ειδικού μπλοκ (με ενταμίευση) αρχείου\n"
+#~ "  c, u   δημιουργία ειδικού αρχείου χαρακτήρων (χωρίς ενταμίευση)\n"
+#~ "  p      δημιουργία αρχείου FIFO\n"
+
+#~ msgid "wrong number of arguments"
+#~ msgstr "λάθος αριθμός ορισμάτων"
+
+#~ msgid "block special files not supported"
+#~ msgstr "ειδικά αρχεία μπλοκ δεν υποστηρίζονται"
+
+#~ msgid ""
+#~ "when creating block special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "όταν δημιουργούνται ειδικά αρχεία μπλοκ, οι major και minor\n"
+#~ "αριθμοί συσκευής πρέπει να ορίζονται"
+
+#, fuzzy
+#~ msgid "invalid major device number %s"
+#~ msgstr "μη έγκυρος major αριθμός συσκευής `%s'"
+
+#, fuzzy
+#~ msgid "invalid minor device number %s"
+#~ msgstr "μη έγκυρος minor αριθμός συσκευής `%s'"
+
+#~ msgid "character special files not supported"
+#~ msgstr "ειδικά αρχεία χαρακτήρων δεν υποστηρίζονται"
+
+#~ msgid ""
+#~ "when creating character special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "όταν δημιουργούνται ειδικά αρχεία χαρακτήρων, οι major και minor\n"
+#~ "αριθμοί συσκευής πρέπει να ορίζονται"
+
+#~ msgid "major and minor device numbers may not be specified for fifo files"
+#~ msgstr ""
+#~ "major και minor αριθμοί συσκευής δεν πρέπει να ορίζονται στα αρχεία fifo"
+
+#, fuzzy
+#~ msgid "cannot set permissions of `%s'"
+#~ msgstr "ορισμός δικαιωμάτων στο %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -f, --force                  never prompt before overwriting\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "      --strip-trailing-slashes  remove any trailing slashes from each "
+#~ "SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 move only older or brand new non-directories\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Μετονομασία της ΠΗΓΗΣ σε ΠΡΟΟΡΙΣΜΟ ή μετακίνηση ΠΗΓΗΣ(ΩΝ) στο ΚΑΤΑΛΟΓΟ.\n"
+#~ "\n"
+#~ "      --backup=[ΕΛΕΓΧΟΣ]       δημιουργία αντιγράφου ασφαλείας για κάθε "
+#~ "αρχείο\n"
+#~ "                                 προορισμού\n"
+#~ "  -b                           όπως το --backup αλλά δεν απαιτεί παράμετρο\n"
+#~ "  -f, --force                  διαγραφή υπαρχόντων καταλόγων, χωρίς\n"
+#~ "                                 επιβεβαίωση\n"
+#~ "  -i, --interactive            επιβεβαίωση πριν τη διαγραφή\n"
+#~ "      --strip-trailing-slashes  αφαίρεση χαρακτήρων καθέτων στο τέλος\n"
+#~ "                                 γραμμής από κάθε ΠΗΓΗ\n"
+#~ "  -S, --suffix=ΚΑΤΑΛΗΞΗ        παράκαμψη της συνήθης κατάληξης αντιγράφων\n"
+#~ "                                 ασφαλείας\n"
+#~ "      --target-directory=ΚΑΤΑΛΟΓΟΣ  μετακίνηση όλων των ορισμάτων ΠΗΓΗΣ\n"
+#~ "                                 στον ΚΑΤΑΛΟΓΟ\n"
+#~ "  -u, --update                 μεταφορά μόνο των παλαιότερων ή εξολοκλήρου\n"
+#~ "                                 νέων αρχείων\n"
+#~ "  -v, --verbose                εξήγηση του τι συμβαίνει\n"
+#~ "      --help                   εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version                εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+
+#~ msgid "when moving multiple files, last argument must be a directory"
+#~ msgstr ""
+#~ "όταν μετακινούνται πολλαπλά αρχεία, το τελευταίο όρισμα πρέπει να είναι "
+#~ "κατάλογος"
+
+#, fuzzy
+#~ msgid "cannot open directory %s"
+#~ msgstr "αποτυχία διαγραφής καταλόγου `%s'"
+
+#, fuzzy
+#~ msgid "closing directory %s"
+#~ msgstr "διαγραφή καταλόγου, %s"
+
+#, fuzzy
+#~ msgid "%s: remove write-protected directory %s? "
+#~ msgstr "%s: διαγραφή προστατευμένου από εγγραφή καταλόγου `%s'; "
+
+#, fuzzy
+#~ msgid "%s: remove write-protected file %s? "
+#~ msgstr "%s: διαγραφή προστατευμένου από εγγραφή καταλόγου `%s'; "
+
+#, fuzzy
+#~ msgid "%s: remove directory %s? "
+#~ msgstr "%s: διαγραφή καταλόγου `%s'; "
+
+#, fuzzy
+#~ msgid "%s: remove %s? "
+#~ msgstr "%s: διαγραφή του `%s'; "
+
+#~ msgid "removing %s\n"
+#~ msgstr "διαγραφή καταλόγου %s\n"
+
+#, fuzzy
+#~ msgid "cannot unlink %s"
+#~ msgstr "αδυναμία διαγραφής του `%s'"
+
+#, fuzzy
+#~ msgid "%s: directory %s is write protected; descend into it anyway? "
+#~ msgstr ""
+#~ "%s: ο κατάλογος `%s' προστατεύεται από εγγραφή· διάσχυση σε αυτό παρολαυτά; "
+
+#, fuzzy
+#~ msgid "%s: descend into directory %s? "
+#~ msgstr "%s: συνέχεια μέσα στον κατάλογο `%s'; "
+
+#~ msgid "removing all entries of directory %s\n"
+#~ msgstr "διαγραφή όλων των εγγραφών του καταλόγου %s\n"
+
+#, fuzzy
+#~ msgid "cannot lstat `.' in %s"
+#~ msgstr "αδύνατη η χρήση της lstat για το `.' στο `%s'"
+
+#, fuzzy
+#~ msgid ""
+#~ "ERROR: the directory %s initially had device/inode\n"
+#~ "numbers %lu/%lu, but now (after a chdir into it), the numbers for `.'\n"
+#~ "are %lu/%lu.  That means that while rm was running, the directory\n"
+#~ "was replaced with either another directory or a link to another directory."
+#~ msgstr ""
+#~ "ΣΦΑΛΜΑ: ο κατάλογος `%s' είχε αρχικά αριθμούς συσκευής/ι-κόμβου\n"
+#~ "%lu/%lu, αλλά τώρα (μετά από ένα chdir σε αυτόν), οι αριθμοί για το `.'\n"
+#~ "είναι %lu/%lu. Αυτό σημαίνει ότι κατά την εκτέλεση της rm, o κατάλογος\n"
+#~ "αντικαταστάθηκε με είτε ένα άλλο κατάλογο ή με ένα σύνδεσμο σε άλλο κατάλογο."
+
+#~ msgid "cannot change back to directory %s via `..'"
+#~ msgstr "αδυναμία αλλαγής στο κατάλογο %s μέσω του `..'"
+
+#, fuzzy
+#~ msgid "%s: remove directory %s%s? "
+#~ msgstr "%s: διαγραφή καταλόγου `%s'%s; "
+
+#~ msgid " (might be nonempty)"
+#~ msgstr " (μπορεί να μην είναι άδειο)"
+
+#~ msgid "removing the directory itself: %s\n"
+#~ msgstr "διαγραφή του ίδιου του καταλόγου: %s\n"
+
+#, fuzzy
+#~ msgid "cannot remove current directory %s"
+#~ msgstr "δεν είναι δυνατή η διαγραφή του τρέχοντος καταλόγου `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove directory %s"
+#~ msgstr "αποτυχία διαγραφής καταλόγου `%s'"
+
+#~ msgid "cannot remove `.' or `..'"
+#~ msgstr "δεν είναι δυνατό να διαγραφούν τα `.' ή `..'"
+
+#~ msgid ""
+#~ "WARNING: Circular directory structure.\n"
+#~ "This almost certainly means that you have a corrupted file system.\n"
+#~ "NOTIFY YOUR SYSTEM MANAGER.\n"
+#~ "The following two directories have the same inode number:\n"
+#~ msgstr ""
+#~ "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Κυκλική δομή καταλόγου.\n"
+#~ "Αυτό σχεδόν σίγουρα σημαίνει ότι έχετε ένα κατεστραμμένο σύστημα αρχείων.\n"
+#~ "ΓΝΩΣΤΟΠΟΙΗΣΤΕ ΤΟ ΣΤΟ ΔΙΑΧΕΙΡΙΣΤΗ ΣΥΣΤΗΜΑΤΟΣ.\n"
+#~ "Οι παρακάτω δύο κατάλογοι έχουν την ίδια τιμή i-κόμβου:\n"
+
+#~ msgid "continue? "
+#~ msgstr "συνέχεια; "
+
+#~ msgid "Usage: %s [OPTION]... FILE...\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΑΡΧΕΙΟ...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Remove (unlink) the FILE(s).\n"
+#~ "\n"
+#~ "  -d, --directory       unlink directory, even if non-empty (super-user "
+#~ "only)\n"
+#~ "  -f, --force           ignore nonexistent files, never prompt\n"
+#~ "  -i, --interactive     prompt before any removal\n"
+#~ "  -r, -R, --recursive   remove the contents of directories recursively\n"
+#~ "  -v, --verbose         explain what is being done\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ "\n"
+#~ "To remove a file whose name starts with a `-', for example `-foo',\n"
+#~ "use one of these commands:\n"
+#~ "  %s -- -foo\n"
+#~ "\n"
+#~ "  %s ./-foo\n"
+#~ "\n"
+#~ "Note that if you use rm to remove a file, it is usually possible to recover\n"
+#~ "the contents of that file.  If you want more assurance that the contents "
+#~ "are\n"
+#~ "truly unrecoverable, consider using shred.\n"
+#~ msgstr ""
+#~ "Διαγραφή (unlink) ΑΡΧΕΙΟΥ(ΩΝ).\n"
+#~ "\n"
+#~ "  -d, --directory       διαγραφή καταλόγου, ακόμα και αν δεν είναι άδειος "
+#~ "(μόνο\n"
+#~ "                          υπερχρήστης)\n"
+#~ "  -f, --force           αγνόησε αρχεία που δεν υπάρχουν, χωρίς επιβεβαίωση\n"
+#~ "  -i, --interactive     επιβεβαίωση πριν κάθε διαγραφή prompt\n"
+#~ "  -r, -R, --recursive   διαγραγή των περιεχομένων των καταλόγων αναδρομικά\n"
+#~ "  -v, --verbose         εξήγηση του τι συμβαίνει\n"
+#~ "      --help            εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version         εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+#~ "Για τη διαγραφή ενός αρχείου που το όνομα του ξεκινά με `-', για παράδειγμα\n"
+#~ "`-foo', κάντε χρήση μιας από τις παρακάτω εντολές:\n"
+#~ "  %s -- -foo\n"
+#~ "  %s ./-foo\n"
+
+#~ msgid "removing directory, %s"
+#~ msgstr "διαγραφή καταλόγου, %s"
+
+#~ msgid "Usage: %s [OPTION]... DIRECTORY...\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΚΑΤΑΛΟΓΟΣ...\n"
+
+#~ msgid ""
+#~ "Remove the DIRECTORY(ies), if they are empty.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ignore each failure that is solely because a directory\n"
+#~ "                  is non-empty\n"
+#~ "  -p, --parents   remove DIRECTORY, then try to remove each directory\n"
+#~ "                  component of that path name.  E.g., `rmdir -p a/b/c' is\n"
+#~ "                  similar to `rmdir a/b/c a/b a'.\n"
+#~ "  -v, --verbose   output a diagnostic for every directory processed\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Διαγραφή ΚΑΤΑΛΟΓΟΥ(ΩΝ), αν είναι άδειος(οι).\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  αγνόησε κάθε μεμονωμένη αποτυχία όταν ο κατάλογος\n"
+#~ "                  δεν είναι άδειος\n"
+#~ "  -p, --parents   διαγραφή ΚΑΤΑΛΟΓΩΝ, έπειτα προσπάθεια διαγραφής κάθε\n"
+#~ "                    καταλόγου της διαδρομής. Π.χ., `rmdir -p a/b/c' \n"
+#~ "                    είναι παρόμοιο με `rmdir a/b/c a/b a'.\n"
+#~ "  -v, --verbose   εμφάνιση διαγνωστικού για κάθε κατάλογο που επεξεργάζεται\n"
+#~ "      --help      εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version   εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+
+#~ msgid "Usage: %s [OPTIONS] FILE [...]\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΕΣ] ΑΡΧΕΙΟ [...]\n"
+
+# src/shred.c:463
+#, fuzzy
+#~ msgid ""
+#~ "Overwrite the specified FILE(s) repeatedly, in order to make it harder\n"
+#~ "for even very expensive hardware probing to recover the data.\n"
+#~ "\n"
+#~ "  -f, --force    change permissions to allow writing if necessary\n"
+#~ "  -n, --iterations=N  Overwrite N times instead of the default (%d)\n"
+#~ "  -s, --size=N   shred this many bytes (suffixes like k, M, G accepted)\n"
+#~ "  -u, --remove   truncate and remove file after overwriting\n"
+#~ "  -v, --verbose  show progress\n"
+#~ "  -x, --exact    do not round file sizes up to the next full block\n"
+#~ "  -z, --zero     add a final overwrite with zeros to hide shredding\n"
+#~ "  -              shred standard output\n"
+#~ "      --help     display this help and exit\n"
+#~ "      --version  print version information and exit\n"
+#~ "\n"
+#~ "Delete FILE(s) if --remove (-u) is specified.  The default is not to remove\n"
+#~ "the files because it is common to operate on device files like /dev/hda,\n"
+#~ "and those files usually should not be removed.  When operating on regular\n"
+#~ "files, most people use the --remove option.\n"
+#~ "\n"
+#~ "CAUTION: Note that shred relies on a very important assumption:\n"
+#~ "that the filesystem overwrites data in place.  This is the traditional\n"
+#~ "way to do things, but many modern filesystem designs do not satisfy this\n"
+#~ "assumption.  The following are examples of filesystems on which shred is\n"
+#~ "not effective:\n"
+#~ "\n"
+#~ "* log-structured or journaled filesystems, such as those supplied with\n"
+#~ "  AIX and Solaris (and JFS, ReiserFS, XFS, etc.)\n"
+#~ "\n"
+#~ "* filesystems that write redundant data and carry on even if some writes\n"
+#~ "  fail, such as RAID-based filesystems\n"
+#~ "\n"
+#~ "* filesystems that make snapshots, such as Network Appliance's NFS server\n"
+#~ "\n"
+#~ "* filesystems that cache in temporary locations, such as NFS\n"
+#~ "  version 3 clients\n"
+#~ "\n"
+#~ "* compressed filesystems\n"
+#~ msgstr ""
+#~ "Διαγραφή αρχείου με ασφάλεια, πρώτα γράφοντας πάνω του για να χαθεί\n"
+#~ "το περιεχόμενό του.\n"
+#~ "  -f, --force    αλλαγή δικαιωμάτων για να επιτραπεί η εγγραφή, αν "
+#~ "απαιτείται\n"
+#~ "  -n, --iterations=N  Εγγραφή από επάνω Ν φορές αντί του κανονικού (%d)\n"
+#~ "  -s, --size=N   διάλυση Ν bytes (καταλήξεις όπως k, M, G είναι δεκτές)\n"
+#~ "  -u, --remove   μηδένισε και διέγραψε το αρχείο μετά το γράψιμο από πάνω\n"
+#~ "  -v, --verbose  εμφάνιση προόδου\n"
+#~ "  -x, --exact    να μη στογγυλοποιούνται τα μεγέθη αρχείων μέχρι το επόμενο "
+#~ "πλήρες μπλόκ\n"
+#~ "  -z, --zero     προσθήκη ενός τελικού γραψίματος από πάνω με μηδενικά για "
+#~ "να αποκρυφτεί η διάλυση\n"
+#~ "  -              διάλυση της κανονικής εξόδου\n"
+#~ "      --help     εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version  εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+#~ "FIXME maybe add more discussion here?"
+
+#~ msgid "%s: cannot rewind"
+#~ msgstr "%s: δε μπορεί να γίνει τοποθέτηση στην αρχή (rewind)"
+
+# src/shred.c:1067
+#~ msgid "%s: pass %lu/%lu (%s)..."
+#~ msgstr "%s: πέρασμα %lu/%lu (%s)..."
+
+# src/shred.c:1103
+#~ msgid "%s: error writing at offset %s"
+#~ msgstr "%s: σφάλμα εγγραφής στη θέση %s"
+
+# src/shred.c:1134
+#~ msgid "%s: file too large"
+#~ msgstr "%s: το αρχείο είναι πολύ μεγάλο"
+
+# src/shred.c:1149
+#~ msgid "%s: pass %lu/%lu (%s)...%s/%s"
+#~ msgstr "%s: πέρασμα %lu/%lu (%s)...%s/%s"
+
+# src/shred.c:1154
+#~ msgid "%s: pass %lu/%lu (%s)...%s"
+#~ msgstr "%s: πέρασμα %lu/%lu (%s)...%s"
+
+#~ msgid "%s: invalid file type"
+#~ msgstr "%s: μη έγκυρο είδος αρχείου"
+
+# src/shred.c:1424
+#~ msgid "%s: file has negative size"
+#~ msgstr "%s: το αρχείο έχει αρνητικό μέγεθος"
+
+# src/shred.c:1462
+#~ msgid "%s: error truncating"
+#~ msgstr "%s: σφάλμα στο μηδενισμό του αρχείου"
+
+# src/shred.c:1483
+#~ msgid "%s: cannot shred append-only file descriptor"
+#~ msgstr "%s: αδυναμία διάλυσης μόνο-προσθήκη περιγραφέα αρχείου"
+
+#~ msgid "%s: removing"
+#~ msgstr "%s: διαγράφεται"
+
+#, fuzzy
+#~ msgid "%s: renamed to %s"
+#~ msgstr "%s: μετανομασία σε `%s'"
+
+#~ msgid "%s: removed"
+#~ msgstr "%s: διεγράφει"
+
+#~ msgid "%s: cannot remove"
+#~ msgstr "%s: δε μπορεί να διαγραφεί"
+
+#~ msgid "%s: invalid number of passes"
+#~ msgstr "%s: μη έγκυρος αριθμός περασμάτων"
+
+#~ msgid "%s: invalid file size"
+#~ msgstr "%s: μη έγκυρο μέγεθος αρχείου"
+
+#~ msgid "Usage: %s [OPTION]\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ]\n"
+
+#~ msgid ""
+#~ "Force changed blocks to disk, update the super block.\n"
+#~ "\n"
+#~ "  --help      display this help and exit\n"
+#~ "  --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Αναγκαστική μεταφορά τροποποιημένων μπλοκ στο δίσκο, ενημέρωση του "
+#~ "υπερμπλόκ.\n"
+#~ "\n"
+#~ "      --help      εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version   εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+
+#~ msgid "ignoring all arguments"
+#~ msgstr "αγνοούνται όλα τα ορίσματα"
+
+#, fuzzy
+#~ msgid "creating %s"
+#~ msgstr "διαγραφή καταλόγου %s\n"
+
+#, fuzzy
+#~ msgid "setting times of %s"
+#~ msgstr "διατήρηση ωρών στο %s"
+
+#, fuzzy
+#~ msgid "  or:  %s [-acm] MMDDhhmm[YY] FILE... (obsolescent)\n"
+#~ msgstr "  η : %s [-acm] MMDDhhmm[YY] ΑΡΧΕΙΟ... (δεν είναι σε χρήση)\n"
+
+#~ msgid ""
+#~ "Update the access and modification times of each FILE to the current time.\n"
+#~ "\n"
+#~ "  -a                     change only the access time\n"
+#~ "  -c, --no-create        do not create any files\n"
+#~ "  -d, --date=STRING      parse STRING and use it instead of current time\n"
+#~ "  -f                     (ignored)\n"
+#~ "  -m                     change only the modification time\n"
+#~ "  -r, --reference=FILE   use this file's times instead of current time\n"
+#~ "  -t STAMP               use [[CC]YY]MMDDhhmm[.ss] instead of current time\n"
+#~ "  --time=WORD            set time given by WORD: access atime use (same as "
+#~ "-a)\n"
+#~ "                           modify mtime (same as -m)\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ "Note that the three time-date formats recognized for the -d and -t options\n"
+#~ "and for the obsolescent argument are all different.\n"
+#~ msgstr ""
+#~ "Ενημέρωση των ημερομηνιών και ωρών πρόσβασης και τροποποίησης για κάθε "
+#~ "ΑΡΧΕΙΟ στη τρέχουσα ημερομηνία και ώρα.\n"
+#~ "\n"
+#~ "  -a                     αλλαγή μόνο της ημερομηνίας πρόσβασης\n"
+#~ "  -c                     χωρίς δημιουργία αρχείων\n"
+#~ "  -d, --date=ΑΛΦΑΡΙΘΜΗΤΙΚΟ  επεξεργασία του ΑΛΦΑΡΙΘΜΗΤΙΚΟΥ και χρήση\n"
+#~ "                           του αντί τις τρέχουσας ημερομηνίας\n"
+#~ "  -f                     (αγνοείται)\n"
+#~ "  -m                     αλλαγή μόνο της ημερομηνίας τροποποίησης\n"
+#~ "  -r, --reference=ΑΡΧΕΙΟ  χρήση των ημερομηνιών του αρχείου τούτου αντί\n"
+#~ "                           της τρέχουσας ημερομηνίας\n"
+#~ "  -t ΗΜΕΡΟΜΗΝΙΑ          χρήση MMDDhhmm[[CC]YY][.ss] αντί τρέχουσας\n"
+#~ "                           ημερομηνίας/ώρας\n"
+#~ "      --time=ΛΕΚΤΙΚΟ     ορισμός ημερομηνίας δοθείσας από το ΛΕΚΤΙΚΟ:\n"
+#~ "                           access atime use (όπως το -a)\n"
+#~ "                            modify mtime (ίδιο με -m)\n"
+#~ "      --help             εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "      --version          εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+#~ "\n"
+#~ "Λάβετε υπ όψιν ότι οι τρεις μορφές ώρα/ημερομηνίας που\n"
+#~ "αναγνωρίζονται για τις επιλογές -d και -t καθώς και την επιλογή που\n"
+#~ "αγνοείται, είναι όλες διαφορετικές.\n"
+
+#, fuzzy
+#~ msgid "invalid date format %s"
+#~ msgstr "μη έγκυρη μορφή ημερομηνίας `%s'"
+
+#~ msgid "cannot specify times from more than one source"
+#~ msgstr ""
+#~ "δεν είναι δυνατό να επιλεγούν ημερομηνίες από περισσότερες από μια πηγή"
+
+#~ msgid "file arguments missing"
+#~ msgstr "έχουν παραληφθεί ορίσματα"
+
+#~ msgid "group of %s changed to %s\n"
+#~ msgstr "η ομάδα του %s άλλαξε σε %s\n"
+
+#, fuzzy
+#~ msgid "ownership of %s changed to "
+#~ msgstr "ο ιδιοκτήτης του %s άλλαξε σε "
+
+#, fuzzy
+#~ msgid "you are not a member of group %s"
+#~ msgstr "δεν είστε μέλος της ομάδας `%s'"
+
+#~ msgid "%s: invalid group number"
+#~ msgstr "%s: μη έγκυρος αριθμός ομάδας"
+
+#, fuzzy
+#~ msgid "%s: cannot determine size"
+#~ msgstr "%s: δε μπορεί να γίνει τοποθέτηση στην αρχή (rewind)"
+
+#, fuzzy
+#~ msgid "cannot make fifo %s"
+#~ msgstr "δεν είναι δυνατό να δημιουργηθεί το αρχείο fifo `%s'"
+
+#, fuzzy
+#~ msgid "cannot change permissions for %s"
+#~ msgstr "ορισμός δικαιωμάτων στο %s"
+
+#, fuzzy
+#~ msgid "cannot remove old link to %s"
+#~ msgstr "αδυναμία διαγραφής παλαιού συνδέσμου στο `%s'"
+
+#~ msgid "virtual memory exhausted"
+#~ msgstr "έχει καταναλωθεί όλη η ιδεατή μνήμη"
+
+#~ msgid "Memory exhausted"
+#~ msgstr "Η μνήμη εξαντλήθηκε"
+
+#~ msgid "invalid mode `%s'"
+#~ msgstr "μη έγκυρα δικαιώματα `%s'"
+
+#~ msgid "cannot create directory `%s'"
+#~ msgstr "αδυναμία δημιουργίας καταλόγου `%s'"
+
+#~ msgid "cannot remove `%s'"
+#~ msgstr "δεν είναι δυνατό να διαγραφεί το `%s'"
+
+#~ msgid "specified target, `%s' is not a directory"
+#~ msgstr "ο αποδέκτης που ορίστηκε, `%s' δεν είναι κατάλογος"
+
+#~ msgid "`%s' and `%s' are the same file"
+#~ msgstr "τα `%s' και `%s' είναι το ίδιο αρχείο"
+
+#~ msgid "cannot backup `%s'"
+#~ msgstr "δε μπορεί να δημιουργηθεί αντίγραφο ασφαλείας του `%s'"
+
+#~ msgid "cannot un-backup `%s'"
+#~ msgstr "αδυναμία επαναφοράς αντιγράφου ασφαλείας `%s'"
+
+#~ msgid "cannot chown %s"
+#~ msgstr "δε μπορεί να αλλάξει ο ιδιοκτήτης του `%s'"
+
+#~ msgid "cannot chmod %s"
+#~ msgstr "δεν είναι δυνατό να αλλαχτούν τα δικαιώματα του `%s'"
+
+#~ msgid "`%s' exists but is not a directory"
+#~ msgstr "το `%s' υπάρχει ήδη, αλλά δεν είναι κατάλογος"
+
+#~ msgid "`%s' is a directory"
+#~ msgstr "το `%s' είναι κατάλογος"
+
+# src/cp.c:758 src/ln.c:454 src/mv.c:432
+#~ msgid "--version-control"
+#~ msgstr "--version-control"
+
+#~ msgid "create %s %s to %s"
+#~ msgstr "δημιουργία %s %s στο %s"
+
+#~ msgid "cannot create %s `%s' to `%s'"
+#~ msgstr "δεν είναι δυνατό να δημιουργηθεί το %s `%s' στο `%s'"
+
+#~ msgid "symbolic link"
+#~ msgstr "συμβολικός σύνδεσμος"
+
+#~ msgid "hard link"
+#~ msgstr "σθεναρός σύνδεσμος"
+
+#~ msgid "link"
+#~ msgstr "σύνδεσμος"
+
+#~ msgid "current directory"
+#~ msgstr "τρέχον κατάλογος"
+
+#~ msgid "starting directory"
+#~ msgstr "αρχικός κατάλογος"
+
+# src/copy.c:549
+#~ msgid "%s -> %s (backup)\n"
+#~ msgstr "%s -> %s (αντίγραφο ασφαλείας)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ msgstr ""
+#~ "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΠΡΟΟΡΙΣΜΟΣ [ΟΝΟΜΑ_ΣΥΝΔΕΣΜΟΥ]\n"
+#~ "    ή: %s [ΕΠΙΛΟΓΗ]... ΠΡΟΟΡΙΣΜΟΣ... ΚΑΤΑΛΟΓΟΣ\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ msgstr ""
+#~ "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΠΗΓΗ ΠΡΟΟΡΙΣΜΟΣ\n"
+#~ "    ή:  %s [ΕΠΙΛΟΓΗ]... ΠΗΓΗ... ΚΑΤΑΛΟΓΟΣ\n"
+
+#~ msgid "--no-dereference (-h) is not supported on this system"
+#~ msgstr "το --no-dereference (-h) δεν υποστηρίζεται σε αυτό το σύστημα"
+
+#~ msgid "Usage: %s [OPTION]... EXISTING_DIR NEW_DIR\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ]... ΥΠΑΡΧΟΝ_ΚΑΤΑΛΟΓΟΣ ΝΕΟΣ_ΚΑΤΑΛΟΓΟΣ\n"
+
+#~ msgid ""
+#~ "Rename EXISTING_DIR to NEW_DIR.\n"
+#~ "\n"
+#~ "   --help      display this help and exit\n"
+#~ "   --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Μετονομασία ΥΠΑΡΧΟΝΤΟΣ_ΚΑΤΑΛΟΓΟΥ σε ΝΕΟ_ΚΑΤΑΛΟΓΟ.\n"
+#~ "\n"
+#~ "   --help      εμφάνιση αυτής της βοήθειας και έξοδος\n"
+#~ "   --version   εμφάνιση πληροφοριών έκδοσης και έξοδος\n"
+
+#~ msgid "cannot get current directory"
+#~ msgstr "αδυναμία εύρεσης τρέχοντος καταλόγου"
+
+#~ msgid "cannot rename `.' or `..'"
+#~ msgstr "δεν είναι δυνατό να μετανομαστεί το `.' ή το `..'"
+
+#~ msgid "`%s' is an ancestor of `%s'"
+#~ msgstr "το `%s' είναι πρόγονος του `%s'"
+
+#~ msgid "sparse type"
+#~ msgstr "αραιό είδος"
+
+#~ msgid "%s is closed"
+#~ msgstr "το %s είναι κλειστό"
+
+#~ msgid "fork system call failed"
+#~ msgstr "η κλήση συστήματος fork απέτυχε"
+
+#~ msgid "sort type"
+#~ msgstr "είδος ταξινόμησης"
+
+#~ msgid "time type"
+#~ msgstr "είδος ώρας"
+
+#~ msgid "format type"
+#~ msgstr "είδος μορφής"
+
+#~ msgid "colorization criterion"
+#~ msgstr "κριτήριο χρωματισμού"
+
+#~ msgid "indicator style"
+#~ msgstr "μορφή κατηγοροποιητή"
+
+#~ msgid "quoting style"
+#~ msgstr "μορφή παράθεσης"
+
+#~ msgid "time selector"
+#~ msgstr "επιλογέας χρόνου"
+
+#~ msgid ""
+#~ "the option for counting 1MB blocks may not be used\n"
+#~ "with the portable output format"
+#~ msgstr ""
+#~ "η επιλογή μέτρησης των 1M μπλοκ δε μπορεί να χρησιμοποιηθεί\n"
+#~ "με τη συμβατή μορφή εξόδου"
+
+#~ msgid ""
+#~ "the option for printing with adaptive units may not be used\n"
+#~ "with the portable output format"
+#~ msgstr ""
+#~ "η επιλογή εκύπωσης με προσαρμοζόμενες μονάδες δε μπορεί να χρησιμοποιηθεί\n"
+#~ "με τη συμβατή μορφή εξόδου"
+
+#~ msgid "removing non-directory %s\n"
+#~ msgstr "διαγραφή μη-καταλόγου `%s'\n"
+
+#~ msgid "remove directory `%s'%s? "
+#~ msgstr "διαγραφή καταλόγου `%s'%s; "
+
+#~ msgid "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ msgstr "Χρήση: %s [ΕΠΙΛΟΓΗ]... GROUP ΑΡΧΕΙΟ...\n"
+
+#~ msgid "`%s' is not a regular file"
+#~ msgstr "το `%s' δεν είναι κανονικό αρχείο"
+
+#~ msgid "cannot move `%s' across filesystems: Not a regular file"
+#~ msgstr ""
+#~ "αδυναμία μετακίνησης του `%s' μεταξύ συστημάτων αρχείων: Δεν είναι κανονικό "
+#~ "αρχείο"
+
+#~ msgid "%s: replace `%s', overriding mode %04o? "
+#~ msgstr "%s: αντικατάσταση του `%s', παράκαμψη δικαιωμάτων %04o; "
+
+#~ msgid "%s: remove %s`%s', overriding mode %04o? "
+#~ msgstr "%s: διαγραφή του %s`%s', παρακάπτωντας τα δικαιώματα %04o; "
+
+#~ msgid "directory "
+#~ msgstr "κατάλογος "
+
+#~ msgid "%s: descend directory `%s', overriding mode %04o? "
+#~ msgstr ""
+#~ "%s: διαγραφή και του καταλόγου `%s', παρακάμπτωντας τα δικαιώματα %04o; "
+
+#~ msgid "%s: remove directory `%s' (might be nonempty)? "
+#~ msgstr "%s: διαγραφή καταλόγου `%s' (μπορεί να μην είναι άδειο); "

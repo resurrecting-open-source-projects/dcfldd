@@ -1,0 +1,2140 @@
+# Chinese translation of GNU fileutils messages.
+# Copyright (C) 1998 Free Software Foundation, Inc.
+# Yip Chi Lap <clyip@cs.hku.hk>, 1998.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: fileutils 3.16\n"
+"POT-Creation-Date: 2001-10-26 15:00-0400\n"
+"PO-Revision-Date: 1998-11-12 18:20+0800\n"
+"Last-Translator: Yip Chi Lap <clyip@cs.hku.hk>\n"
+"Language-Team: Chinese <zh@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=big5\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lib/argmatch.c:159
+#, fuzzy, c-format
+msgid "invalid argument %s for `%s'"
+msgstr "日期格式 `%s' 無效"
+
+#: lib/argmatch.c:160
+#, fuzzy, c-format
+msgid "ambiguous argument %s for `%s'"
+msgstr "日期格式 `%s' 無效"
+
+#. We try to put synonyms on the same line.  The assumption is that
+#. synonyms follow each other
+#: lib/argmatch.c:178
+msgid "Valid arguments are:"
+msgstr ""
+
+#: lib/closeout.c:104
+msgid "write error"
+msgstr "書寫錯誤"
+
+#: lib/error.c:117
+msgid "Unknown system error"
+msgstr ""
+
+#: lib/getopt.c:686
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr ""
+
+#: lib/getopt.c:711
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/getopt.c:716
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/getopt.c:734 lib/getopt.c:907
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr ""
+
+#. --option
+#: lib/getopt.c:763
+#, fuzzy, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "沒有此選項: `%s'"
+
+#. +option or -option
+#: lib/getopt.c:767
+#, fuzzy, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "沒有此選項: `%s'"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:793
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr ""
+
+#: lib/getopt.c:796
+#, fuzzy, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: 轉換無效"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:826 lib/getopt.c:956
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr ""
+
+#: lib/getopt.c:873
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr ""
+
+#: lib/getopt.c:891
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr ""
+
+#: lib/human.c:341
+msgid "block size"
+msgstr ""
+
+#: lib/makepath.c:177
+#, fuzzy, c-format
+msgid "cannot create directory %s"
+msgstr "不能製造目錄 `%s'"
+
+#: lib/makepath.c:183 lib/makepath.c:425
+#, fuzzy, c-format
+msgid "%s exists but is not a directory"
+msgstr "`%s' 存在, 但並非目錄."
+
+#: lib/makepath.c:321 lib/makepath.c:383 lib/makepath.c:444
+#, fuzzy, c-format
+msgid "cannot change owner and/or group of %s"
+msgstr "群組名不能空白"
+
+#: lib/makepath.c:343
+#, fuzzy, c-format
+msgid "cannot chdir to directory, %s"
+msgstr "不能將目錄轉至 %s"
+
+#: lib/makepath.c:397 lib/makepath.c:450
+#, fuzzy, c-format
+msgid "cannot change permissions of %s"
+msgstr "不能製造目錄 `%s'"
+
+#. If XALLOC_FAIL_FUNC is NULL, or does return, display this message
+#. before exiting when memory is exhausted.  Goes through gettext.
+#: lib/obstack.c:477 lib/xmalloc.c:66
+#, fuzzy
+msgid "memory exhausted"
+msgstr "虛擬記憶體已被耗盡"
+
+#. Get translations for open and closing quotation marks.
+#.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  If the catalog has no translation,
+#. locale_quoting_style quotes `like this', and
+#. clocale_quoting_style quotes "like this".
+#.
+#. For example, an American English Unicode locale should
+#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
+#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
+#. MARK).  A British English Unicode locale should instead
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#: lib/quotearg.c:259
+msgid "`"
+msgstr ""
+
+#: lib/quotearg.c:260
+msgid "'"
+msgstr ""
+
+#: lib/rpmatch.c:78
+msgid "^[yY]"
+msgstr "^[yY]"
+
+#: lib/rpmatch.c:81
+msgid "^[nN]"
+msgstr "^[nN]"
+
+#: lib/unicodeio.c:138
+#, c-format
+msgid "cannot output U+%04X: iconv function not usable"
+msgstr ""
+
+#: lib/unicodeio.c:149
+#, c-format
+msgid "U+%04X: character out of range"
+msgstr ""
+
+#: lib/unicodeio.c:181 lib/unicodeio.c:190
+#, c-format
+msgid "cannot convert U+%04X to local character set"
+msgstr ""
+
+#: lib/unicodeio.c:196
+#, c-format
+msgid "cannot output U+%04X: iconv function not available"
+msgstr ""
+
+#: lib/userspec.c:179
+#, fuzzy
+msgid "invalid user"
+msgstr "找不到 `%s' 這用者"
+
+#: lib/userspec.c:180
+#, fuzzy
+msgid "invalid group"
+msgstr "找不到 `%s' 這組別"
+
+#: lib/userspec.c:182
+msgid "cannot get the login group of a numeric UID"
+msgstr ""
+
+#: lib/userspec.c:184
+msgid "cannot omit both user and group"
+msgstr ""
+
+#: lib/version-etc.c:38
+msgid "Copyright (C) 2001 Free Software Foundation, Inc."
+msgstr ""
+
+#: lib/version-etc.c:60
+#, c-format
+msgid "Written by %s.\n"
+msgstr ""
+
+#: lib/version-etc.c:66
+msgid ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+
+#: src/dcfldd.c:321
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "請用`%s --help'來顯示本指令的用法\n"
+
+#: src/dcfldd.c:325
+#, c-format
+msgid "Usage: %s [OPTION]...\n"
+msgstr "用法: %s [選項]...\n"
+
+#: src/dcfldd.c:326
+#, fuzzy
+msgid ""
+"Copy a file, converting and formatting according to the options.\n"
+"\n"
+"  bs=BYTES             force ibs=BYTES and obs=BYTES\n"
+"  cbs=BYTES            convert BYTES bytes at a time\n"
+"  conv=KEYWORDS        convert the file as per the comma separated keyword "
+"list\n"
+"  count=BLOCKS         copy only BLOCKS input blocks\n"
+"  ibs=BYTES            read BYTES bytes at a time\n"
+"  if=FILE              read from FILE instead of stdin\n"
+"  obs=BYTES            write BYTES bytes at a time\n"
+"  of=FILE              write to FILE instead of stdout\n"
+"  seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n"
+"  skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n"
+"  pattern=BYTES        use the specified binary pattern as input\n"
+"  textpattern=TEXT     use repeating TEXT as input\n"
+"  hashwindow=BYTES     perform an MD5 hash on every BYTES amount of data\n"
+"  hashlog=FILE         send MD5 hash output to FILE instead of stderr\n"
+"  status=[on|off]      display a continual status message on stderr\n"
+"                         default state is \"on\"\n"
+"  sizeprobe=[if|of]    determine the size of the input or output file"
+msgstr ""
+"根據選項將檔案轉換格式\n"
+"\n"
+"  bs=BYTES        即 ibs=BYTES 與 obs=BYTES\n"
+"  cbs=BYTES       每次轉換 BYTES 位元組\n"
+"  conv=KEYWORDS   如 KEYWORDS 所述般轉換格式\n"
+"                  KEYWORDS 為一串用逗號分開的關鍵字\n"
+"  count=BLOCKS    只處理 BLOCKS 個區塊\n"
+"  ibs=BYTES       輸入區塊大小為 BYTES 位元組\n"
+"  if=FILE         從 FILE 輸入\n"
+"  obs=BYTES       輸出區塊大小為 BYTES 位元組\n"
+"  of=FILE         輸出往 FILE, 而且不要截斷檔案\n"
+"  seek=BLOCKS     跳過 BLOCKS 個 obs 大小的區塊才開始輸出\n"
+"  skip=BLOCKS     跳過 BLOCKS 個 ibs 大小的區塊才開始輸入\n"
+"      --help      顯示本文,然後離開\n"
+"      --version   顯示版本資料,然後離開\n"
+"\n"
+"BYTES 可用 c,w,b,k 或 M 為字尾, 分別代表乘 1,2,512,1024 及 1M.\n"
+"可用的 KEYWORD 為:\n"
+"\n"
+"  ascii     從 EBCDIC 轉換至 ASCII\n"
+"  ebcdic    從 ASCII 轉換至  EBCDIC\n"
+"  ibm       從 ASCII 轉換至 alternated EBCDIC\n"
+"  block     將用換行字元終止之記錄, 以空白字元填至 cbs 般大小\n"
+"  unblock   用換行字元取代 cbs 大小之記錄中尾後的空白字元\n"
+"  lcase     大楷變小楷\n"
+"  ucase     小楷變大楷\n"
+"  swab      將兩個位元組中的位元互換\n"
+"  noerror   發生讀取錯誤後仍繼續\n"
+"  sync      用 NUL 將每個輸入區塊填至 ibs 般大小\n"
+
+#: src/dcfldd.c:371
+#, fuzzy
+msgid ""
+"\n"
+"Report bugs to <bug-fileutils@gnu.org>."
+msgstr ""
+"\n"
+"如發現編程錯誤, 請報告予 fileutils-bugs@gnu.ai.mit.edu"
+
+#: src/dcfldd.c:402
+#, fuzzy, c-format
+msgid "%s+%s records in\n"
+msgstr "輸入了 %u+%u 個記錄\n"
+
+#: src/dcfldd.c:405
+#, fuzzy, c-format
+msgid "%s+%s records out\n"
+msgstr "輸出了 %u+%u 個記錄\n"
+
+#: src/dcfldd.c:413
+msgid "truncated record"
+msgstr "個被截斷了的記錄"
+
+#: src/dcfldd.c:414
+msgid "truncated records"
+msgstr "個被截斷了的記錄"
+
+#: src/dcfldd.c:423
+#, fuzzy, c-format
+msgid "closing input file %s"
+msgstr "%s: 刪除目錄 `%s' 嗎? "
+
+#: src/dcfldd.c:425
+#, fuzzy, c-format
+msgid "closing output file %s"
+msgstr "%s: 刪除目錄 `%s' 嗎? "
+
+#: src/dcfldd.c:509
+#, fuzzy, c-format
+msgid "writing to %s"
+msgstr "s: 不複製目錄"
+
+#: src/dcfldd.c:541
+#, fuzzy, c-format
+msgid "invalid conversion: %s"
+msgstr "%s: 轉換無效"
+
+#: src/dcfldd.c:645
+#, fuzzy, c-format
+msgid "unrecognized option %s"
+msgstr "沒有此選項: `%s'"
+
+#: src/dcfldd.c:659
+#, fuzzy, c-format
+msgid "invalid hex pattern: %s"
+msgstr "保護模式 `%s' 無效"
+
+#: src/dcfldd.c:672 src/dcfldd.c:1455 src/dcfldd.c:1473
+#, c-format
+msgid "opening %s"
+msgstr ""
+
+#: src/dcfldd.c:729
+#, fuzzy, c-format
+msgid "unrecognized option %s=%s"
+msgstr "沒有此選項: `%s=%s'"
+
+#: src/dcfldd.c:735
+#, fuzzy, c-format
+msgid "invalid number %s"
+msgstr "號碼 `%s' 無效"
+
+#: src/dcfldd.c:765
+msgid ""
+"only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+msgstr ""
+"每組只能選一項: {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+
+#: src/dcfldd.c:915 src/dcfldd.c:1206
+#, c-format
+msgid "reading %s"
+msgstr ""
+
+#: src/dcfldd.c:1252 src/dcfldd.c:1315
+#, c-format
+msgid "writing %s"
+msgstr ""
+
+#: src/dcfldd.c:1408
+#, fuzzy
+msgid "stating file"
+msgstr "起始目錄"
+
+#: src/dcfldd.c:1458
+msgid "standard input"
+msgstr "標準輸入"
+
+#: src/dcfldd.c:1481
+msgid "file offset out of range"
+msgstr ""
+
+#: src/dcfldd.c:1484
+#, fuzzy, c-format
+msgid "cannot fstat %s"
+msgstr "不能製造連結 `%s'"
+
+#: src/dcfldd.c:1497
+#, fuzzy, c-format
+msgid "advancing past %s bytes in output file %s"
+msgstr "%s: 刪除目錄 `%s' 嗎? "
+
+#: src/dcfldd.c:1506
+msgid "standard output"
+msgstr "標準輸出"
+
+#, fuzzy
+#~ msgid "cannot change to null group"
+#~ msgstr "群組名不能空白"
+
+#, fuzzy
+#~ msgid "invalid group name %s"
+#~ msgstr "群組名 `%s' 無效"
+
+#~ msgid "group number"
+#~ msgstr "群組號碼"
+
+#, fuzzy
+#~ msgid "invalid group number %s"
+#~ msgstr "群組號碼 `%s' 無效"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "用法: %s [選項]... OWNER[.[GROUP]] FILE...\n"
+#~ "  或:  %s [選項]... .[GROUP] FILE...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the group membership of each FILE to GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's group rather than the specified\n"
+#~ "                         GROUP value\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ msgstr ""
+#~ "將每個 FILE 所屬之群組變為 GROUP \n"
+#~ "\n"
+#~ "  -c, --changes           如`--verbose',但只於組別有改變時才報告\n"
+#~ "  -h, --no-dereference    改變符號連結本身之組別,而非被連接的檔案之組別\n"
+#~ "                          (只適用於有`lchown'系統呼叫的系統)\n"
+#~ "  -f, --silent, --quiet   不顯示大部分錯誤訊息\n"
+#~ "  -R, --recursive         將子目錄下之檔案及目錄作同樣處理\n"
+#~ "  -v, --verbose           報告每一個被處理的檔案之情況\n"
+#~ "      --help              顯示本文,然後離開\n"
+#~ "      --version           顯示版本資料,然後離開\n"
+
+#~ msgid "too few arguments"
+#~ msgstr "引數太少"
+
+#, fuzzy
+#~ msgid "getting attributes of %s"
+#~ msgstr "s: 不複製目錄"
+
+#, fuzzy
+#~ msgid "getting new attributes of %s"
+#~ msgstr "s: 不複製目錄"
+
+#, fuzzy
+#~ msgid "mode of %s changed to %04lo (%s)\n"
+#~ msgstr "%s 之保護模式已變為 %04o (%s)\n"
+
+#, fuzzy
+#~ msgid "failed to change mode of %s to %04lo (%s)\n"
+#~ msgstr "%s 之保護模式已變為 %04o (%s)\n"
+
+#, fuzzy
+#~ msgid "mode of %s retained as %04lo (%s)\n"
+#~ msgstr "%s 之保護模式保留為 %04o (%s)\n"
+
+#, fuzzy
+#~ msgid "changing permissions of %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [OPTION]... MODE[,MODE]... FILE...\n"
+#~ "  or:  %s [OPTION]... OCTAL-MODE FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "用法: %s [選項]... MODE[,MODE]... FILE...\n"
+#~ "  或:  %s [選項]... OCTAL_MODE FILE...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the mode of each FILE to MODE.\n"
+#~ "\n"
+#~ "  -c, --changes           like verbose but report only when a change is "
+#~ "made\n"
+#~ "  -f, --silent, --quiet   suppress most error messages\n"
+#~ "  -v, --verbose           output a diagnostic for every file processed\n"
+#~ "      --reference=RFILE   use RFILE's mode instead of MODE values\n"
+#~ "  -R, --recursive         change files and directories recursively\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "\n"
+#~ "Each MODE is one or more of the letters ugoa, one of the symbols +-= and\n"
+#~ "one or more of the letters rwxXstugo.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "  -c, --changes           如`--verbose',但只於保護模式改變時才報告\n"
+#~ "  -f, --silent, --quiet   不顯示大部分錯誤訊息\n"
+#~ "  -v, --verbose           報告每一個被處理的檔案之情況\n"
+#~ "  -R, --recursive         將子目錄下之檔案及目錄作同樣處理\n"
+#~ "      --help              顯示本文,然後離開\n"
+#~ "      --version           顯示版本資料,然後離開\n"
+#~ "\n"
+#~ "MODE 由三部份組成: 一個或以上的字母 ugoa , 一個或以上的符號 +-= ,\n"
+#~ "  然後是一個或以上的字母 rwxXstugo\n"
+#~ "OCTAL_MODE 是一個代表保護模式的八進制數字\n"
+#~ "FILE 是檔案名\n"
+
+#, fuzzy
+#~ msgid "invalid character %s in mode string %s"
+#~ msgstr "日期格式 `%s' 無效"
+
+#, fuzzy
+#~ msgid "invalid mode string: %s"
+#~ msgstr "保護模式 `%s' 無效"
+
+#, fuzzy
+#~ msgid "changed ownership of %s to %s\n"
+#~ msgstr "%s 之保護模式已變為 %04o (%s)\n"
+
+#, fuzzy
+#~ msgid "changed group of %s to %s\n"
+#~ msgstr "%s 之保護模式已變為 %04o (%s)\n"
+
+#, fuzzy
+#~ msgid "failed to change ownership of %s to %s\n"
+#~ msgstr "%s 之保護模式已變為 %04o (%s)\n"
+
+#, fuzzy
+#~ msgid "failed to change group of %s to %s\n"
+#~ msgstr "%s 之保護模式已變為 %04o (%s)\n"
+
+#, fuzzy
+#~ msgid "ownership of %s retained as %s\n"
+#~ msgstr "%s 之擁有者保留為"
+
+#~ msgid "group of %s retained as %s\n"
+#~ msgstr "%s 之群組保留為 %s\n"
+
+#, fuzzy
+#~ msgid "changing ownership of %s"
+#~ msgstr "群組名不能空白"
+
+#, fuzzy
+#~ msgid "changing group of %s"
+#~ msgstr "群組名不能空白"
+
+#, fuzzy
+#~ msgid "unable to restore permissions of %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [OPTION]... OWNER[:[GROUP]] FILE...\n"
+#~ "  or:  %s [OPTION]... :GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "用法: %s [選項]... OWNER[.[GROUP]] FILE...\n"
+#~ "  或:  %s [選項]... .[GROUP] FILE...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the owner and/or group of each FILE to OWNER and/or GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                         change the owner and/or group of each file only if\n"
+#~ "                         its current owner and/or group match those "
+#~ "specified\n"
+#~ "                         here.  Either may be omitted, in which case a "
+#~ "match\n"
+#~ "                         is not required for the omitted attribute.\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's owner and group rather than\n"
+#~ "                         the specified OWNER:GROUP values\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "將每個 FILE 之擁有者變為 OWNER, 組別變為 GROUP.    \n"
+#~ "\n"
+#~ "  -c, --changes          如`--verbose',但只於擁有者有改變時才報告\n"
+#~ "  -h, --no-dereference   改變符號連結本身之擁有者,而非被連接的檔案之擁有者\n"
+#~ "                         (只適用於有`lchown'系統呼叫的系統)\n"
+#~ "  -f, --silent, --quiet  不顯示大部分錯誤訊息\n"
+#~ "  -R, --recursive        將子目錄下之檔案及目錄作同樣處理\n"
+#~ "  -v, --verbose          報告程式之運作情況\n"
+#~ "      --help             顯示本文,然後離開\n"
+#~ "      --version          顯示版本資料,然後離開\n"
+#~ "\n"
+#~ "如沒有 OWNER, 檔案之擁有者將不會被改變.\n"
+#~ "如沒有 GROUP, 檔案之組別將不會被改變,\n"
+#~ "  除非在 GROUP 前有一點, 屆時組別將變為登入之組別.\n"
+#~ "GROUP 前的一點可用冒號代替\n"
+
+#, fuzzy
+#~ msgid "cannot access %s"
+#~ msgstr "不能將 `%s' 備份"
+
+#, fuzzy
+#~ msgid "%s and %s are the same file"
+#~ msgstr "`%s' 及 `%s' 為同一檔案"
+
+#, fuzzy
+#~ msgid "cannot open %s for reading"
+#~ msgstr "不能將 `%s' 連結至 `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove %s"
+#~ msgstr "不能刪除 `%s'"
+
+#, fuzzy
+#~ msgid "cannot create regular file %s"
+#~ msgstr "不能製造常規檔案 `%s'"
+
+#, fuzzy
+#~ msgid "cannot lseek %s"
+#~ msgstr "不能刪除 `%s'"
+
+#, fuzzy
+#~ msgid "cannot stat %s"
+#~ msgstr "不能製造連結 `%s'"
+
+#, fuzzy
+#~ msgid "omitting directory %s"
+#~ msgstr "s: 不複製目錄"
+
+#, fuzzy
+#~ msgid "cannot overwrite non-directory %s with directory %s"
+#~ msgstr "%s: 不能以非目錄來蓋\寫目錄"
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s with non-directory"
+#~ msgstr "%s: 不能以非目錄來蓋\寫目錄"
+
+#, fuzzy
+#~ msgid "%s: overwrite %s, overriding mode %04lo? "
+#~ msgstr "%s: 蓋\寫 `%s' 而不理保護模式 %04o?"
+
+#, fuzzy
+#~ msgid "%s: overwrite %s? "
+#~ msgstr "%s: 蓋\寫 `%s'?"
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s"
+#~ msgstr "%s: 不能蓋\寫目錄"
+
+#, fuzzy
+#~ msgid "cannot move directory onto non-directory: %s -> %s"
+#~ msgstr "%s: 不能以非目錄來蓋\寫目錄"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not moved"
+#~ msgstr "將 `%s' 備份會將源檔案毀掉, 故不複製 `%s'."
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not copied"
+#~ msgstr "將 `%s' 備份會將源檔案毀掉, 故不複製 `%s'."
+
+#, fuzzy
+#~ msgid "cannot backup %s"
+#~ msgstr "不能將 `%s' 備份"
+
+#, fuzzy
+#~ msgid " (backup: %s)"
+#~ msgstr "不能將 `%s' 備份"
+
+#, fuzzy
+#~ msgid "cannot copy a directory, %s, into itself, %s"
+#~ msgstr "不能將 `%s' 移至 `%s'"
+
+#, fuzzy
+#~ msgid "will not create hard link %s to directory %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid "cannot create hard link %s to %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to a subdirectory of itself, %s"
+#~ msgstr "不能將 `%s' 移至 `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to %s"
+#~ msgstr "不能將 `%s' 連結至 `%s'"
+
+#, fuzzy
+#~ msgid "cannot copy cyclic symbolic link %s"
+#~ msgstr "%s: 不能複製循環的符號連結"
+
+#~ msgid "%s: can make relative symbolic links only in current directory"
+#~ msgstr "%s: 只能於現用工作目錄中製造相對符號連"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s to %s"
+#~ msgstr "不能製造符號連結 `%s'"
+
+#, fuzzy
+#~ msgid "cannot create link %s"
+#~ msgstr "不能製造連結 `%s'"
+
+#, fuzzy
+#~ msgid "cannot create fifo %s"
+#~ msgstr "不能製造 fifo 檔案 `%s'"
+
+#, fuzzy
+#~ msgid "cannot create special file %s"
+#~ msgstr "不能製造特別檔案 `%s'"
+
+#, fuzzy
+#~ msgid "cannot read symbolic link %s"
+#~ msgstr "不能閱\讀符號連結 `%s'"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s"
+#~ msgstr "不能製造符號連結 `%s'"
+
+#, fuzzy
+#~ msgid "%s has unknown file type"
+#~ msgstr "%s: 檔案類型不詳"
+
+#, fuzzy
+#~ msgid "cannot un-backup %s"
+#~ msgstr "不能將備份 `%s' 還原"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY SOURCE...\n"
+#~ msgstr ""
+#~ "用法: %s [選項]... SOURCE DEST           (格式一)\n"
+#~ "  或: %s [選項]... SOURCE... DIRECTORY   (格式二)\n"
+#~ "  或: %s -d [選項]... DIRECTORY...       (格式三)\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                same as -dpR\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -d, --no-dereference         never follow symbolic links\n"
+#~ "  -f, --force                  if an existing destination file cannot be\n"
+#~ "                                   opened, remove it and try again\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "  -H                           follow command-line symbolic links\n"
+#~ "  -l, --link                   link files instead of copying\n"
+#~ "  -L, --dereference            always follow symbolic links\n"
+#~ "  -p, --preserve               preserve file attributes if possible\n"
+#~ "      --parents                append source path to DIRECTORY\n"
+#~ "  -P                           same as `--parents' for now; soon to change "
+#~ "to\n"
+#~ "                                 `--no-dereference' to conform to POSIX\n"
+#~ "  -r                           copy recursively, non-directories as files\n"
+#~ "                                 WARNING: use -R instead when you might "
+#~ "copy\n"
+#~ "                                 special files like FIFOs or /dev/zero\n"
+#~ "      --remove-destination     remove each existing destination file before\n"
+#~ "                                 attempting to open it (contrast with "
+#~ "--force)\n"
+#~ msgstr ""
+#~ "將源檔案 SOURCE 複製至 DEST. 如多於一個 SOURCE, 則將之全部複製至目錄 "
+#~ "DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                與 -dpR 一樣\n"
+#~ "  -b, --backup                 移除前先備份\n"
+#~ "  -d, --no-dereference         保留連結\n"
+#~ "  -f, --force                  不問用者, 移除本已存在的目的地檔案或目錄.\n"
+#~ "  -i, --interactive            覆寫檔案前, 先問用者.\n"
+#~ "  -l, --link                   建立硬連結,而非複製檔案.\n"
+#~ "  -p, --preserve               可能的話,保留檔案的屬性\n"
+#~ "  -P, --parents                將源路徑加於 DIRECTORY 之後\n"
+#~ "  -r                           將子目錄下之檔案及目錄作同樣複製,\n"
+#~ "                                 並將非目錄當作普通檔案\n"
+#~ "      --sparse=WHEN            控制何時製造稀疏檔案\n"
+#~ "  -R, --recursive              將子目錄下之檔案及目錄作同樣複製\n"
+#~ "  -s, --symbolic-link          建立符號連結,而非複製檔案\n"
+#~ "  -S, --suffix=SUFFIX          用 SUFFIX 作備檔之檔名尾\n"
+#~ "  -u, --update                 只於源檔案比目的地檔新,或目的地檔不存在時,\n"
+#~ "                                 才將檔案複製.\n"
+#~ "  -v, --verbose                報告程式之運作情況\n"
+#~ "  -V, --version-control=WORD   用 WORD 作備份版本控制的規格\n"
+#~ "  -x, --one-file-system        只複製在本檔案系統中的檔案\n"
+#~ "      --help                   顯示本文,然後離開\n"
+#~ "      --version                顯示版本資料,然後離開\n"
+#~ "\n"
+#~ "當沒有 --sparse 選項或用了 --sparse=auto 時, "
+#~ "本程式會估計源檔案是否稀疏檔案,\n"
+#~ "  來決定是否將目的地檔亦變成稀疏檔案.\n"
+#~ "如想本程式發覺源檔案有足夠多的零位元組時, 便將目的地檔變為稀疏檔案,\n"
+#~ "  用者可用 --sparse=always 這選項.\n"
+#~ "至於 --sparse=never 這選項, 是用來本程式不製造稀疏檔案的.\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "      --sparse=WHEN            control creation of sparse files\n"
+#~ "  -R, --recursive              copy directories recursively\n"
+#~ "      --strip-trailing-slashes remove any trailing slashes from each SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -s, --symbolic-link          make symbolic links instead of copying\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 copy only when the SOURCE file is newer\n"
+#~ "                                 than the destination file or when the\n"
+#~ "                                 destination file is missing\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "  -x, --one-file-system        stay on this file system\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ "By default, sparse SOURCE files are detected by a crude heuristic and the\n"
+#~ "corresponding DEST file is made sparse as well.  That is the behavior\n"
+#~ "selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST\n"
+#~ "file whenever the SOURCE file contains a long enough sequence of zero "
+#~ "bytes.\n"
+#~ "Use --sparse=never to inhibit creation of sparse files.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "將源檔案 SOURCE 複製至 DEST. 如多於一個 SOURCE, 則將之全部複製至目錄 "
+#~ "DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                與 -dpR 一樣\n"
+#~ "  -b, --backup                 移除前先備份\n"
+#~ "  -d, --no-dereference         保留連結\n"
+#~ "  -f, --force                  不問用者, 移除本已存在的目的地檔案或目錄.\n"
+#~ "  -i, --interactive            覆寫檔案前, 先問用者.\n"
+#~ "  -l, --link                   建立硬連結,而非複製檔案.\n"
+#~ "  -p, --preserve               可能的話,保留檔案的屬性\n"
+#~ "  -P, --parents                將源路徑加於 DIRECTORY 之後\n"
+#~ "  -r                           將子目錄下之檔案及目錄作同樣複製,\n"
+#~ "                                 並將非目錄當作普通檔案\n"
+#~ "      --sparse=WHEN            控制何時製造稀疏檔案\n"
+#~ "  -R, --recursive              將子目錄下之檔案及目錄作同樣複製\n"
+#~ "  -s, --symbolic-link          建立符號連結,而非複製檔案\n"
+#~ "  -S, --suffix=SUFFIX          用 SUFFIX 作備檔之檔名尾\n"
+#~ "  -u, --update                 只於源檔案比目的地檔新,或目的地檔不存在時,\n"
+#~ "                                 才將檔案複製.\n"
+#~ "  -v, --verbose                報告程式之運作情況\n"
+#~ "  -V, --version-control=WORD   用 WORD 作備份版本控制的規格\n"
+#~ "  -x, --one-file-system        只複製在本檔案系統中的檔案\n"
+#~ "      --help                   顯示本文,然後離開\n"
+#~ "      --version                顯示版本資料,然後離開\n"
+#~ "\n"
+#~ "當沒有 --sparse 選項或用了 --sparse=auto 時, "
+#~ "本程式會估計源檔案是否稀疏檔案,\n"
+#~ "  來決定是否將目的地檔亦變成稀疏檔案.\n"
+#~ "如想本程式發覺源檔案有足夠多的零位元組時, 便將目的地檔變為稀疏檔案,\n"
+#~ "  用者可用 --sparse=always 這選項.\n"
+#~ "至於 --sparse=never 這選項, 是用來本程式不製造稀疏檔案的.\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "The backup suffix is `~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\n"
+#~ "The version control method may be selected via the --backup option or "
+#~ "through\n"
+#~ "the VERSION_CONTROL environment variable.  Here are the values:\n"
+#~ "\n"
+#~ "  none, off       never make backups (even if --backup is given)\n"
+#~ "  numbered, t     make numbered backups\n"
+#~ "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
+#~ "  simple, never   always make simple backups\n"
+#~ msgstr ""
+#~ "備檔字尾用 SIMPLE_BACKUP_SUFFIX 之設定, 如沒設定, 則為 ~\n"
+#~ "備份版本控制規格則利用 VERSION_CONTROL 來設定, 可用值為:\n"
+#~ "  t, numbered     使用備份號碼\n"
+#~ "  nil, existing   如有用號碼之備份存在,便使用備份號碼,否則,使用簡單備份.\n"
+#~ "  never, simple   使用簡單備份\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "As a special case, cp makes a backup of SOURCE when the force and backup\n"
+#~ "options are given and SOURCE and DEST are the same name for an existing,\n"
+#~ "regular file.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "當 SOURCE 及 DEST 為同一常規檔案, 及 --backup 和 --force "
+#~ "兩選項同時被使用時,\n"
+#~ "  cp 會將 SOURCE 備份\n"
+
+#, fuzzy
+#~ msgid "cannot make directory %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#~ msgid "missing file arguments"
+#~ msgstr "引數中沒有檔案名"
+
+#~ msgid "missing destination file"
+#~ msgstr "沒有目的地檔名"
+
+#, fuzzy
+#~ msgid "accessing %s"
+#~ msgstr "不能將 `%s' 備份"
+
+#, fuzzy
+#~ msgid "specified target, %s is not a directory"
+#~ msgstr "`%s' 並非目錄"
+
+#, fuzzy
+#~ msgid "copying multiple files, but last argument %s is not a directory"
+#~ msgstr "複製多個檔案, 但最後的引數 (%s) 並非目錄名."
+
+#, fuzzy
+#~ msgid "when preserving paths, the destination must be a directory"
+#~ msgstr "保留檔案屬性時, 最後的那個引數必需為目錄名."
+
+#~ msgid "symbolic links are not supported on this system"
+#~ msgstr "本系統並不支援符號連結"
+
+#~ msgid "cannot make both hard and symbolic links"
+#~ msgstr "不能同時建立硬連結及符號連結"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]\n"
+#~ msgstr "用法: %s [選項]... [FILE]\n"
+
+#~ msgid ""
+#~ "Output commands to set the LS_COLORS environment variable.\n"
+#~ "\n"
+#~ "Determine format of output:\n"
+#~ "  -b, --sh, --bourne-shell    output Bourne shell code to set LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        output C shell code to set LS_COLORS\n"
+#~ "  -p, --print-database        output defaults\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If FILE is specified, read it to determine which colors to use for which\n"
+#~ "file types and extensions.  Otherwise, a precompiled database is used.\n"
+#~ "For details on the format of these files, run `dircolors --print-database'.\n"
+#~ msgstr ""
+#~ "輸出用來設定 LS_COLORS 環境變數之指令\n"
+#~ "\n"
+#~ "指定輸出之規格:\n"
+#~ "  -b, --sh, --bourne-shell    輸出設定 LS_COLORS 之 Bourne shell 碼\n"
+#~ "  -c, --csh, --c-shell        輸出設定 LS_COLORS 之 C shell 碼\n"
+#~ "  -p, --print-database        輸出檔名轉顏色之資料庫\n"
+#~ "      --help                  顯示本文,然後離開\n"
+#~ "      --version               顯示版本資料,然後離開\n"
+#~ "\n"
+#~ "FILE 為檔名轉顏色之資料庫. 如沒有 FILE, 則用一已編譯了的資料庫.\n"
+#~ "請用 `dircolors --print-database' 來顯示檔名轉顏色資料庫的格式.\n"
+
+#, fuzzy
+#~ msgid "%s:%lu: unrecognized keyword %s"
+#~ msgstr "%s:%lu: 不能識別關鍵字 `%s'"
+
+#~ msgid ""
+#~ "the options to output dircolors' internal database and\n"
+#~ "to select a shell syntax are mutually exclusive"
+#~ msgstr ""
+#~ "顯示檔名轉顏色資料庫格式之選項, \n"
+#~ "不能指定輸出之規格之選項共用."
+
+#~ msgid ""
+#~ "no FILE arguments may be used with the option to output\n"
+#~ "dircolors' internal database"
+#~ msgstr ""
+#~ "FILE 引數不能與顯示檔名轉顏色資料庫格式之選項共用\n"
+#~ "  "
+
+#~ msgid "too many arguments"
+#~ msgstr "引數太多"
+
+#~ msgid "no SHELL environment variable, and no shell type option given"
+#~ msgstr "輸出規格不詳: 既沒有以引數指定, 亦沒有 SHELL 環境變數."
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "用法: %s [選項]... [FILE]...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Show information about the filesystem on which each FILE resides,\n"
+#~ "or all filesystems by default.\n"
+#~ "\n"
+#~ "  -a, --all             include filesystems having 0 blocks\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -i, --inodes          list inode information instead of block usage\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --local           limit listing to local filesystems\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "      --no-sync         do not invoke sync before getting usage info "
+#~ "(default)\n"
+#~ "  -P, --portability     use the POSIX output format\n"
+#~ "      --sync            invoke sync before getting usage info\n"
+#~ "  -t, --type=TYPE       limit listing to filesystems of type TYPE\n"
+#~ "  -T, --print-type      print filesystem type\n"
+#~ "  -x, --exclude-type=TYPE   limit listing to filesystems not of type TYPE\n"
+#~ "  -v                    (ignored)\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "有 FILE 這引數時, 顯示 FILE 所在的檔案系統之資料, 否則, "
+#~ "顯示所有檔案系統的資料.\n"
+#~ "\n"
+#~ "  -a, --all               連只有零個區塊的檔案系統的資料也顯示\n"
+#~ "  -h, --human-readable    以易讀的方法 (如 1K 234M 2G) 來顯示容量\n"
+#~ "  -i, --inodes            顯示 inode 的資料, 而非檔案系統中區塊的用量\n"
+#~ "  -k, --kilobytes         不理 POSIXLY_CORRECT, 將區塊容量當作 1024 位元組\n"
+#~ "  -m, --megabytes         不理 POSIXLY_CORRECT, 將區塊容量當作 1024k 位元組\n"
+#~ "      --no-sync           讀取檔案系統用量前, 不執行 sync 這指令 "
+#~ "(此乃預設值)\n"
+#~ "  -P, --portability       用 POSIX 格式來輸出\n"
+#~ "      --sync              讀取檔案系統用量前, 執行 sync 這指令\n"
+#~ "  -t, --type=TYPE         只顯示類型為 TYPE 的檔案系統的資料\n"
+#~ "  -T, --print-type        顯示檔案系統的類型\n"
+#~ "  -x, --exclude-type=TYPE 只顯示類型不是 TYPE 的檔案系統的資料\n"
+#~ "  -v                      (這選項不被處理)\n"
+#~ "      --help              顯示本文,然後離開\n"
+#~ "      --version           顯示版本資料,然後離開\n"
+#~ "\n"
+#~ "POSIXLY_CORRECT 的區塊容量為 512 位元組\n"
+
+#, fuzzy
+#~ msgid "file system type %s both selected and excluded"
+#~ msgstr "不能又顯示, 又不顯示類型為 %s 的檔案系統的資料"
+
+#, fuzzy
+#~ msgid "%scannot read table of mounted filesystems"
+#~ msgstr "不能讀取已裝接的檔案系統的名單"
+
+#, fuzzy
+#~ msgid ""
+#~ "Summarize disk usage of each FILE, recursively for directories.\n"
+#~ "\n"
+#~ "  -a, --all             write counts for all files, not just directories\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -b, --bytes           print size in bytes\n"
+#~ "  -c, --total           produce a grand total\n"
+#~ "  -D, --dereference-args  dereference PATHs when symbolic link\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --count-links     count sizes many times if hard linked\n"
+#~ "  -L, --dereference     dereference all symbolic links\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "  -S, --separate-dirs   do not include size of subdirectories\n"
+#~ "  -s, --summarize       display only a total for each argument\n"
+#~ "  -x, --one-file-system  skip directories on different filesystems\n"
+#~ "  -X FILE, --exclude-from=FILE  Exclude files that match any pattern in "
+#~ "FILE.\n"
+#~ "      --exclude=PAT     Exclude files that match PAT.\n"
+#~ "      --max-depth=N     print the total for a directory (or file, with "
+#~ "--all)\n"
+#~ "                          only if it is N or fewer levels below the command\n"
+#~ "                          line argument;  --max-depth=0 is the same as\n"
+#~ "                          --summarize\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "顯示每個 FILE (檔案及子目錄)在檔案系統內的用量 \n"
+#~ "\n"
+#~ "  -a, --all               顯示每個檔案的用量, 而非只將子目錄用量摘要\n"
+#~ "  -b, --bytes             以位元組為單位\n"
+#~ "  -c, --total             顯示總用量\n"
+#~ "  -D, --dereference-args  從符號連結中, 找出引數中檔案或子目錄的路徑\n"
+#~ "  -h, --human-readable    以易讀的方法 (如 1K 234M 2G) 來顯示用量\n"
+#~ "  -k, --kilobytes         不理 POSIXLY_CORRECT, 將區塊容量當作 1024 位元組\n"
+#~ "  -l, --count-links       重覆計算有硬連結的檔案的用量\n"
+#~ "  -L, --dereference       從符號連結中找出所有檔案或子目錄的路徑\n"
+#~ "  -m, --megabytes         不理 POSIXLY_CORRECT, 將區塊容量當作 1024k 位元組\n"
+#~ "  -S, --separate-dirs     不要包括子目錄的用量\n"
+#~ "  -s, --summarize         只顯示總用量\n"
+#~ "  -x, --one-file-system   只顯示在本檔案系統中的檔案的用量\n"
+#~ "      --help              顯示本文,然後離開\n"
+#~ "      --version           顯示版本資料,然後離開\n"
+#~ "\n"
+#~ "POSIXLY_CORRECT 的區塊容量為 512 位元組\n"
+
+#~ msgid "cannot change to `..' from directory %s"
+#~ msgstr "不能轉至 %s 的母目錄"
+
+#~ msgid "cannot change to directory %s"
+#~ msgstr "不能將目錄轉至 %s"
+
+#, fuzzy
+#~ msgid "total"
+#~ msgstr "%ld\t總用量\n"
+
+#, fuzzy
+#~ msgid "invalid maximum depth %s"
+#~ msgstr "保護模式 `%s' 無效"
+
+#~ msgid "cannot both summarize and show all entries"
+#~ msgstr "不能又只顯示總用量, 又顯示每個檔案的用量"
+
+#~ msgid "the strip option may not be used when installing a directory"
+#~ msgstr "安裝目錄時, 不能用 strip 這選項"
+
+#, fuzzy
+#~ msgid "invalid mode %s"
+#~ msgstr "保護模式 `%s' 無效"
+
+#, fuzzy
+#~ msgid "creating directory %s"
+#~ msgstr "建立了新的目錄 `%s'"
+
+#, fuzzy
+#~ msgid "installing multiple files, but last argument, %s is not a directory"
+#~ msgstr "複製多個檔案, 但最後的引數 (%s) 並非目錄名."
+
+#, fuzzy
+#~ msgid "%s is a directory"
+#~ msgstr "%s 為目錄"
+
+#, fuzzy
+#~ msgid "cannot obtain time stamps for %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid "cannot set time stamps for %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid "cannot fork"
+#~ msgstr "不能將 `%s' 備份"
+
+#~ msgid "cannot run strip"
+#~ msgstr "不能執行 strip 這指令"
+
+#, fuzzy
+#~ msgid "invalid user %s"
+#~ msgstr "找不到 `%s' 這用者"
+
+#, fuzzy
+#~ msgid "invalid group %s"
+#~ msgstr "找不到 `%s' 這組別"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST           (1st format)\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY   (2nd format)\n"
+#~ "  or:  %s -d [OPTION]... DIRECTORY...       (3rd format)\n"
+#~ msgstr ""
+#~ "用法: %s [選項]... SOURCE DEST           (格式一)\n"
+#~ "  或: %s [選項]... SOURCE... DIRECTORY   (格式二)\n"
+#~ "  或: %s -d [選項]... DIRECTORY...       (格式三)\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "In the first two formats, copy SOURCE to DEST or multiple SOURCE(s) to\n"
+#~ "the existing DIRECTORY, while setting permission modes and owner/group.\n"
+#~ "In the third format, create all components of the given DIRECTORY(ies).\n"
+#~ "\n"
+#~ "      --backup[=CONTROL] make a backup of each existing destination file\n"
+#~ "  -b                  like --backup but does not accept an argument\n"
+#~ "  -c                  (ignored)\n"
+#~ "  -d, --directory     treat all arguments as directory names; create all\n"
+#~ "                        components of the specified directories\n"
+#~ "  -D                  create all leading components of DEST except the "
+#~ "last,\n"
+#~ "                        then copy SOURCE to DEST;  useful in the 1st format\n"
+#~ "  -g, --group=GROUP   set group ownership, instead of process' current "
+#~ "group\n"
+#~ "  -m, --mode=MODE     set permission mode (as in chmod), instead of "
+#~ "rwxr-xr-x\n"
+#~ "  -o, --owner=OWNER   set ownership (super-user only)\n"
+#~ "  -p, --preserve-timestamps   apply access/modification times of SOURCE "
+#~ "files\n"
+#~ "                        to corresponding destination files\n"
+#~ "  -s, --strip         strip symbol tables, only for 1st and 2nd formats\n"
+#~ "  -S, --suffix=SUFFIX override the usual backup suffix\n"
+#~ "  -v, --verbose       print the name of each directory as it is created\n"
+#~ "      --help          display this help and exit\n"
+#~ "      --version       output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "格式一: 將 SOURCE 複製至 DEST, 並設定擁有者及組別\n"
+#~ "格式二: 將多個 SOURCE 複製至目錄 DIRECTORY, 並設定擁有者及組別\n"
+#~ "格式三: 製造每個目錄的每個元件\n"
+#~ "\n"
+#~ "  -b, --backup        移除前先備份\n"
+#~ "  -c                  (這選項不被處理)\n"
+#~ "  -d, --directory     製造目錄 (格式三必需)\n"
+#~ "  -g, --group=GROUP   設定組別為 GROUP\n"
+#~ "  -m, --mode=MODE     設定保護模式為 MODE, 而不用 rw-r--r--\n"
+#~ "  -o, --owner=OWNER   設定擁有者為 OWNER (只限 super-user)\n"
+#~ "  -s, --strip         移除符號表 (格式一及二用)\n"
+#~ "  -S, --suffix=SUFFIX 用 SUFFIX 作備檔之檔名尾\n"
+#~ "  -V, --version-control=WORD   用 WORD 作備份版本控制的規格\n"
+#~ "      --help          顯示本文,然後離開\n"
+#~ "      --version       顯示版本資料,然後離開\n"
+#~ "\n"
+
+#~ msgid "%s: hard link not allowed for directory"
+#~ msgstr "%s: 不能建立至硬連結之目錄"
+
+#~ msgid "%s: cannot overwrite directory"
+#~ msgstr "%s: 不能蓋\寫目錄"
+
+#, fuzzy
+#~ msgid "%s: replace %s? "
+#~ msgstr "%s: 蓋\寫 `%s'? "
+
+#~ msgid "%s: File exists"
+#~ msgstr "檔案 %s 已存在"
+
+#, fuzzy
+#~ msgid "create symbolic link %s to %s"
+#~ msgstr "不能製造符號連結 `%s'"
+
+#, fuzzy
+#~ msgid "create hard link %s to %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid "creating symbolic link %s to %s"
+#~ msgstr "不能製造符號連結 `%s'"
+
+#, fuzzy
+#~ msgid "creating hard link %s to %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY TARGET...\n"
+#~ msgstr ""
+#~ "用法: %s [選項]... SOURCE DEST           (格式一)\n"
+#~ "  或: %s [選項]... SOURCE... DIRECTORY   (格式二)\n"
+#~ "  或: %s -d [選項]... DIRECTORY...       (格式三)\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Create a link to the specified TARGET with optional LINK_NAME.\n"
+#~ "If LINK_NAME is omitted, a link with the same basename as the TARGET is\n"
+#~ "created in the current directory.  When using the second form with more\n"
+#~ "than one TARGET, the last argument must be a directory;  create links\n"
+#~ "in DIRECTORY to each TARGET.  Create hard links by default, symbolic\n"
+#~ "links with --symbolic.  When creating hard links, each TARGET must exist.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]      make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                          like --backup but does not accept an argument\n"
+#~ "  -d, -F, --directory         hard link directories (super-user only)\n"
+#~ "  -f, --force                 remove existing destination files\n"
+#~ "  -n, --no-dereference        treat destination that is a symlink to a\n"
+#~ "                                directory as if it were a normal file\n"
+#~ "  -i, --interactive           prompt whether to remove destinations\n"
+#~ "  -s, --symbolic              make symbolic links instead of hard links\n"
+#~ "  -S, --suffix=SUFFIX         override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  specify the DIRECTORY in which to "
+#~ "create\n"
+#~ "                                the links\n"
+#~ "  -v, --verbose               print name of each file before linking\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "建立由 SOURCE 至 DEST 之連結. DEST 之預設值為 `.'\n"
+#~ "如有多個 SOURCE, 則建立由 SOURCE 至 DIRECTORY 之連結.\n"
+#~ "如用 -s 選項, 便建立符號連結, 否則, 建立硬連結.\n"
+#~ "\n"
+#~ "  -b, --backup                 移除前先備份\n"
+#~ "  -d, -F, --directory          建立至目錄之硬連結 (只限 super-user)\n"
+#~ "  -f, --force                  不問用者, 移除本已存在的目的地檔案或目錄\n"
+#~ "  -n, --no-dereference         如目的地檔為符號連結至之目錄, "
+#~ "將之當作普通的檔案\n"
+#~ "  -i, --interactive            刪除目的地檔案或目錄前, 先問用者\n"
+#~ "  -s, --symbolic               建立符號連結而不是建立硬連結\n"
+#~ "  -S, --suffix=SUFFIX          用 SUFFIX 作備檔之檔名尾\n"
+#~ "  -v, --verbose                建立連結前先顯示檔案名\n"
+#~ "  -V, --version-control=WORD   用 WORD 作備份版本控制的規格\n"
+#~ "      --help                   顯示本文,然後離開\n"
+#~ "      --version                顯示版本資料,然後離開\n"
+#~ "\n"
+
+#~ msgid "missing file argument"
+#~ msgstr "引數中沒有檔案名"
+
+#, fuzzy
+#~ msgid "specified target directory, %s is not a directory"
+#~ msgstr "`%s' 並非目錄"
+
+#~ msgid "when making multiple links, last argument must be a directory"
+#~ msgstr "建立多個連結時, 最後的引數必需為目錄名"
+
+#~ msgid "ignoring invalid width in environment variable COLUMNS: %s"
+#~ msgstr "環境變數 COLUMNS 中寬度之數值 %s 無效, 不被處理."
+
+#~ msgid "ignoring invalid tab size in environment variable TABSIZE: %s"
+#~ msgstr "環境變數 TABSIZE 中定位點矩之數值 %s 無效, 不被處理."
+
+#~ msgid "invalid line width: %s"
+#~ msgstr "行寬數值 %s 無效"
+
+#~ msgid "invalid tab size: %s"
+#~ msgstr "定位點矩數值 %s 無效"
+
+#~ msgid "unrecognized prefix: %s"
+#~ msgstr "不能識別檔案種類代號 %s"
+
+#~ msgid "unparsable value for LS_COLORS environment variable"
+#~ msgstr "不能完全明白 LS_COLORS 環境變數之內容"
+
+#, fuzzy
+#~ msgid ""
+#~ "List information about the FILEs (the current directory by default).\n"
+#~ "Sort entries alphabetically if none of -cftuSUX nor --sort.\n"
+#~ "\n"
+#~ "  -a, --all                  do not hide entries starting with .\n"
+#~ "  -A, --almost-all           do not list implied . and ..\n"
+#~ "  -b, --escape               print octal escapes for nongraphic characters\n"
+#~ "      --block-size=SIZE      use SIZE-byte blocks\n"
+#~ "  -B, --ignore-backups       do not list implied entries ending with ~\n"
+#~ "  -c                         with -lt: sort by, and show, ctime (time of "
+#~ "last\n"
+#~ "                               modification of file status information)\n"
+#~ "                               with -l: show ctime and sort by name\n"
+#~ "                               otherwise: sort by ctime\n"
+#~ "  -C                         list entries by columns\n"
+#~ "      --color[=WHEN]         control whether color is used to distinguish "
+#~ "file\n"
+#~ "                               types.  WHEN may be `never', `always', or "
+#~ "`auto'\n"
+#~ "  -d, --directory            list directory entries instead of contents\n"
+#~ "  -D, --dired                generate output designed for Emacs' dired mode\n"
+#~ "  -f                         do not sort, enable -aU, disable -lst\n"
+#~ "  -F, --classify             append indicator (one of */=@|) to entries\n"
+#~ "      --format=WORD          across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            list both full date and full time\n"
+#~ msgstr ""
+#~ "顯示 FILE 之資料. 如沒有 FILE, 則顯示現用工作目錄的資料.\n"
+#~ "如沒有 -cftuSUX 或 --sort 這選項, 輸出將以英文字母的順序排列\n"
+#~ "\n"
+#~ "  -a, --all                  不要不顯示用 . 開頭的檔案\n"
+#~ "  -A, --almost-all           不要顯示 . 和 ..\n"
+#~ "  -b, --escape               以八進制碼來顯示不能列印的字元\n"
+#~ "  -B, --ignore-backups       不要顯示用 ~ 結尾的檔案 \n"
+#~ "  -c                         用建立檔案的時間來排序\n"
+#~ "                               如與 -l 共用, 則顯示建立檔案的時間\n"
+#~ "  -C                         以直行顯示檔名\n"
+#~ "      --color[=WHEN]         控制何時以顏色來區分檔案類別\n"
+#~ "                               WHEN 可以是 `never', `always' 或 `auto'\n"
+#~ "  -d, --directory            顯示目錄本身, 而非目錄內容\n"
+#~ "  -D, --dired                以供 Emacs dired 用的模式輸出\n"
+#~ "  -f                         不用排序, 啟動 -au, 取消 -lst 選項\n"
+#~ "  -F, --classify             檔名後加一個字母以區分檔案類別\n"
+#~ "      --format=WORD          WORD 可以是 across (-x), commas (-m),\n"
+#~ "                               horizontal (-x), long (-l), single-column "
+#~ "(-1),\n"
+#~ "                               verbose (-l), 或 vertical (-C)\n"
+#~ "      --full-time            顯示整個日期與時間\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -g                         (ignored)\n"
+#~ "  -G, --no-group             inhibit display of group information\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "      --si                   likewise, but use powers of 1000 not 1024\n"
+#~ "  -H                         same as `--si' for now; soon to change\n"
+#~ "                               to conform to POSIX\n"
+#~ "      --indicator-style=WORD append indicator with style WORD to entry "
+#~ "names:\n"
+#~ "                               none (default), classify (-F), file-type "
+#~ "(-p)\n"
+#~ "  -i, --inode                print index number of each file\n"
+#~ "  -I, --ignore=PATTERN       do not list implied entries matching shell "
+#~ "PATTERN\n"
+#~ "  -k, --kilobytes            like --block-size=1024\n"
+#~ "  -l                         use a long listing format\n"
+#~ "  -L, --dereference          list entries pointed to by symbolic links\n"
+#~ "  -m                         fill width with a comma separated list of "
+#~ "entries\n"
+#~ "  -n, --numeric-uid-gid      list numeric UIDs and GIDs instead of names\n"
+#~ "  -N, --literal              print raw entry names (don't treat e.g. "
+#~ "control\n"
+#~ "                               characters specially)\n"
+#~ "  -o                         use long listing format without group info\n"
+#~ "  -p, --file-type            append indicator (one of /=@|) to entries\n"
+#~ "  -q, --hide-control-chars   print ? instead of non graphic characters\n"
+#~ "      --show-control-chars   show non graphic characters as-is (default\n"
+#~ "                             unless program is `ls' and output is a "
+#~ "terminal)\n"
+#~ "  -Q, --quote-name           enclose entry names in double quotes\n"
+#~ "      --quoting-style=WORD   use quoting style WORD for entry names:\n"
+#~ "                               literal, locale, shell, shell-always, c, "
+#~ "escape\n"
+#~ "  -r, --reverse              reverse order while sorting\n"
+#~ "  -R, --recursive            list subdirectories recursively\n"
+#~ "  -s, --size                 print size of each file, in blocks\n"
+#~ msgstr ""
+#~ "  -g                         (這選項不被處理)\n"
+#~ "  -G, --no-group             不要顯示群組資料\n"
+#~ "  -i, --inode                顯示檔案之 inode 號碼\n"
+#~ "  -I, --ignore=PATTERN       不要顯示與 PATTERN 相符的檔名\n"
+#~ "  -k, --kilobytes            不理 POSIXLY_CORRECT, 將區塊容量當作 1024 "
+#~ "位元組\n"
+#~ "  -l                         以長格式輸出\n"
+#~ "  -L, --dereference          顯示被連結的檔案的資料\n"
+#~ "  -m                         檔名用逗號分開, 用盡畫面闊度\n"
+#~ "  -n, --numeric-uid-gid      顯示 UID 及 GID 之數值\n"
+#~ "  -N, --literal              直接列印檔名, 不要特別處理\n"
+#~ "  -o                         以長格式輸出, 但不要群組資料\n"
+#~ "  -p                         檔名後加一個字母以區分檔案類別\n"
+#~ "  -q, --hide-control-chars   以 ? 來代替不能列印的字元\n"
+#~ "  -Q, --quote-name           用 \"\" 來包圍檔名\n"
+#~ "  -r, --reverse              倒序排列\n"
+#~ "  -R, --recursive            將子目錄下之檔案及目錄作同樣處理\n"
+#~ "  -s, --size                 以區塊多少來顯示檔案大小\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -S                         sort by file size\n"
+#~ "      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+#~ "                               version -v\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=WORD            show time as WORD instead of modification "
+#~ "time:\n"
+#~ "                               atime, access, use, ctime or status; use\n"
+#~ "                               specified time as sort key if --sort=time\n"
+#~ "  -t                         sort by modification time\n"
+#~ "  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8\n"
+#~ "  -u                         with -lt: sort by, and show, access time\n"
+#~ "                               with -l: show access time and sort by name\n"
+#~ "                               otherwise: sort by access time\n"
+#~ "  -U                         do not sort; list entries in directory order\n"
+#~ "  -v                         sort by version\n"
+#~ "  -w, --width=COLS           assume screen width instead of current value\n"
+#~ "  -x                         list entries by lines instead of by columns\n"
+#~ "  -X                         sort alphabetically by entry extension\n"
+#~ "  -1                         list one file per line\n"
+#~ "      --help                 display this help and exit\n"
+#~ "      --version              output version information and exit\n"
+#~ "\n"
+#~ "By default, color is not used to distinguish types of files.  That is\n"
+#~ "equivalent to using --color=none.  Using the --color option without the\n"
+#~ "optional WHEN argument is equivalent to using --color=always.  With\n"
+#~ "--color=auto, color codes are output only if standard output is connected\n"
+#~ "to a terminal (tty).\n"
+#~ msgstr ""
+#~ "  -S                         以檔案大小排序\n"
+#~ "      --sort=WORD            WORD 可以是 ctime (-c), extension (-X),\n"
+#~ "                               none (-U), size (-S), status (-c), time "
+#~ "(-t),\n"
+#~ "                               atime (-u), access (-u), 或 use (-u)\n"
+#~ "      --time=WORD            檔案時間用 WORD 來指定,\n"
+#~ "                               可以是 atime, access, use, ctime 或 status\n"
+#~ "  -t                         用檔案變更時間排序\n"
+#~ "                               如與 -l 共用, 則顯示檔案變更時間\n"
+#~ "  -T, --tabsize=COLS         不用 8 而用 COLS 作跳格距離\n"
+#~ "  -u                         用最近存取檔案的時間來排序\n"
+#~ "                               如與 -l 共用, 則顯示最近存取檔案的時間\n"
+#~ "  -U                         不用排序\n"
+#~ "  -w, --width=COLS           用 COLS 作畫面闊度\n"
+#~ "  -x                         將檔名以橫行列印\n"
+#~ "  -X                         以副檔名排序\n"
+#~ "  -1                         每行只列一個檔案名\n"
+#~ "      --help                 顯示本文,然後離開\n"
+#~ "      --version              顯示版本資料,然後離開\n"
+#~ "\n"
+#~ "如不用 --color 選項, 輸出將沒有顏色. 這與選了 --color=none 一樣.\n"
+#~ "如用 --color 選項, 但沒有 WHEN 這引數, 輸出將與用了 --color=always 相同.\n"
+#~ "當用了 --color=auto 時, 輸出將於標準輸出連接了終端機 (tty) 時才有顏色.\n"
+#~ "\n"
+#~ "POSIXLY_CORRECT 的區塊容量為 512 位元組\n"
+
+#~ msgid "Usage: %s [OPTION] DIRECTORY...\n"
+#~ msgstr "用法: %s [選項] DIRECTORY...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Create the DIRECTORY(ies), if they do not already exist.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not rwxrwxrwx - "
+#~ "umask\n"
+#~ "  -p, --parents     no error if existing, make parent directories as needed\n"
+#~ "  -v, --verbose     print a message for each created directory\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "建立新的目錄 DIRECTORY\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   設定保護模式為 MODE 而非 rwxrwxrwx - umask\n"
+#~ "  -p, --parents     需要時建立母目錄. 如目錄本已存在, 將不當作錯誤\n"
+#~ "      --verbose     顯示每個新目錄的名字\n"
+#~ "      --help        顯示本文,然後離開\n"
+#~ "      --version     顯示版本資料,然後離開\n"
+
+#, fuzzy
+#~ msgid "created directory %s"
+#~ msgstr "建立了新的目錄 `%s'"
+
+#, fuzzy
+#~ msgid "cannot set permissions of directory %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#~ msgid "Usage: %s [OPTION] NAME...\n"
+#~ msgstr "用法: %s [選項] NAME...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Create named pipes (FIFOs) with the given NAMEs.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "建立以 NAME 命名的先入先出 (FIFO) 檔案\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   設定保護模式為 MODE 而非 0666 - umask\n"
+#~ "      --help        顯示本文,然後離開\n"
+#~ "      --version     顯示版本資料,然後離開\n"
+
+#~ msgid "fifo files not supported"
+#~ msgstr "本系統並不支援有名的先入先出 (FIFO) 檔案"
+
+#~ msgid "invalid mode"
+#~ msgstr "保護模式無效"
+
+#, fuzzy
+#~ msgid "cannot create fifo `%s'"
+#~ msgstr "不能製造 fifo 檔案 `%s'"
+
+#, fuzzy
+#~ msgid "cannot set permissions of fifo `%s'"
+#~ msgstr "不能製造目錄 `%s'"
+
+#~ msgid "Usage: %s [OPTION]... NAME TYPE [MAJOR MINOR]\n"
+#~ msgstr "用法: %s [選項]... NAME TYPE [MAJOR MINOR]\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Create the special file NAME of the given TYPE.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ "\n"
+#~ "MAJOR MINOR are forbidden for TYPE p, mandatory otherwise.  TYPE may be:\n"
+#~ "\n"
+#~ "  b      create a block (buffered) special file\n"
+#~ "  c, u   create a character (unbuffered) special file\n"
+#~ "  p      create a FIFO\n"
+#~ msgstr ""
+#~ "建立以 NAME 為名而類型為 TYPE 的特別檔案\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   定保護模式為 MODE 而非 0666 - umask\n"
+#~ "      --help        顯示本文,然後離開\n"
+#~ "      --version     顯示版本資料,然後離開\n"
+#~ "\n"
+#~ "當 TYPE 為 p 時, 不能有 MAJOR 及 MINOR 這兩個引數,\n"
+#~ "  否則, 這兩個引數必須存在.\n"
+#~ "MAJOR 及 MINOR 分別為主器件號碼及次器件號碼.\n"
+#~ "\n"
+#~ "TYPE 可以為:\n"
+#~ "\n"
+#~ "  b      建立區塊(有緩衝的)特別檔案\n"
+#~ "  c, u   建立字元(沒有緩衝的)特別檔案\n"
+#~ "  p      建立先入先出 (FIFO) 特別檔案\n"
+
+#~ msgid "wrong number of arguments"
+#~ msgstr "引數數量不對"
+
+#~ msgid "block special files not supported"
+#~ msgstr "本系統並不支援區塊特別檔案"
+
+#~ msgid ""
+#~ "when creating block special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "建立區塊特別檔案時, \n"
+#~ "必需有主次兩個器件號碼."
+
+#, fuzzy
+#~ msgid "invalid major device number %s"
+#~ msgstr "主器件號碼 `%s' 無效"
+
+#, fuzzy
+#~ msgid "invalid minor device number %s"
+#~ msgstr "次器件號碼 `%s' 無效"
+
+#~ msgid "character special files not supported"
+#~ msgstr "本系統並不支援字元特別檔案"
+
+#~ msgid ""
+#~ "when creating character special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr "建立字元特別檔時, 必需有主次兩個器件號碼."
+
+#~ msgid "major and minor device numbers may not be specified for fifo files"
+#~ msgstr "建立 FIFO 特別檔案時, 無需主次器件號碼."
+
+#, fuzzy
+#~ msgid "cannot set permissions of `%s'"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid ""
+#~ "Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -f, --force                  never prompt before overwriting\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "      --strip-trailing-slashes  remove any trailing slashes from each "
+#~ "SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 move only older or brand new non-directories\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "將檔案 SOURCE 改名至 DEST, 或將多個 SOURCE 移至目錄 DIRECTORY.\n"
+#~ "\n"
+#~ "  -b, --backup                 移除前先備份\n"
+#~ "  -f, --force                  不問用者, 移除本已存在的目的地檔案或目錄.\n"
+#~ "  -i, --interactive            覆寫檔案前, 先問用者.\n"
+#~ "  -S, --suffix=SUFFIX          用 SUFFIX 作備檔之檔名尾\n"
+#~ "  -u, --update                 只於源檔案比目的地檔新,或目的地檔不存在時,\n"
+#~ "                                 才移動檔案\n"
+#~ "  -v, --verbose                報告程式之運作情況\n"
+#~ "  -V, --version-control=WORD   用 WORD 作備份版本控制的規格\n"
+#~ "      --help                   顯示本文,然後離開\n"
+#~ "      --version                顯示版本資料,然後離開\n"
+#~ "\n"
+
+#~ msgid "when moving multiple files, last argument must be a directory"
+#~ msgstr "移動多個檔案時, 最後的引數必需為目錄名."
+
+#, fuzzy
+#~ msgid "cannot open directory %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid "closing directory %s"
+#~ msgstr "%s: 刪除目錄 `%s' 嗎? "
+
+#, fuzzy
+#~ msgid "%s: remove write-protected directory %s? "
+#~ msgstr "%s: 刪除目錄 `%s' 嗎? "
+
+#, fuzzy
+#~ msgid "%s: remove write-protected file %s? "
+#~ msgstr "%s: 刪除目錄 `%s' 嗎? "
+
+#, fuzzy
+#~ msgid "%s: remove directory %s? "
+#~ msgstr "%s: 刪除目錄 `%s' 嗎? "
+
+#, fuzzy
+#~ msgid "%s: remove %s? "
+#~ msgstr "%s: 刪除%s`%s'? "
+
+#, fuzzy
+#~ msgid "cannot unlink %s"
+#~ msgstr "不能解除 `%s' 之連結"
+
+#, fuzzy
+#~ msgid "%s: descend into directory %s? "
+#~ msgstr "%s: 進入目錄 `%s'? "
+
+#, fuzzy
+#~ msgid "removing all entries of directory %s\n"
+#~ msgstr "建立了新的目錄 `%s'"
+
+#, fuzzy
+#~ msgid "cannot lstat `.' in %s"
+#~ msgstr "不能製造連結 `%s'"
+
+#, fuzzy
+#~ msgid "cannot change back to directory %s via `..'"
+#~ msgstr "不能將目錄轉至 %s"
+
+#, fuzzy
+#~ msgid "%s: remove directory %s%s? "
+#~ msgstr "%s: 刪除目錄 `%s' 嗎? "
+
+#, fuzzy
+#~ msgid "removing the directory itself: %s\n"
+#~ msgstr "%s: 刪除目錄 `%s' 嗎? "
+
+#, fuzzy
+#~ msgid "cannot remove current directory %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove directory %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#~ msgid "cannot remove `.' or `..'"
+#~ msgstr "不能刪除 `.' 或 `..'"
+
+#, fuzzy
+#~ msgid ""
+#~ "WARNING: Circular directory structure.\n"
+#~ "This almost certainly means that you have a corrupted file system.\n"
+#~ "NOTIFY YOUR SYSTEM MANAGER.\n"
+#~ "The following two directories have the same inode number:\n"
+#~ msgstr ""
+#~ "%s: 警告: 發現循環的目錄架構.\n"
+#~ "幾乎肯定, 你的檔案系統經已壞掉.\n"
+#~ "請告訴你的系統的負責人.\n"
+#~ "\n"
+#~ "被發現的循環目錄架構是:\n"
+#~ "%s\n"
+#~ "與以下檔案相同:\n"
+
+#, fuzzy
+#~ msgid "continue? "
+#~ msgstr "%s: 繼續嗎? "
+
+#~ msgid "Usage: %s [OPTION]... FILE...\n"
+#~ msgstr "用法: %s [選項]... FILE...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Remove (unlink) the FILE(s).\n"
+#~ "\n"
+#~ "  -d, --directory       unlink directory, even if non-empty (super-user "
+#~ "only)\n"
+#~ "  -f, --force           ignore nonexistent files, never prompt\n"
+#~ "  -i, --interactive     prompt before any removal\n"
+#~ "  -r, -R, --recursive   remove the contents of directories recursively\n"
+#~ "  -v, --verbose         explain what is being done\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ "\n"
+#~ "To remove a file whose name starts with a `-', for example `-foo',\n"
+#~ "use one of these commands:\n"
+#~ "  %s -- -foo\n"
+#~ "\n"
+#~ "  %s ./-foo\n"
+#~ "\n"
+#~ "Note that if you use rm to remove a file, it is usually possible to recover\n"
+#~ "the contents of that file.  If you want more assurance that the contents "
+#~ "are\n"
+#~ "truly unrecoverable, consider using shred.\n"
+#~ msgstr ""
+#~ "刪除 FILE, 即解除它們之連結\n"
+#~ "\n"
+#~ "  -d, --directory       刪除可能有資料的目錄 (只限 super-user)\n"
+#~ "  -f, --force           不問問題, 不理並不存在的檔案.\n"
+#~ "  -i, --interactive     刪除任何檔案前, 先問用者.\n"
+#~ "  -r, -R, --recursive   刪除子目錄下之檔案及目錄\n"
+#~ "  -v, --verbose         報告程式之運作情況\n"
+#~ "      --help            顯示本文,然後離開\n"
+#~ "      --version         顯示版本資料,然後離開\n"
+
+#, fuzzy
+#~ msgid "removing directory, %s"
+#~ msgstr "%s: 刪除目錄 `%s' 嗎? "
+
+#~ msgid "Usage: %s [OPTION]... DIRECTORY...\n"
+#~ msgstr "用法: %s [選項]... DIRECTORY...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Remove the DIRECTORY(ies), if they are empty.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ignore each failure that is solely because a directory\n"
+#~ "                  is non-empty\n"
+#~ "  -p, --parents   remove DIRECTORY, then try to remove each directory\n"
+#~ "                  component of that path name.  E.g., `rmdir -p a/b/c' is\n"
+#~ "                  similar to `rmdir a/b/c a/b a'.\n"
+#~ "  -v, --verbose   output a diagnostic for every directory processed\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "刪除空白的目錄 DIRECTORY\n"
+#~ "\n"
+#~ "  -p, --parents   刪除路徑上將變成空白的母目錄\n"
+#~ "      --help      顯示本文,然後離開\n"
+#~ "      --version   顯示版本資料,然後離開\n"
+
+#, fuzzy
+#~ msgid "Usage: %s [OPTIONS] FILE [...]\n"
+#~ msgstr "用法: %s [選項]... FILE...\n"
+
+#, fuzzy
+#~ msgid "%s: cannot rewind"
+#~ msgstr "%s: 不能蓋\寫目錄"
+
+#, fuzzy
+#~ msgid "%s: invalid file type"
+#~ msgstr "%s: 檔案類型不詳"
+
+#, fuzzy
+#~ msgid "%s: removing"
+#~ msgstr "%s: 刪除%s`%s'? "
+
+#, fuzzy
+#~ msgid "%s: renamed to %s"
+#~ msgstr "%s: 刪除%s`%s'? "
+
+#, fuzzy
+#~ msgid "%s: removed"
+#~ msgstr "%s: 刪除%s`%s'? "
+
+#, fuzzy
+#~ msgid "%s: cannot remove"
+#~ msgstr "%s: 不能蓋\寫目錄"
+
+#, fuzzy
+#~ msgid "%s: invalid number of passes"
+#~ msgstr "號碼 `%s' 無效"
+
+#, fuzzy
+#~ msgid "%s: invalid file size"
+#~ msgstr "定位點矩數值 %s 無效"
+
+#~ msgid "Usage: %s [OPTION]\n"
+#~ msgstr "用法: %s [選項]\n"
+
+#~ msgid ""
+#~ "Force changed blocks to disk, update the super block.\n"
+#~ "\n"
+#~ "  --help      display this help and exit\n"
+#~ "  --version   output version information and exit\n"
+#~ msgstr ""
+#~ "將緩衝於記憶體內的磁碟資料寫進磁碟內\n"
+#~ "\n"
+#~ "  --help      顯示本文,然後離開\n"
+#~ "  --version   顯示版本資料,然後離開\n"
+
+#~ msgid "ignoring all arguments"
+#~ msgstr "不理任何引數"
+
+#, fuzzy
+#~ msgid "creating %s"
+#~ msgstr "不能將 `%s' 備份"
+
+#, fuzzy
+#~ msgid "setting times of %s"
+#~ msgstr "s: 不複製目錄"
+
+#, fuzzy
+#~ msgid ""
+#~ "Update the access and modification times of each FILE to the current time.\n"
+#~ "\n"
+#~ "  -a                     change only the access time\n"
+#~ "  -c, --no-create        do not create any files\n"
+#~ "  -d, --date=STRING      parse STRING and use it instead of current time\n"
+#~ "  -f                     (ignored)\n"
+#~ "  -m                     change only the modification time\n"
+#~ "  -r, --reference=FILE   use this file's times instead of current time\n"
+#~ "  -t STAMP               use [[CC]YY]MMDDhhmm[.ss] instead of current time\n"
+#~ "  --time=WORD            set time given by WORD: access atime use (same as "
+#~ "-a)\n"
+#~ "                           modify mtime (same as -m)\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ "Note that the three time-date formats recognized for the -d and -t options\n"
+#~ "and for the obsolescent argument are all different.\n"
+#~ msgstr ""
+#~ "將 FILE 的變更時間及最近存取時間變成現在的時間\n"
+#~ "\n"
+#~ "  -a                     只改變檔案的最近存取時間\n"
+#~ "  -c                     不要製造任何檔案\n"
+#~ "  -d, --date=STRING      用 STRING 所表達的時間作現在的時間\n"
+#~ "  -f                     (這選項不被處理)\n"
+#~ "  -m                     只改變檔案的變更時間\n"
+#~ "  -r, --reference=FILE   用 FILE 的兩個時間而不用現在的時間\n"
+#~ "  -t STAMP               用 MMDDhhmm[[CC]YY][.ss] 而不用現在的時間\n"
+#~ "      --time=WORD        WORD 是 access, atime 或 use 時, 用選項 -a\n"
+#~ "                           是 mtime 或 modify 時, 用選項 -m\n"
+#~ "      --help             顯示本文,然後離開\n"
+#~ "      --version          顯示版本資料,然後離開\n"
+#~ "\n"
+#~ "如沒有 -drt 及 -- 時, 則可以沒有 -t 而用 STAMP\n"
+
+#, fuzzy
+#~ msgid "invalid date format %s"
+#~ msgstr "日期格式 `%s' 無效"
+
+#~ msgid "cannot specify times from more than one source"
+#~ msgstr "不能用多於一種方法來設定時間"
+
+#~ msgid "file arguments missing"
+#~ msgstr "引數中沒有檔案名"
+
+#~ msgid "group of %s changed to %s\n"
+#~ msgstr "%s 之群組已變為 %s\n"
+
+#, fuzzy
+#~ msgid "ownership of %s changed to "
+#~ msgstr "%s 之擁有者已變為 "
+
+#, fuzzy
+#~ msgid "you are not a member of group %s"
+#~ msgstr "你並非 `%s' 群組之成員"
+
+#~ msgid "%s: invalid group number"
+#~ msgstr "%s: 群組號碼無效"
+
+#, fuzzy
+#~ msgid "%s: cannot determine size"
+#~ msgstr "%s: 不能蓋\寫目錄"
+
+#, fuzzy
+#~ msgid "cannot make fifo %s"
+#~ msgstr "不能建立先入先出 (FIFO) 檔案 `%s'"
+
+#, fuzzy
+#~ msgid "cannot change permissions for %s"
+#~ msgstr "不能製造目錄 `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove old link to %s"
+#~ msgstr "不能解除現有至 `%s' 的連結."
+
+#~ msgid "virtual memory exhausted"
+#~ msgstr "虛擬記憶體已被耗盡"
+
+#, fuzzy
+#~ msgid "Memory exhausted"
+#~ msgstr "虛擬記憶體已被耗盡"
+
+#~ msgid "invalid mode `%s'"
+#~ msgstr "保護模式 `%s' 無效"
+
+#~ msgid "cannot create directory `%s'"
+#~ msgstr "不能製造目錄 `%s'"
+
+#~ msgid "cannot remove `%s'"
+#~ msgstr "不能刪除 `%s'"
+
+#, fuzzy
+#~ msgid "specified target, `%s' is not a directory"
+#~ msgstr "`%s' 並非目錄"
+
+#~ msgid "`%s' and `%s' are the same file"
+#~ msgstr "`%s' 及 `%s' 為同一檔案"
+
+#~ msgid "cannot backup `%s'"
+#~ msgstr "不能將 `%s' 備份"
+
+#~ msgid "cannot un-backup `%s'"
+#~ msgstr "不能將備份 `%s' 還原"
+
+#, fuzzy
+#~ msgid "cannot chown %s"
+#~ msgstr "不能將 `%s' 備份"
+
+#, fuzzy
+#~ msgid "cannot chmod %s"
+#~ msgstr "不能刪除 `%s'"
+
+#~ msgid "`%s' exists but is not a directory"
+#~ msgstr "`%s' 存在, 但並非目錄."
+
+#~ msgid "`%s' is a directory"
+#~ msgstr "`%s' 是目錄"
+
+#, fuzzy
+#~ msgid "%s: write error"
+#~ msgstr "書寫錯誤"
+
+#, fuzzy
+#~ msgid "create %s %s to %s"
+#~ msgstr "製造%s由 %s 往 %s\n"
+
+#~ msgid "cannot create %s `%s' to `%s'"
+#~ msgstr "不能製造%s由 `%s' 往 `%s'"
+
+#~ msgid "symbolic link"
+#~ msgstr "符號連結"
+
+#~ msgid "hard link"
+#~ msgstr "硬連結"
+
+#~ msgid "link"
+#~ msgstr "連結"
+
+#~ msgid "current directory"
+#~ msgstr "現用工作目錄"
+
+#, fuzzy
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ msgstr ""
+#~ "用法: %s [選項]... SOURCE [DEST]\n"
+#~ "  或:  %s [選項]... SOURCE... DIRECTORY\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ msgstr ""
+#~ "用法: %s [選項]... SOURCE DEST\n"
+#~ "  或:  %s [選項]... SOURCE... DIRECTORY\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "The backup suffix is ~, unless set with SIMPLE_BACKUP_SUFFIX.  The\n"
+#~ "version control may be set with VERSION_CONTROL, values are:\n"
+#~ "\n"
+#~ "  none, off       never make backups (even if --backup is given)\n"
+#~ "  numbered, t     make numbered backups\n"
+#~ "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
+#~ "  simple, never   always make simple backups\n"
+#~ msgstr ""
+#~ "備檔字尾用 SIMPLE_BACKUP_SUFFIX 之設定, 如沒設定, 則為 ~\n"
+#~ "備份版本控制規格則利用 VERSION_CONTROL 來設定, 可用值為:\n"
+#~ "  t, numbered     使用備份號碼\n"
+#~ "  nil, existing   如有用號碼之備份存在,便使用備份號碼,否則,使用簡單備份.\n"
+#~ "  never, simple   使用簡單備份\n"
+
+#~ msgid "--no-dereference (-h) is not supported on this system"
+#~ msgstr "本系統並不支援 --no-dereference (-h)"
+
+#~ msgid "Usage: %s [OPTION]... EXISTING_DIR NEW_DIR\n"
+#~ msgstr "用法: %s [選項]... EXISTING_DIR NEW_DIR\n"
+
+#~ msgid ""
+#~ "Rename EXISTING_DIR to NEW_DIR.\n"
+#~ "\n"
+#~ "   --help      display this help and exit\n"
+#~ "   --version   output version information and exit\n"
+#~ msgstr ""
+#~ "將目錄 EXISTING_DIR 改名至 NEW_DIR.\n"
+#~ "\n"
+#~ "   --help      顯示本文,然後離開\n"
+#~ "   --version   顯示版本資料,然後離開\n"
+
+#~ msgid "cannot get current directory"
+#~ msgstr "無法知悉現用工作目錄的位置"
+
+#~ msgid "cannot rename `.' or `..'"
+#~ msgstr "不能將 `.' 或 `..' 改名"
+
+#~ msgid "cannot write to `%s'"
+#~ msgstr "不能寫至 `%s'"
+
+#~ msgid "`%s' is an ancestor of `%s'"
+#~ msgstr "在目錄架構中, `%s' 在 `%s' 之上"
+
+#~ msgid "%s is closed"
+#~ msgstr "%s 已被關掉"
+
+#, fuzzy
+#~ msgid "%s: cannot shred read-only file descriptor"
+#~ msgstr "%s: 不能蓋\寫目錄"
+
+#, fuzzy
+#~ msgid "malloc failed"
+#~ msgstr "執行 fork 這系統呼叫失敗"
+
+#, fuzzy
+#~ msgid "Unable to open `%s'"
+#~ msgstr "保護模式 `%s' 無效"
+
+#, fuzzy
+#~ msgid "Can't fstat file `%s'"
+#~ msgstr "不能製造 fifo 檔案 `%s'"
+
+#~ msgid "fork system call failed"
+#~ msgstr "執行 fork 這系統呼叫失敗"
+
+#~ msgid "sparse type"
+#~ msgstr "稀疏檔案類型"
+
+#~ msgid "sort type"
+#~ msgstr "排序方法"
+
+#~ msgid "time type"
+#~ msgstr "時間排序方法"
+
+#~ msgid "format type"
+#~ msgstr "輸出格式"
+
+#~ msgid "colorization criterion"
+#~ msgstr "著色準則"
+
+#~ msgid "time selector"
+#~ msgstr "時間選法"
+
+#~ msgid "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ msgstr "用法: %s [選項]... GROUP FILE...\n"
+
+#~ msgid ""
+#~ "the option for counting 1MB blocks may not be used\n"
+#~ "with the portable output format"
+#~ msgstr ""
+#~ "用 POSIX 格式來輸出時, \n"
+#~ "不能將區塊容量當作 1024k"
+
+#~ msgid ""
+#~ "the option for printing with adaptive units may not be used\n"
+#~ "with the portable output format"
+#~ msgstr ""
+#~ "用 POSIX 格式來輸出時, \n"
+#~ "不能以易讀的方法來輸出"
+
+#~ msgid "`%s' is not a regular file"
+#~ msgstr "`%s' 並非常規檔案"
+
+#~ msgid "cannot move `%s' across filesystems: Not a regular file"
+#~ msgstr "`%s' 並非常規檔案, 不能將之移至不同的檔案系統."
+
+#~ msgid "%s: replace `%s', overriding mode %04o? "
+#~ msgstr "%s: 蓋\寫 `%s' 而不理保護模式 %04o? "
+
+#~ msgid "%s: remove %s`%s', overriding mode %04o? "
+#~ msgstr "%s: 刪除%s`%s', 而不理保護模式 %04o 嗎? "
+
+#~ msgid "directory "
+#~ msgstr "目錄 "
+
+#~ msgid "%s: descend directory `%s', overriding mode %04o? "
+#~ msgstr "%s: 進入目錄 `%s' 而不理保護模式 %04o? "
+
+#~ msgid "%s: remove directory `%s' (might be nonempty)? "
+#~ msgstr "%s: 刪除可能有資料的目錄 `%s' 嗎? "

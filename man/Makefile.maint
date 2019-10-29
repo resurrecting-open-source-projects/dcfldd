@@ -1,0 +1,41 @@
+# This -*- Makefile -*- uses features of GNU make.
+# It is included via GNUmakefile.
+
+# This file need not exist.
+# If it does, it should contain a definition for `irregular-men',
+# a list of *.1 files for which the `%.1: %.c' dependencies below
+# don't apply.
+# If `irregular-men' is defined, then dependencies should be specified
+# for those files, too.
+-include Makefile.summ
+
+HELP2MAN-run = $(PERL) -w -- $(srcdir)/$(HELP2MAN)
+
+# Depend on configure.in to get version number changes.
+$(man_MANS): $(top_srcdir)/configure.in
+
+# Depend on the source file containing the --help text.
+# Filter out any irregular cases listed in Makefile.summ.
+regular-men = $(filter-out $(irregular-men),$(man_MANS))
+$(regular-men): %.1: $(top_srcdir)/src/%.c
+
+# Use this so that the install.1 man page refers to `install', not `ginstall'.
+ginstall_filter = sed s/ginstall/install/
+
+executable = $(patsubst %/install,%/ginstall, ../src/$(basename $@))
+$(man_MANS): %.1: %.x $(HELP2MAN)
+	@if test -f $(executable); then \
+	  echo "Updating man page $@"; \
+	  rm -f $@-t; \
+	  $(HELP2MAN-run) \
+	      --include=$(basename $@).x $(executable) \
+	    > $@-t1 || exit 1; \
+	  $(ginstall_filter) $@-t1 > $@-t || exit 1; \
+	  rm -f $@-t1; \
+	  chmod -w $@-t || exit 1; \
+	  rm -f $@ || exit 1; \
+	  mv $@-t $@ || exit 1; \
+	else \
+	  echo "WARNING: The man page $@ cannot be updated yet."; \
+	  echo "         Retry once the corresponding executable is built."; \
+	fi

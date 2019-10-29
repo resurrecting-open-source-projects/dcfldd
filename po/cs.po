@@ -1,0 +1,2226 @@
+# Czech translations for the GNU gettext messages
+# Copyright (C) 1996 Free Software Foundation, Inc.
+# Vladimir Michl <Vladimir.Michl@seznam.cz>, 1997.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fileutils 4.0t\n"
+"POT-Creation-Date: 2001-10-26 15:00-0400\n"
+"PO-Revision-Date: 2000-12-20 10:21+01:00\n"
+"Last-Translator: Vladimir Michl <Vladimir.Michl@seznam.cz>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: lib/argmatch.c:159
+#, c-format
+msgid "invalid argument %s for `%s'"
+msgstr "argument %s není pro `%s' platný"
+
+#: lib/argmatch.c:160
+#, c-format
+msgid "ambiguous argument %s for `%s'"
+msgstr "argument %s není pro `%s' jednoznaèný"
+
+#. We try to put synonyms on the same line.  The assumption is that
+#. synonyms follow each other
+#: lib/argmatch.c:178
+msgid "Valid arguments are:"
+msgstr "Platné argumenty (pøepínaèe) jsou:"
+
+#: lib/closeout.c:104
+msgid "write error"
+msgstr "chyba pøi zápisu"
+
+#: lib/error.c:117
+msgid "Unknown system error"
+msgstr "Neznámá chyba systému"
+
+#: lib/getopt.c:686
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: pøepínaè `%s' není jednoznaèný\n"
+
+#: lib/getopt.c:711
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: pøepínaè `--%s' musí být zadán bez argumentu\n"
+
+#: lib/getopt.c:716
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: pøepínaè `%c%s' musí být zadán bez argumentu\n"
+
+#: lib/getopt.c:734 lib/getopt.c:907
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: pøepínaè `%s' vy¾aduje argument\n"
+
+#. --option
+#: lib/getopt.c:763
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: neznámý pøepínaè `--%s'\n"
+
+#. +option or -option
+#: lib/getopt.c:767
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: neznámý pøepínaè `%c%s'\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:793
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: neznámý pøepínaè -- %c\n"
+
+#: lib/getopt.c:796
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: neznámý pøepínaè -- %c\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:826 lib/getopt.c:956
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: pøepínaè vy¾aduje argument -- %c\n"
+
+#: lib/getopt.c:873
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: pøepínaè `-W %s' není jednoznaèný\n"
+
+#: lib/getopt.c:891
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr "%s: pøepínaè ` -W %s' musí být zadán bez argumentu\n"
+
+#: lib/human.c:341
+msgid "block size"
+msgstr "velikost bloku"
+
+#: lib/makepath.c:177
+#, fuzzy, c-format
+msgid "cannot create directory %s"
+msgstr "adresáø `%s' nelze vytvoøit"
+
+#: lib/makepath.c:183 lib/makepath.c:425
+#, fuzzy, c-format
+msgid "%s exists but is not a directory"
+msgstr "`%s' existuje, ale není adresáøem"
+
+#: lib/makepath.c:321 lib/makepath.c:383 lib/makepath.c:444
+#, fuzzy, c-format
+msgid "cannot change owner and/or group of %s"
+msgstr "název skupiny nesmí být prázdný"
+
+#: lib/makepath.c:343
+#, c-format
+msgid "cannot chdir to directory, %s"
+msgstr "do adresáøe `%s' nelze vejít"
+
+#: lib/makepath.c:397 lib/makepath.c:450
+#, fuzzy, c-format
+msgid "cannot change permissions of %s"
+msgstr "pøístupová práva pro adresáø `%s' nelze nastavit"
+
+#. If XALLOC_FAIL_FUNC is NULL, or does return, display this message
+#. before exiting when memory is exhausted.  Goes through gettext.
+#: lib/obstack.c:477 lib/xmalloc.c:66
+msgid "memory exhausted"
+msgstr "pamì» vyèerpána"
+
+#. Get translations for open and closing quotation marks.
+#.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  If the catalog has no translation,
+#. locale_quoting_style quotes `like this', and
+#. clocale_quoting_style quotes "like this".
+#.
+#. For example, an American English Unicode locale should
+#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
+#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
+#. MARK).  A British English Unicode locale should instead
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#: lib/quotearg.c:259
+msgid "`"
+msgstr "`"
+
+#: lib/quotearg.c:260
+msgid "'"
+msgstr "'"
+
+#: lib/rpmatch.c:78
+msgid "^[yY]"
+msgstr "^[yYaA]"
+
+#: lib/rpmatch.c:81
+msgid "^[nN]"
+msgstr "^[nN]"
+
+#: lib/unicodeio.c:138
+#, c-format
+msgid "cannot output U+%04X: iconv function not usable"
+msgstr "znak U+%04X nelze vypsat: funkce iconv není pou¾ívatelná"
+
+#: lib/unicodeio.c:149
+#, c-format
+msgid "U+%04X: character out of range"
+msgstr "U+%04X: znak mimo rozsah"
+
+#: lib/unicodeio.c:181 lib/unicodeio.c:190
+#, c-format
+msgid "cannot convert U+%04X to local character set"
+msgstr "znak U+%04X nelze konvertovat do lokální znakové sady"
+
+#: lib/unicodeio.c:196
+#, c-format
+msgid "cannot output U+%04X: iconv function not available"
+msgstr "znak U+%04X nelze vypsat: funkce iconv není k dispozici"
+
+#: lib/userspec.c:179
+msgid "invalid user"
+msgstr "neplatný u¾ivatel"
+
+#: lib/userspec.c:180
+msgid "invalid group"
+msgstr "neplatná skupina"
+
+#: lib/userspec.c:182
+msgid "cannot get the login group of a numeric UID"
+msgstr "k UID nelze zjistit pøihla¹ovací skupinu"
+
+#: lib/userspec.c:184
+msgid "cannot omit both user and group"
+msgstr "nemù¾ete vynechat jak u¾ivatele tak skupinu"
+
+#: lib/version-etc.c:38
+#, fuzzy
+msgid "Copyright (C) 2001 Free Software Foundation, Inc."
+msgstr "Copyright (C) 2000 Free Software Foundation, Inc."
+
+#: lib/version-etc.c:60
+#, c-format
+msgid "Written by %s.\n"
+msgstr "Autoøi: %s.\n"
+
+#: lib/version-etc.c:66
+msgid ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"  Toto je volné programové vybavení; podmínky pro kopírování a roz¹iøování\n"
+"naleznete ve zdrojových textech. Toto programové vybavení je zcela BEZ "
+"ZÁRUKY,\n"
+"a to i bez záruky PRODEJNOSTI nebo VHODNOSTI PRO NÌJAKÝ KONKRÉTNÍ ÚÈEL.\n"
+
+#: src/dcfldd.c:321
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Více informací získáte pøíkazem `%s --help'.\n"
+
+#: src/dcfldd.c:325
+#, c-format
+msgid "Usage: %s [OPTION]...\n"
+msgstr "Pou¾ití: %s [PØEPÍNAÈ]...\n"
+
+#: src/dcfldd.c:326
+#, fuzzy
+msgid ""
+"Copy a file, converting and formatting according to the options.\n"
+"\n"
+"  bs=BYTES             force ibs=BYTES and obs=BYTES\n"
+"  cbs=BYTES            convert BYTES bytes at a time\n"
+"  conv=KEYWORDS        convert the file as per the comma separated keyword "
+"list\n"
+"  count=BLOCKS         copy only BLOCKS input blocks\n"
+"  ibs=BYTES            read BYTES bytes at a time\n"
+"  if=FILE              read from FILE instead of stdin\n"
+"  obs=BYTES            write BYTES bytes at a time\n"
+"  of=FILE              write to FILE instead of stdout\n"
+"  seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n"
+"  skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n"
+"  pattern=BYTES        use the specified binary pattern as input\n"
+"  textpattern=TEXT     use repeating TEXT as input\n"
+"  hashwindow=BYTES     perform an MD5 hash on every BYTES amount of data\n"
+"  hashlog=FILE         send MD5 hash output to FILE instead of stderr\n"
+"  status=[on|off]      display a continual status message on stderr\n"
+"                         default state is \"on\"\n"
+"  sizeprobe=[if|of]    determine the size of the input or output file"
+msgstr ""
+"  Kopírování souboru, konverze a formátování. Toto v¹e lze navolit\n"
+"následujícími pøepínaèi.\n"
+"\n"
+"  bs=BAJTÙ        nastaví ibs=BAJTÙ a obs=BAJTÙ\n"
+"  cbs=BAJTÙ       konvertuje BAJTÙ bajtù najednou\n"
+"  conv=KLÍÈ_SLOVA konvertuje podle èárkami oddìleného seznamu klíèových "
+"slov\n"
+"  count=BLOKÙ     kopíruje pouze BLOKÙ vstupních blokù\n"
+"  ibs=BAJTÙ       ète BAJTÙ bajtù najednou\n"
+"  if=SOUBOR       ète ze souboru SOUBOR, místo z stdin\n"
+"  obs=BAJTÙ       zapisuje BAJTÙ bajtù najednou\n"
+"  of=SOUBOR       zapisuje do souboru SOUBOR, místo do stdout. Pokud SOUBOR\n"
+"                  existuje výstup bude pøipojen k existujícímu obsahu\n"
+"  seek=BLOKÙ      pøeskoèí prvních BLOKÙ výstupních blokù velikosti 'obs'\n"
+"  skip=BLOKÙ      pøeskoèí prvních BLOKÙ vstupních blokù velikosti 'ibs'\n"
+"      --help      vypí¹e tuto nápovìdu a skonèí\n"
+"      --version   vypí¹e oznaèení verze a skonèí\n"
+"\n"
+"  Poèet BAJTÙ mù¾e mít dodatek: xM pro násobení èíslem M, c pro násobení\n"
+"jednou, w pro násobení dvìma, b - 512-ti, kD - 1000-ci, k - 1024,\n"
+"MD - 1 000 000, M - 1 048 576, GD - 1 000 000 000, G - 1 073 741 826. Ka¾dé\n"
+"KLÍÈ_SLOVO mù¾e být:\n"
+"\n"
+"  ascii     z EBCDIC do ASCII\n"
+"  ebcdic    z ASCII do EBCDIC\n"
+"  ibm       z ASCII do pozmìnìného EBCDIC\n"
+"  block     vyplní záznamy ukonèené zn. nového øádku mezerami\n"
+"            do velikosti 'cbs'\n"
+"  unblock   zámìna koncových mezer v záznamech o velikosti 'cbs' na zn. "
+"nového\n"
+"            øádku\n"
+"  lcase     zmìna velkých písmen na malá\n"
+"  notrunc   nezkracuje výstupní soubory\n"
+"  ucase     zmìna malých písmen na velká\n"
+"  swab      zámìna ka¾dého páru vstupních bajtù\n"
+"  noerror   pokraèuje i pøi vzniku chyby pøi ètení\n"
+"  sync      doplní ka¾dý vstupní blok nulovými bajty do velikosti 'ibs'\n"
+
+#: src/dcfldd.c:371
+msgid ""
+"\n"
+"Report bugs to <bug-fileutils@gnu.org>."
+msgstr ""
+"\n"
+"  Chyby v programu oznamujte na adrese <bug-fileutils@gnu.org> (pouze\n"
+"anglicky), pøipomínky k pøekladu zasílejte na adresu <cs@li.org> (èesky)"
+
+#: src/dcfldd.c:402
+#, c-format
+msgid "%s+%s records in\n"
+msgstr "%s+%s vstoupiv¹ích záznamù\n"
+
+#: src/dcfldd.c:405
+#, c-format
+msgid "%s+%s records out\n"
+msgstr "%s+%s vystoupiv¹ích záznamù\n"
+
+#: src/dcfldd.c:413
+msgid "truncated record"
+msgstr "zkrácený záznam"
+
+#: src/dcfldd.c:414
+msgid "truncated records"
+msgstr "zkrácené záznamy"
+
+#: src/dcfldd.c:423
+#, c-format
+msgid "closing input file %s"
+msgstr ""
+
+#: src/dcfldd.c:425
+#, c-format
+msgid "closing output file %s"
+msgstr ""
+
+#: src/dcfldd.c:509
+#, fuzzy, c-format
+msgid "writing to %s"
+msgstr "vytváøení adresáøe `%s'"
+
+#: src/dcfldd.c:541
+#, fuzzy, c-format
+msgid "invalid conversion: %s"
+msgstr "%s: neplatná konverze"
+
+#: src/dcfldd.c:645
+#, fuzzy, c-format
+msgid "unrecognized option %s"
+msgstr "neznámý pøepínaè `%s'"
+
+#: src/dcfldd.c:659
+#, fuzzy, c-format
+msgid "invalid hex pattern: %s"
+msgstr "¹patná práva `%s'"
+
+#: src/dcfldd.c:672 src/dcfldd.c:1455 src/dcfldd.c:1473
+#, fuzzy, c-format
+msgid "opening %s"
+msgstr "mazání %s\n"
+
+#: src/dcfldd.c:729
+#, fuzzy, c-format
+msgid "unrecognized option %s=%s"
+msgstr "neznámý pøepínaè `%s=%s'"
+
+#: src/dcfldd.c:735
+#, fuzzy, c-format
+msgid "invalid number %s"
+msgstr "èíslo `%s' je neplatné"
+
+#: src/dcfldd.c:765
+msgid ""
+"only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+msgstr ""
+"mù¾e být pou¾it v¾dy pouze jeden z {ascii,ebcdic,ibm}, {lcase,ucase},\n"
+"{block,unblock}, {unblock,sync}"
+
+#: src/dcfldd.c:915 src/dcfldd.c:1206
+#, fuzzy, c-format
+msgid "reading %s"
+msgstr "mazání %s\n"
+
+#: src/dcfldd.c:1252 src/dcfldd.c:1315
+#, fuzzy, c-format
+msgid "writing %s"
+msgstr "mazání %s\n"
+
+#: src/dcfldd.c:1408
+#, fuzzy
+msgid "stating file"
+msgstr "program `strip' skonèil s chybou"
+
+#: src/dcfldd.c:1458
+msgid "standard input"
+msgstr "standardní vstup"
+
+#: src/dcfldd.c:1481
+msgid "file offset out of range"
+msgstr "posun v souboru mimo rozsah"
+
+#: src/dcfldd.c:1484
+#, fuzzy, c-format
+msgid "cannot fstat %s"
+msgstr "funkce stat na `%s' vrátila chybu"
+
+#: src/dcfldd.c:1497
+#, c-format
+msgid "advancing past %s bytes in output file %s"
+msgstr ""
+
+#: src/dcfldd.c:1506
+msgid "standard output"
+msgstr "standardní výstup"
+
+#, fuzzy
+#~ msgid "cannot change to null group"
+#~ msgstr "název skupiny nesmí být prázdný"
+
+#, fuzzy
+#~ msgid "invalid group name %s"
+#~ msgstr "`%s' - neplatný název skupiny"
+
+#~ msgid "group number"
+#~ msgstr "èíslo skupiny"
+
+#, fuzzy
+#~ msgid "invalid group number %s"
+#~ msgstr "`%s' je neplatné èíslo skupiny"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Pou¾ití: %s [PØEPÍNAÈ]... SKUPINA SOUBOR...\n"
+#~ "  nebo   %s [PØEPÍNAÈ]... --reference=RSOUBOR SOUBOR...\n"
+
+#~ msgid ""
+#~ "Change the group membership of each FILE to GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's group rather than the specified\n"
+#~ "                         GROUP value\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ msgstr ""
+#~ "Mìní skupinu zadaných SOUBORù na SKUPINU.\n"
+#~ "\n"
+#~ "  -c, --changes           vypí¹e soubory, jejich¾ skupina byla zmìnìna\n"
+#~ "      --dereference       pùsobí na soubor, na nìj¾ se odkazuje symbolický\n"
+#~ "                          odkaz\n"
+#~ "  -h, --no-dereference    pùsobí na symbolický odkaz místo na soubor,\n"
+#~ "                          na který odkaz odkazuje (funguje pouze na "
+#~ "systémech,\n"
+#~ "                          které mohou mìnit vlastníky symbolických odkazù)\n"
+#~ "  -f, --silent, --quiet   potlaèí vìt¹inu chybových zpráv\n"
+#~ "      --reference=RSOUBOR místo hodnoty SKUPINA pou¾ije skupinu souboru "
+#~ "RSOUBOR\n"
+#~ "  -R, --recursive         vykoná se i v podadresáøích\n"
+#~ "  -v, --verbose           vypí¹e informaci o ka¾dém zpracovávaném souboru\n"
+#~ "      --help              vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version           vypí¹e oznaèení verze a skonèí\n"
+
+#~ msgid "too few arguments"
+#~ msgstr "pøíli¹ málo argumentù"
+
+#, fuzzy
+#~ msgid "getting attributes of %s"
+#~ msgstr "nastavení práv souboru %s"
+
+#~ msgid "mode of %s changed to %04lo (%s)\n"
+#~ msgstr "práva souboru %s zmìnìna na %04lo (%s)\n"
+
+#~ msgid "failed to change mode of %s to %04lo (%s)\n"
+#~ msgstr "práva souboru %s se nepodaøila zmìnit na %04lo (%s)\n"
+
+#~ msgid "mode of %s retained as %04lo (%s)\n"
+#~ msgstr "práva souboru %s zùstala %04lo (%s)\n"
+
+#, fuzzy
+#~ msgid "changing permissions of %s"
+#~ msgstr "obnovení práv souboru %s"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... MODE[,MODE]... FILE...\n"
+#~ "  or:  %s [OPTION]... OCTAL-MODE FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Pou¾ití: %s [PØEPÍNAÈ]... PRÁVA[,PRÁVA]... SOUBOR...\n"
+#~ "  nebo   %s [PØEPÍNAÈ]... PRÁVA_OSMIÈKOVÌ SOUBOR...\n"
+#~ "  nebo   %s [PØEPÍNAÈ]... --reference=RSOUBOR SOUBOR...\n"
+
+#~ msgid ""
+#~ "Change the mode of each FILE to MODE.\n"
+#~ "\n"
+#~ "  -c, --changes           like verbose but report only when a change is "
+#~ "made\n"
+#~ "  -f, --silent, --quiet   suppress most error messages\n"
+#~ "  -v, --verbose           output a diagnostic for every file processed\n"
+#~ "      --reference=RFILE   use RFILE's mode instead of MODE values\n"
+#~ "  -R, --recursive         change files and directories recursively\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "\n"
+#~ "Each MODE is one or more of the letters ugoa, one of the symbols +-= and\n"
+#~ "one or more of the letters rwxXstugo.\n"
+#~ msgstr ""
+#~ "Zmìna práv zadaných SOUBORù na PRÁVA.\n"
+#~ "\n"
+#~ "  -c, --changes           vypisuje pouze soubory, jejich¾ práva byla "
+#~ "zmìnìna\n"
+#~ "  -f, --silent, --quiet   potlaèí vìt¹inu chybových zpráv\n"
+#~ "  -v, --verbose           vypisuje informaci o ka¾dém zpracovaném souboru\n"
+#~ "      --reference=RSOUBOR místo hodnoty PRÁVA pou¾ije práva souboru RSOUBOR\n"
+#~ "  -R, --recursive         pracuje i se soubory a adresáøi v podadresáøích\n"
+#~ "      --help              vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version           vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+#~ "  Ka¾dá PRÁVA jsou slo¾ena z jednoho nebo více písmen z 'ugoa' "
+#~ "následovaného\n"
+#~ "jedním ze symbolù '+-=' a jedním nebo více písmeny z 'rwxXstugo'.\n"
+
+#, fuzzy
+#~ msgid "invalid character %s in mode string %s"
+#~ msgstr "argument %s není pro `%s' platný"
+
+#, fuzzy
+#~ msgid "invalid mode string: %s"
+#~ msgstr "¹patná práva `%s'"
+
+#~ msgid "neither symbolic link %s nor referent has been changed\n"
+#~ msgstr "symbolický odkaz %s ani soubor na nìj¾ se odkazuje nebyly zmìnìny\n"
+
+#, fuzzy
+#~ msgid "changed ownership of %s to %s\n"
+#~ msgstr "vlastníka souboru %s se nepodaøilo zmìnit na "
+
+#, fuzzy
+#~ msgid "changed group of %s to %s\n"
+#~ msgstr "skupinu souboru %s se nepodaøilo zmìnit na %s\n"
+
+#, fuzzy
+#~ msgid "failed to change ownership of %s to %s\n"
+#~ msgstr "vlastníka souboru %s se nepodaøilo zmìnit na "
+
+#~ msgid "failed to change group of %s to %s\n"
+#~ msgstr "skupinu souboru %s se nepodaøilo zmìnit na %s\n"
+
+#, fuzzy
+#~ msgid "ownership of %s retained as %s\n"
+#~ msgstr "vlastníkem souboru %s zùstal "
+
+#~ msgid "group of %s retained as %s\n"
+#~ msgstr "skupina souboru %s zùstala %s\n"
+
+#, fuzzy
+#~ msgid "changing ownership of %s"
+#~ msgstr "zachování vlastnictví souboru %s"
+
+#, fuzzy
+#~ msgid "changing group of %s"
+#~ msgstr "skupinu souboru %s se nepodaøilo zmìnit na %s\n"
+
+#, fuzzy
+#~ msgid "unable to restore permissions of %s"
+#~ msgstr "obnovení práv souboru %s"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... OWNER[:[GROUP]] FILE...\n"
+#~ "  or:  %s [OPTION]... :GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Pou¾ití: %s [PØEPÍNAÈ]... VLASTNÍK[:[SKUPINA]]... SOUBOR...\n"
+#~ "  nebo   %s [PØEPÍNAÈ]... :SKUPINA SOUBOR...\n"
+#~ "  nebo   %s [PØEPÍNAÈ]... --reference=RSOUBOR SOUBOR...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the owner and/or group of each FILE to OWNER and/or GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                         change the owner and/or group of each file only if\n"
+#~ "                         its current owner and/or group match those "
+#~ "specified\n"
+#~ "                         here.  Either may be omitted, in which case a "
+#~ "match\n"
+#~ "                         is not required for the omitted attribute.\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's owner and group rather than\n"
+#~ "                         the specified OWNER:GROUP values\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Mìní vlastníka a/nebo skupinu zadaných SOUBORù na VLASTNÍKa a/nebo SKUPINU.\n"
+#~ "\n"
+#~ "  -c, --changes           vypí¹e soubory, jejich¾ vlastnictví bylo zmìnìno\n"
+#~ "      --dereference       pùsobí na soubory, na nì¾ se odkazují symbolické\n"
+#~ "                          odkazy\n"
+#~ "  -h, --no-dereference    pùsobí na symbolické odkazy místo na soubory,\n"
+#~ "                          na které se odkazy odkazují (funguje pouze na\n"
+#~ "                          systémech, které umo¾òují mìnit vlatsníky\n"
+#~ "                          symbolických odkazù)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                          mìní vlastníka a/nebo skupinu ka¾dého souboru,\n"
+#~ "                          pouze kdy¾ jeho aktuální vlastník a/nebo skupina\n"
+#~ "                          odpovídá zadaným. Jak vlastník tak skupina mù¾e "
+#~ "být\n"
+#~ "                          vynechána, a tedy nebude uva¾ována.\n"
+#~ "  -f, --silent, --quiet   potlaèí vìt¹inu chybových zpráv\n"
+#~ "      --reference=RSOUBOR místo hodnot VLASTNÍK.SKUPINA pou¾ije vlastníka\n"
+#~ "                          a skupinu souboru RSOUBOR\n"
+#~ "  -R, --recursive         pracuje i se soubory a adresáøi v podadresáøích\n"
+#~ "  -v, --verbose           vypí¹e informaci o ka¾dém zpracovávaném souboru\n"
+#~ "      --help              vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version           vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+#~ "  Vlastník nebude zmìnìn, není-li zadán. Skupina nebude zmìnìna, není-li\n"
+#~ "zadána, ale v pøípadì, ¾e uvedete za vlastníkem dvojteèku, bude skupina "
+#~ "zmìnìna\n"
+#~ "na pøihla¹ovací skupinu vlastníka. VLASTNÍKa a SKUPINu lze také zadat "
+#~ "èíselnì\n"
+#~ "stejnì jako symbolicky.\n"
+
+#, fuzzy
+#~ msgid "cannot access %s"
+#~ msgstr "vlastníka souboru `%s' nelze zmìnit"
+
+#, fuzzy
+#~ msgid "%s and %s are the same file"
+#~ msgstr "`%s' a `%s' jsou jeden a tentý¾ soubor"
+
+#, fuzzy
+#~ msgid "cannot open %s for reading"
+#~ msgstr "`%s' nelze do `%s' pøemístit"
+
+#, fuzzy
+#~ msgid "cannot remove %s"
+#~ msgstr "`%s' nelze smazat"
+
+#, fuzzy
+#~ msgid "cannot create regular file %s"
+#~ msgstr "obyèejný soubor `%s' nelze vytvoøit"
+
+#, fuzzy
+#~ msgid "cannot lseek %s"
+#~ msgstr "`%s' nelze smazat"
+
+#, fuzzy
+#~ msgid "closing %s"
+#~ msgstr "mazání %s\n"
+
+#, fuzzy
+#~ msgid "cannot stat %s"
+#~ msgstr "funkce stat na `%s' vrátila chybu"
+
+#, fuzzy
+#~ msgid "omitting directory %s"
+#~ msgstr "%s: adresáø vynechán"
+
+#, fuzzy
+#~ msgid "cannot overwrite non-directory %s with directory %s"
+#~ msgstr "%s: adresáø nelze pøepsat souborem, který není adresáøem"
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s with non-directory"
+#~ msgstr "%s: adresáø nelze pøepsat souborem, který není adresáøem"
+
+#, fuzzy
+#~ msgid "%s: overwrite %s, overriding mode %04lo? "
+#~ msgstr "%s: pøepsat `%s', pøehlédnout práva %04lo? "
+
+#, fuzzy
+#~ msgid "%s: overwrite %s? "
+#~ msgstr "%s: pøepsat `%s'? "
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s"
+#~ msgstr "%s: adresáø nelze pøepsat"
+
+#~ msgid "cannot move directory onto non-directory: %s -> %s"
+#~ msgstr "adresáø nelze pøemístit do neadresáøe: %s -> %s"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not moved"
+#~ msgstr "vytvoøení zálohy souboru `%s' mù¾e znièit zdroj; `%s' nepøejmenován"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not copied"
+#~ msgstr "vytvoøení zálohy souboru `%s' mù¾e znièit zdroj; `%s' nekopírován"
+
+#, fuzzy
+#~ msgid "cannot backup %s"
+#~ msgstr "`%s' nelze zálohovat"
+
+#~ msgid " (backup: %s)"
+#~ msgstr " (záloha: %s)"
+
+#, fuzzy
+#~ msgid "cannot copy a directory, %s, into itself, %s"
+#~ msgstr "`%s' nelze do svého podadresáøe `%s' pøemístit"
+
+#, fuzzy
+#~ msgid "will not create hard link %s to directory %s"
+#~ msgstr "pevný odkaz `%s' na adresáø `%s' nelze vytvoøit"
+
+#, fuzzy
+#~ msgid "cannot create hard link %s to %s"
+#~ msgstr "vytvoøen pevný odkaz `%s' na `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to a subdirectory of itself, %s"
+#~ msgstr "`%s' nelze do svého podadresáøe `%s' pøemístit"
+
+#, fuzzy
+#~ msgid "cannot move %s to %s"
+#~ msgstr "`%s' nelze do `%s' pøemístit"
+
+#, fuzzy
+#~ msgid "cannot copy cyclic symbolic link %s"
+#~ msgstr "%s: zacyklené symbolické odkazy nelze kopírovat"
+
+#~ msgid "%s: can make relative symbolic links only in current directory"
+#~ msgstr ""
+#~ "%s: relativní symbolický odkaz lze vytvoøit pouze v aktuálním adresáøi"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s to %s"
+#~ msgstr "symbolický odkaz `%s' nelze vytvoøit"
+
+#, fuzzy
+#~ msgid "cannot create link %s"
+#~ msgstr "odkaz `%s' nelze vytvoøit"
+
+#, fuzzy
+#~ msgid "cannot create fifo %s"
+#~ msgstr "rouru `%s' nelze vytvoøit"
+
+#, fuzzy
+#~ msgid "cannot create special file %s"
+#~ msgstr "speciální soubor `%s' nelze vytvoøit"
+
+#, fuzzy
+#~ msgid "cannot read symbolic link %s"
+#~ msgstr "symbolický odkaz `%s' nelze èíst"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s"
+#~ msgstr "symbolický odkaz `%s' nelze vytvoøit"
+
+#~ msgid "preserving ownership for %s"
+#~ msgstr "zachování vlastnictví souboru %s"
+
+#, fuzzy
+#~ msgid "%s has unknown file type"
+#~ msgstr "%s: neznámý typ souboru"
+
+#~ msgid "preserving times for %s"
+#~ msgstr "zachování èasù souboru %s"
+
+#~ msgid "setting permissions for %s"
+#~ msgstr "nastavení práv souboru %s"
+
+#, fuzzy
+#~ msgid "cannot un-backup %s"
+#~ msgstr "`%s' nelze ze zálohy obnovit"
+
+#~ msgid "%s -> %s (unbackup)\n"
+#~ msgstr "%s -> %s (obnoven ze zálohy)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY SOURCE...\n"
+#~ msgstr ""
+#~ "Pou¾ití: %s [PØEPÍNAÈ]... ZDROJ CÍL\n"
+#~ " nebo:   %s [PØEPÍNAÈ]... ZDROJ... ADRESÁØ\n"
+#~ " nebo:   %s [PØEPÍNAÈ]... --target-directory=ADRESÁØ... ZDROJ...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                same as -dpR\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -d, --no-dereference         never follow symbolic links\n"
+#~ "  -f, --force                  if an existing destination file cannot be\n"
+#~ "                                   opened, remove it and try again\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "  -H                           follow command-line symbolic links\n"
+#~ "  -l, --link                   link files instead of copying\n"
+#~ "  -L, --dereference            always follow symbolic links\n"
+#~ "  -p, --preserve               preserve file attributes if possible\n"
+#~ "      --parents                append source path to DIRECTORY\n"
+#~ "  -P                           same as `--parents' for now; soon to change "
+#~ "to\n"
+#~ "                                 `--no-dereference' to conform to POSIX\n"
+#~ "  -r                           copy recursively, non-directories as files\n"
+#~ "                                 WARNING: use -R instead when you might "
+#~ "copy\n"
+#~ "                                 special files like FIFOs or /dev/zero\n"
+#~ "      --remove-destination     remove each existing destination file before\n"
+#~ "                                 attempting to open it (contrast with "
+#~ "--force)\n"
+#~ msgstr ""
+#~ "Kopíruje ZDROJ do CÍLe nebo více ZDROJù do ADRESÁØe.\n"
+#~ "\n"
+#~ "  -a, --archive                stejné jako pou¾ití pøepínaèù '-dpR'\n"
+#~ "      --backup=[TYP]           vytvoøí zálo¾ní kopie pøepisovaných souborù\n"
+#~ "  -b                           jako --backup, ale bez argumentu\n"
+#~ "  -d, --no-dereference         zachovává symbolické odkazy\n"
+#~ "  -f, --force                  bude mazat existující cíle bez optání\n"
+#~ "  -i, --interactive            ptá se pøed pøepsáním\n"
+#~ "  -l, --link                   tvoøí odkazy místo kopírování\n"
+#~ "  -p, --preserve               zachovává práva a èasy souborù, je-li to "
+#~ "mo¾né\n"
+#~ "  -P, --parents                pøidává zdrojovou cestu do cílového ADRESÁØe\n"
+#~ "  -r                           kopíruje rekurzivnì, co není adresáøem "
+#~ "kopíruje\n"
+#~ "                               jako by to byl soubor.\n"
+#~ "                               POZOR: Pokud budete kopírovat speciální "
+#~ "soubory\n"
+#~ "                               jako tøeba roury nebo /dev/zero, pak radìji\n"
+#~ "                               pou¾ijte -R\n"
+#~ "      --sparse=KDY             øídí tvorbu souborù s dírami\n"
+#~ "  -R, --recursive              kopíruje adresáøe rekurzivnì\n"
+#~ "      --strip-trailing-slashes odstraòuje lomítka na konci názvù v¹ech "
+#~ "ZDROJù\n"
+#~ "  -s, --symbolic-link          tvoøí symbolické odkazy místo kopírování\n"
+#~ "  -S, --suffix=PØÍPONA         zmìní obvyklou pøíponu zálo¾ních souborù\n"
+#~ "                               na PØÍPONU\n"
+#~ "  -u, --update                 kopíruje pouze, kdy¾ zdrojový soubor je\n"
+#~ "                               novìj¹í ne¾ cílový, nebo kdy¾ cílový soubor\n"
+#~ "                               neexistuje\n"
+#~ "  -v, --verbose                vypisuje bli¾¹í informace o vykonávání "
+#~ "pøíkazu\n"
+#~ "  -x, --one-file-system        zùstane v jednom souborovém systému\n"
+#~ "      --help                   vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version                vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+#~ "  Implicitnì, jsou ZDROJové soubory s dírami detekovány a odpovídající "
+#~ "CÍLový\n"
+#~ "soubor je vytvoøen stejnì `dìravý'. Toto je voleno pøepínaèem "
+#~ "--sparse=auto.\n"
+#~ "Pøepínaèem --sparse=always øíkáme, ¾e v CÍLových souborech se mají tvoøit\n"
+#~ "díry, jakmile ZDROJový soubor obsahuje dostateènì dlouhé sekvence nulových\n"
+#~ "bajtù. Pøepínaèem --sparse=never tvorbì souborù s dírami zabráníme.\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "      --sparse=WHEN            control creation of sparse files\n"
+#~ "  -R, --recursive              copy directories recursively\n"
+#~ "      --strip-trailing-slashes remove any trailing slashes from each SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -s, --symbolic-link          make symbolic links instead of copying\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 copy only when the SOURCE file is newer\n"
+#~ "                                 than the destination file or when the\n"
+#~ "                                 destination file is missing\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "  -x, --one-file-system        stay on this file system\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ "By default, sparse SOURCE files are detected by a crude heuristic and the\n"
+#~ "corresponding DEST file is made sparse as well.  That is the behavior\n"
+#~ "selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST\n"
+#~ "file whenever the SOURCE file contains a long enough sequence of zero "
+#~ "bytes.\n"
+#~ "Use --sparse=never to inhibit creation of sparse files.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Kopíruje ZDROJ do CÍLe nebo více ZDROJù do ADRESÁØe.\n"
+#~ "\n"
+#~ "  -a, --archive                stejné jako pou¾ití pøepínaèù '-dpR'\n"
+#~ "      --backup=[TYP]           vytvoøí zálo¾ní kopie pøepisovaných souborù\n"
+#~ "  -b                           jako --backup, ale bez argumentu\n"
+#~ "  -d, --no-dereference         zachovává symbolické odkazy\n"
+#~ "  -f, --force                  bude mazat existující cíle bez optání\n"
+#~ "  -i, --interactive            ptá se pøed pøepsáním\n"
+#~ "  -l, --link                   tvoøí odkazy místo kopírování\n"
+#~ "  -p, --preserve               zachovává práva a èasy souborù, je-li to "
+#~ "mo¾né\n"
+#~ "  -P, --parents                pøidává zdrojovou cestu do cílového ADRESÁØe\n"
+#~ "  -r                           kopíruje rekurzivnì, co není adresáøem "
+#~ "kopíruje\n"
+#~ "                               jako by to byl soubor.\n"
+#~ "                               POZOR: Pokud budete kopírovat speciální "
+#~ "soubory\n"
+#~ "                               jako tøeba roury nebo /dev/zero, pak radìji\n"
+#~ "                               pou¾ijte -R\n"
+#~ "      --sparse=KDY             øídí tvorbu souborù s dírami\n"
+#~ "  -R, --recursive              kopíruje adresáøe rekurzivnì\n"
+#~ "      --strip-trailing-slashes odstraòuje lomítka na konci názvù v¹ech "
+#~ "ZDROJù\n"
+#~ "  -s, --symbolic-link          tvoøí symbolické odkazy místo kopírování\n"
+#~ "  -S, --suffix=PØÍPONA         zmìní obvyklou pøíponu zálo¾ních souborù\n"
+#~ "                               na PØÍPONU\n"
+#~ "  -u, --update                 kopíruje pouze, kdy¾ zdrojový soubor je\n"
+#~ "                               novìj¹í ne¾ cílový, nebo kdy¾ cílový soubor\n"
+#~ "                               neexistuje\n"
+#~ "  -v, --verbose                vypisuje bli¾¹í informace o vykonávání "
+#~ "pøíkazu\n"
+#~ "  -x, --one-file-system        zùstane v jednom souborovém systému\n"
+#~ "      --help                   vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version                vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+#~ "  Implicitnì, jsou ZDROJové soubory s dírami detekovány a odpovídající "
+#~ "CÍLový\n"
+#~ "soubor je vytvoøen stejnì `dìravý'. Toto je voleno pøepínaèem "
+#~ "--sparse=auto.\n"
+#~ "Pøepínaèem --sparse=always øíkáme, ¾e v CÍLových souborech se mají tvoøit\n"
+#~ "díry, jakmile ZDROJový soubor obsahuje dostateènì dlouhé sekvence nulových\n"
+#~ "bajtù. Pøepínaèem --sparse=never tvorbì souborù s dírami zabráníme.\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "The backup suffix is `~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\n"
+#~ "The version control method may be selected via the --backup option or "
+#~ "through\n"
+#~ "the VERSION_CONTROL environment variable.  Here are the values:\n"
+#~ "\n"
+#~ "  none, off       never make backups (even if --backup is given)\n"
+#~ "  numbered, t     make numbered backups\n"
+#~ "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
+#~ "  simple, never   always make simple backups\n"
+#~ msgstr ""
+#~ "  Pokud není pøípona zálo¾ních souborù nastavena pøepínaèem --suffix nebo \n"
+#~ "promìnnou SIMPLE_BACKUP_SUFFIX, je pou¾ívána pøípona `~'. Zpùsob vytváøení\n"
+#~ "zálo¾ních souborù lze ovlivnit nastavením promìnné VERSION_CONTROL, hodnoty\n"
+#~ "mohou být:\n"
+#~ "\n"
+#~ "  none, off       zálo¾ní kopie nevytváøet (i kdy¾ je zadán pøepínaè "
+#~ "--backup)\n"
+#~ "  numbered, t     èíslované zálo¾ní kopie\n"
+#~ "  existing, nil   èíslované, jestli¾e ji¾ èíslovaná zálo¾ní kopie existuje,\n"
+#~ "                  jinak jednoduché\n"
+#~ "  simple, never   jednoduché zálo¾ní kopie\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "As a special case, cp makes a backup of SOURCE when the force and backup\n"
+#~ "options are given and SOURCE and DEST are the same name for an existing,\n"
+#~ "regular file.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "  Speciálním pøípadem je, má-li má cp tvoøit zálo¾ní kopii ZDROJe, kdy¾ "
+#~ "jsou\n"
+#~ "zadány pøepínaèe --force a --backup, a ZDROJ a CÍL jsou stejného jména "
+#~ "jednoho\n"
+#~ "obyèejného souboru.\n"
+
+#~ msgid "preserving permissions for %s"
+#~ msgstr "zachování práv souboru %s"
+
+#, fuzzy
+#~ msgid "cannot make directory %s"
+#~ msgstr "adresáø `%s' nelze vytvoøit"
+
+#~ msgid "missing file arguments"
+#~ msgstr "chybìjící názvy souborù"
+
+#~ msgid "missing destination file"
+#~ msgstr "chybìjící cílový soubor"
+
+#, fuzzy
+#~ msgid "specified target, %s is not a directory"
+#~ msgstr "zadaný cíl `%s' není adresáø"
+
+#, fuzzy
+#~ msgid "copying multiple files, but last argument %s is not a directory"
+#~ msgstr ""
+#~ "pøi kopírování více souborù, musí být poslední argument (%s) adresáø"
+
+#~ msgid "when preserving paths, the destination must be a directory"
+#~ msgstr "jestli¾e mají být zachovány cesty, cílem musí být adresáø"
+
+#~ msgid ""
+#~ "warning: --version-control (-V) is obsolete;  support for it\n"
+#~ "will be removed in some future release.  Use --backup=%s instead."
+#~ msgstr ""
+#~ "varování: --version-control (-V) je zastaralý; podpora pøepínaèe bude\n"
+#~ "v nìkteré z dal¹ích verzí odstranìna. Radìji pou¾ijte --backup=%s."
+
+#~ msgid "symbolic links are not supported on this system"
+#~ msgstr "tento systém nepodporuje symbolické odkazy"
+
+#~ msgid "cannot make both hard and symbolic links"
+#~ msgstr "symbolický a pevný odkaz nelze vytvoøit zároveò"
+
+#~ msgid "backup type"
+#~ msgstr "typ zálohy"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]\n"
+#~ msgstr "Pou¾ití: %s [PØEPÍNAÈ]... [SOUBOR]\n"
+
+#~ msgid ""
+#~ "Output commands to set the LS_COLORS environment variable.\n"
+#~ "\n"
+#~ "Determine format of output:\n"
+#~ "  -b, --sh, --bourne-shell    output Bourne shell code to set LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        output C shell code to set LS_COLORS\n"
+#~ "  -p, --print-database        output defaults\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If FILE is specified, read it to determine which colors to use for which\n"
+#~ "file types and extensions.  Otherwise, a precompiled database is used.\n"
+#~ "For details on the format of these files, run `dircolors --print-database'.\n"
+#~ msgstr ""
+#~ "Výstupem jsou pøíkazy, které zajistí nastavení promìnné prostøedí LS_COLOR.\n"
+#~ "\n"
+#~ "Specifikace výstupního formátu:\n"
+#~ "  -b, --sh, --bourne-shell    výstupem je Bourne shellový kód\n"
+#~ "                              pro nastavení LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        výstupem je C shellový kód\n"
+#~ "                              pro nastavení LS_COLORS\n"
+#~ "  -p, --print-database        výstupem je vnitøní databáze\n"
+#~ "      --help                  vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version               vypí¹e oznaèení verze a skonèí\n"
+
+#~ msgid "%s:%lu: invalid line;  missing second token"
+#~ msgstr "%s:%lu: neplatný øádek; chybí druhý token"
+
+#, fuzzy
+#~ msgid "%s:%lu: unrecognized keyword %s"
+#~ msgstr "%s:%lu: `%s' je neznámé klíèové slovo"
+
+#~ msgid "<internal>"
+#~ msgstr "<interní>"
+
+#~ msgid ""
+#~ "the options to output dircolors' internal database and\n"
+#~ "to select a shell syntax are mutually exclusive"
+#~ msgstr ""
+#~ "pøepínaèe pro výpis vnitøní databáze 'dircolors' a výbìr\n"
+#~ "syntaxe pro shell se vzájemnì vyluèují"
+
+#~ msgid ""
+#~ "no FILE arguments may be used with the option to output\n"
+#~ "dircolors' internal database"
+#~ msgstr ""
+#~ "s pøepínaèem pro výpis vnitøní databáze 'dircolors' nemù¾e\n"
+#~ "být pou¾it argument pro soubor"
+
+#~ msgid "too many arguments"
+#~ msgstr "pøíli¹ mnoho argumentù"
+
+#~ msgid "no SHELL environment variable, and no shell type option given"
+#~ msgstr "promìnná prostøedí SHELL neexistuje a není zadáb typ shellu"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "Pou¾ití: %s [PØEPÍNAÈ]... [SOUBOR]...\n"
+
+#~ msgid ""
+#~ "Show information about the filesystem on which each FILE resides,\n"
+#~ "or all filesystems by default.\n"
+#~ "\n"
+#~ "  -a, --all             include filesystems having 0 blocks\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -i, --inodes          list inode information instead of block usage\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --local           limit listing to local filesystems\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "      --no-sync         do not invoke sync before getting usage info "
+#~ "(default)\n"
+#~ "  -P, --portability     use the POSIX output format\n"
+#~ "      --sync            invoke sync before getting usage info\n"
+#~ "  -t, --type=TYPE       limit listing to filesystems of type TYPE\n"
+#~ "  -T, --print-type      print filesystem type\n"
+#~ "  -x, --exclude-type=TYPE   limit listing to filesystems not of type TYPE\n"
+#~ "  -v                    (ignored)\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "  Vypí¹e informace o souborových systémech, ve kterých ka¾dý SOUBOR le¾í,\n"
+#~ "nebo implicitnì v¹ech souborových systémech.\n"
+#~ "\n"
+#~ "  -a, --all             také souborové systémy mající 0 blokù\n"
+#~ "      --block-size=VELIKOST pou¾ije tuto velikost bloku\n"
+#~ "  -h, --human-readable  velikosti ve formátu èitelném pro èlovìka\n"
+#~ "                        (napø. 1K 234M 2G)\n"
+#~ "  -H, --si              podobnì jako pøedchozí, ale násobky 1000 ne 1024\n"
+#~ "  -i, --inodes          výpis informací o i-uzlech místo o blocích\n"
+#~ "  -k, --kilobytes       jako --block-size=1024. Implicitnì 512 bajtù,\n"
+#~ "                        které odpovídají normì POSIX\n"
+#~ "  -l, --local           omezení výpisu na lokální souborový systém\n"
+#~ "  -m, --megabytes       jako --block-size=1048576. Implicitnì 512 bajtù,\n"
+#~ "                        které odpovídají normì POSIX\n"
+#~ "      --no-sync         nevolá 'sync' pøed získáním informací (implicitní)\n"
+#~ "  -P, --portability     pou¾ije formát definovaný normou POSIX\n"
+#~ "      --sync            zavolá 'sync' pøed získáním informací\n"
+#~ "  -t, --type=TYP        ve výstupu pouze souborové systémy typu TYP\n"
+#~ "  -T, --print-type      vypisuje typ souborového systému\n"
+#~ "  -x, --exclude-type=TYP   ve výstupu nebudou souborové systémy typu TYP\n"
+#~ "  -v                    (ignorován)\n"
+#~ "      --help            vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version         vypí¹e oznaèení verze a skonèí\n"
+
+#, fuzzy
+#~ msgid "file system type %s both selected and excluded"
+#~ msgstr "souborový systém typu `%s' je zároveò vybrán a vylouèen"
+
+#~ msgid "Warning: "
+#~ msgstr "Varování: "
+
+#~ msgid "%scannot read table of mounted filesystems"
+#~ msgstr "%stabulku pøipojených souborových systémù nelze pøeèíst"
+
+#~ msgid ""
+#~ "Summarize disk usage of each FILE, recursively for directories.\n"
+#~ "\n"
+#~ "  -a, --all             write counts for all files, not just directories\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -b, --bytes           print size in bytes\n"
+#~ "  -c, --total           produce a grand total\n"
+#~ "  -D, --dereference-args  dereference PATHs when symbolic link\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --count-links     count sizes many times if hard linked\n"
+#~ "  -L, --dereference     dereference all symbolic links\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "  -S, --separate-dirs   do not include size of subdirectories\n"
+#~ "  -s, --summarize       display only a total for each argument\n"
+#~ "  -x, --one-file-system  skip directories on different filesystems\n"
+#~ "  -X FILE, --exclude-from=FILE  Exclude files that match any pattern in "
+#~ "FILE.\n"
+#~ "      --exclude=PAT     Exclude files that match PAT.\n"
+#~ "      --max-depth=N     print the total for a directory (or file, with "
+#~ "--all)\n"
+#~ "                          only if it is N or fewer levels below the command\n"
+#~ "                          line argument;  --max-depth=0 is the same as\n"
+#~ "                          --summarize\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "  Sèítá diskový prostor zabraný ka¾dým SOUBORem, pro adresáøe i s obsahem\n"
+#~ "podadresáøù.\n"
+#~ "\n"
+#~ "  -a, --all             vypí¹e souèet velikosti v¹ech souborù,\n"
+#~ "                        ne pouze adresáøù\n"
+#~ "      --block-size=VELIKOST  pou¾ije tuto velikost bloku\n"
+#~ "  -b, --bytes           velikosti vypí¹e v bajtech\n"
+#~ "  -c, --total           vypí¹e i celkový souèet\n"
+#~ "  -D, --dereference-args  následuje symbolický odkaz, kdy¾ jako argument "
+#~ "zadán\n"
+#~ "  -h, --human-readable  vypisuje velikosti ve formátu èitelném pro lidi\n"
+#~ "                        (napø. 1K 234M 2G)\n"
+#~ "  -H, --si              jako pøedchozí, ale jednotky jsou násobkem 1000\n"
+#~ "  -k, --kilobytes       jako --block-size=1024\n"
+#~ "  -l, --count-links     jestli¾e jsou soubory pevnými odkazy na jeden "
+#~ "soubor,\n"
+#~ "                        sèítá velikosti, jako by to byly obyèejné soubory\n"
+#~ "  -L, --dereference     následuje v¹echny symbolické odkazy\n"
+#~ "  -m, --megabytes       jako --block-size=1048576\n"
+#~ "  -S, --separate-dirs   nepoèítá do velikosti adresáøù velikosti jejich\n"
+#~ "                        podadresáøù\n"
+#~ "  -s, --summarize       vypí¹e pouze celkový souèet pro ka¾dý argument\n"
+#~ "  -x, --one-file-system pøeskoèí adresáøe na jiných souborových systémech\n"
+#~ "  -X SOUBOR, --exclude-from=SOUBOR pøeskoèí soubory, které vyhovují "
+#~ "libovolnému\n"
+#~ "                        reg.výr. ze souboru SOUBOR\n"
+#~ "      --exclude=REGVÝR  pøeskoèí soubory vyhovující REGVÝR\n"
+#~ "      --max-depth=N     vypisuje názvy adresáøù a celkové souèty pouze\n"
+#~ "                        do N-té úrovnì adresáøù. Argument --max-depth=0\n"
+#~ "                        je rovnocenný se --sumarize.\n"
+#~ "      --help            vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version         vypí¹e oznaèení verze a skonèí\n"
+
+#~ msgid "cannot change to `..' from directory %s"
+#~ msgstr "z adresáøe `%s' nelze vejít do adresáøe `..'"
+
+#~ msgid "cannot change to directory %s"
+#~ msgstr "do adresáøe `%s' nelze vejít"
+
+#~ msgid "total"
+#~ msgstr "celkem"
+
+#, fuzzy
+#~ msgid "invalid maximum depth %s"
+#~ msgstr "`%s' je ¹patná maximální hloubka"
+
+#~ msgid "cannot both summarize and show all entries"
+#~ msgstr ""
+#~ "není mo¾né oboje, poèítat celkové souèty pro ka¾dý argument a ukázat\n"
+#~ "v¹echny polo¾ky"
+
+#~ msgid "warning: summarizing is the same as using --max-depth=0"
+#~ msgstr "varování: sumarizace je stejná jako pou¾ití --max-depth=0"
+
+#~ msgid "warning: summarizing conflicts with --max-depth=%d"
+#~ msgstr "varování: sumarizace je v rozporu s --max-depth=%d"
+
+#~ msgid "the strip option may not be used when installing a directory"
+#~ msgstr "pøi instalaci adresáøe nelze pøepínaè 'strip' pou¾ít"
+
+#, fuzzy
+#~ msgid "invalid mode %s"
+#~ msgstr "¹patná práva `%s'"
+
+#, fuzzy
+#~ msgid "creating directory %s"
+#~ msgstr "vytváøení adresáøe `%s'"
+
+#, fuzzy
+#~ msgid "installing multiple files, but last argument, %s is not a directory"
+#~ msgstr ""
+#~ "pøi kopírování více souborù, musí být poslední argument (%s) adresáø"
+
+#, fuzzy
+#~ msgid "%s is a directory"
+#~ msgstr "%s: je adresáøem"
+
+#, fuzzy
+#~ msgid "cannot obtain time stamps for %s"
+#~ msgstr "do adresáøe `%s' nelze vejít"
+
+#, fuzzy
+#~ msgid "cannot set time stamps for %s"
+#~ msgstr "adresáø `%s' nelze vytvoøit"
+
+#~ msgid "cannot fork"
+#~ msgstr "nelze vytvoøit potomka"
+
+#~ msgid "cannot run strip"
+#~ msgstr "program 'strip' nelze spustit"
+
+#, fuzzy
+#~ msgid "invalid user %s"
+#~ msgstr "`%s' je neplatný u¾ivatel"
+
+#, fuzzy
+#~ msgid "invalid group %s"
+#~ msgstr "`%s' je neplatná skupina"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST           (1st format)\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY   (2nd format)\n"
+#~ "  or:  %s -d [OPTION]... DIRECTORY...       (3rd format)\n"
+#~ msgstr ""
+#~ "Pou¾ití: %s [PØEPÍNAÈ]... ZDROJ CÍL            (1-ní formát)\n"
+#~ " nebo:   %s [PØEPÍNAÈ]... ZDROJ... ADRESÁØ     (2-hý formát)\n"
+#~ " nebo:   %s -d [PØEPÍNAÈ]... ADRESÁØ...        (3-tí formát)\n"
+
+# dunno what means `make all components of the given DIRECTORY(ies)' - rzm
+#~ msgid ""
+#~ "In the first two formats, copy SOURCE to DEST or multiple SOURCE(s) to\n"
+#~ "the existing DIRECTORY, while setting permission modes and owner/group.\n"
+#~ "In the third format, create all components of the given DIRECTORY(ies).\n"
+#~ "\n"
+#~ "      --backup[=CONTROL] make a backup of each existing destination file\n"
+#~ "  -b                  like --backup but does not accept an argument\n"
+#~ "  -c                  (ignored)\n"
+#~ "  -d, --directory     treat all arguments as directory names; create all\n"
+#~ "                        components of the specified directories\n"
+#~ "  -D                  create all leading components of DEST except the "
+#~ "last,\n"
+#~ "                        then copy SOURCE to DEST;  useful in the 1st format\n"
+#~ "  -g, --group=GROUP   set group ownership, instead of process' current "
+#~ "group\n"
+#~ "  -m, --mode=MODE     set permission mode (as in chmod), instead of "
+#~ "rwxr-xr-x\n"
+#~ "  -o, --owner=OWNER   set ownership (super-user only)\n"
+#~ "  -p, --preserve-timestamps   apply access/modification times of SOURCE "
+#~ "files\n"
+#~ "                        to corresponding destination files\n"
+#~ "  -s, --strip         strip symbol tables, only for 1st and 2nd formats\n"
+#~ "  -S, --suffix=SUFFIX override the usual backup suffix\n"
+#~ "  -v, --verbose       print the name of each directory as it is created\n"
+#~ "      --help          display this help and exit\n"
+#~ "      --version       output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "  V prvních dvou formátech kopírování ZDROJe do CÍLe nebo více ZDROJù\n"
+#~ "do ADRESÁØe, s nastavením u¾ivatelských práv a u¾ivatele/skupiny. Ve tøetím\n"
+#~ "formátu, vytvoøení v¹ech komponent zadaného ADRESÁØE(ù).\n"
+#~ "\n"
+#~ "      --backup=[TYP]    vytvoøí zálo¾ní kopii pøed smazáním\n"
+#~ "  -b                    jako --backup, ale bez argumentu\n"
+#~ "  -c                    (ignorován)\n"
+#~ "  -d, --directory       v¹echny argumenty jsou brány jako názvy adresáøù.\n"
+#~ "                        V¹echny neexistující komponenty tìchto adresáøù\n"
+#~ "                        jsou vytvoøeny.\n"
+#~ "  -D                    vytvoøí v¹echy úvodní komponenty CÍLe, kromì "
+#~ "poslední\n"
+#~ "  -g, --group=SKUPINA   nastaví skupinu souboru na SKUPINU\n"
+#~ "  -m, --mode=PRÁVA      nastaví pøístupová práva souboru na PRÁVA (zadána "
+#~ "jako\n"
+#~ "                        pro chmod)\n"
+#~ "  -o, --owner=VLASTNÍK  nastaví vlastníka souboru (pouze superu¾ivatel - "
+#~ "root)\n"
+#~ "  -p, --preserve-timestamps èasy cílového souboru nastaví tak, jak byly\n"
+#~ "                        nastaveny u zdrojového\n"
+#~ "  -s, --strip           odstraní tabulky symbolù, pouze 1 a 2 formát\n"
+#~ "  -S, --suffix=PØÍPONA  nastaví novou pøíponu zálo¾ních souborù\n"
+#~ "  -v, --verbose         vypisuje jména v¹ech vytváøených adresáøù\n"
+#~ "      --help            vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version         vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+
+#~ msgid "%s: warning: making a hard link to a symbolic link is not portable"
+#~ msgstr ""
+#~ "%s: varování: vytvoøení pevného odkazu na symbolický odkaz\n"
+#~ "není pøenositelné"
+
+#~ msgid "%s: hard link not allowed for directory"
+#~ msgstr "%s: pevný odkaz na adresáø není dovolen"
+
+#~ msgid "%s: cannot overwrite directory"
+#~ msgstr "%s: adresáø nelze pøepsat"
+
+#, fuzzy
+#~ msgid "%s: replace %s? "
+#~ msgstr "%s: pøepsat `%s'? "
+
+#~ msgid "%s: File exists"
+#~ msgstr "%s: Soubor existuje"
+
+#, fuzzy
+#~ msgid "create symbolic link %s to %s"
+#~ msgstr "vytvoøen symbolický odkaz `%s' na `%s'"
+
+#, fuzzy
+#~ msgid "create hard link %s to %s"
+#~ msgstr "vytvoøen pevný odkaz `%s' na `%s'"
+
+#, fuzzy
+#~ msgid "creating symbolic link %s to %s"
+#~ msgstr "vytvoøen symbolický odkaz `%s' na `%s'"
+
+#, fuzzy
+#~ msgid "creating hard link %s to %s"
+#~ msgstr "vytvoøen pevný odkaz `%s' na `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY TARGET...\n"
+#~ msgstr ""
+#~ "Pou¾ití: %s [PØEPÍNAÈ]... CÍL [NÁZEV_ODKAZU]\n"
+#~ " nebo:   %s [PØEPÍNAÈ]... CÍL... ADRESÁØ\n"
+#~ " nebo:   %s [PØEPÍNAÈ]... --target-directory=ADRESÁØ CÍL...\n"
+
+#~ msgid ""
+#~ "Create a link to the specified TARGET with optional LINK_NAME.\n"
+#~ "If LINK_NAME is omitted, a link with the same basename as the TARGET is\n"
+#~ "created in the current directory.  When using the second form with more\n"
+#~ "than one TARGET, the last argument must be a directory;  create links\n"
+#~ "in DIRECTORY to each TARGET.  Create hard links by default, symbolic\n"
+#~ "links with --symbolic.  When creating hard links, each TARGET must exist.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]      make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                          like --backup but does not accept an argument\n"
+#~ "  -d, -F, --directory         hard link directories (super-user only)\n"
+#~ "  -f, --force                 remove existing destination files\n"
+#~ "  -n, --no-dereference        treat destination that is a symlink to a\n"
+#~ "                                directory as if it were a normal file\n"
+#~ "  -i, --interactive           prompt whether to remove destinations\n"
+#~ "  -s, --symbolic              make symbolic links instead of hard links\n"
+#~ "  -S, --suffix=SUFFIX         override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  specify the DIRECTORY in which to "
+#~ "create\n"
+#~ "                                the links\n"
+#~ "  -v, --verbose               print name of each file before linking\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "  Tvoøí odkaz na zadaný CÍL s volitelným NÁZVEM_ODKAZU. Jestli¾e "
+#~ "NÁZEV_ODKAZU\n"
+#~ "není zadán, je vytvoøen odkaz v aktuálním adresáøi, se stejným názvem jako "
+#~ "má\n"
+#~ "CÍL. Pøi pou¾ití druhé formy s více ne¾ jedním CÍLem, poslední argument "
+#~ "musí\n"
+#~ "být ADRESÁØem; v tomto pøípadì, jsou pak vytvoøeny odkazy v adresáøi ADRESÁØ "
+#~ "na\n"
+#~ "CÍLe. Implicitnì jsou tvoøeny pevné odkazy, symbolické pomocí pøepínaèe\n"
+#~ "--symbolic. Pøi tvorbì pevného odkazu musí v¹echny CÍLe existovat.\n"
+#~ "\n"
+#~ "      --backup=[TYP]           vytvoøí zálohu ka¾dého souboru, který má být\n"
+#~ "                               odkazem pøepsán\n"
+#~ "  -b                           jako --backup, ale bez argumentu\n"
+#~ "  -d, -F, --directory          pevný odkaz na adresáø (pouze superu¾ivatel)\n"
+#~ "  -f, --force                  vytváøí odkaz i tehdy, existuje-li soubor "
+#~ "tého¾\n"
+#~ "                               názvu (soubor bude smazán)\n"
+#~ "  -n, --no-dereference         má-li být pøepsán symbolický odkaz na "
+#~ "adresáø,\n"
+#~ "                               pak jej sma¾e a vytvoøí po¾adovaný odkaz. "
+#~ "Pokud\n"
+#~ "                               by nebyl tento pøepínaè zadán, pak by byl "
+#~ "odkaz\n"
+#~ "                               vytvoøen v adresáøi, na který se odkaz "
+#~ "odkazuje.\n"
+#~ "  -i, --interactive            ptá se, zda smazat ji¾ existující soubor\n"
+#~ "  -s, --symbolic               tvoøí symbolický odkaz místo pevného\n"
+#~ "  -S, --suffix=PØÍPONA         mìní obvyklou pøíponu pro zálo¾ní soubory\n"
+#~ "      --target-directory=ADRESÁØ zadání ADRESÁØe, ve kterém vytvoøit odkazy\n"
+#~ "  -v, --verbose                pøed vytvoøením odkazu na soubor, vypí¹e "
+#~ "název\n"
+#~ "                               tohoto souboru\n"
+#~ "      --help                   vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version                vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+
+#~ msgid "missing file argument"
+#~ msgstr "postrádán souborový argument"
+
+#, fuzzy
+#~ msgid "specified target directory, %s is not a directory"
+#~ msgstr "zadaný cílový adresáø `%s' není adresáøem"
+
+#~ msgid "when making multiple links, last argument must be a directory"
+#~ msgstr "pøi vytváøení více odkazù, musí být poslední argument adresáø"
+
+#~ msgid "ignoring invalid width in environment variable COLUMNS: %s"
+#~ msgstr "¹patná ¹íøka (%s) v promìnné prostøedí COLUMNS, bude ignorována"
+
+#~ msgid "ignoring invalid tab size in environment variable TABSIZE: %s"
+#~ msgstr ""
+#~ "¹patná velikost tabelárotu (%s) v promìnné prostøedí TABSIZE, bude ignorována"
+
+#~ msgid "invalid line width: %s"
+#~ msgstr "¹patná ¹íøka øádku: %s"
+
+#~ msgid "invalid tab size: %s"
+#~ msgstr "¹patná velikost tabulky: %s"
+
+#~ msgid "unrecognized prefix: %s"
+#~ msgstr "neznámý prefix: %s"
+
+#~ msgid "unparsable value for LS_COLORS environment variable"
+#~ msgstr "nesrozumitelná hodnota v promìnné prostøedí LS_COLORS"
+
+#, fuzzy
+#~ msgid ""
+#~ "List information about the FILEs (the current directory by default).\n"
+#~ "Sort entries alphabetically if none of -cftuSUX nor --sort.\n"
+#~ "\n"
+#~ "  -a, --all                  do not hide entries starting with .\n"
+#~ "  -A, --almost-all           do not list implied . and ..\n"
+#~ "  -b, --escape               print octal escapes for nongraphic characters\n"
+#~ "      --block-size=SIZE      use SIZE-byte blocks\n"
+#~ "  -B, --ignore-backups       do not list implied entries ending with ~\n"
+#~ "  -c                         with -lt: sort by, and show, ctime (time of "
+#~ "last\n"
+#~ "                               modification of file status information)\n"
+#~ "                               with -l: show ctime and sort by name\n"
+#~ "                               otherwise: sort by ctime\n"
+#~ "  -C                         list entries by columns\n"
+#~ "      --color[=WHEN]         control whether color is used to distinguish "
+#~ "file\n"
+#~ "                               types.  WHEN may be `never', `always', or "
+#~ "`auto'\n"
+#~ "  -d, --directory            list directory entries instead of contents\n"
+#~ "  -D, --dired                generate output designed for Emacs' dired mode\n"
+#~ "  -f                         do not sort, enable -aU, disable -lst\n"
+#~ "  -F, --classify             append indicator (one of */=@|) to entries\n"
+#~ "      --format=WORD          across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            list both full date and full time\n"
+#~ msgstr ""
+#~ "  Vypisuje informace o SOUBORech (implicitnì z aktuálního adresáøe). "
+#~ "Jestli¾e\n"
+#~ "není zadán ¾ádný z pøepínaèù -cftuSUX nebo --sort, výstup bude seøazen\n"
+#~ "abecednì.\n"
+#~ "\n"
+#~ "  -a, --all                  vypí¹e v¹echny soubory i ty zaèínající teèkou\n"
+#~ "  -A, --almost-all           vypí¹e v¹echny soubory, kromì souborù '.' a "
+#~ "'..'\n"
+#~ "  -b, --escape               vypí¹e negrafické znaky osmièkovì\n"
+#~ "      --block-size=VELIKOST  pou¾ije tuto velikost bloku\n"
+#~ "  -B, --ignore-backups       nevypisuje soubory konèící na ~\n"
+#~ "  -c                         s -lt: øadí podle ctime a vypisuje ctime (èas\n"
+#~ "                             poslední zmìny i-uzlových informací);\n"
+#~ "                             s -l: vypisuje ctime, øadí podle názvu "
+#~ "souboru;\n"
+#~ "                             jinak: øadí podle ctime\n"
+#~ "  -C                         vypí¹e soubory ve sloupcích\n"
+#~ "      --color[=KDY]          urèuje kdy jsou barvy pou¾ívány k rozli¹ení "
+#~ "typù\n"
+#~ "                             souborù. KDY mù¾e být `never', `always' nebo\n"
+#~ "                             `auto'\n"
+#~ "  -d, --directory            vypí¹e názvy adresáøù místo jejich obsahu\n"
+#~ "  -D, --dired                generuje výstup formátovaný pro Emacsový\n"
+#~ "                             mód 'dired'\n"
+#~ "  -f                         neseøadí výstup, povolí -aU, zaká¾e -lst\n"
+#~ "  -F, --classify             k názvùm souborù pøidá znak urèující jejich "
+#~ "typ\n"
+#~ "                             (jeden z */=@|)\n"
+#~ "      --format=SLOVO         across jako -x, commas jako -m, horizontal\n"
+#~ "                             jako -x, long jako -l, single-column jako -1,\n"
+#~ "                             verbose jako -l, vertical jako -C\n"
+#~ "      --full-time            vypí¹e celé datum i celý èas\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -g                         (ignored)\n"
+#~ "  -G, --no-group             inhibit display of group information\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "      --si                   likewise, but use powers of 1000 not 1024\n"
+#~ "  -H                         same as `--si' for now; soon to change\n"
+#~ "                               to conform to POSIX\n"
+#~ "      --indicator-style=WORD append indicator with style WORD to entry "
+#~ "names:\n"
+#~ "                               none (default), classify (-F), file-type "
+#~ "(-p)\n"
+#~ "  -i, --inode                print index number of each file\n"
+#~ "  -I, --ignore=PATTERN       do not list implied entries matching shell "
+#~ "PATTERN\n"
+#~ "  -k, --kilobytes            like --block-size=1024\n"
+#~ "  -l                         use a long listing format\n"
+#~ "  -L, --dereference          list entries pointed to by symbolic links\n"
+#~ "  -m                         fill width with a comma separated list of "
+#~ "entries\n"
+#~ "  -n, --numeric-uid-gid      list numeric UIDs and GIDs instead of names\n"
+#~ "  -N, --literal              print raw entry names (don't treat e.g. "
+#~ "control\n"
+#~ "                               characters specially)\n"
+#~ "  -o                         use long listing format without group info\n"
+#~ "  -p, --file-type            append indicator (one of /=@|) to entries\n"
+#~ "  -q, --hide-control-chars   print ? instead of non graphic characters\n"
+#~ "      --show-control-chars   show non graphic characters as-is (default\n"
+#~ "                             unless program is `ls' and output is a "
+#~ "terminal)\n"
+#~ "  -Q, --quote-name           enclose entry names in double quotes\n"
+#~ "      --quoting-style=WORD   use quoting style WORD for entry names:\n"
+#~ "                               literal, locale, shell, shell-always, c, "
+#~ "escape\n"
+#~ "  -r, --reverse              reverse order while sorting\n"
+#~ "  -R, --recursive            list subdirectories recursively\n"
+#~ "  -s, --size                 print size of each file, in blocks\n"
+#~ msgstr ""
+#~ "  -g                         (ignorován)\n"
+#~ "  -G, --no-group             nevypisuju informace o skupinách\n"
+#~ "  -h, --human-readable       vypisuje velikosti ve formátu pro èlovìka\n"
+#~ "                             (napø: 1K, 234M, 2G)\n"
+#~ "  -H, --si                   jako pøedchozí, ale jednotky jsou násobky 1000\n"
+#~ "                             a ne 1024.\n"
+#~ "      --indicator-style=SLOVO pøidává indikátory stylem SLOVO k názvùm "
+#~ "souborù\n"
+#~ "                             SLOVO mù¾e být: none (implicitnì), classify "
+#~ "(-F),\n"
+#~ "                             file-type (-p)\n"
+#~ "  -i, --inode                ke ka¾dému souboru vypí¹e jeho i-uzlové èíslo\n"
+#~ "  -I, --ignore=VZOR          nevypisuje soubory vyhovující VZORu\n"
+#~ "  -k, --kilobytes            jako --block-size=1024\n"
+#~ "  -l                         vypí¹e výstup ve dlouhém formátu\n"
+#~ "  -L, --dereference          u symbolického odkazu vypí¹e soubor, na který\n"
+#~ "                             odkaz ukazuje\n"
+#~ "  -m                         vypí¹e soubory jako seznam jmen souborù "
+#~ "oddìlených\n"
+#~ "                             èárkami\n"
+#~ "  -n, --numeric-uid-gid      místo jména u¾ivatele (UID) a skupiny (GID)\n"
+#~ "                             vypisuje èísla\n"
+#~ "  -N, --literal              vypí¹e jména souborù tak, jak jsou na disku\n"
+#~ "                             ulo¾ena. Nezpracovává øídící znaky\n"
+#~ "  -o                         dlouhý formát bez informací o skupinách\n"
+#~ "  -p, --file-type            k názvùm souborù pøidá znak urèující jejich "
+#~ "typ\n"
+#~ "                             (jeden z /=@|)\n"
+#~ "  -q, --hide-control-chars   vypí¹e '?' místo negrafických znakù\n"
+#~ "      --show-control-chars   vypí¹e negrafické znaky tak jak jsou "
+#~ "(implicitní,\n"
+#~ "                             jestli¾e program není `ls' a výstup není na\n"
+#~ "                             terminál)\n"
+#~ "  -Q, --quote-name           vlo¾í názvy souborù do uvozovek\n"
+#~ "      --quoting-style=SLOVO  pou¾ije kvótovací styl SLOVO pro jména "
+#~ "souborù.\n"
+#~ "                             SLOVO mù¾e být:\n"
+#~ "                              literal, locale, shell, shell-always, c, "
+#~ "escape\n"
+#~ "  -r, --reverse              opaèné uspoøádání pøi øazení\n"
+#~ "  -R, --recursive            vypí¹e adresáøe rekurzivnì\n"
+#~ "  -s, --size                 vypí¹e velikost ka¾dého souboru v blocích\n"
+
+#~ msgid ""
+#~ "  -S                         sort by file size\n"
+#~ "      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+#~ "                               version -v\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=WORD            show time as WORD instead of modification "
+#~ "time:\n"
+#~ "                               atime, access, use, ctime or status; use\n"
+#~ "                               specified time as sort key if --sort=time\n"
+#~ "  -t                         sort by modification time\n"
+#~ "  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8\n"
+#~ "  -u                         with -lt: sort by, and show, access time\n"
+#~ "                               with -l: show access time and sort by name\n"
+#~ "                               otherwise: sort by access time\n"
+#~ "  -U                         do not sort; list entries in directory order\n"
+#~ "  -v                         sort by version\n"
+#~ "  -w, --width=COLS           assume screen width instead of current value\n"
+#~ "  -x                         list entries by lines instead of by columns\n"
+#~ "  -X                         sort alphabetically by entry extension\n"
+#~ "  -1                         list one file per line\n"
+#~ "      --help                 display this help and exit\n"
+#~ "      --version              output version information and exit\n"
+#~ "\n"
+#~ "By default, color is not used to distinguish types of files.  That is\n"
+#~ "equivalent to using --color=none.  Using the --color option without the\n"
+#~ "optional WHEN argument is equivalent to using --color=always.  With\n"
+#~ "--color=auto, color codes are output only if standard output is connected\n"
+#~ "to a terminal (tty).\n"
+#~ msgstr ""
+#~ "  -S                         výstup seøadí podle délky souborù\n"
+#~ "      --sort=SLOVO           výstup seøadí podle SLOVA:\n"
+#~ "                             extension (-X), none (-U), size (-S), time "
+#~ "(-t)\n"
+#~ "                             version (-v)\n"
+#~ "                             status (-c), time (-t), atime (-u), access "
+#~ "(-u),\n"
+#~ "                             use (-u)\n"
+#~ "      --time=SLOVO           vypisuje èas podle SLOVA:\n"
+#~ "                             atime, access, use, ctime nebo status (-c);\n"
+#~ "                             jestli¾e je zadán pøepínaè --sort=time, "
+#~ "pou¾ije\n"
+#~ "                             se tento èas jako øadící klíè\n"
+#~ "  -t                         výstup seøadí podle èasu poslední zmìny "
+#~ "souboru\n"
+#~ "  -T, --tabsize=SLOUPCÙ      pozice tabelátoru ka¾dých SLOUPCÙ znakù (impl. "
+#~ "8)\n"
+#~ "  -u                         s -lt: øadí podle atime a také jej vypisuje;\n"
+#~ "                             s -l: vypisuje atime, ale øadí podle názvù "
+#~ "souborù\n"
+#~ "                             jinak: øadí podle atime\n"
+#~ "  -U                         zaká¾e seøazení výstupu, názvy souborù budou\n"
+#~ "                             vypsány v tom poøadí v jakém jsou v adresáøi\n"
+#~ "  -v                         seøadí výstup podle verzí souborù\n"
+#~ "  -w, --width=SLOUPCÙ        pou¾ije tuto ¹íøku obrazovky pøi vypisování\n"
+#~ "  -x                         jména souborù vypí¹e po øádcích místo po "
+#~ "sloupcích\n"
+#~ "  -X                         výstup seøadí podle pøípon souborù\n"
+#~ "  -1                         vypí¹e jeden soubor na jeden øádek\n"
+#~ "      --help                 vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version              vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+#~ "  Implictnì není k rozli¹ování typù souborù barva pou¾ívána. To je "
+#~ "rovnocenné\n"
+#~ "s pou¾itím pøepínaèe --color=none. Pou¾ití pøepínaèe --color bez argumentu\n"
+#~ "KDY je rovnocenné s pou¾itím pøepínaèe --color=always. Pøepínaè "
+#~ "--color=auto\n"
+#~ "zpùsobí, ¾e barvy budou pou¾ity pouze, je-li standardní výstup pøipojen\n"
+#~ "k terminálu (tty).\n"
+
+#~ msgid "Usage: %s [OPTION] DIRECTORY...\n"
+#~ msgstr "Pou¾ití: %s [PØEPÍNAÈ] ADRESÁØ...\n"
+
+#~ msgid ""
+#~ "Create the DIRECTORY(ies), if they do not already exist.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not rwxrwxrwx - "
+#~ "umask\n"
+#~ "  -p, --parents     no error if existing, make parent directories as needed\n"
+#~ "  -v, --verbose     print a message for each created directory\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Vytvoøí ADRESÁØ(e), jestli¾e je¹tì neexistuje(í).\n"
+#~ "\n"
+#~ "  -m, --mode=PRÁVA  nastaví pøístupová práva (zadány jako pøíkazu 'chmod'),\n"
+#~ "                    místo toho, aby byla práva nastavena na rwxrwxrwx - "
+#~ "umask\n"
+#~ "  -p, --parents     vytvoøí neexistující rodièovské adresáøe zadaného "
+#~ "adresáøe\n"
+#~ "  -v, --verbose     vypí¹e zprávu pro ka¾dý vytvoøený adresáø\n"
+#~ "      --help        vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version     vypí¹e oznaèení verze a skonèí\n"
+
+#, fuzzy
+#~ msgid "created directory %s"
+#~ msgstr "adresáø `%s' byl vytvoøen"
+
+#, fuzzy
+#~ msgid "cannot set permissions of directory %s"
+#~ msgstr "pøístupová práva pro adresáø `%s' nelze nastavit"
+
+#~ msgid "Usage: %s [OPTION] NAME...\n"
+#~ msgstr "Pou¾ití: %s [PØEPÍNAÈ] JMÉNO...\n"
+
+#~ msgid ""
+#~ "Create named pipes (FIFOs) with the given NAMEs.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Tvoøí pojmenované roury (FIFO) se jmény JMÉNO.\n"
+#~ "\n"
+#~ "  -m, --mode=PRÁVA  nastaví pøístupová práva (zadána jako pøíkazu 'chmod'),\n"
+#~ "                    místo toho, aby byla nastavena na 0666 - umask\n"
+#~ "      --help        vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version     vypí¹e oznaèení verze a skonèí\n"
+
+#~ msgid "fifo files not supported"
+#~ msgstr "tento systém nepodporuje roury"
+
+#~ msgid "invalid mode"
+#~ msgstr "neplatná práva"
+
+#~ msgid "cannot create fifo `%s'"
+#~ msgstr "rouru `%s' nelze vytvoøit"
+
+#, fuzzy
+#~ msgid "cannot set permissions of fifo `%s'"
+#~ msgstr "pøístupová práva pro adresáø `%s' nelze nastavit"
+
+#~ msgid "Usage: %s [OPTION]... NAME TYPE [MAJOR MINOR]\n"
+#~ msgstr "Pou¾ití: %s [PØEPÍNAÈ]... JMÉNO TYP [HLAVNÍ VEDLEJ©Í]\n"
+
+#~ msgid ""
+#~ "Create the special file NAME of the given TYPE.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ "\n"
+#~ "MAJOR MINOR are forbidden for TYPE p, mandatory otherwise.  TYPE may be:\n"
+#~ "\n"
+#~ "  b      create a block (buffered) special file\n"
+#~ "  c, u   create a character (unbuffered) special file\n"
+#~ "  p      create a FIFO\n"
+#~ msgstr ""
+#~ "Vytvoøí speciální soubor JMÉNO zadaného TYPu.\n"
+#~ "\n"
+#~ "  -m, --mode=PRÁVA  nastaví pøístupová práva (zadána jako pøíkazu 'chmod'),\n"
+#~ "                    místo toho, aby byla nastavena na 0666 - umask\n"
+#~ "      --help        vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version     vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+#~ "HLAVNÍ a VEDLEJ©Í èíslo není dovoleno u TYPu p, jinak povinné. TYP mù¾e "
+#~ "být:\n"
+#~ "\n"
+#~ "  b      blokový (bufferovaný) speciální soubor\n"
+#~ "  c, u   znakový (nebufferovaný) speciální soubor\n"
+#~ "  p      roura (FIFO)\n"
+
+#~ msgid "wrong number of arguments"
+#~ msgstr "¹patný poèet argumentù"
+
+#~ msgid "block special files not supported"
+#~ msgstr "speciální blokové soubory nejsou podporovány"
+
+#~ msgid ""
+#~ "when creating block special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "pøi vytváøení speciálního blokového souboru, musí být hlavní\n"
+#~ "a vedlej¹í èíslo zaøízení zadáno"
+
+#, fuzzy
+#~ msgid "invalid major device number %s"
+#~ msgstr "neplatné hlavní èíslo (`%s') zaøízení"
+
+#, fuzzy
+#~ msgid "invalid minor device number %s"
+#~ msgstr "neplatné vedlej¹í èíslo (`%s') zaøízení"
+
+#~ msgid "character special files not supported"
+#~ msgstr "speciální znakové soubory nejsou podporovány"
+
+#~ msgid ""
+#~ "when creating character special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "pøi vytváøení speciálního znakového zaøízení, musí být zadáno hlavní\n"
+#~ "a vedlej¹í èíslo zaøízení"
+
+#~ msgid "major and minor device numbers may not be specified for fifo files"
+#~ msgstr "pro roury nesmí být hlavní a vedlej¹í èíslo zaøízení zadáno"
+
+#, fuzzy
+#~ msgid "cannot set permissions of `%s'"
+#~ msgstr "pøístupová práva pro adresáø `%s' nelze nastavit"
+
+#, fuzzy
+#~ msgid ""
+#~ "Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -f, --force                  never prompt before overwriting\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "      --strip-trailing-slashes  remove any trailing slashes from each "
+#~ "SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 move only older or brand new non-directories\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Pøejmenování ZDROJe na CÍL nebo pøemístìní ZDROJe(ù) do ADRESÁØe.\n"
+#~ "\n"
+#~ "      --backup=[TYP]           vytvoøí zálo¾ní kopii ka¾dého existujícího\n"
+#~ "                               cílového souboru\n"
+#~ "  -b                           jako --backup, ale bez argumentu\n"
+#~ "  -f, --force                  ma¾e existující cíle, neptá se\n"
+#~ "  -i, --interactive            pøed pøepsáním souboru se zeptá\n"
+#~ "      --strip-trailing-slashes odstraní v¹echna lomítka z konce ZDROJe(ù)\n"
+#~ "  -S, --suffix=PØÍPONA         pøípona zálo¾ních souborù\n"
+#~ "      --target-directory=ADRESÁØ pøemístí v¹echny ZDROJe do ADRESÁØe\n"
+#~ "  -u, --update                 pøemístí pouze star¹í a úplnì nové soubory\n"
+#~ "  -v, --verbose                vypisuje co se dìje\n"
+#~ "      --help                   vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version                vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+
+#~ msgid "when moving multiple files, last argument must be a directory"
+#~ msgstr "pøi pøemís»ování více souborù, musí být poslední argument adresáø"
+
+#, fuzzy
+#~ msgid "cannot open directory %s"
+#~ msgstr "adresáø `%s' nelze smazat"
+
+#, fuzzy
+#~ msgid "closing directory %s"
+#~ msgstr "mazání adresáøe `%s'"
+
+#, fuzzy
+#~ msgid "%s: remove write-protected directory %s? "
+#~ msgstr "%s: smazat adresáø `%s' se zakázaným zápisem? "
+
+#, fuzzy
+#~ msgid "%s: remove write-protected file %s? "
+#~ msgstr "%s: smazat soubor `%s' se zakázaným zápisem? "
+
+#, fuzzy
+#~ msgid "%s: remove directory %s? "
+#~ msgstr "%s: smazat adresáø `%s'? "
+
+#, fuzzy
+#~ msgid "%s: remove %s? "
+#~ msgstr "%s: smazat `%s'? "
+
+#~ msgid "removing %s\n"
+#~ msgstr "mazání %s\n"
+
+#, fuzzy
+#~ msgid "cannot unlink %s"
+#~ msgstr "adresáø nelze z `%s' odvázat"
+
+#, fuzzy
+#~ msgid "%s: directory %s is write protected; descend into it anyway? "
+#~ msgstr "%s: do adresáøe `%s' je zakázán zápis; opravdu pokraèovat? "
+
+#, fuzzy
+#~ msgid "%s: descend into directory %s? "
+#~ msgstr "%s: vejít do adresáøe `%s'? "
+
+#~ msgid "removing all entries of directory %s\n"
+#~ msgstr "mazání v¹ech polo¾ek adresáøe `%s'\n"
+
+#, fuzzy
+#~ msgid "cannot lstat `.' in %s"
+#~ msgstr "funkce lstat na `.' v `%s' vrátila chybu"
+
+#, fuzzy
+#~ msgid ""
+#~ "ERROR: the directory %s initially had device/inode\n"
+#~ "numbers %lu/%lu, but now (after a chdir into it), the numbers for `.'\n"
+#~ "are %lu/%lu.  That means that while rm was running, the directory\n"
+#~ "was replaced with either another directory or a link to another directory."
+#~ msgstr ""
+#~ "CHYBA: adresáø `%s' mìl pøi spu¹tìní zaøízení/i-uzel\n"
+#~ "èísla %lu/%lu, ale nyní (po zmìnì adresáøe do nìj), jsou èísla pro `.'\n"
+#~ "%lu/%lu. To znamená, ¾e bìhem bìhu pøíkazu rm, do¹lo k nahrazení adresáøe\n"
+#~ "jiným adresáøem nebo ke zmìnì odkazu na jiný adresáø."
+
+#~ msgid "cannot change back to directory %s via `..'"
+#~ msgstr "do adresáøe `%s' nelze pøes `..' dojít"
+
+#, fuzzy
+#~ msgid "%s: remove directory %s%s? "
+#~ msgstr "%s: smazat adresáø `%s'%s? "
+
+#~ msgid " (might be nonempty)"
+#~ msgstr " (nemusí být prázdný)"
+
+#~ msgid "removing the directory itself: %s\n"
+#~ msgstr "mazání vlastního adresáøe `%s'\n"
+
+#, fuzzy
+#~ msgid "cannot remove current directory %s"
+#~ msgstr "aktuální adresáø `%s' nelze smazat"
+
+#, fuzzy
+#~ msgid "cannot remove directory %s"
+#~ msgstr "adresáø `%s' nelze smazat"
+
+#~ msgid "cannot remove `.' or `..'"
+#~ msgstr "`.' nebo `..' nelze smazat"
+
+#~ msgid ""
+#~ "WARNING: Circular directory structure.\n"
+#~ "This almost certainly means that you have a corrupted file system.\n"
+#~ "NOTIFY YOUR SYSTEM MANAGER.\n"
+#~ "The following two directories have the same inode number:\n"
+#~ msgstr ""
+#~ "VAROVÁNÍ: Zacyklená struktura adresáøù.\n"
+#~ "To témìø jistì znamená, ¾e máte poru¹en souborový systém.\n"
+#~ "INFORMUJTE VA©EHO ADMINISTRÁTORA SYSTÉMU.\n"
+#~ "Následující dva adresáøe mají stejné èíslo i-uzlu:\n"
+
+#~ msgid "continue? "
+#~ msgstr "pokraèovat? "
+
+#~ msgid "Usage: %s [OPTION]... FILE...\n"
+#~ msgstr "Pou¾ití: %s [PØEPÍNAÈ]... SOUBOR...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Remove (unlink) the FILE(s).\n"
+#~ "\n"
+#~ "  -d, --directory       unlink directory, even if non-empty (super-user "
+#~ "only)\n"
+#~ "  -f, --force           ignore nonexistent files, never prompt\n"
+#~ "  -i, --interactive     prompt before any removal\n"
+#~ "  -r, -R, --recursive   remove the contents of directories recursively\n"
+#~ "  -v, --verbose         explain what is being done\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ "\n"
+#~ "To remove a file whose name starts with a `-', for example `-foo',\n"
+#~ "use one of these commands:\n"
+#~ "  %s -- -foo\n"
+#~ "\n"
+#~ "  %s ./-foo\n"
+#~ "\n"
+#~ "Note that if you use rm to remove a file, it is usually possible to recover\n"
+#~ "the contents of that file.  If you want more assurance that the contents "
+#~ "are\n"
+#~ "truly unrecoverable, consider using shred.\n"
+#~ msgstr ""
+#~ "Ma¾e SOUBOR(y).\n"
+#~ "\n"
+#~ "  -d, --directory       sma¾e adresáø, dokonce kdy¾ není prázdný (pouze\n"
+#~ "                        superu¾ivatel)\n"
+#~ "  -f, --force           ignoruje neexistující soubory\n"
+#~ "  -i, --interactive     ptá se pøed ka¾dým smazáním\n"
+#~ "  -r, -R, --recursive   ma¾e obsah adresáøù rekurzívnì\n"
+#~ "  -v, --verbose         vypisuje co je udìláno\n"
+#~ "      --help            vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version         vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+#~ "Smazání souboru jeho¾ název zaèíná znakem `-', napøíklad `-foo',\n"
+#~ "docílíte jedním z následujících pøíkazù:\n"
+#~ "  %s -- -foo\n"
+#~ "  %s ./-foo\n"
+
+#~ msgid "removing directory, %s"
+#~ msgstr "mazání adresáøe `%s'"
+
+#~ msgid "Usage: %s [OPTION]... DIRECTORY...\n"
+#~ msgstr "Pou¾ití: %s [PØEPÍNAÈ]... ADRESÁØ...\n"
+
+#~ msgid ""
+#~ "Remove the DIRECTORY(ies), if they are empty.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ignore each failure that is solely because a directory\n"
+#~ "                  is non-empty\n"
+#~ "  -p, --parents   remove DIRECTORY, then try to remove each directory\n"
+#~ "                  component of that path name.  E.g., `rmdir -p a/b/c' is\n"
+#~ "                  similar to `rmdir a/b/c a/b a'.\n"
+#~ "  -v, --verbose   output a diagnostic for every directory processed\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Smazání ADRESÁØe(ù), pouze jsou-li prázdné.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ignoruje v¹echny chyby zpùsobené neprázdností adresáøe\n"
+#~ "  -p, --parents   ma¾e ADRESÁØ a v¹echny rodièovské adresáøe, ze zadané\n"
+#~ "                  cesty. Napø: `rmdir -p a/b/c' je podobné \n"
+#~ "                  `rmdir a/b/c a/b a'\n"
+#~ "  -v, --verbose   vypisuje oznámení o ka¾dém zpravovávaném adresáøi\n"
+#~ "      --help      vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version   vypí¹e oznaèení verze a skonèí\n"
+
+#~ msgid "Usage: %s [OPTIONS] FILE [...]\n"
+#~ msgstr "Pou¾ití: %s [PØEPÍNAÈ] SOUBOR [...]\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Overwrite the specified FILE(s) repeatedly, in order to make it harder\n"
+#~ "for even very expensive hardware probing to recover the data.\n"
+#~ "\n"
+#~ "  -f, --force    change permissions to allow writing if necessary\n"
+#~ "  -n, --iterations=N  Overwrite N times instead of the default (%d)\n"
+#~ "  -s, --size=N   shred this many bytes (suffixes like k, M, G accepted)\n"
+#~ "  -u, --remove   truncate and remove file after overwriting\n"
+#~ "  -v, --verbose  show progress\n"
+#~ "  -x, --exact    do not round file sizes up to the next full block\n"
+#~ "  -z, --zero     add a final overwrite with zeros to hide shredding\n"
+#~ "  -              shred standard output\n"
+#~ "      --help     display this help and exit\n"
+#~ "      --version  print version information and exit\n"
+#~ "\n"
+#~ "Delete FILE(s) if --remove (-u) is specified.  The default is not to remove\n"
+#~ "the files because it is common to operate on device files like /dev/hda,\n"
+#~ "and those files usually should not be removed.  When operating on regular\n"
+#~ "files, most people use the --remove option.\n"
+#~ "\n"
+#~ "CAUTION: Note that shred relies on a very important assumption:\n"
+#~ "that the filesystem overwrites data in place.  This is the traditional\n"
+#~ "way to do things, but many modern filesystem designs do not satisfy this\n"
+#~ "assumption.  The following are examples of filesystems on which shred is\n"
+#~ "not effective:\n"
+#~ "\n"
+#~ "* log-structured or journaled filesystems, such as those supplied with\n"
+#~ "  AIX and Solaris (and JFS, ReiserFS, XFS, etc.)\n"
+#~ "\n"
+#~ "* filesystems that write redundant data and carry on even if some writes\n"
+#~ "  fail, such as RAID-based filesystems\n"
+#~ "\n"
+#~ "* filesystems that make snapshots, such as Network Appliance's NFS server\n"
+#~ "\n"
+#~ "* filesystems that cache in temporary locations, such as NFS\n"
+#~ "  version 3 clients\n"
+#~ "\n"
+#~ "* compressed filesystems\n"
+#~ msgstr ""
+#~ "  Bezpeèné mazání souborù, najprve je v¾dy soubor pøepsán, aby byl znièen "
+#~ "jeho\n"
+#~ "obsah a následnì je teprve soubor smazán.\n"
+#~ "\n"
+#~ "  -f, --force        povolí zmìnu práva pro zápis do souboru, jestli¾e\n"
+#~ "                     je to nutné\n"
+#~ "  -n, --iterations=N pøepí¹e N-krát, místo implicitního poètu (%d)\n"
+#~ "  -s, --size=N       aplikuje na tuto délku souboru (pøípony jako k, M, G\n"
+#~ "                     jsou mo¾né)\n"
+#~ "  -u, --remove       zkrátí a sma¾e soubor po pøepsání\n"
+#~ "  -v, --verbose      výpis informací o prùbìhu\n"
+#~ "  -x, --exact        nezaokrouhluje velikost souboru nahoru na celé bloky\n"
+#~ "  -z, --zero         pøidá poslední fázi pøepisu nulami\n"
+#~ "  -                  pøepisuje standardní výstup\n"
+#~ "      --help         vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version      vypí¹e oznaèení verze a skonèí"
+
+#~ msgid "%s: cannot rewind"
+#~ msgstr "%s: chyba pøi pøesunu na zaèátek"
+
+#~ msgid "%s: pass %lu/%lu (%s)..."
+#~ msgstr "%s: prùchod %lu/%lu (%s)..."
+
+#~ msgid "%s: error writing at offset %s"
+#~ msgstr "%s: chyba pøi zápisu na pozici %s"
+
+#~ msgid "%s: file too large"
+#~ msgstr "%s: soubor je pøíli¹ dlouhý"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%s/%s"
+#~ msgstr "%s: prùchod %lu/%lu (%s)...%s/%s"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%s"
+#~ msgstr "%s: prùchod %lu/%lu (%s)...%s"
+
+#~ msgid "%s: invalid file type"
+#~ msgstr "%s: nevhodný typ souboru"
+
+#~ msgid "%s: file has negative size"
+#~ msgstr "%s: soubor má zápornou velikost"
+
+#~ msgid "%s: error truncating"
+#~ msgstr "%s: chyba pøi zkracování"
+
+#~ msgid "%s: cannot shred append-only file descriptor"
+#~ msgstr "%s: shred nelze pou¾ít na popisovaè souboru pouze pro pøidávání"
+
+#~ msgid "%s: removing"
+#~ msgstr "%s: probíhá mazání"
+
+#, fuzzy
+#~ msgid "%s: renamed to %s"
+#~ msgstr "%s: pøejmenován na `%s'"
+
+#~ msgid "%s: removed"
+#~ msgstr "%s: smazán"
+
+#~ msgid "%s: cannot remove"
+#~ msgstr "%s: nelze smazat"
+
+#~ msgid "%s: invalid number of passes"
+#~ msgstr "%s: chybné èíslo poètu prùchodù"
+
+#~ msgid "%s: invalid file size"
+#~ msgstr "%s: chybná velikost souboru"
+
+#~ msgid "Usage: %s [OPTION]\n"
+#~ msgstr "Pou¾ití: %s [PØEPÍNAÈ]\n"
+
+#~ msgid ""
+#~ "Force changed blocks to disk, update the super block.\n"
+#~ "\n"
+#~ "  --help      display this help and exit\n"
+#~ "  --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Ulo¾í zmìnìné bloky na disk a aktualizuje super blok.\n"
+#~ "\n"
+#~ "  --help      vypí¹e tuto nápovìdu a skonèí\n"
+#~ "  --version   vypí¹e oznaèení verze a skonèí\n"
+
+#~ msgid "ignoring all arguments"
+#~ msgstr "v¹echny argumenty ignorovány"
+
+#, fuzzy
+#~ msgid "creating %s"
+#~ msgstr "mazání %s\n"
+
+#, fuzzy
+#~ msgid "setting times of %s"
+#~ msgstr "zachování èasù souboru %s"
+
+#, fuzzy
+#~ msgid "  or:  %s [-acm] MMDDhhmm[YY] FILE... (obsolescent)\n"
+#~ msgstr " nebo :  %s [-acm] MMDDhhmm[YY] SOUBOR... (zastaralé)\n"
+
+#~ msgid ""
+#~ "Update the access and modification times of each FILE to the current time.\n"
+#~ "\n"
+#~ "  -a                     change only the access time\n"
+#~ "  -c, --no-create        do not create any files\n"
+#~ "  -d, --date=STRING      parse STRING and use it instead of current time\n"
+#~ "  -f                     (ignored)\n"
+#~ "  -m                     change only the modification time\n"
+#~ "  -r, --reference=FILE   use this file's times instead of current time\n"
+#~ "  -t STAMP               use [[CC]YY]MMDDhhmm[.ss] instead of current time\n"
+#~ "  --time=WORD            set time given by WORD: access atime use (same as "
+#~ "-a)\n"
+#~ "                           modify mtime (same as -m)\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ "Note that the three time-date formats recognized for the -d and -t options\n"
+#~ "and for the obsolescent argument are all different.\n"
+#~ msgstr ""
+#~ "  Nastaví èas posledního pøístupu a poslední zmìny ka¾dého zadaného SOUBORU\n"
+#~ "na aktuální èas.\n"
+#~ "\n"
+#~ "  -a                     zmìní pouze èas posledního pøístupu\n"
+#~ "  -c, --no-create        nevytvoøí nové soubory\n"
+#~ "  -d, --date=ØETÌZEC     analyzuje ØETÌZEC a pou¾ije ho místo aktuálního "
+#~ "èasu\n"
+#~ "  -f                     (ignorován)\n"
+#~ "  -m                     zmìní pouze èas poslední zmìny souboru\n"
+#~ "  -r, --reference=SOUBOR pou¾ije èasy SOUBORu místo aktuálního èasu\n"
+#~ "  -t ÈAS                 pou¾ije [[CC]YY]MMDDhhmm[.ss] místo aktuálního "
+#~ "èasu\n"
+#~ "      --time=SLOVO       nastaví ÈAS zadaný SLOVEM: \n"
+#~ "                         access, atime, use (jako -a)\n"
+#~ "                         modify, mtime (jako -m)\n"
+#~ "      --help             vypí¹e tuto nápovìdu a skonèí\n"
+#~ "      --version          vypí¹e oznaèení verze a skonèí\n"
+#~ "\n"
+#~ "Formáty èasù pro pøepínaèe -d, -t a pro zastaralou syntaxi jsou rùzné.\n"
+
+#, fuzzy
+#~ msgid "invalid date format %s"
+#~ msgstr "neplatný formát data `%s'"
+
+#~ msgid "cannot specify times from more than one source"
+#~ msgstr "èas nelze zadávat z více ne¾ jednoho zdroje"
+
+#~ msgid "file arguments missing"
+#~ msgstr "argument udávající soubor nebyl zadán"
+
+#~ msgid "cannot chmod %s"
+#~ msgstr "práva souboru `%s' nelze zmìnit"
+
+#~ msgid "virtual memory exhausted"
+#~ msgstr "virtuální pamì» vyèerpána"
+
+#~ msgid "Memory exhausted"
+#~ msgstr "Pamì» vyèerpána"
+
+#~ msgid "group of %s changed to %s\n"
+#~ msgstr "skupina souboru %s zmìnìna na %s\n"
+
+#~ msgid "you are not a member of group `%s'"
+#~ msgstr "nejste èlenem skupiny `%s'"
+
+#~ msgid "%s: invalid group number"
+#~ msgstr "%s: neplatné èíslo skupiny"
+
+#~ msgid "owner of %s changed to "
+#~ msgstr "vlastník souboru %s zmìnìn na "
+
+#~ msgid "cannot remove old link to `%s'"
+#~ msgstr "starý odkaz na `%s' nelze smazat"
+
+#~ msgid "`%s' is a directory"
+#~ msgstr "'%s' je adresáø"
+
+#~ msgid "cannot make fifo `%s'"
+#~ msgstr "rouru `%s' nelze vytvoøit"

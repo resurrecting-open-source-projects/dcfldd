@@ -1,0 +1,2273 @@
+# Локализация для fileutils.
+# Copyright (C) 1997, 1998, 1999, 2000 Free Software Foundation, Inc.
+# Denis Perchine <dyp@perchine.com>, 1997-2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: fileutils 4.0t\n"
+"POT-Creation-Date: 2001-10-26 15:00-0400\n"
+"PO-Revision-Date: 2000-06-04 10:31+0600\n"
+"Last-Translator: Denis Perchine <dyp@perchine.com>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=koi8-r\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: lib/argmatch.c:159
+#, c-format
+msgid "invalid argument %s for `%s'"
+msgstr "неверный аргумент %s для `%s'"
+
+#: lib/argmatch.c:160
+#, c-format
+msgid "ambiguous argument %s for `%s'"
+msgstr "неоднозначный аргумент %s для `%s'"
+
+#. We try to put synonyms on the same line.  The assumption is that
+#. synonyms follow each other
+#: lib/argmatch.c:178
+msgid "Valid arguments are:"
+msgstr "Разрешенные аргументы:"
+
+#: lib/closeout.c:104
+msgid "write error"
+msgstr "ошибка записи"
+
+#: lib/error.c:117
+msgid "Unknown system error"
+msgstr "Неизвестная системная ошибка"
+
+#: lib/getopt.c:686
+#, c-format
+msgid "%s: option `%s' is ambiguous\n"
+msgstr "%s: ключ `%s' неоднозначен\n"
+
+#: lib/getopt.c:711
+#, c-format
+msgid "%s: option `--%s' doesn't allow an argument\n"
+msgstr "%s: ключ `--%s' требует отсутствия аргумента\n"
+
+#: lib/getopt.c:716
+#, c-format
+msgid "%s: option `%c%s' doesn't allow an argument\n"
+msgstr "%s: ключ `%c%s' требует отсутствия аргумента\n"
+
+#: lib/getopt.c:734 lib/getopt.c:907
+#, c-format
+msgid "%s: option `%s' requires an argument\n"
+msgstr "%s: ключ `%s' требует аргумента\n"
+
+#. --option
+#: lib/getopt.c:763
+#, c-format
+msgid "%s: unrecognized option `--%s'\n"
+msgstr "%s: неизвестный ключ `--%s'\n"
+
+#. +option or -option
+#: lib/getopt.c:767
+#, c-format
+msgid "%s: unrecognized option `%c%s'\n"
+msgstr "%s: неизвестный ключ `%c%s'\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:793
+#, c-format
+msgid "%s: illegal option -- %c\n"
+msgstr "%s: недопустимый ключ -- %c\n"
+
+#: lib/getopt.c:796
+#, c-format
+msgid "%s: invalid option -- %c\n"
+msgstr "%s: неверный ключ -- %c\n"
+
+#. 1003.2 specifies the format of this message.
+#: lib/getopt.c:826 lib/getopt.c:956
+#, c-format
+msgid "%s: option requires an argument -- %c\n"
+msgstr "%s: ключ требует аргумента -- %c\n"
+
+#: lib/getopt.c:873
+#, c-format
+msgid "%s: option `-W %s' is ambiguous\n"
+msgstr "%s: ключ `-W %s' неоднозначен\n"
+
+#: lib/getopt.c:891
+#, c-format
+msgid "%s: option `-W %s' doesn't allow an argument\n"
+msgstr "%s: ключ `-W %s' требует отсутствия аргумента\n"
+
+#: lib/human.c:341
+msgid "block size"
+msgstr "размер блока"
+
+#: lib/makepath.c:177
+#, fuzzy, c-format
+msgid "cannot create directory %s"
+msgstr "ошибка создания каталога `%s'"
+
+#: lib/makepath.c:183 lib/makepath.c:425
+#, fuzzy, c-format
+msgid "%s exists but is not a directory"
+msgstr "`%s' существует, но это не каталог"
+
+#: lib/makepath.c:321 lib/makepath.c:383 lib/makepath.c:444
+#, fuzzy, c-format
+msgid "cannot change owner and/or group of %s"
+msgstr "невозможно изменить на пустую группу"
+
+#: lib/makepath.c:343
+#, c-format
+msgid "cannot chdir to directory, %s"
+msgstr "ошибка смены каталога, %s"
+
+#: lib/makepath.c:397 lib/makepath.c:450
+#, fuzzy, c-format
+msgid "cannot change permissions of %s"
+msgstr "устанавливаю права доступа на %s"
+
+#. If XALLOC_FAIL_FUNC is NULL, or does return, display this message
+#. before exiting when memory is exhausted.  Goes through gettext.
+#: lib/obstack.c:477 lib/xmalloc.c:66
+msgid "memory exhausted"
+msgstr "не хватает памяти"
+
+#. Get translations for open and closing quotation marks.
+#.
+#. The message catalog should translate "`" to a left
+#. quotation mark suitable for the locale, and similarly for
+#. "'".  If the catalog has no translation,
+#. locale_quoting_style quotes `like this', and
+#. clocale_quoting_style quotes "like this".
+#.
+#. For example, an American English Unicode locale should
+#. translate "`" to U+201C (LEFT DOUBLE QUOTATION MARK), and
+#. should translate "'" to U+201D (RIGHT DOUBLE QUOTATION
+#. MARK).  A British English Unicode locale should instead
+#. translate these to U+2018 (LEFT SINGLE QUOTATION MARK) and
+#. U+2019 (RIGHT SINGLE QUOTATION MARK), respectively.
+#: lib/quotearg.c:259
+msgid "`"
+msgstr "`"
+
+#: lib/quotearg.c:260
+msgid "'"
+msgstr "'"
+
+#: lib/rpmatch.c:78
+msgid "^[yY]"
+msgstr "^[yYдД]"
+
+#: lib/rpmatch.c:81
+msgid "^[nN]"
+msgstr "^[nNнН]"
+
+#: lib/unicodeio.c:138
+#, c-format
+msgid "cannot output U+%04X: iconv function not usable"
+msgstr "невозможно вывести U+%04X: функция iconv не работает"
+
+#: lib/unicodeio.c:149
+#, c-format
+msgid "U+%04X: character out of range"
+msgstr "U+%04X: символ за пределами"
+
+#: lib/unicodeio.c:181 lib/unicodeio.c:190
+#, c-format
+msgid "cannot convert U+%04X to local character set"
+msgstr "невозможно преобразовать U+%04X в локальную кодировку"
+
+#: lib/unicodeio.c:196
+#, c-format
+msgid "cannot output U+%04X: iconv function not available"
+msgstr "невозможно вывести U+%04X: функция iconv не доступна"
+
+#: lib/userspec.c:179
+msgid "invalid user"
+msgstr "неверный пользователь"
+
+#: lib/userspec.c:180
+msgid "invalid group"
+msgstr "неверная группа"
+
+#: lib/userspec.c:182
+msgid "cannot get the login group of a numeric UID"
+msgstr "невозможно получить группу по умолчанию из ее номера"
+
+#: lib/userspec.c:184
+msgid "cannot omit both user and group"
+msgstr "нельзя опускать и пользователя и группу"
+
+#: lib/version-etc.c:38
+#, fuzzy
+msgid "Copyright (C) 2001 Free Software Foundation, Inc."
+msgstr "Copyright (C) 2000 Free Software Foundation, Inc."
+
+#: lib/version-etc.c:60
+#, c-format
+msgid "Written by %s.\n"
+msgstr "Написана %s.\n"
+
+#: lib/version-etc.c:66
+msgid ""
+"This is free software; see the source for copying conditions.  There is NO\n"
+"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+msgstr ""
+"Это свободное программное обеспечение; условия копирования в исходных\n"
+"текстах. Не дается НИКАКОЙ гарантии; даже ПОЛЕЗНОСТИ или ПРИМЕНИМОСТИ ДЛЯ\n"
+"ОПРЕДЕЛЕННОЙ ЦЕЛИ.\n"
+
+#: src/dcfldd.c:321
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr "Попробуйте `%s --help' для получения более подробного описания.\n"
+
+#: src/dcfldd.c:325
+#, c-format
+msgid "Usage: %s [OPTION]...\n"
+msgstr "Использование: %s [OPTION]...\n"
+
+#: src/dcfldd.c:326
+#, fuzzy
+msgid ""
+"Copy a file, converting and formatting according to the options.\n"
+"\n"
+"  bs=BYTES             force ibs=BYTES and obs=BYTES\n"
+"  cbs=BYTES            convert BYTES bytes at a time\n"
+"  conv=KEYWORDS        convert the file as per the comma separated keyword "
+"list\n"
+"  count=BLOCKS         copy only BLOCKS input blocks\n"
+"  ibs=BYTES            read BYTES bytes at a time\n"
+"  if=FILE              read from FILE instead of stdin\n"
+"  obs=BYTES            write BYTES bytes at a time\n"
+"  of=FILE              write to FILE instead of stdout\n"
+"  seek=BLOCKS          skip BLOCKS obs-sized blocks at start of output\n"
+"  skip=BLOCKS          skip BLOCKS ibs-sized blocks at start of input\n"
+"  pattern=BYTES        use the specified binary pattern as input\n"
+"  textpattern=TEXT     use repeating TEXT as input\n"
+"  hashwindow=BYTES     perform an MD5 hash on every BYTES amount of data\n"
+"  hashlog=FILE         send MD5 hash output to FILE instead of stderr\n"
+"  status=[on|off]      display a continual status message on stderr\n"
+"                         default state is \"on\"\n"
+"  sizeprobe=[if|of]    determine the size of the input or output file"
+msgstr ""
+"Копирует файл, преобразует и форматирует в зависимости от ключей.\n"
+"\n"
+"  bs=BYTES        установить размер входного и выходного буферов в BYTES "
+"байт\n"
+"  cbs=BYTES       установить размер буфера преобразования в BYTES байт\n"
+"  conv=KEYWORDS   преобразовывать файл в соответствии со списком. Отдельные\n"
+"                   элементы перечисляются через запятую\n"
+"  count=BLOCKS    копировать только BLOCKS входных блоков\n"
+"  ibs=BYTES       установить размер входного буфера в BYTES байт\n"
+"  if=FILE         читать файл из FILE вместо стандартного ввода\n"
+"  obs=BYTES       установить размер выходного буфера в BYTES байт\n"
+"  of=FILE         писать в FILE вместо стандартного вывода,\n"
+"                   не обнулять файл\n"
+"  seek=BLOCKS     пропустить BLOCKS блоков от начала выходного файла\n"
+"  skip=BLOCKS     пропустить BLOCKS блоков от начала входного файла\n"
+"      --help      показать помощь и выйти\n"
+"      --version   вывести информацию о версии и выйти\n"
+"\n"
+"После BYTES может стоять умножающий суффикс: xM M, c 1, w 2, b 512, kD "
+"1000,\n"
+"k 1024, MD 1,000,000, M 1,048,576, GD 1,000,000,000, G 1,073,741,824 и так\n"
+"далее для T, P, E, Z, Y.\n"
+"Каждый KEYWORD может быть:\n"
+"\n"
+"  ascii     из EBCDIC в ASCII\n"
+"  ebcdic    из ASCII в EBCDIC\n"
+"  ibm       из ASCII альтернативную EBCDIC\n"
+"  block     заполнять записи заканчивающиеся переводом строки пробелами\n"
+"  unblock   заменять завершающие пробелы на перевод строки\n"
+"  lcase     изменять регистр с верхнего на нижний\n"
+"  notrunc   не обрезать выходной файл\n"
+"  ucase     изменять регистр с нижнего на верхний\n"
+"  swab      менять местами каждую пару входных байтов\n"
+"  noerror   продолжать после ошибки чтения\n"
+"  sync      дополнять каждый входной блок нулями до размера входного буфера\n"
+
+#: src/dcfldd.c:371
+msgid ""
+"\n"
+"Report bugs to <bug-fileutils@gnu.org>."
+msgstr ""
+"\n"
+"Об ошибках сообщайте <bug-fileutils@gnu.org>"
+
+#: src/dcfldd.c:402
+#, c-format
+msgid "%s+%s records in\n"
+msgstr "%s+%s входных записей\n"
+
+#: src/dcfldd.c:405
+#, c-format
+msgid "%s+%s records out\n"
+msgstr "%s+%s выходных записей\n"
+
+#: src/dcfldd.c:413
+msgid "truncated record"
+msgstr "усеченная запись"
+
+#: src/dcfldd.c:414
+msgid "truncated records"
+msgstr "усечены записи"
+
+#: src/dcfldd.c:423
+#, fuzzy, c-format
+msgid "closing input file %s"
+msgstr "удаляю %s\n"
+
+#: src/dcfldd.c:425
+#, fuzzy, c-format
+msgid "closing output file %s"
+msgstr "удаляю %s\n"
+
+#: src/dcfldd.c:509
+#, fuzzy, c-format
+msgid "writing to %s"
+msgstr "удаляю %s\n"
+
+#: src/dcfldd.c:541
+#, fuzzy, c-format
+msgid "invalid conversion: %s"
+msgstr "%s: неверное преобразование"
+
+#: src/dcfldd.c:645
+#, fuzzy, c-format
+msgid "unrecognized option %s"
+msgstr "неизвестный ключ `%s'"
+
+#: src/dcfldd.c:659
+#, fuzzy, c-format
+msgid "invalid hex pattern: %s"
+msgstr "неверные права доступа `%s'"
+
+#: src/dcfldd.c:672 src/dcfldd.c:1455 src/dcfldd.c:1473
+#, fuzzy, c-format
+msgid "opening %s"
+msgstr "удаляю %s\n"
+
+#: src/dcfldd.c:729
+#, fuzzy, c-format
+msgid "unrecognized option %s=%s"
+msgstr "неизвестный ключ `%s=%s'"
+
+#: src/dcfldd.c:735
+#, fuzzy, c-format
+msgid "invalid number %s"
+msgstr "неверное число `%s'"
+
+#: src/dcfldd.c:765
+msgid ""
+"only one conv in {ascii,ebcdic,ibm}, {lcase,ucase}, {block,unblock}, "
+"{unblock,sync}"
+msgstr ""
+"только один вид преобразования вида из {ascii,ebcdic,ibm}, {lcase,ucase}, "
+"{block,unblock}, {unblock,sync}"
+
+#: src/dcfldd.c:915 src/dcfldd.c:1206
+#, fuzzy, c-format
+msgid "reading %s"
+msgstr "удаляю %s\n"
+
+#: src/dcfldd.c:1252 src/dcfldd.c:1315
+#, fuzzy, c-format
+msgid "writing %s"
+msgstr "удаляю %s\n"
+
+#: src/dcfldd.c:1408
+#, fuzzy
+msgid "stating file"
+msgstr "strip не удался"
+
+#: src/dcfldd.c:1458
+msgid "standard input"
+msgstr "стандартный ввод"
+
+#: src/dcfldd.c:1481
+msgid "file offset out of range"
+msgstr "смещение файла вне границ"
+
+#: src/dcfldd.c:1484
+#, fuzzy, c-format
+msgid "cannot fstat %s"
+msgstr "невозможно получить инфомацию о `%s'"
+
+#: src/dcfldd.c:1497
+#, fuzzy, c-format
+msgid "advancing past %s bytes in output file %s"
+msgstr "удаляю %s\n"
+
+#: src/dcfldd.c:1506
+msgid "standard output"
+msgstr "стандартный вывод"
+
+#, fuzzy
+#~ msgid "cannot change to null group"
+#~ msgstr "невозможно изменить на пустую группу"
+
+#, fuzzy
+#~ msgid "invalid group name %s"
+#~ msgstr "неверное имя группы `%s'"
+
+#~ msgid "group number"
+#~ msgstr "номер группы"
+
+#, fuzzy
+#~ msgid "invalid group number %s"
+#~ msgstr "неверный номер группы `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Использование: %s [OPTION]... OWNER[.[GROUP]] FILE...\n"
+#~ "         или:  %s [OPTION]... --reference=RFILE FILE...\n"
+
+#~ msgid ""
+#~ "Change the group membership of each FILE to GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's group rather than the specified\n"
+#~ "                         GROUP value\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ msgstr ""
+#~ "Изменяет принадлежность к группе каждого FILE на GROUP.\n"
+#~ "\n"
+#~ "  -c, --change            тоже что и --verbose, но сообщает только когда\n"
+#~ "      --dereference        были произведены изменения\n"
+#~ "  -h, --no-dereference    изменяет владельца ссылки, а не владельца файла,\n"
+#~ "                           на который ссылается ссылка. (доступна только на\n"
+#~ "                           системах имеющих системный вызов lchown)\n"
+#~ "  -f, --silent, --quiet   подавлять сообщения об ошибках\n"
+#~ "      --reference=RFILE   иcпользовать группу RFILE вместо GROUP\n"
+#~ "  -R, --recursive         изменять с каталогами\n"
+#~ "  -v, --verbose           выводить диагностические сообщения для каждого "
+#~ "файла\n"
+#~ "      --help              показать помощь и выйти\n"
+#~ "      --version           вывести информацию о версии и выйти\n"
+
+#~ msgid "too few arguments"
+#~ msgstr "слишком мало аргументов"
+
+#, fuzzy
+#~ msgid "getting attributes of %s"
+#~ msgstr "сохраняю времена для %s"
+
+#, fuzzy
+#~ msgid "getting new attributes of %s"
+#~ msgstr "сохраняю времена для %s"
+
+#~ msgid "mode of %s changed to %04lo (%s)\n"
+#~ msgstr "права доступа %s изменены на %04lo (%s)\n"
+
+#~ msgid "failed to change mode of %s to %04lo (%s)\n"
+#~ msgstr "ошибка изменения прав доступа %s на %04lo (%s)\n"
+
+#~ msgid "mode of %s retained as %04lo (%s)\n"
+#~ msgstr "права доступа %s оставлены как %04lo (%s)\n"
+
+#, fuzzy
+#~ msgid "changing permissions of %s"
+#~ msgstr "устанавливаю права доступа на %s"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... MODE[,MODE]... FILE...\n"
+#~ "  or:  %s [OPTION]... OCTAL-MODE FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Использование: %s [OPTION]... MODE[,MODE]... FILE...\n"
+#~ "         или:  %s [OPTION]... OCTAL-MODE FILE...\n"
+#~ "         или:  %s [OPTION]... --reference=RFILE FILE...\n"
+
+#~ msgid ""
+#~ "Change the mode of each FILE to MODE.\n"
+#~ "\n"
+#~ "  -c, --changes           like verbose but report only when a change is "
+#~ "made\n"
+#~ "  -f, --silent, --quiet   suppress most error messages\n"
+#~ "  -v, --verbose           output a diagnostic for every file processed\n"
+#~ "      --reference=RFILE   use RFILE's mode instead of MODE values\n"
+#~ "  -R, --recursive         change files and directories recursively\n"
+#~ "      --help              display this help and exit\n"
+#~ "      --version           output version information and exit\n"
+#~ "\n"
+#~ "Each MODE is one or more of the letters ugoa, one of the symbols +-= and\n"
+#~ "one or more of the letters rwxXstugo.\n"
+#~ msgstr ""
+#~ "Изменяет права доступа каждого файла на MODE.\n"
+#~ "\n"
+#~ "  -c, --change            тоже что и --verbose, но сообщает только когда\n"
+#~ "                          были произведены изменения\n"
+#~ "  -f, --silent, --quiet   подавлять сообщения об ошибках\n"
+#~ "  -v, --verbose           выводить диагностические сообщения для каждого "
+#~ "файла\n"
+#~ "      --reference=RFILE   использовать права доступа RFILE вместо MODE\n"
+#~ "  -R, --recursive         изменять с каталогами\n"
+#~ "      --help              показать помощь и выйти\n"
+#~ "      --version           вывести информацию о версии и выйти\n"
+#~ "\n"
+#~ "Каждый MODE представляет собой комбинацию из одного или более символов ugoa\n"
+#~ "вначале, и один из символов +-=, затем одна или несколько букв rwxXstugo.\n"
+
+#, fuzzy
+#~ msgid "invalid character %s in mode string %s"
+#~ msgstr "неверный аргумент %s для `%s'"
+
+#, fuzzy
+#~ msgid "invalid mode string: %s"
+#~ msgstr "неверные права доступа `%s'"
+
+#~ msgid "neither symbolic link %s nor referent has been changed\n"
+#~ msgstr ""
+#~ "ни символьная ссылка %s, ни то но что она указывает не были изменены\n"
+
+#, fuzzy
+#~ msgid "changed ownership of %s to %s\n"
+#~ msgstr "ошибка смены владельца с %s на "
+
+#, fuzzy
+#~ msgid "changed group of %s to %s\n"
+#~ msgstr "ошибка изменения группы с %s на %s\n"
+
+#, fuzzy
+#~ msgid "failed to change ownership of %s to %s\n"
+#~ msgstr "ошибка смены владельца с %s на "
+
+#~ msgid "failed to change group of %s to %s\n"
+#~ msgstr "ошибка изменения группы с %s на %s\n"
+
+#, fuzzy
+#~ msgid "ownership of %s retained as %s\n"
+#~ msgstr "владелец %s оставлен как "
+
+#~ msgid "group of %s retained as %s\n"
+#~ msgstr "группа %s оставлена как %s\n"
+
+#, fuzzy
+#~ msgid "changing ownership of %s"
+#~ msgstr "сохраняю владение для %s"
+
+#, fuzzy
+#~ msgid "changing group of %s"
+#~ msgstr "сохраняю владение для %s"
+
+#, fuzzy
+#~ msgid "unable to restore permissions of %s"
+#~ msgstr "восстанавливаю права доступа для %s"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... OWNER[:[GROUP]] FILE...\n"
+#~ "  or:  %s [OPTION]... :GROUP FILE...\n"
+#~ "  or:  %s [OPTION]... --reference=RFILE FILE...\n"
+#~ msgstr ""
+#~ "Использование: %s [OPTION]... OWNER[:[GROUP]] FILE...\n"
+#~ "         или:  %s [OPTION]... :[GROUP] FILE...\n"
+#~ "         или:  %s [OPTION]... --reference=RFILE FILE...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Change the owner and/or group of each FILE to OWNER and/or GROUP.\n"
+#~ "\n"
+#~ "  -c, --changes          like verbose but report only when a change is made\n"
+#~ "      --dereference      affect the referent of each symbolic link, rather\n"
+#~ "                         than the symbolic link itself\n"
+#~ "  -h, --no-dereference   affect symbolic links instead of any referenced "
+#~ "file\n"
+#~ "                         (available only on systems that can change the\n"
+#~ "                         ownership of a symlink)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                         change the owner and/or group of each file only if\n"
+#~ "                         its current owner and/or group match those "
+#~ "specified\n"
+#~ "                         here.  Either may be omitted, in which case a "
+#~ "match\n"
+#~ "                         is not required for the omitted attribute.\n"
+#~ "  -f, --silent, --quiet  suppress most error messages\n"
+#~ "      --reference=RFILE  use RFILE's owner and group rather than\n"
+#~ "                         the specified OWNER:GROUP values\n"
+#~ "  -R, --recursive        operate on files and directories recursively\n"
+#~ "  -v, --verbose          output a diagnostic for every file processed\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Изменяет владельца и/или группу каждого FILE на OWNER и/или GROUP.\n"
+#~ "\n"
+#~ "  -c, --change            тоже что и --verbose, но сообщает только когда\n"
+#~ "      --dereference        были произведены изменения\n"
+#~ "  -h, --no-dereference    изменяет владельца ссылки, а не владельца файла,\n"
+#~ "                           на который ссылается ссылка. (доступна только на\n"
+#~ "                           системах имеющих системный вызов lchown)\n"
+#~ "      --from=CURRENT_OWNER:CURRENT_GROUP\n"
+#~ "                          изменяет владельца и/или группу каждого файла\n"
+#~ "                          только если текущий владелец и/или группа\n"
+#~ "                          совпадает с CURRENT_OWNER::CURRENT_GROUP.\n"
+#~ "                          Как группа, так и владелец могут быть опущены,\n"
+#~ "                          в этом случае свпадение для данного атрибута\n"
+#~ "                          не обязательно.\n"
+#~ "  -f, --silent, --quiet   подавлять сообщения об ошибках\n"
+#~ "      --reference=RFILE   использовать права доступа RFILE вместо MODE\n"
+#~ "  -R, --recursive         изменять с каталогами\n"
+#~ "  -v, --verbose           выводить диагностические сообщения для каждого "
+#~ "файла\n"
+#~ "      --help              показать помощь и выйти\n"
+#~ "      --version           вывести информацию о версии и выйти\n"
+#~ "Владелец не изменяется если он не существует. Группа также не изменяется\n"
+#~ "если отсутствует, но изменяется на группу по умолчанию если не задан\n"
+#~ "пользователь.\n"
+
+#, fuzzy
+#~ msgid "cannot access %s"
+#~ msgstr "ошибка смены владельца %s"
+
+#, fuzzy
+#~ msgid "%s and %s are the same file"
+#~ msgstr "`%s' и `%s' - один и тот же файл"
+
+#, fuzzy
+#~ msgid "cannot open %s for reading"
+#~ msgstr "невозможно переместить `%s' в `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove %s"
+#~ msgstr "невозможно удалить `%s'"
+
+#, fuzzy
+#~ msgid "cannot create regular file %s"
+#~ msgstr "ошибка создания файла `%s'"
+
+#, fuzzy
+#~ msgid "cannot lseek %s"
+#~ msgstr "невозможно удалить `%s'"
+
+#, fuzzy
+#~ msgid "closing %s"
+#~ msgstr "удаляю %s\n"
+
+#, fuzzy
+#~ msgid "cannot stat %s"
+#~ msgstr "невозможно получить инфомацию о `%s'"
+
+#, fuzzy
+#~ msgid "omitting directory %s"
+#~ msgstr "%s: пропускаю каталог"
+
+#, fuzzy
+#~ msgid "cannot overwrite non-directory %s with directory %s"
+#~ msgstr "%s: невозможно перезаписать каталог не-каталогом"
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s with non-directory"
+#~ msgstr "%s: невозможно перезаписать каталог не-каталогом"
+
+#, fuzzy
+#~ msgid "%s: overwrite %s, overriding mode %04lo? "
+#~ msgstr "%s: переписать`%s', с правами доступа %04lo? "
+
+#, fuzzy
+#~ msgid "%s: overwrite %s? "
+#~ msgstr "%s: переписать `%s'? "
+
+#, fuzzy
+#~ msgid "cannot overwrite directory %s"
+#~ msgstr "%s: ошибка перезаписи каталога"
+
+#~ msgid "cannot move directory onto non-directory: %s -> %s"
+#~ msgstr "невозможно переместить каталог в не-каталог: %s -> %s"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not moved"
+#~ msgstr ""
+#~ "сохранение запасной копии `%s' уничтожит оригинал; `%s' не перенесен"
+
+#, fuzzy
+#~ msgid "backing up %s would destroy source;  %s not copied"
+#~ msgstr ""
+#~ "сохранение запасной копии `%s' уничтожит оригинал; `%s' не скопирован"
+
+#, fuzzy
+#~ msgid "cannot backup %s"
+#~ msgstr "ошибка создания запасной копии `%s'"
+
+#~ msgid " (backup: %s)"
+#~ msgstr " (резервная копия: %s)"
+
+#, fuzzy
+#~ msgid "cannot copy a directory, %s, into itself, %s"
+#~ msgstr "невозможно переместить `%s' в каталог самого себя, `%s'"
+
+#, fuzzy
+#~ msgid "will not create hard link %s to directory %s"
+#~ msgstr "ошибка создания жесткой ссылки `%s' на каталог `%s'"
+
+#, fuzzy
+#~ msgid "cannot create hard link %s to %s"
+#~ msgstr "создаю жесткую ссылку с `%s' на `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to a subdirectory of itself, %s"
+#~ msgstr "невозможно переместить `%s' в каталог самого себя, `%s'"
+
+#, fuzzy
+#~ msgid "cannot move %s to %s"
+#~ msgstr "невозможно переместить `%s' в `%s'"
+
+#, fuzzy
+#~ msgid "cannot copy cyclic symbolic link %s"
+#~ msgstr "%s: невозможно скопировать циклическую символьную ссылку"
+
+#~ msgid "%s: can make relative symbolic links only in current directory"
+#~ msgstr ""
+#~ "%s: возможно создавать относительные символические ссылки только в текущем "
+#~ "каталоге"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s to %s"
+#~ msgstr "ошибка создания символьной ссылки `%s'"
+
+#, fuzzy
+#~ msgid "cannot create link %s"
+#~ msgstr "ошибка создания ссылки `%s'"
+
+#, fuzzy
+#~ msgid "cannot create fifo %s"
+#~ msgstr "ошибка создания именованного канала `%s'"
+
+#, fuzzy
+#~ msgid "cannot create special file %s"
+#~ msgstr "ошибка создания специального файла `%s'"
+
+#, fuzzy
+#~ msgid "cannot read symbolic link %s"
+#~ msgstr "ошибка чтения символьной ссылки `%s'"
+
+#, fuzzy
+#~ msgid "cannot create symbolic link %s"
+#~ msgstr "ошибка создания символьной ссылки `%s'"
+
+#~ msgid "preserving ownership for %s"
+#~ msgstr "сохраняю владение для %s"
+
+#, fuzzy
+#~ msgid "%s has unknown file type"
+#~ msgstr "%s: неизвестный тип файла"
+
+#~ msgid "preserving times for %s"
+#~ msgstr "сохраняю времена для %s"
+
+#~ msgid "setting permissions for %s"
+#~ msgstr "устанавливаю права доступа на %s"
+
+#, fuzzy
+#~ msgid "cannot un-backup %s"
+#~ msgstr "ошибка восстановления с запасной копии `%s'"
+
+#~ msgid "%s -> %s (unbackup)\n"
+#~ msgstr "%s -> %s (восстановление)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY SOURCE...\n"
+#~ msgstr ""
+#~ "Использование: %s [OPTION]... SOURCE DEST\n"
+#~ "         или:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ "         или:  %s [OPTION]... --target-directory=DIRECTORY SOURCE...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                same as -dpR\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -d, --no-dereference         never follow symbolic links\n"
+#~ "  -f, --force                  if an existing destination file cannot be\n"
+#~ "                                   opened, remove it and try again\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "  -H                           follow command-line symbolic links\n"
+#~ "  -l, --link                   link files instead of copying\n"
+#~ "  -L, --dereference            always follow symbolic links\n"
+#~ "  -p, --preserve               preserve file attributes if possible\n"
+#~ "      --parents                append source path to DIRECTORY\n"
+#~ "  -P                           same as `--parents' for now; soon to change "
+#~ "to\n"
+#~ "                                 `--no-dereference' to conform to POSIX\n"
+#~ "  -r                           copy recursively, non-directories as files\n"
+#~ "                                 WARNING: use -R instead when you might "
+#~ "copy\n"
+#~ "                                 special files like FIFOs or /dev/zero\n"
+#~ "      --remove-destination     remove each existing destination file before\n"
+#~ "                                 attempting to open it (contrast with "
+#~ "--force)\n"
+#~ msgstr ""
+#~ "Копирует SOURCE в DEST, или несколько SOURCE в DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                тоже что и -dpR\n"
+#~ "      --backup[=CONTROL]       создать резервную копию перед удалением\n"
+#~ "  -b                   ]       то же, что и --backup, но без аргумента\n"
+#~ "  -d, --no-dereference         сохранять ссылки\n"
+#~ "  -f, --force                  переписывать существующие файлы не спрашивая\n"
+#~ "  -i, --interactive            спрашивать перед тем как переписывать\n"
+#~ "  -l, --link                   создавать жесткие ссылки вместо копирования\n"
+#~ "  -p, --preserve               сохранять атрибуты файлов если это возможно\n"
+#~ "  -P, --parents                добавить исходный путь к DIRECTORY\n"
+#~ "  -r                           копировать с каталогами, а не каталоги как\n"
+#~ "                                 файлы\n"
+#~ "      --sparse=WHEN            управляет созданием разряженных файлов\n"
+#~ "  -R, --recursive              копировать каталоги рекурсивно\n"
+#~ "      --strip-trailing-slashes удаляет все конечные пробелы из каждого\n"
+#~ "                               аргумента SOURCE\n"
+#~ "  -s, --symbolic-link          создавать символические ссылки вместо\n"
+#~ "                                 копирования\n"
+#~ "  -S, --suffix=SUFFUX          установить суффикс для запасных копий как\n"
+#~ "                                 SUFFIX\n"
+#~ "      --target-directory=DIRECTORY  переместить все SOURCE в DIRECTORY\n"
+#~ "  -u, --update                 копировать только тогда когда исходный файл\n"
+#~ "                                 новее чем файл назначения, или когда файл\n"
+#~ "                                 назначения отсутствует\n"
+#~ "  -v, --verbose                пояснять что будет сделано\n"
+#~ "  -x, --one-file-system        оставаться в пределах одной файловой системы\n"
+#~ "      --help                   показать помощь и выйти\n"
+#~ "      --version                вывести информацию о версии и выйти\n"
+#~ "\n"
+#~ "По умолчанию `sparse' SOURCE распознается при помощи грубой\n"
+#~ "эвристической процедуры и соответственно создается `sparse' DEST.\n"
+#~ "Автоматическое определение можно также задать при помощи ключа "
+#~ "--sparse=auto.\n"
+#~ "С ключом --sparse=always SOURCE всегда создается `sparse' вне зависимости\n"
+#~ "от того содержит ли SOURCE длинные последовательности нулевых байтов.\n"
+#~ "Используйте ключ --sparse=never для запрещения создания `sparse' файлов.\n"
+#~ "\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "      --sparse=WHEN            control creation of sparse files\n"
+#~ "  -R, --recursive              copy directories recursively\n"
+#~ "      --strip-trailing-slashes remove any trailing slashes from each SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -s, --symbolic-link          make symbolic links instead of copying\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 copy only when the SOURCE file is newer\n"
+#~ "                                 than the destination file or when the\n"
+#~ "                                 destination file is missing\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "  -x, --one-file-system        stay on this file system\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ "By default, sparse SOURCE files are detected by a crude heuristic and the\n"
+#~ "corresponding DEST file is made sparse as well.  That is the behavior\n"
+#~ "selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST\n"
+#~ "file whenever the SOURCE file contains a long enough sequence of zero "
+#~ "bytes.\n"
+#~ "Use --sparse=never to inhibit creation of sparse files.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Копирует SOURCE в DEST, или несколько SOURCE в DIRECTORY.\n"
+#~ "\n"
+#~ "  -a, --archive                тоже что и -dpR\n"
+#~ "      --backup[=CONTROL]       создать резервную копию перед удалением\n"
+#~ "  -b                   ]       то же, что и --backup, но без аргумента\n"
+#~ "  -d, --no-dereference         сохранять ссылки\n"
+#~ "  -f, --force                  переписывать существующие файлы не спрашивая\n"
+#~ "  -i, --interactive            спрашивать перед тем как переписывать\n"
+#~ "  -l, --link                   создавать жесткие ссылки вместо копирования\n"
+#~ "  -p, --preserve               сохранять атрибуты файлов если это возможно\n"
+#~ "  -P, --parents                добавить исходный путь к DIRECTORY\n"
+#~ "  -r                           копировать с каталогами, а не каталоги как\n"
+#~ "                                 файлы\n"
+#~ "      --sparse=WHEN            управляет созданием разряженных файлов\n"
+#~ "  -R, --recursive              копировать каталоги рекурсивно\n"
+#~ "      --strip-trailing-slashes удаляет все конечные пробелы из каждого\n"
+#~ "                               аргумента SOURCE\n"
+#~ "  -s, --symbolic-link          создавать символические ссылки вместо\n"
+#~ "                                 копирования\n"
+#~ "  -S, --suffix=SUFFUX          установить суффикс для запасных копий как\n"
+#~ "                                 SUFFIX\n"
+#~ "      --target-directory=DIRECTORY  переместить все SOURCE в DIRECTORY\n"
+#~ "  -u, --update                 копировать только тогда когда исходный файл\n"
+#~ "                                 новее чем файл назначения, или когда файл\n"
+#~ "                                 назначения отсутствует\n"
+#~ "  -v, --verbose                пояснять что будет сделано\n"
+#~ "  -x, --one-file-system        оставаться в пределах одной файловой системы\n"
+#~ "      --help                   показать помощь и выйти\n"
+#~ "      --version                вывести информацию о версии и выйти\n"
+#~ "\n"
+#~ "По умолчанию `sparse' SOURCE распознается при помощи грубой\n"
+#~ "эвристической процедуры и соответственно создается `sparse' DEST.\n"
+#~ "Автоматическое определение можно также задать при помощи ключа "
+#~ "--sparse=auto.\n"
+#~ "С ключом --sparse=always SOURCE всегда создается `sparse' вне зависимости\n"
+#~ "от того содержит ли SOURCE длинные последовательности нулевых байтов.\n"
+#~ "Используйте ключ --sparse=never для запрещения создания `sparse' файлов.\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "The backup suffix is `~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\n"
+#~ "The version control method may be selected via the --backup option or "
+#~ "through\n"
+#~ "the VERSION_CONTROL environment variable.  Here are the values:\n"
+#~ "\n"
+#~ "  none, off       never make backups (even if --backup is given)\n"
+#~ "  numbered, t     make numbered backups\n"
+#~ "  existing, nil   numbered if numbered backups exist, simple otherwise\n"
+#~ "  simple, never   always make simple backups\n"
+#~ msgstr ""
+#~ "По умолчанию суффикс для запасных копий ~, если только не установлена\n"
+#~ "переменная окружения SIMPLE_BACKUP_SUFFIX или ключ --suffix. Способ "
+#~ "контроля\n"
+#~ "версий может быть установлен при помощи ключа --backup или переменной\n"
+#~ "окружения VERSION_CONTROL. Допустимые значения:\n"
+#~ "\n"
+#~ "  none, off       никогда не создавать резервных копий (даже если\n"
+#~ "                   указан ключ --backup)\n"
+#~ "  numbered, t     создавать нумерованные копии\n"
+#~ "  existing, nil   если существуют нумерованные копии, то создавать\n"
+#~ "                   нумерованные иначе создавать простые\n"
+#~ "  simple. never   всегда создавать простые копии\n"
+
+#~ msgid ""
+#~ "\n"
+#~ "As a special case, cp makes a backup of SOURCE when the force and backup\n"
+#~ "options are given and SOURCE and DEST are the same name for an existing,\n"
+#~ "regular file.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Когда заданы ключи -f и -b, и SOURCE совпадает с DEST cp создает резервную\n"
+#~ "копию DEST.\n"
+
+#~ msgid "preserving permissions for %s"
+#~ msgstr "сохраняю права доступа для %s"
+
+#, fuzzy
+#~ msgid "cannot make directory %s"
+#~ msgstr "ошибка создания каталога `%s'"
+
+#~ msgid "missing file arguments"
+#~ msgstr "отсутствуют аргументы"
+
+#~ msgid "missing destination file"
+#~ msgstr "отсутствует файл назначения"
+
+#, fuzzy
+#~ msgid "accessing %s"
+#~ msgstr "удаляю %s\n"
+
+#, fuzzy
+#~ msgid "specified target, %s is not a directory"
+#~ msgstr "указанная цель, `%s' - не каталог"
+
+#, fuzzy
+#~ msgid "copying multiple files, but last argument %s is not a directory"
+#~ msgstr "копируются несколько файлов, но последний аргумент (%s) не каталог"
+
+#~ msgid "when preserving paths, the destination must be a directory"
+#~ msgstr "при сохранении пути последний аргумент должен быть каталогом"
+
+#~ msgid ""
+#~ "warning: --version-control (-V) is obsolete;  support for it\n"
+#~ "will be removed in some future release.  Use --backup=%s instead."
+#~ msgstr ""
+#~ "осторожно: ключ --version-control (-V) устарел; его поддержка будет\n"
+#~ "прекращена в последующих версиях.  Используйте --backup=%s."
+
+#~ msgid "symbolic links are not supported on this system"
+#~ msgstr "система не поддерживает символьные ссылки"
+
+#~ msgid "cannot make both hard and symbolic links"
+#~ msgstr "невозможно создать жесткую и символическую ссылку"
+
+#~ msgid "backup type"
+#~ msgstr "тип резервной копии"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]\n"
+#~ msgstr "Использование: %s [OPTION]... [FILE]\n"
+
+#~ msgid ""
+#~ "Output commands to set the LS_COLORS environment variable.\n"
+#~ "\n"
+#~ "Determine format of output:\n"
+#~ "  -b, --sh, --bourne-shell    output Bourne shell code to set LS_COLORS\n"
+#~ "  -c, --csh, --c-shell        output C shell code to set LS_COLORS\n"
+#~ "  -p, --print-database        output defaults\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ "If FILE is specified, read it to determine which colors to use for which\n"
+#~ "file types and extensions.  Otherwise, a precompiled database is used.\n"
+#~ "For details on the format of these files, run `dircolors --print-database'.\n"
+#~ msgstr ""
+#~ "Выдает команды для установки переменной окружения LS_COLORS.\n"
+#~ "\n"
+#~ "Задать формат вывода:\n"
+#~ "  -b, --sh, --bourne-shell    вывести код для установки LS_COLORS в\n"
+#~ "                               Bourne shell \n"
+#~ "  -c, --csh, --c-shell        вывести код для установки LS_COLORS в C shell\n"
+#~ "  -p, --print-database        вывести установки по умолчанию\n"
+#~ "      --help                  показать помощь и выйти\n"
+#~ "      --version               вывести информацию о версии и выйти\n"
+#~ "\n"
+#~ "Если указан FILE, то читать его чтобы узнать какие цвета каким расширениям\n"
+#~ "сопоставлены. Иначе использовать базу данных по умолчанию. Для более\n"
+#~ "детального описания формата FILE запустите dircolors --print-database.\n"
+
+#~ msgid "%s:%lu: invalid line;  missing second token"
+#~ msgstr "%s:%lu: неверная строка; отсутствует второй элемент"
+
+#, fuzzy
+#~ msgid "%s:%lu: unrecognized keyword %s"
+#~ msgstr "%s:%lu: неизвестное ключевое слово `%s'"
+
+#~ msgid "<internal>"
+#~ msgstr "<внутренний>"
+
+#~ msgid ""
+#~ "the options to output dircolors' internal database and\n"
+#~ "to select a shell syntax are mutually exclusive"
+#~ msgstr ""
+#~ "ключи вывести встроенную базу данных и выбора типа интерпретатора\n"
+#~ "взаимоисключающие"
+
+#~ msgid ""
+#~ "no FILE arguments may be used with the option to output\n"
+#~ "dircolors' internal database"
+#~ msgstr ""
+#~ "аргумент FILE не может быть использован вместе с ключами вывести\n"
+#~ "внутреннюю базу данных"
+
+#~ msgid "too many arguments"
+#~ msgstr "слишком много аргументов"
+
+#~ msgid "no SHELL environment variable, and no shell type option given"
+#~ msgstr ""
+#~ "либо переменная окружения SHELL отсутствует, либо не задан тип интерпретатора"
+
+#~ msgid "Usage: %s [OPTION]... [FILE]...\n"
+#~ msgstr "Использование: %s [OPTIONS]... [FILE]...\n"
+
+#~ msgid ""
+#~ "Show information about the filesystem on which each FILE resides,\n"
+#~ "or all filesystems by default.\n"
+#~ "\n"
+#~ "  -a, --all             include filesystems having 0 blocks\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -i, --inodes          list inode information instead of block usage\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --local           limit listing to local filesystems\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "      --no-sync         do not invoke sync before getting usage info "
+#~ "(default)\n"
+#~ "  -P, --portability     use the POSIX output format\n"
+#~ "      --sync            invoke sync before getting usage info\n"
+#~ "  -t, --type=TYPE       limit listing to filesystems of type TYPE\n"
+#~ "  -T, --print-type      print filesystem type\n"
+#~ "  -x, --exclude-type=TYPE   limit listing to filesystems not of type TYPE\n"
+#~ "  -v                    (ignored)\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "Показать информацию о файловых системах на которых расположен каждый FILE\n"
+#~ "или обо всех файловых системах по умолчанию.\n"
+#~ "\n"
+#~ "  -a, --all             включать файловые системы с нулевым количеством "
+#~ "блоков\n"
+#~ "      --block-size=SIZE использовать блоки размером SIZE байт\n"
+#~ "  -h, --human-readable  печатать размеры в удобном для человека виде\n"
+#~ "                         (например, 1K 234M 2G)\n"
+#~ "  -H, --si              то же, но использовать степени 1000, а не 1024\n"
+#~ "  -i, --inodes          печатать информацию об использовании узлов\n"
+#~ "  -k, --kilobytes       использовать размер блока 1024 вместо 512\n"
+#~ "  -l, --local           показывать только локальные файловые системы\n"
+#~ "  -m, --megabytes       использовать размер блока 1024K вместо 512\n"
+#~ "      --no-sync         не вызывать sync перед получением информации\n"
+#~ "                         (по умолчанию)\n"
+#~ "  -P, --portability     использовать POSIX стандарт вывода\n"
+#~ "      --sync            вызывать sync перед получением информации\n"
+#~ "  -t, --type=TYPE       вывести список файловых систем с типом TYPE\n"
+#~ "  -T, --print-type      выводить тип файловой системы\n"
+#~ "  -x, --exclude-type=TYPE  не включать в список файловые системы с типом "
+#~ "TYPE\n"
+#~ "  -v                    (игнорируется)\n"
+#~ "      --help            показать помощь и выйти\n"
+#~ "      --version         вывести информацию о версии и выйти\n"
+
+#, fuzzy
+#~ msgid "file system type %s both selected and excluded"
+#~ msgstr "файловые системы типа `%s' и выбраны, и исключены"
+
+#~ msgid "Warning: "
+#~ msgstr "Осторожно: "
+
+#~ msgid "%scannot read table of mounted filesystems"
+#~ msgstr "%sошибка чтения таблицы подключенных файловых систем"
+
+#~ msgid ""
+#~ "Summarize disk usage of each FILE, recursively for directories.\n"
+#~ "\n"
+#~ "  -a, --all             write counts for all files, not just directories\n"
+#~ "      --block-size=SIZE use SIZE-byte blocks\n"
+#~ "  -b, --bytes           print size in bytes\n"
+#~ "  -c, --total           produce a grand total\n"
+#~ "  -D, --dereference-args  dereference PATHs when symbolic link\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "  -H, --si              likewise, but use powers of 1000 not 1024\n"
+#~ "  -k, --kilobytes       like --block-size=1024\n"
+#~ "  -l, --count-links     count sizes many times if hard linked\n"
+#~ "  -L, --dereference     dereference all symbolic links\n"
+#~ "  -m, --megabytes       like --block-size=1048576\n"
+#~ "  -S, --separate-dirs   do not include size of subdirectories\n"
+#~ "  -s, --summarize       display only a total for each argument\n"
+#~ "  -x, --one-file-system  skip directories on different filesystems\n"
+#~ "  -X FILE, --exclude-from=FILE  Exclude files that match any pattern in "
+#~ "FILE.\n"
+#~ "      --exclude=PAT     Exclude files that match PAT.\n"
+#~ "      --max-depth=N     print the total for a directory (or file, with "
+#~ "--all)\n"
+#~ "                          only if it is N or fewer levels below the command\n"
+#~ "                          line argument;  --max-depth=0 is the same as\n"
+#~ "                          --summarize\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ msgstr ""
+#~ "Суммирует использование дискового пространства каждого FILE, с каталогами.\n"
+#~ "\n"
+#~ "  -a, --all             печатать количество всех файлов, а не только\n"
+#~ "                         каталогов\n"
+#~ "  -b, --bytes           печатать размер в байтах\n"
+#~ "  -c, --total           подсчитывать итог\n"
+#~ "  -D, --dereference-args  раскрывать PATH если они являются\n"
+#~ "                           символьными ссылками\n"
+#~ "  -h, --human-readable  печатать размеры в удобном для человека виде\n"
+#~ "                         (например, 1K 234M 2G)\n"
+#~ "  -H, --si              то же, но использовать степени 1000, а не 1024\n"
+#~ "  -k, --kilobytes       использовать размер блока 1024 вместо 512\n"
+#~ "  -l, --count-links     считать каждую жесткую ссылку как отдельный файл\n"
+#~ "  -L, --dereference     раскрывать символические ссылки\n"
+#~ "  -m, --megabytes       использовать размер блока 1024K вместо 512\n"
+#~ "  -S, --separate-dirs   не включать размер каталогов\n"
+#~ "  -s, --summarize       показывать только итог для каждого аргумента\n"
+#~ "  -x, --one-file-system  пропускать каталоги на других файловых системах\n"
+#~ "  -X FILE, --exclude-from=FILE  Исключать файлы, совпадающие с FILE.\n"
+#~ "      --exclude=PAT     Исключать файлы, соответствующие регулярному\n"
+#~ "                          выражению FILE.\n"
+#~ "      --max-depth=N     подводить итог для каталога (или файла, с -all)\n"
+#~ "                          только если он на N или меньше уровней ниже,\n"
+#~ "                          чем параметр командной строки; --max-depth=0\n"
+#~ "                          это то же самое, что и --summarize\n"
+#~ "      --help            показать помощь и выйти\n"
+#~ "      --version         вывести информацию о версии и выйти\n"
+
+#~ msgid "cannot change to `..' from directory %s"
+#~ msgstr "ошибка смены каталога %s на `..'"
+
+#~ msgid "cannot change to directory %s"
+#~ msgstr "ошибка смены каталога на %s"
+
+#~ msgid "total"
+#~ msgstr "итого"
+
+#, fuzzy
+#~ msgid "invalid maximum depth %s"
+#~ msgstr "неверная максимальная глубина вложенности `%s'"
+
+#~ msgid "cannot both summarize and show all entries"
+#~ msgstr "невозможно одновременно подводить итог и показывать все элементы"
+
+#~ msgid "warning: summarizing is the same as using --max-depth=0"
+#~ msgstr ""
+#~ "предупреждение: подведение итога это то же самое, что и --max-depth=0"
+
+#~ msgid "warning: summarizing conflicts with --max-depth=%d"
+#~ msgstr "предупреждение: подведение итога конфликтует с --max-depth=%d"
+
+#~ msgid "the strip option may not be used when installing a directory"
+#~ msgstr ""
+#~ "ключ удаления отладочной информации не может быть использована когда "
+#~ "устанавливается каталог"
+
+#, fuzzy
+#~ msgid "invalid mode %s"
+#~ msgstr "неверные права доступа `%s'"
+
+#, fuzzy
+#~ msgid "creating directory %s"
+#~ msgstr "создается каталог `%s'"
+
+#, fuzzy
+#~ msgid "installing multiple files, but last argument, %s is not a directory"
+#~ msgstr "копируются несколько файлов, но последний аргумент (%s) не каталог"
+
+#, fuzzy
+#~ msgid "%s is a directory"
+#~ msgstr "%s: каталог"
+
+#, fuzzy
+#~ msgid "cannot obtain time stamps for %s"
+#~ msgstr "невозможно удалить каталог `%s'"
+
+#, fuzzy
+#~ msgid "cannot set time stamps for %s"
+#~ msgstr "ошибка создания каталога `%s'"
+
+#~ msgid "cannot fork"
+#~ msgstr "не могу создать процесс"
+
+#~ msgid "cannot run strip"
+#~ msgstr "ошибка запуска strip"
+
+#, fuzzy
+#~ msgid "invalid user %s"
+#~ msgstr "неверный пользователь `%s'"
+
+#, fuzzy
+#~ msgid "invalid group %s"
+#~ msgstr "неверная группа `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST           (1st format)\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY   (2nd format)\n"
+#~ "  or:  %s -d [OPTION]... DIRECTORY...       (3rd format)\n"
+#~ msgstr ""
+#~ "Использование: %s [OPTION]... SOURCE DEST             (1-ый формат)\n"
+#~ "         или:  %s [OPTION]... SOURCE... DIRECTORY     (2-ой формат)\n"
+#~ "         или:  %s -d [OPTIONS]... DIRECTORY...        (3-ий формат)\n"
+
+#~ msgid ""
+#~ "In the first two formats, copy SOURCE to DEST or multiple SOURCE(s) to\n"
+#~ "the existing DIRECTORY, while setting permission modes and owner/group.\n"
+#~ "In the third format, create all components of the given DIRECTORY(ies).\n"
+#~ "\n"
+#~ "      --backup[=CONTROL] make a backup of each existing destination file\n"
+#~ "  -b                  like --backup but does not accept an argument\n"
+#~ "  -c                  (ignored)\n"
+#~ "  -d, --directory     treat all arguments as directory names; create all\n"
+#~ "                        components of the specified directories\n"
+#~ "  -D                  create all leading components of DEST except the "
+#~ "last,\n"
+#~ "                        then copy SOURCE to DEST;  useful in the 1st format\n"
+#~ "  -g, --group=GROUP   set group ownership, instead of process' current "
+#~ "group\n"
+#~ "  -m, --mode=MODE     set permission mode (as in chmod), instead of "
+#~ "rwxr-xr-x\n"
+#~ "  -o, --owner=OWNER   set ownership (super-user only)\n"
+#~ "  -p, --preserve-timestamps   apply access/modification times of SOURCE "
+#~ "files\n"
+#~ "                        to corresponding destination files\n"
+#~ "  -s, --strip         strip symbol tables, only for 1st and 2nd formats\n"
+#~ "  -S, --suffix=SUFFIX override the usual backup suffix\n"
+#~ "  -v, --verbose       print the name of each directory as it is created\n"
+#~ "      --help          display this help and exit\n"
+#~ "      --version       output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "В первых двух форматах, копирует SOURCE в DEST или несколько SOURCE в\n"
+#~ "DIRECTORY, устанавливает коды доступа и владельца/группу. В третьем формате\n"
+#~ "создает DIRECTORY.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]  создать резервную копию перед удалением\n"
+#~ "  -b                  то же, что и --backup, но без аргумента\n"
+#~ "  -c                  (игнорируется)\n"
+#~ "  -d, --directory     рассматривать все аргументы как каталоги; создавать "
+#~ "все\n"
+#~ "                       все компоненты указанных каталогов\n"
+#~ "  -D                  создавать все начальные составляющие DEST кроме\n"
+#~ "                        последнего, затем копировать SOURCE в DEST; полезно\n"
+#~ "                        в случае первого формата\n"
+#~ "  -g, --group=GROUP   устанавливать группу, вместо текущей группы процесса\n"
+#~ "  -m, --mode=MODE     устанавливать код прав доступа, вместо rw-r--r--\n"
+#~ "  -o, --owner=OWNER   устанавливать владельца (только для "
+#~ "суперпользователя)\n"
+#~ "  -p, --preserve-timestamps   сохранять времена доступа/изменения SOURCE "
+#~ "файлов\n"
+#~ "                        при копировании\n"
+#~ "  -s, --strip         удалять отладочную информацию; только для 1-ого и\n"
+#~ "                       2-ого форматов\n"
+#~ "  -S, --suffix=SUFFIX установить суффикс для запасных копий как SUFFIX\n"
+#~ "  -v, --verbose       выводить название каждого создаваемого каталога\n"
+#~ "      --help            показать помощь и выйти\n"
+#~ "      --version         вывести информацию о версии и выйти\n"
+#~ "\n"
+
+#~ msgid "%s: warning: making a hard link to a symbolic link is not portable"
+#~ msgstr ""
+#~ "%s: осторожно: создание жесткой ссылки на символьную ссылку работает\n"
+#~ "не везде"
+
+#~ msgid "%s: hard link not allowed for directory"
+#~ msgstr "%s: не разрешено создавать жесткую ссылку на каталог"
+
+#~ msgid "%s: cannot overwrite directory"
+#~ msgstr "%s: ошибка перезаписи каталога"
+
+#, fuzzy
+#~ msgid "%s: replace %s? "
+#~ msgstr "%s: заменить `%s'? "
+
+#~ msgid "%s: File exists"
+#~ msgstr "%s: Файл существует"
+
+#, fuzzy
+#~ msgid "create symbolic link %s to %s"
+#~ msgstr "создаю символьную ссылку с `%s' на `%s'"
+
+#, fuzzy
+#~ msgid "create hard link %s to %s"
+#~ msgstr "создаю жесткую ссылку с `%s' на `%s'"
+
+#, fuzzy
+#~ msgid "creating symbolic link %s to %s"
+#~ msgstr "создаю символьную ссылку с `%s' на `%s'"
+
+#, fuzzy
+#~ msgid "creating hard link %s to %s"
+#~ msgstr "создаю жесткую ссылку с `%s' на `%s'"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... TARGET [LINK_NAME]\n"
+#~ "  or:  %s [OPTION]... TARGET... DIRECTORY\n"
+#~ "  or:  %s [OPTION]... --target-directory=DIRECTORY TARGET...\n"
+#~ msgstr ""
+#~ "Использование: %s [OPTIONS]... TARGET [LINK_NAME]\n"
+#~ "         или:  %s [OPTIONS]... TARGET... DIRECTORY\n"
+#~ "         или:  %s [OPTION]... --target-directory=DIRECTORY TARGET...\n"
+
+#~ msgid ""
+#~ "Create a link to the specified TARGET with optional LINK_NAME.\n"
+#~ "If LINK_NAME is omitted, a link with the same basename as the TARGET is\n"
+#~ "created in the current directory.  When using the second form with more\n"
+#~ "than one TARGET, the last argument must be a directory;  create links\n"
+#~ "in DIRECTORY to each TARGET.  Create hard links by default, symbolic\n"
+#~ "links with --symbolic.  When creating hard links, each TARGET must exist.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]      make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                          like --backup but does not accept an argument\n"
+#~ "  -d, -F, --directory         hard link directories (super-user only)\n"
+#~ "  -f, --force                 remove existing destination files\n"
+#~ "  -n, --no-dereference        treat destination that is a symlink to a\n"
+#~ "                                directory as if it were a normal file\n"
+#~ "  -i, --interactive           prompt whether to remove destinations\n"
+#~ "  -s, --symbolic              make symbolic links instead of hard links\n"
+#~ "  -S, --suffix=SUFFIX         override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  specify the DIRECTORY in which to "
+#~ "create\n"
+#~ "                                the links\n"
+#~ "  -v, --verbose               print name of each file before linking\n"
+#~ "      --help                  display this help and exit\n"
+#~ "      --version               output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Создает ссылку на указанный TARGET с необязательным именем LINK_NAME.\n"
+#~ "Если TARGET несколько, последний параметр должен быть каталогом; создает\n"
+#~ "ссылки DIRECTORY на каждый TARGET. По умолчанию создает жесткие ссылки,\n"
+#~ "символьные с ключом --symbolic. При создании жестких ссылок каждый TARGET\n"
+#~ "обязан присутствовать.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       создать резервную копию перед удалением\n"
+#~ "  -b                           то же, что и --backup, но без аргумента\n"
+#~ "  -d, -F, --directory          создавать жесткую ссылку на каталоги\n"
+#~ "                                (только для суперпользователя)\n"
+#~ "  -f, --force                  переписывать существующие файлы не спрашивая\n"
+#~ "  -n, --no-dereference         рассматривать символьную ссылку как "
+#~ "нормальный\n"
+#~ "                                файл\n"
+#~ "  -i, --interactive            спрашивать перед тем как переписывать\n"
+#~ "  -s, --symbolic               создавать символические ссылки\n"
+#~ "  -S, --suffix=SUFFIX          установить суффикс для запасных копий как\n"
+#~ "                                SUFFIX\n"
+#~ "      --target-directory=DIRECTORY  указывает DIRECTORY в котором создавать\n"
+#~ "                                ссылки\n"
+#~ "  -v, --verbose                пояснять что будет сделано\n"
+#~ "      --help                   показать помощь и выйти\n"
+#~ "      --version                вывести информацию о версии и выйти\n"
+#~ "\n"
+
+#~ msgid "missing file argument"
+#~ msgstr "отсутствует аргумент указывающий на файл"
+
+#, fuzzy
+#~ msgid "specified target directory, %s is not a directory"
+#~ msgstr "указанный каталог назначения,`%s' -- не каталог"
+
+#~ msgid "when making multiple links, last argument must be a directory"
+#~ msgstr ""
+#~ "при создании нескольких ссылок последним аргументом должен быть каталог"
+
+#~ msgid "ignoring invalid width in environment variable COLUMNS: %s"
+#~ msgstr "проигнорирована неверная ширина в переменной окружения COLUMNS: %s"
+
+#~ msgid "ignoring invalid tab size in environment variable TABSIZE: %s"
+#~ msgstr ""
+#~ "проигнорирован неверный размер табуляции в переменной окружения TABSIZE: %s"
+
+#~ msgid "invalid line width: %s"
+#~ msgstr "неверная ширина строки: %s"
+
+#~ msgid "invalid tab size: %s"
+#~ msgstr "неверный размер табуляции: %s"
+
+#~ msgid "unrecognized prefix: %s"
+#~ msgstr "неизвестный префикс: %s"
+
+#~ msgid "unparsable value for LS_COLORS environment variable"
+#~ msgstr "не анализируемое значение в переменной окружения LS_COLORS"
+
+#, fuzzy
+#~ msgid ""
+#~ "List information about the FILEs (the current directory by default).\n"
+#~ "Sort entries alphabetically if none of -cftuSUX nor --sort.\n"
+#~ "\n"
+#~ "  -a, --all                  do not hide entries starting with .\n"
+#~ "  -A, --almost-all           do not list implied . and ..\n"
+#~ "  -b, --escape               print octal escapes for nongraphic characters\n"
+#~ "      --block-size=SIZE      use SIZE-byte blocks\n"
+#~ "  -B, --ignore-backups       do not list implied entries ending with ~\n"
+#~ "  -c                         with -lt: sort by, and show, ctime (time of "
+#~ "last\n"
+#~ "                               modification of file status information)\n"
+#~ "                               with -l: show ctime and sort by name\n"
+#~ "                               otherwise: sort by ctime\n"
+#~ "  -C                         list entries by columns\n"
+#~ "      --color[=WHEN]         control whether color is used to distinguish "
+#~ "file\n"
+#~ "                               types.  WHEN may be `never', `always', or "
+#~ "`auto'\n"
+#~ "  -d, --directory            list directory entries instead of contents\n"
+#~ "  -D, --dired                generate output designed for Emacs' dired mode\n"
+#~ "  -f                         do not sort, enable -aU, disable -lst\n"
+#~ "  -F, --classify             append indicator (one of */=@|) to entries\n"
+#~ "      --format=WORD          across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            list both full date and full time\n"
+#~ msgstr ""
+#~ "Выдает информацию о FILE (текущий каталог по умолчанию).\n"
+#~ "Сортирует в алфавитном порядке если ни один из ключей -cftuSUX --sort не\n"
+#~ "задан.\n"
+#~ "\n"
+#~ "  -a, --all                  не скрывать файлы начинающиеся с .\n"
+#~ "  -A, --almost-all           не выдавать . и ..\n"
+#~ "  -b, --escape               печатать 8-иричные escape последовательности\n"
+#~ "                              вместо не графических символов\n"
+#~ "      --block-size=SIZE      использовать блоки размером SIZE байт\n"
+#~ "  -B, --ignore-backups       не выдавать файлы оканчивающиеся на ~\n"
+#~ "  -c                         с -lt: сортировать по времени изменения; с -l:\n"
+#~ "                              выдавать время изменения и сортировать по "
+#~ "имени,\n"
+#~ "                              иначе сортировать по времени изменения\n"
+#~ "  -C                         Выдавать список в несколько колонок\n"
+#~ "      --color[=WHEN]         указать какой цвет используется для какого\n"
+#~ "                              типа файлов. WHEN может быть `never',\n"
+#~ "                              `always' или `auto'\n"
+#~ "  -d, --directory            выдавать каталоги, а не их содержимое\n"
+#~ "  -D, --dired                генерировать вывод для Emacs режима - dired\n"
+#~ "  -f                         не сортировать, включает -aU, выключает -lst\n"
+#~ "  -F, --classify             добавлять символ для опознавания типа файла\n"
+#~ "      --format=WORD          across -x, commas -m, horizontal -x, long -l,\n"
+#~ "                               single-column -1, verbose -l, vertical -C\n"
+#~ "      --full-time            выводить полную дату и время\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -g                         (ignored)\n"
+#~ "  -G, --no-group             inhibit display of group information\n"
+#~ "  -h, --human-readable  print sizes in human readable format (e.g., 1K 234M "
+#~ "2G)\n"
+#~ "      --si                   likewise, but use powers of 1000 not 1024\n"
+#~ "  -H                         same as `--si' for now; soon to change\n"
+#~ "                               to conform to POSIX\n"
+#~ "      --indicator-style=WORD append indicator with style WORD to entry "
+#~ "names:\n"
+#~ "                               none (default), classify (-F), file-type "
+#~ "(-p)\n"
+#~ "  -i, --inode                print index number of each file\n"
+#~ "  -I, --ignore=PATTERN       do not list implied entries matching shell "
+#~ "PATTERN\n"
+#~ "  -k, --kilobytes            like --block-size=1024\n"
+#~ "  -l                         use a long listing format\n"
+#~ "  -L, --dereference          list entries pointed to by symbolic links\n"
+#~ "  -m                         fill width with a comma separated list of "
+#~ "entries\n"
+#~ "  -n, --numeric-uid-gid      list numeric UIDs and GIDs instead of names\n"
+#~ "  -N, --literal              print raw entry names (don't treat e.g. "
+#~ "control\n"
+#~ "                               characters specially)\n"
+#~ "  -o                         use long listing format without group info\n"
+#~ "  -p, --file-type            append indicator (one of /=@|) to entries\n"
+#~ "  -q, --hide-control-chars   print ? instead of non graphic characters\n"
+#~ "      --show-control-chars   show non graphic characters as-is (default\n"
+#~ "                             unless program is `ls' and output is a "
+#~ "terminal)\n"
+#~ "  -Q, --quote-name           enclose entry names in double quotes\n"
+#~ "      --quoting-style=WORD   use quoting style WORD for entry names:\n"
+#~ "                               literal, locale, shell, shell-always, c, "
+#~ "escape\n"
+#~ "  -r, --reverse              reverse order while sorting\n"
+#~ "  -R, --recursive            list subdirectories recursively\n"
+#~ "  -s, --size                 print size of each file, in blocks\n"
+#~ msgstr ""
+#~ "  -g                         (игнорируется)\n"
+#~ "  -G, --no-group             не отображать информацию о группах\n"
+#~ "  -h, --human-readable       печатать размеры в удобном для человека виде\n"
+#~ "                              (например, 1K 234M 2G)\n"
+#~ "  -H, --si                   то же, но использовать степени 1000, а не 1024\n"
+#~ "      --indicator-style=WORD добавлять индикатор со стилем WORD к именам\n"
+#~ "                              элементов: none (по умолчанию), classify (-F), "
+#~ "file-type (-p)\n"
+#~ "  -i, --inode                печатать номер узла каждого файла\n"
+#~ "  -I, --ignore=PATTERN       не выводить файлы соответствующие PATTERN\n"
+#~ "  -k, --kilobytes            использовать 1024 блоки вместо 512\n"
+#~ "  -l                         использовать широкий формат\n"
+#~ "  -L, --dereference          раскрывать ссылки\n"
+#~ "  -m                         выдавать список на всю ширину через запятую\n"
+#~ "  -n, --numeric-uid-gid      выдавать цифровые UIDы и GIDы вместо имен\n"
+#~ "  -N, --literal              печатать символы как есть\n"
+#~ "  -o                         использовать широкий формат без информации о\n"
+#~ "                              группе\n"
+#~ "  -p, --file-type            добавлять отметку (одну из /=@|) к элементам\n"
+#~ "  -q, --hide-control-chars   печатать ? вместо не графических символов\n"
+#~ "      --show-control-chars   показывать непечатаемые символы (по умолчанию\n"
+#~ "                              если программа не `ls' и вывод идет не на\n"
+#~ "                              терминал).\n"
+#~ "  -Q, --quote-name           заключать имя файла в кавычки\n"
+#~ "      --quoting-style=WORD   использовать тип заключения в кавычки WORD:\n"
+#~ "                               literal, shell, shell-always, c, escape\n"
+#~ "  -r, --reverse              обратный порядок сортировки\n"
+#~ "  -R, --recursive            с каталогами\n"
+#~ "  -s, --size                 печатать размер в блоках\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "  -S                         sort by file size\n"
+#~ "      --sort=WORD            extension -X, none -U, size -S, time -t,\n"
+#~ "                               version -v\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=WORD            show time as WORD instead of modification "
+#~ "time:\n"
+#~ "                               atime, access, use, ctime or status; use\n"
+#~ "                               specified time as sort key if --sort=time\n"
+#~ "  -t                         sort by modification time\n"
+#~ "  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8\n"
+#~ "  -u                         with -lt: sort by, and show, access time\n"
+#~ "                               with -l: show access time and sort by name\n"
+#~ "                               otherwise: sort by access time\n"
+#~ "  -U                         do not sort; list entries in directory order\n"
+#~ "  -v                         sort by version\n"
+#~ "  -w, --width=COLS           assume screen width instead of current value\n"
+#~ "  -x                         list entries by lines instead of by columns\n"
+#~ "  -X                         sort alphabetically by entry extension\n"
+#~ "  -1                         list one file per line\n"
+#~ "      --help                 display this help and exit\n"
+#~ "      --version              output version information and exit\n"
+#~ "\n"
+#~ "By default, color is not used to distinguish types of files.  That is\n"
+#~ "equivalent to using --color=none.  Using the --color option without the\n"
+#~ "optional WHEN argument is equivalent to using --color=always.  With\n"
+#~ "--color=auto, color codes are output only if standard output is connected\n"
+#~ "to a terminal (tty).\n"
+#~ msgstr ""
+#~ "  -S                         сортировать по размеру файла\n"
+#~ "      --sort=WORD            ctime -c, extension -X, none -U, size -S,\n"
+#~ "                             status -c, time -t, atime -u, access -u, use "
+#~ "-u\n"
+#~ "      --time=WORD            показывать время WORD вместо времени "
+#~ "изменения:\n"
+#~ "                             atime, access, use, ctime или status\n"
+#~ "  -t                         сортировать по времени изменения; с -l:\n"
+#~ "                              показывать время изменения\n"
+#~ "  -T, --tabsize=COLS         установить шаг табуляции в COLS вместо 8\n"
+#~ "  -u                         сортировать по времени доступа; с -l:\n"
+#~ "                              показывать время доступа\n"
+#~ "  -U                         не сортировать; печатать в соответствии с\n"
+#~ "                              физическим расположением\n"
+#~ "  -v                         сортировать по версии\n"
+#~ "  -w, --width=COLS           ширина экрана = COLS\n"
+#~ "  -x                         печатать элементы по строкам, а не по столбцам\n"
+#~ "  -X                         сортировать по алфавиту по расширению\n"
+#~ "  -1                         один файл на строчку\n"
+#~ "      --help                 показать помощь и выйти\n"
+#~ "      --version              вывести информацию о версии и выйти\n"
+#~ "\n"
+#~ "По умолчанию цвет не используется для различения файлов. Это эквивалентно\n"
+#~ "--color=none. Использование ключа --color без аргумента эквивалентно\n"
+#~ "--color=always. С --color=auto, коды цвета будут выдаваться только на\n"
+#~ "терминал (tty).\n"
+
+#~ msgid "Usage: %s [OPTION] DIRECTORY...\n"
+#~ msgstr "Использование: %s [OPTIONS] DIRECTORY...\n"
+
+#~ msgid ""
+#~ "Create the DIRECTORY(ies), if they do not already exist.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not rwxrwxrwx - "
+#~ "umask\n"
+#~ "  -p, --parents     no error if existing, make parent directories as needed\n"
+#~ "  -v, --verbose     print a message for each created directory\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Создает DIRECTORY, если она еще не существует.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   установить код доступа (как в chmod)\n"
+#~ "  -p, --parents     не выдавать ошибок если существует, создавать\n"
+#~ "                     родительские каталоги если необходимо\n"
+#~ "  -v, --verbose     печатать сообщение о каждом созданном каталоге\n"
+#~ "      --help        показать помощь и выйти\n"
+#~ "      --version     вывести информацию о версии и выйти\n"
+
+#, fuzzy
+#~ msgid "created directory %s"
+#~ msgstr "создан каталог `%s'"
+
+#, fuzzy
+#~ msgid "cannot set permissions of directory %s"
+#~ msgstr "ошибка установки прав на каталог `%s'"
+
+#~ msgid "Usage: %s [OPTION] NAME...\n"
+#~ msgstr "Использование: %s [OPTIONS] NAME...\n"
+
+#~ msgid ""
+#~ "Create named pipes (FIFOs) with the given NAMEs.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ msgstr ""
+#~ "Создает именованные каналы (FIFO) для заданного NAME.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   установить права доступа (как в chmod). Все биты кроме\n"
+#~ "                     a=rw игнорируются\n"
+#~ "      --help        показать помощь и выйти\n"
+#~ "      --version     вывести информацию о версии и выйти\n"
+
+#~ msgid "fifo files not supported"
+#~ msgstr "именованные каналы не поддерживаются"
+
+#~ msgid "invalid mode"
+#~ msgstr "неверные права доступа"
+
+#, fuzzy
+#~ msgid "cannot create fifo `%s'"
+#~ msgstr "ошибка создания именованного канала `%s'"
+
+#, fuzzy
+#~ msgid "cannot set permissions of fifo `%s'"
+#~ msgstr "ошибка установки прав на каталог `%s'"
+
+#~ msgid "Usage: %s [OPTION]... NAME TYPE [MAJOR MINOR]\n"
+#~ msgstr "Использование: %s [OPTIONS]... NAME TYPE [MAJOR MINOR]\n"
+
+#~ msgid ""
+#~ "Create the special file NAME of the given TYPE.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   set permission mode (as in chmod), not a=rw - umask\n"
+#~ "      --help        display this help and exit\n"
+#~ "      --version     output version information and exit\n"
+#~ "\n"
+#~ "MAJOR MINOR are forbidden for TYPE p, mandatory otherwise.  TYPE may be:\n"
+#~ "\n"
+#~ "  b      create a block (buffered) special file\n"
+#~ "  c, u   create a character (unbuffered) special file\n"
+#~ "  p      create a FIFO\n"
+#~ msgstr ""
+#~ "Создает специальный файл с именем NAME и типом TYPE.\n"
+#~ "\n"
+#~ "  -m, --mode=MODE   установить права доступа (как в chmod). Все биты кроме\n"
+#~ "                     a=rw игнорируются\n"
+#~ "      --help        показать помощь и выйти\n"
+#~ "      --version     вывести информацию о версии и выйти\n"
+#~ "\n"
+#~ "MAJOR и MINOR запрещены для TYPE p, иначе обязательны. TYPE может быть:\n"
+#~ "\n"
+#~ "  b      создать файл блочного устройства\n"
+#~ "  c, u   создать файл символьного устройства\n"
+#~ "  p      создать именованный канал\n"
+
+#~ msgid "wrong number of arguments"
+#~ msgstr "неверное количество аргументов"
+
+#~ msgid "block special files not supported"
+#~ msgstr "файлы блочного устройства не поддерживаются"
+
+#~ msgid ""
+#~ "when creating block special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "когда создается файл блочного устройства должны быть указаны старший\n"
+#~ "и младший номера устройства"
+
+#, fuzzy
+#~ msgid "invalid major device number %s"
+#~ msgstr "неверный старший номер устройства `%s'"
+
+#, fuzzy
+#~ msgid "invalid minor device number %s"
+#~ msgstr "неверный младший номер устройства `%s'"
+
+#~ msgid "character special files not supported"
+#~ msgstr "файлы символьного устройства не поддерживаются"
+
+#~ msgid ""
+#~ "when creating character special files, major and minor device\n"
+#~ "numbers must be specified"
+#~ msgstr ""
+#~ "при создании файла символьного устройства должны быть указаны старший\n"
+#~ "и младший номера устройства"
+
+#~ msgid "major and minor device numbers may not be specified for fifo files"
+#~ msgstr ""
+#~ "старший и младший номера устройства не могут быть указаны для именованных "
+#~ "каналов"
+
+#, fuzzy
+#~ msgid "cannot set permissions of `%s'"
+#~ msgstr "устанавливаю права доступа на %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       make a backup of each existing destination "
+#~ "file\n"
+#~ "  -b                           like --backup but does not accept an "
+#~ "argument\n"
+#~ "  -f, --force                  never prompt before overwriting\n"
+#~ "  -i, --interactive            prompt before overwrite\n"
+#~ "      --strip-trailing-slashes  remove any trailing slashes from each "
+#~ "SOURCE\n"
+#~ "                                 argument\n"
+#~ "  -S, --suffix=SUFFIX          override the usual backup suffix\n"
+#~ "      --target-directory=DIRECTORY  move all SOURCE arguments into "
+#~ "DIRECTORY\n"
+#~ "  -u, --update                 move only older or brand new non-directories\n"
+#~ "  -v, --verbose                explain what is being done\n"
+#~ "      --help                   display this help and exit\n"
+#~ "      --version                output version information and exit\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Переименовывает SOURCE в DEST, или переносит SOURCE(ы) в DIRECTORY.\n"
+#~ "\n"
+#~ "      --backup[=CONTROL]       создать резервную копию перед удалением\n"
+#~ "  -b                           то же, что и --backup, но без аргумента\n"
+#~ "  -f, --force                  переписывать существующие файлы не спрашивая\n"
+#~ "  -i, --interactive            спрашивать перед тем как переписывать\n"
+#~ "      --strip-trailing-slashes  удалять все символы '/' у всех SOURCE\n"
+#~ "  -S, --suffix=SUFFIX          установить суффикс для запасных копий как\n"
+#~ "                                SUFFIX\n"
+#~ "      --target-directory=DIRECTORY  переместить все SOURCE в DIRECTORY\n"
+#~ "  -u, --update                 копировать только тогда когда исходный файл\n"
+#~ "                                 новее чем файл назначения, или когда файл\n"
+#~ "                                 назначения отсутствует\n"
+#~ "  -v, --verbose                пояснять что будет сделано\n"
+#~ "      --help                   показать помощь и выйти\n"
+#~ "      --version                вывести информацию о версии и выйти\n"
+#~ "\n"
+
+#~ msgid "when moving multiple files, last argument must be a directory"
+#~ msgstr ""
+#~ "когда переносится несколько файлов последим аргументом должен быть каталог"
+
+#, fuzzy
+#~ msgid "cannot open directory %s"
+#~ msgstr "невозможно удалить каталог `%s'"
+
+#, fuzzy
+#~ msgid "closing directory %s"
+#~ msgstr "удаляю каталог, %s"
+
+#, fuzzy
+#~ msgid "%s: remove write-protected directory %s? "
+#~ msgstr "%s: удалить защищенный от записи каталог `%s'? "
+
+#, fuzzy
+#~ msgid "%s: remove write-protected file %s? "
+#~ msgstr "%s: удалить защищенный от записи файл `%s'? "
+
+#, fuzzy
+#~ msgid "%s: remove directory %s? "
+#~ msgstr "%s: удалить каталог `%s'? "
+
+#, fuzzy
+#~ msgid "%s: remove %s? "
+#~ msgstr "%s: удалить `%s'? "
+
+#~ msgid "removing %s\n"
+#~ msgstr "удаляю %s\n"
+
+#, fuzzy
+#~ msgid "cannot unlink %s"
+#~ msgstr "невозможно удалить ссылку `%s'"
+
+#, fuzzy
+#~ msgid "%s: directory %s is write protected; descend into it anyway? "
+#~ msgstr "%s: каталог '%s' защищен от записи; продолжать? "
+
+#, fuzzy
+#~ msgid "%s: descend into directory %s? "
+#~ msgstr "%s: углубиться в каталог `%s'? "
+
+#~ msgid "removing all entries of directory %s\n"
+#~ msgstr "удаляю все элементы каталога %s\n"
+
+#, fuzzy
+#~ msgid "cannot lstat `.' in %s"
+#~ msgstr "невозможно получить информацию о ссылке `.' в `%s'"
+
+#, fuzzy
+#~ msgid ""
+#~ "ERROR: the directory %s initially had device/inode\n"
+#~ "numbers %lu/%lu, but now (after a chdir into it), the numbers for `.'\n"
+#~ "are %lu/%lu.  That means that while rm was running, the directory\n"
+#~ "was replaced with either another directory or a link to another directory."
+#~ msgstr ""
+#~ "ОШИБКА: каталог `%s' изначально имел номера устройства/инода\n"
+#~ "%lu/%lu, но сейчас (после перехода в него) номера изменились на\n"
+#~ "%lu/%lu.  Это означает, что во время работы rm каталог был\n"
+#~ "заменен другим каталогом или ссылкой на каталог."
+
+#~ msgid "cannot change back to directory %s via `..'"
+#~ msgstr "невозможно перейти обратно в каталог %s через `..'"
+
+#, fuzzy
+#~ msgid "%s: remove directory %s%s? "
+#~ msgstr "%s: удалить каталог `%s'%s? "
+
+#~ msgid " (might be nonempty)"
+#~ msgstr " (может быть не пустым)"
+
+#~ msgid "removing the directory itself: %s\n"
+#~ msgstr "удаляю сам каталог: %s\n"
+
+#, fuzzy
+#~ msgid "cannot remove current directory %s"
+#~ msgstr "невозможно удалить текущий каталог `%s'"
+
+#, fuzzy
+#~ msgid "cannot remove directory %s"
+#~ msgstr "невозможно удалить каталог `%s'"
+
+#~ msgid "cannot remove `.' or `..'"
+#~ msgstr "невозможно удалить `.' или `..'"
+
+#~ msgid ""
+#~ "WARNING: Circular directory structure.\n"
+#~ "This almost certainly means that you have a corrupted file system.\n"
+#~ "NOTIFY YOUR SYSTEM MANAGER.\n"
+#~ "The following two directories have the same inode number:\n"
+#~ msgstr ""
+#~ "%s: ВНИМАНИЕ: Циклическая структура каталога.\n"
+#~ "Скорее всего это означает что ваша файловая система повреждена.\n"
+#~ "УВЕДОМИТЕ ВАШЕГО СИСТЕМНОГО АДМИНИСТРАТОРА.\n"
+#~ "Следующие два каталога имеют общий номер:\n"
+
+#~ msgid "continue? "
+#~ msgstr "продолжать? "
+
+#~ msgid "Usage: %s [OPTION]... FILE...\n"
+#~ msgstr "Использование: %s [OPTIONS]... FILE...\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Remove (unlink) the FILE(s).\n"
+#~ "\n"
+#~ "  -d, --directory       unlink directory, even if non-empty (super-user "
+#~ "only)\n"
+#~ "  -f, --force           ignore nonexistent files, never prompt\n"
+#~ "  -i, --interactive     prompt before any removal\n"
+#~ "  -r, -R, --recursive   remove the contents of directories recursively\n"
+#~ "  -v, --verbose         explain what is being done\n"
+#~ "      --help            display this help and exit\n"
+#~ "      --version         output version information and exit\n"
+#~ "\n"
+#~ "To remove a file whose name starts with a `-', for example `-foo',\n"
+#~ "use one of these commands:\n"
+#~ "  %s -- -foo\n"
+#~ "\n"
+#~ "  %s ./-foo\n"
+#~ "\n"
+#~ "Note that if you use rm to remove a file, it is usually possible to recover\n"
+#~ "the contents of that file.  If you want more assurance that the contents "
+#~ "are\n"
+#~ "truly unrecoverable, consider using shred.\n"
+#~ msgstr ""
+#~ "Удаляет FILE.\n"
+#~ "\n"
+#~ "  -d, --directory       удаляет каталог, даже если он не пустой (только\n"
+#~ "                         для суперпользователя)\n"
+#~ "  -f, --force           игнорировать несуществующие файлы, не запрашивать\n"
+#~ "  -i, --interactive     запрашивать перед каждым удалением\n"
+#~ "  -r, -R, --recursive   рекурсивно удалить содержание каталога\n"
+#~ "  -v, --verbose         пояснять что будет сделано\n"
+#~ "      --help            показать помощь и выйти\n"
+#~ "      --version         вывести информацию о версии и выйти\n"
+#~ "Для удаления файла, начинающегося с `-' (например: `-foo')\n"
+#~ "используйте одну из следующих команд:\n"
+#~ "  %s -- -foo\n"
+#~ "  %s ./-foo\n"
+
+#~ msgid "removing directory, %s"
+#~ msgstr "удаляю каталог, %s"
+
+#~ msgid "Usage: %s [OPTION]... DIRECTORY...\n"
+#~ msgstr "Использование: %s [OPTIONS]... DIRECTORY...\n"
+
+#~ msgid ""
+#~ "Remove the DIRECTORY(ies), if they are empty.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  ignore each failure that is solely because a directory\n"
+#~ "                  is non-empty\n"
+#~ "  -p, --parents   remove DIRECTORY, then try to remove each directory\n"
+#~ "                  component of that path name.  E.g., `rmdir -p a/b/c' is\n"
+#~ "                  similar to `rmdir a/b/c a/b a'.\n"
+#~ "  -v, --verbose   output a diagnostic for every directory processed\n"
+#~ "      --help      display this help and exit\n"
+#~ "      --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Удаляет DIRECTORY, если они пусты.\n"
+#~ "\n"
+#~ "      --ignore-fail-on-non-empty\n"
+#~ "                  игнорировать все ошибки, которые возникают из-за того, "
+#~ "что\n"
+#~ "                   каталог не пуст\n"
+#~ "  -p, --parents   удалять все дерево, если пустое\n"
+#~ "  -v, --verbose   выводить сообщение для каждого обрабатываемого каталога\n"
+#~ "      --help      показать помощь и выйти\n"
+#~ "      --version   вывести информацию о версии и выйти\n"
+
+#~ msgid "Usage: %s [OPTIONS] FILE [...]\n"
+#~ msgstr "Использование: %s [OPTIONS] FILE [...]\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "Overwrite the specified FILE(s) repeatedly, in order to make it harder\n"
+#~ "for even very expensive hardware probing to recover the data.\n"
+#~ "\n"
+#~ "  -f, --force    change permissions to allow writing if necessary\n"
+#~ "  -n, --iterations=N  Overwrite N times instead of the default (%d)\n"
+#~ "  -s, --size=N   shred this many bytes (suffixes like k, M, G accepted)\n"
+#~ "  -u, --remove   truncate and remove file after overwriting\n"
+#~ "  -v, --verbose  show progress\n"
+#~ "  -x, --exact    do not round file sizes up to the next full block\n"
+#~ "  -z, --zero     add a final overwrite with zeros to hide shredding\n"
+#~ "  -              shred standard output\n"
+#~ "      --help     display this help and exit\n"
+#~ "      --version  print version information and exit\n"
+#~ "\n"
+#~ "Delete FILE(s) if --remove (-u) is specified.  The default is not to remove\n"
+#~ "the files because it is common to operate on device files like /dev/hda,\n"
+#~ "and those files usually should not be removed.  When operating on regular\n"
+#~ "files, most people use the --remove option.\n"
+#~ "\n"
+#~ "CAUTION: Note that shred relies on a very important assumption:\n"
+#~ "that the filesystem overwrites data in place.  This is the traditional\n"
+#~ "way to do things, but many modern filesystem designs do not satisfy this\n"
+#~ "assumption.  The following are examples of filesystems on which shred is\n"
+#~ "not effective:\n"
+#~ "\n"
+#~ "* log-structured or journaled filesystems, such as those supplied with\n"
+#~ "  AIX and Solaris (and JFS, ReiserFS, XFS, etc.)\n"
+#~ "\n"
+#~ "* filesystems that write redundant data and carry on even if some writes\n"
+#~ "  fail, such as RAID-based filesystems\n"
+#~ "\n"
+#~ "* filesystems that make snapshots, such as Network Appliance's NFS server\n"
+#~ "\n"
+#~ "* filesystems that cache in temporary locations, such as NFS\n"
+#~ "  version 3 clients\n"
+#~ "\n"
+#~ "* compressed filesystems\n"
+#~ msgstr ""
+#~ "Удаляет файл с соблюдением требований к безопасности, вначале переписывая\n"
+#~ "его содержимое.\n"
+#~ "\n"
+#~ "  -f, --force    изменять права, разрешая запись, если необходимо\n"
+#~ "  -n, --iterations=N  переписать N раз вместо %d по умолчанию\n"
+#~ "  -s, --size=N   очистить N байт (возможны суффиксы вида k, M, G)\n"
+#~ "  -u, --remove   обрезать и удалять файл после перезаписи\n"
+#~ "  -v, --verbose  показывать прогресс (-vv, чтобы оставить прогресс на "
+#~ "экране)\n"
+#~ "  -x, --exact    не округлять размеры файлов до следующего целого блока\n"
+#~ "  -z, --zero     добавить в конце запись нулей, чтобы скрыть перемешивание\n"
+#~ "  -              перемешивать стандартный выход (конфликтует с -v)\n"
+#~ "      --help     показать помощь и выйти\n"
+#~ "      --version  вывести информацию о версии и выйти\n"
+#~ "\n"
+#~ "возможно что-нибудь стоит добавить еще?"
+
+#~ msgid "%s: cannot rewind"
+#~ msgstr "%s: ошибка перемотки на начало"
+
+#~ msgid "%s: pass %lu/%lu (%s)..."
+#~ msgstr "%s: проход %lu/%lu (%s)..."
+
+#~ msgid "%s: error writing at offset %s"
+#~ msgstr "%s: ошибка записи со смещением %s"
+
+#~ msgid "%s: file too large"
+#~ msgstr "%s: файл слишком велик"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%s/%s"
+#~ msgstr "%s: проход %lu/%lu (%s)...%s/%s"
+
+#~ msgid "%s: pass %lu/%lu (%s)...%s"
+#~ msgstr "%s: проход %lu/%lu (%s)...%s"
+
+#~ msgid "%s: invalid file type"
+#~ msgstr "%s: неизвестный тип файла"
+
+#~ msgid "%s: file has negative size"
+#~ msgstr "%s: у файла отрицательный размер"
+
+#~ msgid "%s: error truncating"
+#~ msgstr "%s: ошибка обрезания"
+
+#~ msgid "%s: cannot shred append-only file descriptor"
+#~ msgstr ""
+#~ "%s: невозможно нарезать файловый дескриптор с только с правом добавления"
+
+#~ msgid "%s: removing"
+#~ msgstr "%s: удаляю"
+
+#, fuzzy
+#~ msgid "%s: renamed to %s"
+#~ msgstr "%s: переименован в `%s'? "
+
+#~ msgid "%s: removed"
+#~ msgstr "%s: удален"
+
+#~ msgid "%s: cannot remove"
+#~ msgstr "%s: ошибка удаления"
+
+#~ msgid "%s: invalid number of passes"
+#~ msgstr "%s: неверное число проходов"
+
+#~ msgid "%s: invalid file size"
+#~ msgstr "%s: неверный размер файла"
+
+#~ msgid "Usage: %s [OPTION]\n"
+#~ msgstr "Использование: %s [OPTIONS]\n"
+
+#~ msgid ""
+#~ "Force changed blocks to disk, update the super block.\n"
+#~ "\n"
+#~ "  --help      display this help and exit\n"
+#~ "  --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Записывает измененные блоки на диск.\n"
+#~ "\n"
+#~ "      --help                   показать помощь и выйти\n"
+#~ "      --version                вывести информацию о версии и выйти\n"
+
+#~ msgid "ignoring all arguments"
+#~ msgstr "все аргументы игнорируются"
+
+#, fuzzy
+#~ msgid "creating %s"
+#~ msgstr "удаляю %s\n"
+
+#, fuzzy
+#~ msgid "setting times of %s"
+#~ msgstr "сохраняю времена для %s"
+
+#, fuzzy
+#~ msgid "  or:  %s [-acm] MMDDhhmm[YY] FILE... (obsolescent)\n"
+#~ msgstr "  или : %s [-acm] MMDDhhmm[YY] FILE... (устарело)\n"
+
+#~ msgid ""
+#~ "Update the access and modification times of each FILE to the current time.\n"
+#~ "\n"
+#~ "  -a                     change only the access time\n"
+#~ "  -c, --no-create        do not create any files\n"
+#~ "  -d, --date=STRING      parse STRING and use it instead of current time\n"
+#~ "  -f                     (ignored)\n"
+#~ "  -m                     change only the modification time\n"
+#~ "  -r, --reference=FILE   use this file's times instead of current time\n"
+#~ "  -t STAMP               use [[CC]YY]MMDDhhmm[.ss] instead of current time\n"
+#~ "  --time=WORD            set time given by WORD: access atime use (same as "
+#~ "-a)\n"
+#~ "                           modify mtime (same as -m)\n"
+#~ "      --help             display this help and exit\n"
+#~ "      --version          output version information and exit\n"
+#~ "\n"
+#~ "Note that the three time-date formats recognized for the -d and -t options\n"
+#~ "and for the obsolescent argument are all different.\n"
+#~ msgstr ""
+#~ "Устанавливает время доступа и изменения для каждого FILE на текущее\n"
+#~ "\n"
+#~ "  -a                     изменять только время доступа\n"
+#~ "  -c, --no-create        не создавать файлов\n"
+#~ "  -d, --date=STRING      проанализировать STRING и использовать вместо\n"
+#~ "                          текущего времени\n"
+#~ "  -f                     (игнорируется)\n"
+#~ "  -m                     изменять только время изменения\n"
+#~ "  -r, --reference=FILE   использовать время FILE'а вместо текущего\n"
+#~ "  -t STAMP               использовать [[CC]YY]MMDDhhmm[.ss] вместо\n"
+#~ "                          текущего времени\n"
+#~ "      --time=WORD        access -a, atime -a, mtime -m, modify -m, use -a\n"
+#~ "      --help             показать помощь и выйти\n"
+#~ "      --version          вывести информацию о версии и выйти\n"
+#~ "\n"
+#~ "STAMP может быть использован без -t если ни -drt, ни --, не используются.\n"
+#~ "Учтите, что используются три разных формата даты/времени для ключей -d, -t "
+#~ "и\n"
+#~ "для морально устаревших параметров\n"
+
+#, fuzzy
+#~ msgid "invalid date format %s"
+#~ msgstr "неверный формат даты `%s'"
+
+#~ msgid "cannot specify times from more than one source"
+#~ msgstr "невозможно указать время из нескольких источников"
+
+#~ msgid "file arguments missing"
+#~ msgstr "аргумент файл отсутствует"
+
+#~ msgid "group of %s changed to %s\n"
+#~ msgstr "группа %s изменена на %s\n"
+
+#, fuzzy
+#~ msgid "ownership of %s changed to "
+#~ msgstr "владелец %s изменен на "
+
+#, fuzzy
+#~ msgid "you are not a member of group %s"
+#~ msgstr "вы не входите в группу `%s'"
+
+#~ msgid "%s: invalid group number"
+#~ msgstr "%s: неверный номер группы"
+
+#, fuzzy
+#~ msgid "%s: cannot determine size"
+#~ msgstr "%s: ошибка перемотки на начало"
+
+#, fuzzy
+#~ msgid "cannot make fifo %s"
+#~ msgstr "ошибка создания именованного канала `%s'"
+
+#, fuzzy
+#~ msgid "cannot change permissions for %s"
+#~ msgstr "устанавливаю права доступа на %s"
+
+#, fuzzy
+#~ msgid "cannot remove old link to %s"
+#~ msgstr "ошибка удаления старой ссылки на `%s'"
+
+#~ msgid "virtual memory exhausted"
+#~ msgstr "не хватает виртуальной памяти"
+
+#~ msgid "Memory exhausted"
+#~ msgstr "Не хватает виртуальной памяти"
+
+#~ msgid "invalid mode `%s'"
+#~ msgstr "неверные права доступа `%s'"
+
+#~ msgid "cannot create directory `%s'"
+#~ msgstr "ошибка создания каталога `%s'"
+
+#~ msgid "cannot remove `%s'"
+#~ msgstr "невозможно удалить `%s'"
+
+#~ msgid "specified target, `%s' is not a directory"
+#~ msgstr "указанная цель, `%s' - не каталог"
+
+#~ msgid "`%s' and `%s' are the same file"
+#~ msgstr "`%s' и `%s' - один и тот же файл"
+
+#~ msgid "cannot backup `%s'"
+#~ msgstr "ошибка создания запасной копии `%s'"
+
+#~ msgid "cannot un-backup `%s'"
+#~ msgstr "ошибка восстановления с запасной копии `%s'"
+
+#~ msgid "cannot chown %s"
+#~ msgstr "ошибка смены владельца %s"
+
+#~ msgid "cannot chmod %s"
+#~ msgstr "ошибка смены прав доступа %s"
+
+#~ msgid "`%s' exists but is not a directory"
+#~ msgstr "`%s' существует, но это не каталог"
+
+#~ msgid "`%s' is a directory"
+#~ msgstr "`%s' - каталог"
+
+#~ msgid "--version-control"
+#~ msgstr "--version-control"
+
+#~ msgid "create %s %s to %s"
+#~ msgstr "создаю %s %s на %s"
+
+#~ msgid "cannot create %s `%s' to `%s'"
+#~ msgstr "ошибка создания %s `%s' на `%s'"
+
+#~ msgid "symbolic link"
+#~ msgstr "символьной ссылки"
+
+#~ msgid "hard link"
+#~ msgstr "жесткой ссылки"
+
+#~ msgid "link"
+#~ msgstr "ссылка"
+
+#~ msgid "--no-dereference (-h) is not supported on this system"
+#~ msgstr "система не поддерживает --no-derefernce (-h)"
+
+#~ msgid "%s -> %s (backup)\n"
+#~ msgstr "%s -> %s (копия)\n"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... SOURCE DEST\n"
+#~ "  or:  %s [OPTION]... SOURCE... DIRECTORY\n"
+#~ msgstr ""
+#~ "Использование: %s [OPTION]... SOURCE DEST\n"
+#~ "         или:  %s [OPTION]... SOURCE... DIRECTORY\n"
+
+#~ msgid "current directory"
+#~ msgstr "текущий каталог"
+
+#~ msgid "starting directory"
+#~ msgstr "начальный каталог"
+
+#~ msgid "Usage: %s [OPTION]... EXISTING_DIR NEW_DIR\n"
+#~ msgstr "Использование: %s [OPTIONS]... EXISTING_DIR NEW_DIR\n"
+
+#~ msgid ""
+#~ "Rename EXISTING_DIR to NEW_DIR.\n"
+#~ "\n"
+#~ "   --help      display this help and exit\n"
+#~ "   --version   output version information and exit\n"
+#~ msgstr ""
+#~ "Переименовывает EXISTING_DIR в NEW_DIR.\n"
+#~ "\n"
+#~ "      --help                   показать помощь и выйти\n"
+#~ "      --version                вывести информацию о версии и выйти\n"
+
+#~ msgid "cannot get current directory"
+#~ msgstr "ошибка получения текущего каталога"
+
+#~ msgid "cannot rename `.' or `..'"
+#~ msgstr "ошибка переименования `.' или `..'"
+
+#~ msgid "`%s' is an ancestor of `%s'"
+#~ msgstr "`%s' владелец `%s'"

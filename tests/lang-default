@@ -1,0 +1,8 @@
+#!/bin/sh
+# Set locale-related environment variables so we get consistent
+# message translations, time formats, sort orderings, etc.
+
+for i in \
+    LANG LANGUAGE LC_ALL LC_COLLATE LC_CTYPE LC_MESSAGES LC_NUMERIC LC_TIME; do
+  eval "$i=; export $i"
+done

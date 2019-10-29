@@ -1,0 +1,200 @@
+# -*-Makefile-*-
+# This Makefile fragment is shared between fileutils, sh-utils, textutils.
+
+maintainer-check:
+	if head ChangeLog| grep 'Version $(VERSION)' > /dev/null; then \
+	  :; \
+	else \
+	  echo "$(VERSION) not in ChangeLog; not tagging" 1>&2; \
+	  exit 1; \
+	fi
+	$(MAKE) distcheck
+	$(MAKE) my-distcheck
+
+prev_version_file = .prev-version
+
+THIS_VERSION_REGEXP = $(subst .,\.,$(VERSION))
+PREV_VERSION := $(shell cat $(prev_version_file))
+PREV_VERSION_REGEXP := $(shell echo $(PREV_VERSION)|sed 's/\./\\./g')
+
+tag-package = $(shell echo "$(PACKAGE)" | tr '[:lower:]' '[:upper:]')
+tag-this-version = $(subst .,_,$(VERSION))
+tag-prev-version = $(subst .,_,$(PREV_VERSION))
+this-cvs-tag = $(tag-package)-$(tag-this-version)
+prev-cvs-tag = $(tag-package)-$(tag-prev-version)
+my_distdir = $(PACKAGE)-$(VERSION)
+
+# Verify that all source files using _() are listed in po/POTFILES.in.
+po-check:
+	grep -E -v '^(#|$$)' po/POTFILES.in | sort > $@-1
+	grep -E -l '\b_\(' lib/*.c src/*.c | sort > $@-2
+	diff -u $@-1 $@-2
+	rm -f $@-1 $@-2
+
+# Do not save the original name or timestamp in the .tar.gz file.
+GZIP_ENV = --no-name
+
+# Tag before making distribution.  Also, don't make a distribution if
+# checks fail.  Also, make sure the NEWS file is up-to-date.
+# FIXME: use dist-hook/my-dist like distcheck-hook/my-distcheck.
+cvs-dist: maintainer-check
+	echo $(this-cvs-tag); \
+	if cvs -n log -h README| grep -e $(this-cvs-tag): > /dev/null; then \
+	  echo "VERSION not new; not tagging" 1>&2; \
+	  exit 1; \
+	fi; \
+	cvs update po; \
+	cvs tag -c $(this-cvs-tag)
+	$(MAKE) dist
+
+# Use this to make sure we don't run these programs when building
+# from a virgin tgz file, below.
+null_AM_MAKEFLAGS = \
+  ACLOCAL=false \
+  AUTOCONF=false \
+  AUTOMAKE=false \
+  AUTOHEADER=false \
+  MAKEINFO=false
+
+# Detect format-string/arg-list mismatches that would normally be obscured
+# by the use of _().  The --disable-nls effectively defines away that macro,
+# and building with CFLAGS='-Wformat -Werror' causes any format warning to be
+# treated as a failure.
+t=./=test
+my-distcheck: writable-files po-check
+	-rm -rf $(t)
+	mkdir $(t)
+	GZIP=$(GZIP) $(AMTAR) -C $(t) -zxf $(distdir).tar.gz
+# Removing $(DEPDIR) like this is a gross kludge to work around a bug
+# in automake.  Remove that line once it's fixed.
+	cd $(t)/$(distdir) \
+	  && ./configure --disable-nls \
+	  && $(MAKE) CFLAGS='-Wformat -Werror' \
+	      AM_MAKEFLAGS='$(null_AM_MAKEFLAGS)' \
+	  && $(MAKE) dvi \
+	  && $(MAKE) check \
+	  && $(MAKE) distclean \
+	  && rm -rf $(DEPDIR)
+	cd $(t) && mv $(distdir) $(distdir).old \
+	  && $(AMTAR) -zxf ../$(distdir).tar.gz
+	diff -ur $(t)/$(distdir).old $(t)/$(distdir)
+	-rm -rf $(t)
+	@echo "========================"; \
+	echo "$(distdir).tar.gz is ready for distribution"; \
+	echo "========================"
+
+a_host = alpha.gnu.org
+b_host = freefriends.org
+
+alpha_subdir = gnu/fetish
+a_url_dir = $(alpha_subdir)
+b_url_dir = $(alpha_subdir)
+
+# This must be the same name on both hosts.
+# Make it a symlink that points to the right place.
+real_dir = fetish-ftp
+
+url_dir_list = $(foreach x,a b,ftp://$($(x)_host)/$($(x)_url_dir))
+
+md5 = $(shell md5sum < $(my_distdir).tar.gz|sed 's/  -//')
+sha1 = $(shell sha1sum < $(my_distdir).tar.gz|sed 's/  -//')
+
+rel-check:
+	tarz=/tmp/rel-check-tarz-$$$$; \
+	md5_tmp=/tmp/rel-check-md5-$$$$; \
+	set -e; \
+	trap 'status=$$?; rm -f $$tarz $$md5_tmp; exit $$status' 0 1 2 3 15; \
+	wget -q --output-document=$$tarz $(url); \
+	echo "$(md5)  -" > $$md5_tmp; \
+	md5sum -c $$md5_tmp < $$tarz
+
+release-archive-dir = ../release
+prev-tgz = $(PACKAGE)-$(PREV_VERSION).tar.gz
+xd-delta = $(PACKAGE)-$(PREV_VERSION)-$(VERSION).xdelta
+
+announcement: NEWS ChangeLog $(distdir).tar.gz
+	@( \
+	  echo Subject: $(my_distdir) released; \
+	  echo; \
+	  echo FIXME: put comments here; \
+	  echo; \
+	  for url in $(url_dir_list); do \
+	    echo "  $$url/$(my_distdir).tar.gz"; \
+	  done; \
+	  echo; \
+	  echo And here are xdelta-style diffs; \
+	  echo; \
+	  for url in $(url_dir_list); do \
+	    echo "  $$url/$(xd-delta)"; \
+	  done; \
+	  echo; \
+	  echo "Here are the MD5 and SHA1 signatures for the .tar.gz file"; \
+	  echo; \
+	  echo "$(md5)  $(my_distdir).tar.gz"; \
+	  echo "$(sha1)  $(my_distdir).tar.gz"; \
+	  echo; \
+	  echo NEWS:; \
+	  sed -n "/$(THIS_VERSION_REGEXP)/,/^\[$(PREV_VERSION_REGEXP)/p" NEWS \
+	    | grep -v '^\['; \
+	  echo; \
+	  echo ChangeLog entries:; \
+	  find . -name ChangeLog -maxdepth 2 \
+	    | xargs cvs diff -up -r$(prev-cvs-tag) -rHEAD \
+	    | sed -n 's/^+//p' \
+	    | perl -ne 'm!^\+\+ (\./)?! or print,next;' \
+	      -e 'print "\n"."*"x70 ."\n"; s///; print; print "*"x70 ."\n"'; \
+	)
+
+writable-files:
+	for file in $(distdir).tar.gz $(xd-delta)			\
+	  ../release/$(distdir).tar.gz ../release/$(xd-delta); do	\
+	  test -e $$file || continue;					\
+	  test -w $$file						\
+	    || { echo ERROR: $$file is not writable; fail=1; };		\
+	done;								\
+	test "$$fail" && exit 1 || :
+
+WGET = wget
+ftp-gnu = ftp://ftp.gnu.org/gnu
+
+automake_repo=:pserver:anoncvs@anoncvs.cygnus.com:/cvs/automake
+.PHONY: wget-update
+wget-update:
+	$(WGET) $(ftp-gnu)/texinfo/texinfo.tex -O $(srcdir)/doc/texinfo.tex
+	for f in config.guess config.sub; do \
+	  $(WGET) $(ftp-gnu)/config/$$f -O $(srcdir)/$$f; \
+	done
+	for f in depcomp missing; do \
+	  echo checking out $$f...; \
+	  cvs -d $(automake_repo) co -p automake/$$f > t$$$$ \
+	    && mv t$$$$ $$f; \
+	done
+
+define emit-rsync-commands
+	echo =====================================
+	echo =====================================
+	echo 'for host in $(a_host) $(b_host); do \'
+	echo '  rsync -e ssh --pro -av $(xd-delta) $(my_distdir).tar.gz \'
+	echo '    $$host:$(real_dir); done'
+	echo '# send the /tmp/announcement e-mail'
+	echo =====================================
+	echo =====================================
+endef
+
+# Make sure that the copyright date in lib/version-etc.c is up to date.
+check-copyright: lib/version-etc.c
+	@grep 'N_("Copyright (C) $(shell date +%Y) Free' $< > /dev/null \
+	  || { echo 'out of date copyright in $<; update it' 1>&2; exit 1; }
+
+alpha: writable-files po-check check-copyright
+	$(MAKE) cvs-dist
+	$(MAKE) -s announcement > /tmp/announce-$(my_distdir)
+	ln $(distdir).tar.gz ../release
+	chmod a-w $(distdir).tar.gz
+	cd $(release-archive-dir) \
+	  && xdelta delta -9 $(prev-tgz) $(distdir).tar.gz $(xd-delta) || :
+	ln $(release-archive-dir)/$(xd-delta) .
+	chmod a-w $(release-archive-dir)/$(xd-delta)
+	echo $(VERSION) > $(prev_version_file)
+	cvs ci -m. $(prev_version_file)
+	@$(emit-rsync-commands)
