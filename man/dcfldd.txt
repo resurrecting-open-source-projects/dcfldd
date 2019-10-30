@@ -22,6 +22,8 @@ DESCRIPTION
     command.
   - Piped output and logs: dcfldd can send all its log data and output to commands as well as files
     natively.
+  - When dd uses a default block size (bs, ibs, obs) of 512 bytes, dcfldd uses 32768 bytes (32 KiB)
+    which is HUGELY more efficient.
 
   dcfldd supports the following letters to specify amount of data: k for kilo, M for Mega, G for Giga,
   T for Tera, P for Peta, E for Exa, Z for Zetta and Y for Yotta. E.g. 10M is equal to 10 MiB. See
