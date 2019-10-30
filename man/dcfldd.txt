@@ -145,3 +145,5 @@ AUTHORS
   dcfldd was originally written by Nicholas Harbour. Currently is maintained by some volunteers.
 
   GNU dd was written by Paul Rubin, David MacKenzie and Stuart Kemp.
+
+  This manpage was written by dd authors, Nicholas Harbour, Joao Eriberto Mota Filho and others.
