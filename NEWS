@@ -1,5 +1,11 @@
 Version 1.5
 -----------
 
-New options: limit, using bytes in sizeprobe and MAC/WIN in split format.
+New options:
+  - limit
+  - using bytes in sizeprobe
+  - MAC/WIN in split format
+
+Added several examples in manpage.
+
 See the manpage.
