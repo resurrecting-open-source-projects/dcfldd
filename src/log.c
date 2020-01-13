@@ -77,7 +77,7 @@ void log_info(char *str, ...)
     vfprintf(stderr, str, ap);
     if (errlog != NULL) {
         vfprintf(errlog, str, ap2);
-	va_end(ap2);
+        va_end(ap2);
     }
     va_end(ap);
 }
