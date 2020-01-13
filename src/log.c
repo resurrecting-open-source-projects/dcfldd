@@ -70,12 +70,14 @@ void user_error(char *str, ...)
 
 void log_info(char *str, ...)
 {
-    va_list ap;
+    va_list ap, ap2;
 
     va_start(ap, str);
+    va_copy(ap2, ap);
     vfprintf(stderr, str, ap);
     if (errlog != NULL) {
-        vfprintf(errlog, str, ap);
+        vfprintf(errlog, str, ap2);
+	va_end(ap2);
     }
     va_end(ap);
 }
