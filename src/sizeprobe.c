@@ -63,16 +63,16 @@ static off_t midpoint(off_t a, off_t b, long blksize)
 /* I stole this from Jesse Kornblum's md5deep */
 static off_t get_dev_size(int fd, long blksize)
 {
-    off_t num_sectors = 0;
+    off_t num_bytes = 0;
 
     /*
      * Use BLKGETSIZE64 unconditionally, since dcfldd.h #defines _FILE_OFFSET_BITS 64
      * and off_t is guaranteed to be large enough to hold the result.
      */
-    if (ioctl(fd, BLKGETSIZE64, &num_sectors))
+    if (ioctl(fd, BLKGETSIZE64, &num_bytes))
         log_info("%s: ioctl call to BLKGETSIZE64 failed.\n", program_name);
     else
-        return (num_sectors * 512);
+        return (num_bytes);
 }
 
 #elif defined (__MacOSX__)
