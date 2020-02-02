@@ -5,9 +5,9 @@
 #
 # This script can be used under BSD-3-Clause license.
 
-T2M_DATE="13 Jan 2020"
+T2M_DATE="02 Feb 2020"
 T2M_NAME=dcfldd
-T2M_VERSION=1.6
+T2M_VERSION=1.7
 T2M_LEVEL=1
 T2M_DESC="enhanced version of dd for forensics and security"
 
