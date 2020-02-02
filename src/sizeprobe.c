@@ -5,6 +5,7 @@
 
 /* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
  * Copyright 2014                        Vangelis Koukis <vkoukis@gmail.com>
+ * Copyright 2020                        David Polverari <david.polverari@gmail.com>
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
