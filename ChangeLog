@@ -1,3 +1,11 @@
+2020-02-02  Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+Version 1.7
+
+    [ David Polverari ]
+
+ * src/sizeprobe.c: fixed destination size unit. (Debian bug #886647)
+ * src/util.c: fixed non-Linux build error.
+
 2020-01-13  Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 Version 1.6
 
