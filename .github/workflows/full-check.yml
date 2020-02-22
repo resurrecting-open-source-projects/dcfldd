@@ -27,5 +27,5 @@ jobs:
       run: |
            dcfldd if=.github/workflows/test.txt of=/tmp/test2.txt hash=md5,sha1,sha256,sha384,sha512
            ls -lh /tmp/test2.txt
-           head -n3 test2.txt
+           head -n3 /tmp/test2.txt
            
