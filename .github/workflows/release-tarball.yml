@@ -16,17 +16,21 @@ jobs:
     - name: "Determine tag"
       id: "determine-tag"
       run: "echo \"::set-output name=tag::${GITHUB_REF#refs/tags/v}\""
+
     - name: "Determine configure.ac version"
       id: "determine-ac"
       run: "echo \"::set-output name=version::`sed -n -E 's/AC_INIT\\(\\[dcfldd\\], \\[(.+?)\\],.*$/\\1/p' configure.ac`\""
+
     - name: "Fail when tag version != configure.ac version"
       run: "exit 1"
       if: steps.determine-tag.outputs.tag != steps.determine-ac.outputs.version
+
     - name: Build and check distribution tarball
       run: |
         ./autogen.sh
         ./configure
         make distcheck
+
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -37,6 +41,7 @@ jobs:
         release_name: Release ${{ steps.determine-tag.outputs.tag }}
         draft: false
         prerelease: false
+
     - name: Upload Release Asset
       id: upload-release-asset
       uses: actions/upload-release-asset@v1
