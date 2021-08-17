@@ -2,7 +2,7 @@
 #
 # Copyright ?-2001    Jim Meyering <jim@meyering.net>
 # Copyright 2001-2006 Nicholas Harbour <nicholasharbour@yahoo.com>
-# Copyright 2019      Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+# Copyright 2019-2021 Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,11 +20,11 @@
 
 AC_PREREQ([2.69])
 
-AC_INIT([dcfldd], [1.7], [https://github.com/resurrecting-open-source-projects/dcfldd/issues])
+AC_INIT([dcfldd],[1.7],[https://github.com/resurrecting-open-source-projects/dcfldd/issues])
 AC_CONFIG_SRCDIR(src/dcfldd.c)
 AM_INIT_AUTOMAKE
 
-AM_CONFIG_HEADER(config.h)
+AC_CONFIG_HEADERS([config.h])
 AC_CANONICAL_HOST
 
 AC_PROG_CC
@@ -34,8 +34,7 @@ AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
 AC_PROG_RANLIB
-
-AC_HEADER_STDC
+AC_PROG_EGREP
 
 AC_C_CONST
 AC_TYPE_OFF_T
@@ -43,4 +42,5 @@ AC_TYPE_SIZE_T
 
 AC_CHECK_DECLS([strtol, strtoul, strtoumax, strndup])
 
-AC_OUTPUT(Makefile src/Makefile man/Makefile)
+AC_CONFIG_FILES([Makefile src/Makefile man/Makefile])
+AC_OUTPUT
