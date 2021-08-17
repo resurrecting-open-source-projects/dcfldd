@@ -42,5 +42,5 @@ AC_TYPE_SIZE_T
 
 AC_CHECK_DECLS([strtol, strtoul, strtoumax, strndup])
 
-AC_CONFIG_FILES([Makefile src/Makefile man/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile])
 AC_OUTPUT

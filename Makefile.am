@@ -2,7 +2,7 @@
 #
 # Copyright ?-2002    Jim Meyering <jim@meyering.net>
 # Copyright 2002-2006 Nicholas Harbour <nicholasharbour@yahoo.com>
-# Copyright 2019      Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+# Copyright 2019-2021 Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,7 +20,9 @@
 
 AUTOMAKE_OPTIONS = foreign no-dependencies
 
-SUBDIRS = src man
+SUBDIRS = src
+
+man_MANS = man/dcfldd.1
 
 distclean-local:
 	rm -rf autom4te.cache
