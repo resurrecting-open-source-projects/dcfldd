@@ -42,12 +42,12 @@ AC_TYPE_OFF_T
 AC_TYPE_SIZE_T
 
 AC_ARG_ENABLE([runtime-endian-check],
-    AC_HELP_STRING([--enable-runtime-endian-check], [Enable runtime tests for big- or little-endian byte order (default is NO)])
+    AC_HELP_STRING([--disable-runtime-endian-check], [disable runtime checks for endianness])
 )
 
-AS_IF([test "x$enable_runtime_endian_check" = "xyes"], [
+AS_IF([test "x$enable_runtime_endian_check" != "xno"], [
     dnl Do the stuff needed for enabling the feature
-    AC_DEFINE([RUNTIME_ENDIAN], 1, [Should a function (run-time) be used to determine the byte order?])
+    AC_DEFINE([RUNTIME_ENDIAN], 1, [Define whether to check for endianness during runtime])
 ])
 
 AC_CHECK_DECLS([strtol, strtoul, strtoumax, strndup])
