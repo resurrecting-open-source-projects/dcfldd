@@ -25,7 +25,26 @@ jobs:
            sudo make install
     - name: run_program
       run: |
-           dcfldd if=.github/workflows/test.txt of=/tmp/test2.txt hash=md5,sha1,sha256,sha384,sha512
+           dcfldd if=.github/workflows/test.txt of=/tmp/test2.txt hash=md5,sha1,sha256,sha384,sha512 2>&1 | grep bc0e4b74695142e0a0bdae87aea310d7078866cb
            ls -lh /tmp/test2.txt
-           head -n3 /tmp/test2.txt
-
+           head -n3 /tmp/test2.txt | grep -i autopkgtest
+    - name: test_make_dist
+      run: |
+           make distclean
+           ./autogen.sh
+           ./configure
+           make dist
+           mkdir test_dist
+           mv dcfldd-*.tar.gz test_dist
+           cd test_dist
+           pwd
+           tar -xvf dcfldd-*.tar.gz
+           rm -f dcfldd-*.tar.gz
+           cd dcfldd-*
+           ./autogen.sh
+           ./configure
+           make
+           ls
+           sudo make install
+           sudo make uninstall
+           make distclean
