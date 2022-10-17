@@ -2,7 +2,8 @@
 #
 # Copyright ?-2001    Jim Meyering <jim@meyering.net>
 # Copyright 2001-2006 Nicholas Harbour <nicholasharbour@yahoo.com>
-# Copyright 2019-2021 Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+# Copyright 2019-2022 Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+# Copyright 2022      David Polverari <david.polverari@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
