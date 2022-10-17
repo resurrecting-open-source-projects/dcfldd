@@ -24,6 +24,8 @@ SUBDIRS = src
 
 man_MANS = man/dcfldd.1
 
+EXTRA_DIST= autogen.sh CONTRIBUTING.md man/dcfldd.1 README.md
+
 distclean-local:
 	rm -rf autom4te.cache
 	rm -f aclocal.m4 compile config.* configure depcomp install-sh \
