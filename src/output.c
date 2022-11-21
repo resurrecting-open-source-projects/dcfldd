@@ -45,12 +45,12 @@ void open_output(char *filename)
     int fd;
     int opts
         = (O_CREAT
-           | (seek_records || (conversions_mask & C_NOTRUNC) ? 0 : O_TRUNC));
+           | ((seek_records || do_diffwr || (conversions_mask & C_NOTRUNC)) ? 0 : O_TRUNC));
 
     /* Open the output file with *read* access only if we might
-       need to read to satisfy a `seek=' request.  If we can't read
+       need to read to satisfy a `seek=' or "diffwr=on" request. If we can't read
        the file, go ahead with write-only access; it might work.  */
-    if ((! seek_records
+    if ((! (seek_records || do_diffwr)
          || (fd = open(filename, O_RDWR | opts, perms)) < 0)
         && (fd = open(filename, O_WRONLY | opts, perms)) < 0)
     {
@@ -121,6 +121,7 @@ void outputlist_add(outputtype_t type, ...)
 
     ptr->next = NULL;
     ptr->type = type;
+    ptr->diffwr = do_diffwr;
 
     switch (type) {
     case SINGLE_FILE:
@@ -130,6 +131,7 @@ void outputlist_add(outputtype_t type, ...)
         ptr->type = SINGLE_FILE;
         ptr->stream = va_arg(ap, FILE *);
         ptr->data.fd = fileno(ptr->stream);
+        ptr->diffwr = 0;
         break;
     case SPLIT_FILE:
         split = malloc(sizeof *split);
@@ -155,10 +157,10 @@ int outputlist_write(const char *buf, size_t len)
         nwritten = 0;
         switch (ptr->type) {
         case SINGLE_FILE:
-            nwritten = full_write(ptr->data.fd, buf, len);
+            nwritten = full_write(ptr->data.fd, buf, len, ptr->diffwr);
             break;
         case SPLIT_FILE:
-            nwritten = split_write(ptr->data.split, buf, len);
+            nwritten = split_write(ptr->data.split, buf, len, ptr->diffwr);
             break;
         }
         if (nwritten < len)

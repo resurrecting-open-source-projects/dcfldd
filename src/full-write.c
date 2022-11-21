@@ -25,6 +25,7 @@
 #endif
 
 #include <sys/types.h>
+#include "safe-read.h"
 
 #if HAVE_UNISTD_H
 # include <unistd.h>
@@ -39,14 +40,36 @@ extern int errno;
    Return LEN upon success, write's (negative) error code otherwise.  */
 
 int
-full_write (int desc, const char *ptr, size_t len)
+full_write (int desc, const char *ptr, size_t len, int diffwr)
 {
   int total_written;
 
   total_written = 0;
   while (len > 0)
     {
-      int written = write (desc, ptr, len);
+      int written = 0;
+      if (diffwr) { /* Check destination block content is same as the buffer */
+        char *rptr = 0;
+        do {
+          off_t pos = lseek(desc, 0, SEEK_CUR);
+          if (pos < 0) break;
+          rptr = malloc(len);
+          if (!rptr) break;
+          int rlen = safe_read(desc, rptr, len);
+          if ((rlen <= 0) || (rlen != len) || (memcmp(rptr, ptr, len))) {
+            lseek(desc, pos, SEEK_SET);
+            break;
+          }
+          written = len;
+        } while(0);
+        if (rptr) free(rptr);
+      }
+      if (written <= 0) {
+#if 0
+          fprintf(stderr, "write: fd=%d, pos=%d, len=%d\n",desc, lseek(desc, 0, SEEK_CUR), len);
+#endif
+          written = write (desc, ptr, len);
+      }
       /* write on an old Slackware Linux 1.2.13 returns zero when
 	 I try to write more data than there is room on a floppy disk.
 	 This puts dd into an infinite loop.  Reproduce with

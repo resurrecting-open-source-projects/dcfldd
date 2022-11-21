@@ -24,6 +24,6 @@
 #ifndef FULL_WRITE_H
 #define FULL_WRITE_H
 
-int full_write(int, const char *, size_t);
+int full_write(int, const char *, size_t, int diffwr);
 
 #endif /* FULL_WRITE_H */

@@ -144,6 +144,7 @@ extern uintmax_t r_truncate;
 extern int do_hash;
 extern int do_verify;
 extern int do_status;
+extern int do_diffwr;
 
 extern int char_is_saved;
 extern unsigned char saved_char;
