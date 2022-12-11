@@ -203,7 +203,7 @@ Enhanced version of dd for forensics and security.\n\
   vf=FILE                  verify that FILE matches the specified input\n\
   verifylog=FILE           send verify results to FILE instead of stderr\n\
   verifylog:=COMMAND       exec and write verify results to process COMMAND\n\
-  diffwr=[on|off]          write only to output if destination block content differs\n\
+  diffwr=[on|off]          only write to output if destination block content differs\n\
 \n\
   --help              display this help and exit\n\
   --version           output version information and exit\n\
