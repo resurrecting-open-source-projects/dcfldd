@@ -1,3 +1,9 @@
+Upcoming version
+
+    [ Tibor Szolnoki ]
+
+ * Added support for write only to output if destination block content is differs ('diffwr' option).
+
 2022-10-17  Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 Version 1.8
 

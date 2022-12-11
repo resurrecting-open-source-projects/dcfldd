@@ -46,6 +46,7 @@ typedef struct outputlist_s
         int fd;
         split_t *split;
     } data;
+    int diffwr;
 } outputlist_t;
 
 extern outputlist_t *outputlist;

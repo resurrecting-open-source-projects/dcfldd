@@ -36,6 +36,6 @@ typedef struct
     char *format;
 } split_t;
 
-extern int split_write(split_t *, const char *, size_t);
+extern int split_write(split_t *, const char *, size_t, int diffwr);
 
 #endif /* SPLIT_H */

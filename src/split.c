@@ -140,7 +140,7 @@ static void open_split(split_t *split)
     free(fname);
 }
 
-int split_write(split_t *split, const char *buf, size_t len)
+int split_write(split_t *split, const char *buf, size_t len, int diffwr)
 {
     off_t left = split->max_bytes - split->curr_bytes;
     int nwritten = 0;
@@ -151,14 +151,14 @@ int split_write(split_t *split, const char *buf, size_t len)
     }
 
     if (len <= left) {
-        nwritten = full_write(split->currfd, buf, len);
+        nwritten = full_write(split->currfd, buf, len, diffwr);
         split->total_bytes += nwritten;
         split->curr_bytes += nwritten;
     } else {
-        nwritten = full_write(split->currfd, buf, left);
+        nwritten = full_write(split->currfd, buf, left, diffwr);
         split->total_bytes += nwritten;
         split->curr_bytes += nwritten;
-        nwritten += split_write(split, &buf[nwritten], len - nwritten);
+        nwritten += split_write(split, &buf[nwritten], len - nwritten, diffwr);
     }
 
     return nwritten;

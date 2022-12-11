@@ -133,6 +133,7 @@ int do_status = 1;
 int do_hash = 0;
 int do_verify = 0;
 int do_split = 0;
+int do_diffwr = 0;
 
 hashconv_t hashconv = DEFAULT_HASHCONV;
 
@@ -202,6 +203,7 @@ Enhanced version of dd for forensics and security.\n\
   vf=FILE                  verify that FILE matches the specified input\n\
   verifylog=FILE           send verify results to FILE instead of stderr\n\
   verifylog:=COMMAND       exec and write verify results to process COMMAND\n\
+  diffwr=[on|off]          write only to output if destination block content differs\n\
 \n\
   --help              display this help and exit\n\
   --version           output version information and exit\n\
@@ -579,6 +581,11 @@ static void scanargs(int argc, char **argv)
 	      if (invalid)
 		probe = PROBE_NONE;
 	    }
+        } else if (STREQ(name, "diffwr")) {
+                if (STREQ(val, "off"))
+                    do_diffwr = 0;
+                else if (STREQ(val, "on"))
+                    do_diffwr = 1;
         } else {
             int invalid = 0;
             uintmax_t n = parse_integer(val, &invalid);
