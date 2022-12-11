@@ -62,9 +62,6 @@ full_write (int desc, const char *ptr, size_t len, int diffwr)
         }
       }
       if (written <= 0) {
-#if 0
-          fprintf(stderr, "write: fd=%d, pos=%d, len=%d\n",desc, lseek(desc, 0, SEEK_CUR), len);
-#endif
           written = write (desc, ptr, len);
       }
       /* write on an old Slackware Linux 1.2.13 returns zero when
