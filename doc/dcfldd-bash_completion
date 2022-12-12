@@ -41,6 +41,11 @@ _dcfldd()
             COMPREPLY=( $( compgen -W 'if of' -- "$cur" ) )
             return 0
             ;;
+        diffwr=*)
+            cur=${cur#*=}
+            COMPREPLY=( $( compgen -W 'on off' -- "$cur") )
+            return 0
+            ;;
     esac
 
     _expand || return 0
@@ -50,6 +55,6 @@ _dcfldd()
                                textpattern errlog hash md5log sha1log sha256log sha384log
                                sha512log hashwindow hashconv hashformat totalhashformat
                                status statusinterval sizeprobe split splitformat vf
-                               verifylog' -S '=' -- "$cur" ) )
+                               verifylog diffwr' -S '=' -- "$cur" ) )
 } &&
 complete -F _dcfldd -o nospace dcfldd
