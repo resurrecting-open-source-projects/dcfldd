@@ -1,9 +1,16 @@
-Upcoming version
+2023-02-08  Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+Version 1.9
 
     [ Tibor Szolnoki ]
 
  * Added support for writing to output only if destination block content
    differs ('diffwr' option).
+
+    [ David Polverari ]
+
+ * Added bash completion for diffwr.
+ * Minor fixes in manpage and help.
+ * Minor optimizations in source code.
 
 2022-10-17  Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 Version 1.8
