@@ -98,7 +98,7 @@ OPTIONS
   verifylog=FILE           Send verify results to FILE instead of stderr.
   verifylog:=COMMAND       Exec and write verify results to process COMMAND.
   diffwr=[on|off]          Only write to output if destination block content differs. This operation applies
-                           to any of=FILE that follows (diffwr= must be put before any of=)
+                           to any of=FILE that follows (diffwr= must be put before any of=).
   --help                   Display a help page and exit.
   --version                Output version information and exit.
 
