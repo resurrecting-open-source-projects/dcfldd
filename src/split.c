@@ -7,6 +7,7 @@
    Copyright 2012                        Miah Gregory <mace@debian.org>
    Copyright 2015-2019                   Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
    Copyright 2019                        Bernhard Übelacker <bernhardu@mailbox.org>
+   Copyright 2022                        Tibor Szolnoki <szolnoki.tibor@gmail.com>
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by

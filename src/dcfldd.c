@@ -7,6 +7,8 @@
    Copyright 2008                        David Loveall <dave@loveall.org>
    Copyright 2012                        Miah Gregory <mace@debian.org>
    Copyright 2014                        Vangelis Koukis <vkoukis@gmail.com>
+   Copyright 2022                        David Polverari <david.polverari@gmail.com>
+   Copyright 2022                        Tibor Szolnoki <szolnoki.tibor@gmail.com>
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by

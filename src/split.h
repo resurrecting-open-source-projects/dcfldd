@@ -2,7 +2,8 @@
  * dcfldd - The Enhanced Forensic DD
  * By Nicholas Harbour
  */
-/* Copyright (C) 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+/* Copyright 85, 90, 91, 1995-2001, 2005 Free Software Foundation, Inc.
+   Copyright 2022                        Tibor Szolnoki <szolnoki.tibor@gmail.com>
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by

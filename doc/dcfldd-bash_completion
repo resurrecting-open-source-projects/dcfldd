@@ -1,5 +1,6 @@
 # bash completion for dcfldd                                   -*- shell-script -*-
 # Copyright 2017-2020 Joao Eriberto Mota Filho <eriberto@debian.org>
+# Copyright 2022      David Polverari <david.polverari@gmail.com>
 # Version: 20200113
 # Based in dd completion script.
 
