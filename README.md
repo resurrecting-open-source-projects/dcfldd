@@ -1,22 +1,22 @@
+[![Packaging status](https://repology.org/badge/tiny-repos/dcfldd.svg)](https://repology.org/project/dcfldd/versions)
+
 # dcfldd
 
 #### dcfldd - enhanced version of dd for forensics and security
 
 ## Help this project ##
 
-dcfldd needs your help. **If you are a programmer** and if you wants to help a
+dcfldd needs your help. **If you are a programmer** and if you want to help a
 nice project, this is your opportunity.
 
 dcfldd was imported from some tarballs (the original homepage[1] and
 developers are inactive). After this, all patches found in Debian project and
 other places for this program were applied. All initial work was registered in
-ChangeLog file (version 1.5 and later releases). dcfldd is being packaged in
-Debian[2] Project.
+ChangeLog file (version 1.5 and later releases). 
 
 If you are interested to help dcfldd, read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 [1]: https://sourceforge.net/projects/dcfldd
-[2]: https://tracker.debian.org/pkg/dcfldd
 
 ## What is dcfldd? ##
 
