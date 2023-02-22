@@ -20,6 +20,11 @@
 
 AUTOMAKE_OPTIONS = foreign no-dependencies
 
+if ENABLE_BASH_COMPLETION
+bashcompletiondir = $(BASH_COMPLETION_DIR)
+dist_bashcompletion_DATA = doc/dcfldd-bash_completion
+endif
+
 SUBDIRS = src
 
 man_MANS = man/dcfldd.1
