@@ -56,11 +56,11 @@ full_write (int desc, const char *ptr, size_t len, int diffwr)
         if ((pos >= 0) && (rptr = malloc(len))) {
           int rlen = safe_read(desc, rptr, len);
           if ((rlen <= 0) || (rlen != len) || (memcmp(rptr, ptr, len))) {
-            free(rptr);
             lseek(desc, pos, SEEK_SET);
           } else {
             written = len;
           }
+          free(rptr);
         }
       }
       if (written <= 0) {
