@@ -51,6 +51,20 @@ AS_IF([test "x$enable_runtime_endian_check" != "xno"], [
     AC_DEFINE([RUNTIME_ENDIAN], 1, [Define whether to check for endianness during runtime])
 ])
 
+AC_ARG_ENABLE(debug,
+
+    AS_HELP_STRING([--enable-debug], [enable debugging, default: no]),
+
+    [ case "${enableval}" in
+
+         yes|"") CFLAGS="$CFLAGS -DDEBUG" ;;
+
+         *) ;;
+
+    esac],
+
+)
+
 AC_CHECK_DECLS([strtol, strtoul, strtoumax, strndup])
 
 AC_CONFIG_FILES([Makefile src/Makefile])
