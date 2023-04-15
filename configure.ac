@@ -52,17 +52,11 @@ AS_IF([test "x$enable_runtime_endian_check" != "xno"], [
 ])
 
 AC_ARG_ENABLE(debug,
-
     AS_HELP_STRING([--enable-debug], [enable debugging, default: no]),
-
     [ case "${enableval}" in
-
          yes|"") CFLAGS="$CFLAGS -DDEBUG" ;;
-
          *) ;;
-
     esac],
-
 )
 
 AC_CHECK_DECLS([strtol, strtoul, strtoumax, strndup])
