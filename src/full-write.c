@@ -52,16 +52,19 @@ full_write (int desc, const char *ptr, size_t len, int diffwr)
       int written = 0;
       if (diffwr) { /* Check destination block content is same as the buffer */
         char *rptr = NULL;
-        off_t pos = lseek(desc, 0, SEEK_CUR);
-        if ((pos >= 0) && (rptr = malloc(len))) {
+        do {
+          off_t pos = lseek(desc, 0, SEEK_CUR);
+          if (pos < 0) break;
+          rptr = malloc(len);
+          if (!rptr) break;
           int rlen = safe_read(desc, rptr, len);
           if ((rlen <= 0) || (rlen != len) || (memcmp(rptr, ptr, len))) {
-            free(rptr);
             lseek(desc, pos, SEEK_SET);
-          } else {
-            written = len;
+            break;
           }
-        }
+          written = len;
+        } while(0);
+        if (rptr) free(rptr);
       }
       if (written <= 0) {
           written = write (desc, ptr, len);
