@@ -1,6 +1,6 @@
 /* full-write.c -- an interface to write that retries after interrupts
    Copyright 1993, 1994, 1997, 1998, 2000 Free Software Foundation, Inc.
-   Copyright 2022                         David Polverari <david.polverari@gmail.com>
+   Copyright 2022-2023                    David Polverari <david.polverari@gmail.com>
    Copyright 2022                         Tibor Szolnoki <szolnoki.tibor@gmail.com>
 
    This program is free software; you can redistribute it and/or modify
