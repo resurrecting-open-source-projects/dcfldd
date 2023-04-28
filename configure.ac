@@ -48,11 +48,11 @@ AC_ARG_ENABLE([runtime-endian-check],
     AC_HELP_STRING([--disable-runtime-endian-check], [disable runtime checks for endianness])
 )
 
-AC_ARG_WITH([bash-completion-dir],
-    AS_HELP_STRING([--with-bash-completion-dir[=PATH]],
+AC_ARG_WITH([bash-completion],
+    AS_HELP_STRING([--with-bash-completion[=PATH]],
                    [Install the bash auto-completion script in this directory. @<:@default=no@:>@]),
     [],
-    [with_bash_completion_dir=no]
+    [with_bash_completion=no]
 )
 
 AS_IF([test "x$enable_runtime_endian_check" != "xno"], [
@@ -60,18 +60,18 @@ AS_IF([test "x$enable_runtime_endian_check" != "xno"], [
     AC_DEFINE([RUNTIME_ENDIAN], 1, [Define whether to check for endianness during runtime])
 ])
 
-if test "x$with_bash_completion_dir" == "xyes"; then
+if test "x$with_bash_completion" == "xyes"; then
     PKG_CHECK_MODULES([BASH_COMPLETION], [bash-completion >= 2.0],
         [BASH_COMPLETION_DIR="`$PKG_CONFIG --variable=completionsdir bash-completion`"],
         [BASH_COMPLETION_DIR="$datadir/bash-completion/completions"])
 else
-    BASH_COMPLETION_DIR="$with_bash_completion_dir"
+    BASH_COMPLETION_DIR="$with_bash_completion"
 fi
 
 AC_CHECK_DECLS([strtol, strtoul, strtoumax, strndup])
 
 AC_SUBST([BASH_COMPLETION_DIR])
-AM_CONDITIONAL([ENABLE_BASH_COMPLETION],[test "x$with_bash_completion_dir" != "xno"])
+AM_CONDITIONAL([ENABLE_BASH_COMPLETION],[test "x$with_bash_completion" != "xno"])
 
 AC_CONFIG_FILES([Makefile src/Makefile])
 AC_OUTPUT
