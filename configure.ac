@@ -3,7 +3,7 @@
 # Copyright ?-2001    Jim Meyering <jim@meyering.net>
 # Copyright 2001-2006 Nicholas Harbour <nicholasharbour@yahoo.com>
 # Copyright 2019-2022 Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
-# Copyright 2022      David Polverari <david.polverari@gmail.com>
+# Copyright 2022-2023 David Polverari <david.polverari@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -30,6 +30,7 @@ AC_CANONICAL_HOST
 
 PKG_PROG_PKG_CONFIG
 
+AC_PATH_PROG(PKG_CONFIG_INSTALLED, pkg-config, no)
 AC_PROG_CC
 AC_PROG_CPP
 AC_PROG_GCC_TRADITIONAL
@@ -54,6 +55,10 @@ AC_ARG_WITH([bash-completion],
     [],
     [with_bash_completion=no]
 )
+
+if test "x$PKG_CONFIG_INSTALLED" = "xno"; then
+    AC_MSG_ERROR([pkg-config not found. Please install pkg-config and re-run autogen.sh before configuring.])
+fi
 
 AS_IF([test "x$enable_runtime_endian_check" != "xno"], [
     dnl Do the stuff needed for enabling the feature
