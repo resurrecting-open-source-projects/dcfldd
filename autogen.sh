@@ -2,6 +2,7 @@
 
 # autogen.sh with clean option
 # Copyright 2016 Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
+# Copyright 2023 David da Silva Polverari <david.polverari@gmail.com>
 #
 # This file is under BSD-3-Clause license.
 #
@@ -45,6 +46,13 @@ if [ "$1" = "clean" -a -e Makefile ]
 then
     echo "I can not clean. Use '$ make distclean'."
     exit 0
+fi
+
+env pkg-config --version > /dev/null 2>&1
+if [ $? -ne 0 ]
+then
+    echo "pkg-config is missing. Please install it and run $0 again."
+    exit 1
 fi
 
 # Do autoreconf
