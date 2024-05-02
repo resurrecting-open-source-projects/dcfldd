@@ -1029,7 +1029,7 @@ void SHA384_Final(SHA384_CTX* context, sha2_byte digest[]) {
 	}
 
 	/* Zero out state data */
-	MEMSET_BZERO(context, sizeof(context));
+	MEMSET_BZERO(context, sizeof(*context));
 }
 
 char *SHA384_End(SHA384_CTX* context, char buffer[]) {
