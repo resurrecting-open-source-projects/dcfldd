@@ -35,7 +35,7 @@ jobs:
     - name: first_build
       run: |
            ./autogen.sh
-           ./configure CC=${{ matrix.cc }}
+           ./configure CC=${{ matrix.cc }} CFLAGS='-std=c99 -Wall -Wextra -pedantic'
            make
            sudo make install
            sudo make uninstall
