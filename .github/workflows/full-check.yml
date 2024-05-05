@@ -4,15 +4,38 @@ on: [push, pull_request]
 
 jobs:
   build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - cc: gcc-13
+            clang_major_version: null
+            runs-on: ubuntu-22.04
+          - cc: clang-18
+            clang_major_version: 18
+            runs-on: ubuntu-22.04
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.runs-on }}
 
     steps:
     - uses: actions/checkout@v4
+    - name: clang_repo
+      if: "${{ contains(matrix.cc, 'clang') }}"
+      run: |
+           set -x
+           source /etc/os-release
+           wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+           sudo add-apt-repository "deb http://apt.llvm.org/${UBUNTU_CODENAME}/ llvm-toolchain-${UBUNTU_CODENAME}-${{ matrix.clang_major_version }} main"
+    - name: clang_install
+      if: "${{ contains(matrix.cc, 'clang') }}"
+      run: |-
+           sudo apt-get update
+           sudo apt-get install --yes --no-install-recommends -V \
+             clang-${{ matrix.clang_major_version }}
     - name: first_build
       run: |
            ./autogen.sh
-           ./configure
+           ./configure CC=${{ matrix.cc }}
            make
            sudo make install
            sudo make uninstall
@@ -20,7 +43,7 @@ jobs:
     - name: second_build
       run: |
            ./autogen.sh
-           ./configure
+           ./configure CC=${{ matrix.cc }}
            make
            sudo make install
     - name: run_program
@@ -32,7 +55,7 @@ jobs:
       run: |
            make distclean
            ./autogen.sh
-           ./configure
+           ./configure CC=${{ matrix.cc }}
            make dist
            mkdir test_dist
            mv dcfldd-*.tar.gz test_dist
@@ -42,7 +65,7 @@ jobs:
            rm -f dcfldd-*.tar.gz
            cd dcfldd-*
            ./autogen.sh
-           ./configure
+           ./configure CC=${{ matrix.cc }}
            make
            ls
            sudo make install
