@@ -23,6 +23,10 @@
 
 /* GNU dd originally written by Paul Rubin, David MacKenzie, and Stuart Kemp. */
 
+#ifdef HAVE_CONFIG_H
+# include "config.h"
+#endif
+
 #include "dcfldd.h"
 #include "output.h"
 #include "full-write.h"

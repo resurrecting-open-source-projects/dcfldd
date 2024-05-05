@@ -32,6 +32,10 @@
    the function fails to perform the requested operation.  In that case,
    lseek should return nonzero and set errno.  */
 
+#ifdef HAVE_CONFIG_H
+# include "config.h"
+#endif
+
 #include "dcfldd.h"
 #include <sys/types.h>
 #include <sys/wait.h>
