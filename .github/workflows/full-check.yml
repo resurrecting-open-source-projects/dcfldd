@@ -31,7 +31,8 @@ jobs:
       run: |-
            sudo apt-get update
            sudo apt-get install --yes --no-install-recommends -V \
-             clang-${{ matrix.clang_major_version }}
+             clang-${{ matrix.clang_major_version }} \
+             libclang-rt-${{ matrix.clang_major_version }}-dev
     - name: first_build
       run: |
            ./autogen.sh
@@ -43,7 +44,9 @@ jobs:
     - name: second_build
       run: |
            ./autogen.sh
-           ./configure CC=${{ matrix.cc }}
+           ./configure CC=${{ matrix.cc }} \
+             CFLAGS='-fsanitize=address -fno-omit-frame-pointer' \
+             LDFLAGS='-fsanitize=address'
            make
            sudo make install
     - name: run_program
