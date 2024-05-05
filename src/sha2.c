@@ -32,6 +32,10 @@
  * $Id: sha2.c,v 1.3 2005/05/13 18:52:06 harbourn Exp $
  */
 
+#ifdef HAVE_CONFIG_H
+# include "config.h"
+#endif
+
 #include <string.h>	/* memcpy()/memset() or bcopy()/bzero() */
 #include <assert.h>	/* assert() */
 #include "sha2.h"

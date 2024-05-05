@@ -19,6 +19,10 @@
 /* Written by David MacKenzie <djm@ai.mit.edu>
    Modified by Akim Demaille <demaille@inf.enst.fr> */
 
+#ifdef HAVE_CONFIG_H
+# include "config.h"
+#endif
+
 #include "dcfldd.h"
 #include "argmatch.h"
 #include "log.h"
