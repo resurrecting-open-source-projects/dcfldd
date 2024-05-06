@@ -126,6 +126,7 @@ void outputlist_add(outputtype_t type, ...)
 
     ptr->next = NULL;
     ptr->type = type;
+    ptr->stream = NULL;
     ptr->diffwr = do_diffwr;
 
     switch (type) {
