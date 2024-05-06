@@ -22,6 +22,8 @@
 /* GNU dd originally written by Paul Rubin, David MacKenzie, and Stuart Kemp. */
 
 #include "dcfldd.h"
+#include <assert.h>
+#include <limits.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -84,6 +86,68 @@ FILE *hash_log;
 
 /* Hash algorithms */
 
+void MD5InitGeneric(void * mdContext) {
+    MD5Init((MD5_CTX *)mdContext);
+}
+
+void MD5UpdateGeneric(void * mdContext, const void * inBuf, size_t inLen) {
+    assert(inLen <= (size_t)UINT_MAX);
+    MD5Update((MD5_CTX *)mdContext, (const unsigned char *)inBuf, (unsigned int)inLen);
+}
+
+void MD5FinalGeneric(void * mdContext, void * buf) {
+    MD5Final((MD5_CTX *)mdContext, (char *)buf);
+}
+
+void SHA1InitGeneric(void * sc) {
+    SHA1Init((SHA1Context *)sc);
+}
+
+void SHA1UpdateGeneric(void * sc, const void * vdata, size_t len) {
+    assert(len <= (size_t)0xFFFFFFFFu);
+    SHA1Update((SHA1Context *)sc, vdata, (uint32_t)len);
+}
+
+void SHA1EndGeneric(void * sc, void * hashstrbuf) {
+    SHA1End((SHA1Context *)sc, (char *)hashstrbuf);
+}
+
+void SHA256_Init_Generic(void * context) {
+    SHA256_Init((SHA256_CTX *)context);
+}
+
+void SHA256_Update_Generic(void * context, const void * data, size_t len) {
+    SHA256_Update((SHA256_CTX *)context, (const sha2_byte *)data, len);
+}
+
+void SHA256_End_Generic(void * context, void * buffer) {
+    SHA256_End((SHA256_CTX *)context, (char *)buffer);
+}
+
+void SHA384_Init_Generic(void * context) {
+    SHA384_Init((SHA384_CTX *)context);
+}
+
+void SHA384_Update_Generic(void * context, const void * data, size_t len) {
+    SHA384_Update((SHA384_CTX *)context, (const sha2_byte *)data, len);
+}
+
+void SHA384_End_Generic(void * context, void * buffer) {
+    SHA384_End((SHA384_CTX *)context, (char *)buffer);
+}
+
+void SHA512_Init_Generic(void * context) {
+    SHA512_Init((SHA512_CTX *)context);
+}
+
+void SHA512_Update_Generic(void * context, const void * data, size_t len) {
+    SHA512_Update((SHA512_CTX *)context, (const sha2_byte *)data, len);
+}
+
+void SHA512_End_Generic(void * context, void * buffer) {
+    SHA512_End((SHA512_CTX *)context, (char *)buffer);
+}
+
 hashlist_t *ihashlist;
 
 hashtype_t hashops[] =
@@ -94,9 +158,9 @@ hashtype_t hashops[] =
      &MD5_total_context,
      &MD5_vwindow_context,
      &MD5_vtotal_context,
-     (void (*)(void *)) MD5Init,
-     (void (*)(void *, const void *, size_t)) MD5Update,
-     (void (*)(void *, void *)) MD5Final,
+     MD5InitGeneric,
+     MD5UpdateGeneric,
+     MD5FinalGeneric,
      &MD5_hashstr[0],
      sizeof (MD5_hashstr),
      NULL},
@@ -107,9 +171,9 @@ hashtype_t hashops[] =
      &SHA1_total_context,
      &SHA1_vwindow_context,
      &SHA1_vtotal_context,
-     (void (*)(void *)) SHA1Init,
-     (void (*)(void *, const void *, size_t)) SHA1Update,
-     (void (*)(void *, void *)) SHA1End,
+     SHA1InitGeneric,
+     SHA1UpdateGeneric,
+     SHA1EndGeneric,
      &SHA1_hashstr[0],
      sizeof (SHA1_hashstr),
      NULL},
@@ -120,9 +184,9 @@ hashtype_t hashops[] =
      &SHA256_total_context,
      &SHA256_vwindow_context,
      &SHA256_vtotal_context,
-     (void (*)(void *)) SHA256_Init,
-     (void (*)(void *, const void *, size_t)) SHA256_Update,
-     (void (*)(void *, void *)) SHA256_End,
+     SHA256_Init_Generic,
+     SHA256_Update_Generic,
+     SHA256_End_Generic,
      SHA256_hashstr,
      sizeof (SHA256_hashstr),
      NULL},
@@ -133,9 +197,9 @@ hashtype_t hashops[] =
      &SHA384_total_context,
      &SHA384_vwindow_context,
      &SHA384_vtotal_context,
-     (void (*)(void *)) SHA384_Init,
-     (void (*)(void *, const void *, size_t)) SHA384_Update,
-     (void (*)(void *, void *)) SHA384_End,
+     SHA384_Init_Generic,
+     SHA384_Update_Generic,
+     SHA384_End_Generic,
      &SHA384_hashstr[0],
      sizeof (SHA384_hashstr),
      NULL},
@@ -146,9 +210,9 @@ hashtype_t hashops[] =
      &SHA512_total_context,
      &SHA512_vwindow_context,
      &SHA512_vtotal_context,
-     (void (*)(void *)) SHA512_Init,
-     (void (*)(void *, const void *, size_t)) SHA512_Update,
-     (void (*)(void *, void *)) SHA512_End,
+     SHA512_Init_Generic,
+     SHA512_Update_Generic,
+     SHA512_End_Generic,
      &SHA512_hashstr[0],
      sizeof (SHA512_hashstr),
      NULL},
