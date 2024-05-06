@@ -45,8 +45,8 @@ jobs:
       run: |
            ./autogen.sh
            ./configure CC=${{ matrix.cc }} \
-             CFLAGS='-fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer' \
-             LDFLAGS='-fsanitize=address,undefined'
+             CFLAGS='-g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer' \
+             LDFLAGS='-g -fsanitize=address,undefined'
            make
            sudo make install
     - name: run_program
