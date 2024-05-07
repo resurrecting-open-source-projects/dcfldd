@@ -125,6 +125,7 @@ static void open_split(split_t *split)
     ext = getext(split->format, splitnum);
     /* [FIX] split.c:105:5: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result] */
     if( asprintf(&fname, "%s.%s", split->name, ext) == -1) {
+            free(ext);
             return;
     }
     free(ext);

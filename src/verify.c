@@ -144,8 +144,6 @@ int dd_verify(void)
     int input_from_pattern = !input_from_stream;
     size_t page_size = getpagesize();
     size_t n_bytes_read;
-    char *i_hashstr_buf;
-    char *v_hashstr_buf;
     size_t left_in_window;
     int mismatch = 0;
     int cmp = 0;
@@ -165,9 +163,6 @@ int dd_verify(void)
     vbuf += SWAB_ALIGN_OFFSET;	/* allow space for swab */
 
     vbuf = PTR_ALIGN(vbuf, page_size);
-
-    i_hashstr_buf = malloc(hashstr_buf_size);
-    v_hashstr_buf = malloc(hashstr_buf_size);
 
     if (!input_from_pattern)
         if (skip_records != 0)
