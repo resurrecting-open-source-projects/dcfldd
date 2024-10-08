@@ -11,8 +11,8 @@ jobs:
           - cc: gcc-14
             clang_major_version: null
             runs-on: ubuntu-24.04
-          - cc: clang-18
-            clang_major_version: 18
+          - cc: clang-19
+            clang_major_version: 19
             runs-on: ubuntu-22.04
 
     runs-on: ${{ matrix.runs-on }}
