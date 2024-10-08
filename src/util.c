@@ -120,7 +120,6 @@ void skip2(int fdesc, char *file, uintmax_t records, size_t blocksize,
 
 #ifdef __linux__
 
-# include <error.h>
 # include <sys/mtio.h>
 
 # define MT_SAME_POSITION(P, Q) \
@@ -144,9 +143,12 @@ static off_t skip_via_lseek(char const *filename, int fdesc, off_t offset,
         && ioctl (fdesc, MTIOCGET, &s2) == 0
         && MT_SAME_POSITION (s1, s2))
     {
-        error (0, 0, _("warning: working around lseek kernel bug for file (%s)\n\
+        fflush(stdout);
+        fprintf(stderr, "dcfldd: ");
+        fprintf(stderr, _("warning: working around lseek kernel bug for file (%s)\n\
   of mt_type=0x%0lx -- see <sys/mtio.h> for the list of types"),
                filename, s2.mt_type);
+        fprintf(stderr, "\n");
         errno = 0;
         new_position = -1;
     }
