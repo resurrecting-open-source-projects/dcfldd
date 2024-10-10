@@ -74,6 +74,8 @@
 #include "util.h"
 #include "log.h"
 
+extern char *program_invocation_name;
+
 /* The name this program was run with. */
 char *program_name;
 
@@ -718,6 +720,8 @@ int main(int argc, char **argv)
     /* Initialize translation table to identity translation. */
     for (i = 0; i < 256; i++)
         trans_table[i] = i;
+
+    program_invocation_name = basename(argv[0]);
 
     /* Decode arguments. */
     scanargs(argc, argv);

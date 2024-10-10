@@ -120,7 +120,7 @@ void skip2(int fdesc, char *file, uintmax_t records, size_t blocksize,
 
 #ifdef __linux__
 
-# include <error.h>
+# include "error.h"
 # include <sys/mtio.h>
 
 # define MT_SAME_POSITION(P, Q) \
