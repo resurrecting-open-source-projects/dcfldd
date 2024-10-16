@@ -53,10 +53,19 @@ jobs:
            make distclean
     - name: second_build
       run: |
+           configure_args=(
+             CC=${{ matrix.cc }}
+           )
+
+           if [[ "${{ matrix.cc }}" != musl-gcc ]]; then
+             configure_args+=(
+               CFLAGS='-g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer'
+               LDFLAGS='-g -fsanitize=address,undefined'
+             )
+           fi
+
            ./autogen.sh
-           ./configure CC=${{ matrix.cc }} \
-             CFLAGS='-g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer' \
-             LDFLAGS='-g -fsanitize=address,undefined' \
+           ./configure "${configure_args[@]}" \
              || { cat config.log ; false ; }
            make
            sudo make install
