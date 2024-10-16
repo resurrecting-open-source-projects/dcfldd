@@ -36,7 +36,8 @@ jobs:
     - name: first_build
       run: |
            ./autogen.sh
-           ./configure CC=${{ matrix.cc }} CFLAGS='-std=c99 -Wall -Wextra -pedantic'
+           ./configure CC=${{ matrix.cc }} CFLAGS='-std=c99 -Wall -Wextra -pedantic' \
+             || { cat config.log ; false ; }
            make
            sudo make install
            sudo make uninstall
@@ -46,7 +47,8 @@ jobs:
            ./autogen.sh
            ./configure CC=${{ matrix.cc }} \
              CFLAGS='-g -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer' \
-             LDFLAGS='-g -fsanitize=address,undefined'
+             LDFLAGS='-g -fsanitize=address,undefined' \
+             || { cat config.log ; false ; }
            make
            sudo make install
     - name: run_program
