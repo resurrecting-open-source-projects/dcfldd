@@ -35,6 +35,10 @@
 #ifndef __SHA2_H__
 #define __SHA2_H__
 
+# if HAVE_CONFIG_H
+#  include <config.h>
+# endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -53,7 +57,7 @@ extern "C" {
  * Define the followingsha2_* types to types of the correct length on
  * the native archtecture.   Most BSD systems and Linux define u_intXX_t
  * types.  Machines with very recent ANSI C headers, can use the
- * uintXX_t definintions from inttypes.h by defining SHA2_USE_INTTYPES_H
+ * uintXX_t definintions from inttypes.h by defining HAVE_INTTYPES_H
  * during compile or in the sha.h header file.
  *
  * Machines that support neither u_intXX_t nor inttypes.h's uintXX_t
@@ -63,7 +67,7 @@ extern "C" {
  * Thank you, Jun-ichiro itojun Hagino, for suggesting using u_intXX_t
  * types and pointing out recent ANSI C support for uintXX_t in inttypes.h.
  */
-#ifdef SHA2_USE_INTTYPES_H
+#ifdef HAVE_INTTYPES_H
 
 #include <inttypes.h>
 
@@ -71,13 +75,13 @@ typedef uint8_t  sha2_byte;	/* Exactly 1 byte */
 typedef uint32_t sha2_word32;	/* Exactly 4 bytes */
 typedef uint64_t sha2_word64;	/* Exactly 8 bytes */
 
-#else /* SHA2_USE_INTTYPES_H */
+#else /* HAVE_INTTYPES_H */
 
 typedef u_int8_t  sha2_byte;	/* Exactly 1 byte */
 typedef u_int32_t sha2_word32;	/* Exactly 4 bytes */
 typedef u_int64_t sha2_word64;	/* Exactly 8 bytes */
 
-#endif /* SHA2_USE_INTTYPES_H */
+#endif /* HAVE_INTTYPES_H */
 
 /*** SHA-256/384/512 Various Length Definitions ***********************/
 #define SHA256_BLOCK_LENGTH		64
@@ -111,13 +115,13 @@ typedef unsigned long long u_int64_t;	/* 8-bytes (64-bits) */
  *
  * If you choose to use <inttypes.h> then please define:
  *
- *   #define SHA2_USE_INTTYPES_H
+ *   #define HAVE_INTTYPES_H
  *
  * Or on the command line during compile:
  *
- *   cc -DSHA2_USE_INTTYPES_H ...
+ *   cc -DHAVE_INTTYPES_H ...
  */
-#ifdef SHA2_USE_INTTYPES_H
+#ifdef HAVE_INTTYPES_H
 
 typedef struct _SHA256_CTX {
 	uint32_t	state[8];
@@ -130,7 +134,7 @@ typedef struct _SHA512_CTX {
 	uint8_t	buffer[SHA512_BLOCK_LENGTH];
 } SHA512_CTX;
 
-#else /* SHA2_USE_INTTYPES_H */
+#else /* HAVE_INTTYPES_H */
 
 typedef struct _SHA256_CTX {
 	u_int32_t	state[8];
@@ -143,14 +147,14 @@ typedef struct _SHA512_CTX {
 	u_int8_t	buffer[SHA512_BLOCK_LENGTH];
 } SHA512_CTX;
 
-#endif /* SHA2_USE_INTTYPES_H */
+#endif /* HAVE_INTTYPES_H */
 
 typedef SHA512_CTX SHA384_CTX;
 
 
 /*** SHA-256/384/512 Function Prototypes ******************************/
 #ifndef NOPROTO
-#ifdef SHA2_USE_INTTYPES_H
+#ifdef HAVE_INTTYPES_H
 
 void SHA256_Init(SHA256_CTX *);
 void SHA256_Update(SHA256_CTX*, const uint8_t*, size_t);
@@ -170,7 +174,7 @@ void SHA512_Final(SHA512_CTX*, uint8_t[SHA512_DIGEST_LENGTH]);
 char* SHA512_End(SHA512_CTX*, char[SHA512_DIGEST_STRING_LENGTH]);
 char* SHA512_Data(const uint8_t*, size_t, char[SHA512_DIGEST_STRING_LENGTH]);
 
-#else /* SHA2_USE_INTTYPES_H */
+#else /* HAVE_INTTYPES_H */
 
 void SHA256_Init(SHA256_CTX *);
 void SHA256_Update(SHA256_CTX*, const u_int8_t*, size_t);
@@ -190,7 +194,7 @@ void SHA512_Final(SHA512_CTX*, u_int8_t[SHA512_DIGEST_LENGTH]);
 char* SHA512_End(SHA512_CTX*, char[SHA512_DIGEST_STRING_LENGTH]);
 char* SHA512_Data(const u_int8_t*, size_t, char[SHA512_DIGEST_STRING_LENGTH]);
 
-#endif /* SHA2_USE_INTTYPES_H */
+#endif /* HAVE_INTTYPES_H */
 
 #else /* NOPROTO */
 
