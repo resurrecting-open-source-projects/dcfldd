@@ -252,7 +252,6 @@ __xstrtol (const char *s, char **ptr, int strtol_base,
 #ifdef TESTING_XSTRTO
 
 # include <stdio.h>
-# include "error.h"
 
 char *program_name;
 
