@@ -25,6 +25,7 @@ AC_INIT([dcfldd],[1.9.1],[https://github.com/resurrecting-open-source-projects/d
 AC_CONFIG_SRCDIR(src/dcfldd.c)
 AM_INIT_AUTOMAKE
 
+AC_HEADER_ASSERT
 AC_CONFIG_HEADERS([config.h])
 AC_CANONICAL_HOST
 
