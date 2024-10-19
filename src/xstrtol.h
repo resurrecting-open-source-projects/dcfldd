@@ -38,17 +38,17 @@ _DECLARE_XSTRTOL (xstrtoumax, uintmax_t)
 	  abort ();							\
 									\
 	case LONGINT_INVALID:						\
-	  error ((Exit_code), 0, "invalid %s `%s'",			\
+	  dcfldd_error ((Exit_code), 0, "invalid %s `%s'",			\
 		 (Argument_type_string), (Str));			\
 	  break;							\
 									\
 	case LONGINT_INVALID_SUFFIX_CHAR:				\
-	  error ((Exit_code), 0, "invalid character following %s `%s'",	\
+	  dcfldd_error ((Exit_code), 0, "invalid character following %s `%s'",	\
 		 (Argument_type_string), (Str));			\
 	  break;							\
 									\
 	case LONGINT_OVERFLOW:						\
-	  error ((Exit_code), 0, "%s `%s' too large",			\
+	  dcfldd_error ((Exit_code), 0, "%s `%s' too large",			\
 		 (Argument_type_string), (Str));			\
 	  break;							\
 	}								\
