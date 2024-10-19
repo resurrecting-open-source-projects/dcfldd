@@ -49,4 +49,5 @@ dcfldd_SOURCES = dcfldd.c \
                  full-write.h \
                  output.c output.h \
                  split.c split.h \
-                 hashformat.c hashformat.h
+                 hashformat.c hashformat.h \
+                 dcfldd_error.c dcfldd_error.h
