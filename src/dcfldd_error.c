@@ -26,7 +26,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "dcfldd.h"	// to use program_name
+#ifdef _LIBC	// GNU C library uses program_invocation_name for error(3).
+# define program_name program_invocation_name
+#endif
+
+// calling program must define program_name and set it to argv[0]
+extern char *program_name;
 
 /*
  * dcfldd_error(): a replacement for glibc's error() for usage within dcfldd
