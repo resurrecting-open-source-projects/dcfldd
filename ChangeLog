@@ -1,3 +1,44 @@
+2024-10-20  David da Silva Polverari <david.polverari@gmail.com>
+Version 1.9.2
+
+    [ David da Silva Polverari ]
+
+ * Added configure switch to enable existing bash completion.
+ * Added dcfldd_error module to avoid dependency on glibc's error().
+ * Replaced error() invocations with dcfldd_error().
+ * autogen.sh: added checks for pkg-config presence.
+ * configure.ac: enabled assertions by default.
+
+    [ Jonas Stein ]
+
+ * Added repology badge with link to all known dcfldd packaged versions.
+
+   [ Lucian Popescu ]
+
+ * Fixed memory leaks and removed unused variables.
+
+   [ Sam James ]
+
+ * src/sha2.c:
+   - Fixed aliasing violation on pointer access.
+   - Fixed instances of --Wsizeof-pointer-memaccess
+
+   [ Sebastian Pipping ]
+
+ * .github/workflows/full-check.yml:
+   - Added build agains musl libc.
+   - Added config.log dump on configure failure for debugging.
+   - Covered more hashing tests on the expected program output.
+   - Disabled sanitizers when building with musl-gcc.
+   - Enabled debugging symbols.
+   - Enabled use of UndefinedBehaviorSanitizer.
+   - Updated Github CI pipeline to use more modern compiler versions.
+ * src/hash.c: fixed function pointer type mismatch.
+ * src/ouput.c: initialized output_t.stream properly.
+ * src/sha2.{c,h}:
+   - Replaced SHA2_USE_INTTYPES_H by HAVE_INTTYPES_H to support musl libc.
+   - Moved typedefs from implementation to header to allow reuse.
+
 2023-04-17  Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 Version 1.9.1
 
