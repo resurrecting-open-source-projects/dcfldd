@@ -26,19 +26,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-#ifdef _LIBC	// GNU C library uses program_invocation_name for error(3).
-# define program_name program_invocation_name
-#endif
-
-// calling program must define program_name and set it to argv[0]
+// dcfldd defines program_name and sets it to argv[0]
 extern char *program_name;
 
 /*
  * dcfldd_error(): a replacement for glibc's error() for usage within dcfldd
  *
  * WARNING: this function is not intended as a full drop-in replacement for
- * error(). One of the most glaring differences from error() is the usage of
- * dcfldd's program_name instead of program_invocation_name.
+ * error(). One example difference is that glibc's error function reads the
+ * program name from a global variable "program_invocation_name" (see "man 3
+ * program_invocation_name") whereas the implementation here is using dcfldd's
+ * own global variable "program_name", instead.
  */
 
 void
