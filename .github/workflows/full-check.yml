@@ -90,7 +90,7 @@ jobs:
            rm -f dcfldd-*.tar.gz
            cd dcfldd-*
            ./autogen.sh
-           ./configure CC=${{ matrix.cc }}
+           ./configure CC=${{ matrix.cc }} --with-bash-completion
            make
            ls
            sudo make install
