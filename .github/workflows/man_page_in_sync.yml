@@ -1,0 +1,33 @@
+name: Enforce that man/dcfldd.1 remains in sync
+
+on:
+  pull_request:
+  push:
+  schedule:
+    - cron: '0 16 * * 5'  # Every Friday 4pm
+  workflow_dispatch:
+  
+# Drop permissions to minimum for security
+permissions:
+  contents: read
+
+jobs:
+  man_page_in_sync:
+    runs-on: ubuntu-24.04
+    steps:
+
+    - uses: actions/checkout@v4
+
+    - name: Install build dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install --no-install-recommends --yes -V \
+          txt2man
+
+    - name: Check man/dcfldd.1 for being in sync
+      run: |
+        set -x
+        cd man/
+        rm dcfldd.1  # so that create-man.sh has to close that very gap
+        ./create-man.sh
+        git diff --exit-code  # i.e. fail CI in case of a diff (and show it)
