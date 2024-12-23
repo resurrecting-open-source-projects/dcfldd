@@ -48,7 +48,7 @@ AC_TYPE_OFF_T
 AC_TYPE_SIZE_T
 
 AC_ARG_ENABLE([runtime-endian-check],
-    AC_HELP_STRING([--disable-runtime-endian-check], [disable runtime checks for endianness])
+    AS_HELP_STRING([--disable-runtime-endian-check],[disable runtime checks for endianness])
 )
 
 AC_ARG_WITH([bash-completion],
