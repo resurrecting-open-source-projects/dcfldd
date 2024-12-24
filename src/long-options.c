@@ -54,7 +54,7 @@ parse_long_options (int argc,
 		    const char *package,
 		    const char *version,
 		    const char *authors,
-		    void (*usage_func)())
+		    void (*usage_func)(int))
 {
   int c;
   int saved_opterr;
