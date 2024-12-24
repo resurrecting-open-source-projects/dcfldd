@@ -28,7 +28,7 @@
 # include <sys/types.h>
 
 # ifndef PARAMS
-#  if PROTOTYPES || (defined (__STDC__) && __STDC__)
+#  if defined PROTOTYPES || (defined (__STDC__) && __STDC__)
 #   define PARAMS(args) args
 #  else
 #   define PARAMS(args) ()
