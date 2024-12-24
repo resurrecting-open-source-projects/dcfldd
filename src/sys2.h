@@ -294,7 +294,7 @@ char *getlogin ();
 #endif
 
 #if !HAVE_DECL_TTYNAME
-char *ttyname ();
+char *ttyname (int fd);
 #endif
 
 #if !HAVE_DECL_GETEUID
