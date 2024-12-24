@@ -244,7 +244,7 @@ char *alloca ();
 #define ISDIGIT(c) ((unsigned) (c) - '0' <= 9)
 
 #ifndef PARAMS
-# if PROTOTYPES
+# if defined PROTOTYPES || (defined __STDC__ && __STDC__)
 #  define PARAMS(Args) Args
 # else
 #  define PARAMS(Args) ()
