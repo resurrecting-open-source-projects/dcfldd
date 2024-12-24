@@ -11,6 +11,9 @@ jobs:
           - cc: gcc-14
             clang_major_version: null
             runs-on: ubuntu-24.04
+          - cc: gcc-15
+            clang_major_version: null
+            runs-on: ubuntu-24.04
           - cc: clang-19
             clang_major_version: 19
             runs-on: ubuntu-22.04
@@ -22,6 +25,23 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: gcc_15_repo
+      if: "${{ matrix.cc == 'gcc-15' }}"
+      run: |
+           set -x
+           # The repository is at home at https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test .
+           # NOTE: plucky is 25.04 (not 24.04 LTS)
+           wget -O - 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc8ec952e2a0e1fbdc5090f6a2c277a0a352154e5' | sudo apt-key add -
+           sudo add-apt-repository 'deb https://ppa.launchpadcontent.net/ubuntu-toolchain-r/test/ubuntu plucky main'
+           sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu/ plucky main'
+    - name: gcc_15_install
+      if: "${{ matrix.cc == 'gcc-15' }}"
+      run: |
+           set -x
+           sudo apt-get install --yes --no-install-recommends -V \
+             binutils \
+             gcc-15
+           apt-cache policy binutils
     - name: clang_repo
       if: "${{ contains(matrix.cc, 'clang') }}"
       run: |
