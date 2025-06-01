@@ -1,3 +1,23 @@
+2025-06-01  David da Silva Polverari <david.polverari@gmail.com>
+Version 1.9.3
+
+    [ David da Silva Polverari ]
+
+ * configure.ac: removed obsolete AC_PROG_GCC_TRADITIONAL macro.
+
+    [ Sebastian Pipping ]
+
+ * Renamed bash completion file on install.
+ * Fixed several function prototypes and related code to build with GCC 15.
+ * .github/workflows/full-check.yml:
+   - added GitHub CI test to ensure distibution tarball can install bash
+     completion scripts.
+   - updated to start covering GCC 15.
+ * .github/workflows/man_page_in_sync.yml: created to make GitHub Actions
+   enforce man page on release was generated properly.
+ * configure.ac: migrated from using deprecated AC_HELP_STRING macro to
+   AS_HELP_STRING.
+
 2024-10-20  David da Silva Polverari <david.polverari@gmail.com>
 Version 1.9.2
 
