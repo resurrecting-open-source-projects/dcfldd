@@ -21,7 +21,7 @@
 
 AC_PREREQ([2.69])
 
-AC_INIT([dcfldd],[1.9.2],[https://github.com/resurrecting-open-source-projects/dcfldd/issues])
+AC_INIT([dcfldd],[1.9.3],[https://github.com/resurrecting-open-source-projects/dcfldd/issues])
 AC_CONFIG_SRCDIR(src/dcfldd.c)
 AM_INIT_AUTOMAKE
 
