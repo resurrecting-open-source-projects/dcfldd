@@ -29,11 +29,8 @@ jobs:
       if: "${{ matrix.cc == 'gcc-15' }}"
       run: |
            set -x
-           # The repository is at home at https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test .
            # NOTE: plucky is 25.04 (not 24.04 LTS)
-           wget -O - 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc8ec952e2a0e1fbdc5090f6a2c277a0a352154e5' | sudo apt-key add -
-           sudo add-apt-repository 'deb https://ppa.launchpadcontent.net/ubuntu-toolchain-r/test/ubuntu plucky main'
-           sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu/ plucky main'
+           sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu/ plucky main universe'
     - name: gcc_15_install
       if: "${{ matrix.cc == 'gcc-15' }}"
       run: |
